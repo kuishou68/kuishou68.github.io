@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Jquery+Ajax请求Json文件，绘制Echarts 上下两个堆叠折线图 | 魁首</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/img/logo.png">
+    <meta name="description" content="一个没有天赋的前端程序员👨‍💻 ">
+    <link rel="preload" href="/assets/css/0.styles.9d8515da.css" as="style"><link rel="preload" href="/assets/js/app.6a48d521.js" as="script"><link rel="preload" href="/assets/js/2.7eb975a7.js" as="script"><link rel="preload" href="/assets/js/20.283655cf.js" as="script"><link rel="prefetch" href="/assets/js/10.f82871fe.js"><link rel="prefetch" href="/assets/js/100.a359e482.js"><link rel="prefetch" href="/assets/js/101.af6de843.js"><link rel="prefetch" href="/assets/js/102.d6bfb8a8.js"><link rel="prefetch" href="/assets/js/103.62189762.js"><link rel="prefetch" href="/assets/js/104.bc30f6bc.js"><link rel="prefetch" href="/assets/js/105.9866cbb4.js"><link rel="prefetch" href="/assets/js/106.5af81eff.js"><link rel="prefetch" href="/assets/js/107.b1ebe0f3.js"><link rel="prefetch" href="/assets/js/108.597665ee.js"><link rel="prefetch" href="/assets/js/109.8fd2e2ff.js"><link rel="prefetch" href="/assets/js/11.89fc88ff.js"><link rel="prefetch" href="/assets/js/110.d89aafb7.js"><link rel="prefetch" href="/assets/js/111.2b5d24a3.js"><link rel="prefetch" href="/assets/js/112.53faa339.js"><link rel="prefetch" href="/assets/js/113.072bd374.js"><link rel="prefetch" href="/assets/js/114.fe270f69.js"><link rel="prefetch" href="/assets/js/115.bf7866e0.js"><link rel="prefetch" href="/assets/js/116.e63ac2a5.js"><link rel="prefetch" href="/assets/js/117.175b9671.js"><link rel="prefetch" href="/assets/js/118.56a9bd14.js"><link rel="prefetch" href="/assets/js/119.4cbab950.js"><link rel="prefetch" href="/assets/js/12.1cb55187.js"><link rel="prefetch" href="/assets/js/120.c08c8a5f.js"><link rel="prefetch" href="/assets/js/121.981ce403.js"><link rel="prefetch" href="/assets/js/122.3a0a9b19.js"><link rel="prefetch" href="/assets/js/123.56a951ec.js"><link rel="prefetch" href="/assets/js/124.2f8d91a2.js"><link rel="prefetch" href="/assets/js/125.a14f664b.js"><link rel="prefetch" href="/assets/js/126.46f567bc.js"><link rel="prefetch" href="/assets/js/127.8687e555.js"><link rel="prefetch" href="/assets/js/128.be107a17.js"><link rel="prefetch" href="/assets/js/129.5c614ef7.js"><link rel="prefetch" href="/assets/js/13.8dcd0ee4.js"><link rel="prefetch" href="/assets/js/130.42add747.js"><link rel="prefetch" href="/assets/js/131.d4d4d470.js"><link rel="prefetch" href="/assets/js/132.6ea27932.js"><link rel="prefetch" href="/assets/js/133.d600600d.js"><link rel="prefetch" href="/assets/js/134.d5da3f28.js"><link rel="prefetch" href="/assets/js/135.8feeec56.js"><link rel="prefetch" href="/assets/js/136.7d4f49fc.js"><link rel="prefetch" href="/assets/js/137.5108c12f.js"><link rel="prefetch" href="/assets/js/138.fd23f748.js"><link rel="prefetch" href="/assets/js/14.9781dec3.js"><link rel="prefetch" href="/assets/js/15.765d0c7a.js"><link rel="prefetch" href="/assets/js/16.e20f6841.js"><link rel="prefetch" href="/assets/js/17.938031c0.js"><link rel="prefetch" href="/assets/js/18.d05cdade.js"><link rel="prefetch" href="/assets/js/19.52312410.js"><link rel="prefetch" href="/assets/js/21.8f421a90.js"><link rel="prefetch" href="/assets/js/22.5002f960.js"><link rel="prefetch" href="/assets/js/23.5929095a.js"><link rel="prefetch" href="/assets/js/24.2a41b1ba.js"><link rel="prefetch" href="/assets/js/25.cd48bbcb.js"><link rel="prefetch" href="/assets/js/26.7d8c23df.js"><link rel="prefetch" href="/assets/js/27.8f241e5e.js"><link rel="prefetch" href="/assets/js/28.106d03c0.js"><link rel="prefetch" href="/assets/js/29.8327198a.js"><link rel="prefetch" href="/assets/js/3.17556ac1.js"><link rel="prefetch" href="/assets/js/30.c7411ac0.js"><link rel="prefetch" href="/assets/js/31.334686b5.js"><link rel="prefetch" href="/assets/js/32.01c3a057.js"><link rel="prefetch" href="/assets/js/33.3ca6beca.js"><link rel="prefetch" href="/assets/js/34.d11fa3cb.js"><link rel="prefetch" href="/assets/js/35.3c6eeefc.js"><link rel="prefetch" href="/assets/js/36.eb367c73.js"><link rel="prefetch" href="/assets/js/37.7c7e7884.js"><link rel="prefetch" href="/assets/js/38.d70ec930.js"><link rel="prefetch" href="/assets/js/39.0c22444f.js"><link rel="prefetch" href="/assets/js/4.bfbea725.js"><link rel="prefetch" href="/assets/js/40.9be3aa2c.js"><link rel="prefetch" href="/assets/js/41.fa8fa5f7.js"><link rel="prefetch" href="/assets/js/42.f8edc742.js"><link rel="prefetch" href="/assets/js/43.890ccd2a.js"><link rel="prefetch" href="/assets/js/44.e8dd2956.js"><link rel="prefetch" href="/assets/js/45.4dc0117f.js"><link rel="prefetch" href="/assets/js/46.33b975a4.js"><link rel="prefetch" href="/assets/js/47.0af6bf25.js"><link rel="prefetch" href="/assets/js/48.4d488c3e.js"><link rel="prefetch" href="/assets/js/49.f32cbe47.js"><link rel="prefetch" href="/assets/js/5.e9a52b0b.js"><link rel="prefetch" href="/assets/js/50.f6fb9bfc.js"><link rel="prefetch" href="/assets/js/51.b34586da.js"><link rel="prefetch" href="/assets/js/52.d2c8dae9.js"><link rel="prefetch" href="/assets/js/53.54fbcf59.js"><link rel="prefetch" href="/assets/js/54.82d2ebde.js"><link rel="prefetch" href="/assets/js/55.9983e39f.js"><link rel="prefetch" href="/assets/js/56.8eef2a13.js"><link rel="prefetch" href="/assets/js/57.e11ca2ac.js"><link rel="prefetch" href="/assets/js/58.377934a2.js"><link rel="prefetch" href="/assets/js/59.50355f7d.js"><link rel="prefetch" href="/assets/js/6.e21144ea.js"><link rel="prefetch" href="/assets/js/60.09c560e0.js"><link rel="prefetch" href="/assets/js/61.e79a80a0.js"><link rel="prefetch" href="/assets/js/62.94028fbb.js"><link rel="prefetch" href="/assets/js/63.6d0784b2.js"><link rel="prefetch" href="/assets/js/64.92aeaeb9.js"><link rel="prefetch" href="/assets/js/65.8fad3d0c.js"><link rel="prefetch" href="/assets/js/66.f55238ca.js"><link rel="prefetch" href="/assets/js/67.d2d0e4d6.js"><link rel="prefetch" href="/assets/js/68.5a7d1f90.js"><link rel="prefetch" href="/assets/js/69.9c5250e8.js"><link rel="prefetch" href="/assets/js/7.c39c8310.js"><link rel="prefetch" href="/assets/js/70.b0ed19c1.js"><link rel="prefetch" href="/assets/js/71.ed6467eb.js"><link rel="prefetch" href="/assets/js/72.08a5642b.js"><link rel="prefetch" href="/assets/js/73.1bf56c2f.js"><link rel="prefetch" href="/assets/js/74.9ba833f0.js"><link rel="prefetch" href="/assets/js/75.f7f50235.js"><link rel="prefetch" href="/assets/js/76.97df98f2.js"><link rel="prefetch" href="/assets/js/77.b3803cc2.js"><link rel="prefetch" href="/assets/js/78.7b4df1fe.js"><link rel="prefetch" href="/assets/js/79.8b62450a.js"><link rel="prefetch" href="/assets/js/8.e0f8c11d.js"><link rel="prefetch" href="/assets/js/80.ee0108d8.js"><link rel="prefetch" href="/assets/js/81.f91dcdaa.js"><link rel="prefetch" href="/assets/js/82.eeb688a9.js"><link rel="prefetch" href="/assets/js/83.5c9bf822.js"><link rel="prefetch" href="/assets/js/84.57737001.js"><link rel="prefetch" href="/assets/js/85.3388a4cf.js"><link rel="prefetch" href="/assets/js/86.cba0d758.js"><link rel="prefetch" href="/assets/js/87.4fc35e82.js"><link rel="prefetch" href="/assets/js/88.9d520aa2.js"><link rel="prefetch" href="/assets/js/89.e276e1b0.js"><link rel="prefetch" href="/assets/js/9.11dda660.js"><link rel="prefetch" href="/assets/js/90.ea491c97.js"><link rel="prefetch" href="/assets/js/91.f0592d0d.js"><link rel="prefetch" href="/assets/js/92.ff1f35ac.js"><link rel="prefetch" href="/assets/js/93.43f25796.js"><link rel="prefetch" href="/assets/js/94.30af2e8e.js"><link rel="prefetch" href="/assets/js/95.a5b55ec5.js"><link rel="prefetch" href="/assets/js/96.2d7219ae.js"><link rel="prefetch" href="/assets/js/97.6b1a6d92.js"><link rel="prefetch" href="/assets/js/98.bc9e7c7e.js"><link rel="prefetch" href="/assets/js/99.d676873c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9d8515da.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="魁首" class="logo"> <span class="site-name can-hide">魁首</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="A前端👨‍💻" class="dropdown-title"><span class="title">A前端👨‍💻</span> <span class="arrow down"></span></button> <button type="button" aria-label="A前端👨‍💻" class="mobile-dropdown-title"><span class="title">A前端👨‍💻</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Axios/" class="nav-link">
+  Axios
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Echarts/" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/node/" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/React/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/vuepress/" class="nav-link">
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/打包工具/" class="nav-link">
+  打包工具
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/🔥Vue/" class="nav-link">
+  🔥Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="B面试题📑" class="dropdown-title"><span class="title">B面试题📑</span> <span class="arrow down"></span></button> <button type="button" aria-label="B面试题📑" class="mobile-dropdown-title"><span class="title">B面试题📑</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/B面试题📑/📣面试题汇总/" class="nav-link">
+  📣面试题汇总
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="PHP🐘" class="dropdown-title"><span class="title">PHP🐘</span> <span class="arrow down"></span></button> <button type="button" aria-label="PHP🐘" class="mobile-dropdown-title"><span class="title">PHP🐘</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/PHP🐘/一、初学者容易遇到的问题/" class="nav-link">
+  一、初学者容易遇到的问题
+</a></li><li class="dropdown-item"><!----> <a href="/PHP🐘/二、PHP实现简单的登录注册、增删改查/" class="nav-link">
+  二、PHP实现简单的登录注册、增删改查
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python🐍" class="dropdown-title"><span class="title">Python🐍</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python🐍" class="mobile-dropdown-title"><span class="title">Python🐍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Python🐍/一、爬取QQ空间/" class="nav-link">
+  一、爬取QQ空间
+</a></li><li class="dropdown-item"><!----> <a href="/Python🐍/二、爬取水果交易网水果行情信息/" class="nav-link">
+  二、爬取水果交易网水果行情信息
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue实战💻" class="dropdown-title"><span class="title">Vue实战💻</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue实战💻" class="mobile-dropdown-title"><span class="title">Vue实战💻</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Vue实战💻/Echarts系列/" class="nav-link">
+  Echarts系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/EementUI系列/" class="nav-link">
+  EementUI系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/图书商城/" class="nav-link">
+  图书商城
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/浏览器系列/" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/海风小店/" class="nav-link">
+  海风小店
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/网易云小程序/" class="nav-link">
+  网易云小程序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读过的书📚️" class="dropdown-title"><span class="title">读过的书📚️</span> <span class="arrow down"></span></button> <button type="button" aria-label="读过的书📚️" class="mobile-dropdown-title"><span class="title">读过的书📚️</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/读过的书📚️/《HTTP权威指南-图灵》/" class="nav-link">
+  《HTTP权威指南-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《JavaScript正则表达式迷你书》/" class="nav-link">
+  《JavaScript正则表达式迷你书》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《JavaScript高级程序设计-图灵》/" class="nav-link">
+  《JavaScript高级程序设计-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《labuladong的算法小炒》/" class="nav-link">
+  《labuladong的算法小炒》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《图解算法-图灵》/" class="nav-link">
+  《图解算法-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《图解网络-小林coding》/" class="nav-link">
+  《图解网络-小林coding》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《架构师的自我修养》/" class="nav-link">
+  《架构师的自我修养》
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="走过的路🌱" class="dropdown-title"><span class="title">走过的路🌱</span> <span class="arrow down"></span></button> <button type="button" aria-label="走过的路🌱" class="mobile-dropdown-title"><span class="title">走过的路🌱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/走过的路🌱/2019成长日记/" class="nav-link">
+  2019成长日记
+</a></li><li class="dropdown-item"><!----> <a href="/走过的路🌱/2020年度总结/" class="nav-link">
+  2020年度总结
+</a></li><li class="dropdown-item"><!----> <a href="/走过的路🌱/2021年度总结/" class="nav-link">
+  2021年度总结
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="A前端👨‍💻" class="dropdown-title"><span class="title">A前端👨‍💻</span> <span class="arrow down"></span></button> <button type="button" aria-label="A前端👨‍💻" class="mobile-dropdown-title"><span class="title">A前端👨‍💻</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Axios/" class="nav-link">
+  Axios
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Echarts/" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/node/" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/React/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/vuepress/" class="nav-link">
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/打包工具/" class="nav-link">
+  打包工具
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/🔥Vue/" class="nav-link">
+  🔥Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="B面试题📑" class="dropdown-title"><span class="title">B面试题📑</span> <span class="arrow down"></span></button> <button type="button" aria-label="B面试题📑" class="mobile-dropdown-title"><span class="title">B面试题📑</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/B面试题📑/📣面试题汇总/" class="nav-link">
+  📣面试题汇总
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="PHP🐘" class="dropdown-title"><span class="title">PHP🐘</span> <span class="arrow down"></span></button> <button type="button" aria-label="PHP🐘" class="mobile-dropdown-title"><span class="title">PHP🐘</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/PHP🐘/一、初学者容易遇到的问题/" class="nav-link">
+  一、初学者容易遇到的问题
+</a></li><li class="dropdown-item"><!----> <a href="/PHP🐘/二、PHP实现简单的登录注册、增删改查/" class="nav-link">
+  二、PHP实现简单的登录注册、增删改查
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python🐍" class="dropdown-title"><span class="title">Python🐍</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python🐍" class="mobile-dropdown-title"><span class="title">Python🐍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Python🐍/一、爬取QQ空间/" class="nav-link">
+  一、爬取QQ空间
+</a></li><li class="dropdown-item"><!----> <a href="/Python🐍/二、爬取水果交易网水果行情信息/" class="nav-link">
+  二、爬取水果交易网水果行情信息
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue实战💻" class="dropdown-title"><span class="title">Vue实战💻</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue实战💻" class="mobile-dropdown-title"><span class="title">Vue实战💻</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Vue实战💻/Echarts系列/" class="nav-link">
+  Echarts系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/EementUI系列/" class="nav-link">
+  EementUI系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/图书商城/" class="nav-link">
+  图书商城
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/浏览器系列/" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/海风小店/" class="nav-link">
+  海风小店
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/网易云小程序/" class="nav-link">
+  网易云小程序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读过的书📚️" class="dropdown-title"><span class="title">读过的书📚️</span> <span class="arrow down"></span></button> <button type="button" aria-label="读过的书📚️" class="mobile-dropdown-title"><span class="title">读过的书📚️</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/读过的书📚️/《HTTP权威指南-图灵》/" class="nav-link">
+  《HTTP权威指南-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《JavaScript正则表达式迷你书》/" class="nav-link">
+  《JavaScript正则表达式迷你书》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《JavaScript高级程序设计-图灵》/" class="nav-link">
+  《JavaScript高级程序设计-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《labuladong的算法小炒》/" class="nav-link">
+  《labuladong的算法小炒》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《图解算法-图灵》/" class="nav-link">
+  《图解算法-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《图解网络-小林coding》/" class="nav-link">
+  《图解网络-小林coding》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《架构师的自我修养》/" class="nav-link">
+  《架构师的自我修养》
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="走过的路🌱" class="dropdown-title"><span class="title">走过的路🌱</span> <span class="arrow down"></span></button> <button type="button" aria-label="走过的路🌱" class="mobile-dropdown-title"><span class="title">走过的路🌱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/走过的路🌱/2019成长日记/" class="nav-link">
+  2019成长日记
+</a></li><li class="dropdown-item"><!----> <a href="/走过的路🌱/2020年度总结/" class="nav-link">
+  2020年度总结
+</a></li><li class="dropdown-item"><!----> <a href="/走过的路🌱/2021年度总结/" class="nav-link">
+  2021年度总结
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Echarts</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/A%E5%89%8D%E7%AB%AF%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB/Echarts/" aria-current="page" class="active sidebar-link">简介</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/A%E5%89%8D%E7%AB%AF%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB/Echarts/#jquery-ajax请求json文件-绘制echarts-上下两个堆叠折线图" class="sidebar-link">Jquery+Ajax请求Json文件，绘制Echarts 上下两个堆叠折线图</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/A%E5%89%8D%E7%AB%AF%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB/Echarts/#魁首" class="sidebar-link">魁首</a></li><li class="sidebar-sub-header"><a href="/A%E5%89%8D%E7%AB%AF%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB/Echarts/#关注我🔰" class="sidebar-link">关注我🔰</a></li><li class="sidebar-sub-header"><a href="/A%E5%89%8D%E7%AB%AF%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB/Echarts/#html部分" class="sidebar-link">HTML部分</a></li><li class="sidebar-sub-header"><a href="/A%E5%89%8D%E7%AB%AF%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB/Echarts/#json数据格式" class="sidebar-link">json数据格式</a></li><li class="sidebar-sub-header"><a href="/A%E5%89%8D%E7%AB%AF%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB/Echarts/#js部分" class="sidebar-link">js部分</a></li></ul></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="jquery-ajax请求json文件-绘制echarts-上下两个堆叠折线图"><a href="#jquery-ajax请求json文件-绘制echarts-上下两个堆叠折线图" class="header-anchor">#</a> Jquery+Ajax请求Json文件，绘制Echarts 上下两个堆叠折线图</h2> <h3 id="魁首"><a href="#魁首" class="header-anchor">#</a> 魁首</h3> <p>🔔一个没有天赋的前端程序员👨‍💻 💡<a href="https://blog.lijianlin.com.cn/" target="_blank" rel="noopener noreferrer">博客<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h3 id="关注我🔰"><a href="#关注我🔰" class="header-anchor">#</a> 关注我🔰</h3> <p>🤖<a href="https://github.com/kuishou68" target="_blank" rel="noopener noreferrer">Github<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> |🔑<a href="https://blog.csdn.net/weixin_44019370?spm=1010.2135.3001.5421" target="_blank" rel="noopener noreferrer">CSDN<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> | 💎<a href="https://juejin.cn/user/3817931570691031/posts" target="_blank" rel="noopener noreferrer">掘金<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> | 📖 <a href="https://www.zhihu.com/people/kui-shou-27-41/posts" target="_blank" rel="noopener noreferrer">知乎<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> | 💡<a href="https://blog.lijianlin.com.cn/" target="_blank" rel="noopener noreferrer">博客<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> |</p> <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51fded4233b44e5eb62ad35fdafc9afa~tplv-k3u1fbpfcp-watermark.image?" alt="Echarts上下两个堆叠折线图.gif"></p> <h3 id="html部分"><a href="#html部分" class="header-anchor">#</a> HTML部分</h3> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>en<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>UTF-8<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>X-UA-Compatible<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>IE=edge<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>width=device-width, initial-scale=1.0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Echarts 上下两个堆叠折线图的实现<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>rateTable<span class="token punctuation">&quot;</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">=&quot;</span><span class="token attr-value"><span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span><span class="token property">min-height</span><span class="token punctuation">:</span> 470px</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>Echarts在这里绘制<span class="token operator">--</span><span class="token operator">&gt;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h3 id="json数据格式"><a href="#json数据格式" class="header-anchor">#</a> json数据格式</h3> <div class="language-json line-numbers-mode"><pre class="language-json"><code><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;dt&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-02&quot;</span><span class="token punctuation">,</span>        <span class="token comment">//x轴日期</span>
+    <span class="token property">&quot;portfolio_net_value&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span><span class="token comment">//数据1</span>
+    <span class="token property">&quot;SH_net_value&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>       <span class="token comment">//数据2</span>
+    <span class="token property">&quot;alpha_net_value&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span><span class="token punctuation">,</span>    <span class="token comment">//数据3</span>
+    <span class="token property">&quot;cur_drawdown_rate&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span>   <span class="token comment">//数据4</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;dt&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-03&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;portfolio_net_value&quot;</span><span class="token operator">:</span> <span class="token number">-0.0083730541368796</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;SH_net_value&quot;</span><span class="token operator">:</span> <span class="token number">0.0008564679888114</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;alpha_net_value&quot;</span><span class="token operator">:</span> <span class="token number">-0.0092295221256908</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;cur_drawdown_rate&quot;</span><span class="token operator">:</span> <span class="token number">-0.0083730541368796</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;dt&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-06&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;portfolio_net_value&quot;</span><span class="token operator">:</span> <span class="token number">-0.0040413555084052</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;SH_net_value&quot;</span><span class="token operator">:</span> <span class="token number">0.0109406884571092</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;alpha_net_value&quot;</span><span class="token operator">:</span> <span class="token number">-0.0148841629410285</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;cur_drawdown_rate&quot;</span><span class="token operator">:</span> <span class="token number">-0.0040413555084056</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">&quot;dt&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2020-01-07&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;portfolio_net_value&quot;</span><span class="token operator">:</span> <span class="token number">0.0088552022531673</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;SH_net_value&quot;</span><span class="token operator">:</span> <span class="token number">0.0230293795826546</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;alpha_net_value&quot;</span><span class="token operator">:</span> <span class="token number">-0.0139078885557082</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;cur_drawdown_rate&quot;</span><span class="token operator">:</span> <span class="token number">0.0</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  
+<span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><h3 id="js部分"><a href="#js部分" class="header-anchor">#</a> js部分</h3> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">&quot;https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">&quot;https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+    <span class="token keyword">var</span> mychartdd <span class="token operator">=</span> echarts<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'rateTable'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> seriesName1 <span class="token operator">=</span> <span class="token string">'数据1'</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> seriesName2 <span class="token operator">=</span> <span class="token string">'数据2'</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> seriesName3 <span class="token operator">=</span> <span class="token string">'数据3'</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> seriesName4 <span class="token operator">=</span> <span class="token string">'数据4'</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> option <span class="token operator">=</span> <span class="token punctuation">{</span>
+        legend<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">// 图例</span>
+            data<span class="token operator">:</span> <span class="token punctuation">[</span>seriesName1<span class="token punctuation">,</span> seriesName2<span class="token punctuation">,</span> seriesName3<span class="token punctuation">,</span> seriesName4<span class="token punctuation">]</span><span class="token punctuation">,</span>
+            right<span class="token operator">:</span> <span class="token string">'10%'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        dataZoom<span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token comment">// 底部红色数据框拖动条</span>
+            <span class="token punctuation">{</span>
+                id<span class="token operator">:</span> <span class="token string">'datazoomX'</span><span class="token punctuation">,</span>
+                type<span class="token operator">:</span> <span class="token string">'slider'</span><span class="token punctuation">,</span>
+                xAxisIndex<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                height<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+                top<span class="token operator">:</span> <span class="token string">'69%'</span><span class="token punctuation">,</span>
+                right<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+                left<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+                handleIcon<span class="token operator">:</span> <span class="token string">'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z'</span><span class="token punctuation">,</span>
+                handleSize<span class="token operator">:</span> <span class="token string">'80%'</span><span class="token punctuation">,</span>
+                fillerColor<span class="token operator">:</span> <span class="token string">&quot;rgba(255, 76, 31,.2)&quot;</span><span class="token punctuation">,</span>
+                dataBackground<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    areaStyle<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        color<span class="token operator">:</span> <span class="token string">''</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    lineStyle<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        opacity<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                        color<span class="token operator">:</span> <span class="token string">'#FF4C1F'</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                handleStyle<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    color<span class="token operator">:</span> <span class="token string">'#FF4C1F'</span><span class="token punctuation">,</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                filterMode<span class="token operator">:</span> <span class="token string">'weakFilter'</span><span class="token punctuation">,</span>
+                zoomOnMouseWheel<span class="token operator">:</span> <span class="token string">'false'</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+                id<span class="token operator">:</span> <span class="token string">'dataZoomY'</span><span class="token punctuation">,</span>
+                type<span class="token operator">:</span> <span class="token string">'inside'</span><span class="token punctuation">,</span>
+                xAxisIndex<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                filterMode<span class="token operator">:</span> <span class="token string">'weakFilter'</span><span class="token punctuation">,</span>
+                zoomOnMouseWheel<span class="token operator">:</span> <span class="token string">'false'</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        tooltip<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">// 鼠标悬停提示框组件</span>
+            trigger<span class="token operator">:</span> <span class="token string">'axis'</span><span class="token punctuation">,</span>
+            axisPointer<span class="token operator">:</span> <span class="token punctuation">{</span>
+                type<span class="token operator">:</span> <span class="token string">'cross'</span><span class="token punctuation">,</span> <span class="token comment">//十字准星指示器</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function-variable function">formatter</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">datas</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//提示框浮层内容格式 </span>
+                <span class="token keyword">var</span> res <span class="token operator">=</span> datas<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">'&lt;br/&gt;'</span><span class="token punctuation">;</span>
+                <span class="token keyword">var</span> length <span class="token operator">=</span> datas<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+                <span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    res <span class="token operator">+=</span> <span class="token string">'&lt;span style=&quot;display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:'</span> <span class="token operator">+</span> datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>color <span class="token operator">+</span> <span class="token string">';&quot;&gt;&lt;/span&gt;'</span> <span class="token operator">+</span> datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>seriesName <span class="token operator">+</span> <span class="token string">'：'</span> <span class="token operator">+</span> datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'%'</span> <span class="token operator">+</span> <span class="token string">'&lt;br/&gt;'</span>
+                <span class="token punctuation">}</span>
+                <span class="token keyword">return</span> res
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        axisPointer<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">// 坐标轴指示器</span>
+            link<span class="token operator">:</span> <span class="token punctuation">{</span>xAxisIndex<span class="token operator">:</span> <span class="token string">'all'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+            label<span class="token operator">:</span> <span class="token punctuation">{</span>
+                backgroundColor<span class="token operator">:</span> <span class="token string">'#777'</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        grid<span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token comment">//直角坐标系内绘图网格</span>
+            <span class="token punctuation">{</span>
+                top<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+                left<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+                right<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                bottom<span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span>
+                height<span class="token operator">:</span> <span class="token string">'60%'</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                left<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+                right<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                bottom<span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">,</span>
+                height<span class="token operator">:</span> <span class="token string">'20%'</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        xAxis<span class="token operator">:</span><span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                type<span class="token operator">:</span> <span class="token string">'category'</span><span class="token punctuation">,</span>
+                data<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                axisLine<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    show<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                    lineStyle<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        color<span class="token operator">:</span> <span class="token string">'#D8D8D8'</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                axisTick<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    show<span class="token operator">:</span> <span class="token boolean">false</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                axisLabel<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    show<span class="token operator">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>
+                    textStyle<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        fontSize<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+                        color<span class="token operator">:</span> <span class="token string">'#222831'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                splitLine<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    show<span class="token operator">:</span> <span class="token boolean">false</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                scale<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                type<span class="token operator">:</span> <span class="token string">'category'</span><span class="token punctuation">,</span>
+                gridIndex<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                data<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                axisLine<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    lineStyle<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        color<span class="token operator">:</span> <span class="token string">&quot;#D8D8D8&quot;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                scale<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                axisTick<span class="token operator">:</span> <span class="token punctuation">{</span>show<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                splitLine<span class="token operator">:</span> <span class="token punctuation">{</span>show<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                axisLabel<span class="token operator">:</span> <span class="token punctuation">{</span>show<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        yAxis<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                scale<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                splitArea<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    show<span class="token operator">:</span> <span class="token boolean">false</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                splitNumber<span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+                <span class="token comment">// max: 150,</span>
+                <span class="token comment">// logBase:10,</span>
+                axisLabel<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    show<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                    textStyle<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        fontSize<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+                        color<span class="token operator">:</span> <span class="token string">'#808080'</span><span class="token punctuation">,</span>
+                        align<span class="token operator">:</span> <span class="token string">'left'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    formatter<span class="token operator">:</span> <span class="token string">'{value} %'</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                axisLine<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    show<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                    lineStyle<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        color<span class="token operator">:</span> <span class="token string">'#D8D8D8'</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                axisTick<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    show<span class="token operator">:</span> <span class="token boolean">false</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                splitLine<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    show<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                    lineStyle<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        color<span class="token operator">:</span> <span class="token string">'#F5F5F5'</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                offset<span class="token operator">:</span> <span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                type<span class="token operator">:</span> <span class="token string">'value'</span><span class="token punctuation">,</span>
+                gridIndex<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                offset<span class="token operator">:</span> <span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">,</span>
+                axisLabel<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    show<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                    textStyle<span class="token operator">:</span> <span class="token punctuation">{</span>fontSize<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span> color<span class="token operator">:</span> <span class="token string">&quot;#808080&quot;</span><span class="token punctuation">,</span> align<span class="token operator">:</span> <span class="token string">'left'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    formatter<span class="token operator">:</span> <span class="token string">'{value} %'</span><span class="token punctuation">,</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                axisLine<span class="token operator">:</span> <span class="token punctuation">{</span>show<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                axisTick<span class="token operator">:</span> <span class="token punctuation">{</span>show<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                splitLine<span class="token operator">:</span> <span class="token punctuation">{</span>show<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+        series<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                name<span class="token operator">:</span> seriesName1<span class="token punctuation">,</span>
+                type<span class="token operator">:</span> <span class="token string">'line'</span><span class="token punctuation">,</span>
+                data<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                color<span class="token operator">:</span> <span class="token string">&quot;#FF7855&quot;</span><span class="token punctuation">,</span>
+                xAxisIndex<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                yAxisIndex<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                symbol<span class="token operator">:</span> <span class="token string">'none'</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                name<span class="token operator">:</span> seriesName2<span class="token punctuation">,</span>
+                type<span class="token operator">:</span> <span class="token string">'line'</span><span class="token punctuation">,</span>
+                data<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                color<span class="token operator">:</span> <span class="token string">&quot;#009DFF&quot;</span><span class="token punctuation">,</span>
+                xAxisIndex<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                yAxisIndex<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                symbol<span class="token operator">:</span> <span class="token string">'none'</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                name<span class="token operator">:</span> seriesName3<span class="token punctuation">,</span>
+                type<span class="token operator">:</span> <span class="token string">'line'</span><span class="token punctuation">,</span>
+                data<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                color<span class="token operator">:</span> <span class="token string">&quot;#FFBD00&quot;</span><span class="token punctuation">,</span>
+                xAxisIndex<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                yAxisIndex<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                symbol<span class="token operator">:</span><span class="token string">'none'</span><span class="token punctuation">,</span>
+                areaStyle<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    color<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">echarts<span class="token punctuation">.</span>graphic<span class="token punctuation">.</span>LinearGradient</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
+                        <span class="token punctuation">{</span>
+                            offset<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                            color<span class="token operator">:</span> <span class="token string">'rgba(255, 189, 0, .5)'</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">{</span>
+                            offset<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                            color<span class="token operator">:</span> <span class="token string">'rgba(255, 189, 0, 0)'</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">]</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                name<span class="token operator">:</span> seriesName4<span class="token punctuation">,</span>
+                type<span class="token operator">:</span> <span class="token string">'line'</span><span class="token punctuation">,</span>
+                data<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                color<span class="token operator">:</span> <span class="token string">'#769CFA'</span><span class="token punctuation">,</span>
+                gridIndex<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                xAxisIndex<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token comment">//使用的 x 轴的 index，在单个图表实例中存在多个 x 轴的时候有用</span>
+                yAxisIndex<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                symbol<span class="token operator">:</span> <span class="token string">'none'</span><span class="token punctuation">,</span>
+                areaStyle<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    color<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">echarts<span class="token punctuation">.</span>graphic<span class="token punctuation">.</span>LinearGradient</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                        offset<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+                        color<span class="token operator">:</span> <span class="token string">'rgba(115,156,250,0.05)'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                        offset<span class="token operator">:</span> <span class="token number">0.76</span><span class="token punctuation">,</span>
+                        color<span class="token operator">:</span> <span class="token string">'rgba(115,156,250,0.25)'</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    mychartdd<span class="token punctuation">.</span><span class="token function">setOption</span><span class="token punctuation">(</span>option<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/*请求json数据*/</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">var</span> SoilTemp1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> SoilTemp2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> SoilTemp3 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> SoilTemp4 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">// Y坐标值：各项指标数据</span>
+        <span class="token keyword">var</span> <span class="token constant">TM</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment">// x坐标值:时间</span>
+        mychartdd<span class="token punctuation">.</span><span class="token function">showLoading</span><span class="token punctuation">(</span><span class="token punctuation">{</span> text<span class="token operator">:</span> <span class="token string">&quot;图表数据正在加载中.....如果加载不出来，建议使用WebStorm工具打开&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        $<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            type<span class="token operator">:</span> <span class="token string">&quot;GET&quot;</span><span class="token punctuation">,</span>
+            <span class="token comment">// 请求地址</span>
+            url<span class="token operator">:</span> <span class="token string">&quot;json/html1.json&quot;</span><span class="token punctuation">,</span>
+            <span class="token comment">// async:true,    //是否异步</span>
+            <span class="token comment">// dataType: &quot;jsonp&quot;,  //预期的服务器响应的数据类型。</span>
+            <span class="token comment">// jsonp: &quot;callback&quot;,  //在一个 jsonp 中重写回调函数的字符串。</span>
+            <span class="token comment">// xhrFields: {withCredentials: true},</span>
+            <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">ret</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">var</span> date <span class="token operator">=</span> ret<span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>date <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    mychartdd<span class="token punctuation">.</span><span class="token function">showLoading</span><span class="token punctuation">(</span><span class="token punctuation">{</span> text<span class="token operator">:</span> <span class="token string">&quot;未获取到数据，请选择正确的时间...&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token comment">// 遍历上面 '数据1','数据2','数据3'</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> date<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token constant">TM</span><span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>date<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>dt<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//时间</span>
+                    SoilTemp1<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>date<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>portfolio_net_value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//数据1</span>
+                    SoilTemp2<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>date<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>SH_net_value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//数据2</span>
+                    SoilTemp3<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>date<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>alpha_net_value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//数据3</span>
+                <span class="token punctuation">}</span>
+                <span class="token comment">// 遍历下面 ‘数据4’ 数据</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> date<span class="token punctuation">.</span>length<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    SoilTemp4<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>date<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">.</span>cur_drawdown_rate<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//数据4</span>
+                <span class="token punctuation">}</span>
+                mychartdd<span class="token punctuation">.</span><span class="token function">hideLoading</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">//隐藏加载动画</span>
+                mychartdd<span class="token punctuation">.</span><span class="token function">setOption</span><span class="token punctuation">(</span><span class="token punctuation">{</span>       <span class="token comment">//加载数据图表</span>
+                    tooltip<span class="token operator">:</span> <span class="token punctuation">[</span>
+                        <span class="token punctuation">{</span>
+                            trigger<span class="token operator">:</span> <span class="token string">'axis'</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                    toolbox<span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">// 工具栏</span>
+                        show<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                        feature<span class="token operator">:</span> <span class="token punctuation">{</span>
+                            saveAsImage<span class="token operator">:</span> <span class="token punctuation">{</span> show<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// 保存为图片</span>
+                            restore<span class="token operator">:</span> <span class="token punctuation">{</span> show<span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    calculable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+                    xAxis<span class="token operator">:</span> <span class="token punctuation">[</span>
+                        <span class="token punctuation">{</span>
+                            type<span class="token operator">:</span> <span class="token string">'category'</span><span class="token punctuation">,</span>
+                            boundaryGap<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                            data<span class="token operator">:</span> <span class="token constant">TM</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">{</span>
+                            type<span class="token operator">:</span> <span class="token string">'category'</span><span class="token punctuation">,</span>
+                            boundaryGap<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+                            data<span class="token operator">:</span> <span class="token constant">TM</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+                    yAxis<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token comment">//注意一定不能丢了这个，不然图表Y轴不显示</span>
+                    series<span class="token operator">:</span> <span class="token punctuation">[</span>
+                        <span class="token punctuation">{</span>
+                            name<span class="token operator">:</span> seriesName1<span class="token punctuation">,</span>
+                            type<span class="token operator">:</span> <span class="token string">'line'</span><span class="token punctuation">,</span>
+                            data<span class="token operator">:</span> SoilTemp1
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">{</span>
+                            name<span class="token operator">:</span> seriesName2<span class="token punctuation">,</span>
+                            type<span class="token operator">:</span> <span class="token string">'line'</span><span class="token punctuation">,</span>
+                            data<span class="token operator">:</span> SoilTemp2
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">{</span>
+                            name<span class="token operator">:</span> seriesName3<span class="token punctuation">,</span>
+                            type<span class="token operator">:</span> <span class="token string">'line'</span><span class="token punctuation">,</span>
+                            data<span class="token operator">:</span> SoilTemp3
+                        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                        <span class="token punctuation">{</span>
+                            name<span class="token operator">:</span> seriesName4<span class="token punctuation">,</span>
+                            type<span class="token operator">:</span> <span class="token string">'line'</span><span class="token punctuation">,</span>
+                            data<span class="token operator">:</span> SoilTemp4
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">]</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br><span class="line-number">133</span><br><span class="line-number">134</span><br><span class="line-number">135</span><br><span class="line-number">136</span><br><span class="line-number">137</span><br><span class="line-number">138</span><br><span class="line-number">139</span><br><span class="line-number">140</span><br><span class="line-number">141</span><br><span class="line-number">142</span><br><span class="line-number">143</span><br><span class="line-number">144</span><br><span class="line-number">145</span><br><span class="line-number">146</span><br><span class="line-number">147</span><br><span class="line-number">148</span><br><span class="line-number">149</span><br><span class="line-number">150</span><br><span class="line-number">151</span><br><span class="line-number">152</span><br><span class="line-number">153</span><br><span class="line-number">154</span><br><span class="line-number">155</span><br><span class="line-number">156</span><br><span class="line-number">157</span><br><span class="line-number">158</span><br><span class="line-number">159</span><br><span class="line-number">160</span><br><span class="line-number">161</span><br><span class="line-number">162</span><br><span class="line-number">163</span><br><span class="line-number">164</span><br><span class="line-number">165</span><br><span class="line-number">166</span><br><span class="line-number">167</span><br><span class="line-number">168</span><br><span class="line-number">169</span><br><span class="line-number">170</span><br><span class="line-number">171</span><br><span class="line-number">172</span><br><span class="line-number">173</span><br><span class="line-number">174</span><br><span class="line-number">175</span><br><span class="line-number">176</span><br><span class="line-number">177</span><br><span class="line-number">178</span><br><span class="line-number">179</span><br><span class="line-number">180</span><br><span class="line-number">181</span><br><span class="line-number">182</span><br><span class="line-number">183</span><br><span class="line-number">184</span><br><span class="line-number">185</span><br><span class="line-number">186</span><br><span class="line-number">187</span><br><span class="line-number">188</span><br><span class="line-number">189</span><br><span class="line-number">190</span><br><span class="line-number">191</span><br><span class="line-number">192</span><br><span class="line-number">193</span><br><span class="line-number">194</span><br><span class="line-number">195</span><br><span class="line-number">196</span><br><span class="line-number">197</span><br><span class="line-number">198</span><br><span class="line-number">199</span><br><span class="line-number">200</span><br><span class="line-number">201</span><br><span class="line-number">202</span><br><span class="line-number">203</span><br><span class="line-number">204</span><br><span class="line-number">205</span><br><span class="line-number">206</span><br><span class="line-number">207</span><br><span class="line-number">208</span><br><span class="line-number">209</span><br><span class="line-number">210</span><br><span class="line-number">211</span><br><span class="line-number">212</span><br><span class="line-number">213</span><br><span class="line-number">214</span><br><span class="line-number">215</span><br><span class="line-number">216</span><br><span class="line-number">217</span><br><span class="line-number">218</span><br><span class="line-number">219</span><br><span class="line-number">220</span><br><span class="line-number">221</span><br><span class="line-number">222</span><br><span class="line-number">223</span><br><span class="line-number">224</span><br><span class="line-number">225</span><br><span class="line-number">226</span><br><span class="line-number">227</span><br><span class="line-number">228</span><br><span class="line-number">229</span><br><span class="line-number">230</span><br><span class="line-number">231</span><br><span class="line-number">232</span><br><span class="line-number">233</span><br><span class="line-number">234</span><br><span class="line-number">235</span><br><span class="line-number">236</span><br><span class="line-number">237</span><br><span class="line-number">238</span><br><span class="line-number">239</span><br><span class="line-number">240</span><br><span class="line-number">241</span><br><span class="line-number">242</span><br><span class="line-number">243</span><br><span class="line-number">244</span><br><span class="line-number">245</span><br><span class="line-number">246</span><br><span class="line-number">247</span><br><span class="line-number">248</span><br><span class="line-number">249</span><br><span class="line-number">250</span><br><span class="line-number">251</span><br><span class="line-number">252</span><br><span class="line-number">253</span><br><span class="line-number">254</span><br><span class="line-number">255</span><br><span class="line-number">256</span><br><span class="line-number">257</span><br><span class="line-number">258</span><br><span class="line-number">259</span><br><span class="line-number">260</span><br><span class="line-number">261</span><br><span class="line-number">262</span><br><span class="line-number">263</span><br><span class="line-number">264</span><br><span class="line-number">265</span><br><span class="line-number">266</span><br><span class="line-number">267</span><br><span class="line-number">268</span><br><span class="line-number">269</span><br><span class="line-number">270</span><br><span class="line-number">271</span><br><span class="line-number">272</span><br><span class="line-number">273</span><br><span class="line-number">274</span><br><span class="line-number">275</span><br><span class="line-number">276</span><br><span class="line-number">277</span><br><span class="line-number">278</span><br><span class="line-number">279</span><br><span class="line-number">280</span><br><span class="line-number">281</span><br><span class="line-number">282</span><br><span class="line-number">283</span><br><span class="line-number">284</span><br><span class="line-number">285</span><br><span class="line-number">286</span><br><span class="line-number">287</span><br><span class="line-number">288</span><br><span class="line-number">289</span><br><span class="line-number">290</span><br><span class="line-number">291</span><br><span class="line-number">292</span><br><span class="line-number">293</span><br><span class="line-number">294</span><br><span class="line-number">295</span><br><span class="line-number">296</span><br><span class="line-number">297</span><br><span class="line-number">298</span><br><span class="line-number">299</span><br><span class="line-number">300</span><br><span class="line-number">301</span><br><span class="line-number">302</span><br><span class="line-number">303</span><br><span class="line-number">304</span><br><span class="line-number">305</span><br><span class="line-number">306</span><br><span class="line-number">307</span><br><span class="line-number">308</span><br><span class="line-number">309</span><br><span class="line-number">310</span><br><span class="line-number">311</span><br><span class="line-number">312</span><br><span class="line-number">313</span><br><span class="line-number">314</span><br><span class="line-number">315</span><br><span class="line-number">316</span><br><span class="line-number">317</span><br><span class="line-number">318</span><br><span class="line-number">319</span><br><span class="line-number">320</span><br><span class="line-number">321</span><br></div></div><p>看完感觉对你有帮助，记得关注 <a href="https://github.com/kuishou68" target="_blank" rel="noopener noreferrer">我<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> !</p></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">6/20/2022, 10:48:50 PM</span></div></footer> <!----> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.6a48d521.js" defer></script><script src="/assets/js/2.7eb975a7.js" defer></script><script src="/assets/js/20.283655cf.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>3.1 手把手教你写 LRU 缓存淘汰算法 | 魁首</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/img/logo.png">
+    <meta name="description" content="一个没有天赋的前端程序员👨‍💻 ">
+    <link rel="preload" href="/assets/css/0.styles.9d8515da.css" as="style"><link rel="preload" href="/assets/js/app.6a48d521.js" as="script"><link rel="preload" href="/assets/js/2.7eb975a7.js" as="script"><link rel="preload" href="/assets/js/101.af6de843.js" as="script"><link rel="prefetch" href="/assets/js/10.f82871fe.js"><link rel="prefetch" href="/assets/js/100.a359e482.js"><link rel="prefetch" href="/assets/js/102.d6bfb8a8.js"><link rel="prefetch" href="/assets/js/103.62189762.js"><link rel="prefetch" href="/assets/js/104.bc30f6bc.js"><link rel="prefetch" href="/assets/js/105.9866cbb4.js"><link rel="prefetch" href="/assets/js/106.5af81eff.js"><link rel="prefetch" href="/assets/js/107.b1ebe0f3.js"><link rel="prefetch" href="/assets/js/108.597665ee.js"><link rel="prefetch" href="/assets/js/109.8fd2e2ff.js"><link rel="prefetch" href="/assets/js/11.89fc88ff.js"><link rel="prefetch" href="/assets/js/110.d89aafb7.js"><link rel="prefetch" href="/assets/js/111.2b5d24a3.js"><link rel="prefetch" href="/assets/js/112.53faa339.js"><link rel="prefetch" href="/assets/js/113.072bd374.js"><link rel="prefetch" href="/assets/js/114.fe270f69.js"><link rel="prefetch" href="/assets/js/115.bf7866e0.js"><link rel="prefetch" href="/assets/js/116.e63ac2a5.js"><link rel="prefetch" href="/assets/js/117.175b9671.js"><link rel="prefetch" href="/assets/js/118.56a9bd14.js"><link rel="prefetch" href="/assets/js/119.4cbab950.js"><link rel="prefetch" href="/assets/js/12.1cb55187.js"><link rel="prefetch" href="/assets/js/120.c08c8a5f.js"><link rel="prefetch" href="/assets/js/121.981ce403.js"><link rel="prefetch" href="/assets/js/122.3a0a9b19.js"><link rel="prefetch" href="/assets/js/123.56a951ec.js"><link rel="prefetch" href="/assets/js/124.2f8d91a2.js"><link rel="prefetch" href="/assets/js/125.a14f664b.js"><link rel="prefetch" href="/assets/js/126.46f567bc.js"><link rel="prefetch" href="/assets/js/127.8687e555.js"><link rel="prefetch" href="/assets/js/128.be107a17.js"><link rel="prefetch" href="/assets/js/129.5c614ef7.js"><link rel="prefetch" href="/assets/js/13.8dcd0ee4.js"><link rel="prefetch" href="/assets/js/130.42add747.js"><link rel="prefetch" href="/assets/js/131.d4d4d470.js"><link rel="prefetch" href="/assets/js/132.6ea27932.js"><link rel="prefetch" href="/assets/js/133.d600600d.js"><link rel="prefetch" href="/assets/js/134.d5da3f28.js"><link rel="prefetch" href="/assets/js/135.8feeec56.js"><link rel="prefetch" href="/assets/js/136.7d4f49fc.js"><link rel="prefetch" href="/assets/js/137.5108c12f.js"><link rel="prefetch" href="/assets/js/138.fd23f748.js"><link rel="prefetch" href="/assets/js/14.9781dec3.js"><link rel="prefetch" href="/assets/js/15.765d0c7a.js"><link rel="prefetch" href="/assets/js/16.e20f6841.js"><link rel="prefetch" href="/assets/js/17.938031c0.js"><link rel="prefetch" href="/assets/js/18.d05cdade.js"><link rel="prefetch" href="/assets/js/19.52312410.js"><link rel="prefetch" href="/assets/js/20.283655cf.js"><link rel="prefetch" href="/assets/js/21.8f421a90.js"><link rel="prefetch" href="/assets/js/22.5002f960.js"><link rel="prefetch" href="/assets/js/23.5929095a.js"><link rel="prefetch" href="/assets/js/24.2a41b1ba.js"><link rel="prefetch" href="/assets/js/25.cd48bbcb.js"><link rel="prefetch" href="/assets/js/26.7d8c23df.js"><link rel="prefetch" href="/assets/js/27.8f241e5e.js"><link rel="prefetch" href="/assets/js/28.106d03c0.js"><link rel="prefetch" href="/assets/js/29.8327198a.js"><link rel="prefetch" href="/assets/js/3.17556ac1.js"><link rel="prefetch" href="/assets/js/30.c7411ac0.js"><link rel="prefetch" href="/assets/js/31.334686b5.js"><link rel="prefetch" href="/assets/js/32.01c3a057.js"><link rel="prefetch" href="/assets/js/33.3ca6beca.js"><link rel="prefetch" href="/assets/js/34.d11fa3cb.js"><link rel="prefetch" href="/assets/js/35.3c6eeefc.js"><link rel="prefetch" href="/assets/js/36.eb367c73.js"><link rel="prefetch" href="/assets/js/37.7c7e7884.js"><link rel="prefetch" href="/assets/js/38.d70ec930.js"><link rel="prefetch" href="/assets/js/39.0c22444f.js"><link rel="prefetch" href="/assets/js/4.bfbea725.js"><link rel="prefetch" href="/assets/js/40.9be3aa2c.js"><link rel="prefetch" href="/assets/js/41.fa8fa5f7.js"><link rel="prefetch" href="/assets/js/42.f8edc742.js"><link rel="prefetch" href="/assets/js/43.890ccd2a.js"><link rel="prefetch" href="/assets/js/44.e8dd2956.js"><link rel="prefetch" href="/assets/js/45.4dc0117f.js"><link rel="prefetch" href="/assets/js/46.33b975a4.js"><link rel="prefetch" href="/assets/js/47.0af6bf25.js"><link rel="prefetch" href="/assets/js/48.4d488c3e.js"><link rel="prefetch" href="/assets/js/49.f32cbe47.js"><link rel="prefetch" href="/assets/js/5.e9a52b0b.js"><link rel="prefetch" href="/assets/js/50.f6fb9bfc.js"><link rel="prefetch" href="/assets/js/51.b34586da.js"><link rel="prefetch" href="/assets/js/52.d2c8dae9.js"><link rel="prefetch" href="/assets/js/53.54fbcf59.js"><link rel="prefetch" href="/assets/js/54.82d2ebde.js"><link rel="prefetch" href="/assets/js/55.9983e39f.js"><link rel="prefetch" href="/assets/js/56.8eef2a13.js"><link rel="prefetch" href="/assets/js/57.e11ca2ac.js"><link rel="prefetch" href="/assets/js/58.377934a2.js"><link rel="prefetch" href="/assets/js/59.50355f7d.js"><link rel="prefetch" href="/assets/js/6.e21144ea.js"><link rel="prefetch" href="/assets/js/60.09c560e0.js"><link rel="prefetch" href="/assets/js/61.e79a80a0.js"><link rel="prefetch" href="/assets/js/62.94028fbb.js"><link rel="prefetch" href="/assets/js/63.6d0784b2.js"><link rel="prefetch" href="/assets/js/64.92aeaeb9.js"><link rel="prefetch" href="/assets/js/65.8fad3d0c.js"><link rel="prefetch" href="/assets/js/66.f55238ca.js"><link rel="prefetch" href="/assets/js/67.d2d0e4d6.js"><link rel="prefetch" href="/assets/js/68.5a7d1f90.js"><link rel="prefetch" href="/assets/js/69.9c5250e8.js"><link rel="prefetch" href="/assets/js/7.c39c8310.js"><link rel="prefetch" href="/assets/js/70.b0ed19c1.js"><link rel="prefetch" href="/assets/js/71.ed6467eb.js"><link rel="prefetch" href="/assets/js/72.08a5642b.js"><link rel="prefetch" href="/assets/js/73.1bf56c2f.js"><link rel="prefetch" href="/assets/js/74.9ba833f0.js"><link rel="prefetch" href="/assets/js/75.f7f50235.js"><link rel="prefetch" href="/assets/js/76.97df98f2.js"><link rel="prefetch" href="/assets/js/77.b3803cc2.js"><link rel="prefetch" href="/assets/js/78.7b4df1fe.js"><link rel="prefetch" href="/assets/js/79.8b62450a.js"><link rel="prefetch" href="/assets/js/8.e0f8c11d.js"><link rel="prefetch" href="/assets/js/80.ee0108d8.js"><link rel="prefetch" href="/assets/js/81.f91dcdaa.js"><link rel="prefetch" href="/assets/js/82.eeb688a9.js"><link rel="prefetch" href="/assets/js/83.5c9bf822.js"><link rel="prefetch" href="/assets/js/84.57737001.js"><link rel="prefetch" href="/assets/js/85.3388a4cf.js"><link rel="prefetch" href="/assets/js/86.cba0d758.js"><link rel="prefetch" href="/assets/js/87.4fc35e82.js"><link rel="prefetch" href="/assets/js/88.9d520aa2.js"><link rel="prefetch" href="/assets/js/89.e276e1b0.js"><link rel="prefetch" href="/assets/js/9.11dda660.js"><link rel="prefetch" href="/assets/js/90.ea491c97.js"><link rel="prefetch" href="/assets/js/91.f0592d0d.js"><link rel="prefetch" href="/assets/js/92.ff1f35ac.js"><link rel="prefetch" href="/assets/js/93.43f25796.js"><link rel="prefetch" href="/assets/js/94.30af2e8e.js"><link rel="prefetch" href="/assets/js/95.a5b55ec5.js"><link rel="prefetch" href="/assets/js/96.2d7219ae.js"><link rel="prefetch" href="/assets/js/97.6b1a6d92.js"><link rel="prefetch" href="/assets/js/98.bc9e7c7e.js"><link rel="prefetch" href="/assets/js/99.d676873c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9d8515da.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="魁首" class="logo"> <span class="site-name can-hide">魁首</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="A前端👨‍💻" class="dropdown-title"><span class="title">A前端👨‍💻</span> <span class="arrow down"></span></button> <button type="button" aria-label="A前端👨‍💻" class="mobile-dropdown-title"><span class="title">A前端👨‍💻</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Axios/" class="nav-link">
+  Axios
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Echarts/" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/node/" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/React/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/vuepress/" class="nav-link">
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/打包工具/" class="nav-link">
+  打包工具
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/🔥Vue/" class="nav-link">
+  🔥Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="B面试题📑" class="dropdown-title"><span class="title">B面试题📑</span> <span class="arrow down"></span></button> <button type="button" aria-label="B面试题📑" class="mobile-dropdown-title"><span class="title">B面试题📑</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/B面试题📑/📣面试题汇总/" class="nav-link">
+  📣面试题汇总
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="PHP🐘" class="dropdown-title"><span class="title">PHP🐘</span> <span class="arrow down"></span></button> <button type="button" aria-label="PHP🐘" class="mobile-dropdown-title"><span class="title">PHP🐘</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/PHP🐘/一、初学者容易遇到的问题/" class="nav-link">
+  一、初学者容易遇到的问题
+</a></li><li class="dropdown-item"><!----> <a href="/PHP🐘/二、PHP实现简单的登录注册、增删改查/" class="nav-link">
+  二、PHP实现简单的登录注册、增删改查
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python🐍" class="dropdown-title"><span class="title">Python🐍</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python🐍" class="mobile-dropdown-title"><span class="title">Python🐍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Python🐍/一、爬取QQ空间/" class="nav-link">
+  一、爬取QQ空间
+</a></li><li class="dropdown-item"><!----> <a href="/Python🐍/二、爬取水果交易网水果行情信息/" class="nav-link">
+  二、爬取水果交易网水果行情信息
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue实战💻" class="dropdown-title"><span class="title">Vue实战💻</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue实战💻" class="mobile-dropdown-title"><span class="title">Vue实战💻</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Vue实战💻/Echarts系列/" class="nav-link">
+  Echarts系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/EementUI系列/" class="nav-link">
+  EementUI系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/图书商城/" class="nav-link">
+  图书商城
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/浏览器系列/" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/海风小店/" class="nav-link">
+  海风小店
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/网易云小程序/" class="nav-link">
+  网易云小程序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读过的书📚️" class="dropdown-title"><span class="title">读过的书📚️</span> <span class="arrow down"></span></button> <button type="button" aria-label="读过的书📚️" class="mobile-dropdown-title"><span class="title">读过的书📚️</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/读过的书📚️/《HTTP权威指南-图灵》/" class="nav-link">
+  《HTTP权威指南-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《JavaScript正则表达式迷你书》/" class="nav-link">
+  《JavaScript正则表达式迷你书》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《JavaScript高级程序设计-图灵》/" class="nav-link">
+  《JavaScript高级程序设计-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《labuladong的算法小炒》/" class="nav-link">
+  《labuladong的算法小炒》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《图解算法-图灵》/" class="nav-link">
+  《图解算法-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《图解网络-小林coding》/" class="nav-link">
+  《图解网络-小林coding》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《架构师的自我修养》/" class="nav-link">
+  《架构师的自我修养》
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="走过的路🌱" class="dropdown-title"><span class="title">走过的路🌱</span> <span class="arrow down"></span></button> <button type="button" aria-label="走过的路🌱" class="mobile-dropdown-title"><span class="title">走过的路🌱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/走过的路🌱/2019成长日记/" class="nav-link">
+  2019成长日记
+</a></li><li class="dropdown-item"><!----> <a href="/走过的路🌱/2020年度总结/" class="nav-link">
+  2020年度总结
+</a></li><li class="dropdown-item"><!----> <a href="/走过的路🌱/2021年度总结/" class="nav-link">
+  2021年度总结
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="A前端👨‍💻" class="dropdown-title"><span class="title">A前端👨‍💻</span> <span class="arrow down"></span></button> <button type="button" aria-label="A前端👨‍💻" class="mobile-dropdown-title"><span class="title">A前端👨‍💻</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Axios/" class="nav-link">
+  Axios
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Echarts/" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/node/" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/React/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/vuepress/" class="nav-link">
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/打包工具/" class="nav-link">
+  打包工具
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/🔥Vue/" class="nav-link">
+  🔥Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="B面试题📑" class="dropdown-title"><span class="title">B面试题📑</span> <span class="arrow down"></span></button> <button type="button" aria-label="B面试题📑" class="mobile-dropdown-title"><span class="title">B面试题📑</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/B面试题📑/📣面试题汇总/" class="nav-link">
+  📣面试题汇总
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="PHP🐘" class="dropdown-title"><span class="title">PHP🐘</span> <span class="arrow down"></span></button> <button type="button" aria-label="PHP🐘" class="mobile-dropdown-title"><span class="title">PHP🐘</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/PHP🐘/一、初学者容易遇到的问题/" class="nav-link">
+  一、初学者容易遇到的问题
+</a></li><li class="dropdown-item"><!----> <a href="/PHP🐘/二、PHP实现简单的登录注册、增删改查/" class="nav-link">
+  二、PHP实现简单的登录注册、增删改查
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python🐍" class="dropdown-title"><span class="title">Python🐍</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python🐍" class="mobile-dropdown-title"><span class="title">Python🐍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Python🐍/一、爬取QQ空间/" class="nav-link">
+  一、爬取QQ空间
+</a></li><li class="dropdown-item"><!----> <a href="/Python🐍/二、爬取水果交易网水果行情信息/" class="nav-link">
+  二、爬取水果交易网水果行情信息
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue实战💻" class="dropdown-title"><span class="title">Vue实战💻</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue实战💻" class="mobile-dropdown-title"><span class="title">Vue实战💻</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Vue实战💻/Echarts系列/" class="nav-link">
+  Echarts系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/EementUI系列/" class="nav-link">
+  EementUI系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/图书商城/" class="nav-link">
+  图书商城
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/浏览器系列/" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/海风小店/" class="nav-link">
+  海风小店
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/网易云小程序/" class="nav-link">
+  网易云小程序
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读过的书📚️" class="dropdown-title"><span class="title">读过的书📚️</span> <span class="arrow down"></span></button> <button type="button" aria-label="读过的书📚️" class="mobile-dropdown-title"><span class="title">读过的书📚️</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/读过的书📚️/《HTTP权威指南-图灵》/" class="nav-link">
+  《HTTP权威指南-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《JavaScript正则表达式迷你书》/" class="nav-link">
+  《JavaScript正则表达式迷你书》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《JavaScript高级程序设计-图灵》/" class="nav-link">
+  《JavaScript高级程序设计-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《labuladong的算法小炒》/" class="nav-link">
+  《labuladong的算法小炒》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《图解算法-图灵》/" class="nav-link">
+  《图解算法-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《图解网络-小林coding》/" class="nav-link">
+  《图解网络-小林coding》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《架构师的自我修养》/" class="nav-link">
+  《架构师的自我修养》
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="走过的路🌱" class="dropdown-title"><span class="title">走过的路🌱</span> <span class="arrow down"></span></button> <button type="button" aria-label="走过的路🌱" class="mobile-dropdown-title"><span class="title">走过的路🌱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/走过的路🌱/2019成长日记/" class="nav-link">
+  2019成长日记
+</a></li><li class="dropdown-item"><!----> <a href="/走过的路🌱/2020年度总结/" class="nav-link">
+  2020年度总结
+</a></li><li class="dropdown-item"><!----> <a href="/走过的路🌱/2021年度总结/" class="nav-link">
+  2021年度总结
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>《labuladong的算法小炒》</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/%E8%AF%BB%E8%BF%87%E7%9A%84%E4%B9%A6%F0%9F%93%9A%EF%B8%8F/%E3%80%8Alabuladong%E7%9A%84%E7%AE%97%E6%B3%95%E5%B0%8F%E7%82%92%E3%80%8B/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/13. 罗马数字转整数.html" class="sidebar-link">13. 罗马数字转整数</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/27. 移除元素.html" class="sidebar-link">27. 移除元素</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/35. 搜索插入位置.html" class="sidebar-link">35. 搜索插入位置</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/70. 爬楼梯.html" class="sidebar-link">70. 爬楼梯</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/9. 回文数.html" class="sidebar-link">9. 回文数</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/94. 二叉树的中序遍历.html" class="sidebar-link">94. 二叉树的中序遍历</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/koko偷香蕉.html" class="sidebar-link">koko偷香蕉</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/k个一组反转链表.html" class="sidebar-link">k个一组反转链表</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/LRU算法.html" class="active sidebar-link">LRU算法</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/一行代码解决的智力题.html" class="sidebar-link">一行代码解决的智力题</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/不含重复字符的最长子字符串.html" class="sidebar-link">不含重复字符的最长子字符串</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/两数之和.html" class="sidebar-link">两数之和</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/两数相加.html" class="sidebar-link">两数相加</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/买股票最的最佳时机.html" class="sidebar-link">买股票最的最佳时机</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/二分查找高效判定子序列.html" class="sidebar-link">二分查找高效判定子序列</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/二叉树中的最大路径.html" class="sidebar-link">二叉树中的最大路径</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/二叉树的中序遍历.html" class="sidebar-link">二叉树的中序遍历</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/二维数组中的查找.html" class="sidebar-link">二维数组中的查找</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/判断回文链表.html" class="sidebar-link">判断回文链表</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/前 n 个数字二进制中 1 的个数.html" class="sidebar-link">前 n 个数字二进制中 1 的个数</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/剑指 Offer 09. 用两个栈实现队列.html" class="sidebar-link">剑指 Offer 09. 用两个栈实现队列</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/反转链表.html" class="sidebar-link">反转链表</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/合并两个有序链表.html" class="sidebar-link">合并两个有序链表</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/合法括号判定.html" class="sidebar-link">合法括号判定</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/如何去除有序数组的重复元素.html" class="sidebar-link">如何去除有序数组的重复元素</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/如何寻找消失的元素.html" class="sidebar-link">如何寻找消失的元素</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/如何高效进行模幂运算.html" class="sidebar-link">如何高效进行模幂运算</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/子集排列组合.html" class="sidebar-link">子集排列组合</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/座位调度.html" class="sidebar-link">座位调度</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/打印素数.html" class="sidebar-link">打印素数</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/接雨水.html" class="sidebar-link">接雨水</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/数组中第K个最大元素.html" class="sidebar-link">数组中第K个最大元素</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/最大子序列.html" class="sidebar-link">最大子序列</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/最长回文子串.html" class="sidebar-link">最长回文子串</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/有效的括号.html" class="sidebar-link">有效的括号</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/相同的数.html" class="sidebar-link">相同的数</a></li><li><a href="/读过的书📚️/《labuladong的算法小炒》/跳跃游戏.html" class="sidebar-link">跳跃游戏</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="_3-1-手把手教你写-lru-缓存淘汰算法"><a href="#_3-1-手把手教你写-lru-缓存淘汰算法" class="header-anchor">#</a> 3.1 手把手教你写 LRU 缓存淘汰算法</h1> <p>本文对应的力扣题目：</p> <p><a href="https://leetcode-cn.com/problems/lru-cache/" target="_blank" rel="noopener noreferrer">146.LRU缓存机制<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>自己造轮子实现代码：</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">class</span> <span class="token class-name">Node</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> key<span class="token punctuation">,</span> val<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">Node</span> next<span class="token punctuation">,</span> prev<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">Node</span><span class="token punctuation">(</span><span class="token keyword">int</span> k<span class="token punctuation">,</span> <span class="token keyword">int</span> v<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>key <span class="token operator">=</span> k<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>val <span class="token operator">=</span> v<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">DoubleList</span> <span class="token punctuation">{</span>  
+    <span class="token comment">// 头尾虚节点</span>
+    <span class="token keyword">private</span> <span class="token class-name">Node</span> head<span class="token punctuation">,</span> tail<span class="token punctuation">;</span>  
+    <span class="token comment">// 链表元素数</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> size<span class="token punctuation">;</span>
+    
+    <span class="token keyword">public</span> <span class="token class-name">DoubleList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 初始化双向链表的数据</span>
+        head <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Node</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        tail <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Node</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        head<span class="token punctuation">.</span>next <span class="token operator">=</span> tail<span class="token punctuation">;</span>
+        tail<span class="token punctuation">.</span>prev <span class="token operator">=</span> head<span class="token punctuation">;</span>
+        size <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 在链表尾部添加节点 x，时间 O(1)</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addLast</span><span class="token punctuation">(</span><span class="token class-name">Node</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        x<span class="token punctuation">.</span>prev <span class="token operator">=</span> tail<span class="token punctuation">.</span>prev<span class="token punctuation">;</span>
+        x<span class="token punctuation">.</span>next <span class="token operator">=</span> tail<span class="token punctuation">;</span>
+        tail<span class="token punctuation">.</span>prev<span class="token punctuation">.</span>next <span class="token operator">=</span> x<span class="token punctuation">;</span>
+        tail<span class="token punctuation">.</span>prev <span class="token operator">=</span> x<span class="token punctuation">;</span>
+        size<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 删除链表中的 x 节点（x 一定存在）</span>
+    <span class="token comment">// 由于是双链表且给的是目标 Node 节点，时间 O(1)</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">remove</span><span class="token punctuation">(</span><span class="token class-name">Node</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        x<span class="token punctuation">.</span>prev<span class="token punctuation">.</span>next <span class="token operator">=</span> x<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        x<span class="token punctuation">.</span>next<span class="token punctuation">.</span>prev <span class="token operator">=</span> x<span class="token punctuation">.</span>prev<span class="token punctuation">;</span>
+        size<span class="token operator">--</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">// 删除链表中第一个节点，并返回该节点，时间 O(1)</span>
+    <span class="token keyword">public</span> <span class="token class-name">Node</span> <span class="token function">removeFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>head<span class="token punctuation">.</span>next <span class="token operator">==</span> tail<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+        <span class="token class-name">Node</span> first <span class="token operator">=</span> head<span class="token punctuation">.</span>next<span class="token punctuation">;</span>
+        <span class="token function">remove</span><span class="token punctuation">(</span>first<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> first<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// 返回链表长度，时间 O(1)</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> size<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">LRUCache</span> <span class="token punctuation">{</span>
+    <span class="token comment">// key -&gt; Node(key, val)</span>
+    <span class="token keyword">private</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">Node</span><span class="token punctuation">&gt;</span></span> map<span class="token punctuation">;</span>
+    <span class="token comment">// Node(k1, v1) &lt;-&gt; Node(k2, v2)...</span>
+    <span class="token keyword">private</span> <span class="token class-name">DoubleList</span> cache<span class="token punctuation">;</span>
+    <span class="token comment">// 最大容量</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> cap<span class="token punctuation">;</span>
+    
+    <span class="token keyword">public</span> <span class="token class-name">LRUCache</span><span class="token punctuation">(</span><span class="token keyword">int</span> capacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>cap <span class="token operator">=</span> capacity<span class="token punctuation">;</span>
+        map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cache <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DoubleList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token comment">/* 将某个 key 提升为最近使用的 */</span>
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">makeRecently</span><span class="token punctuation">(</span><span class="token keyword">int</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Node</span> x <span class="token operator">=</span> map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 先从链表中删除这个节点</span>
+        cache<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 重新插到队尾</span>
+        cache<span class="token punctuation">.</span><span class="token function">addLast</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/* 添加最近使用的元素 */</span>
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">addRecently</span><span class="token punctuation">(</span><span class="token keyword">int</span> key<span class="token punctuation">,</span> <span class="token keyword">int</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Node</span> x <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Node</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 链表尾部就是最近使用的元素</span>
+        cache<span class="token punctuation">.</span><span class="token function">addLast</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 别忘了在 map 中添加 key 的映射</span>
+        map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/* 删除某一个 key */</span>
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">deleteKey</span><span class="token punctuation">(</span><span class="token keyword">int</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Node</span> x <span class="token operator">=</span> map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 从链表中删除</span>
+        cache<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 从 map 中删除</span>
+        map<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">/* 删除最久未使用的元素 */</span>
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">removeLeastRecently</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 链表头部的第一个元素就是最久未使用的</span>
+        <span class="token class-name">Node</span> deletedNode <span class="token operator">=</span> cache<span class="token punctuation">.</span><span class="token function">removeFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 同时别忘了从 map 中删除它的 key</span>
+        <span class="token keyword">int</span> deletedKey <span class="token operator">=</span> deletedNode<span class="token punctuation">.</span>key<span class="token punctuation">;</span>
+        map<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>deletedKey<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">int</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>map<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// 将该数据提升为最近使用的</span>
+        <span class="token function">makeRecently</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">.</span>val<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">put</span><span class="token punctuation">(</span><span class="token keyword">int</span> key<span class="token punctuation">,</span> <span class="token keyword">int</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 删除旧的数据</span>
+            <span class="token function">deleteKey</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// 新插入的数据为最近使用的数据</span>
+            <span class="token function">addRecently</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>cap <span class="token operator">==</span> cache<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 删除最久未使用的元素</span>
+            <span class="token function">removeLeastRecently</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// 添加为最近使用的元素</span>
+        <span class="token function">addRecently</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br><span class="line-number">104</span><br><span class="line-number">105</span><br><span class="line-number">106</span><br><span class="line-number">107</span><br><span class="line-number">108</span><br><span class="line-number">109</span><br><span class="line-number">110</span><br><span class="line-number">111</span><br><span class="line-number">112</span><br><span class="line-number">113</span><br><span class="line-number">114</span><br><span class="line-number">115</span><br><span class="line-number">116</span><br><span class="line-number">117</span><br><span class="line-number">118</span><br><span class="line-number">119</span><br><span class="line-number">120</span><br><span class="line-number">121</span><br><span class="line-number">122</span><br><span class="line-number">123</span><br><span class="line-number">124</span><br><span class="line-number">125</span><br><span class="line-number">126</span><br><span class="line-number">127</span><br><span class="line-number">128</span><br><span class="line-number">129</span><br><span class="line-number">130</span><br><span class="line-number">131</span><br><span class="line-number">132</span><br></div></div><p>我们最后用 Java 的内置类型 <code>LinkedHashMap</code> 来实现 LRU 算法，逻辑和之前完全一致，我就不过多解释了：</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">class</span> <span class="token class-name">LRUCache</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> cap<span class="token punctuation">;</span>
+    <span class="token class-name">LinkedHashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Integer</span><span class="token punctuation">,</span> <span class="token class-name">Integer</span><span class="token punctuation">&gt;</span></span> cache <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedHashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token class-name">LRUCache</span><span class="token punctuation">(</span><span class="token keyword">int</span> capacity<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token keyword">this</span><span class="token punctuation">.</span>cap <span class="token operator">=</span> capacity<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">int</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>cache<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// 将 key 变为最近使用</span>
+        <span class="token function">makeRecently</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> cache<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">put</span><span class="token punctuation">(</span><span class="token keyword">int</span> key<span class="token punctuation">,</span> <span class="token keyword">int</span> val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>cache<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 修改 key 的值</span>
+            cache<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// 将 key 变为最近使用</span>
+            <span class="token function">makeRecently</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>cache<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>cap<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 链表头部就是最久未使用的 key</span>
+            <span class="token keyword">int</span> oldestKey <span class="token operator">=</span> cache<span class="token punctuation">.</span><span class="token function">keySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">iterator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            cache<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>oldestKey<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// 将新的 key 添加链表尾部</span>
+        cache<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">makeRecently</span><span class="token punctuation">(</span><span class="token keyword">int</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> val <span class="token operator">=</span> cache<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 删除 key，重新插入到队尾</span>
+        cache<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cache<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">6/20/2022, 10:48:50 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/读过的书📚️/《labuladong的算法小炒》/k个一组反转链表.html" class="prev">
+        k个一组反转链表
+      </a></span> <span class="next"><a href="/读过的书📚️/《labuladong的算法小炒》/一行代码解决的智力题.html">
+        一行代码解决的智力题
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.6a48d521.js" defer></script><script src="/assets/js/2.7eb975a7.js" defer></script><script src="/assets/js/101.af6de843.js" defer></script>
+  </body>
+</html>
