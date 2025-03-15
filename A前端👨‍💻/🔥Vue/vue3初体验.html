@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue3尝鲜体验 | 魁首</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/img/logo.png">
+    <meta name="description" content="一个没有天赋的前端程序员👨‍💻 ">
+    <link rel="preload" href="/assets/css/0.styles.9d8515da.css" as="style"><link rel="preload" href="/assets/js/app.e3ef1853.js" as="script"><link rel="preload" href="/assets/js/2.729b7072.js" as="script"><link rel="preload" href="/assets/js/75.dd255c3e.js" as="script"><link rel="prefetch" href="/assets/js/10.508fe312.js"><link rel="prefetch" href="/assets/js/100.c5c9297c.js"><link rel="prefetch" href="/assets/js/101.93bf2b94.js"><link rel="prefetch" href="/assets/js/102.3c03deeb.js"><link rel="prefetch" href="/assets/js/103.014cc25f.js"><link rel="prefetch" href="/assets/js/104.bea26764.js"><link rel="prefetch" href="/assets/js/105.06edb2a2.js"><link rel="prefetch" href="/assets/js/106.a2cc97e6.js"><link rel="prefetch" href="/assets/js/107.d67624c4.js"><link rel="prefetch" href="/assets/js/108.e2f822c5.js"><link rel="prefetch" href="/assets/js/109.5dfe3f74.js"><link rel="prefetch" href="/assets/js/11.353beb2c.js"><link rel="prefetch" href="/assets/js/110.0c7b0074.js"><link rel="prefetch" href="/assets/js/111.d19c98bd.js"><link rel="prefetch" href="/assets/js/112.7f86573c.js"><link rel="prefetch" href="/assets/js/113.69670d86.js"><link rel="prefetch" href="/assets/js/114.b238c354.js"><link rel="prefetch" href="/assets/js/115.65340938.js"><link rel="prefetch" href="/assets/js/116.a2d6390e.js"><link rel="prefetch" href="/assets/js/117.ce93db43.js"><link rel="prefetch" href="/assets/js/118.f1801f71.js"><link rel="prefetch" href="/assets/js/119.cd16da90.js"><link rel="prefetch" href="/assets/js/12.1cb55187.js"><link rel="prefetch" href="/assets/js/120.7fc03354.js"><link rel="prefetch" href="/assets/js/121.4664cbb0.js"><link rel="prefetch" href="/assets/js/122.b77188e6.js"><link rel="prefetch" href="/assets/js/123.b26db2e4.js"><link rel="prefetch" href="/assets/js/124.f3357fa7.js"><link rel="prefetch" href="/assets/js/125.270ad7b3.js"><link rel="prefetch" href="/assets/js/126.077652f4.js"><link rel="prefetch" href="/assets/js/127.a9f7b420.js"><link rel="prefetch" href="/assets/js/128.9b759c41.js"><link rel="prefetch" href="/assets/js/129.576989d5.js"><link rel="prefetch" href="/assets/js/13.a5ee1384.js"><link rel="prefetch" href="/assets/js/130.8d0d5c17.js"><link rel="prefetch" href="/assets/js/131.a5a86ec4.js"><link rel="prefetch" href="/assets/js/132.7f4191af.js"><link rel="prefetch" href="/assets/js/133.921e715f.js"><link rel="prefetch" href="/assets/js/134.39f5f261.js"><link rel="prefetch" href="/assets/js/135.a3f24166.js"><link rel="prefetch" href="/assets/js/136.35c8ea24.js"><link rel="prefetch" href="/assets/js/137.22048533.js"><link rel="prefetch" href="/assets/js/138.dedd30a2.js"><link rel="prefetch" href="/assets/js/139.8074e4d5.js"><link rel="prefetch" href="/assets/js/14.54ac7349.js"><link rel="prefetch" href="/assets/js/140.979a2cc9.js"><link rel="prefetch" href="/assets/js/141.620408ca.js"><link rel="prefetch" href="/assets/js/142.498031fa.js"><link rel="prefetch" href="/assets/js/143.3b542c8c.js"><link rel="prefetch" href="/assets/js/144.c2dd3bef.js"><link rel="prefetch" href="/assets/js/145.dcc71bc0.js"><link rel="prefetch" href="/assets/js/146.2ee0f15f.js"><link rel="prefetch" href="/assets/js/147.9bd749a1.js"><link rel="prefetch" href="/assets/js/148.99bf418d.js"><link rel="prefetch" href="/assets/js/149.1a278795.js"><link rel="prefetch" href="/assets/js/15.8b0ba45f.js"><link rel="prefetch" href="/assets/js/150.5fd24f8d.js"><link rel="prefetch" href="/assets/js/151.5027a389.js"><link rel="prefetch" href="/assets/js/152.e17c4545.js"><link rel="prefetch" href="/assets/js/153.c10b2778.js"><link rel="prefetch" href="/assets/js/154.c1b7db07.js"><link rel="prefetch" href="/assets/js/155.48c47d4e.js"><link rel="prefetch" href="/assets/js/156.e049c38a.js"><link rel="prefetch" href="/assets/js/157.82dd93da.js"><link rel="prefetch" href="/assets/js/158.90908f2b.js"><link rel="prefetch" href="/assets/js/159.64aeee13.js"><link rel="prefetch" href="/assets/js/16.70a5fd25.js"><link rel="prefetch" href="/assets/js/160.356b3e22.js"><link rel="prefetch" href="/assets/js/161.4aa0f2ac.js"><link rel="prefetch" href="/assets/js/17.938031c0.js"><link rel="prefetch" href="/assets/js/18.d05cdade.js"><link rel="prefetch" href="/assets/js/19.52312410.js"><link rel="prefetch" href="/assets/js/20.9ba86264.js"><link rel="prefetch" href="/assets/js/21.86008a86.js"><link rel="prefetch" href="/assets/js/22.dd94cfb7.js"><link rel="prefetch" href="/assets/js/23.15877a1f.js"><link rel="prefetch" href="/assets/js/24.819b08b6.js"><link rel="prefetch" href="/assets/js/25.0b063ba9.js"><link rel="prefetch" href="/assets/js/26.a18d8699.js"><link rel="prefetch" href="/assets/js/27.791b0f59.js"><link rel="prefetch" href="/assets/js/28.1f1b8f83.js"><link rel="prefetch" href="/assets/js/29.260b505a.js"><link rel="prefetch" href="/assets/js/3.1f40e418.js"><link rel="prefetch" href="/assets/js/30.294d468e.js"><link rel="prefetch" href="/assets/js/31.435b55bd.js"><link rel="prefetch" href="/assets/js/32.e0d78007.js"><link rel="prefetch" href="/assets/js/33.9b6856c0.js"><link rel="prefetch" href="/assets/js/34.fa3fa0c4.js"><link rel="prefetch" href="/assets/js/35.40a7813d.js"><link rel="prefetch" href="/assets/js/36.d16efe46.js"><link rel="prefetch" href="/assets/js/37.2ac493a5.js"><link rel="prefetch" href="/assets/js/38.b85da84f.js"><link rel="prefetch" href="/assets/js/39.e171e728.js"><link rel="prefetch" href="/assets/js/4.bfbea725.js"><link rel="prefetch" href="/assets/js/40.f7a55dc4.js"><link rel="prefetch" href="/assets/js/41.9b186e5b.js"><link rel="prefetch" href="/assets/js/42.f4ba0bc3.js"><link rel="prefetch" href="/assets/js/43.c4f6f488.js"><link rel="prefetch" href="/assets/js/44.c34d7c3d.js"><link rel="prefetch" href="/assets/js/45.3fe32e63.js"><link rel="prefetch" href="/assets/js/46.d9b2d18b.js"><link rel="prefetch" href="/assets/js/47.dc6c9c80.js"><link rel="prefetch" href="/assets/js/48.2b156689.js"><link rel="prefetch" href="/assets/js/49.a5e8af4b.js"><link rel="prefetch" href="/assets/js/5.74288faf.js"><link rel="prefetch" href="/assets/js/50.57ba4a01.js"><link rel="prefetch" href="/assets/js/51.326abeb1.js"><link rel="prefetch" href="/assets/js/52.0f0a77a1.js"><link rel="prefetch" href="/assets/js/53.d113467f.js"><link rel="prefetch" href="/assets/js/54.52f431bb.js"><link rel="prefetch" href="/assets/js/55.907ed6fb.js"><link rel="prefetch" href="/assets/js/56.e84a0b48.js"><link rel="prefetch" href="/assets/js/57.5b958ff1.js"><link rel="prefetch" href="/assets/js/58.da726e62.js"><link rel="prefetch" href="/assets/js/59.b38ebd7a.js"><link rel="prefetch" href="/assets/js/6.13bf2c7e.js"><link rel="prefetch" href="/assets/js/60.07c2ab2e.js"><link rel="prefetch" href="/assets/js/61.b2fd9fe1.js"><link rel="prefetch" href="/assets/js/62.8085e1b0.js"><link rel="prefetch" href="/assets/js/63.74b26956.js"><link rel="prefetch" href="/assets/js/64.97f932ab.js"><link rel="prefetch" href="/assets/js/65.33a6eaa4.js"><link rel="prefetch" href="/assets/js/66.c7f76344.js"><link rel="prefetch" href="/assets/js/67.bdf392cf.js"><link rel="prefetch" href="/assets/js/68.ee50324d.js"><link rel="prefetch" href="/assets/js/69.5720d0e6.js"><link rel="prefetch" href="/assets/js/7.3cd48f71.js"><link rel="prefetch" href="/assets/js/70.29ddcdb5.js"><link rel="prefetch" href="/assets/js/71.6bc7f557.js"><link rel="prefetch" href="/assets/js/72.07eb823e.js"><link rel="prefetch" href="/assets/js/73.aff952d9.js"><link rel="prefetch" href="/assets/js/74.30a67c08.js"><link rel="prefetch" href="/assets/js/76.139b6140.js"><link rel="prefetch" href="/assets/js/77.0573562d.js"><link rel="prefetch" href="/assets/js/78.10a2b46b.js"><link rel="prefetch" href="/assets/js/79.222dd1ce.js"><link rel="prefetch" href="/assets/js/8.1b731e19.js"><link rel="prefetch" href="/assets/js/80.0d987057.js"><link rel="prefetch" href="/assets/js/81.8cf4fae6.js"><link rel="prefetch" href="/assets/js/82.941b31d6.js"><link rel="prefetch" href="/assets/js/83.c3cab560.js"><link rel="prefetch" href="/assets/js/84.f36a6dea.js"><link rel="prefetch" href="/assets/js/85.665bec72.js"><link rel="prefetch" href="/assets/js/86.56cd3a59.js"><link rel="prefetch" href="/assets/js/87.b8751b1e.js"><link rel="prefetch" href="/assets/js/88.21eeedc2.js"><link rel="prefetch" href="/assets/js/89.6494ab8b.js"><link rel="prefetch" href="/assets/js/9.7f7d49c0.js"><link rel="prefetch" href="/assets/js/90.b7e78541.js"><link rel="prefetch" href="/assets/js/91.96739a00.js"><link rel="prefetch" href="/assets/js/92.f31e4162.js"><link rel="prefetch" href="/assets/js/93.95c57d52.js"><link rel="prefetch" href="/assets/js/94.dadf5766.js"><link rel="prefetch" href="/assets/js/95.deb11f76.js"><link rel="prefetch" href="/assets/js/96.d13d2b49.js"><link rel="prefetch" href="/assets/js/97.cd2cf033.js"><link rel="prefetch" href="/assets/js/98.d8ea530e.js"><link rel="prefetch" href="/assets/js/99.1b65101d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9d8515da.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="魁首" class="logo"> <span class="site-name can-hide">魁首</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="A前端👨‍💻" class="dropdown-title"><span class="title">A前端👨‍💻</span> <span class="arrow down"></span></button> <button type="button" aria-label="A前端👨‍💻" class="mobile-dropdown-title"><span class="title">A前端👨‍💻</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Axios/" class="nav-link">
+  Axios
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Canvas/" class="nav-link">
+  Canvas
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Echarts/" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/React/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/node/" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/vuepress/" class="nav-link">
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/打包工具/" class="nav-link">
+  打包工具
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/自动化部署/" class="nav-link">
+  自动化部署
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/🔥Vue/" class="nav-link">
+  🔥Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="B面试题📑" class="dropdown-title"><span class="title">B面试题📑</span> <span class="arrow down"></span></button> <button type="button" aria-label="B面试题📑" class="mobile-dropdown-title"><span class="title">B面试题📑</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/B面试题📑/最新面试题/" class="nav-link">
+  最新面试题
+</a></li><li class="dropdown-item"><!----> <a href="/B面试题📑/📣面试题汇总/" class="nav-link">
+  📣面试题汇总
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="PHP🐘" class="dropdown-title"><span class="title">PHP🐘</span> <span class="arrow down"></span></button> <button type="button" aria-label="PHP🐘" class="mobile-dropdown-title"><span class="title">PHP🐘</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/PHP🐘/一、初学者容易遇到的问题/" class="nav-link">
+  一、初学者容易遇到的问题
+</a></li><li class="dropdown-item"><!----> <a href="/PHP🐘/二、PHP实现简单的登录注册、增删改查/" class="nav-link">
+  二、PHP实现简单的登录注册、增删改查
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python🐍" class="dropdown-title"><span class="title">Python🐍</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python🐍" class="mobile-dropdown-title"><span class="title">Python🐍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Python🐍/一、爬取QQ空间/" class="nav-link">
+  一、爬取QQ空间
+</a></li><li class="dropdown-item"><!----> <a href="/Python🐍/二、爬取水果交易网水果行情信息/" class="nav-link">
+  二、爬取水果交易网水果行情信息
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue实战💻" class="dropdown-title"><span class="title">Vue实战💻</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue实战💻" class="mobile-dropdown-title"><span class="title">Vue实战💻</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Vue实战💻/AntDesign系列/" class="nav-link">
+  AntDesign系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/Echarts系列/" class="nav-link">
+  Echarts系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/EementUI系列/" class="nav-link">
+  EementUI系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/Lottie动画/" class="nav-link">
+  Lottie动画
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/Swiper滑动/" class="nav-link">
+  Swiper滑动
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/图书商城/" class="nav-link">
+  图书商城
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/支付宝小程序/" class="nav-link">
+  支付宝小程序
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/浏览器系列/" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/海风小店/" class="nav-link">
+  海风小店
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/网易云小程序/" class="nav-link">
+  网易云小程序
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/跨平台/" class="nav-link">
+  跨平台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读过的书📚️" class="dropdown-title"><span class="title">读过的书📚️</span> <span class="arrow down"></span></button> <button type="button" aria-label="读过的书📚️" class="mobile-dropdown-title"><span class="title">读过的书📚️</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/读过的书📚️/《HTTP权威指南-图灵》/" class="nav-link">
+  《HTTP权威指南-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《JavaScript正则表达式迷你书》/" class="nav-link">
+  《JavaScript正则表达式迷你书》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《JavaScript高级程序设计-图灵》/" class="nav-link">
+  《JavaScript高级程序设计-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《labuladong的算法小炒》/" class="nav-link">
+  《labuladong的算法小炒》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《图解算法-图灵》/" class="nav-link">
+  《图解算法-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《图解网络-小林coding》/" class="nav-link">
+  《图解网络-小林coding》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《架构师的自我修养》/" class="nav-link">
+  《架构师的自我修养》
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="走过的路🌱" class="dropdown-title"><span class="title">走过的路🌱</span> <span class="arrow down"></span></button> <button type="button" aria-label="走过的路🌱" class="mobile-dropdown-title"><span class="title">走过的路🌱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/走过的路🌱/2019成长日记/" class="nav-link">
+  2019成长日记
+</a></li><li class="dropdown-item"><!----> <a href="/走过的路🌱/2020年度总结/" class="nav-link">
+  2020年度总结
+</a></li><li class="dropdown-item"><!----> <a href="/走过的路🌱/2021年度总结/" class="nav-link">
+  2021年度总结
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="A前端👨‍💻" class="dropdown-title"><span class="title">A前端👨‍💻</span> <span class="arrow down"></span></button> <button type="button" aria-label="A前端👨‍💻" class="mobile-dropdown-title"><span class="title">A前端👨‍💻</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Axios/" class="nav-link">
+  Axios
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/CSS/" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Canvas/" class="nav-link">
+  Canvas
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Echarts/" class="nav-link">
+  Echarts
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/JavaScript/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/React/" class="nav-link">
+  React
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/node/" class="nav-link">
+  node
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/uni-app/" class="nav-link">
+  uni-app
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/vuepress/" class="nav-link">
+  vuepress
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/打包工具/" class="nav-link">
+  打包工具
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/自动化部署/" class="nav-link">
+  自动化部署
+</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/🔥Vue/" class="nav-link">
+  🔥Vue
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="B面试题📑" class="dropdown-title"><span class="title">B面试题📑</span> <span class="arrow down"></span></button> <button type="button" aria-label="B面试题📑" class="mobile-dropdown-title"><span class="title">B面试题📑</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/B面试题📑/最新面试题/" class="nav-link">
+  最新面试题
+</a></li><li class="dropdown-item"><!----> <a href="/B面试题📑/📣面试题汇总/" class="nav-link">
+  📣面试题汇总
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="PHP🐘" class="dropdown-title"><span class="title">PHP🐘</span> <span class="arrow down"></span></button> <button type="button" aria-label="PHP🐘" class="mobile-dropdown-title"><span class="title">PHP🐘</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/PHP🐘/一、初学者容易遇到的问题/" class="nav-link">
+  一、初学者容易遇到的问题
+</a></li><li class="dropdown-item"><!----> <a href="/PHP🐘/二、PHP实现简单的登录注册、增删改查/" class="nav-link">
+  二、PHP实现简单的登录注册、增删改查
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python🐍" class="dropdown-title"><span class="title">Python🐍</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python🐍" class="mobile-dropdown-title"><span class="title">Python🐍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Python🐍/一、爬取QQ空间/" class="nav-link">
+  一、爬取QQ空间
+</a></li><li class="dropdown-item"><!----> <a href="/Python🐍/二、爬取水果交易网水果行情信息/" class="nav-link">
+  二、爬取水果交易网水果行情信息
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue实战💻" class="dropdown-title"><span class="title">Vue实战💻</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue实战💻" class="mobile-dropdown-title"><span class="title">Vue实战💻</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Vue实战💻/AntDesign系列/" class="nav-link">
+  AntDesign系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/Echarts系列/" class="nav-link">
+  Echarts系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/EementUI系列/" class="nav-link">
+  EementUI系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/Lottie动画/" class="nav-link">
+  Lottie动画
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/Swiper滑动/" class="nav-link">
+  Swiper滑动
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/图书商城/" class="nav-link">
+  图书商城
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/支付宝小程序/" class="nav-link">
+  支付宝小程序
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/浏览器系列/" class="nav-link">
+  浏览器系列
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/海风小店/" class="nav-link">
+  海风小店
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/网易云小程序/" class="nav-link">
+  网易云小程序
+</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/跨平台/" class="nav-link">
+  跨平台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读过的书📚️" class="dropdown-title"><span class="title">读过的书📚️</span> <span class="arrow down"></span></button> <button type="button" aria-label="读过的书📚️" class="mobile-dropdown-title"><span class="title">读过的书📚️</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/读过的书📚️/《HTTP权威指南-图灵》/" class="nav-link">
+  《HTTP权威指南-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《JavaScript正则表达式迷你书》/" class="nav-link">
+  《JavaScript正则表达式迷你书》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《JavaScript高级程序设计-图灵》/" class="nav-link">
+  《JavaScript高级程序设计-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《labuladong的算法小炒》/" class="nav-link">
+  《labuladong的算法小炒》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《图解算法-图灵》/" class="nav-link">
+  《图解算法-图灵》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《图解网络-小林coding》/" class="nav-link">
+  《图解网络-小林coding》
+</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《架构师的自我修养》/" class="nav-link">
+  《架构师的自我修养》
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="走过的路🌱" class="dropdown-title"><span class="title">走过的路🌱</span> <span class="arrow down"></span></button> <button type="button" aria-label="走过的路🌱" class="mobile-dropdown-title"><span class="title">走过的路🌱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/走过的路🌱/2019成长日记/" class="nav-link">
+  2019成长日记
+</a></li><li class="dropdown-item"><!----> <a href="/走过的路🌱/2020年度总结/" class="nav-link">
+  2020年度总结
+</a></li><li class="dropdown-item"><!----> <a href="/走过的路🌱/2021年度总结/" class="nav-link">
+  2021年度总结
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>🔥Vue</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/A%E5%89%8D%E7%AB%AF%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB/%F0%9F%94%A5Vue/" aria-current="page" class="sidebar-link">简介</a></li><li><a href="/A前端👨‍💻/🔥Vue/Vite插件.html" class="sidebar-link">Vite插件</a></li><li><a href="/A前端👨‍💻/🔥Vue/Vue深入学习1—mustache模板引擎原理.html" class="sidebar-link">Vue深入学习1—mustache模板引擎原理</a></li><li><a href="/A前端👨‍💻/🔥Vue/Vue深入学习2—虚拟DOM和Diff算法.html" class="sidebar-link">Vue深入学习2—虚拟DOM和Diff算法</a></li><li><a href="/A前端👨‍💻/🔥Vue/Vue深入学习3—数据响应式原理.html" class="sidebar-link">Vue深入学习3—数据响应式原理</a></li><li><a href="/A前端👨‍💻/🔥Vue/Vue深入学习4—指令和生命周期.html" class="sidebar-link">Vue深入学习4—指令和生命周期</a></li><li><a href="/A前端👨‍💻/🔥Vue/Vue深入学习5—Vue-Router路由模式.html" class="sidebar-link">Vue深入学习5—Vue-Router路由模式</a></li><li><a href="/A前端👨‍💻/🔥Vue/Vue深入学习6—keep-alive组件.html" class="sidebar-link">Vue深入学习6—keep-alive组件</a></li><li><a href="/A前端👨‍💻/🔥Vue/Vue深入学习7—Vuex原理.html" class="sidebar-link">Vue深入学习7—Vuex原理</a></li><li><a href="/A前端👨‍💻/🔥Vue/Vue深入学习8—nextTick.html" class="sidebar-link">Vue深入学习8—nextTick</a></li><li><a href="/A前端👨‍💻/🔥Vue/vue3初体验.html" class="active sidebar-link">vue3初体验</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/A前端👨‍💻/🔥Vue/vue3初体验.html#初始化" class="sidebar-link">初始化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/A前端👨‍💻/🔥Vue/vue3初体验.html#安装-vue-cli-next" class="sidebar-link">安装@vue/cli@next：</a></li><li class="sidebar-sub-header"><a href="/A前端👨‍💻/🔥Vue/vue3初体验.html#然后在-vue-项目运行" class="sidebar-link">然后在 Vue 项目运行：</a></li></ul></li><li class="sidebar-sub-header"><a href="/A前端👨‍💻/🔥Vue/vue3初体验.html#项目目录" class="sidebar-link">项目目录</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/A前端👨‍💻/🔥Vue/vue3初体验.html#vite创建项目" class="sidebar-link">vite创建项目：</a></li></ul></li><li class="sidebar-sub-header"><a href="/A前端👨‍💻/🔥Vue/vue3初体验.html#vite项目配置" class="sidebar-link">vite项目配置：</a></li><li class="sidebar-sub-header"><a href="/A前端👨‍💻/🔥Vue/vue3初体验.html#配置路由" class="sidebar-link">配置路由</a></li><li class="sidebar-sub-header"><a href="/A前端👨‍💻/🔥Vue/vue3初体验.html#配置状态管理" class="sidebar-link">配置状态管理</a></li><li class="sidebar-sub-header"><a href="/A前端👨‍💻/🔥Vue/vue3初体验.html#配置样式文件" class="sidebar-link">配置样式文件</a></li><li class="sidebar-sub-header"><a href="/A前端👨‍💻/🔥Vue/vue3初体验.html#引入element3" class="sidebar-link">引入Element3</a></li><li class="sidebar-sub-header"><a href="/A前端👨‍💻/🔥Vue/vue3初体验.html#配置环境" class="sidebar-link">配置环境</a></li><li class="sidebar-sub-header"><a href="/A前端👨‍💻/🔥Vue/vue3初体验.html#配置请求" class="sidebar-link">配置请求</a></li><li class="sidebar-sub-header"><a href="/A前端👨‍💻/🔥Vue/vue3初体验.html#打包和部署" class="sidebar-link">打包和部署</a></li></ul></li><li><a href="/A前端👨‍💻/🔥Vue/vue源码解析.html" class="sidebar-link">vue源码解析</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vue3尝鲜体验"><a href="#vue3尝鲜体验" class="header-anchor">#</a> vue3尝鲜体验</h1> <h2 id="初始化"><a href="#初始化" class="header-anchor">#</a> 初始化</h2> <h3 id="安装-vue-cli-next"><a href="#安装-vue-cli-next" class="header-anchor">#</a> <strong>安装@vue/cli@next：</strong></h3> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>yarn global add @vue<span class="token operator">/</span>cli@next
+# <span class="token constant">OR</span>
+npm install <span class="token operator">-</span>g @vue<span class="token operator">/</span>cli@next
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h3 id="然后在-vue-项目运行"><a href="#然后在-vue-项目运行" class="header-anchor">#</a> <strong>然后在 Vue 项目运行：</strong></h3> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>vue upgrade --next
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="项目目录"><a href="#项目目录" class="header-anchor">#</a> 项目目录</h2> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>vue3<span class="token operator">-</span>template
+├── index<span class="token punctuation">.</span>html	<span class="token comment">//	html模板</span>
+├── mock		<span class="token comment">// mock数据</span>
+│   └── user<span class="token punctuation">.</span>js
+├── node_modules
+├── <span class="token keyword">package</span><span class="token operator">-</span>lock<span class="token punctuation">.</span>json
+├── <span class="token keyword">package</span><span class="token punctuation">.</span>json
+├── plugins		<span class="token comment">// 自定义插件</span>
+│   └── vite<span class="token operator">-</span>plugin<span class="token operator">-</span>virtual<span class="token operator">-</span>file<span class="token punctuation">.</span>js
+├── <span class="token keyword">public</span>
+│   └── favicon<span class="token punctuation">.</span>ico
+├── <span class="token constant">README</span><span class="token punctuation">.</span>md
+├── src
+│   ├── App<span class="token punctuation">.</span>vue
+│   ├── assets		<span class="token comment">// 资源文件</span>
+│   ├── components
+│   ├── layouts		<span class="token comment">// 基本布局</span>
+│   ├── main<span class="token punctuation">.</span>js		
+│   ├── plugins		<span class="token comment">// 用于配置第三方插件，如element等</span>
+│   ├── router		<span class="token comment">// 路由</span>
+│   ├── store		<span class="token comment">// vuex状态管理</span>
+│   ├── styles		<span class="token comment">// 样式配置</span>
+│   ├── utils		<span class="token comment">// 工具包，如request</span>
+│   └── views		<span class="token comment">// 页面</span>
+├── <span class="token punctuation">.</span>env<span class="token punctuation">.</span>development<span class="token comment">// 配置环境</span>
+├── <span class="token punctuation">.</span>env<span class="token punctuation">.</span>production	<span class="token comment">// 配置环境</span>
+└── vite<span class="token punctuation">.</span>config<span class="token punctuation">.</span>js	<span class="token comment">// vite配置目录</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><h3 id="vite创建项目"><a href="#vite创建项目" class="header-anchor">#</a> <strong>vite创建项目：</strong></h3> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>npm init vite<span class="token operator">-</span>app <span class="token operator">&lt;</span>project<span class="token operator">-</span>name<span class="token operator">&gt;</span>
+cd <span class="token operator">&lt;</span>project<span class="token operator">-</span>name<span class="token operator">&gt;</span>
+npm install
+npm run dev
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="vite项目配置"><a href="#vite项目配置" class="header-anchor">#</a> <strong>vite项目配置：</strong></h2> <p><a href="https://vitejs.dev/config/#config-file-resolving" target="_blank" rel="noopener noreferrer">vite配置文档<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>vite中配置vue，vuex都需要使用插件，使用 defineConfig配置有代码提示，推荐使用,配置。resolve/alias 配置别名。</p> <div class="language-javas line-numbers-mode"><pre class="language-text"><code>import vueJsx from '@vitejs/plugin-vue-jsx'
+import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite'
+export default defineConfig({
+  resolve:{
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+      'comp': path.resolve(__dirname, 'src/components'),
+      'views': path.resolve(__dirname, 'src/views'),
+      'styles': path.resolve(__dirname, 'src/styles'),
+      'plugins': path.resolve(__dirname, 'src/plugins'),
+      'layouts': path.resolve(__dirname, 'src/layouts'),
+      'utils': path.resolve(__dirname, 'src/utils'),
+    }
+  },
+  plugins: [
+    vue(),
+    vueJsx(),
+    viteMockServe({
+      mockPath: 'mock',
+      supportTs: false,
+    })]
+})
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><h2 id="配置路由"><a href="#配置路由" class="header-anchor">#</a> 配置路由</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> vue-router@4
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><strong>router/index.js:</strong></p> <p>​	配置Layout为基本的布局页</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>import { createRouter,createWebHashHistory} from 'vue-router';
+import Layout from 'layouts/index.vue'
+const router = createRouter({
+    history: createWebHashHistory(),
+    routes: [
+        { 
+            path:'/',
+            component:Layout,
+            children:[
+                {
+                    path:&quot;/&quot;, component: () =&gt; import('views/home.vue') 
+                }
+            ]
+        }
+    ]
+})
+export default router
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h2 id="配置状态管理"><a href="#配置状态管理" class="header-anchor">#</a> 配置状态管理</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> vuex@next --save
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><strong>store/index.js</strong></p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> createStore <span class="token punctuation">}</span> from <span class="token string">'vuex'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token function">createStore</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    state <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+            count<span class="token operator">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    mutations<span class="token operator">:</span> <span class="token punctuation">{</span>
+        add <span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            state<span class="token punctuation">.</span>count<span class="token operator">++</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span><span class="token punctuation">)</span>
+export <span class="token keyword">default</span> store
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h2 id="配置样式文件"><a href="#配置样式文件" class="header-anchor">#</a> 配置样式文件</h2> <p><strong>vite中可以直接导入<code>.css</code>文件，样式将影响导入的页面，最终会被打包到<code>style.css</code></strong></p> <p><strong>配置Sass</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>npm install sass
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><strong>配置Postcss</strong></p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code>npm i postcss autoprefixer
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code># vite<span class="token punctuation">.</span>config<span class="token punctuation">.</span>js
+# 添加autoprefixer
+<span class="token keyword">import</span> autoprefixer <span class="token keyword">from</span> <span class="token string">'autoprefixer'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">defineConfig</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token function">autoprefixer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p><strong>Scoped CSS</strong></p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token comment">/**/</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>CSS Module</strong></p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">module</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token comment">/**/</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><strong>资源处理</strong></p> <p>我们可以在<code>*.vue</code> 文件的template, style和纯<code>.css</code>文件中以相对和绝对路径方式引用静态资源。</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token comment">&lt;!-- 相对路径 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>./assets/logo.png<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- 绝对路径 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/src/assets/logo.png<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">scoped</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">#app</span> <span class="token punctuation">{</span>
+  <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'./assets/logo.png'</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p><strong>public目录</strong></p> <p><code>public</code> 目录下可以存放未在源码中引用的资源，它们会被留下且文件名不会有哈希处理。</p> <p>这些文件会被原封不动拷贝到发布目录的根目录下</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>/logo.png<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="引入element3"><a href="#引入element3" class="header-anchor">#</a> 引入Element3</h2> <p><strong>生产环境中按需引入，开发环境直接引入所有的包</strong></p> <p>src/ plugins/element3.js</p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token comment">// import Element3 from 'element3'; </span>
+<span class="token comment">// import 'element3/lib/theme-chalk/index.css';</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span>ElButton<span class="token punctuation">,</span> ElRow<span class="token punctuation">,</span> ElCol<span class="token punctuation">,</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'element3'</span>
+<span class="token keyword">import</span> <span class="token string">'element3/lib/theme-chalk/button.css'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'element3/lib/theme-chalk/row.css'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">'element3/lib/theme-chalk/col.css'</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">app</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token comment">// app.use(Element3)</span>
+     app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>ElButton<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>ElRow<span class="token punctuation">)</span>
+       <span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>ElCol<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p><strong>main.js</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>import { createApp } from 'vue'
+import Element3 from 'plugins/element3';
+
+createApp(App).use(Element3)
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="配置环境"><a href="#配置环境" class="header-anchor">#</a> 配置环境</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">npm</span> <span class="token function">install</span> cross-env -D
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><strong>在.env.development 或者 .env.production中配置相应环境</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code># 例如：
+VITE_BASE_API=/api
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p><strong>package.json</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code># cross-env NODE_ENV=development 配置dev运行环境
+{
+  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;cross-env NODE_ENV=development vite&quot;,
+    &quot;build&quot;: &quot;vite build&quot;,
+    &quot;serve&quot;: &quot;vite preview&quot;
+  },
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h2 id="配置请求"><a href="#配置请求" class="header-anchor">#</a> <strong>配置请求</strong></h2> <div class="language- line-numbers-mode"><pre class="language-text"><code>npm install axios
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><strong>utils/request.js</strong></p> <div class="language-javascript line-numbers-mode"><pre class="language-javascript"><code><span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Message<span class="token punctuation">,</span> Msgbox <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'element3'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> store <span class="token keyword">from</span> <span class="token string">'@/store'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> service <span class="token operator">=</span> axios<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    baseURL<span class="token operator">:</span> <span class="token keyword">import</span><span class="token punctuation">.</span>meta<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">VITE_BASE_API</span><span class="token punctuation">,</span>
+    timeout<span class="token operator">:</span> <span class="token number">5000</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+service<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">config</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    config<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">'X-token'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'my token'</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;Aaa&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> config<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>  
+
+service<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>response<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> res <span class="token operator">=</span> response<span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>code <span class="token operator">!==</span> <span class="token number">20000</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            message<span class="token operator">:</span> res<span class="token punctuation">.</span>message <span class="token operator">||</span> <span class="token string">'Error'</span><span class="token punctuation">,</span>
+            duration<span class="token operator">:</span> <span class="token number">5</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>code <span class="token operator">===</span> <span class="token number">50008</span> <span class="token operator">||</span> res<span class="token punctuation">.</span>code <span class="token operator">===</span> <span class="token number">50012</span> <span class="token operator">||</span> res<span class="token punctuation">.</span>code <span class="token operator">===</span> <span class="token number">50014</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            Msgbox<span class="token punctuation">.</span><span class="token function">confirm</span><span class="token punctuation">(</span><span class="token string">'您已登出，请重新登录'</span><span class="token punctuation">,</span> <span class="token string">'确定'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                confirmButtonText<span class="token operator">:</span> <span class="token string">'重新登录'</span><span class="token punctuation">,</span>
+                cancelButtonText<span class="token operator">:</span> <span class="token string">'取消'</span><span class="token punctuation">,</span>
+                type<span class="token operator">:</span> <span class="token string">'warning'</span><span class="token punctuation">,</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">'user/resetToken'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                    location<span class="token punctuation">.</span><span class="token function">reload</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>message <span class="token operator">||</span> <span class="token string">'Error'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        message<span class="token operator">:</span> res<span class="token punctuation">.</span>message <span class="token operator">||</span> <span class="token string">'Error'</span><span class="token punctuation">,</span>
+        duration<span class="token operator">:</span> <span class="token number">5</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> Promise<span class="token punctuation">.</span><span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>  
+<span class="token keyword">export</span> <span class="token keyword">default</span> service<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br></div></div><h2 id="打包和部署"><a href="#打包和部署" class="header-anchor">#</a> 打包和部署</h2> <p><strong>使用github actions持续集成，当push时打包上传</strong></p> <p>.github/workflows/publish.yml</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>name: 打包上传
+
+on: 
+  push: 
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 迁出代码
+        uses: actions/checkout@master
+
+      - name: 安装node.js
+        uses: actions/setup-node@v1
+        with: 
+          node-version: 14.0.0
+      
+      - name: 安装依赖
+        run: npm install
+      
+      - name: 打包
+        run: npm run build
+
+      - name: 上传到服务器
+        uses: easingthemes/ssh-deploy@v2.1.5
+        env: 
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          ARGS: &quot;-rltgoDzvO --delete&quot;
+          SOURCE: &quot;dist/&quot;
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div><p><strong>在github项目的action中配置secret</strong></p> <p>REMOTE_HOST ： 服务器ip</p> <p>SERVER_SSH_KEY：本地私钥</p> <p>REMOTE_USER： 服务器登录用户</p> <p>REMOTE_TARGET：放置服务器哪个目录</p> <p>SOURCE： 将哪个目录放置服务器中（此处打包后是生成dist目录）</p> <p><strong>服务器配置：</strong></p> <p>编辑 /etc/ssh/sshd_config 文件，开启服务器允许通过秘钥登录</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>PubkeyAuthentication yes
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><strong>注意：使用root账号登录服务器时开启</strong></p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>PermitRootLogin <span class="token function">yes</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><strong>重启 ssh 服务器</strong></p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">service</span> sshd restart
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最后更新时间:</span> <span class="time">9/26/2021, 9:05:41 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/A前端👨‍💻/🔥Vue/Vue深入学习8—nextTick.html" class="prev">
+        Vue深入学习8—nextTick
+      </a></span> <span class="next"><a href="/A前端👨‍💻/🔥Vue/vue源码解析.html">
+        vue源码解析
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.e3ef1853.js" defer></script><script src="/assets/js/2.729b7072.js" defer></script><script src="/assets/js/75.dd255c3e.js" defer></script>
+  </body>
+</html>
