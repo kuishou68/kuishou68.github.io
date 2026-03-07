@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Insights | CocoonBreak</title>
+    <meta name="description" content="CocoonBreak 的 AI Tooling 与 CLI 专题文章入口。">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand-lockup" href="/">
+          <span class="brand-mark"><img src="/img/logo.png" alt="CocoonBreak"></span>
+          <span>
+            <span class="brand-title">CocoonBreak</span>
+            <span class="brand-subtitle">Insights</span>
+          </span>
+        </a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-label="切换导航" data-menu-button>☰</button>
+        <nav class="nav-links" data-nav-links>
+          <a href="/">首页</a>
+          <a href="https://juejin.cn/user/3817931570691031/posts" target="_blank" rel="noreferrer">掘金</a>
+          <a href="https://github.com/kuishou68" target="_blank" rel="noreferrer">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-grid">
+          <article class="hero-copy" data-reveal>
+            <div class="eyebrow">AI Agent · CLI · Protocol · Gateway</div>
+            <h1>新文章统一收进 <span>Insights</span> 专题页。</h1>
+            <p class="hero-lead">
+              这部分主要围绕我最近在掘金持续输出的方向展开：OpenAI Codex、Gemini CLI、stdio 传输、MCP / ACP / A2A 协议以及它们和真实产品落地之间的关系。
+            </p>
+            <div class="hero-actions">
+              <a class="primary-button" href="https://juejin.cn/user/3817931570691031/posts" target="_blank" rel="noreferrer">查看掘金原文</a>
+              <a class="secondary-button" href="/">返回首页</a>
+            </div>
+          </article>
+
+          <aside class="hero-panel" data-reveal>
+            <div class="hero-panel-header">
+              <div>
+                <h2 class="panel-title">这组文章适合谁</h2>
+                <p class="panel-caption">适合已经会调用模型，但希望把 CLI、协议和产品架构之间关系看得更清楚的人。</p>
+              </div>
+            </div>
+            <div class="hero-stack">
+              <div class="stack-item">
+                <div><strong>看模型的人</strong><span>理解 Codex / Gemini CLI 不只是“一个命令行壳”。</span></div>
+                <span class="card-pill">Model</span>
+              </div>
+              <div class="stack-item">
+                <div><strong>看协议的人</strong><span>把 MCP、ACP、A2A 放在同一张架构图里理解。</span></div>
+                <span class="card-pill">Protocol</span>
+              </div>
+              <div class="stack-item">
+                <div><strong>看落地的人</strong><span>把这些能力接进站点、网关、社群和产品链路。</span></div>
+                <span class="card-pill">Delivery</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="writing-grid">
+          <article class="writing-card" data-reveal>
+            <span class="icon-badge">⌘</span>
+            <h3>OpenAI Codex 深入剖析</h3>
+            <p class="writing-copy">从“聊天模型”切到“终端搭档”视角，拆 Codex 的工作闭环。</p>
+            <div class="card-meta"><span>Codex</span><span>Terminal Agent</span></div>
+            <a class="ghost-link" href="/insights/openai-codex-architecture/">阅读全文</a>
+          </article>
+          <article class="writing-card" data-reveal>
+            <span class="icon-badge">◎</span>
+            <h3>Gemini CLI 深度源码分析</h3>
+            <p class="writing-copy">从配置、工具调用到结果反馈，理解 Gemini CLI 的组织方式。</p>
+            <div class="card-meta"><span>Gemini CLI</span><span>Source Reading</span></div>
+            <a class="ghost-link" href="/insights/gemini-cli-source/">阅读全文</a>
+          </article>
+          <article class="writing-card" data-reveal>
+            <span class="icon-badge">↔</span>
+            <h3>为什么都爱用 stdio</h3>
+            <p class="writing-copy">把 stdio 看成 Agent 和本地工具之间最稳定的短链路。</p>
+            <div class="card-meta"><span>stdio</span><span>Transport</span></div>
+            <a class="ghost-link" href="/insights/stdio-transport/">阅读全文</a>
+          </article>
+          <article class="writing-card" data-reveal>
+            <span class="icon-badge">⛓</span>
+            <h3>从 MCP 到 ACP 再到 A2A</h3>
+            <p class="writing-copy">一次把三类协议的边界、角色和适用场景讲清楚。</p>
+            <div class="card-meta"><span>MCP / ACP / A2A</span><span>Architecture</span></div>
+            <a class="ghost-link" href="/insights/agent-protocols/">阅读全文</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-shell site-footer">
+      <div class="footer-card">
+        <span>Insights by CocoonBreak.</span>
+        <span>从掘金专题延展到个人博客的长期内容资产。</span>
+      </div>
+    </footer>
+  </body>
+</html>

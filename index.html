@@ -1,187 +1,441 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>魁首</title>
-    <meta name="generator" content="VuePress 1.5.4">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CocoonBreak | AI Tooling, Cocoon Stack, Community</title>
+    <meta name="description" content="CocoonBreak 的个人博客：AI 工具链、Cocoon 产品矩阵、社区入口、项目负责范围与最新文章整理。">
     <link rel="icon" href="/img/logo.png">
-    <meta name="description" content="一个没有天赋的前端程序员👨‍💻 ">
-    <link rel="preload" href="/assets/css/0.styles.9d8515da.css" as="style"><link rel="preload" href="/assets/js/app.e3ef1853.js" as="script"><link rel="preload" href="/assets/js/2.729b7072.js" as="script"><link rel="preload" href="/assets/js/114.b238c354.js" as="script"><link rel="prefetch" href="/assets/js/10.508fe312.js"><link rel="prefetch" href="/assets/js/100.c5c9297c.js"><link rel="prefetch" href="/assets/js/101.93bf2b94.js"><link rel="prefetch" href="/assets/js/102.3c03deeb.js"><link rel="prefetch" href="/assets/js/103.014cc25f.js"><link rel="prefetch" href="/assets/js/104.bea26764.js"><link rel="prefetch" href="/assets/js/105.06edb2a2.js"><link rel="prefetch" href="/assets/js/106.a2cc97e6.js"><link rel="prefetch" href="/assets/js/107.d67624c4.js"><link rel="prefetch" href="/assets/js/108.e2f822c5.js"><link rel="prefetch" href="/assets/js/109.5dfe3f74.js"><link rel="prefetch" href="/assets/js/11.353beb2c.js"><link rel="prefetch" href="/assets/js/110.0c7b0074.js"><link rel="prefetch" href="/assets/js/111.d19c98bd.js"><link rel="prefetch" href="/assets/js/112.7f86573c.js"><link rel="prefetch" href="/assets/js/113.69670d86.js"><link rel="prefetch" href="/assets/js/115.65340938.js"><link rel="prefetch" href="/assets/js/116.a2d6390e.js"><link rel="prefetch" href="/assets/js/117.ce93db43.js"><link rel="prefetch" href="/assets/js/118.f1801f71.js"><link rel="prefetch" href="/assets/js/119.cd16da90.js"><link rel="prefetch" href="/assets/js/12.1cb55187.js"><link rel="prefetch" href="/assets/js/120.7fc03354.js"><link rel="prefetch" href="/assets/js/121.4664cbb0.js"><link rel="prefetch" href="/assets/js/122.b77188e6.js"><link rel="prefetch" href="/assets/js/123.b26db2e4.js"><link rel="prefetch" href="/assets/js/124.f3357fa7.js"><link rel="prefetch" href="/assets/js/125.270ad7b3.js"><link rel="prefetch" href="/assets/js/126.077652f4.js"><link rel="prefetch" href="/assets/js/127.a9f7b420.js"><link rel="prefetch" href="/assets/js/128.9b759c41.js"><link rel="prefetch" href="/assets/js/129.576989d5.js"><link rel="prefetch" href="/assets/js/13.a5ee1384.js"><link rel="prefetch" href="/assets/js/130.8d0d5c17.js"><link rel="prefetch" href="/assets/js/131.a5a86ec4.js"><link rel="prefetch" href="/assets/js/132.7f4191af.js"><link rel="prefetch" href="/assets/js/133.921e715f.js"><link rel="prefetch" href="/assets/js/134.39f5f261.js"><link rel="prefetch" href="/assets/js/135.a3f24166.js"><link rel="prefetch" href="/assets/js/136.35c8ea24.js"><link rel="prefetch" href="/assets/js/137.22048533.js"><link rel="prefetch" href="/assets/js/138.dedd30a2.js"><link rel="prefetch" href="/assets/js/139.8074e4d5.js"><link rel="prefetch" href="/assets/js/14.54ac7349.js"><link rel="prefetch" href="/assets/js/140.979a2cc9.js"><link rel="prefetch" href="/assets/js/141.620408ca.js"><link rel="prefetch" href="/assets/js/142.498031fa.js"><link rel="prefetch" href="/assets/js/143.3b542c8c.js"><link rel="prefetch" href="/assets/js/144.c2dd3bef.js"><link rel="prefetch" href="/assets/js/145.dcc71bc0.js"><link rel="prefetch" href="/assets/js/146.2ee0f15f.js"><link rel="prefetch" href="/assets/js/147.9bd749a1.js"><link rel="prefetch" href="/assets/js/148.99bf418d.js"><link rel="prefetch" href="/assets/js/149.1a278795.js"><link rel="prefetch" href="/assets/js/15.8b0ba45f.js"><link rel="prefetch" href="/assets/js/150.5fd24f8d.js"><link rel="prefetch" href="/assets/js/151.5027a389.js"><link rel="prefetch" href="/assets/js/152.e17c4545.js"><link rel="prefetch" href="/assets/js/153.c10b2778.js"><link rel="prefetch" href="/assets/js/154.c1b7db07.js"><link rel="prefetch" href="/assets/js/155.48c47d4e.js"><link rel="prefetch" href="/assets/js/156.e049c38a.js"><link rel="prefetch" href="/assets/js/157.82dd93da.js"><link rel="prefetch" href="/assets/js/158.90908f2b.js"><link rel="prefetch" href="/assets/js/159.64aeee13.js"><link rel="prefetch" href="/assets/js/16.70a5fd25.js"><link rel="prefetch" href="/assets/js/160.356b3e22.js"><link rel="prefetch" href="/assets/js/161.4aa0f2ac.js"><link rel="prefetch" href="/assets/js/17.938031c0.js"><link rel="prefetch" href="/assets/js/18.d05cdade.js"><link rel="prefetch" href="/assets/js/19.52312410.js"><link rel="prefetch" href="/assets/js/20.9ba86264.js"><link rel="prefetch" href="/assets/js/21.86008a86.js"><link rel="prefetch" href="/assets/js/22.dd94cfb7.js"><link rel="prefetch" href="/assets/js/23.15877a1f.js"><link rel="prefetch" href="/assets/js/24.819b08b6.js"><link rel="prefetch" href="/assets/js/25.0b063ba9.js"><link rel="prefetch" href="/assets/js/26.a18d8699.js"><link rel="prefetch" href="/assets/js/27.791b0f59.js"><link rel="prefetch" href="/assets/js/28.1f1b8f83.js"><link rel="prefetch" href="/assets/js/29.260b505a.js"><link rel="prefetch" href="/assets/js/3.1f40e418.js"><link rel="prefetch" href="/assets/js/30.294d468e.js"><link rel="prefetch" href="/assets/js/31.435b55bd.js"><link rel="prefetch" href="/assets/js/32.e0d78007.js"><link rel="prefetch" href="/assets/js/33.9b6856c0.js"><link rel="prefetch" href="/assets/js/34.fa3fa0c4.js"><link rel="prefetch" href="/assets/js/35.40a7813d.js"><link rel="prefetch" href="/assets/js/36.d16efe46.js"><link rel="prefetch" href="/assets/js/37.2ac493a5.js"><link rel="prefetch" href="/assets/js/38.b85da84f.js"><link rel="prefetch" href="/assets/js/39.e171e728.js"><link rel="prefetch" href="/assets/js/4.bfbea725.js"><link rel="prefetch" href="/assets/js/40.f7a55dc4.js"><link rel="prefetch" href="/assets/js/41.9b186e5b.js"><link rel="prefetch" href="/assets/js/42.f4ba0bc3.js"><link rel="prefetch" href="/assets/js/43.c4f6f488.js"><link rel="prefetch" href="/assets/js/44.c34d7c3d.js"><link rel="prefetch" href="/assets/js/45.3fe32e63.js"><link rel="prefetch" href="/assets/js/46.d9b2d18b.js"><link rel="prefetch" href="/assets/js/47.dc6c9c80.js"><link rel="prefetch" href="/assets/js/48.2b156689.js"><link rel="prefetch" href="/assets/js/49.a5e8af4b.js"><link rel="prefetch" href="/assets/js/5.74288faf.js"><link rel="prefetch" href="/assets/js/50.57ba4a01.js"><link rel="prefetch" href="/assets/js/51.326abeb1.js"><link rel="prefetch" href="/assets/js/52.0f0a77a1.js"><link rel="prefetch" href="/assets/js/53.d113467f.js"><link rel="prefetch" href="/assets/js/54.52f431bb.js"><link rel="prefetch" href="/assets/js/55.907ed6fb.js"><link rel="prefetch" href="/assets/js/56.e84a0b48.js"><link rel="prefetch" href="/assets/js/57.5b958ff1.js"><link rel="prefetch" href="/assets/js/58.da726e62.js"><link rel="prefetch" href="/assets/js/59.b38ebd7a.js"><link rel="prefetch" href="/assets/js/6.13bf2c7e.js"><link rel="prefetch" href="/assets/js/60.07c2ab2e.js"><link rel="prefetch" href="/assets/js/61.b2fd9fe1.js"><link rel="prefetch" href="/assets/js/62.8085e1b0.js"><link rel="prefetch" href="/assets/js/63.74b26956.js"><link rel="prefetch" href="/assets/js/64.97f932ab.js"><link rel="prefetch" href="/assets/js/65.33a6eaa4.js"><link rel="prefetch" href="/assets/js/66.c7f76344.js"><link rel="prefetch" href="/assets/js/67.bdf392cf.js"><link rel="prefetch" href="/assets/js/68.ee50324d.js"><link rel="prefetch" href="/assets/js/69.5720d0e6.js"><link rel="prefetch" href="/assets/js/7.3cd48f71.js"><link rel="prefetch" href="/assets/js/70.29ddcdb5.js"><link rel="prefetch" href="/assets/js/71.6bc7f557.js"><link rel="prefetch" href="/assets/js/72.07eb823e.js"><link rel="prefetch" href="/assets/js/73.aff952d9.js"><link rel="prefetch" href="/assets/js/74.30a67c08.js"><link rel="prefetch" href="/assets/js/75.dd255c3e.js"><link rel="prefetch" href="/assets/js/76.139b6140.js"><link rel="prefetch" href="/assets/js/77.0573562d.js"><link rel="prefetch" href="/assets/js/78.10a2b46b.js"><link rel="prefetch" href="/assets/js/79.222dd1ce.js"><link rel="prefetch" href="/assets/js/8.1b731e19.js"><link rel="prefetch" href="/assets/js/80.0d987057.js"><link rel="prefetch" href="/assets/js/81.8cf4fae6.js"><link rel="prefetch" href="/assets/js/82.941b31d6.js"><link rel="prefetch" href="/assets/js/83.c3cab560.js"><link rel="prefetch" href="/assets/js/84.f36a6dea.js"><link rel="prefetch" href="/assets/js/85.665bec72.js"><link rel="prefetch" href="/assets/js/86.56cd3a59.js"><link rel="prefetch" href="/assets/js/87.b8751b1e.js"><link rel="prefetch" href="/assets/js/88.21eeedc2.js"><link rel="prefetch" href="/assets/js/89.6494ab8b.js"><link rel="prefetch" href="/assets/js/9.7f7d49c0.js"><link rel="prefetch" href="/assets/js/90.b7e78541.js"><link rel="prefetch" href="/assets/js/91.96739a00.js"><link rel="prefetch" href="/assets/js/92.f31e4162.js"><link rel="prefetch" href="/assets/js/93.95c57d52.js"><link rel="prefetch" href="/assets/js/94.dadf5766.js"><link rel="prefetch" href="/assets/js/95.deb11f76.js"><link rel="prefetch" href="/assets/js/96.d13d2b49.js"><link rel="prefetch" href="/assets/js/97.cd2cf033.js"><link rel="prefetch" href="/assets/js/98.d8ea530e.js"><link rel="prefetch" href="/assets/js/99.1b65101d.js">
-    <link rel="stylesheet" href="/assets/css/0.styles.9d8515da.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" aria-current="page" class="home-link router-link-exact-active router-link-active"><img src="/img/logo.png" alt="魁首" class="logo"> <span class="site-name can-hide">魁首</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="A前端👨‍💻" class="dropdown-title"><span class="title">A前端👨‍💻</span> <span class="arrow down"></span></button> <button type="button" aria-label="A前端👨‍💻" class="mobile-dropdown-title"><span class="title">A前端👨‍💻</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Axios/" class="nav-link">
-  Axios
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/CSS/" class="nav-link">
-  CSS
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Canvas/" class="nav-link">
-  Canvas
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Echarts/" class="nav-link">
-  Echarts
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Git/" class="nav-link">
-  Git
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/JavaScript/" class="nav-link">
-  JavaScript
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/React/" class="nav-link">
-  React
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Webpack/" class="nav-link">
-  Webpack
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/node/" class="nav-link">
-  node
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/uni-app/" class="nav-link">
-  uni-app
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/vuepress/" class="nav-link">
-  vuepress
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/打包工具/" class="nav-link">
-  打包工具
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/自动化部署/" class="nav-link">
-  自动化部署
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/🔥Vue/" class="nav-link">
-  🔥Vue
-</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="B面试题📑" class="dropdown-title"><span class="title">B面试题📑</span> <span class="arrow down"></span></button> <button type="button" aria-label="B面试题📑" class="mobile-dropdown-title"><span class="title">B面试题📑</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/B面试题📑/最新面试题/" class="nav-link">
-  最新面试题
-</a></li><li class="dropdown-item"><!----> <a href="/B面试题📑/📣面试题汇总/" class="nav-link">
-  📣面试题汇总
-</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="PHP🐘" class="dropdown-title"><span class="title">PHP🐘</span> <span class="arrow down"></span></button> <button type="button" aria-label="PHP🐘" class="mobile-dropdown-title"><span class="title">PHP🐘</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/PHP🐘/一、初学者容易遇到的问题/" class="nav-link">
-  一、初学者容易遇到的问题
-</a></li><li class="dropdown-item"><!----> <a href="/PHP🐘/二、PHP实现简单的登录注册、增删改查/" class="nav-link">
-  二、PHP实现简单的登录注册、增删改查
-</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python🐍" class="dropdown-title"><span class="title">Python🐍</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python🐍" class="mobile-dropdown-title"><span class="title">Python🐍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Python🐍/一、爬取QQ空间/" class="nav-link">
-  一、爬取QQ空间
-</a></li><li class="dropdown-item"><!----> <a href="/Python🐍/二、爬取水果交易网水果行情信息/" class="nav-link">
-  二、爬取水果交易网水果行情信息
-</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue实战💻" class="dropdown-title"><span class="title">Vue实战💻</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue实战💻" class="mobile-dropdown-title"><span class="title">Vue实战💻</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Vue实战💻/AntDesign系列/" class="nav-link">
-  AntDesign系列
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/Echarts系列/" class="nav-link">
-  Echarts系列
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/EementUI系列/" class="nav-link">
-  EementUI系列
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/Lottie动画/" class="nav-link">
-  Lottie动画
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/Swiper滑动/" class="nav-link">
-  Swiper滑动
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/图书商城/" class="nav-link">
-  图书商城
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/支付宝小程序/" class="nav-link">
-  支付宝小程序
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/浏览器系列/" class="nav-link">
-  浏览器系列
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/海风小店/" class="nav-link">
-  海风小店
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/网易云小程序/" class="nav-link">
-  网易云小程序
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/跨平台/" class="nav-link">
-  跨平台
-</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读过的书📚️" class="dropdown-title"><span class="title">读过的书📚️</span> <span class="arrow down"></span></button> <button type="button" aria-label="读过的书📚️" class="mobile-dropdown-title"><span class="title">读过的书📚️</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/读过的书📚️/《HTTP权威指南-图灵》/" class="nav-link">
-  《HTTP权威指南-图灵》
-</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《JavaScript正则表达式迷你书》/" class="nav-link">
-  《JavaScript正则表达式迷你书》
-</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《JavaScript高级程序设计-图灵》/" class="nav-link">
-  《JavaScript高级程序设计-图灵》
-</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《labuladong的算法小炒》/" class="nav-link">
-  《labuladong的算法小炒》
-</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《图解算法-图灵》/" class="nav-link">
-  《图解算法-图灵》
-</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《图解网络-小林coding》/" class="nav-link">
-  《图解网络-小林coding》
-</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《架构师的自我修养》/" class="nav-link">
-  《架构师的自我修养》
-</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="走过的路🌱" class="dropdown-title"><span class="title">走过的路🌱</span> <span class="arrow down"></span></button> <button type="button" aria-label="走过的路🌱" class="mobile-dropdown-title"><span class="title">走过的路🌱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/走过的路🌱/2019成长日记/" class="nav-link">
-  2019成长日记
-</a></li><li class="dropdown-item"><!----> <a href="/走过的路🌱/2020年度总结/" class="nav-link">
-  2020年度总结
-</a></li><li class="dropdown-item"><!----> <a href="/走过的路🌱/2021年度总结/" class="nav-link">
-  2021年度总结
-</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="A前端👨‍💻" class="dropdown-title"><span class="title">A前端👨‍💻</span> <span class="arrow down"></span></button> <button type="button" aria-label="A前端👨‍💻" class="mobile-dropdown-title"><span class="title">A前端👨‍💻</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Axios/" class="nav-link">
-  Axios
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/CSS/" class="nav-link">
-  CSS
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Canvas/" class="nav-link">
-  Canvas
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Echarts/" class="nav-link">
-  Echarts
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Git/" class="nav-link">
-  Git
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/JavaScript/" class="nav-link">
-  JavaScript
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/React/" class="nav-link">
-  React
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/Webpack/" class="nav-link">
-  Webpack
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/node/" class="nav-link">
-  node
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/uni-app/" class="nav-link">
-  uni-app
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/vuepress/" class="nav-link">
-  vuepress
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/打包工具/" class="nav-link">
-  打包工具
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/自动化部署/" class="nav-link">
-  自动化部署
-</a></li><li class="dropdown-item"><!----> <a href="/A前端👨‍💻/🔥Vue/" class="nav-link">
-  🔥Vue
-</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="B面试题📑" class="dropdown-title"><span class="title">B面试题📑</span> <span class="arrow down"></span></button> <button type="button" aria-label="B面试题📑" class="mobile-dropdown-title"><span class="title">B面试题📑</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/B面试题📑/最新面试题/" class="nav-link">
-  最新面试题
-</a></li><li class="dropdown-item"><!----> <a href="/B面试题📑/📣面试题汇总/" class="nav-link">
-  📣面试题汇总
-</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="PHP🐘" class="dropdown-title"><span class="title">PHP🐘</span> <span class="arrow down"></span></button> <button type="button" aria-label="PHP🐘" class="mobile-dropdown-title"><span class="title">PHP🐘</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/PHP🐘/一、初学者容易遇到的问题/" class="nav-link">
-  一、初学者容易遇到的问题
-</a></li><li class="dropdown-item"><!----> <a href="/PHP🐘/二、PHP实现简单的登录注册、增删改查/" class="nav-link">
-  二、PHP实现简单的登录注册、增删改查
-</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Python🐍" class="dropdown-title"><span class="title">Python🐍</span> <span class="arrow down"></span></button> <button type="button" aria-label="Python🐍" class="mobile-dropdown-title"><span class="title">Python🐍</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Python🐍/一、爬取QQ空间/" class="nav-link">
-  一、爬取QQ空间
-</a></li><li class="dropdown-item"><!----> <a href="/Python🐍/二、爬取水果交易网水果行情信息/" class="nav-link">
-  二、爬取水果交易网水果行情信息
-</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue实战💻" class="dropdown-title"><span class="title">Vue实战💻</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue实战💻" class="mobile-dropdown-title"><span class="title">Vue实战💻</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Vue实战💻/AntDesign系列/" class="nav-link">
-  AntDesign系列
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/Echarts系列/" class="nav-link">
-  Echarts系列
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/EementUI系列/" class="nav-link">
-  EementUI系列
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/Lottie动画/" class="nav-link">
-  Lottie动画
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/Swiper滑动/" class="nav-link">
-  Swiper滑动
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/图书商城/" class="nav-link">
-  图书商城
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/支付宝小程序/" class="nav-link">
-  支付宝小程序
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/浏览器系列/" class="nav-link">
-  浏览器系列
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/海风小店/" class="nav-link">
-  海风小店
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/网易云小程序/" class="nav-link">
-  网易云小程序
-</a></li><li class="dropdown-item"><!----> <a href="/Vue实战💻/跨平台/" class="nav-link">
-  跨平台
-</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读过的书📚️" class="dropdown-title"><span class="title">读过的书📚️</span> <span class="arrow down"></span></button> <button type="button" aria-label="读过的书📚️" class="mobile-dropdown-title"><span class="title">读过的书📚️</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/读过的书📚️/《HTTP权威指南-图灵》/" class="nav-link">
-  《HTTP权威指南-图灵》
-</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《JavaScript正则表达式迷你书》/" class="nav-link">
-  《JavaScript正则表达式迷你书》
-</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《JavaScript高级程序设计-图灵》/" class="nav-link">
-  《JavaScript高级程序设计-图灵》
-</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《labuladong的算法小炒》/" class="nav-link">
-  《labuladong的算法小炒》
-</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《图解算法-图灵》/" class="nav-link">
-  《图解算法-图灵》
-</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《图解网络-小林coding》/" class="nav-link">
-  《图解网络-小林coding》
-</a></li><li class="dropdown-item"><!----> <a href="/读过的书📚️/《架构师的自我修养》/" class="nav-link">
-  《架构师的自我修养》
-</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="走过的路🌱" class="dropdown-title"><span class="title">走过的路🌱</span> <span class="arrow down"></span></button> <button type="button" aria-label="走过的路🌱" class="mobile-dropdown-title"><span class="title">走过的路🌱</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/走过的路🌱/2019成长日记/" class="nav-link">
-  2019成长日记
-</a></li><li class="dropdown-item"><!----> <a href="/走过的路🌱/2020年度总结/" class="nav-link">
-  2020年度总结
-</a></li><li class="dropdown-item"><!----> <a href="/走过的路🌱/2021年度总结/" class="nav-link">
-  2021年度总结
-</a></li></ul></div></div> <!----></nav>  <!----> </aside> <main aria-labelledby="main-title" class="home"><header class="hero"><img src="/img/logo.png" alt="hero"> <h1 id="main-title">
-      魁首
-    </h1> <p class="description">
-      一个没有天赋的前端程序员👨‍💻 
-    </p> <!----></header> <div class="features"><div class="feature"><h2>读过的书</h2> <p>《JavaScript高级程序设计》读书笔记</p></div><div class="feature"><h2>走过的路</h2> <p>2020年度学习、生活总结</p></div><div class="feature"><h2>开源项目</h2> <p>海风小店、图书商城移动端</p></div><div class="feature"><h2>PHP</h2> <p>PHP初学者实现简单登录注册、增删查改</p></div><div class="feature"><h2>Python</h2> <p>Python爬取QQ空间好友说说</p></div><div class="feature"><h2>面试</h2> <p>简历、面经</p></div></div> <div class="theme-default-content custom content__default"></div> <div class="footer">
-    Copyright © 2021-present kuishou
-  </div></main></div><div class="global-ui"><!----></div></div>
-    <script src="/assets/js/app.e3ef1853.js" defer></script><script src="/assets/js/2.729b7072.js" defer></script><script src="/assets/js/114.b238c354.js" defer></script>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand-lockup" href="/">
+          <span class="brand-mark"><img src="/img/logo.png" alt="CocoonBreak"></span>
+          <span>
+            <span class="brand-title">CocoonBreak</span>
+            <span class="brand-subtitle">AI Tooling · Cocoon Stack · Community</span>
+          </span>
+        </a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-label="切换导航" data-menu-button>☰</button>
+        <nav class="nav-links" data-nav-links>
+          <a href="#about">关于我</a>
+          <a href="#projects">负责项目</a>
+          <a href="#writing">最新文章</a>
+          <a href="#community">社区</a>
+          <a href="#archive">归档</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-grid">
+          <article class="hero-copy" data-reveal>
+            <div class="eyebrow">Cocoon Stack · OpenAI / Gemini / Claude · AWS</div>
+            <h1>把 <span>AI 工具链</span>、产品和基础设施接成一条真正能跑的链路。</h1>
+            <p class="hero-lead">
+              从 Vue / uni-app / 小程序一路走到 AI Tooling、SaaS 与 AWS 基础设施落地，我现在更关注的不是“能不能接上模型”，而是
+              “模型、CLI、网关、产品与社区能不能一起稳定运转”。这里集中展示我的项目、文章、负责范围和社群入口。
+            </p>
+
+            <div class="hero-actions">
+              <a class="primary-button" href="https://github.com/kuishou68" target="_blank" rel="noreferrer">查看 GitHub</a>
+              <a class="secondary-button" href="/insights/">读最新文章</a>
+              <a class="secondary-button" href="https://t.me/+UFK1taHMTXIzNzU1" target="_blank" rel="noreferrer">加入 Telegram</a>
+            </div>
+
+            <div class="badge-cloud" aria-label="个人状态徽章">
+              <img src="https://img.shields.io/badge/status-building%20Cocoon-0ea5e9?style=flat-square" alt="status">
+              <img src="https://img.shields.io/github/followers/kuishou68?style=flat-square&logo=github&label=GitHub%20Followers" alt="GitHub Followers">
+              <img src="https://img.shields.io/badge/dynamic/json?style=flat-square&label=Public%20Repos&query=%24.public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2Fkuishou68&logo=github" alt="Public Repos">
+              <img src="https://img.shields.io/github/stars/iOfficeAI/AionUi?style=flat-square&logo=github&label=AionUi" alt="AionUi stars">
+              <img src="https://img.shields.io/badge/dynamic/json?style=flat-square&label=Bilibili&query=%24.data.follower&suffix=%20followers&url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Frelation%2Fstat%3Fvmid%3D488055374&logo=bilibili&logoColor=white&color=00A1D6" alt="Bilibili followers">
+              <img src="https://img.shields.io/badge/CSDN-67%2C108%20views-FC5531?style=flat-square&logo=csdn&logoColor=white" alt="CSDN views">
+            </div>
+          </article>
+
+          <aside class="hero-panel" data-reveal>
+            <div class="hero-panel-header">
+              <div>
+                <h2 class="panel-title">现在的工作重心</h2>
+                <p class="panel-caption">不是单点写代码，而是把模型能力、CLI 工作流、API 网关、产品页面与社群入口串成完整闭环。</p>
+              </div>
+              <span class="stack-pill">2026 Focus</span>
+            </div>
+
+            <div class="mini-grid">
+              <div class="mini-card">
+                <strong>18k★+</strong>
+                <span>AionUi 参与项目</span>
+              </div>
+              <div class="mini-card">
+                <strong>5+</strong>
+                <span>正在维护的 Cocoon 产品</span>
+              </div>
+              <div class="mini-card">
+                <strong>4</strong>
+                <span>当前主打 AI / CLI 专题文章</span>
+              </div>
+              <div class="mini-card">
+                <strong>3</strong>
+                <span>核心社群与内容阵地</span>
+              </div>
+            </div>
+
+            <div class="hero-stack">
+              <div class="stack-item">
+                <div>
+                  <strong>多模型接入与 Failover</strong>
+                  <span>Claude / Codex / Gemini / Kimi / Qwen / API Key 通道联动</span>
+                </div>
+                <span class="card-pill">Routing</span>
+              </div>
+              <div class="stack-item">
+                <div>
+                  <strong>产品与站点交付</strong>
+                  <span>Home、API、SMS、VPN、博客和社区入口一起打包成品牌矩阵</span>
+                </div>
+                <span class="card-pill">Product</span>
+              </div>
+              <div class="stack-item">
+                <div>
+                  <strong>AWS 与静态发布</strong>
+                  <span>EC2、GitHub Pages、网关、反代和多站点维护</span>
+                </div>
+                <span class="card-pill">Infra</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="section-split">
+          <div class="section-card" data-reveal>
+            <div class="section-heading">
+              <h2>从 <span>前端工程</span> 走到 AI Tooling</h2>
+              <p class="section-copy">
+                我最早公开的项目集中在前端、Vue、uni-app 和小程序方向。现在则把重点放在模型接入、CLI 代理、协议演进、OpenAI-compatible
+                Gateway，以及围绕这些能力展开的产品与基础设施。
+              </p>
+            </div>
+            <ul class="note-list">
+              <li>
+                <strong>早期积累</strong>
+                代表仓库包括 `neteaseMusic`、`Vuejs`、`hiolabs`、`fruitsShop`，覆盖小程序、业务改造和长期前端训练。
+              </li>
+              <li>
+                <strong>近两年的变化</strong>
+                明显从“做页面”扩展到了“做模型工作流”，开始处理 CLI、协议、网关、构建、稳定性和多平台认证链路。
+              </li>
+              <li>
+                <strong>当前定位</strong>
+                更像一个把 AI 能力接进真实产品的人，而不是只停留在 demo 层的开发者。
+              </li>
+            </ul>
+          </div>
+
+          <div class="section-card" data-reveal>
+            <div class="section-heading">
+              <h2>现在在意什么</h2>
+            </div>
+            <ul class="timeline-list">
+              <li>
+                <strong>模型能不能稳定接入</strong>
+                不只看单个模型可不可用，还看认证、额度、429、回退链路和不同 CLI 间的协作。
+              </li>
+              <li>
+                <strong>产品有没有统一入口</strong>
+                一个 Home 门户把 API、SMS、VPN、社区和博客内容组织起来，比零散站点更有品牌感。
+              </li>
+              <li>
+                <strong>文章是否服务当前项目</strong>
+                最近的文章主题都围绕 Codex、Gemini CLI、stdio、MCP/ACP/A2A，不再只是知识点摘录。
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading" data-reveal>
+          <h2>负责和参与的 <span>关键项目</span></h2>
+          <p class="section-copy">这一组项目最能说明我现在的技术重心：既包含高 Star 的参与项目，也包含自己持续维护的产品矩阵。</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card" data-reveal>
+            <span class="icon-badge">★</span>
+            <h3>AionUi</h3>
+            <p class="project-copy">
+              公开可见的高 Star 参与项目。重点工作包括模型接入、设置流程、构建细节、稳定性修复，以及围绕 Codex / Gemini / Claude / 本地 agent 的协作体验。
+            </p>
+            <div class="card-meta">
+              <span>18k★+</span>
+              <span>Contributor</span>
+              <span>AI Tooling</span>
+            </div>
+            <a class="ghost-link" href="https://github.com/iOfficeAI/AionUi" target="_blank" rel="noreferrer">查看项目</a>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <span class="icon-badge">♫</span>
+            <h3>neteaseMusic</h3>
+            <p class="project-copy">
+              我公开仓库里 Star 最高的项目之一，代表最早的小程序产品化、交互体验打磨和前端场景拆解能力。
+            </p>
+            <div class="card-meta">
+              <span>147★</span>
+              <span>Mini Program</span>
+              <span>Front-end</span>
+            </div>
+            <a class="ghost-link" href="https://github.com/kuishou68/neteaseMusic" target="_blank" rel="noreferrer">查看项目</a>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <span class="icon-badge">⌘</span>
+            <h3>Vuejs / hiolabs</h3>
+            <p class="project-copy">
+              一个体现长期前端训练，一个体现业务改造和二次开发经历。它们不是今天的重心，但仍然是我技术路径的重要组成部分。
+            </p>
+            <div class="card-meta">
+              <span>46★ / 17★</span>
+              <span>Vue</span>
+              <span>Business Delivery</span>
+            </div>
+            <a class="ghost-link" href="https://github.com/kuishou68/Vuejs" target="_blank" rel="noreferrer">查看 Vuejs</a>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <span class="icon-badge">∞</span>
+            <h3>Cocoon Stack</h3>
+            <p class="project-copy">
+              当前持续维护的产品矩阵。它把多语言门户、API 网关、短信平台、VPN 面板和社区入口组织成一条可被访问、可被运营、可被扩展的链路。
+            </p>
+            <div class="card-meta">
+              <span>Home</span>
+              <span>API</span>
+              <span>SMS / VPN</span>
+            </div>
+            <a class="ghost-link" href="#products">继续往下看</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="products">
+        <div class="section-heading" data-reveal>
+          <h2>正在建设的 <span>Cocoon 产品矩阵</span></h2>
+          <p class="section-copy">这部分是“现在进行时”。我希望它们不是孤立页面，而是统一品牌和统一入口下的完整产品组。</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card" data-reveal>
+            <span class="icon-badge">🏠</span>
+            <h3>Cocoon Home</h3>
+            <p class="product-copy">多语言产品门户，负责品牌入口、产品卡片组织和统一对外展示。</p>
+            <div class="card-meta"><span>Portal</span><span>Multilingual</span></div>
+            <a class="ghost-link" href="https://home.lijianlin.com.cn" target="_blank" rel="noreferrer">访问站点</a>
+          </article>
+
+          <article class="product-card" data-reveal>
+            <span class="icon-badge">API</span>
+            <h3>Cocoon API</h3>
+            <p class="product-copy">OpenAI-compatible API 网关，服务模型聚合、统一分发和后续产品能力接入。</p>
+            <div class="card-meta"><span>Gateway</span><span>OpenAI Compatible</span></div>
+            <a class="ghost-link" href="https://api.lijianlin.com.cn" target="_blank" rel="noreferrer">访问站点</a>
+          </article>
+
+          <article class="product-card" data-reveal>
+            <span class="icon-badge">✉</span>
+            <h3>Cocoon SMS</h3>
+            <p class="product-copy">短信营销和通知平台，关注支付、短信通道与基础后台流程的打通。</p>
+            <div class="card-meta"><span>Marketing</span><span>Notification</span></div>
+            <a class="ghost-link" href="https://sms.lijianlin.com.cn" target="_blank" rel="noreferrer">访问站点</a>
+          </article>
+
+          <article class="product-card" data-reveal>
+            <span class="icon-badge">VPN</span>
+            <h3>Cocoon VPN</h3>
+            <p class="product-copy">面向全球节点和管理面板的一组服务，重点在交付和稳定可用。</p>
+            <div class="card-meta"><span>Panel</span><span>Node Service</span></div>
+            <a class="ghost-link" href="https://vpn.lijianlin.com.cn" target="_blank" rel="noreferrer">访问站点</a>
+          </article>
+
+          <article class="product-card" data-reveal>
+            <span class="icon-badge">🐾</span>
+            <h3>OpenClaw Gateway</h3>
+            <p class="product-copy">多模型 CLI 与 API 通道的统一网关，用于串联 Claude、Codex、Gemini、Kimi、Qwen 和 API Key 后备链。</p>
+            <div class="card-meta"><span>Gateway</span><span>Fallback Chain</span></div>
+            <a class="ghost-link" href="https://openclaw.lijianlin.com.cn" target="_blank" rel="noreferrer">访问站点</a>
+          </article>
+
+          <article class="product-card" data-reveal>
+            <span class="icon-badge">⌥</span>
+            <h3>CLI & Protocol Notes</h3>
+            <p class="product-copy">围绕 Codex、Gemini CLI、stdio、MCP / ACP / A2A 的文章和知识沉淀，帮助把“会用”提升到“理解原理”。</p>
+            <div class="card-meta"><span>Codex</span><span>MCP / ACP / A2A</span></div>
+            <a class="ghost-link" href="/insights/">查看文章</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="writing">
+        <div class="section-heading" data-reveal>
+          <h2>最近更新的 <span>博客文章</span></h2>
+          <p class="section-copy">下面这几篇是根据我掘金近一段时间的输出主题整理过的博客版文章，更适合在个人站点里连续阅读。</p>
+        </div>
+        <div class="writing-grid">
+          <article class="writing-card" data-reveal>
+            <span class="icon-badge">⌘</span>
+            <h3>OpenAI Codex 深入剖析</h3>
+            <p class="writing-copy">不是把 Codex 当聊天模型，而是把它理解成“模型 + 执行 + 反馈闭环”的终端搭档。</p>
+            <div class="card-meta"><span>Codex</span><span>Terminal Agent</span></div>
+            <a class="ghost-link" href="/insights/openai-codex-architecture/">阅读全文</a>
+          </article>
+
+          <article class="writing-card" data-reveal>
+            <span class="icon-badge">◎</span>
+            <h3>Gemini CLI 深度源码分析</h3>
+            <p class="writing-copy">从配置、命令调度、工具调用到执行反馈，拆开 Gemini CLI 的工作方式。</p>
+            <div class="card-meta"><span>Gemini CLI</span><span>Source Reading</span></div>
+            <a class="ghost-link" href="/insights/gemini-cli-source/">阅读全文</a>
+          </article>
+
+          <article class="writing-card" data-reveal>
+            <span class="icon-badge">↔</span>
+            <h3>为什么都爱用 stdio</h3>
+            <p class="writing-copy">从进程边界、权限收敛、本地体验和调试成本解释为什么 Claude / Gemini / Codex 都偏爱 stdio。</p>
+            <div class="card-meta"><span>stdio</span><span>CLI Transport</span></div>
+            <a class="ghost-link" href="/insights/stdio-transport/">阅读全文</a>
+          </article>
+
+          <article class="writing-card" data-reveal>
+            <span class="icon-badge">⛓</span>
+            <h3>从 MCP 到 ACP 再到 A2A</h3>
+            <p class="writing-copy">把 MCP、ACP、A2A 放在同一张图里看，能更清楚地区分工具协议、客户端协议和 Agent 协作协议。</p>
+            <div class="card-meta"><span>MCP / ACP / A2A</span><span>Protocol</span></div>
+            <a class="ghost-link" href="/insights/agent-protocols/">阅读全文</a>
+          </article>
+
+          <article class="writing-card" data-reveal>
+            <span class="icon-badge">掘</span>
+            <h3>掘金原文入口</h3>
+            <p class="writing-copy">如果你想对照看原始发布节奏、阅读量和标签，可以直接进入我的掘金主页。</p>
+            <div class="card-meta"><span>Juejin</span><span>Original Posts</span></div>
+            <a class="ghost-link" href="https://juejin.cn/user/3817931570691031/posts" target="_blank" rel="noreferrer">前往掘金</a>
+          </article>
+
+          <article class="writing-card" data-reveal>
+            <span class="icon-badge">→</span>
+            <h3>查看全部专题</h3>
+            <p class="writing-copy">所有新文章都集中到一个新的 `insights` 入口，方便继续扩展和维护。</p>
+            <div class="card-meta"><span>Insights</span><span>New Series</span></div>
+            <a class="ghost-link" href="/insights/">进入专题页</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="community">
+        <div class="section-heading" data-reveal>
+          <h2>我的 <span>社区与内容阵地</span></h2>
+          <p class="section-copy">不是只有博客。GitHub、掘金、CSDN、Bilibili、Telegram、Discord 都是我持续输出或运营的节点。</p>
+        </div>
+        <div class="community-grid">
+          <article class="community-card" data-reveal>
+            <span class="icon-badge">TG</span>
+            <h3>Telegram 群</h3>
+            <p class="community-copy">适合快速交流、同步动态和收敛问题反馈。</p>
+            <a class="ghost-link" href="https://t.me/+UFK1taHMTXIzNzU1" target="_blank" rel="noreferrer">加入群组</a>
+          </article>
+          <article class="community-card" data-reveal>
+            <span class="icon-badge">DC</span>
+            <h3>Discord</h3>
+            <p class="community-copy">更适合做长期社区协作和频道化讨论。</p>
+            <a class="ghost-link" href="https://discord.gg/dSzXuS6k" target="_blank" rel="noreferrer">加入服务器</a>
+          </article>
+          <article class="community-card" data-reveal>
+            <span class="icon-badge">GH</span>
+            <h3>GitHub</h3>
+            <p class="community-copy">项目、PR、代码仓库和当前关注点都在这里最直观。</p>
+            <a class="ghost-link" href="https://github.com/kuishou68" target="_blank" rel="noreferrer">访问主页</a>
+          </article>
+          <article class="community-card" data-reveal>
+            <span class="icon-badge">掘</span>
+            <h3>掘金</h3>
+            <p class="community-copy">AI Agent、CLI、协议与工程经验的主要输出平台之一。</p>
+            <a class="ghost-link" href="https://juejin.cn/user/3817931570691031/posts" target="_blank" rel="noreferrer">查看文章</a>
+          </article>
+          <article class="community-card" data-reveal>
+            <span class="icon-badge">C</span>
+            <h3>CSDN</h3>
+            <p class="community-copy">长期内容沉淀平台，保留了较多早期技术笔记与访问积累。</p>
+            <a class="ghost-link" href="https://blog.csdn.net/weixin_44019370?type=blog" target="_blank" rel="noreferrer">进入专栏</a>
+          </article>
+          <article class="community-card" data-reveal>
+            <span class="icon-badge">B</span>
+            <h3>Bilibili</h3>
+            <p class="community-copy">视频和动态补充内容入口，和图文平台形成互补。</p>
+            <a class="ghost-link" href="https://space.bilibili.com/488055374" target="_blank" rel="noreferrer">访问主页</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="archive">
+        <div class="section-heading" data-reveal>
+          <h2>旧博客 <span>归档入口</span></h2>
+          <p class="section-copy">之前的 VuePress 知识库内容没有删，只是首页换成了更适合现在身份和项目方向的新入口。</p>
+        </div>
+        <div class="archive-grid">
+          <article class="archive-card" data-reveal>
+            <span class="icon-badge">前</span>
+            <h3>前端知识库</h3>
+            <p class="archive-copy">Axios、CSS、Canvas、JavaScript、React、Webpack、uni-app 等旧内容入口。</p>
+            <a class="ghost-link" href="/A前端👨‍💻/">进入归档</a>
+          </article>
+          <article class="archive-card" data-reveal>
+            <span class="icon-badge">面</span>
+            <h3>面试题</h3>
+            <p class="archive-copy">浏览器、网络、安全、Vue、React、手写题等旧面试专题。</p>
+            <a class="ghost-link" href="/B面试题📑/">进入归档</a>
+          </article>
+          <article class="archive-card" data-reveal>
+            <span class="icon-badge">V</span>
+            <h3>Vue 实战</h3>
+            <p class="archive-copy">Ant Design、Echarts、图书商城、网易云小程序、海风小店等项目记录。</p>
+            <a class="ghost-link" href="/Vue实战💻/">进入归档</a>
+          </article>
+          <article class="archive-card" data-reveal>
+            <span class="icon-badge">路</span>
+            <h3>成长记录</h3>
+            <p class="archive-copy">2019 到 2021 的年度总结和成长日记，还保留着很强的时间感。</p>
+            <a class="ghost-link" href="/走过的路🌱/">进入归档</a>
+          </article>
+          <article class="archive-card" data-reveal>
+            <span class="icon-badge">书</span>
+            <h3>读书笔记</h3>
+            <p class="archive-copy">JavaScript、HTTP、算法、网络和架构类书籍阅读笔记。</p>
+            <a class="ghost-link" href="/读过的书📚️/">进入归档</a>
+          </article>
+          <article class="archive-card" data-reveal>
+            <span class="icon-badge">后</span>
+            <h3>PHP / Python</h3>
+            <p class="archive-copy">保留早期后端和爬虫相关的实践文章，作为技术路径的另一面。</p>
+            <a class="ghost-link" href="/PHP🐘/">PHP 归档</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-shell site-footer">
+      <div class="footer-card">
+        <span>© <span data-year></span> CocoonBreak. Personal blog rebuilt around AI tooling, community, and the Cocoon stack.</span>
+        <span>Hosted on GitHub Pages · Legacy VuePress archive preserved.</span>
+      </div>
+    </footer>
   </body>
 </html>
