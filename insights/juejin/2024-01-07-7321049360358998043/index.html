@@ -1,71 +1,321 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="refresh" content="0; url=/en/posts/sync/2024-01-07-7321049360358998043/" />
-    <title>Juejin article moved</title>
-    <style>
-      :root {
-        color-scheme: dark;
-        --bg: #0b1020;
-        --panel: rgba(10, 18, 38, 0.88);
-        --line: rgba(255, 255, 255, 0.12);
-        --text: #f6efe3;
-        --muted: #93a2bf;
-        --accent: #7ae7c7;
-      }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        background:
-          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
-          linear-gradient(180deg, #0b1020 0%, #050813 100%);
-        color: var(--text);
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        padding: 24px;
-      }
-      main {
-        width: min(640px, 100%);
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        background: var(--panel);
-        padding: 32px;
-        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
-      }
-      h1 {
-        margin: 0 0 12px;
-        font-size: clamp(28px, 4vw, 42px);
-      }
-      p {
-        margin: 0 0 18px;
-        color: var(--muted);
-        line-height: 1.7;
-      }
-      a {
-        color: #08111e;
-        background: var(--accent);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 12px 18px;
-        border-radius: 999px;
-        text-decoration: none;
-        font-weight: 700;
-      }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vue3+Pinia实现持久化动态主题切换; | CocoonBreak</title>
+    <meta name="description" content="PC端主题切换大家都用过，下面用Vue3+Pinia实现一下这个过程; 【源码地址】 1、准备工作 npm install pinia npm install pinia - plugin - persist 2、基础配置 // main....">
+    <meta property="og:title" content="Vue3+Pinia实现持久化动态主题切换; | CocoonBreak">
+    <meta property="og:description" content="PC端主题切换大家都用过，下面用Vue3+Pinia实现一下这个过程; 【源码地址】 1、准备工作 npm install pinia npm install pinia - plugin - persist 2、基础配置 // main....">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2024-01-07-7321049360358998043/">
+    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
   </head>
   <body>
-    <main>
-      <h1>Juejin article moved</h1>
-      <p>This synced Juejin article now lives under the rebuilt post route.</p>
-      <a href="/en/posts/sync/2024-01-07-7321049360358998043/">Continue</a>
-    </main>
-    <script>
-      window.location.replace("/en/posts/sync/2024-01-07-7321049360358998043/");
-    </script>
+    <div class="article-shell">
+      <nav class="insight-nav">
+        <a href="/">← 首页</a>
+        <a href="/insights/">同步文章</a>
+        <a href="https://juejin.cn/post/7321049360358998043" target="_blank" rel="noreferrer">掘金原文</a>
+      </nav>
+
+      <header class="article-hero" data-reveal>
+        <div class="article-meta">
+          <span>2024.01.07</span><span>Vue.js</span><span>Vite</span>
+        </div>
+        <h1>Vue3+Pinia实现持久化动态主题切换;</h1>
+        <p class="article-intro">PC端主题切换大家都用过，下面用Vue3+Pinia实现一下这个过程; 【源码地址】 1、准备工作 npm install pinia npm install pinia - plugin - persist 2、基础配置 // main....</p>
+        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/7321049360358998043" target="_blank" rel="noreferrer">掘金原文</a>。</div>
+      </header>
+
+      <article class="prose" data-reveal>
+        <p>PC端主题切换大家都用过，下面用Vue3+Pinia实现一下这个过程; <a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fkuishou68%2Fvue3-template" target="_blank" title="https://github.com/kuishou68/vue3-template">【源码地址】</a></p>
+<p><img alt="board_img.png" loading="lazy" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/823688bc26ef493685f587c3fc8fedd6~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=1022&amp;h=757&amp;s=153754&amp;e=png&amp;b=fefdfd"/></p>
+<p>1、准备工作</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a>npm install pinia</span>
+<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a>npm install pinia<span class="op">-</span>plugin<span class="op">-</span>persist</span></code></pre></div>
+<p><img alt="image.png" loading="lazy" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3207a385871943f9adfcaec06a24f38e~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=888&amp;h=96&amp;s=19793&amp;e=png&amp;b=1e1f21"/></p>
+<p>2、基础配置</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="co">// main.js</span></span>
+<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a><span class="im">import</span> { createApp } <span class="im">from</span> <span class="st">'vue'</span></span>
+<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a><span class="im">import</span> App <span class="im">from</span> <span class="st">'./App.vue'</span></span>
+<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a><span class="im">import</span> bootstrap <span class="im">from</span> <span class="st">"../bootstrap"</span><span class="op">;</span></span>
+<span id="cb2-5"><a aria-hidden="true" href="#cb2-5" tabindex="-1"></a><span class="im">import</span> { createPinia } <span class="im">from</span> <span class="st">'pinia'</span></span>
+<span id="cb2-6"><a aria-hidden="true" href="#cb2-6" tabindex="-1"></a><span class="im">import</span> piniaPluginPersist <span class="im">from</span> <span class="st">'pinia-plugin-persist'</span><span class="op">;</span></span>
+<span id="cb2-7"><a aria-hidden="true" href="#cb2-7" tabindex="-1"></a></span>
+<span id="cb2-8"><a aria-hidden="true" href="#cb2-8" tabindex="-1"></a><span class="kw">const</span> app <span class="op">=</span> <span class="fu">createApp</span>(App)<span class="op">;</span></span>
+<span id="cb2-9"><a aria-hidden="true" href="#cb2-9" tabindex="-1"></a><span class="kw">const</span> store <span class="op">=</span> <span class="fu">createPinia</span>()</span>
+<span id="cb2-10"><a aria-hidden="true" href="#cb2-10" tabindex="-1"></a>store<span class="op">.</span><span class="fu">use</span>(piniaPluginPersist)<span class="op">;</span></span>
+<span id="cb2-11"><a aria-hidden="true" href="#cb2-11" tabindex="-1"></a></span>
+<span id="cb2-12"><a aria-hidden="true" href="#cb2-12" tabindex="-1"></a>app<span class="op">.</span><span class="fu">use</span>(store)<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a>// APP.vue</span>
+<span id="cb3-2"><a aria-hidden="true" href="#cb3-2" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">template</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a aria-hidden="true" href="#cb3-3" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb3-4"><a aria-hidden="true" href="#cb3-4" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">a-config-provider</span><span class="ot"> :locale</span><span class="op">=</span><span class="st">"locale"</span><span class="ot"> :theme</span><span class="op">=</span><span class="st">"{ token: { colorPrimary: themeState.themes </span><span class="er">&amp;&amp;</span><span class="st"> themeState.currTheme ? themeState.themes[themeState.currTheme].themeColor1 : '#4A51FF', } }"</span><span class="ot"> </span><span class="dt">&gt;</span></span>
+<span id="cb3-5"><a aria-hidden="true" href="#cb3-5" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">RouterView</span><span class="dt">/&gt;</span></span>
+<span id="cb3-6"><a aria-hidden="true" href="#cb3-6" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">a-config-provider</span><span class="dt">&gt;</span></span>
+<span id="cb3-7"><a aria-hidden="true" href="#cb3-7" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb3-8"><a aria-hidden="true" href="#cb3-8" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">template</span><span class="dt">&gt;</span></span>
+<span id="cb3-9"><a aria-hidden="true" href="#cb3-9" tabindex="-1"></a></span>
+<span id="cb3-10"><a aria-hidden="true" href="#cb3-10" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> setup</span><span class="dt">&gt;</span></span>
+<span id="cb3-11"><a aria-hidden="true" href="#cb3-11" tabindex="-1"></a><span class="im">import</span> {ref<span class="op">,</span> reactive<span class="op">,</span> provide<span class="op">,</span> onMounted<span class="op">,</span> onBeforeUnmount } <span class="im">from</span> <span class="st">'vue'</span></span>
+<span id="cb3-12"><a aria-hidden="true" href="#cb3-12" tabindex="-1"></a><span class="im">import</span> {useRouter} <span class="im">from</span> <span class="st">"vue-router"</span><span class="op">;</span></span>
+<span id="cb3-13"><a aria-hidden="true" href="#cb3-13" tabindex="-1"></a><span class="im">import</span> zhCN <span class="im">from</span> <span class="st">'ant-design-vue/es/locale/zh_CN'</span><span class="op">;</span></span>
+<span id="cb3-14"><a aria-hidden="true" href="#cb3-14" tabindex="-1"></a><span class="im">import</span> dayjs <span class="im">from</span> <span class="st">'dayjs'</span><span class="op">;</span></span>
+<span id="cb3-15"><a aria-hidden="true" href="#cb3-15" tabindex="-1"></a><span class="im">import</span> <span class="st">'dayjs/locale/zh-cn'</span><span class="op">;</span></span>
+<span id="cb3-16"><a aria-hidden="true" href="#cb3-16" tabindex="-1"></a><span class="im">import</span> { themeStore } <span class="im">from</span> <span class="st">'@/stores/theme'</span><span class="op">;</span></span>
+<span id="cb3-17"><a aria-hidden="true" href="#cb3-17" tabindex="-1"></a></span>
+<span id="cb3-18"><a aria-hidden="true" href="#cb3-18" tabindex="-1"></a>dayjs<span class="op">.</span><span class="fu">locale</span>(<span class="st">'zh-cn'</span>)<span class="op">;</span></span>
+<span id="cb3-19"><a aria-hidden="true" href="#cb3-19" tabindex="-1"></a></span>
+<span id="cb3-20"><a aria-hidden="true" href="#cb3-20" tabindex="-1"></a><span class="co">// 国际化配置-默认中文</span></span>
+<span id="cb3-21"><a aria-hidden="true" href="#cb3-21" tabindex="-1"></a><span class="kw">const</span> locale <span class="op">=</span> <span class="fu">ref</span>(zhCN)<span class="op">;</span></span>
+<span id="cb3-22"><a aria-hidden="true" href="#cb3-22" tabindex="-1"></a><span class="kw">const</span> $router <span class="op">=</span> <span class="fu">useRouter</span>()<span class="op">;</span></span>
+<span id="cb3-23"><a aria-hidden="true" href="#cb3-23" tabindex="-1"></a><span class="kw">const</span> themeState <span class="op">=</span> <span class="fu">themeStore</span>()<span class="op">;</span></span>
+<span id="cb3-24"><a aria-hidden="true" href="#cb3-24" tabindex="-1"></a></span>
+<span id="cb3-25"><a aria-hidden="true" href="#cb3-25" tabindex="-1"></a><span class="kw">let</span> timer <span class="op">=</span> <span class="fu">reactive</span>(<span class="kw">null</span>)</span>
+<span id="cb3-26"><a aria-hidden="true" href="#cb3-26" tabindex="-1"></a></span>
+<span id="cb3-27"><a aria-hidden="true" href="#cb3-27" tabindex="-1"></a><span class="fu">onMounted</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb3-28"><a aria-hidden="true" href="#cb3-28" tabindex="-1"></a>  <span class="co">// 初始化主题色</span></span>
+<span id="cb3-29"><a aria-hidden="true" href="#cb3-29" tabindex="-1"></a>  themeState<span class="op">.</span><span class="at">getTheme</span> <span class="op">&amp;&amp;</span> themeState<span class="op">.</span><span class="fu">getTheme</span>(<span class="st">'themeColor'</span>)<span class="op">;</span></span>
+<span id="cb3-30"><a aria-hidden="true" href="#cb3-30" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb3-31"><a aria-hidden="true" href="#cb3-31" tabindex="-1"></a></span>
+<span id="cb3-32"><a aria-hidden="true" href="#cb3-32" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>3、Stores 部分</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="co">// src/stores/index.js</span></span>
+<span id="cb4-2"><a aria-hidden="true" href="#cb4-2" tabindex="-1"></a><span class="im">import</span> { createPinia<span class="op">,</span> } <span class="im">from</span> <span class="st">'pinia'</span><span class="op">;</span></span>
+<span id="cb4-3"><a aria-hidden="true" href="#cb4-3" tabindex="-1"></a></span>
+<span id="cb4-4"><a aria-hidden="true" href="#cb4-4" tabindex="-1"></a><span class="kw">const</span> pinia <span class="op">=</span> <span class="fu">createPinia</span>()</span>
+<span id="cb4-5"><a aria-hidden="true" href="#cb4-5" tabindex="-1"></a></span>
+<span id="cb4-6"><a aria-hidden="true" href="#cb4-6" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> pinia<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a aria-hidden="true" href="#cb5-1" tabindex="-1"></a><span class="co">// src/stores/theme.js</span></span>
+<span id="cb5-2"><a aria-hidden="true" href="#cb5-2" tabindex="-1"></a><span class="im">import</span> { defineStore } <span class="im">from</span> <span class="st">'pinia'</span></span>
+<span id="cb5-3"><a aria-hidden="true" href="#cb5-3" tabindex="-1"></a><span class="im">import</span> {setStorage<span class="op">,</span> getStorage} <span class="im">from</span> <span class="st">"@/utils/util"</span><span class="op">;</span></span>
+<span id="cb5-4"><a aria-hidden="true" href="#cb5-4" tabindex="-1"></a></span>
+<span id="cb5-5"><a aria-hidden="true" href="#cb5-5" tabindex="-1"></a><span class="im">export</span> <span class="kw">const</span> themeStore <span class="op">=</span> <span class="fu">defineStore</span>(<span class="st">'theme'</span><span class="op">,</span>{</span>
+<span id="cb5-6"><a aria-hidden="true" href="#cb5-6" tabindex="-1"></a>    <span class="dt">state</span><span class="op">:</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb5-7"><a aria-hidden="true" href="#cb5-7" tabindex="-1"></a>        <span class="cf">return</span> {</span>
+<span id="cb5-8"><a aria-hidden="true" href="#cb5-8" tabindex="-1"></a>            <span class="dt">currTheme</span><span class="op">:</span> <span class="st">"默认"</span><span class="op">,</span> <span class="co">// 当前主题</span></span>
+<span id="cb5-9"><a aria-hidden="true" href="#cb5-9" tabindex="-1"></a>            <span class="dt">themes</span><span class="op">:</span> {</span>
+<span id="cb5-10"><a aria-hidden="true" href="#cb5-10" tabindex="-1"></a>                <span class="st">"默认"</span><span class="op">:</span> {</span>
+<span id="cb5-11"><a aria-hidden="true" href="#cb5-11" tabindex="-1"></a>                    <span class="dt">themeColor1</span><span class="op">:</span> <span class="st">'#4A51FF'</span><span class="op">,</span></span>
+<span id="cb5-12"><a aria-hidden="true" href="#cb5-12" tabindex="-1"></a>                    <span class="dt">themeColor2</span><span class="op">:</span> <span class="st">'#4A51FF'</span><span class="op">,</span></span>
+<span id="cb5-13"><a aria-hidden="true" href="#cb5-13" tabindex="-1"></a>                    <span class="dt">themeColor7</span><span class="op">:</span> <span class="st">'#4A51FF'</span><span class="op">,</span> <span class="co">//</span></span>
+<span id="cb5-14"><a aria-hidden="true" href="#cb5-14" tabindex="-1"></a>                    <span class="dt">textColor1</span><span class="op">:</span> <span class="st">'#181818'</span><span class="op">,</span></span>
+<span id="cb5-15"><a aria-hidden="true" href="#cb5-15" tabindex="-1"></a>                    <span class="dt">textColor2</span><span class="op">:</span> <span class="st">'#555555'</span><span class="op">,</span></span>
+<span id="cb5-16"><a aria-hidden="true" href="#cb5-16" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb5-17"><a aria-hidden="true" href="#cb5-17" tabindex="-1"></a>                <span class="st">"海盐蓝"</span><span class="op">:</span> {</span>
+<span id="cb5-18"><a aria-hidden="true" href="#cb5-18" tabindex="-1"></a>                    <span class="dt">themeColor1</span><span class="op">:</span> <span class="st">'#4691C8'</span><span class="op">,</span></span>
+<span id="cb5-19"><a aria-hidden="true" href="#cb5-19" tabindex="-1"></a>                    <span class="dt">themeColor2</span><span class="op">:</span> <span class="st">'#4691C8'</span><span class="op">,</span></span>
+<span id="cb5-20"><a aria-hidden="true" href="#cb5-20" tabindex="-1"></a>                    <span class="dt">themeColor7</span><span class="op">:</span> <span class="st">'#4691C8'</span><span class="op">,</span> <span class="co">//</span></span>
+<span id="cb5-21"><a aria-hidden="true" href="#cb5-21" tabindex="-1"></a>                    <span class="dt">textColor1</span><span class="op">:</span> <span class="st">'#181818'</span><span class="op">,</span></span>
+<span id="cb5-22"><a aria-hidden="true" href="#cb5-22" tabindex="-1"></a>                    <span class="dt">textColor2</span><span class="op">:</span> <span class="st">'#555555'</span><span class="op">,</span></span>
+<span id="cb5-23"><a aria-hidden="true" href="#cb5-23" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb5-24"><a aria-hidden="true" href="#cb5-24" tabindex="-1"></a>                <span class="st">"翠竹绿"</span><span class="op">:</span> {</span>
+<span id="cb5-25"><a aria-hidden="true" href="#cb5-25" tabindex="-1"></a>                    <span class="dt">themeColor1</span><span class="op">:</span> <span class="st">'#347B45'</span><span class="op">,</span></span>
+<span id="cb5-26"><a aria-hidden="true" href="#cb5-26" tabindex="-1"></a>                    <span class="dt">themeColor2</span><span class="op">:</span> <span class="st">'#347B45'</span><span class="op">,</span></span>
+<span id="cb5-27"><a aria-hidden="true" href="#cb5-27" tabindex="-1"></a>                    <span class="dt">themeColor7</span><span class="op">:</span> <span class="st">'#347B45'</span><span class="op">,</span> <span class="co">//</span></span>
+<span id="cb5-28"><a aria-hidden="true" href="#cb5-28" tabindex="-1"></a>                    <span class="dt">textColor1</span><span class="op">:</span> <span class="st">'#181818'</span><span class="op">,</span></span>
+<span id="cb5-29"><a aria-hidden="true" href="#cb5-29" tabindex="-1"></a>                    <span class="dt">textColor2</span><span class="op">:</span> <span class="st">'#555555'</span><span class="op">,</span></span>
+<span id="cb5-30"><a aria-hidden="true" href="#cb5-30" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb5-31"><a aria-hidden="true" href="#cb5-31" tabindex="-1"></a>                <span class="st">"魅力紫"</span><span class="op">:</span> {</span>
+<span id="cb5-32"><a aria-hidden="true" href="#cb5-32" tabindex="-1"></a>                    <span class="dt">themeColor1</span><span class="op">:</span> <span class="st">'#6837C9'</span><span class="op">,</span></span>
+<span id="cb5-33"><a aria-hidden="true" href="#cb5-33" tabindex="-1"></a>                    <span class="dt">themeColor2</span><span class="op">:</span> <span class="st">'#6837C9'</span><span class="op">,</span></span>
+<span id="cb5-34"><a aria-hidden="true" href="#cb5-34" tabindex="-1"></a>                    <span class="dt">themeColor7</span><span class="op">:</span> <span class="st">'#6837C9'</span><span class="op">,</span> <span class="co">//</span></span>
+<span id="cb5-35"><a aria-hidden="true" href="#cb5-35" tabindex="-1"></a>                    <span class="dt">textColor1</span><span class="op">:</span> <span class="st">'#181818'</span><span class="op">,</span></span>
+<span id="cb5-36"><a aria-hidden="true" href="#cb5-36" tabindex="-1"></a>                    <span class="dt">textColor2</span><span class="op">:</span> <span class="st">'#555555'</span><span class="op">,</span></span>
+<span id="cb5-37"><a aria-hidden="true" href="#cb5-37" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb5-38"><a aria-hidden="true" href="#cb5-38" tabindex="-1"></a>            }</span>
+<span id="cb5-39"><a aria-hidden="true" href="#cb5-39" tabindex="-1"></a>        }</span>
+<span id="cb5-40"><a aria-hidden="true" href="#cb5-40" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb5-41"><a aria-hidden="true" href="#cb5-41" tabindex="-1"></a>    <span class="dt">persist</span><span class="op">:</span> {</span>
+<span id="cb5-42"><a aria-hidden="true" href="#cb5-42" tabindex="-1"></a>        <span class="dt">enabled</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb5-43"><a aria-hidden="true" href="#cb5-43" tabindex="-1"></a>        <span class="co">// 自定义持久化参数</span></span>
+<span id="cb5-44"><a aria-hidden="true" href="#cb5-44" tabindex="-1"></a>        <span class="dt">strategies</span><span class="op">:</span> [</span>
+<span id="cb5-45"><a aria-hidden="true" href="#cb5-45" tabindex="-1"></a>            {</span>
+<span id="cb5-46"><a aria-hidden="true" href="#cb5-46" tabindex="-1"></a>                <span class="co">// 自定义key</span></span>
+<span id="cb5-47"><a aria-hidden="true" href="#cb5-47" tabindex="-1"></a>                <span class="dt">key</span><span class="op">:</span> <span class="st">'theme'</span><span class="op">,</span></span>
+<span id="cb5-48"><a aria-hidden="true" href="#cb5-48" tabindex="-1"></a>                <span class="co">// 自定义存储方式，默认sessionStorage</span></span>
+<span id="cb5-49"><a aria-hidden="true" href="#cb5-49" tabindex="-1"></a>                <span class="dt">storage</span><span class="op">:</span> localStorage<span class="op">,</span> <span class="co">// localStorage,</span></span>
+<span id="cb5-50"><a aria-hidden="true" href="#cb5-50" tabindex="-1"></a>                <span class="co">// 指定要持久化的数据，默认所有 state 都会进行缓存，可以通过 paths 指定要持久化的字段，其他的则不会进行持久化。</span></span>
+<span id="cb5-51"><a aria-hidden="true" href="#cb5-51" tabindex="-1"></a>                <span class="dt">paths</span><span class="op">:</span> [<span class="st">'currTheme'</span><span class="op">,</span> <span class="st">'themes'</span>]</span>
+<span id="cb5-52"><a aria-hidden="true" href="#cb5-52" tabindex="-1"></a>            }</span>
+<span id="cb5-53"><a aria-hidden="true" href="#cb5-53" tabindex="-1"></a>        ]</span>
+<span id="cb5-54"><a aria-hidden="true" href="#cb5-54" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb5-55"><a aria-hidden="true" href="#cb5-55" tabindex="-1"></a>    <span class="co">// 相当于计算属性(有数据缓存)</span></span>
+<span id="cb5-56"><a aria-hidden="true" href="#cb5-56" tabindex="-1"></a>    <span class="dt">getters</span><span class="op">:</span> {</span>
+<span id="cb5-57"><a aria-hidden="true" href="#cb5-57" tabindex="-1"></a>        <span class="fu">getThemes</span>(state){</span>
+<span id="cb5-58"><a aria-hidden="true" href="#cb5-58" tabindex="-1"></a>            <span class="cf">return</span> state<span class="op">.</span><span class="at">themes</span></span>
+<span id="cb5-59"><a aria-hidden="true" href="#cb5-59" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb5-60"><a aria-hidden="true" href="#cb5-60" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb5-61"><a aria-hidden="true" href="#cb5-61" tabindex="-1"></a>    <span class="co">// actions即可以是同步函数也可以是异步函数</span></span>
+<span id="cb5-62"><a aria-hidden="true" href="#cb5-62" tabindex="-1"></a>    <span class="dt">actions</span><span class="op">:</span> {</span>
+<span id="cb5-63"><a aria-hidden="true" href="#cb5-63" tabindex="-1"></a>        <span class="co">// 切换主题</span></span>
+<span id="cb5-64"><a aria-hidden="true" href="#cb5-64" tabindex="-1"></a>        <span class="fu">changeStyle</span> (obj) {</span>
+<span id="cb5-65"><a aria-hidden="true" href="#cb5-65" tabindex="-1"></a>            <span class="cf">for</span> (<span class="kw">let</span> key <span class="kw">in</span> obj) {</span>
+<span id="cb5-66"><a aria-hidden="true" href="#cb5-66" tabindex="-1"></a>                <span class="bu">document</span><span class="op">.</span><span class="fu">getElementsByTagName</span>(<span class="st">"body"</span>)[<span class="dv">0</span>]<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="fu">setProperty</span>(<span class="vs">`--</span><span class="sc">${</span>key<span class="sc">}</span><span class="vs">`</span><span class="op">,</span> obj[key])<span class="op">;</span></span>
+<span id="cb5-67"><a aria-hidden="true" href="#cb5-67" tabindex="-1"></a>            }</span>
+<span id="cb5-68"><a aria-hidden="true" href="#cb5-68" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb5-69"><a aria-hidden="true" href="#cb5-69" tabindex="-1"></a>        <span class="fu">setThemeColor</span> (themeName){</span>
+<span id="cb5-70"><a aria-hidden="true" href="#cb5-70" tabindex="-1"></a>            <span class="kw">let</span> { showLock<span class="op">,</span> currTheme<span class="op">,</span> sideCollapsed<span class="op">,</span> themes } <span class="op">=</span> <span class="kw">this</span><span class="op">;</span></span>
+<span id="cb5-71"><a aria-hidden="true" href="#cb5-71" tabindex="-1"></a>            <span class="kw">let</span> theme <span class="op">=</span> { showLock<span class="op">,</span> currTheme<span class="op">,</span> sideCollapsed<span class="op">,</span> themes }</span>
+<span id="cb5-72"><a aria-hidden="true" href="#cb5-72" tabindex="-1"></a>            <span class="fu">setStorage</span>(<span class="st">"theme"</span><span class="op">,</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">stringify</span>(theme))<span class="op">;</span></span>
+<span id="cb5-73"><a aria-hidden="true" href="#cb5-73" tabindex="-1"></a>            <span class="kw">const</span> themeConfig <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">getThemes</span>[themeName]<span class="op">;</span></span>
+<span id="cb5-74"><a aria-hidden="true" href="#cb5-74" tabindex="-1"></a>            <span class="kw">let</span> themeInfo <span class="op">=</span> {}<span class="op">;</span></span>
+<span id="cb5-75"><a aria-hidden="true" href="#cb5-75" tabindex="-1"></a>            <span class="cf">if</span>(<span class="fu">getStorage</span>(<span class="st">"theme"</span>)) {</span>
+<span id="cb5-76"><a aria-hidden="true" href="#cb5-76" tabindex="-1"></a>                themeInfo <span class="op">=</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">parse</span>(<span class="fu">getStorage</span>(<span class="st">"theme"</span>))<span class="op">;</span></span>
+<span id="cb5-77"><a aria-hidden="true" href="#cb5-77" tabindex="-1"></a>            }</span>
+<span id="cb5-78"><a aria-hidden="true" href="#cb5-78" tabindex="-1"></a>            <span class="co">// 如果有主题名称，那么则采用我们定义的主题</span></span>
+<span id="cb5-79"><a aria-hidden="true" href="#cb5-79" tabindex="-1"></a>            <span class="cf">if</span> (themeConfig) { <span class="co">// 保存主题色到本地</span></span>
+<span id="cb5-80"><a aria-hidden="true" href="#cb5-80" tabindex="-1"></a>                <span class="kw">this</span><span class="op">.</span><span class="fu">changeStyle</span>(themeConfig)<span class="op">;</span> <span class="co">// 改变样式</span></span>
+<span id="cb5-81"><a aria-hidden="true" href="#cb5-81" tabindex="-1"></a>            } <span class="cf">else</span> {</span>
+<span id="cb5-82"><a aria-hidden="true" href="#cb5-82" tabindex="-1"></a>                <span class="kw">this</span><span class="op">.</span><span class="fu">changeStyle</span>(themeInfo<span class="op">.</span><span class="at">themes</span>)<span class="op">;</span> <span class="co">// 改变样式</span></span>
+<span id="cb5-83"><a aria-hidden="true" href="#cb5-83" tabindex="-1"></a>            }</span>
+<span id="cb5-84"><a aria-hidden="true" href="#cb5-84" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb5-85"><a aria-hidden="true" href="#cb5-85" tabindex="-1"></a>        <span class="fu">setTheme</span> ( theme<span class="op">,</span> type ){</span>
+<span id="cb5-86"><a aria-hidden="true" href="#cb5-86" tabindex="-1"></a>            <span class="cf">if</span> (type <span class="op">===</span> <span class="st">'themeColor'</span>) {</span>
+<span id="cb5-87"><a aria-hidden="true" href="#cb5-87" tabindex="-1"></a>                <span class="kw">this</span><span class="op">.</span><span class="fu">setThemeColor</span>(theme)<span class="op">;</span></span>
+<span id="cb5-88"><a aria-hidden="true" href="#cb5-88" tabindex="-1"></a>            } <span class="cf">else</span> <span class="cf">if</span> (type <span class="op">===</span> <span class="st">'FontFamily'</span>) {</span>
+<span id="cb5-89"><a aria-hidden="true" href="#cb5-89" tabindex="-1"></a>                <span class="kw">this</span><span class="op">.</span><span class="fu">setFontFamily</span>(theme)<span class="op">;</span></span>
+<span id="cb5-90"><a aria-hidden="true" href="#cb5-90" tabindex="-1"></a>            }</span>
+<span id="cb5-91"><a aria-hidden="true" href="#cb5-91" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb5-92"><a aria-hidden="true" href="#cb5-92" tabindex="-1"></a>        <span class="fu">getTheme</span> (type){</span>
+<span id="cb5-93"><a aria-hidden="true" href="#cb5-93" tabindex="-1"></a>            <span class="kw">let</span> { currTheme } <span class="op">=</span> <span class="kw">this</span><span class="op">;</span></span>
+<span id="cb5-94"><a aria-hidden="true" href="#cb5-94" tabindex="-1"></a>            <span class="cf">if</span> (type <span class="op">===</span> <span class="st">'themeColor'</span>) {</span>
+<span id="cb5-95"><a aria-hidden="true" href="#cb5-95" tabindex="-1"></a>                <span class="cf">if</span>(<span class="fu">getStorage</span>(<span class="st">"theme"</span>)) {</span>
+<span id="cb5-96"><a aria-hidden="true" href="#cb5-96" tabindex="-1"></a>                    <span class="kw">let</span> themeInfo <span class="op">=</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">parse</span>(<span class="fu">getStorage</span>(<span class="st">"theme"</span>))<span class="op">;</span></span>
+<span id="cb5-97"><a aria-hidden="true" href="#cb5-97" tabindex="-1"></a>                    <span class="kw">this</span><span class="op">.</span><span class="fu">setThemeColor</span>(themeInfo<span class="op">.</span><span class="at">currTheme</span>)<span class="op">;</span></span>
+<span id="cb5-98"><a aria-hidden="true" href="#cb5-98" tabindex="-1"></a>                } <span class="cf">else</span> {</span>
+<span id="cb5-99"><a aria-hidden="true" href="#cb5-99" tabindex="-1"></a>                    <span class="kw">this</span><span class="op">.</span><span class="fu">setThemeColor</span>(currTheme)<span class="op">;</span></span>
+<span id="cb5-100"><a aria-hidden="true" href="#cb5-100" tabindex="-1"></a>                }</span>
+<span id="cb5-101"><a aria-hidden="true" href="#cb5-101" tabindex="-1"></a></span>
+<span id="cb5-102"><a aria-hidden="true" href="#cb5-102" tabindex="-1"></a>            } <span class="cf">else</span> <span class="cf">if</span> (type <span class="op">===</span> <span class="st">'FontFamily'</span>) {</span>
+<span id="cb5-103"><a aria-hidden="true" href="#cb5-103" tabindex="-1"></a>                <span class="kw">let</span> FontFamily <span class="op">=</span> <span class="fu">getStorage</span>(<span class="st">"FontFamily"</span>)<span class="op">;</span></span>
+<span id="cb5-104"><a aria-hidden="true" href="#cb5-104" tabindex="-1"></a>                <span class="kw">this</span><span class="op">.</span><span class="fu">setFontFamily</span>(FontFamily)<span class="op">;</span></span>
+<span id="cb5-105"><a aria-hidden="true" href="#cb5-105" tabindex="-1"></a>            }</span>
+<span id="cb5-106"><a aria-hidden="true" href="#cb5-106" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb5-107"><a aria-hidden="true" href="#cb5-107" tabindex="-1"></a>    }</span>
+<span id="cb5-108"><a aria-hidden="true" href="#cb5-108" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<p>4、页面使用</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a aria-hidden="true" href="#cb6-1" tabindex="-1"></a>// header.vue</span>
+<span id="cb6-2"><a aria-hidden="true" href="#cb6-2" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">template</span><span class="dt">&gt;</span></span>
+<span id="cb6-3"><a aria-hidden="true" href="#cb6-3" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"headerCompView"</span><span class="dt">&gt;</span></span>
+<span id="cb6-4"><a aria-hidden="true" href="#cb6-4" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"header-left"</span><span class="dt">&gt;</span></span>
+<span id="cb6-5"><a aria-hidden="true" href="#cb6-5" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">slot</span><span class="ot"> name</span><span class="op">=</span><span class="st">"left"</span><span class="dt">&gt;&lt;/</span><span class="kw">slot</span><span class="dt">&gt;</span></span>
+<span id="cb6-6"><a aria-hidden="true" href="#cb6-6" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb6-7"><a aria-hidden="true" href="#cb6-7" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"header-right"</span><span class="dt">&gt;</span></span>
+<span id="cb6-8"><a aria-hidden="true" href="#cb6-8" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"theme-list"</span><span class="dt">&gt;</span></span>
+<span id="cb6-9"><a aria-hidden="true" href="#cb6-9" tabindex="-1"></a>              <span class="dt">&lt;</span><span class="kw">a-popover</span><span class="ot"> placement</span><span class="op">=</span><span class="st">"bottom"</span><span class="ot"> trigger</span><span class="op">=</span><span class="st">"click"</span><span class="ot"> overlayClassName</span><span class="op">=</span><span class="st">"themeUserPop"</span><span class="ot"> :overlayInnerStyle</span><span class="op">=</span><span class="st">"{width: '230px'}"</span><span class="dt">&gt;</span></span>
+<span id="cb6-10"><a aria-hidden="true" href="#cb6-10" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">template</span><span class="ot"> #content</span><span class="dt">&gt;</span></span>
+<span id="cb6-11"><a aria-hidden="true" href="#cb6-11" tabindex="-1"></a>                  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"theme-item"</span><span class="ot"> v-for</span><span class="op">=</span><span class="st">"(item, index) in themeOptions"</span><span class="ot"> :key</span><span class="op">=</span><span class="st">"index"</span><span class="ot"> </span><span class="er">@</span><span class="ot">click</span><span class="op">=</span><span class="st">"onPressTheme(item.name)"</span></span>
+<span id="cb6-12"><a aria-hidden="true" href="#cb6-12" tabindex="-1"></a><span class="ot">                       :style</span><span class="op">=</span><span class="st">"{color: item.name === currentThemeName ? '#4A51FF' : ''}"</span><span class="ot"> </span><span class="dt">&gt;</span></span>
+<span id="cb6-13"><a aria-hidden="true" href="#cb6-13" tabindex="-1"></a>                    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"item-left"</span><span class="dt">&gt;</span></span>
+<span id="cb6-14"><a aria-hidden="true" href="#cb6-14" tabindex="-1"></a>                      <span class="dt">&lt;</span><span class="kw">a-tag</span><span class="ot"> :color</span><span class="op">=</span><span class="st">"item.data.themeColor1"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"height: 20px; width: 20px;"</span><span class="dt">&gt;&lt;/</span><span class="kw">a-tag</span><span class="dt">&gt;</span></span>
+<span id="cb6-15"><a aria-hidden="true" href="#cb6-15" tabindex="-1"></a>                      <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"title"</span><span class="dt">&gt;</span> {{item.name}} <span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb6-16"><a aria-hidden="true" href="#cb6-16" tabindex="-1"></a>                    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb6-17"><a aria-hidden="true" href="#cb6-17" tabindex="-1"></a>                    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"item-right"</span><span class="dt">&gt;</span></span>
+<span id="cb6-18"><a aria-hidden="true" href="#cb6-18" tabindex="-1"></a>                      <span class="dt">&lt;</span><span class="kw">CheckOutlined</span><span class="ot"> v-if</span><span class="op">=</span><span class="st">"item.name === currentThemeName"</span><span class="ot"> :style</span><span class="op">=</span><span class="st">"{color: item.data.themeColor1 ? item.data.themeColor1 : ''}"</span><span class="dt">/&gt;</span></span>
+<span id="cb6-19"><a aria-hidden="true" href="#cb6-19" tabindex="-1"></a>                    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb6-20"><a aria-hidden="true" href="#cb6-20" tabindex="-1"></a>                  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb6-21"><a aria-hidden="true" href="#cb6-21" tabindex="-1"></a>                <span class="dt">&lt;/</span><span class="kw">template</span><span class="dt">&gt;</span></span>
+<span id="cb6-22"><a aria-hidden="true" href="#cb6-22" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"theme-options"</span><span class="dt">&gt;</span></span>
+<span id="cb6-23"><a aria-hidden="true" href="#cb6-23" tabindex="-1"></a>                  <span class="dt">&lt;</span><span class="kw">BgColorsOutlined</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb6-24"><a aria-hidden="true" href="#cb6-24" tabindex="-1"></a>                  <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> style</span><span class="op">=</span><span class="st">"margin-left: 10px;"</span><span class="dt">&gt;</span>切换主题<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb6-25"><a aria-hidden="true" href="#cb6-25" tabindex="-1"></a>                <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb6-26"><a aria-hidden="true" href="#cb6-26" tabindex="-1"></a>              <span class="dt">&lt;/</span><span class="kw">a-popover</span><span class="dt">&gt;</span></span>
+<span id="cb6-27"><a aria-hidden="true" href="#cb6-27" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb6-28"><a aria-hidden="true" href="#cb6-28" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb6-29"><a aria-hidden="true" href="#cb6-29" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb6-30"><a aria-hidden="true" href="#cb6-30" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">template</span><span class="dt">&gt;</span></span>
+<span id="cb6-31"><a aria-hidden="true" href="#cb6-31" tabindex="-1"></a></span>
+<span id="cb6-32"><a aria-hidden="true" href="#cb6-32" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> setup</span><span class="dt">&gt;</span></span>
+<span id="cb6-33"><a aria-hidden="true" href="#cb6-33" tabindex="-1"></a><span class="im">import</span> { ref<span class="op">,</span> onMounted } <span class="im">from</span> <span class="st">'vue'</span><span class="op">;</span></span>
+<span id="cb6-34"><a aria-hidden="true" href="#cb6-34" tabindex="-1"></a><span class="im">import</span> {themeStore} <span class="im">from</span> <span class="st">"@/stores/theme"</span></span>
+<span id="cb6-35"><a aria-hidden="true" href="#cb6-35" tabindex="-1"></a></span>
+<span id="cb6-36"><a aria-hidden="true" href="#cb6-36" tabindex="-1"></a><span class="kw">const</span> $router <span class="op">=</span> <span class="fu">useRouter</span>()<span class="op">;</span></span>
+<span id="cb6-37"><a aria-hidden="true" href="#cb6-37" tabindex="-1"></a><span class="kw">const</span> themeState <span class="op">=</span> <span class="fu">themeStore</span>()<span class="op">;</span> </span>
+<span id="cb6-38"><a aria-hidden="true" href="#cb6-38" tabindex="-1"></a></span>
+<span id="cb6-39"><a aria-hidden="true" href="#cb6-39" tabindex="-1"></a><span class="kw">let</span> themeOptions <span class="op">=</span> <span class="fu">ref</span>([])<span class="op">;</span></span>
+<span id="cb6-40"><a aria-hidden="true" href="#cb6-40" tabindex="-1"></a><span class="kw">let</span> currentThemeName <span class="op">=</span> <span class="fu">ref</span>(<span class="st">"默认"</span>)<span class="op">;</span></span>
+<span id="cb6-41"><a aria-hidden="true" href="#cb6-41" tabindex="-1"></a></span>
+<span id="cb6-42"><a aria-hidden="true" href="#cb6-42" tabindex="-1"></a><span class="fu">onMounted</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb6-43"><a aria-hidden="true" href="#cb6-43" tabindex="-1"></a>  collapsed<span class="op">.</span><span class="at">value</span> <span class="op">=</span> props<span class="op">.</span><span class="at">collapsedStatus</span><span class="op">;</span></span>
+<span id="cb6-44"><a aria-hidden="true" href="#cb6-44" tabindex="-1"></a>  <span class="fu">initTheme</span>()<span class="op">;</span></span>
+<span id="cb6-45"><a aria-hidden="true" href="#cb6-45" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb6-46"><a aria-hidden="true" href="#cb6-46" tabindex="-1"></a></span>
+<span id="cb6-47"><a aria-hidden="true" href="#cb6-47" tabindex="-1"></a><span class="co">// 初始化主题</span></span>
+<span id="cb6-48"><a aria-hidden="true" href="#cb6-48" tabindex="-1"></a><span class="kw">const</span> initTheme <span class="op">=</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb6-49"><a aria-hidden="true" href="#cb6-49" tabindex="-1"></a>  <span class="kw">let</span> arr <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb6-50"><a aria-hidden="true" href="#cb6-50" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">let</span> index <span class="kw">in</span> themeState<span class="op">.</span><span class="at">themes</span>) {</span>
+<span id="cb6-51"><a aria-hidden="true" href="#cb6-51" tabindex="-1"></a>    <span class="kw">let</span> item <span class="op">=</span> {</span>
+<span id="cb6-52"><a aria-hidden="true" href="#cb6-52" tabindex="-1"></a>      <span class="dt">name</span><span class="op">:</span> index<span class="op">,</span></span>
+<span id="cb6-53"><a aria-hidden="true" href="#cb6-53" tabindex="-1"></a>      <span class="dt">data</span><span class="op">:</span> themeState<span class="op">.</span><span class="at">themes</span>[index]<span class="op">,</span></span>
+<span id="cb6-54"><a aria-hidden="true" href="#cb6-54" tabindex="-1"></a>    }</span>
+<span id="cb6-55"><a aria-hidden="true" href="#cb6-55" tabindex="-1"></a>    arr<span class="op">.</span><span class="fu">push</span>(item)</span>
+<span id="cb6-56"><a aria-hidden="true" href="#cb6-56" tabindex="-1"></a>  }</span>
+<span id="cb6-57"><a aria-hidden="true" href="#cb6-57" tabindex="-1"></a>  themeOptions<span class="op">.</span><span class="at">value</span> <span class="op">=</span> arr<span class="op">;</span></span>
+<span id="cb6-58"><a aria-hidden="true" href="#cb6-58" tabindex="-1"></a>  currentThemeName<span class="op">.</span><span class="at">value</span> <span class="op">=</span> localStorage<span class="op">.</span><span class="fu">getItem</span>(<span class="st">'themeName'</span>)<span class="op">;</span></span>
+<span id="cb6-59"><a aria-hidden="true" href="#cb6-59" tabindex="-1"></a>}</span>
+<span id="cb6-60"><a aria-hidden="true" href="#cb6-60" tabindex="-1"></a></span>
+<span id="cb6-61"><a aria-hidden="true" href="#cb6-61" tabindex="-1"></a><span class="co">// 设置主题</span></span>
+<span id="cb6-62"><a aria-hidden="true" href="#cb6-62" tabindex="-1"></a><span class="kw">const</span> onPressTheme <span class="op">=</span> (e) <span class="kw">=&gt;</span>{</span>
+<span id="cb6-63"><a aria-hidden="true" href="#cb6-63" tabindex="-1"></a>  themeState<span class="op">.</span><span class="at">currTheme</span> <span class="op">=</span> e<span class="op">;</span></span>
+<span id="cb6-64"><a aria-hidden="true" href="#cb6-64" tabindex="-1"></a>  <span class="co">// console.log("themeState.currTheme", themeState.currTheme);</span></span>
+<span id="cb6-65"><a aria-hidden="true" href="#cb6-65" tabindex="-1"></a>  themeState<span class="op">.</span><span class="fu">setTheme</span>(e<span class="op">,</span> <span class="st">'themeColor'</span>)<span class="op">;</span></span>
+<span id="cb6-66"><a aria-hidden="true" href="#cb6-66" tabindex="-1"></a>  currentThemeName<span class="op">.</span><span class="at">value</span> <span class="op">=</span> e<span class="op">;</span></span>
+<span id="cb6-67"><a aria-hidden="true" href="#cb6-67" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb6-68"><a aria-hidden="true" href="#cb6-68" tabindex="-1"></a></span>
+<span id="cb6-69"><a aria-hidden="true" href="#cb6-69" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb6-70"><a aria-hidden="true" href="#cb6-70" tabindex="-1"></a></span>
+<span id="cb6-71"><a aria-hidden="true" href="#cb6-71" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">style</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"less"</span><span class="ot"> scoped</span><span class="dt">&gt;</span></span>
+<span id="cb6-72"><a aria-hidden="true" href="#cb6-72" tabindex="-1"></a><span class="im">@import</span> <span class="fu">(</span><span class="dv">reference</span><span class="fu">)</span> <span class="st">"@/utils/common"</span><span class="op">;</span></span>
+<span id="cb6-73"><a aria-hidden="true" href="#cb6-73" tabindex="-1"></a></span>
+<span id="cb6-74"><a aria-hidden="true" href="#cb6-74" tabindex="-1"></a><span class="fu">.themeUserPop</span>{</span>
+<span id="cb6-75"><a aria-hidden="true" href="#cb6-75" tabindex="-1"></a>  <span class="fu">.theme-item</span>{</span>
+<span id="cb6-76"><a aria-hidden="true" href="#cb6-76" tabindex="-1"></a>    <span class="kw">height</span><span class="ch">:</span> <span class="dv">40</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-77"><a aria-hidden="true" href="#cb6-77" tabindex="-1"></a>    <span class="kw">cursor</span><span class="ch">:</span> <span class="dv">pointer</span><span class="op">;</span></span>
+<span id="cb6-78"><a aria-hidden="true" href="#cb6-78" tabindex="-1"></a>    <span class="kw">display</span><span class="ch">:</span> <span class="dv">flex</span><span class="op">;</span></span>
+<span id="cb6-79"><a aria-hidden="true" href="#cb6-79" tabindex="-1"></a>    <span class="kw">justify-content</span><span class="ch">:</span> <span class="dv">space-between</span><span class="op">;</span></span>
+<span id="cb6-80"><a aria-hidden="true" href="#cb6-80" tabindex="-1"></a>    <span class="kw">align-items</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb6-81"><a aria-hidden="true" href="#cb6-81" tabindex="-1"></a>    <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">500</span><span class="op">;</span></span>
+<span id="cb6-82"><a aria-hidden="true" href="#cb6-82" tabindex="-1"></a>    <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">16</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-83"><a aria-hidden="true" href="#cb6-83" tabindex="-1"></a>    <span class="kw">border-bottom</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">px</span> <span class="dv">dashed</span> <span class="cn">#EFF1F5</span><span class="op">;</span></span>
+<span id="cb6-84"><a aria-hidden="true" href="#cb6-84" tabindex="-1"></a>    <span class="fu">.item-left</span>{</span>
+<span id="cb6-85"><a aria-hidden="true" href="#cb6-85" tabindex="-1"></a>      <span class="fu">.flexCenter</span>;</span>
+<span id="cb6-86"><a aria-hidden="true" href="#cb6-86" tabindex="-1"></a>      <span class="fu">.title</span>{</span>
+<span id="cb6-87"><a aria-hidden="true" href="#cb6-87" tabindex="-1"></a>        <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">14</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-88"><a aria-hidden="true" href="#cb6-88" tabindex="-1"></a>        <span class="kw">vertical-align</span><span class="ch">:</span> <span class="dv">middle</span><span class="op">;</span></span>
+<span id="cb6-89"><a aria-hidden="true" href="#cb6-89" tabindex="-1"></a>        <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-90"><a aria-hidden="true" href="#cb6-90" tabindex="-1"></a>      }</span>
+<span id="cb6-91"><a aria-hidden="true" href="#cb6-91" tabindex="-1"></a>    }</span>
+<span id="cb6-92"><a aria-hidden="true" href="#cb6-92" tabindex="-1"></a>  }</span>
+<span id="cb6-93"><a aria-hidden="true" href="#cb6-93" tabindex="-1"></a>  <span class="fu">.theme-item</span><span class="in">:hover</span>{</span>
+<span id="cb6-94"><a aria-hidden="true" href="#cb6-94" tabindex="-1"></a>    <span class="kw">color</span><span class="ch">:</span> <span class="cn">#4A51FF</span><span class="op">;</span></span>
+<span id="cb6-95"><a aria-hidden="true" href="#cb6-95" tabindex="-1"></a>  }</span>
+<span id="cb6-96"><a aria-hidden="true" href="#cb6-96" tabindex="-1"></a>}</span>
+<span id="cb6-97"><a aria-hidden="true" href="#cb6-97" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">style</span><span class="dt">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb7-1"><a aria-hidden="true" href="#cb7-1" tabindex="-1"></a><span class="er">// src/utils/common.less</span></span>
+<span id="cb7-2"><a aria-hidden="true" href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a aria-hidden="true" href="#cb7-3" tabindex="-1"></a>```</span>
+<span id="cb7-4"><a aria-hidden="true" href="#cb7-4" tabindex="-1"></a><span class="im">@theme</span>: <span class="fu">var(</span><span class="va">--themeColor1</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb7-5"><a aria-hidden="true" href="#cb7-5" tabindex="-1"></a><span class="er">// 默认的主题颜色</span></span>
+<span id="cb7-6"><a aria-hidden="true" href="#cb7-6" tabindex="-1"></a><span class="im">@themeColor1</span>: <span class="fu">var(</span><span class="va">--themeColor1</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb7-7"><a aria-hidden="true" href="#cb7-7" tabindex="-1"></a><span class="im">@themeColor2</span>: <span class="fu">var(</span><span class="va">--themeColor2</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb7-8"><a aria-hidden="true" href="#cb7-8" tabindex="-1"></a><span class="im">@themeColor3</span>: <span class="fu">var(</span><span class="va">--themeColor3</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb7-9"><a aria-hidden="true" href="#cb7-9" tabindex="-1"></a><span class="im">@themeColor4</span>: <span class="fu">var(</span><span class="va">--themeColor4</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb7-10"><a aria-hidden="true" href="#cb7-10" tabindex="-1"></a><span class="im">@themeColor5</span>: <span class="fu">var(</span><span class="va">--themeColor5</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb7-11"><a aria-hidden="true" href="#cb7-11" tabindex="-1"></a><span class="im">@themeColor6</span>: <span class="fu">var(</span><span class="va">--themeColor6</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb7-12"><a aria-hidden="true" href="#cb7-12" tabindex="-1"></a><span class="im">@themeColor7</span>: <span class="fu">var(</span><span class="va">--themeColor7</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb7-13"><a aria-hidden="true" href="#cb7-13" tabindex="-1"></a><span class="im">@textColor1</span>: <span class="fu">var(</span><span class="va">--textColor1</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb7-14"><a aria-hidden="true" href="#cb7-14" tabindex="-1"></a><span class="im">@textColor2</span>: <span class="fu">var(</span><span class="va">--textColor2</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb7-15"><a aria-hidden="true" href="#cb7-15" tabindex="-1"></a>```</span></code></pre></div>
+      </article>
+    </div>
   </body>
 </html>

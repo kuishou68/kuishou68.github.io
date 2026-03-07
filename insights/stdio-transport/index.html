@@ -1,71 +1,106 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="refresh" content="0; url=/en/archives/" />
-    <title>Article moved</title>
-    <style>
-      :root {
-        color-scheme: dark;
-        --bg: #0b1020;
-        --panel: rgba(10, 18, 38, 0.88);
-        --line: rgba(255, 255, 255, 0.12);
-        --text: #f6efe3;
-        --muted: #93a2bf;
-        --accent: #7ae7c7;
-      }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        background:
-          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
-          linear-gradient(180deg, #0b1020 0%, #050813 100%);
-        color: var(--text);
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        padding: 24px;
-      }
-      main {
-        width: min(640px, 100%);
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        background: var(--panel);
-        padding: 32px;
-        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
-      }
-      h1 {
-        margin: 0 0 12px;
-        font-size: clamp(28px, 4vw, 42px);
-      }
-      p {
-        margin: 0 0 18px;
-        color: var(--muted);
-        line-height: 1.7;
-      }
-      a {
-        color: #08111e;
-        background: var(--accent);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 12px 18px;
-        border-radius: 999px;
-        text-decoration: none;
-        font-weight: 700;
-      }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>为什么都爱用 stdio | CocoonBreak</title>
+    <meta name="description" content="从本地执行、权限边界、反馈链路解释为什么 Claude、Gemini、Codex 都偏爱 stdio。">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
   </head>
   <body>
-    <main>
-      <h1>Article moved</h1>
-      <p>This article has been folded into the rebuilt blog structure. You are being redirected to the new archive.</p>
-      <a href="/en/archives/">Continue</a>
-    </main>
-    <script>
-      window.location.replace("/en/archives/");
-    </script>
+    <div class="article-shell">
+      <nav class="insight-nav">
+        <a href="/">← 首页</a>
+        <a href="/insights/">专题列表</a>
+        <a href="https://juejin.cn/user/3817931570691031/posts" target="_blank" rel="noreferrer">掘金原文</a>
+      </nav>
+
+      <header class="article-hero" data-reveal>
+        <div class="article-meta">
+          <span>2026.03</span>
+          <span>stdio</span>
+          <span>CLI Transport</span>
+        </div>
+        <h1>为什么 <span>Claude / Gemini / Codex</span> 都偏爱 stdio 传输机制？</h1>
+        <p class="article-intro">
+          如果你最近在折腾各种 AI CLI，会发现一个高度重复的现象：很多工具和模型代理都喜欢用 stdio 进行通信。它看起来很“朴素”，但恰恰因为朴素，才适合本地 Agent 的第一现场。
+        </p>
+        <div class="article-note">
+          主题参考我近期在掘金发布的《为什么 Claude/Gemini/Codex 都用 stdio 传输机制？》，这里补充了更多工程落地视角。
+        </div>
+      </header>
+
+      <article class="prose" data-reveal>
+        <h2>1. stdio 的本质并不老，它只是更贴近本地执行</h2>
+        <p>
+          stdio 本质上是进程间通信的一种经典方式：一个进程通过标准输入接收指令，通过标准输出返回结果。
+          在 CLI 场景里，它最大的价值不是“传统”，而是它恰好站在本地进程、文件系统和命令执行的边界上。
+        </p>
+        <p>
+          你不需要额外开端口、不需要单独维护一个本地 HTTP 服务，也不需要为了一个简单的命令调用引入更多网络栈复杂度。
+          对本地代理来说，这就是最短路径。
+        </p>
+
+        <h2>2. 为什么它特别适合 AI Coding Agent</h2>
+        <ul>
+          <li><strong>权限边界更清晰</strong>：通信范围被限制在进程之间，天然比开放本地端口更收敛。</li>
+          <li><strong>反馈链更短</strong>：命令输出直接成为下一轮推理输入，不需要再转一道协议层。</li>
+          <li><strong>调试简单</strong>：很多问题都可以直接通过日志、管道输出和进程状态定位。</li>
+          <li><strong>集成轻量</strong>：命令行工具、编辑器插件、守护进程都更容易围绕 stdio 组织。</li>
+        </ul>
+        <p>
+          这些优点叠加起来，导致 stdio 非常适合“本地工具调用 + 模型回环”这种工作模式。这也是为什么很多 CLI 代理最后都会走到它上面。
+        </p>
+
+        <h2>3. 它和 HTTP / WebSocket 的区别不只是协议格式</h2>
+        <p>
+          很多人会把 stdio 和 HTTP 看成同级替代方案，但其实它们更像是针对不同边界条件的选择。HTTP 更适合跨进程、跨机器、跨团队暴露服务；
+          stdio 更适合一个本地宿主进程和它启动的工具之间做短链路通信。
+        </p>
+        <p>
+          如果你面对的是 IDE 插件调本地 agent、本地 agent 再调本地工具，stdio 往往是最自然的选择。只有当系统需要远程化、服务化、可观测化之后，
+          HTTP 或 WebSocket 才会变得更有优势。
+        </p>
+
+        <h2>4. stdio 不是银弹，它的局限也很明确</h2>
+        <p>它也有缺点，而且必须提前认清：</p>
+        <ul>
+          <li>天然偏本地，不适合直接承载跨机器、多租户服务。</li>
+          <li>如果输出流设计混乱，调试时会把控制信息和业务信息搅在一起。</li>
+          <li>长生命周期、多会话复用场景下，需要额外处理进程管理和中断恢复。</li>
+        </ul>
+        <p>
+          所以问题不该是“stdio 好不好”，而应该是“你当前的边界是不是一个本地代理问题”。只要答案是“是”，stdio 往往就很难被绕开。
+        </p>
+
+        <h2>5. 为什么我会把它和 MCP / CLI 一起看</h2>
+        <blockquote>协议决定结构，传输决定落地难度。</blockquote>
+        <p>
+          很多协议讨论如果脱离传输层，会显得非常抽象。MCP、各种 CLI agent、甚至一些 IDE 集成，真正落地时都会回到一个问题：
+          这条链路最终怎么在本地稳定跑起来？
+        </p>
+        <p>
+          从这个角度看，stdio 不是一个“旧时代遗产”，而是本地 Agent 生态的基础设施之一。只要大家还在强调本地上下文、命令执行和最小部署成本，
+          stdio 就会继续存在。
+        </p>
+
+        <h2>6. 实操建议</h2>
+        <p>如果你正在做自己的工具链，我的建议很简单：</p>
+        <ul>
+          <li>本地阶段优先用 stdio，把链路打短。</li>
+          <li>一开始就设计好标准输入输出的结构，不要把日志和协议混杂在一起。</li>
+          <li>一旦要跨机器或开放服务，再往 HTTP / WebSocket 演进。</li>
+        </ul>
+        <p>
+          先把本地问题解决，再谈服务化。这比一开始就把架构做复杂，更符合真实交付节奏。
+        </p>
+      </article>
+    </div>
   </body>
 </html>

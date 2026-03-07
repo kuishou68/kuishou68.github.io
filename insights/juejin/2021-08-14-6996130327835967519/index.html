@@ -1,71 +1,117 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="refresh" content="0; url=/en/posts/sync/2021-08-14-6996130327835967519/" />
-    <title>Juejin article moved</title>
-    <style>
-      :root {
-        color-scheme: dark;
-        --bg: #0b1020;
-        --panel: rgba(10, 18, 38, 0.88);
-        --line: rgba(255, 255, 255, 0.12);
-        --text: #f6efe3;
-        --muted: #93a2bf;
-        --accent: #7ae7c7;
-      }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        background:
-          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
-          linear-gradient(180deg, #0b1020 0%, #050813 100%);
-        color: var(--text);
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        padding: 24px;
-      }
-      main {
-        width: min(640px, 100%);
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        background: var(--panel);
-        padding: 32px;
-        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
-      }
-      h1 {
-        margin: 0 0 12px;
-        font-size: clamp(28px, 4vw, 42px);
-      }
-      p {
-        margin: 0 0 18px;
-        color: var(--muted);
-        line-height: 1.7;
-      }
-      a {
-        color: #08111e;
-        background: var(--accent);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 12px 18px;
-        border-radius: 999px;
-        text-decoration: none;
-        font-weight: 700;
-      }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vue深入学习—keep-alive组件 | CocoonBreak</title>
+    <meta name="description" content="💻1、keep-alive是什么？ keep-alive是Vue内置的一个组件，可以使被包含的组件保留状态，避免被重新渲染！可以理解成防弹衣🧥; 包含在keep-alive里面的组件，所有路径匹配到的视图都会被缓存。 &lt; keep-aliv...">
+    <meta property="og:title" content="Vue深入学习—keep-alive组件 | CocoonBreak">
+    <meta property="og:description" content="💻1、keep-alive是什么？ keep-alive是Vue内置的一个组件，可以使被包含的组件保留状态，避免被重新渲染！可以理解成防弹衣🧥; 包含在keep-alive里面的组件，所有路径匹配到的视图都会被缓存。 &lt; keep-aliv...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2021-08-14-6996130327835967519/">
+    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
   </head>
   <body>
-    <main>
-      <h1>Juejin article moved</h1>
-      <p>This synced Juejin article now lives under the rebuilt post route.</p>
-      <a href="/en/posts/sync/2021-08-14-6996130327835967519/">Continue</a>
-    </main>
-    <script>
-      window.location.replace("/en/posts/sync/2021-08-14-6996130327835967519/");
-    </script>
+    <div class="article-shell">
+      <nav class="insight-nav">
+        <a href="/">← 首页</a>
+        <a href="/insights/">同步文章</a>
+        <a href="https://juejin.cn/post/6996130327835967519" target="_blank" rel="noreferrer">掘金原文</a>
+      </nav>
+
+      <header class="article-hero" data-reveal>
+        <div class="article-meta">
+          <span>2021.08.14</span><span>Vue.js</span><span>前端</span>
+        </div>
+        <h1>Vue深入学习—keep-alive组件</h1>
+        <p class="article-intro">💻1、keep-alive是什么？ keep-alive是Vue内置的一个组件，可以使被包含的组件保留状态，避免被重新渲染！可以理解成防弹衣🧥; 包含在keep-alive里面的组件，所有路径匹配到的视图都会被缓存。 &lt; keep-aliv...</p>
+        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/6996130327835967519" target="_blank" rel="noreferrer">掘金原文</a>。</div>
+      </header>
+
+      <article class="prose" data-reveal>
+        <blockquote>
+<p><strong>💻1、keep-alive是什么？</strong></p>
+<p>keep-alive是Vue内置的一个组件，可以使被包含的组件保留状态，避免被重新渲染！可以理解成防弹衣🧥;</p>
+<p>包含在keep-alive里面的组件，所有路径匹配到的视图都会被缓存。</p>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">keep-alive</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">router-view</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a>        <span class="co">&lt;!-- 所有路径匹配到的视图组件都会被缓存！ --&gt;</span></span>
+<span id="cb1-4"><a aria-hidden="true" href="#cb1-4" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">router-view</span><span class="dt">&gt;</span></span>
+<span id="cb1-5"><a aria-hidden="true" href="#cb1-5" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">keep-alive</span><span class="dt">&gt;</span></span></code></pre></div>
+<blockquote>
+<p><strong>🖱️2、keep-alive和普通组件有什么不同？</strong></p>
+<p>渲染方式不同，keep-alive它是一个抽象组件，不会去渲染实体节点，是通过手写一个render函数，render最终返回一个VNode；</p>
+<p>而平时是的模板组件，是利用Vue编译成render函数进行渲染。</p>
+</blockquote>
+<blockquote>
+<p><strong>🍀3、keep-alive 中 render函数怎么实现的？</strong></p>
+<p>首先会执行created这个钩子函数，render中定义了cache(对象)、keys(数组)两个变量，用于接收缓存。</p>
+</blockquote>
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="fu">render</span> () {</span>
+<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a>    <span class="co">// 拿到默认插槽，这个插槽包含了被keep-alive包裹的所有内容</span></span>
+<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a>    <span class="kw">const</span> slot <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">$slots</span><span class="op">.</span><span class="at">default</span></span>
+<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a>    <span class="co">// 拿到第一个组件节点的VNode</span></span>
+<span id="cb2-5"><a aria-hidden="true" href="#cb2-5" tabindex="-1"></a>    <span class="kw">const</span> <span class="dt">vnode</span><span class="op">:</span> VNode <span class="op">=</span> <span class="fu">getFirstComponentChild</span>(slot)</span>
+<span id="cb2-6"><a aria-hidden="true" href="#cb2-6" tabindex="-1"></a>    <span class="co">// 拿到第一个组件节点的componentOptions</span></span>
+<span id="cb2-7"><a aria-hidden="true" href="#cb2-7" tabindex="-1"></a>    <span class="kw">const</span> <span class="dt">componentOptions</span><span class="op">:</span> <span class="op">?</span>VNodeComponentOptions <span class="op">=</span> vnode <span class="op">&amp;&amp;</span> vnode<span class="op">.</span><span class="at">componentOption</span></span>
+<span id="cb2-8"><a aria-hidden="true" href="#cb2-8" tabindex="-1"></a>    s</span>
+<span id="cb2-9"><a aria-hidden="true" href="#cb2-9" tabindex="-1"></a><span class="cf">if</span> (componentOptions) {</span>
+<span id="cb2-10"><a aria-hidden="true" href="#cb2-10" tabindex="-1"></a>    <span class="co">// 拿到组件节点的名称getComponentName</span></span>
+<span id="cb2-11"><a aria-hidden="true" href="#cb2-11" tabindex="-1"></a>    <span class="kw">const</span> <span class="dt">name</span><span class="op">:</span> <span class="op">?</span>string <span class="op">=</span> <span class="fu">getComponentName</span>(componentOptions)</span>
+<span id="cb2-12"><a aria-hidden="true" href="#cb2-12" tabindex="-1"></a>    <span class="kw">const</span> { include<span class="op">,</span> exclude } <span class="op">=</span> <span class="kw">this</span></span>
+<span id="cb2-13"><a aria-hidden="true" href="#cb2-13" tabindex="-1"></a>    <span class="cf">if</span> (</span>
+<span id="cb2-14"><a aria-hidden="true" href="#cb2-14" tabindex="-1"></a>        <span class="co">// 匹配不到 included ，不需要对它做缓存</span></span>
+<span id="cb2-15"><a aria-hidden="true" href="#cb2-15" tabindex="-1"></a>        (include <span class="op">&amp;&amp;</span> (<span class="op">!</span>name <span class="op">||</span> <span class="op">!</span><span class="fu">matches</span>(include<span class="op">,</span> name))) <span class="op">||</span></span>
+<span id="cb2-16"><a aria-hidden="true" href="#cb2-16" tabindex="-1"></a>        <span class="co">// 组件名在 excluded 返回</span></span>
+<span id="cb2-17"><a aria-hidden="true" href="#cb2-17" tabindex="-1"></a>        (exclude <span class="op">&amp;&amp;</span> name <span class="op">&amp;&amp;</span> <span class="fu">matches</span>(exclude<span class="op">,</span> name))</span>
+<span id="cb2-18"><a aria-hidden="true" href="#cb2-18" tabindex="-1"></a>    ) {</span>
+<span id="cb2-19"><a aria-hidden="true" href="#cb2-19" tabindex="-1"></a>        <span class="co">// 如果都不在，说明当前组件是不需要缓存的，直接返回VNode，跟没用keep-ailve是一样的</span></span>
+<span id="cb2-20"><a aria-hidden="true" href="#cb2-20" tabindex="-1"></a>        <span class="cf">return</span> vnode</span>
+<span id="cb2-21"><a aria-hidden="true" href="#cb2-21" tabindex="-1"></a>    }</span>
+<span id="cb2-22"><a aria-hidden="true" href="#cb2-22" tabindex="-1"></a>    <span class="co">// 拿到cache 和 keys，对VNode建立一个缓存</span></span>
+<span id="cb2-23"><a aria-hidden="true" href="#cb2-23" tabindex="-1"></a>    <span class="kw">const</span> { cache<span class="op">,</span> keys } <span class="op">=</span> <span class="kw">this</span></span>
+<span id="cb2-24"><a aria-hidden="true" href="#cb2-24" tabindex="-1"></a>    <span class="co">// 定义VNode的Key</span></span>
+<span id="cb2-25"><a aria-hidden="true" href="#cb2-25" tabindex="-1"></a>    <span class="kw">const</span> <span class="dt">key</span><span class="op">:</span> <span class="op">?</span>string <span class="op">=</span> vnode<span class="op">.</span><span class="at">key</span> <span class="op">==</span> <span class="kw">null</span></span>
+<span id="cb2-26"><a aria-hidden="true" href="#cb2-26" tabindex="-1"></a>    <span class="co">// 同一个构造函数可能会被注册为不同的本地组件</span></span>
+<span id="cb2-27"><a aria-hidden="true" href="#cb2-27" tabindex="-1"></a>    <span class="co">// 只有cid还不够，对其进行拼接,componentOptions组件的cid+tag，拼接成key</span></span>
+<span id="cb2-28"><a aria-hidden="true" href="#cb2-28" tabindex="-1"></a>    <span class="op">?</span> componentOptions<span class="op">.</span><span class="at">Ctor</span><span class="op">.</span><span class="at">cid</span> <span class="op">+</span> (componentOptions<span class="op">.</span><span class="at">tag</span> <span class="op">?</span> <span class="vs">`::</span><span class="sc">${</span>componentOptions</span>
+<span id="cb2-29"><a aria-hidden="true" href="#cb2-29" tabindex="-1"></a>    <span class="op">.</span><span class="at">tag</span><span class="sc">}</span><span class="vs">`</span> <span class="op">:</span> <span class="st">''</span>)</span>
+<span id="cb2-30"><a aria-hidden="true" href="#cb2-30" tabindex="-1"></a>    <span class="op">:</span> vnode<span class="op">.</span><span class="at">key</span> <span class="co">// 返回VNode的key</span></span>
+<span id="cb2-31"><a aria-hidden="true" href="#cb2-31" tabindex="-1"></a>    <span class="co">// 如果命中了缓存</span></span>
+<span id="cb2-32"><a aria-hidden="true" href="#cb2-32" tabindex="-1"></a>    <span class="cf">if</span> (cache[key]) {</span>
+<span id="cb2-33"><a aria-hidden="true" href="#cb2-33" tabindex="-1"></a>        <span class="co">// 将VNode的componentInstance 指向 ==&gt; 缓存的 componentInstance</span></span>
+<span id="cb2-34"><a aria-hidden="true" href="#cb2-34" tabindex="-1"></a>        vnode<span class="op">.</span><span class="at">componentInstance</span> <span class="op">=</span> cache[key]<span class="op">.</span><span class="at">componentInstance</span></span>
+<span id="cb2-35"><a aria-hidden="true" href="#cb2-35" tabindex="-1"></a>        <span class="co">// 移除掉旧的key,push到新的keys中</span></span>
+<span id="cb2-36"><a aria-hidden="true" href="#cb2-36" tabindex="-1"></a>        <span class="fu">remove</span>(keys<span class="op">,</span> key)</span>
+<span id="cb2-37"><a aria-hidden="true" href="#cb2-37" tabindex="-1"></a>        keys<span class="op">.</span><span class="fu">push</span>(key)</span>
+<span id="cb2-38"><a aria-hidden="true" href="#cb2-38" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb2-39"><a aria-hidden="true" href="#cb2-39" tabindex="-1"></a>        cache[key] <span class="op">=</span> vnode</span>
+<span id="cb2-40"><a aria-hidden="true" href="#cb2-40" tabindex="-1"></a>        keys<span class="op">.</span><span class="fu">push</span>(key)</span>
+<span id="cb2-41"><a aria-hidden="true" href="#cb2-41" tabindex="-1"></a>        <span class="co">// 清理缓存</span></span>
+<span id="cb2-42"><a aria-hidden="true" href="#cb2-42" tabindex="-1"></a>        <span class="cf">if</span> (<span class="kw">this</span><span class="op">.</span><span class="at">max</span> <span class="op">&amp;&amp;</span> keys<span class="op">.</span><span class="at">length</span> <span class="op">&gt;</span> <span class="pp">parseInt</span>(<span class="kw">this</span><span class="op">.</span><span class="at">max</span>)) {</span>
+<span id="cb2-43"><a aria-hidden="true" href="#cb2-43" tabindex="-1"></a>            <span class="fu">pruneCacheEntry</span>(cache<span class="op">,</span> keys[<span class="dv">0</span>]<span class="op">,</span> keys<span class="op">,</span> <span class="kw">this</span><span class="op">.</span><span class="at">_vnode</span>)</span>
+<span id="cb2-44"><a aria-hidden="true" href="#cb2-44" tabindex="-1"></a>        }</span>
+<span id="cb2-45"><a aria-hidden="true" href="#cb2-45" tabindex="-1"></a>    }</span>
+<span id="cb2-46"><a aria-hidden="true" href="#cb2-46" tabindex="-1"></a>    vnode<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">keepAlive</span> <span class="op">=</span> <span class="kw">true</span></span>
+<span id="cb2-47"><a aria-hidden="true" href="#cb2-47" tabindex="-1"></a>}</span></code></pre></div>
+<blockquote>
+<p><strong>🌵4、keep-alive 独有的两个生命周期：</strong></p>
+<p>activated &amp; deactivated 两个钩子函数是专门为
+<code>keep-alive</code> 组件定制的钩子，在渲染期间不被调用；</p>
+<p>activated() : 被 <code>keep-alive</code>
+<strong>激活</strong>时调用。</p>
+<p>deactivated() : 被 <code>keep-alive</code>
+<strong>停用</strong>时调用。</p>
+</blockquote>
+      </article>
+    </div>
   </body>
 </html>
