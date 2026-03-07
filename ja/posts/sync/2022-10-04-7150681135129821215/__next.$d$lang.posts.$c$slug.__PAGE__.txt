@@ -1,0 +1,108 @@
+1:"$Sreact.fragment"
+2:I[27917,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js","/_next/static/chunks/b70577f423f10c73.js"],""]
+5:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+3:T34ef,<p>业务场景：小程序A有一个订单付款码，二维码中带了一个订单id，需要将这个id作为参数传递给小程序B，小程序B用支付宝扫码后获取到该参数，并且加载该订单后发起支付宝支付；</p>
+<p>实现思路：<a
+href="https://link.juejin.cn?target=https%3A%2F%2Fopendocs.alipay.com%2Fmini%2F0090ty%23%25E5%25B0%258F%25E7%25A8%258B%25E5%25BA%258F%25E4%25BA%2592%25E7%259B%25B8%25E8%25B7%25B3%25E8%25BD%25AC"
+data-ref="nofollow noopener noreferrer" target="_blank"
+title="https://opendocs.alipay.com/mini/0090ty#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%92%E7%9B%B8%E8%B7%B3%E8%BD%AC">支付宝官网</a>
+给我们提供了跳转的不同场景，当前业务属于：<a
+href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%92%E7%9B%B8%E8%B7%B3%E8%BD%AC"
+title="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%92%E7%9B%B8%E8%B7%B3%E8%BD%AC">小程序互相跳转</a>，实现分两步：①小程序A的二维码中携带需要的参数；②支付宝扫码后进入到小程序B的指定页面，并读取该参数；</p>
+<h3 id="小程序a需要做的事">小程序A需要做的事</h3>
+<p>1、<a
+href="https://link.juejin.cn?target=https%3A%2F%2Fopendocs.alipay.com%2Fmini%2Fapi%2Fyz6gnx"
+data-ref="nofollow noopener noreferrer" target="_blank"
+title="https://opendocs.alipay.com/mini/api/yz6gnx">my.navigateToMiniProgram</a>
+传参</p>
+<p><img
+src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d11bfdbd1e024b8a9b390587f10fa99c~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"
+loading="lazy" alt="image.png" /></p>
+<p>2、<a
+href="https://link.juejin.cn?target=https%3A%2F%2Fopendocs.alipay.com%2Fmini%2Fapi%2Fmedia%2Fimage%2Fmy.generateimagefromcode"
+data-ref="nofollow noopener noreferrer" target="_blank"
+title="https://opendocs.alipay.com/mini/api/media/image/my.generateimagefromcode">my.generateImageFromCode</a>
+生成二维码</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// page.js</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Page</span>({</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">data</span><span class="op">:</span> {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>   <span class="dt">qrcode</span><span class="op">:</span> <span class="st">&#39;&#39;</span><span class="op">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">onReady</span>() {</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>   <span class="cf">if</span> (my<span class="op">.</span><span class="fu">canIUse</span>(<span class="st">&#39;generateImageFromCode&#39;</span>)) {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>      my<span class="op">.</span><span class="fu">generateImageFromCode</span>({</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">code</span><span class="op">:</span> <span class="vs">`alipays://platformapi/startapp?appId=</span><span class="sc">${</span>appId<span class="sc">}</span><span class="vs">&amp;page=pages/selfPayment/selfPayment&amp;query=billId=</span><span class="sc">${</span>billId<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>        <span class="dt">format</span><span class="op">:</span> <span class="st">&#39;QRCODE&#39;</span><span class="op">,</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="dt">width</span><span class="op">:</span> <span class="dv">400</span><span class="op">,</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="dt">correctLevel</span><span class="op">:</span> <span class="st">&#39;H&#39;</span><span class="op">,</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="dt">success</span><span class="op">:</span> res <span class="kw">=&gt;</span> {</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>          <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(res<span class="op">.</span><span class="at">image</span>)<span class="op">;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>          <span class="kw">this</span><span class="op">.</span><span class="fu">setData</span>({</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>            <span class="dt">qrcode</span><span class="op">:</span> res<span class="op">.</span><span class="at">image</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>          })<span class="op">;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        <span class="fu">fail</span>(res) {</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>     <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(res<span class="op">.</span><span class="at">error</span>)<span class="op">;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="fu">complete</span>(res) {</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>         <span class="cf">if</span> (res<span class="op">.</span><span class="at">image</span>) {</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>           <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;success&#39;</span><span class="op">,</span> res<span class="op">.</span><span class="at">image</span>)<span class="op">;</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>          } <span class="cf">else</span> {</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>           <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;fail&#39;</span><span class="op">,</span> res<span class="op">.</span><span class="at">error</span><span class="op">,</span> res<span class="op">.</span><span class="at">errorMessage</span>)<span class="op">;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>          }</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>      })<span class="op">;</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode ini"><code class="sourceCode ini"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">// page.axml</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;view class</span><span class="ot">=</span><span class="st">&quot;page&quot;&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dt">  &lt;image src</span><span class="ot">=</span><span class="st">&quot;{{qrcode}}&quot; mode=&quot;widthFix&quot; style=&quot;width:200rpx;height:200rpx;margin:60rpx&quot;/&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/view&gt;</span></span></code></pre></div>
+<h3 id="小程序b需要做的事">小程序B需要做的事</h3>
+<p>1、先来了解两个概念：</p>
+<ul>
+<li><p><strong>冷启动</strong>：当用户打开未启动过，或者是已经销毁的小程序时，称为冷启动。此时小程序会执行初始化，初始化完成后，会触发
+<code>onLaunch</code> 回调函数。</p></li>
+<li><p><strong>热启动</strong>：当用户打开已经关闭但仍处于后台运行的小程序时，称为热启动。在这种情况下，小程序并不会被销毁后重启，而仅是从后台切换到前台，此时，<code>onShow</code>
+函数会触发，<code>onLaunch</code> 回调函数不会被触发。</p></li>
+<li><p><strong>从后台运行切换为前台运行</strong>：当未被系统销毁的小程序再度被打开或者激活时，会从后台运行切换为前台运行。</p></li>
+</ul>
+<p>当前场景需要在 <a
+href="https://link.juejin.cn?target=https%3A%2F%2Fopendocs.alipay.com%2Fmini%2Fframework%2Fapp-detail"
+data-ref="nofollow noopener noreferrer" target="_blank"
+title="https://opendocs.alipay.com/mini/framework/app-detail">app.js</a>
+中注册前台 / 后台切换的回调函数。当小程序从后台进入前台显示时会触发
+ <code>onShow</code>；</p>
+<p>2、解析参数</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// app.js</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>globalData<span class="op">:</span> {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 全局数据</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">billId</span><span class="op">:</span> <span class="st">&quot;&quot;</span><span class="op">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">onShow</span>(options) {</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;启动参数===&gt;&quot;</span><span class="op">,</span>options)<span class="op">;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> { query <span class="op">=</span> {} } <span class="op">=</span> options<span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> { billId } <span class="op">=</span> query<span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (billId) {</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">globalData</span><span class="op">.</span><span class="at">billId</span> <span class="op">=</span> billId<span class="op">;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">//selfPayment.js</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">onLoad</span>() {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">init</span>()</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">init</span>(){</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> { billId } <span class="op">=</span> app<span class="op">.</span><span class="at">globalData</span><span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;全局ID&quot;</span><span class="op">,</span> billId)<span class="op">;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>参考内容：<a
+href="https://link.juejin.cn?target=https%3A%2F%2Fopendocs.alipay.com%2Fmini%2F0090ty%23%25E5%25B0%258F%25E7%25A8%258B%25E5%25BA%258F%25E4%25BA%2592%25E7%259B%25B8%25E8%25B7%25B3%25E8%25BD%25AC"
+data-ref="nofollow noopener noreferrer" target="_blank"
+title="https://opendocs.alipay.com/mini/0090ty#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%92%E7%9B%B8%E8%B7%B3%E8%BD%AC">支付宝官网</a></p>
+0:{"buildId":"PBOm4kDuGvs9RUGVV0N_6","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L2",null,{"href":"/ja/archives","className":"ghost-inline","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","aria-hidden":"true","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"すべての記事"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"Juejin から同期"}],["$","span",null,{"children":"2022-10-04"}],["$","span",null,{"children":[3," ","分"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"两个支付宝小程序之间带参扫码在线付款实现"}],["$","p",null,{"className":"hero-copy","children":"业务场景：小程序A有一个订单付款码，二维码中带了一个订单id，需要将这个id作为参数传递给小程序B，小程序B用支付宝扫码后获取到该参数，并且加载该订单后发起支付宝支付； 实现思路： 支付宝官网 给我们提供了跳转的不同场景，当前业务属于：小程序互相跳转，实现分两步：①小程序A的二维码中携带需要的参数；②支付宝扫码后进入到小程序B的指定页面，并读取该参数； 小程..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"要約"}],["$","span",null,{"children":"この記事は新しいブログ構造の中で保持されつつ、中国語の原文もそのまま残しています。"}],["$","a",null,{"href":"https://juejin.cn/post/7150681135129821215","target":"_blank","rel":"noreferrer","className":"ghost-inline","children":["元記事",["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-external-link h-4 w-4","aria-hidden":"true","children":[["$","path","1q9fwt",{"d":"M15 3h6v6"}],["$","path","gplh6r",{"d":"M10 14 21 3"}],["$","path","a6xqqp",{"d":"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"}],"$undefined"]}]]}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$3"}}]}]]}],null,"$L4"]}],"loading":null,"isPartial":false}
+4:["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]
+7:null

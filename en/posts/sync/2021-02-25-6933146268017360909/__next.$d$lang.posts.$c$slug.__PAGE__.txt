@@ -1,0 +1,208 @@
+1:"$Sreact.fragment"
+2:I[27917,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js","/_next/static/chunks/b70577f423f10c73.js"],""]
+5:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+3:T8516,<p>PHP+MySql实现简单登录注册，看了很多简单案例后发现，很少关于使用PDO实现简单登录注册的帖子，要么是Mysql和MySqli实现，就算实现了意义也不大，js就可以做的事情，没必要放到PHP中去，我却偏偏不相信，保留着一股倔劲，简单的实现了登录注册，下面请看代码，有错误的地方希望大佬们指教！</p>
+<h3 id="新建数据库名itcast--表名user-执行下面代码">新建数据库名itcast ,
+表名user ,执行下面代码</h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">create</span> <span class="kw">table</span> <span class="fu">user</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>       <span class="kw">id</span> <span class="dt">int</span> unsigned <span class="kw">primary</span> <span class="kw">key</span> auto_increment,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>       username <span class="dt">varchar</span>(<span class="dv">10</span>) <span class="kw">not</span> <span class="kw">null</span> <span class="kw">comment</span> <span class="st">&#39;用户名&#39;</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>       <span class="kw">password</span> <span class="dt">char</span>(<span class="dv">20</span>) <span class="kw">not</span> <span class="kw">null</span> <span class="kw">comment</span> <span class="st">&#39;密码&#39;</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>       email <span class="dt">varchar</span>(<span class="dv">40</span>) <span class="kw">not</span> <span class="kw">null</span> <span class="kw">comment</span> <span class="st">&#39;邮箱&#39;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>)charset<span class="op">=</span>utf8;</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">insert</span> <span class="kw">into</span> <span class="fu">user</span> (username,<span class="kw">password</span>,email) <span class="kw">values</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>(<span class="st">&#39;张三&#39;</span>,<span class="st">&#39;123456&#39;</span>,<span class="st">&#39;zhangsan@qq.com&#39;</span>);</span></code></pre></div>
+<h3 id="目录结构">目录结构</h3>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4ba2f46ace5d49bca914654d366a7df6~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<h3
+id="首先从注册前台页面register_htmlphp开始">首先从注册前台页面register_html.php开始</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> <span class="dt">html&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">html</span>&gt;</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">head</span>&gt;</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">meta</span> <span class="ot">charset=</span><span class="st">&quot;UTF-8&quot;</span>&gt;</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">title</span>&gt;欢迎注册&lt;/<span class="kw">title</span>&gt;</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">head</span>&gt;</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">form</span> <span class="ot">action=</span><span class="st">&quot;./register.php&quot;</span> <span class="ot">method=</span><span class="st">&quot;post&quot;</span>&gt;</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">table</span> &gt;</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">td</span> <span class="ot">class=</span><span class="st">&quot;title&quot;</span> <span class="ot">colspan=</span><span class="st">&quot;2&quot;</span>&gt;欢迎注册新用户&lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">th</span>&gt;用户名：&lt;/<span class="kw">th</span>&gt;&lt;<span class="kw">td</span>&gt;&lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;text&quot;</span> <span class="ot">name=</span><span class="st">&quot;username&quot;</span> /&gt;&lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">th</span>&gt;邮箱：&lt;/<span class="kw">th</span>&gt;&lt;<span class="kw">td</span>&gt;&lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;text&quot;</span> <span class="ot">name=</span><span class="st">&quot;email&quot;</span> /&gt;&lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">th</span>&gt;密码：&lt;/<span class="kw">th</span>&gt;&lt;<span class="kw">td</span>&gt;&lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;password&quot;</span> <span class="ot">name=</span><span class="st">&quot;password&quot;</span> <span class="ot">id=</span><span class="st">&quot;pw1&quot;</span> /&gt;&lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">th</span>&gt;确认密码：&lt;/<span class="kw">th</span>&gt;&lt;<span class="kw">td</span>&gt;&lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;password&quot;</span> <span class="ot">id=</span><span class="st">&quot;pw2&quot;</span> /&gt;&lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">td</span> <span class="ot">colspan=</span><span class="st">&quot;2&quot;</span> <span class="ot">class=</span><span class="st">&quot;td-btn&quot;</span>&gt;</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;submit&quot;</span> <span class="ot">value=</span><span class="st">&quot;提交注册&quot;</span> <span class="ot">class=</span><span class="st">&quot;button&quot;</span> /&gt;</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;button&quot;</span> <span class="ot">value=</span><span class="st">&quot;返回登录&quot;</span> <span class="ot">class=</span><span class="st">&quot;button&quot;</span> <span class="ot">onclick=</span><span class="st">&quot;location.href=&#39;login.php&#39;&quot;</span>  /&gt;</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">table</span>&gt;</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">form</span>&gt;</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">html</span>&gt;</span></code></pre></div>
+<h3
+id="注册后台页面registerphp注册即是新增">注册后台页面register.php（注册即是新增）</h3>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">header</span> (<span class="st">&#39;Content-type:text/html;charset=utf-8&#39;</span>)<span class="ot">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">//数据库服务器主机名，端口号，选择的数据库，字符集</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="va">$dsn</span> <span class="op">=</span> <span class="st">&quot;mysql:host=localhost;dbname=itcast;charset=utf8&quot;</span><span class="ot">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="va">$user</span> <span class="op">=</span> <span class="st">&#39;root&#39;</span><span class="ot">;</span>         <span class="co">//数据库名</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="va">$pwd</span> <span class="op">=</span> <span class="st">&#39;root&#39;</span><span class="ot">;</span>          <span class="co">//数据库密码</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>{</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="va">$pdo</span> <span class="op">=</span> <span class="kw">new</span> <span class="bu">PDO</span>(<span class="va">$dsn</span><span class="ot">,</span><span class="va">$user</span><span class="ot">,</span><span class="va">$pwd</span>)<span class="ot">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">//如果post表单不为空</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="op">!</span><span class="kw">empty</span>(<span class="va">$_POST</span>)){</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="co">//声明变量$fields，用来保存字段信息</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="va">$fields</span> <span class="op">=</span> <span class="dt">array</span>(<span class="st">&#39;username&#39;</span><span class="ot">,</span><span class="st">&#39;password&#39;</span><span class="ot">,</span><span class="st">&#39;email&#39;</span>)<span class="ot">;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>        <span class="co">//声明$values，用来保存值信息</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        <span class="va">$values</span> <span class="op">=</span> <span class="dt">array</span>()<span class="ot">;</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        <span class="co">//遍历$fields，获取输入用户名、密码、邮箱的键和值</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">foreach</span>(<span class="va">$fields</span> <span class="kw">as</span> <span class="va">$k</span>=&gt;<span class="va">$v</span>){</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>            <span class="va">$data</span> <span class="op">=</span> <span class="kw">isset</span>(<span class="va">$_POST</span>[<span class="va">$v</span>]) <span class="ot">?</span> <span class="va">$_POST</span>[<span class="va">$v</span>] <span class="ot">:</span> <span class="st">&#39;&#39;</span><span class="ot">;</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span>(<span class="va">$data</span><span class="op">==</span><span class="st">&#39;&#39;</span>) <span class="cf">die</span>(<span class="va">$v</span><span class="op">.</span><span class="st">&#39;字段不能为空！&#39;</span>)<span class="ot">;</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>            <span class="co">//赋值给$fields数组</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>            <span class="va">$fields</span>[<span class="va">$k</span>] <span class="op">=</span> <span class="st">&quot;</span><span class="va">$v</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>            <span class="co">//赋值给$values数组</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>            <span class="va">$values</span>[] <span class="op">=</span> <span class="st">&quot;&#39;</span><span class="va">$data</span><span class="st">&#39;&quot;</span><span class="ot">;</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>        <span class="co">//将$fields数组以逗号连接，赋值给$fields，组成insert语句中的字段部分</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>        <span class="co">//implode — 将一个一维数组的值转化为字符串</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>        <span class="va">$fields</span> <span class="op">=</span> <span class="fu">implode</span>(<span class="st">&#39;,&#39;</span><span class="ot">,</span> <span class="va">$fields</span>)<span class="ot">;</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>        <span class="co">//将$values数组以逗号连接，赋值给$values，组成insert语句中的值部分</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>        <span class="va">$values</span> <span class="op">=</span> <span class="fu">implode</span>(<span class="st">&#39;,&#39;</span><span class="ot">,</span> <span class="va">$values</span>)<span class="ot">;</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>        <span class="co">//最后把$fields和$values拼接到insert语句中，注意要指定表名</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>        <span class="va">$sql</span> <span class="op">=</span> <span class="st">&quot;insert into user (</span><span class="va">$fields</span><span class="st">) values (</span><span class="va">$values</span><span class="st">)&quot;</span><span class="ot">;</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(<span class="va">$res</span> <span class="op">=</span> <span class="va">$pdo</span>-&gt;query(<span class="va">$sql</span>)){</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>            <span class="co">//注册成功，自动跳转到会员中心</span></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>            <span class="kw">echo</span> <span class="st">&#39;&lt;script&gt;alert(&quot;注册成功！&quot;);window.location.href=&quot;login_html.php&quot;;&lt;/script&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>        }<span class="cf">else</span>{</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>            <span class="cf">die</span> (<span class="st">&#39;注册失败！&#39;</span>)<span class="ot">;</span></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>}<span class="cf">catch</span>(<span class="bu">PDOException</span> <span class="va">$e</span>){</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>    <span class="kw">echo</span> <span class="va">$e</span>-&gt;getMessage()<span class="op">.</span><span class="st">&#39;&lt;br&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>    <span class="kw">echo</span> <span class="va">$e</span>-&gt;getLine()<span class="op">.</span><span class="st">&#39;&lt;br&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>    <span class="kw">echo</span> <span class="va">$e</span>-&gt;<span class="bu">__toString</span>()<span class="op">.</span><span class="st">&#39;&lt;br&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>(<span class="st">&#39;APP&#39;</span><span class="ot">,</span> <span class="st">&#39;itcast&#39;</span>)<span class="ot">;</span></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a><span class="kw">require</span> <span class="st">&#39;./register_html.php&#39;</span><span class="ot">;</span></span></code></pre></div>
+<h3 id="登录前台页面login_htmlphp">登录前台页面login_html.php</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> <span class="dt">html&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">html</span>&gt;</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">head</span>&gt;</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">meta</span> <span class="ot">charset=</span><span class="st">&quot;UTF-8&quot;</span>&gt;</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">title</span>&gt;欢迎登录&lt;/<span class="kw">title</span>&gt;</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">head</span>&gt;</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">body</span>&gt;</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">form</span> <span class="ot">method=</span><span class="st">&quot;post&quot;</span> <span class="ot">action=</span><span class="st">&quot;./login.php&quot;</span>&gt;</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">table</span>&gt;</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>            &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">td</span>&gt;欢迎登录&lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>            &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">th</span>&gt;用户名：&lt;/<span class="kw">th</span>&gt;&lt;<span class="kw">td</span>&gt;&lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;text&quot;</span> <span class="ot">name=</span><span class="st">&quot;username&quot;</span> /&gt;&lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>            &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">th</span>&gt;密码：&lt;/<span class="kw">th</span>&gt;&lt;<span class="kw">td</span>&gt;&lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;password&quot;</span> <span class="ot">name=</span><span class="st">&quot;password&quot;</span> /&gt;&lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>            &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">td</span>&gt;</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>            &lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;submit&quot;</span> <span class="ot">value=</span><span class="st">&quot;登录&quot;</span> /&gt;</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>            &lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;reset&quot;</span> <span class="ot">value=</span><span class="st">&quot;重新填写&quot;</span> /&gt;</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>            &lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        &lt;/<span class="kw">table</span>&gt;</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">form</span>&gt;</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">body</span>&gt;</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">html</span>&gt;</span></code></pre></div>
+<h3 id="登录后台页面loginphp">登录后台页面login.php</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">header</span> (<span class="st">&#39;Content-type:text/html;charset=utf-8&#39;</span>)<span class="ot">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">//数据库相关信息</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="va">$dsn</span> <span class="op">=</span> <span class="st">&quot;mysql:host=localhost;dbname=itcast;charset=utf8&quot;</span><span class="ot">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="va">$user</span> <span class="op">=</span> <span class="st">&#39;root&#39;</span><span class="ot">;</span>         <span class="co">//数据库名</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="va">$pwd</span> <span class="op">=</span> <span class="st">&#39;root&#39;</span><span class="ot">;</span>          <span class="co">//数据库密码，根据自己的密码更改</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>{</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="va">$pdo</span> <span class="op">=</span> <span class="kw">new</span> <span class="bu">PDO</span>(<span class="va">$dsn</span><span class="ot">,</span><span class="va">$user</span><span class="ot">,</span><span class="va">$pwd</span>)<span class="ot">;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>   <span class="co">//如果表单中不为空</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="op">!</span><span class="kw">empty</span>(<span class="va">$_POST</span>)){</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        <span class="co">//从表单中获取数据</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>        <span class="va">$username</span> <span class="op">=</span> <span class="kw">isset</span>(<span class="va">$_POST</span>[<span class="st">&#39;username&#39;</span>]) <span class="ot">?</span> <span class="fu">trim</span>(<span class="va">$_POST</span>[<span class="st">&#39;username&#39;</span>]) <span class="ot">:</span> <span class="st">&#39;&#39;</span><span class="ot">;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>        <span class="va">$password</span> <span class="op">=</span> <span class="kw">isset</span>(<span class="va">$_POST</span>[<span class="st">&#39;password&#39;</span>]) <span class="ot">?</span> (<span class="va">$_POST</span>[<span class="st">&#39;password&#39;</span>]) <span class="ot">:</span> <span class="st">&#39;&#39;</span><span class="ot">;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        <span class="co">//执行SQL语句</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>        <span class="va">$sql</span> <span class="op">=</span> <span class="st">&quot;select `id`,`password` from `user` where `username`=&#39;</span><span class="va">$username</span><span class="st">&#39;&quot;</span><span class="ot">;</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(<span class="va">$res</span> <span class="op">=</span> <span class="va">$pdo</span>-&gt;query(<span class="va">$sql</span>)){          </span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>                <span class="co">//登录成功，自动跳转到会员中心</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>                <span class="kw">echo</span> <span class="st">&#39;&lt;script&gt;alert(&quot;登录成功&quot;);window.location.href=&quot;index.php&quot;;&lt;/script&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        }<span class="cf">else</span>{</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>            <span class="co">//否则提示登录失败</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>            <span class="cf">die</span>(<span class="st">&#39;登录失败！&#39;</span>)<span class="ot">;</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>}<span class="cf">catch</span>(<span class="bu">PDOException</span> <span class="va">$e</span>){</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="co">//这段用于出错的时候，方便告诉我们那里错了</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">echo</span> <span class="va">$e</span>-&gt;getMessage()<span class="op">.</span><span class="st">&#39;&lt;br&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    <span class="kw">echo</span> <span class="va">$e</span>-&gt;getLine()<span class="op">.</span><span class="st">&#39;&lt;br&gt;&#39;</span><span class="ot">;</span>      <span class="co">//显示错误所在多少行</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    <span class="kw">echo</span> <span class="va">$e</span>-&gt;<span class="bu">__toString</span>()<span class="op">.</span><span class="st">&#39;&lt;br&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>(<span class="st">&#39;APP&#39;</span><span class="ot">,</span> <span class="st">&#39;itcast&#39;</span>)<span class="ot">;</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="kw">require</span> <span class="st">&#39;./login_html.php&#39;</span><span class="ot">;</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="kw">?&gt;</span></span></code></pre></div>
+<h3
+id="最后是我们登录成功的inexphp页面">最后是我们登录成功的inex.php页面</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> <span class="dt">html&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">html</span>&gt;</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">head</span>&gt;</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">meta</span> <span class="ot">charset=</span><span class="st">&quot;UTF-8&quot;</span>&gt;</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">title</span>&gt;Insert title here&lt;/<span class="kw">title</span>&gt;</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">head</span>&gt;</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">body</span>&gt;</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">h1</span>&gt;登录成功！&lt;/<span class="kw">h1</span>&gt;</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">body</span>&gt;</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">html</span>&gt;</span></code></pre></div>
+<p>这里做的并不是很美观，大家可以在这个基础上增加好看的样式，增加两次密码是否相同的判断，使用正则实现注册格式的判断等等，这里就不一一讲了，目的主要是能实现简单的登录注册，嘻嘻！</p>
+<h3 id="输入注册信息">输入注册信息</h3>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e7c144b6c97944e18251e7e3805ef84f~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="输入注册信息" /></p>
+<h3 id="点击注册">点击注册</h3>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a5e89de8f869432eb49c30bad889c2e7~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="点击注册" /></p>
+<h3 id="注册成功自动跳转到登录页面">注册成功，自动跳转到登录页面</h3>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/de6c6c3729744aebb59e3d0379db768e~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="注册成功，自动跳转到登录页面" /></p>
+<h3 id="输入刚刚注册的信息">输入刚刚注册的信息</h3>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b09d3e50f40a48498900bc7cbf71497b~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="输入刚刚注册的信息" /></p>
+<h3 id="点击登录">点击登录</h3>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f489e99f86534a99b07e80d6002f6752~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="点击登录" /></p>
+<h3 id="成功跳转到indexphp页面">成功跳转到index.php页面</h3>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9caca52456b14a53bb96db15a6e78305~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="成功跳转到index.php页面" /></p>
+0:{"buildId":"PBOm4kDuGvs9RUGVV0N_6","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L2",null,{"href":"/en/archives","className":"ghost-inline","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","aria-hidden":"true","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"All posts"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"Synced from Juejin"}],["$","span",null,{"children":"2021-02-25"}],["$","span",null,{"children":[3," ","min read"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"PHP+MySql+PDO实现简单登录、注册"}],["$","p",null,{"className":"hero-copy","children":"PHP+MySql实现简单登录注册，看了很多简单案例后发现，很少关于使用PDO实现简单登录注册的帖子，要么是Mysql和MySqli实现，就算实现了意义也不大，js就可以做的事情，没必要放到PHP中去，我却偏偏不相信，保留着一股倔劲，简单的实现了登录注册，下面请看代码，有错误的地方希望大佬们指教！ 新建数据库名itcast , 表名user ,执行下面代码..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"Synopsis"}],["$","span",null,{"children":"This post is preserved inside the rebuilt blog shell while keeping the original Chinese content intact."}],["$","a",null,{"href":"https://juejin.cn/post/6933146268017360909","target":"_blank","rel":"noreferrer","className":"ghost-inline","children":["Original source",["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-external-link h-4 w-4","aria-hidden":"true","children":[["$","path","1q9fwt",{"d":"M15 3h6v6"}],["$","path","gplh6r",{"d":"M10 14 21 3"}],["$","path","a6xqqp",{"d":"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"}],"$undefined"]}]]}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$3"}}]}]]}],null,"$L4"]}],"loading":null,"isPartial":false}
+4:["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]
+7:null

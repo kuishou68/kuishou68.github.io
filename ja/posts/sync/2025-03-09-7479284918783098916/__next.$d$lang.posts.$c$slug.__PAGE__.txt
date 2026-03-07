@@ -1,0 +1,742 @@
+1:"$Sreact.fragment"
+2:I[27917,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js","/_next/static/chunks/b70577f423f10c73.js"],""]
+5:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+3:T142d4,<h2 id="1-promise-a规范的基本概念">1. Promise A+规范的基本概念</h2>
+<p>Promise是一套专门处理异步场景的规范，它能有效的避免回调地狱的产生，使异步代码更加清晰、简洁、统一</p>
+<p>这套规范最早诞生于前端社区，规范名称为<a
+href="https://promisesaplus.com/">Promise A+</a></p>
+<p>该规范出现后，立即得到了很多开发者的响应</p>
+<p>Promise A+ 规定：</p>
+<ol type="1">
+<li><p>所有的异步场景，都可以看作是一个异步任务，每个异步任务，在JS中应该表现为一个<strong>对象</strong>，该对象称之为<strong>Promise对象</strong>，也叫做任务对象</p></li>
+<li><p>每个任务对象，都应该有两个阶段、三个状态</p>
+<p>根据常理，它们之间存在以下逻辑：</p>
+<ul>
+<li>任务总是从未决阶段变到已决阶段，无法逆行</li>
+<li>任务总是从挂起状态变到完成或失败状态，无法逆行</li>
+<li>时间不能倒流，历史不可改写，任务一旦完成或失败，状态就固定下来，永远无法改变
+<img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/fbf52cf4ee3349cfa0b5630b399a5681~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=wuGrgTGcdJZQDkI3BUU05tRi1QM%3D"
+alt="image.png" /></li>
+</ul></li>
+<li><p><code>挂起-&gt;完成</code>，称之为<code>resolve</code>；<code>挂起-&gt;失败</code>称之为<code>reject</code>。任务完成时，可能有一个相关数据；任务失败时，可能有一个失败原因。</p></li>
+<li><p>可以针对任务进行后续处理，针对完成状态的后续处理称之为onFulfilled，针对失败的后续处理称之为onRejected</p></li>
+</ol>
+<h2 id="2-创建promise">2. 创建Promise</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 创建一个任务对象，该任务立即进入 pending 状态</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> pro <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 任务的具体执行流程，该函数会立即被执行</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 调用 resolve(data)，可将任务变为 fulfilled 状态， data 为需要传递的相关数据</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 调用 reject(reason)，可将任务变为 rejected 状态，reason 为需要传递的失败原因</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>pro<span class="op">.</span><span class="fu">then</span>(</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  (data) <span class="kw">=&gt;</span> {</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">// onFulfilled 函数，当任务完成后，会自动运行该函数，data为任务完成的相关数据</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  (reason) <span class="kw">=&gt;</span> {</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">// onRejected 函数，当任务失败后，会自动运行该函数，reason为任务失败的相关原因</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>)<span class="op">;</span></span></code></pre></div>
+<h2 id="3-针对promise进行后续处理">3. 针对Promise进行后续处理</h2>
+<p>下面任务的最终状态是什么，相关数据或失败原因是什么，最终输出是什么？</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> pro1 <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;开始任务&#39;</span>)<span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">resolve</span>(<span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">reject</span>(<span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">resolve</span>(<span class="dv">3</span>)<span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;结束任务&#39;</span>)<span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(pro1)<span class="op">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> pro2 <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;开始任务&#39;</span>)<span class="op">;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">resolve</span>(<span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">resolve</span>(<span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;结束任务&#39;</span>)<span class="op">;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(pro2)<span class="op">;</span></span></code></pre></div>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/be7bff538cfe4ee0aac91780875578ca~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=6ptdR%2BuoXVHPKT9JBl95sG06Cdk%3D"
+alt="demo1_log.png" /></p>
+<ul>
+<li>这里有一点需要注意，<strong>promise的状态一旦确定下来之后，是不会发生变化的</strong>，但后续的代码还会继续执行。</li>
+</ul>
+<h2 id="4promise链式调用">4.Promise链式调用</h2>
+<ol type="1">
+<li><p>then方法必须会返回一个新的promise, 可以理解为
+<strong>后续处理也是一个任务</strong></p></li>
+<li><p>新任务的状态取决于后续处理：</p>
+<ul>
+<li>若没有相关的后续处理，新任务的状态和前任务一致，数据为前任务的状态。</li>
+<li>若有后续处理但未执行，新任务挂起。</li>
+<li>若后续处理执行了，则根据后续处理的情况确定新任务的状态。
+<ul>
+<li>后续处理执行无错，新任务的状态未完成，数据为后续处理的返回值。</li>
+<li>后续处理执行有错，新任务的状态为失败，数据为异常数据。</li>
+<li>后续执行后返回时一个任务对象，新任务的状态和数据与该任务对象一致。</li>
+</ul></li>
+</ul></li>
+</ol>
+<p>为了更直观的练习链式调用，来看几个题目：</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 下面代码的输出结果是什么</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> pro1 <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">resolve</span>(<span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span> <span class="dv">1000</span>)<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> pro2 <span class="op">=</span> pro1<span class="op">.</span><span class="fu">then</span>((data) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(data)<span class="op">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> data <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> pro3 <span class="op">=</span> pro2<span class="op">.</span><span class="fu">then</span>((data) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(data)<span class="op">;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(pro1<span class="op">,</span> pro2<span class="op">,</span> pro3)<span class="op">;</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(pro1<span class="op">,</span> pro2<span class="op">,</span> pro3)<span class="op">;</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span> <span class="dv">2000</span>)<span class="op">;</span></span></code></pre></div>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/51e034aeb29940fc865c9b304de17891~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=Mq6Nx%2Bdkqa%2FTXpReu4vnaf24B5M%3D"
+alt="image.png" /></p>
+<ul>
+<li>结果是先输出三个padding状态的promise, 然后再打印 1 2
+undefined，为啥？</li>
+<li>首先来看第一个起始任务pro1,
+等待1秒之后成功，pro1处于padding状态，接着产生了第二个任务pro2，pro2是pro1的后续处理，所以毫无疑问也是padding状态，里面的任务先不会执行，同样的pro3也是padding挂起状态。</li>
+<li>接着继续执行pro1里面的代码，1秒钟到了后，pro1变成了fulfilled
+数据是1；继续执行pro2里面的代码，打印了pro1传递过来的1，pro2变成了fulfilled
+data+1 返回一个2；pro3打印pro2传递过来的2，pro3状态变成fufilled,
+没有返回结果，所以打印undefined；</li>
+</ul>
+<p>再来一道，稍微改一下，把pro2的then改成catch：</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> pro1 <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">resolve</span>(<span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span> <span class="dv">1000</span>)<span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> pro2 <span class="op">=</span> pro1<span class="op">.</span><span class="fu">catch</span>((data) <span class="kw">=&gt;</span> {</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(data)<span class="op">;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> data <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> pro3 <span class="op">=</span> pro2<span class="op">.</span><span class="fu">then</span>((data) <span class="kw">=&gt;</span> {</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(data)<span class="op">;</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(pro1<span class="op">,</span> pro2<span class="op">,</span> pro3)<span class="op">;</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(pro1<span class="op">,</span> pro2<span class="op">,</span> pro3)<span class="op">;</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span> <span class="dv">2000</span>)<span class="op">;</span></span></code></pre></div>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/582b92ca8f64408a92232b6a543744a8~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=R7E%2B4ffTsXO341OHch0G%2BNNrF2Q%3D"
+alt="image.png" /></p>
+<ul>
+<li>结果是先输出三个padding状态的promise, 然后再打印 1 1 undefined</li>
+<li>起始任务pro1, 等待1秒之后成功，pro1处于padding状态，打印fulfilled
+1；接着产生了第二个任务pro2，但是这里pro2并没有对pro1的成功做处理，而是用catch,
+pro2的跟pro1一样处于padding状态，打印fulfilled
+1；pro3针对pro2的成功做了处理，输出完成的数据1，pro3的运行状态取决于pro2的运行结果，运行过程没有报错，padding状态，并没有返回结果，打印fulfilled
+undefined。</li>
+<li>最后打印 3个padding 1 fufilled 1 fufilled 1 fufilled undefined</li>
+</ul>
+<p>再来改一下，给pro2抛一个错</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> pro1 <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">resolve</span>(<span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span> <span class="dv">1000</span>)<span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> pro2 <span class="op">=</span> pro1<span class="op">.</span><span class="fu">then</span>((data) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">throw</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> data <span class="op">+</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> pro3 <span class="op">=</span> pro2<span class="op">.</span><span class="fu">then</span>((data) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(data)<span class="op">;</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(pro1<span class="op">,</span> pro2<span class="op">,</span> pro3)<span class="op">;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(pro1<span class="op">,</span> pro2<span class="op">,</span> pro3)<span class="op">;</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span> <span class="dv">2000</span>)<span class="op">;</span></span></code></pre></div>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/f1c4effe95fe45bbb8c7b11019e97b06~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=lBP2S2TyIeLbWBfzW6fZHz3EDew%3D"
+alt="image.png" /></p>
+<ul>
+<li>默认pro1、pro2、pro3 都是pendding状态，pro1打印fufilled
+1；运行pro2的过程中报了一个错，错误对象是3，pro2处于
+rejected状态，下面的return不会运行，因为前面报错了；pro3
+没有针对pro2的错误进行处理，pro3的状态跟pro2完全一致，rejected 3.</li>
+<li>最终输出 3个padding, fufilled 1 reject 3 reject 3</li>
+</ul>
+<p>继续下一道题目：</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> pro <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">resolve</span>(<span class="dv">1</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">then</span>((res) <span class="kw">=&gt;</span> {</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(res)<span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">catch</span>((err) <span class="kw">=&gt;</span> {</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">then</span>((res) <span class="kw">=&gt;</span> {</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(res)<span class="op">;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>cnosole<span class="op">.</span><span class="fu">log</span>(pro)</span></code></pre></div>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/6dfca81677e4453fadbfd83fc235c407~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=QslUqYu3kWU5PVwpOINGz5GpAew%3D"
+alt="image.png" /></p>
+<ul>
+<li>你可能会以为是 1 3 undefined，为啥不是呢？</li>
+<li>首先一步一步来分析，第一个promise处于padding
+resolve一个1，在第二个promise打印，输出 fulfilled 1;
+第三个promise只处理了失败的结果，并且return
+3，问题就在这里，你可能以为会把这个3给到第四个
+promise，结果确实由于第三个promise没有对第二个promise成功的状态进行处理，所以延续了第二个promise的fulfilled
+2的结果；第4个promise的结果取决于上一个promise，第三个promise成功了，并且延续的第二个的promise，所以在第四个promise打印的时候还是2，并不是3，最后第4个promise没有结果可返回，打印了一个undefined。</li>
+</ul>
+<p>再稍微改造一下：</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> pro <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">resolve</span>()</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">then</span>((res) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(res<span class="op">.</span><span class="fu">toString</span>())<span class="op">;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">catch</span>((err) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">then</span>((res) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(res)<span class="op">;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(pro)</span></code></pre></div>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/e3afa6ff444a4956a1ab590c0b07fd1e~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=3fbFkXoL2rYuZhSdIGkVzShdQTA%3D"
+alt="image.png" /></p>
+<ul>
+<li>第一个promise 这里简称pro1, pro1 resolve一个空，所以是fuilled
+undefined；pro2 将pro1延续的undefined进行toString(),
+所以肯定报错，pro2变成了rejected状态；因为pro2报错，pro3的状态取决于pro2的处理，pro3捕获到了异常，并成功return了一个3，运行状态为fulfilled
+返回一个3；pro4运行过程中没有错误，运行状态为 fufilled
+打印pro3延续的结果3，pro4没有返回值，最后打印undefined</li>
+</ul>
+<p>继续下一道:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">resolve</span>(<span class="dv">1</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>((res) <span class="kw">=&gt;</span> {</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(res)<span class="op">;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">&#39;2&#39;</span>)<span class="op">;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">catch</span>((err) <span class="kw">=&gt;</span> {</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">throw</span> err<span class="op">;</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>((res) <span class="kw">=&gt;</span> {</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(res)<span class="op">;</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span></code></pre></div>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/669f4502571444d890f071b2be66b701~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=VqA5viMIgq87VffbU3l%2F6gPp4FQ%3D"
+alt="image.png" /></p>
+<ul>
+<li>首先第一个pro1，resolve了一个1，fulfilled
+1；pro2打印1，抛出异常，fulfilled error('2');
+pro3捕获到了异常，同时抛出异常，后面的return 3 不会执行，fulfilled
+error('2')；pro4 打印pro3的错误，fulfilled undefined;</li>
+</ul>
+<div class="sourceCode" id="cb9"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> promise1 <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">reject</span>()<span class="op">;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span> <span class="dv">1000</span>)<span class="op">;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> promise2 <span class="op">=</span> promise1<span class="op">.</span><span class="fu">catch</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;promise1&#39;</span><span class="op">,</span> promise1)<span class="op">;</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;promise2&#39;</span><span class="op">,</span> promise2)<span class="op">;</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;promise1&#39;</span><span class="op">,</span> promise1)<span class="op">;</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;promise2&#39;</span><span class="op">,</span> promise2)<span class="op">;</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span> <span class="dv">2000</span>)<span class="op">;</span></span></code></pre></div>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/17af70bb7a73458296052b51873eebd6~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=BuFihQuiACf5dTXPCTaQNK%2BP9xE%3D"
+alt="image.png" /></p>
+<ul>
+<li>一开始打印的两个promise 都处于padding挂起状态, 1秒后
+promise1被拒绝了，rejected
+undefined；promise2对promise1的错误进行处理，并返回了一个2，promise2成功运行
+fulfilled 2；</li>
+</ul>
+<p>换一个类型的题目：</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode js"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> promise <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>        <span class="fu">resolve</span>()<span class="op">;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="dv">3</span>)<span class="op">;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="dv">4</span>)<span class="op">;</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="dv">5</span>)<span class="op">;</span></span></code></pre></div>
+<ul>
+<li>运行第一个promise，输出1，setTimeout没有传第二个参数，你可能会以为会立即执行，但是因为setTimeout属于宏任务，就算没有传递第二个参数，被分配到宏任务队列也是处于等待执行状态，因为resolve在setTimeout里面，整个promise没有改变状态，依旧还是padding状态；</li>
+<li>第二个promise的then需要等待成功之后才会执行，但是因为上一个promise未成功，第二个promise不会进入微任务队列，所以不会执行；</li>
+<li>接着打印全局作用域的5，全局作用域的任务执行完了，就会把宏任务队列的setTimeout进行执行，打印2，返回第一个promise的resolve状态，第二个promise进入微任务队列，第一个promise继续打印3，第一个promise执行完了，轮到第二个promise执行，打印4；最终结果1
+5 2 3 4</li>
+</ul>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/a6514d5648564a72811dbc59ea4be388~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=jjdfcpTiAM8r07%2FGJvzlh399cHk%3D"
+alt="image.png" /></p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode js"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> promise <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">resolve</span>()<span class="op">;</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="dv">3</span>)<span class="op">;</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="dv">4</span>)<span class="op">;</span></span></code></pre></div>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/3fa64c65470f42cd8b09f152fa25e6af~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=Lvlgr8aevlAXC7Hd2507r4BNkZA%3D"
+alt="image.png" /></p>
+<ul>
+<li>首先登场的是一个setTimeout，加入到宏队列；其次是一个promise，输出一个2，resolve将状态改为fulfilled；</li>
+<li>.then开启了第二个promise，进入微任务队列，这个时候不会立即执行微任务队列，因为全局作用域还有代码没执行，全局作用域打印一个4</li>
+<li>接着执行微任务队列，打印3，最后执行宏任务，打印1</li>
+</ul>
+<p>来个简单一点的：</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode js"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> promise1 <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">reject</span>()<span class="op">;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span> <span class="dv">1000</span>)<span class="op">;</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> promise2 <span class="op">=</span> promise1<span class="op">.</span><span class="fu">catch</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;promise1&#39;</span><span class="op">,</span> promise1)<span class="op">;</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;promise2&#39;</span><span class="op">,</span> promise2)<span class="op">;</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;promise1&#39;</span><span class="op">,</span> promise1)<span class="op">;</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;promise2&#39;</span><span class="op">,</span> promise2)<span class="op">;</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span> <span class="dv">2000</span>)<span class="op">;</span></span></code></pre></div>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/adaa4430459c4ad79a49d224df3a7658~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=Z3v4mnZ6mdWbzOD2CTkNmSgDJ34%3D"
+alt="image.png" /></p>
+<ul>
+<li>有了前面的积累，充满的一肯定一眼就能看出输出啥了，没错，首先是两个padding，2s后打印undefined
+2</li>
+</ul>
+<h2 id="5-async-await-消除回调">5. async await 消除回调</h2>
+<ul>
+<li>async
+关键字用于修饰函数，一般出现在函数前面，一定返回一个promise;</li>
+<li>await 关键字表示等待某个Promise完成，它必须用于async函数中;</li>
+</ul>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode js"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="fu">m</span>(){</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> n <span class="op">=</span> <span class="cf">await</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(n)<span class="op">;</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="fu">m</span>()<span class="op">;</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="dv">2</span>)<span class="op">;</span></span></code></pre></div>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/2dec98ee08be4911beb9fa99a74fb611~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=4mDn9se%2Bi43qj4U0qIt%2BkiFZFYg%3D"
+alt="image.png" /></p>
+<ul>
+<li>为啥是 0 2
+1，脑瓜子是不是嗡嗡的，听我细细道来，别被语法糖迷惑住了，async
+后面的一定返回一个promise，m函数里面首先打印一个0；</li>
+<li>而<code>const n = await 1；console.log(n)</code> 相当于
+<code>Promise.resolve(1).then((e) =&gt; { console.log(n); }) </code>,
+给n赋值和输出n这段逻辑本质上是在微队列，打印完0之后不会卡住等待await执行，而是结束掉m函数，执行全局作用域的代码，打印2；最后执行微队列的代码，打印1，有意思吧；</li>
+</ul>
+<p>再来一道：</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode js"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="fu">m</span>() {</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> n <span class="op">=</span> <span class="cf">await</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(n)<span class="op">;</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>(<span class="kw">async</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> <span class="fu">m</span>()<span class="op">;</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>})()<span class="op">;</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="dv">3</span>)<span class="op">;</span></span></code></pre></div>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/fca76c16f1034dcd87efb8a103bef2c4~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=49kZX9nCWxNEM6BYHKpRb%2FyZZCE%3D"
+alt="image.png" /></p>
+<ul>
+<li>看完不自信了吧，为啥？看了这么多题，还是会错？别急，听我一步一步分析</li>
+<li>首先看括号里面的立即执行函数，立即执行函数里面await调用m()函数，打印0，后面的await进入微队列等待，那么立即执行函数里面的await返回的promise也是处于padding状态，下面的代码无法继续执行；</li>
+<li>回到全局作用域，打印3，执行栈清空，开始执行微队列，打印1，m()函数执行完，可以执行立即执行函数了，打印2；最后打印
+0 3 1 2</li>
+</ul>
+<p>继续下一道：</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode js"><code class="sourceCode javascript"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="fu">m1</span>() {</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="fu">m2</span>() {</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> n <span class="op">=</span> <span class="cf">await</span> <span class="fu">m1</span>()<span class="op">;</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(n)<span class="op">;</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="fu">m3</span>() {</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> n <span class="op">=</span> <span class="fu">m2</span>()<span class="op">;</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(n)<span class="op">;</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">3</span><span class="op">;</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a><span class="fu">m3</span>()<span class="op">.</span><span class="fu">then</span>((n) <span class="kw">=&gt;</span> {</span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(n)<span class="op">;</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a><span class="fu">m3</span>()<span class="op">;</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="dv">4</span>)<span class="op">;</span></span></code></pre></div>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/9977435dfb764dc39d643d4342af4afa~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=GY3U%2FLI0HEoI1nEXuE5uCpuYTpw%3D"
+alt="image.png" /></p>
+<ul>
+<li>嘿，朋友，还好吗？别自闭了，这个确实有点绕，也不知道谁脑洞这么大出的这题，如果你有此困惑，说明还没彻底掌握，坚持住，听我逐一分析。</li>
+<li>首先直接看m3.then(), m3返回一个promise,
+m3里面调用m2，m2里面调用m1，m1里面 return 了一个1，状态为fulfilled
+1；</li>
+<li>m2的<code>await m1()</code>相当于
+<code>await 1</code>，这个时候打印n，后续代码进入微队列，状态为padding。</li>
+<li>m3 <code>const n = m2()</code> 注意这里没有使用
+await，打印n，返回3，状态为fulfilled 3；</li>
+<li>m3执行完了，调用 .then 函数，.then里面的n是m3 返回的
+3，所以打印3；</li>
+<li>接着下面又调用了一次m3，继续m3调用m2，m2调用m1，m1返回1，状态为fufilled
+1；m2 的await
+进入微队列，后续代码进入微队列，状态为padding；m3没有等待m2，直接完成，返回3；</li>
+<li>最后输出全局作用域的4，微队列的一个个拿出来，先输出 1，接着是3
+1，最后打印 4 1 3 1</li>
+</ul>
+<p>累了没？那来一道看起来比较简单的开火车题目：</p>
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode js"><code class="sourceCode javascript"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Promise</span><span class="op">.</span><span class="fu">resolve</span>(<span class="dv">1</span>)<span class="op">.</span><span class="fu">then</span>(<span class="dv">2</span>)<span class="op">.</span><span class="fu">then</span>(<span class="bu">Promise</span><span class="op">.</span><span class="fu">resolve</span>(<span class="dv">3</span>))<span class="op">.</span><span class="fu">then</span>(<span class="bu">console</span><span class="op">.</span><span class="fu">log</span>)<span class="op">;</span></span></code></pre></div>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/0d025ec182254e4da149783e313001ac~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=cf5YBsqkoJ1y%2FTN3lp8e3jRDKjc%3D"
+alt="image.png" /></p>
+<ul>
+<li>你个老六，说好的比较简单，怎么火车上面还有雷，2和3去哪了，被炸了吗？</li>
+<li>别慌，事出反常必有妖，且听我慢慢分析，事情还得从
+<code>.then(2)</code>开始，注意，这里不是一个函数，而是一个2，这不合常理，你只要记住一点，以后看到then里面传的不是函数，直接忽略这段代码，为什么？因为promise的then发现你传递的不是一个promise，也就是没有注册回调函数，那它的结果和状态和上一个promise是一致的，相当于
+<code>.then(null)</code>;</li>
+<li>继续看
+<code>.then(Promise.resolve(3))</code>，.then里面传递的是一个promise对象，依旧不是函数，所以是无效的传递，也相当于
+<code>.then(null)</code>;</li>
+<li>最后一个不用解释了，<code>.then(console.log)</code>的<code>console.log</code>是一个函数，打印undefined。</li>
+<li>奇怪的知识又增加了吧，记得关注我，我会提供更多查漏补缺的知识，来刷新你的认识。</li>
+</ul>
+<p>来一个比较经典的问题，你可能会比较熟悉：</p>
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode js"><code class="sourceCode javascript"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> a<span class="op">;</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> b <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;promise1&#39;</span>)<span class="op">;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="pp">setTimeout</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">resolve</span>()<span class="op">;</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span> <span class="dv">1000</span>)<span class="op">;</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;promise2&#39;</span>)<span class="op">;</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;promise3&#39;</span>)<span class="op">;</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;promise4&#39;</span>)<span class="op">;</span></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="kw">new</span> <span class="bu">Promise</span>(<span class="kw">async</span> (resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(a)<span class="op">;</span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> b<span class="op">;</span></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(a)<span class="op">;</span></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;after1&#39;</span>)<span class="op">;</span></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> a<span class="op">;</span></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">resolve</span>(<span class="kw">true</span>)<span class="op">;</span></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;after2&#39;</span>)<span class="op">;</span></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;end&#39;</span>)<span class="op">;</span></span></code></pre></div>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/717a457ec3254ac68dd4b91f6fbc97d9~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=J7RXos9zD7ln1jy%2FjbU0X6XcQXs%3D"
+alt="image.png" /></p>
+<ul>
+<li>这个题有点复杂，但是别乱了阵脚，还是逐一分析。</li>
+<li>首先定义一个a，值为undefined，然后定义一个b，你可能会以为直接是一个promise，但在js里面变量的声明和赋值是有先后顺序的，出现b这种，得先把promise算出来，才能赋值给b，在没算出来之前，都是undefined。</li>
+<li>来看b的表达式，开了一个火车，从第一个promise开始，resolve放在一个定时器里面，也就是1s之后才能确定后面promise的状态，这里有个小知识，不管promise的火车有多长，.then接的有多少个，返回的都是最后一个
+.then ，所以b是一个 padding状态的promise，打印 'promise1'。</li>
+<li>继续看下面代码，创建了一个新的promise赋值给a，new Promise
+表达式里面首先打印a，因为a还没有成功赋值，所以打印上面的undefined；</li>
+<li>接着看<code>await b</code>
+等待上面的代码，因此后面<code>await b</code>后面的代码不会执行，进入微队列，因此整个赋值给b的promise执行解释，状态为padding，赋值给a；</li>
+<li>执行打印全局作用域的 end
+，等待1s后，定时器结束，赋值给b的promis状态为fufilled，执行后面的 .then
+函数，开火车，依次打印 'promise2' 'promise3' 'promise4';</li>
+<li>b的promise赋值完成之后，微任务队列中
+<code>await b</code>后面的代码可以执行了，接着输出一个
+'after1'，又继续打印a，a这里前面执行过，为padding状态的promise；</li>
+<li>接着看 <code>await a</code>,
+自己等待padding状态的自己之后再执行下面的代码？这事肯定没尽头，所以后面的代码不会再执行了。</li>
+</ul>
+<p>继续下一道，我怕再玩下去，你要忍不住到要打我了：</p>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode js"><code class="sourceCode javascript"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="fu">async1</span>() {</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;async1 start&#39;</span>)<span class="op">;</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">await</span> <span class="fu">async2</span>()<span class="op">;</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;async1 end&#39;</span>)<span class="op">;</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="kw">async</span> <span class="kw">function</span> <span class="fu">async2</span>() {</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;async2&#39;</span>)<span class="op">;</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;script start&#39;</span>)<span class="op">;</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="pp">setTimeout</span>(<span class="kw">function</span> () {</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;setTimeout&#39;</span>)<span class="op">;</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>}<span class="op">,</span> <span class="dv">0</span>)<span class="op">;</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="fu">async1</span>()<span class="op">;</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="kw">new</span> <span class="bu">Promise</span>(<span class="kw">function</span> (resolve) {</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;promise1&#39;</span>)<span class="op">;</span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">resolve</span>()<span class="op">;</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>})<span class="op">.</span><span class="fu">then</span>(<span class="kw">function</span> () {</span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;promise2&#39;</span>)<span class="op">;</span></span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;script end&#39;</span>)<span class="op">;</span></span></code></pre></div>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/995653b8c722479083acc47f3d0ad194~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=1qQ7JpzH7ox5VVSG07q%2FIXaOXMM%3D"
+alt="image.png" /></p>
+<ul>
+<li>这是一道promise async 混合的题目，但是不要慌，其实都一样。</li>
+<li>首先打印一个 'script start',
+再看宏任务，有一个setTimeout，等待0秒，排队去，再看微任务，async1()被调用，打印
+'async1 start'，然后await
+异步调用async2()，打印async2，返回一个promise，后续代码进入微队列；</li>
+<li>继续回到外层的 new Promise，打印
+'promise1'，resolve完成，后面的.then进入微队列;</li>
+<li>继续回到全局作用域的代码，打印 'script
+end'，主线程执行完了，开始从微任务队列找代码执行，微任务首先打印async1里面等待的
+'async1 end', async1这个promise状态完成，fufilled，然后再输出 new
+Promise 中挂起的 'promise2'，微队列清空；</li>
+<li>再看宏队列，打印 'setTimeout'，结束。</li>
+</ul>
+<p>最后一道，绝对颠覆你对finally的认知：</p>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode js"><code class="sourceCode javascript"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Promise</span><span class="op">.</span><span class="fu">resolve</span>(<span class="st">&#39;1&#39;</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(res <span class="kw">=&gt;</span> {</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(res)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">finally</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;finally&#39;</span>)</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="bu">Promise</span><span class="op">.</span><span class="fu">resolve</span>(<span class="st">&#39;2&#39;</span>)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">finally</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;finally2&#39;</span>)</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&#39;我是finally2返回的值&#39;</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(res <span class="kw">=&gt;</span> {</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;finally2后面的then函数&#39;</span><span class="op">,</span> res)</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>  })</span></code></pre></div>
+<p>打印结果：</p>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/de4cf28ee0c847ceae76a5bbb168db62~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772942507&amp;x-signature=iZhjxOYedYPkoacu1jqBE%2FXeasU%3D"
+alt="image.png" /></p>
+<ul>
+<li>你可能会疑惑，为什么在执行第一个promise的时候，打印完1，没有继续执行finally，而是转而执行第二个promise的finally？</li>
+<li>这个问题涉及到 JavaScript 中 Promise
+的执行机制，特别是微任务（microtask）的调度顺序。让我为你详细解答，为什么在执行第一个
+Promise 的 <code>.then</code> 并打印 <code>'1'</code>
+后，没有立即执行它的 <code>.finally</code>，而是转而执行第二个 Promise
+的 <code>.finally</code>。</li>
+</ul>
+<p>为了方便理解，先看看代码：</p>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="bu">Promise</span><span class="op">.</span><span class="fu">resolve</span>(<span class="st">&#39;1&#39;</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(res <span class="kw">=&gt;</span> {</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(res)  <span class="co">// 打印 &#39;1&#39;</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">finally</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;finally&#39;</span>)  <span class="co">// 打印 &#39;finally&#39;</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="bu">Promise</span><span class="op">.</span><span class="fu">resolve</span>(<span class="st">&#39;2&#39;</span>)</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">finally</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;finally2&#39;</span>)  <span class="co">// 打印 &#39;finally2&#39;</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&#39;我是finally2返回的值&#39;</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(res <span class="kw">=&gt;</span> {</span>
+<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;finally2后面的then函数&#39;</span><span class="op">,</span> res)  <span class="co">// 打印 &#39;finally2后面的then函数 2&#39;</span></span>
+<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>  })</span></code></pre></div>
+<p>运行结果是：</p>
+<pre><code>1
+finally2
+finally
+finally2后面的then函数 2</code></pre>
+<p>你好奇的是：为什么在打印 <code>'1'</code> 后，没有紧接着打印
+<code>'finally'</code>，而是先打印了 <code>'finally2'</code>？</p>
+<p>这与 JavaScript 的 <strong>微任务调度机制</strong>
+有关。让我们一步步拆解：</p>
+<h4 id="1-promise-的链式调用与微任务队列">1. Promise
+的链式调用与微任务队列</h4>
+<ul>
+<li>在 JavaScript 中，Promise 的 <code>.then</code>、<code>.catch</code>
+和 <code>.finally</code> 都会返回一个新的 Promise 对象。</li>
+<li>当一个 Promise 完成（resolved 或 rejected）时，它注册的回调（如
+<code>.then</code> 或 <code>.finally</code> 中的函数）会被加入
+<strong>微任务队列</strong>。</li>
+<li>微任务队列是先进先出（FIFO）的，任务会按照加入队列的顺序依次执行。</li>
+</ul>
+<h4 id="2-同步代码的执行">2. 同步代码的执行</h4>
+<p>当代码运行时，同步部分会立即执行：</p>
+<ul>
+<li><strong>第一个 Promise</strong>：<code>Promise.resolve('1')</code>
+创建一个立即 resolved 的 Promise，值为 <code>'1'</code>。它的
+<code>.then</code>
+回调（<code>console.log(res)</code>）被加入微任务队列。</li>
+<li><strong>第二个 Promise</strong>：<code>Promise.resolve('2')</code>
+也创建一个立即 resolved 的 Promise，值为 <code>'2'</code>。它的
+<code>.finally</code>
+回调（<code>console.log('finally2')</code>）也被加入微任务队列。</li>
+</ul>
+<p>同步代码执行完后，微任务队列的初始状态是：</p>
+<ul>
+<li>队列：[<code>第一个 Promise 的 .then</code>,
+<code>第二个 Promise 的 .finally</code>]</li>
+</ul>
+<h4 id="3-微任务的逐步执行">3. 微任务的逐步执行</h4>
+<p>JavaScript
+的事件循环会在同步代码执行完后，清空微任务队列。让我们看看具体过程：</p>
+<ul>
+<li><p><strong>执行第一个任务</strong>：</p>
+<ul>
+<li>从队列中取出 <code>第一个 Promise 的 .then</code>，执行
+<code>console.log('1')</code>，打印 <code>'1'</code>。</li>
+<li><code>.then</code> 执行后，返回一个新的 Promise（默认
+resolved），并将
+<code>.finally(() =&gt; { console.log('finally') })</code>
+加入微任务队列。</li>
+<li>此时队列变为：[<code>第二个 Promise 的 .finally</code>,
+<code>第一个 Promise 的 .finally</code>]</li>
+</ul></li>
+<li><p><strong>执行第二个任务</strong>：</p>
+<ul>
+<li>队列中下一个任务是 <code>第二个 Promise 的 .finally</code>，执行
+<code>console.log('finally2')</code>，打印
+<code>'finally2'</code>。</li>
+<li><code>.finally</code> 执行后，返回一个新的 Promise（值为原始的
+<code>'2'</code>），并将
+<code>.then(res =&gt; { console.log('finally2后面的then函数', res) })</code>
+加入微任务队列。</li>
+<li>队列变为：[<code>第一个 Promise 的 .finally</code>,
+<code>第二个 Promise 的 .then</code>]</li>
+</ul></li>
+<li><p><strong>执行第三个任务</strong>：</p>
+<ul>
+<li>执行 <code>第一个 Promise 的 .finally</code>，打印
+<code>'finally'</code>。</li>
+<li>队列变为：[<code>第二个 Promise 的 .then</code>]</li>
+</ul></li>
+<li><p><strong>执行第四个任务</strong>：</p>
+<ul>
+<li>执行 <code>第二个 Promise 的 .then</code>，打印
+<code>'finally2后面的then函数 2'</code>。</li>
+<li>队列清空，执行结束。</li>
+</ul></li>
+</ul>
+<h4 id="4-关键点解答">4. 关键点解答</h4>
+<p>为什么在打印 <code>'1'</code> 后没有立即执行
+<code>'finally'</code>？原因在于：</p>
+<ul>
+<li>当第一个 Promise 的 <code>.then</code> 执行时，它的
+<code>.finally</code>
+回调并不是立即执行，而是被加入微任务队列的末尾。</li>
+<li>此时，第二个 Promise 的 <code>.finally</code>
+已经在队列中（因为它在同步代码执行时就加入了），而且排在
+<code>第一个 Promise 的 .finally</code> 前面。</li>
+<li>微任务队列严格遵循先进先出的原则，因此在执行完
+<code>第一个 Promise 的 .then</code> 后，会先执行队列中已有的
+<code>第二个 Promise 的 .finally</code>（打印
+<code>'finally2'</code>），然后才轮到
+<code>第一个 Promise 的 .finally</code>（打印
+<code>'finally'</code>）。</li>
+</ul>
+<p>为了更直观地展示，以下是队列的演变过程：</p>
+<ol type="1">
+<li><p><strong>初始状态</strong>（同步代码后）：</p>
+<ul>
+<li>队列：[<code>第一个 Promise 的 .then</code>,
+<code>第二个 Promise 的 .finally</code>]</li>
+</ul></li>
+<li><p><strong>执行 .then 后</strong>（打印 <code>'1'</code>）：</p>
+<ul>
+<li>队列：[<code>第二个 Promise 的 .finally</code>,
+<code>第一个 Promise 的 .finally</code>]</li>
+</ul></li>
+<li><p><strong>执行第二个 .finally 后</strong>（打印
+<code>'finally2'</code>）：</p>
+<ul>
+<li>队列：[<code>第一个 Promise 的 .finally</code>,
+<code>第二个 Promise 的 .then</code>]</li>
+</ul></li>
+<li><p><strong>执行第一个 .finally 后</strong>（打印
+<code>'finally'</code>）：</p>
+<ul>
+<li>队列：[<code>第二个 Promise 的 .then</code>]</li>
+</ul></li>
+<li><p><strong>执行第二个 .then 后</strong>（打印
+<code>'finally2后面的then函数 2'</code>）：</p>
+<ul>
+<li>队列：空</li>
+</ul></li>
+</ol>
+<p>在执行第一个 Promise 的 <code>.then</code> 并打印 <code>'1'</code>
+后，它的 <code>.finally</code> 没有立即执行，是因为
+<code>.finally</code> 的回调是在 <code>.then</code>
+执行后才加入微任务队列的。而第二个 Promise 的 <code>.finally</code>
+在同步代码阶段就已加入队列，排在前面。因此，微任务调度机制决定先执行
+<code>finally2</code>，然后才执行第一个 Promise 的
+<code>finally</code>。这种顺序是由微任务队列的 FIFO
+特性决定的，确保了异步任务的执行有条不紊。</p>
+<h2 id="总结">总结</h2>
+<ul>
+<li><strong>优先级</strong>：同步代码 &gt; 微任务 &gt;
+宏任务；微任务队列必须清空后才会处理下一个宏任务。</li>
+<li><strong>状态不可逆</strong>：一旦从 Pending
+变为其他状态，不能再改变；</li>
+<li>js代码<strong>永远不会卡住</strong>，后面有代码就会继续执行后面的；</li>
+<li>任何一个 <code>.then()</code> 抛出错误，会直接跳到最近的 <code>.catch()</code>；</li>
+<li>then里面如果传的不是函数，直接忽略这段代码，因为promise的then发现你传递的不是一个promise，也就是没有注册回调函数，那它的结果和状态和上一个promise是一致的，相当于 <code>.then(null)</code>;</li>
+<li><code>.finally()</code>方法的回调函数不接受任何的参数，不管Promise对象最后的状态如何都会执行；</li>
+<li>微任务队列是<strong>先进先出</strong>（FIFO）的，任务会按照加入队列的顺序依次执行；</li>
+<li>.then、.catch 和 .finally 会返回一个新的 Promise
+对象，<strong>事件循环</strong>会在同步代码执行完后，清空微任务队列。</li>
+</ul>
+0:{"buildId":"PBOm4kDuGvs9RUGVV0N_6","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L2",null,{"href":"/ja/archives","className":"ghost-inline","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","aria-hidden":"true","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"すべての記事"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"Juejin から同期"}],["$","span",null,{"children":"2025-03-09"}],["$","span",null,{"children":[19," ","分"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"深入理解 Promise，看看你会几道题"}],["$","p",null,{"className":"hero-copy","children":"--- theme: channing-cyan --- 1. Promise A+规范的基本概念 Promise是一套专门处理异步场景的规范，它能有效的避免回调地狱的产生，使异步代码更加清晰、简洁、统一 这套规范最早诞生于前端社区，规范名称为Promise A+ 该规范出现后，立即得到了很多开发者的响应 Promise A+ 规定： 1. 所有的异步场景，..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"要約"}],["$","span",null,{"children":"この記事は新しいブログ構造の中で保持されつつ、中国語の原文もそのまま残しています。"}],["$","a",null,{"href":"https://juejin.cn/post/7479284918783098916","target":"_blank","rel":"noreferrer","className":"ghost-inline","children":["元記事",["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-external-link h-4 w-4","aria-hidden":"true","children":[["$","path","1q9fwt",{"d":"M15 3h6v6"}],["$","path","gplh6r",{"d":"M10 14 21 3"}],["$","path","a6xqqp",{"d":"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"}],"$undefined"]}]]}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$3"}}]}]]}],null,"$L4"]}],"loading":null,"isPartial":false}
+4:["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]
+7:null

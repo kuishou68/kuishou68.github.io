@@ -1,0 +1,337 @@
+1:"$Sreact.fragment"
+2:I[44130,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js"],"ThemeProvider"]
+3:I[54542,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js"],"Live2DLoader"]
+4:I[22870,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+5:I[70047,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+6:I[95261,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js","/_next/static/chunks/b70577f423f10c73.js"],"HtmlLocaleSync"]
+7:I[4721,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js","/_next/static/chunks/b70577f423f10c73.js"],"BlogNavbar"]
+12:I[70681,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+:HL["/_next/static/chunks/5ff512ca50d86cc4.css","style"]
+:HL["/_next/static/chunks/d8a04d2be5c94533.css","style"]
+:HL["/_next/static/media/0c89a48fa5027cee-s.p.4564287c.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/130b5bec7367fe75-s.p.8efb6a94.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5f402bd2d8eef81a-s.p.b72f0478.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/ad9c66e761fed85a-s.p.bd81a64b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/feb57b2dc8f29018-s.p.2539f70a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"b":"PBOm4kDuGvs9RUGVV0N_6","c":["","zh","posts","sync","2021-07-30-6990534958431338509",""],"q":"","i":false,"f":[[["",{"children":[["lang","zh","d"],{"children":["posts",{"children":[["slug","sync/2021-07-30-6990534958431338509","c"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/5ff512ca50d86cc4.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/chunks/d8a04d2be5c94533.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/869f3c4760d682ac.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/5ca2d6e8edb00962.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"space_grotesk_f88813a-module__ZvLbQq__variable newsreader_caa3ccf4-module__7BqBPq__variable noto_sans_sc_820cd55a-module__sRRUGq__variable noto_sans_jp_1317c327-module__5MdXXa__variable noto_naskh_arabic_48867b81-module__7wgKba__variable antialiased","children":["$","$L2",null,{"attribute":"class","defaultTheme":"dark","enableSystem":false,"disableTransitionOnChange":true,"children":[["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","$L6",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"en","homeHref":"/","rootAliasForDefaultLocale":true,"labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/","label":"Home"},{"href":"/#latest","label":"Latest"},{"href":"/#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/#community","label":"Community"}],"legacyRoots":[{"slug":"A前端👨‍💻","title":{"en":"Frontend Atlas","zh":"前端图谱","es":"Atlas Frontend","ja":"フロントエンド地図","ar":"أطلس الواجهة الأمامية"},"description":{"en":"CSS, Vue, React, Canvas, Node, uni-app, build tools, and the earlier front-end trail.","zh":"CSS、Vue、React、Canvas、Node、uni-app、打包工具，以及更早的前端路径。","es":"CSS, Vue, React, Canvas, Node, uni-app, herramientas de build y el rastro front-end más temprano.","ja":"CSS、Vue、React、Canvas、Node、uni-app、ビルドツールなど、初期のフロントエンド蓄積。","ar":"CSS وVue وReact وCanvas وNode وuni-app وأدوات البناء والمسار الأقدم للواجهة الأمامية."}},{"slug":"B面试题📑","title":{"en":"Interview Bank","zh":"面试题仓库","es":"Banco de Entrevistas","ja":"面接バンク","ar":"بنك المقابلات"},"description":{"en":"Question banks for browser internals, networking, Vue, React, JavaScript, and engineering.","zh":"浏览器、网络、Vue、React、JavaScript 和工程化的面试题集合。","es":"Baterías de preguntas sobre navegador, red, Vue, React, JavaScript e ingeniería.","ja":"ブラウザ、ネットワーク、Vue、React、JavaScript、開発基盤に関する面接問題。","ar":"مجموعات أسئلة عن المتصفح والشبكات وVue وReact وJavaScript والهندسة."}},{"slug":"Vue实战💻","title":{"en":"Vue Practice","zh":"Vue 实战","es":"Práctica Vue","ja":"Vue 実戦","ar":"تطبيقات Vue"},"description":{"en":"Real project records around Ant Design, Echarts, mini programs, stores, and browser features.","zh":"围绕 Ant Design、Echarts、小程序、商城项目和浏览器功能的一组实战记录。","es":"Registros reales sobre Ant Design, Echarts, mini programas, tiendas y funciones del navegador.","ja":"Ant Design、Echarts、ミニプログラム、ストア、ブラウザ機能に関する実戦記録。","ar":"سجلات عملية حول Ant Design وEcharts والبرامج المصغرة والمتاجر وميزات المتصفح."}},{"slug":"走过的路🌱","title":{"en":"Growing Path","zh":"走过的路","es":"Camino Recorrido","ja":"歩いてきた道","ar":"الطريق الذي سلكته"},"description":{"en":"Yearly reviews and growth notes that carry more life signal than technical polish.","zh":"年度总结和成长记录，保留生活感和时间感。","es":"Revisiones anuales y notas de crecimiento con más vida que pulido técnico.","ja":"年次レビューと成長記録。技術の整い方より時間の感触が残っています。","ar":"مراجعات سنوية وملاحظات نمو تحمل أثر الحياة أكثر من الصقل التقني."}},{"slug":"读过的书📚️","title":{"en":"Reading Shelf","zh":"读书笔记","es":"Estante de Lectura","ja":"読書棚","ar":"رف القراءة"},"description":{"en":"Book notes across networking, JavaScript, algorithms, and systems thinking.","zh":"网络、JavaScript、算法和系统思维方向的读书笔记。","es":"Notas de lectura sobre redes, JavaScript, algoritmos y pensamiento de sistemas.","ja":"ネットワーク、JavaScript、アルゴリズム、システム思考に関する読書ノート。","ar":"ملاحظات قراءة حول الشبكات وJavaScript والخوارزميات والتفكير المنظومي."}},{"slug":"PHP🐘","title":{"en":"PHP Shelf","zh":"PHP 归档","es":"Estante PHP","ja":"PHP 棚","ar":"رف PHP"},"description":{"en":"Earlier PHP notes and experiments that still belong in the public record.","zh":"更早期的 PHP 文章和实验记录。","es":"Notas y experimentos tempranos de PHP que siguen formando parte del archivo.","ja":"初期の PHP ノートと実験記録。","ar":"ملاحظات وتجارب PHP المبكرة التي ما زالت جزءًا من السجل."}},{"slug":"Python🐍","title":{"en":"Python Shelf","zh":"Python 归档","es":"Estante Python","ja":"Python 棚","ar":"رف Python"},"description":{"en":"Small scraping experiments and data-oriented notes from the earlier Python phase.","zh":"偏数据和爬取的小实验，保留了更早一阶段的 Python 轨迹。","es":"Pequeños experimentos de scraping y notas orientadas a datos de la etapa temprana con Python.","ja":"スクレイピングやデータ寄りの小さな Python 実験。","ar":"تجارب صغيرة في الاستخراج والبيانات من المرحلة المبكرة مع Python."}}]}],"$L8","$L9","$La","$Lb","$Lc"]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]}]]}],{"children":["$Ld",{"children":["$Le",{"children":["$Lf",{"children":["$L10",{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],"$L11",false]],"m":"$undefined","G":["$12",[]],"S":true}
+13:I[27917,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js","/_next/static/chunks/b70577f423f10c73.js"],""]
+16:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"OutletBoundary"]
+17:"$Sreact.suspense"
+19:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"ViewportBoundary"]
+1b:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"MetadataBoundary"]
+8:["$","div",null,{"className":"background-orb background-orb-one"}]
+9:["$","div",null,{"className":"background-orb background-orb-two"}]
+a:["$","div",null,{"className":"background-grid"}]
+b:["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","div",null,{"className":"mx-auto max-w-3xl pb-20 pt-8","children":["$","div",null,{"className":"hero-panel space-y-5","children":[["$","span",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"className":"hero-title compact","children":"That page never made it into the archive."}],["$","p",null,{"className":"hero-copy","children":"Try the rebuilt home, the full archive, or one of the legacy shelves instead."}],["$","$L13",null,{"href":"/","className":"primary-chip","children":"Go back to the English home"}]]}]}]}]
+c:["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L13",null,{"href":"/","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L13",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L13",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L13",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]
+d:["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/b70577f423f10c73.js","async":true,"nonce":"$undefined"}]],"$L14"]}]
+e:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+f:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+10:["$","$1","c",{"children":["$L15",null,["$","$L16",null,{"children":["$","$17",null,{"name":"Next.MetadataOutlet","children":"$@18"}]}]]}]
+11:["$","$1","h",{"children":[null,["$","$L19",null,{"children":"$L1a"}],["$","div",null,{"hidden":true,"children":["$","$L1b",null,{"children":["$","$17",null,{"name":"Next.Metadata","children":"$L1c"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+14:[["$","$L6",null,{"lang":"zh","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"zh","homeHref":"/zh","rootAliasForDefaultLocale":false,"labels":{"brand":"POJIAN.BLOG","subtitle":"围绕 AI 工具链、产品交付与个人记忆的长篇博客。","menu":"目录","close":"关闭","switchLanguage":"切换语言","switchTheme":"切换主题"},"links":[{"href":"/zh","label":"首页"},{"href":"/zh#latest","label":"最新"},{"href":"/zh#collections","label":"分栏"},{"href":"/zh/archives","label":"归档"},{"href":"/zh#community","label":"社区"}],"legacyRoots":"$0:f:0:1:0:props:children:1:props:children:props:children:props:children:1:props:notFound:0:1:props:children:0:props:legacyRoots"}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"围绕 AI 工具链、产品交付与个人记忆的长篇博客。"}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L13",null,{"href":"/zh","className":"hover:text-[var(--text)]","children":"首页"}],["$","$L13",null,{"href":"/zh/archives","className":"hover:text-[var(--text)]","children":"归档"}],["$","$L13",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L13",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]
+1a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+18:null
+1c:[["$","title","0",{"children":"POJIAN.BLOG"}],["$","meta","1",{"name":"description","content":"A multilingual personal blog around AI tooling, product delivery, memoir, and long-form archive work."}]]
+1d:T8d69,<p><strong>1.Vue是怎么识别 v- 指令的？</strong></p>
+<p>首先将HTML结构解析成属性列表，存入到数组中，接着遍历数组中的每一个节点，获取到不同指令对应的方法。</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode ini"><code class="sourceCode ini"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">// 将HTML看作真正的属性列表</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">var ndoeAttrs </span><span class="ot">=</span><span class="st"> node.attributes;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dt">var self </span><span class="ot">=</span><span class="st"> this;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dt">// 类数组对象变为数组，一层一层的遍历节点</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">[]</span><span class="dt">.slice.call(nodeAttes).forEach(attr </span><span class="ot">=</span><span class="st">&gt; {</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">    // 这里开始分析指令</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="dt">    var attrName </span><span class="ot">=</span><span class="st"> attr.name;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="dt">    var value </span><span class="ot">=</span><span class="st"> attr.value;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="dt">    // 指令都是 v- 开头的</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dt">    var dir </span><span class="ot">=</span><span class="st"> attrName.substring(2);</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="dt">    if(attrName.indexOf(&#39;v-&#39;) </span><span class="ot">=</span><span class="st">= 0){</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="dt">        // v-下不同的指令</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="dt">        if(dir </span><span class="ot">=</span><span class="st">= &#39;model&#39;){</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="dt">            // console.log(&#39;发现了model指令&#39;,value);</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="dt">            // 添加Watcher</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="dt">            new Watcher(self.$vue, value, value </span><span class="ot">=</span><span class="st">&gt; {</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="dt">                node.value </span><span class="ot">=</span><span class="st"> value;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="dt">            });</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="dt">            // 得到 v 的值</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="dt">            var v </span><span class="ot">=</span><span class="st"> self.getVueVal(self.$vue, value);</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="dt">            // 显示 v 的值</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="dt">            node.value </span><span class="ot">=</span><span class="st"> v;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="dt">            // 添加监听事件，基本实现双向绑定</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="dt">            node.addEventListener(&#39;input&#39;, e </span><span class="ot">=</span><span class="st">&gt; {</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="dt">                var newVal </span><span class="ot">=</span><span class="st"> e.target.value;</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="dt">                self.setVueVal(self.$vue, value, newVal);</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="dt">                v </span><span class="ot">=</span><span class="st"> newVal;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="dt">            });</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="dt">        }else if(dir </span><span class="ot">=</span><span class="st">= &#39;if&#39;){</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="dt">            // console.log(&#39;发现了if指令&#39;,value);</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="dt">        }</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="dt">    } </span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="dt">})</span></span></code></pre></div>
+<blockquote>
+<p><strong>2.v-model底层是怎么实现的？</strong></p>
+<p><code>v-model</code>
+会把关联的相应式数据(info.message)，动态的绑定到表单元素的value属性上，让后监听
+<code>input</code> 事件；</p>
+<p>当 <code>v-model</code>
+绑定的相应数据发生变化时，表单元素的value值也会随之变化。</p>
+</blockquote>
+<pre class="vue"><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;div class=&quot;message&quot;&gt;{{ info.message }}&lt;/div&gt;
+    &lt;div&gt;&lt;input v-model=&quot;info.message&quot; type=&quot;text&quot;&gt;&lt;/div&gt;
+    &lt;button @click=&quot;change&quot;&gt;click&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+  export default {
+    data () {
+      return {
+        info: {}
+      }
+    },
+    methods: {
+      change () {
+        this.info.message = &#39;hello world&#39;
+      }
+    }
+  }
+&lt;/script&gt;</code></pre>
+<blockquote>
+<p>面试题：<strong>v-for 和 v-if为什么不能一起用？</strong></p>
+</blockquote>
+<p>涉及到一个优先级的问题，v-for 比
+v-if优先执行，如果一起使用，循环出来的每一项都会去判断一下v-if是否为true或者false，这样就会照成资源的浪费！</p>
+<blockquote>
+<p><strong>3.生命周期</strong></p>
+</blockquote>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fe04ce4c40414362af00acc629f89b11~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="lifecyc.png" /></p>
+<p><img
+src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1f940941a8844433b7d673da45ab480c~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="image-20210725222206025.png" /></p>
+<ul>
+<li><blockquote>
+<p><strong>beforeCreate &amp; created</strong></p>
+<p>属于<strong>实例化</strong>阶段，在<code>_init </code>方法内，DOM
+被挂载时执行，两个函数都不能获取到 prop、data 中定义的值，也不能调用
+<code>methods </code>中定义的函数。</p>
+</blockquote></li>
+</ul>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Vue<span class="op">.</span><span class="at">prototype</span><span class="op">.</span><span class="at">_init</span> <span class="op">=</span> <span class="kw">function</span> (options<span class="op">?:</span> <span class="bu">Object</span>) {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">initLifecycle</span>(vm)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">initEvents</span>(vm)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">initRender</span>(vm)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">callHook</span>(vm<span class="op">,</span> <span class="st">&#39;beforeCreate&#39;</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">initInjections</span>(vm) <span class="co">// 在prop、data 之前解决注入</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">initState</span>(vm)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">initProvide</span>(vm) <span class="co">// 解决初始化之后的prop、data</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">callHook</span>(vm<span class="op">,</span> <span class="st">&#39;created&#39;</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<ul>
+<li><blockquote>
+<p><strong>beforeMount &amp;mounted</strong></p>
+<p>属于<strong>挂载</strong>阶段，在<code>mountComponent</code>方法内，响应数据被修改时执行，对于同步渲染的子组件而言，<code>mounted</code>
+钩子函数的执行顺序是<strong>先子后父</strong>。</p>
+</blockquote></li>
+</ul>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">function</span> <span class="fu">mountComponent</span> (</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  vm<span class="op">:</span> Component<span class="op">,</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  el<span class="op">:</span> <span class="op">?</span><span class="bu">Element</span><span class="op">,</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  hydrating<span class="op">?:</span> boolean</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>)<span class="op">:</span> Component {</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  vm<span class="op">.</span><span class="at">$el</span> <span class="op">=</span> el</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">callHook</span>(vm<span class="op">,</span> <span class="st">&#39;beforeMount&#39;</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> updateComponent</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="bu">process</span><span class="op">.</span><span class="at">env</span><span class="op">.</span><span class="at">NODE_ENV</span> <span class="op">!==</span> <span class="st">&#39;production&#39;</span> <span class="op">&amp;&amp;</span> config<span class="op">.</span><span class="at">performance</span> <span class="op">&amp;&amp;</span> mark) {</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    updateComponent <span class="op">=</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> name <span class="op">=</span> vm<span class="op">.</span><span class="at">_name</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> id <span class="op">=</span> vm<span class="op">.</span><span class="at">_uid</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> startTag <span class="op">=</span> <span class="vs">`vue-perf-start:</span><span class="sc">${</span>id<span class="sc">}</span><span class="vs">`</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> endTag <span class="op">=</span> <span class="vs">`vue-perf-end:</span><span class="sc">${</span>id<span class="sc">}</span><span class="vs">`</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mark</span>(startTag)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> vnode <span class="op">=</span> vm<span class="op">.</span><span class="fu">_render</span>()</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mark</span>(endTag)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>      <span class="fu">measure</span>(<span class="vs">`vue </span><span class="sc">${</span>name<span class="sc">}</span><span class="vs"> render`</span><span class="op">,</span> startTag<span class="op">,</span> endTag)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mark</span>(startTag)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>      <span class="co">// 执行vm._update 把 VNode 渲染到 真实 DOM </span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>      vm<span class="op">.</span><span class="fu">_update</span>(vnode<span class="op">,</span> hydrating)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mark</span>(endTag)</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>      <span class="fu">measure</span>(<span class="vs">`vue </span><span class="sc">${</span>name<span class="sc">}</span><span class="vs"> patch`</span><span class="op">,</span> startTag<span class="op">,</span> endTag)</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    updateComponent <span class="op">=</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>      vm<span class="op">.</span><span class="fu">_update</span>(vm<span class="op">.</span><span class="fu">_render</span>()<span class="op">,</span> hydrating)</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 把它设为vm._watcher 在watcher的构造函数中.</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 因为观察者的初始补丁可能会调用$forceUpdate(例如:inside child . exe)</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 组件的挂载钩子)，依赖于vm。_watcher已经定义.</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="fu">Watcher</span>(vm<span class="op">,</span> updateComponent<span class="op">,</span> noop<span class="op">,</span> {</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    <span class="fu">before</span> () {</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (vm<span class="op">.</span><span class="at">_isMounted</span>) {</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>        <span class="fu">callHook</span>(vm<span class="op">,</span> <span class="st">&#39;beforeUpdate&#39;</span>)</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span> <span class="kw">true</span> <span class="co">/* isRenderWatcher */</span>)</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>  hydrating <span class="op">=</span> <span class="kw">false</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 手动挂载实例，调用挂载在self上</span></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 挂载在其插入的钩子中为渲染创建的子组件调用</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (vm<span class="op">.</span><span class="at">$vnode</span> <span class="op">==</span> <span class="kw">null</span>) {</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>    vm<span class="op">.</span><span class="at">_isMounted</span> <span class="op">=</span> <span class="kw">true</span></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>    <span class="fu">callHook</span>(vm<span class="op">,</span> <span class="st">&#39;mounted&#39;</span>)</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div>
+<ul>
+<li><blockquote>
+<p><strong>beforeUpdate &amp; updated</strong></p>
+<p>属于<strong>更新</strong>阶段，在渲染 <code>Watcher</code> 的 before
+函数内，元素被销毁之前执行，在 <code>callUpdatedHooks</code> 函数中，等
+<code>vm._watcher</code> 的回调执行完毕后，才能执行 <code>update</code>
+函数。</p>
+</blockquote></li>
+</ul>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">function</span> <span class="fu">mountComponent</span> (</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  vm<span class="op">:</span> Component<span class="op">,</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  el<span class="op">:</span> <span class="op">?</span><span class="bu">Element</span><span class="op">,</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  hydrating<span class="op">?:</span> boolean</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>)<span class="op">:</span> Component {</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 把它设为vm._watcher 在watcher的构造函数中.</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 因为观察者的初始补丁可能会调用$forceUpdate(例如:inside child . exe)</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 组件的挂载钩子)，依赖于vm。_watcher已经定义.</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">new</span> <span class="fu">Watcher</span>(vm<span class="op">,</span> updateComponent<span class="op">,</span> noop<span class="op">,</span> {</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">before</span> () {</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (vm<span class="op">.</span><span class="at">_isMounted</span>) {</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        <span class="fu">callHook</span>(vm<span class="op">,</span> <span class="st">&#39;beforeUpdate&#39;</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span> <span class="kw">true</span> <span class="co">/* isRenderWatcher */</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<ul>
+<li><blockquote>
+<p><strong>beforeDestory &amp; destroyed</strong> （3.x中更名为
+<strong>beforeUnmount &amp; unmounted</strong>）</p>
+<p>属于<strong>销毁</strong>阶段，在 <code>$destroy</code>
+函数前执行，从 <code>parent</code> 的 <code>$children</code>
+中删掉自身，删除 <code>watcher</code>。</p>
+</blockquote></li>
+</ul>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Vue<span class="op">.</span><span class="at">prototype</span><span class="op">.</span><span class="at">$destroy</span> <span class="op">=</span> <span class="kw">function</span> () {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> <span class="dt">vm</span><span class="op">:</span> Component <span class="op">=</span> <span class="kw">this</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (vm<span class="op">.</span><span class="at">_isBeingDestroyed</span>) {</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>      <span class="cf">return</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">callHook</span>(vm<span class="op">,</span> <span class="st">&#39;beforeDestroy&#39;</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    vm<span class="op">.</span><span class="at">_isBeingDestroyed</span> <span class="op">=</span> <span class="kw">true</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 将self从父节点移除</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> parent <span class="op">=</span> vm<span class="op">.</span><span class="at">$parent</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (parent <span class="op">&amp;&amp;</span> <span class="op">!</span>parent<span class="op">.</span><span class="at">_isBeingDestroyed</span> <span class="op">&amp;&amp;</span> <span class="op">!</span>vm<span class="op">.</span><span class="at">$options</span><span class="op">.</span><span class="at">abstract</span>) {</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">remove</span>(parent<span class="op">.</span><span class="at">$children</span><span class="op">,</span> vm)</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 卸载 watchers</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (vm<span class="op">.</span><span class="at">_watcher</span>) {</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>      vm<span class="op">.</span><span class="at">_watcher</span><span class="op">.</span><span class="fu">teardown</span>()</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> i <span class="op">=</span> vm<span class="op">.</span><span class="at">_watchers</span><span class="op">.</span><span class="at">length</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> (i<span class="op">--</span>) {</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>      vm<span class="op">.</span><span class="at">_watchers</span>[i]<span class="op">.</span><span class="fu">teardown</span>()</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 从数据ob中移除引用</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">// frozen object 没有观察者。</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (vm<span class="op">.</span><span class="at">_data</span><span class="op">.</span><span class="at">__ob__</span>) {</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>      vm<span class="op">.</span><span class="at">_data</span><span class="op">.</span><span class="at">__ob__</span><span class="op">.</span><span class="at">vmCount</span><span class="op">--</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 调用最后一个钩子</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    vm<span class="op">.</span><span class="at">_isDestroyed</span> <span class="op">=</span> <span class="kw">true</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 在当前redered 树上调用销毁钩子</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    vm<span class="op">.</span><span class="fu">__patch__</span>(vm<span class="op">.</span><span class="at">_vnode</span><span class="op">,</span> <span class="kw">null</span>)</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 销毁钩子函数</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">callHook</span>(vm<span class="op">,</span> <span class="st">&#39;destroyed&#39;</span>)</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 关闭所有实例侦听器。</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>    vm<span class="op">.</span><span class="fu">$off</span>()</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 删除vue reference</span></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (vm<span class="op">.</span><span class="at">$el</span>) {</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>      vm<span class="op">.</span><span class="at">$el</span><span class="op">.</span><span class="at">__vue__</span> <span class="op">=</span> <span class="kw">null</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 发布循环引用</span></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (vm<span class="op">.</span><span class="at">$vnode</span>) {</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>      vm<span class="op">.</span><span class="at">$vnode</span><span class="op">.</span><span class="at">parent</span> <span class="op">=</span> <span class="kw">null</span></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>  }</span></code></pre></div>
+<blockquote>
+<p><strong>renderTracked &amp; renderTriggered</strong>（3.x新增）</p>
+<p>都是跟踪虚拟DOM 重新渲染时调用，接收 <code>debugger event</code>
+参数；</p>
+<p>renderTracked() : 此事件告诉你哪个操作<strong>跟踪</strong>了
+<code>组件</code>，以及该操作的目标对象和键。</p>
+<p>renderTriggered() : 此事件告诉你哪个操作<strong>触发</strong>了
+<code>重新渲染</code>，以及该操作的目标对象和键。</p>
+</blockquote>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;app&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> v-on:click</span><span class="op">=</span><span class="st">&quot;addToCart&quot;</span><span class="dt">&gt;</span>Add to cart<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Cart({{ cart }})<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> app <span class="op">=</span> Vue<span class="op">.</span><span class="fu">vreateApp</span>({</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data</span>(){</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span>{</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>            <span class="dt">cart</span><span class="op">:</span> <span class="dv">0</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// cart 操作*跟踪*了 组件</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">renderTracked</span>({ key<span class="op">,</span> target<span class="op">,</span> type }){</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>({ key<span class="op">,</span> target<span class="op">,</span> type })</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>        <span class="co">/*{ key: &quot;cart&quot;, target:{cart: 0}, type: &quot;get&quot; }*/</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">// cart 操作*触发*了 重新渲染</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">renderTriggered</span>({ key<span class="op">,</span> target<span class="op">,</span> type }) {</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>({ key<span class="op">,</span> target<span class="op">,</span> type })</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">methods</span><span class="op">:</span> {</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>        <span class="fu">addToCart</span>(){</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>            <span class="kw">this</span><span class="op">.</span><span class="at">cart</span> <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>            <span class="co">/*{ key: &quot;cart&quot;, target:{cart:1}, type: &quot;set&quot; }*/</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">mount</span>(<span class="st">&#39;#app&#39;</span>)</span></code></pre></div>
+<blockquote>
+<p><strong>总结：</strong>
+Vue生命周期函数就是在初始化，及数据更新过程各个阶段执行不同的钩子函数；在created钩子函数中可以访问到数据，在mounted钩子函数中可以访问到DOM，在destroyed
+钩子函数中可以做一些定时器销毁工作！</p>
+</blockquote>
+<p>参考：<a href="https://juejin.cn/post/6844903999414485005" target="_blank"
+title="https://juejin.cn/post/6844903999414485005">v-model源码解析</a></p>
+<p><a
+href="https://link.juejin.cn?target=https%3A%2F%2Fsegmentfault.com%2Fa%2F1190000006599500"
+data-ref="nofollow noopener noreferrer" target="_blank"
+title="https://segmentfault.com/a/1190000006599500">剖析Vue原理&amp;实现双向绑定MVVM</a></p>
+<p><a
+href="https://link.juejin.cn?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1db4y1r7cd"
+data-ref="nofollow noopener noreferrer" target="_blank"
+title="https://www.bilibili.com/video/BV1db4y1r7cd">技术胖Vue3知识地图</a></p>
+<p><a
+href="https://link.juejin.cn?target=https%3A%2F%2Fbbs.huaweicloud.com%2Fblogs%2F271558"
+data-ref="nofollow noopener noreferrer" target="_blank"
+title="https://bbs.huaweicloud.com/blogs/271558">Vue2与Vue3的生命周期</a></p>
+<p><a
+href="https://link.juejin.cn?target=https%3A%2F%2Fwww.jianshu.com%2Fp%2Fd3f973433274"
+data-ref="nofollow noopener noreferrer" target="_blank"
+title="https://www.jianshu.com/p/d3f973433274">Vue2和Vue3的区别</a></p>
+15:["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L13",null,{"href":"/zh/archives","className":"ghost-inline","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","aria-hidden":"true","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"全部文章"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"已从掘金同步"}],["$","span",null,{"children":"2021-07-30"}],["$","span",null,{"children":[3," ","分钟阅读"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"Vue深入学习—指令和生命周期"}],["$","p",null,{"className":"hero-copy","children":"1.Vue是怎么识别 v- 指令的？ 首先将HTML结构解析成属性列表，存入到数组中，接着遍历数组中的每一个节点，获取到不同指令对应的方法。 2.v-model底层是怎么实现的？ v-model 会把关联的相应式数据(info.message)，动态的绑定到表单元素的value属性上，让后监听 input 事件； 当 v-model 绑定的相应数据发生变化时..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"文章说明"}],["$","span",null,{"children":"这篇文章被保留在新的博客壳中，同时继续保留原始中文内容。"}],["$","a",null,{"href":"https://juejin.cn/post/6990534958431338509","target":"_blank","rel":"noreferrer","className":"ghost-inline","children":["原始出处",["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-external-link h-4 w-4","aria-hidden":"true","children":[["$","path","1q9fwt",{"d":"M15 3h6v6"}],["$","path","gplh6r",{"d":"M10 14 21 3"}],["$","path","a6xqqp",{"d":"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"}],"$undefined"]}]]}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$1d"}}]}]]}]

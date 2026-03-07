@@ -1,82 +1,71 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>element Switch开关开启时触发click事件，关闭时不触发 | CocoonBreak</title>
-    <meta name="description" content="思路 ：change中提供了参数val,可以根据当前点击的状态true/false来判断当前开启/关闭的状态 代码 : 在线运行 &lt; template &gt; &lt; el - switch v - model = &quot;value&quot; : active...">
-    <meta property="og:title" content="element Switch开关开启时触发click事件，关闭时不触发 | CocoonBreak">
-    <meta property="og:description" content="思路 ：change中提供了参数val,可以根据当前点击的状态true/false来判断当前开启/关闭的状态 代码 : 在线运行 &lt; template &gt; &lt; el - switch v - model = &quot;value&quot; : active...">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2021-11-12-7029643302718668814/">
-    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
-    <link rel="icon" href="/img/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/custom/site.css">
-    <script defer src="/custom/site.js"></script>
-    <script defer src="/custom/live2d-loader.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content="0; url=/en/posts/sync/2021-11-12-7029643302718668814/" />
+    <title>Juejin article moved</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1020;
+        --panel: rgba(10, 18, 38, 0.88);
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #f6efe3;
+        --muted: #93a2bf;
+        --accent: #7ae7c7;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
+          linear-gradient(180deg, #0b1020 0%, #050813 100%);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        padding: 24px;
+      }
+      main {
+        width: min(640px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--panel);
+        padding: 32px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(28px, 4vw, 42px);
+      }
+      p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      a {
+        color: #08111e;
+        background: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    </style>
   </head>
   <body>
-    <div class="article-shell">
-      <nav class="insight-nav">
-        <a href="/">← 首页</a>
-        <a href="/insights/">同步文章</a>
-        <a href="https://juejin.cn/post/7029643302718668814" target="_blank" rel="noreferrer">掘金原文</a>
-      </nav>
-
-      <header class="article-hero" data-reveal>
-        <div class="article-meta">
-          <span>2021.11.12</span><span>Element</span>
-        </div>
-        <h1>element Switch开关开启时触发click事件，关闭时不触发</h1>
-        <p class="article-intro">思路 ：change中提供了参数val,可以根据当前点击的状态true/false来判断当前开启/关闭的状态 代码 : 在线运行 &lt; template &gt; &lt; el - switch v - model = &quot;value&quot; : active...</p>
-        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/7029643302718668814" target="_blank" rel="noreferrer">掘金原文</a>。</div>
-      </header>
-
-      <article class="prose" data-reveal>
-        <p><strong>思路</strong>：change中提供了参数val,可以根据当前点击的状态true/false来判断当前开启/关闭的状态
-<img alt="image.png" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ba5ba8ea76f14ae5966e6276072851c1~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/> <strong>代码</strong>: <a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fcodepen.io%2Fkuishou68%2Fpen%2FmdMGBdm%3Feditors%3D1010" target="_blank" title="https://codepen.io/kuishou68/pen/mdMGBdm?editors=1010">在线运行</a></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="op">&lt;</span>template<span class="op">&gt;</span></span>
-<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a>    <span class="op">&lt;</span>el<span class="op">-</span><span class="cf">switch</span></span>
-<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a>        v<span class="op">-</span>model<span class="op">=</span><span class="st">"value"</span></span>
-<span id="cb1-4"><a aria-hidden="true" href="#cb1-4" tabindex="-1"></a>        <span class="op">:</span>active<span class="op">-</span>text<span class="op">=</span><span class="st">"value? '是' : '否'"</span></span>
-<span id="cb1-5"><a aria-hidden="true" href="#cb1-5" tabindex="-1"></a>        @change<span class="op">=</span><span class="st">"changeIsNeedHint"</span></span>
-<span id="cb1-6"><a aria-hidden="true" href="#cb1-6" tabindex="-1"></a>    <span class="op">&gt;</span></span>
-<span id="cb1-7"><a aria-hidden="true" href="#cb1-7" tabindex="-1"></a>    <span class="op">&lt;/</span>el<span class="op">-</span><span class="cf">switch</span><span class="op">&gt;</span></span>
-<span id="cb1-8"><a aria-hidden="true" href="#cb1-8" tabindex="-1"></a><span class="op">&lt;/</span>template<span class="op">&gt;</span></span>
-<span id="cb1-9"><a aria-hidden="true" href="#cb1-9" tabindex="-1"></a></span>
-<span id="cb1-10"><a aria-hidden="true" href="#cb1-10" tabindex="-1"></a><span class="op">&lt;</span>script<span class="op">&gt;</span></span>
-<span id="cb1-11"><a aria-hidden="true" href="#cb1-11" tabindex="-1"></a>    <span class="fu">data</span>() {</span>
-<span id="cb1-12"><a aria-hidden="true" href="#cb1-12" tabindex="-1"></a>      <span class="cf">return</span> {</span>
-<span id="cb1-13"><a aria-hidden="true" href="#cb1-13" tabindex="-1"></a>        <span class="dt">value</span><span class="op">:</span> <span class="kw">true</span></span>
-<span id="cb1-14"><a aria-hidden="true" href="#cb1-14" tabindex="-1"></a>      }</span>
-<span id="cb1-15"><a aria-hidden="true" href="#cb1-15" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb1-16"><a aria-hidden="true" href="#cb1-16" tabindex="-1"></a>    methods<span class="op">:</span> {</span>
-<span id="cb1-17"><a aria-hidden="true" href="#cb1-17" tabindex="-1"></a>      <span class="fu">changeIsNeedHint</span>(val){</span>
-<span id="cb1-18"><a aria-hidden="true" href="#cb1-18" tabindex="-1"></a>        <span class="cf">if</span>(val <span class="op">===</span> <span class="kw">false</span>) <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span> <span class="co">// 如果当前状态为关闭，则不提示</span></span>
-<span id="cb1-19"><a aria-hidden="true" href="#cb1-19" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">$confirm</span>(<span class="vs">`你触发了click事件`</span><span class="op">,</span> <span class="st">"提示"</span><span class="op">,</span> {</span>
-<span id="cb1-20"><a aria-hidden="true" href="#cb1-20" tabindex="-1"></a>          <span class="dt">confirmButtonText</span><span class="op">:</span> <span class="st">"我知道了"</span><span class="op">,</span></span>
-<span id="cb1-21"><a aria-hidden="true" href="#cb1-21" tabindex="-1"></a>          <span class="dt">cancelButtonText</span><span class="op">:</span> <span class="st">"取消"</span><span class="op">,</span></span>
-<span id="cb1-22"><a aria-hidden="true" href="#cb1-22" tabindex="-1"></a>          <span class="dt">type</span><span class="op">:</span> <span class="st">"warning"</span><span class="op">,</span></span>
-<span id="cb1-23"><a aria-hidden="true" href="#cb1-23" tabindex="-1"></a>        })<span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> {</span>
-<span id="cb1-24"><a aria-hidden="true" href="#cb1-24" tabindex="-1"></a>          <span class="co">// 点击 我知道了 之后的提示</span></span>
-<span id="cb1-25"><a aria-hidden="true" href="#cb1-25" tabindex="-1"></a>          <span class="kw">this</span><span class="op">.</span><span class="fu">$message</span>({</span>
-<span id="cb1-26"><a aria-hidden="true" href="#cb1-26" tabindex="-1"></a>             <span class="dt">type</span><span class="op">:</span> <span class="st">"success"</span><span class="op">,</span></span>
-<span id="cb1-27"><a aria-hidden="true" href="#cb1-27" tabindex="-1"></a>             <span class="dt">message</span><span class="op">:</span> <span class="st">"已触发click"</span></span>
-<span id="cb1-28"><a aria-hidden="true" href="#cb1-28" tabindex="-1"></a>           })</span>
-<span id="cb1-29"><a aria-hidden="true" href="#cb1-29" tabindex="-1"></a>        })<span class="op">.</span><span class="fu">catch</span>(() <span class="kw">=&gt;</span> {</span>
-<span id="cb1-30"><a aria-hidden="true" href="#cb1-30" tabindex="-1"></a>          <span class="co">// 点击 取消 之后的提示</span></span>
-<span id="cb1-31"><a aria-hidden="true" href="#cb1-31" tabindex="-1"></a>          <span class="kw">this</span><span class="op">.</span><span class="fu">$message</span>({</span>
-<span id="cb1-32"><a aria-hidden="true" href="#cb1-32" tabindex="-1"></a>             <span class="dt">type</span><span class="op">:</span> <span class="st">"info"</span><span class="op">,</span></span>
-<span id="cb1-33"><a aria-hidden="true" href="#cb1-33" tabindex="-1"></a>             <span class="dt">message</span><span class="op">:</span> <span class="st">"已取消操作"</span></span>
-<span id="cb1-34"><a aria-hidden="true" href="#cb1-34" tabindex="-1"></a>           })</span>
-<span id="cb1-35"><a aria-hidden="true" href="#cb1-35" tabindex="-1"></a>        })</span>
-<span id="cb1-36"><a aria-hidden="true" href="#cb1-36" tabindex="-1"></a>      }</span>
-<span id="cb1-37"><a aria-hidden="true" href="#cb1-37" tabindex="-1"></a>    }</span>
-<span id="cb1-38"><a aria-hidden="true" href="#cb1-38" tabindex="-1"></a><span class="op">&lt;/</span>script<span class="op">&gt;</span></span></code></pre></div>
-      </article>
-    </div>
+    <main>
+      <h1>Juejin article moved</h1>
+      <p>This synced Juejin article now lives under the rebuilt post route.</p>
+      <a href="/en/posts/sync/2021-11-12-7029643302718668814/">Continue</a>
+    </main>
+    <script>
+      window.location.replace("/en/posts/sync/2021-11-12-7029643302718668814/");
+    </script>
   </body>
 </html>

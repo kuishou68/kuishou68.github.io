@@ -1,0 +1,249 @@
+1:"$Sreact.fragment"
+2:I[44130,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js"],"ThemeProvider"]
+3:I[54542,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js"],"Live2DLoader"]
+4:I[22870,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+5:I[70047,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+6:I[95261,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js","/_next/static/chunks/b70577f423f10c73.js"],"HtmlLocaleSync"]
+7:I[4721,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js","/_next/static/chunks/b70577f423f10c73.js"],"BlogNavbar"]
+12:I[70681,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+:HL["/_next/static/chunks/5ff512ca50d86cc4.css","style"]
+:HL["/_next/static/chunks/d8a04d2be5c94533.css","style"]
+:HL["/_next/static/media/0c89a48fa5027cee-s.p.4564287c.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/130b5bec7367fe75-s.p.8efb6a94.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5f402bd2d8eef81a-s.p.b72f0478.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/ad9c66e761fed85a-s.p.bd81a64b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/feb57b2dc8f29018-s.p.2539f70a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"b":"PBOm4kDuGvs9RUGVV0N_6","c":["","en","posts","sync","2025-01-01-7454585438323392538",""],"q":"","i":false,"f":[[["",{"children":[["lang","en","d"],{"children":["posts",{"children":[["slug","sync/2025-01-01-7454585438323392538","c"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/5ff512ca50d86cc4.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/chunks/d8a04d2be5c94533.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/869f3c4760d682ac.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/5ca2d6e8edb00962.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"space_grotesk_f88813a-module__ZvLbQq__variable newsreader_caa3ccf4-module__7BqBPq__variable noto_sans_sc_820cd55a-module__sRRUGq__variable noto_sans_jp_1317c327-module__5MdXXa__variable noto_naskh_arabic_48867b81-module__7wgKba__variable antialiased","children":["$","$L2",null,{"attribute":"class","defaultTheme":"dark","enableSystem":false,"disableTransitionOnChange":true,"children":[["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","$L6",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"en","homeHref":"/","rootAliasForDefaultLocale":true,"labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/","label":"Home"},{"href":"/#latest","label":"Latest"},{"href":"/#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/#community","label":"Community"}],"legacyRoots":[{"slug":"A前端👨‍💻","title":{"en":"Frontend Atlas","zh":"前端图谱","es":"Atlas Frontend","ja":"フロントエンド地図","ar":"أطلس الواجهة الأمامية"},"description":{"en":"CSS, Vue, React, Canvas, Node, uni-app, build tools, and the earlier front-end trail.","zh":"CSS、Vue、React、Canvas、Node、uni-app、打包工具，以及更早的前端路径。","es":"CSS, Vue, React, Canvas, Node, uni-app, herramientas de build y el rastro front-end más temprano.","ja":"CSS、Vue、React、Canvas、Node、uni-app、ビルドツールなど、初期のフロントエンド蓄積。","ar":"CSS وVue وReact وCanvas وNode وuni-app وأدوات البناء والمسار الأقدم للواجهة الأمامية."}},{"slug":"B面试题📑","title":{"en":"Interview Bank","zh":"面试题仓库","es":"Banco de Entrevistas","ja":"面接バンク","ar":"بنك المقابلات"},"description":{"en":"Question banks for browser internals, networking, Vue, React, JavaScript, and engineering.","zh":"浏览器、网络、Vue、React、JavaScript 和工程化的面试题集合。","es":"Baterías de preguntas sobre navegador, red, Vue, React, JavaScript e ingeniería.","ja":"ブラウザ、ネットワーク、Vue、React、JavaScript、開発基盤に関する面接問題。","ar":"مجموعات أسئلة عن المتصفح والشبكات وVue وReact وJavaScript والهندسة."}},{"slug":"Vue实战💻","title":{"en":"Vue Practice","zh":"Vue 实战","es":"Práctica Vue","ja":"Vue 実戦","ar":"تطبيقات Vue"},"description":{"en":"Real project records around Ant Design, Echarts, mini programs, stores, and browser features.","zh":"围绕 Ant Design、Echarts、小程序、商城项目和浏览器功能的一组实战记录。","es":"Registros reales sobre Ant Design, Echarts, mini programas, tiendas y funciones del navegador.","ja":"Ant Design、Echarts、ミニプログラム、ストア、ブラウザ機能に関する実戦記録。","ar":"سجلات عملية حول Ant Design وEcharts والبرامج المصغرة والمتاجر وميزات المتصفح."}},{"slug":"走过的路🌱","title":{"en":"Growing Path","zh":"走过的路","es":"Camino Recorrido","ja":"歩いてきた道","ar":"الطريق الذي سلكته"},"description":{"en":"Yearly reviews and growth notes that carry more life signal than technical polish.","zh":"年度总结和成长记录，保留生活感和时间感。","es":"Revisiones anuales y notas de crecimiento con más vida que pulido técnico.","ja":"年次レビューと成長記録。技術の整い方より時間の感触が残っています。","ar":"مراجعات سنوية وملاحظات نمو تحمل أثر الحياة أكثر من الصقل التقني."}},{"slug":"读过的书📚️","title":{"en":"Reading Shelf","zh":"读书笔记","es":"Estante de Lectura","ja":"読書棚","ar":"رف القراءة"},"description":{"en":"Book notes across networking, JavaScript, algorithms, and systems thinking.","zh":"网络、JavaScript、算法和系统思维方向的读书笔记。","es":"Notas de lectura sobre redes, JavaScript, algoritmos y pensamiento de sistemas.","ja":"ネットワーク、JavaScript、アルゴリズム、システム思考に関する読書ノート。","ar":"ملاحظات قراءة حول الشبكات وJavaScript والخوارزميات والتفكير المنظومي."}},{"slug":"PHP🐘","title":{"en":"PHP Shelf","zh":"PHP 归档","es":"Estante PHP","ja":"PHP 棚","ar":"رف PHP"},"description":{"en":"Earlier PHP notes and experiments that still belong in the public record.","zh":"更早期的 PHP 文章和实验记录。","es":"Notas y experimentos tempranos de PHP que siguen formando parte del archivo.","ja":"初期の PHP ノートと実験記録。","ar":"ملاحظات وتجارب PHP المبكرة التي ما زالت جزءًا من السجل."}},{"slug":"Python🐍","title":{"en":"Python Shelf","zh":"Python 归档","es":"Estante Python","ja":"Python 棚","ar":"رف Python"},"description":{"en":"Small scraping experiments and data-oriented notes from the earlier Python phase.","zh":"偏数据和爬取的小实验，保留了更早一阶段的 Python 轨迹。","es":"Pequeños experimentos de scraping y notas orientadas a datos de la etapa temprana con Python.","ja":"スクレイピングやデータ寄りの小さな Python 実験。","ar":"تجارب صغيرة في الاستخراج والبيانات من المرحلة المبكرة مع Python."}}]}],"$L8","$L9","$La","$Lb","$Lc"]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]}]]}],{"children":["$Ld",{"children":["$Le",{"children":["$Lf",{"children":["$L10",{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],"$L11",false]],"m":"$undefined","G":["$12",[]],"S":true}
+13:I[27917,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js","/_next/static/chunks/b70577f423f10c73.js"],""]
+16:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"OutletBoundary"]
+17:"$Sreact.suspense"
+19:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"ViewportBoundary"]
+1b:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"MetadataBoundary"]
+8:["$","div",null,{"className":"background-orb background-orb-one"}]
+9:["$","div",null,{"className":"background-orb background-orb-two"}]
+a:["$","div",null,{"className":"background-grid"}]
+b:["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","div",null,{"className":"mx-auto max-w-3xl pb-20 pt-8","children":["$","div",null,{"className":"hero-panel space-y-5","children":[["$","span",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"className":"hero-title compact","children":"That page never made it into the archive."}],["$","p",null,{"className":"hero-copy","children":"Try the rebuilt home, the full archive, or one of the legacy shelves instead."}],["$","$L13",null,{"href":"/","className":"primary-chip","children":"Go back to the English home"}]]}]}]}]
+c:["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L13",null,{"href":"/","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L13",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L13",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L13",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]
+d:["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/b70577f423f10c73.js","async":true,"nonce":"$undefined"}]],"$L14"]}]
+e:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+f:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+10:["$","$1","c",{"children":["$L15",null,["$","$L16",null,{"children":["$","$17",null,{"name":"Next.MetadataOutlet","children":"$@18"}]}]]}]
+11:["$","$1","h",{"children":[null,["$","$L19",null,{"children":"$L1a"}],["$","div",null,{"hidden":true,"children":["$","$L1b",null,{"children":["$","$17",null,{"name":"Next.Metadata","children":"$L1c"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+14:[["$","$L6",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"en","homeHref":"/en","rootAliasForDefaultLocale":false,"labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/en","label":"Home"},{"href":"/en#latest","label":"Latest"},{"href":"/en#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/en#community","label":"Community"}],"legacyRoots":"$0:f:0:1:0:props:children:1:props:children:props:children:props:children:1:props:notFound:0:1:props:children:0:props:legacyRoots"}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L13",null,{"href":"/en","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L13",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L13",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L13",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]
+1d:T82f6,<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/953ef257453a40c1ac16562dfd78a2f2~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773469861&amp;x-signature=InlAgd6xAZbvrUcT2kibYDhhyqM%3D"
+alt="前端领秀.png" /></p>
+<p>用了这么久的vue, 有没有思考过vue框架最大的特点是啥？
+我觉得最大的特点在于：<code>能够实现视图和函数的关联</code>，当我们数据变化的时候，视图也会发生相应的变化。</p>
+<h2 id="1什么叫视图">1、什么叫视图？</h2>
+<p>如果用一个dom元素来表示一个视图的话，那么视图在计算机里面表现出来的就是一个对象。当然我们知道在Vue里面使用的是虚拟DOM，虚拟DOM表现出来的也是一个对象。同样也可以用字符串来表示视图，比如
+<code>&lt;h1&gt; hello world&lt;/h1&gt;</code>表现出来的数据形式就是一个字符串。那么视图的本质是什么?
+无论是真实dom还是虚拟dom，或者一个字符串，本质上是个数据。视图也可以是数据，那我们要找的就是数据和数据之间的关联。那这有意思了，听上去好像怪怪的，这让我们想到了之前用过的Excel。Excel里面会发生大量的数据和数据之间的关联，数据和数据之间，存在着某种特定的计算，这类计算是创建视图的过程。在计算机中，过程表现为函数或方法，回到计算机中，我们要做的就是如何把
+创建视图的 <strong>函数</strong> 和 <strong>数据</strong> 进行关联。</p>
+<h2 id="2响应式系统的实现">2、响应式系统的实现</h2>
+<p>通过上面的分析，会发现，关联就是为了建立一个对应关系，那么如何来建立一个对应关系？对应关系中涉及到两个东西，一个是<strong>数据</strong>，一个是
+<strong>函数</strong>。数据和函数之间的关系之所以能被建立，是因为在函数的运行期间，读到了这个数据，所以就必须要去监听数据的读取，将来这个数据发生变化的时候，还要重新运行函数。除了监听数据的读取，还要监听数据的修改。js中提供了两个监听数据的方法
+<code>defineProperty</code> 和 <code>proxy</code></p>
+<h3 id="21-defineproperty">2.1 defineProperty</h3>
+<p>监听范围很窄，只能通过属性描述符，去监听已有属性的读取和赋值，但是它的好处在于兼容性好。</p>
+<h3 id="22-proxy">2.2 proxy</h3>
+<p>监听范围更广，对整个对象进行代理，</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// recative.js</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a> <span class="kw">const</span> targetMap <span class="op">=</span> <span class="kw">new</span> <span class="bu">WeakMap</span>()<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a> <span class="im">export</span> <span class="kw">function</span> <span class="fu">recative</span>(target){</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>     <span class="co">// 已经代理过了，直接返回</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>     <span class="cf">if</span>(targetMap<span class="op">.</span><span class="fu">has</span>(target)){</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>         <span class="cf">return</span> targetMap<span class="op">.</span><span class="fu">get</span>(target)<span class="op">;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>     }</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> proxy <span class="op">=</span> <span class="kw">new</span> <span class="bu">Proxy</span>(target<span class="op">,</span> {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">get</span>(target<span class="op">,</span> key<span class="op">,</span> receiver){</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 依赖搜集</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>            <span class="fu">tract</span>(target<span class="op">,</span> key)<span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 返回对象的属性值</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            <span class="kw">const</span> result <span class="op">=</span> <span class="bu">Reflect</span><span class="op">.</span><span class="fu">get</span>(target<span class="op">,</span> key<span class="op">,</span> receiver)<span class="op">;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 深度代理</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span>(<span class="fu">isObject</span>(target)){</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="fu">reactive</span>(result)<span class="op">;</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> result<span class="op">;</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="kw">set</span>(target<span class="op">,</span> key<span class="op">,</span> value<span class="op">,</span> receiver){</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>            <span class="co">// target[key] = value; 设置对象相应的属性值 </span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 也可以使用反射赋值, 赋值成功返回true，否则返回fals</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>         <span class="kw">const</span> type <span class="op">=</span> target<span class="op">.</span><span class="fu">hasOwnProperty</span>(key) <span class="op">?</span> TriggerOpTypes<span class="op">.</span><span class="at">SET</span> <span class="op">:</span> TriggerOpTypes<span class="op">.</span><span class="at">ADD</span><span class="op">;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>            <span class="fu">trigger</span>(target<span class="op">,</span> type<span class="op">,</span> key)<span class="op">;</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="bu">Reflect</span><span class="op">.</span><span class="fu">set</span>(target<span class="op">,</span> key<span class="op">,</span> value<span class="op">,</span> receiver)<span class="op">;</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>        }  </span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>        <span class="fu">has</span>(target<span class="op">,</span> key){</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 依赖搜集</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>            <span class="fu">tract</span>(target<span class="op">,</span> key)<span class="op">;</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="bu">Reflect</span><span class="op">.</span><span class="fu">has</span>(target<span class="op">,</span> key)<span class="op">;</span> <span class="co">// 判断对象是否有相应的属性值</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    targetMap<span class="op">.</span><span class="fu">set</span>(target<span class="op">,</span> proxy)<span class="op">;</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> proxy<span class="op">;</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">deleteProperty</span>(target<span class="op">,</span> key){</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 原来有的key</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>            <span class="kw">const</span> hadKey <span class="op">=</span> target<span class="op">.</span><span class="fu">hasOwnProperty</span>(key)<span class="op">;</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 删除对象相应的属性值</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>            <span class="kw">const</span> result <span class="op">=</span> <span class="bu">Reflect</span><span class="op">.</span><span class="fu">deleteProperty</span>(target<span class="op">,</span> key)<span class="op">;</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span>(hadKey <span class="op">&amp;&amp;</span> result){</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>                <span class="fu">trigger</span>(target<span class="op">,</span> TriggerOpTypes<span class="op">.</span><span class="at">DELETE</span><span class="op">,</span> key)<span class="op">;</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>             <span class="co">// 派发更新</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>            <span class="fu">targger</span>(target<span class="op">,</span> TriggerOpTypes<span class="op">.</span><span class="at">DELETE</span><span class="op">,</span> key)<span class="op">;</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> result<span class="op">;</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>        }<span class="op">,</span></span></code></pre></div>
+<h3 id="25-测试案例">2.5 测试案例</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// index.js</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { reactive } <span class="im">from</span> <span class="st">&#39;./reactive.js&#39;</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> state <span class="op">=</span> <span class="fu">reactive</span>({</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">a</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">b</span><span class="op">:</span> <span class="dv">2</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">// 开始依赖搜集</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fn</span>(){</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    state<span class="op">.</span><span class="at">a</span><span class="op">;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    state<span class="op">.</span><span class="at">b</span><span class="op">;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="fu">fn</span>()<span class="op">;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co">// 更新数据</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>state<span class="op">.</span><span class="at">a</span> <span class="op">=</span> <span class="st">&quot;aaaa&quot;</span><span class="op">;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>state<span class="op">.</span><span class="at">b</span><span class="op">++</span></span></code></pre></div>
+<h2 id="3监听数据的读取和修改">3、监听数据的读取和修改</h2>
+<h3 id="31-reflect">3.1 Reflect</h3>
+<ul>
+<li>先来看一段代码：</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> obj <span class="op">=</span> {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">a</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">b</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">get</span> <span class="fu">c</span>(){ </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="kw">this</span>)<span class="op">;</span> <span class="co">// {a:1,b:2} this指向的obj，并不是代理对象</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="at">a</span> <span class="op">+</span> <span class="kw">this</span><span class="op">.</span><span class="at">b</span><span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">d</span><span class="op">:</span> {</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="dt">e</span><span class="op">:</span> <span class="dv">4</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> state <span class="op">=</span> <span class="fu">reactive</span>(obj)<span class="op">;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">fn</span>(){</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    state<span class="op">.</span><span class="at">c；</span><span class="co">// 输出3</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    state<span class="op">.</span><span class="at">d</span><span class="op">;</span> <span class="co">// 输出{e:4}</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="fu">fn</span>()<span class="op">;</span></span></code></pre></div>
+<ul>
+<li><p>读取obj的c属性，会去收集什么样的依赖？读属性c的同时，又用到了属性a和b，也会收集到a和b的依赖，这是我们期望的事。如果没收集依赖，this指向的是obj，并不是代理对象，只有把这个this指向代理对象的时候，才能够收集到a和b。</p></li>
+<li><p>那么this指向怎么改变?
+这个时候就需要去深入理解属性的读取。读属性其实是在运行一个内部方法 <a
+href="https://ecma-international.org/wp-content/uploads/ECMA-262_15th_edition_june_2024.pdf">[[Get]]</a>,
+传入两个属性，一个是你要读取属性的名字<code>propertyKey</code>，第二个属性是<code>Receiver</code>用来指定this的指向。
+<img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/f3816af4fcb14ed78dd46ee5783181b9~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773469861&amp;x-signature=ckER6gZqngfKr%2F%2B1kDqDUVArxM4%3D"
+alt="image.png" /></p></li>
+<li><p>通过<code>Reflect</code>，可以直接调用它的内部方法，不用经过语法层面的中转，上面的每一个内部方法，在Reflect里面都有对应的函数。同样的，要对d里面的e进行依赖收集，再那袋属性值的时候，如果是一个对象，需要对这个对象再进行一次代理并返回，这样就完成了深度代理。</p></li>
+</ul>
+<h3 id="32-读取依赖搜集">3.2 读取，依赖搜集</h3>
+<p>前面讲到，读的时候，需要进行<strong>依赖收集</strong>，有人可能会问，依赖收集是啥？其实就是查找
+对象的某个属性被哪个函数用到了。这样就记录了，哪个函数在读那个数据，或者说哪个被哪个函数读取了。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">// track.js 依赖搜集</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> targetMap <span class="op">=</span> <span class="kw">new</span> <span class="bu">WeakMap</span>()<span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> TIERATE_KEY <span class="op">=</span> <span class="bu">Symbol</span>(<span class="st">&#39;iterate&#39;</span>)<span class="op">;</span> <span class="co">// 唯一key</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> activeEffect <span class="op">=</span> <span class="kw">undefined</span><span class="op">;</span> <span class="co">// 函数消息</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> showldTrack <span class="op">=</span> <span class="kw">false</span><span class="op">;</span> <span class="co">// 关联关系</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">function</span> <span class="fu">track</span>(target<span class="op">,</span> key<span class="op">,</span> type){</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="op">!</span>showldTrack <span class="op">||</span> <span class="op">!</span>activeEffect){ <span class="cf">return</span><span class="op">;</span> }</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 首先获取propMap</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> propMap <span class="op">=</span> targetMap<span class="op">.</span><span class="fu">get</span>(target)<span class="op">;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 没有propMap时，创建一个，并设置到targetMap中去</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="op">!</span>propMap){ </span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        propMap <span class="op">=</span> <span class="kw">new</span> <span class="bu">Map</span>()<span class="op">;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        targetMap<span class="op">.</span><span class="fu">set</span>(taeget<span class="op">,</span> propMap)<span class="op">;</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(type <span class="op">===</span> TrackOpTypes<span class="op">.</span><span class="at">ITERATE</span>){</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        key <span class="op">===</span> ITERATE_KEY<span class="op">;</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 获取typeMap</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> typeMap <span class="op">=</span> <span class="kw">new</span> <span class="bu">Map</span>()<span class="op">;</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 没有typeMap时，创建一个，并设置到propMap中去</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="op">!</span>typeMap){</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>        typeMap <span class="op">=</span> <span class="kw">new</span> <span class="bu">Set</span>()<span class="op">;</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        propMap<span class="op">.</span><span class="fu">set</span>(key<span class="op">,</span> typeMap)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 获取depSet</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> depSet <span class="op">=</span> typeMap<span class="op">.</span><span class="fu">get</span>(type)<span class="op">;</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 没有depSet时，创建一个，并设置到typeMap中去</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="op">!</span>depSet){</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>        depSet <span class="op">=</span> <span class="kw">new</span> <span class="bu">Map</span>()<span class="op">;</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>        typeMap<span class="op">.</span><span class="fu">set</span>(type<span class="op">,</span> depSet)</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 如果对象中不包含该函数, 给他设置进去</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="op">!</span>depSet<span class="op">.</span><span class="fu">has</span>(activeEffect)){</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>        depSet<span class="op">.</span><span class="fu">add</span>(activeEffect)</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="co">// 重新收集依赖</span></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">function</span> <span class="fu">effect</span>(fn){</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> effectFn <span class="op">=</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">try</span>{</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>            activeEffect <span class="op">=</span> effectFn<span class="op">;</span></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>            <span class="fu">fn</span>()<span class="op">;</span></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>        } <span class="cf">finally</span> {</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>            activeEffect <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>依赖收集的目的是为了派发更新，收集的是运行函数的整个环境。</p>
+<h3 id="33-修改派发更新">3.3 修改，派发更新</h3>
+<p>写入的时候需要进行<strong>派发更新</strong>，派发更新就是基于依赖收集，找到的对象的某个属性，把它对应的函数重新运行一遍就完事了；</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">// targger.js 派发更新</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="kw">function</span> <span class="fu">targger</span>(target<span class="op">,</span> key<span class="op">,</span> type){</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>   <span class="kw">const</span> effectFns <span class="op">=</span> <span class="fu">getEffectFns</span>(target<span class="op">,</span> key<span class="op">,</span> type)<span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>   <span class="cf">for</span>(<span class="kw">const</span> effectFn <span class="kw">of</span> effectFns){</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>       <span class="fu">effectFn</span>()<span class="op">;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>   }</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">getEffectFns</span>(target<span class="op">,</span> key<span class="op">,</span> type){</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> proMap <span class="op">=</span> targetMap<span class="op">.</span><span class="fu">get</span>(target)<span class="op">;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="op">!</span>propMap){ <span class="cf">return</span><span class="op">;</span> }<span class="op">;</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> keys <span class="op">=</span> [key]<span class="op">;</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 操作类型为新增或者删除属性的时候, 添加一个TIERATE_KEY</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>([TriggerOpType<span class="op">.</span><span class="at">ADD</span><span class="op">,</span> TriggerOpType<span class="op">.</span><span class="at">DELETE</span>]<span class="op">.</span><span class="fu">includes</span>(type)){</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>        keys<span class="op">.</span><span class="fu">push</span>(TIERATE_KEY)<span class="op">;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> effectsFns <span class="op">=</span> <span class="kw">new</span> <span class="bu">Set</span>()<span class="op">;</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 循环去拿typeMap的每一项</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span>(<span class="kw">const</span> key <span class="kw">of</span> keys){</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> typeMap <span class="op">=</span> propMap<span class="op">.</span><span class="fu">get</span>(key)<span class="op">;</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(<span class="op">!</span>typeMap){ <span class="cf">continue</span><span class="op">;</span> }<span class="op">;</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 最终返回我们派发更新的函数</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> effectsFns<span class="op">;</span> </span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h2 id="4如何知晓数据对应的函数">4、如何知晓数据对应的函数</h2>
+<p>想要给依赖搜集和派发更新建立联系，就需要一个数据结构来进行保存，结构关系如下：
+<img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/e829e7dfae644a9ca516c4abe5caa707~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773469861&amp;x-signature=9v68y%2FBXVPU%2BHQrVy14zBrQjlGw%3D"
+alt="image.png" /></p>
+<ul>
+<li><p><code>taegetMap</code>是一个map结构，键是我们的对象，不管是数组，还是普通对象也好，里面包含了大量的数据。我们要知道那个数据对应哪个函数，首先要从对象出发找到这个数据。每个对象又对应一个map,
+也就是<code>propMap</code>,
+propsMap中每一个属性又对应该对象的具体行为，如get、set、has之类的，存放在<code>typeMap</code>中；typeMap的具体操作类型，又对应<code>dep</code>中的具体函数。在我们进行依赖收集的时候，需要3个参数(target,
+key,
+type)，分别对应某个对象(<code>target</code>)的某个属性(<code>key</code>)的某些行为(<code>type</code>)
+;</p></li>
+<li><p>有了这个结构还不够，告诉了某个对象的某个属性的某个行为，问题是哪个函数在用呢？需要找到这个函数，加到dep集合里面去，这里就使用一个重大问题。仔细思考一下，先不说怎么实现的问题，响应式内部并不会把所有的对象都进行依赖，最好的方式就是让用户自己决定依赖关系。</p></li>
+</ul>
+15:["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L13",null,{"href":"/en/archives","className":"ghost-inline","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","aria-hidden":"true","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"All posts"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"Synced from Juejin"}],["$","span",null,{"children":"2025-01-01"}],["$","span",null,{"children":[5," ","min read"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"Vue3 读和写的深度思考"}],["$","p",null,{"className":"hero-copy","children":"--- theme: condensed-night-purple highlight: androidstudio --- 用了这么久的vue, 有没有思考过vue框架最大的特点是啥？ 我觉得最大的特点在于：能够实现视图和函数的关联，当我们数据变化的时候，视图也会发生相应的变化。 1、什么叫视图？ 如果用一个dom元素来表示一个视图的话，那么视图在计算机里..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"Synopsis"}],["$","span",null,{"children":"This post is preserved inside the rebuilt blog shell while keeping the original Chinese content intact."}],["$","a",null,{"href":"https://juejin.cn/post/7454585438323392538","target":"_blank","rel":"noreferrer","className":"ghost-inline","children":["Original source",["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-external-link h-4 w-4","aria-hidden":"true","children":[["$","path","1q9fwt",{"d":"M15 3h6v6"}],["$","path","gplh6r",{"d":"M10 14 21 3"}],["$","path","a6xqqp",{"d":"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"}],"$undefined"]}]]}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$1d"}}]}]]}]
+1a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+18:null
+1c:[["$","title","0",{"children":"POJIAN.BLOG"}],["$","meta","1",{"name":"description","content":"A multilingual personal blog around AI tooling, product delivery, memoir, and long-form archive work."}]]

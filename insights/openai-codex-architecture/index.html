@@ -1,109 +1,71 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>OpenAI Codex 深入剖析 | CocoonBreak</title>
-    <meta name="description" content="从终端工作流视角理解 OpenAI Codex：模型、执行、反馈闭环与产品落地方向。">
-    <link rel="icon" href="/img/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/custom/site.css">
-    <script defer src="/custom/site.js"></script>
-    <script defer src="/custom/live2d-loader.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content="0; url=/en/archives/" />
+    <title>Article moved</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1020;
+        --panel: rgba(10, 18, 38, 0.88);
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #f6efe3;
+        --muted: #93a2bf;
+        --accent: #7ae7c7;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
+          linear-gradient(180deg, #0b1020 0%, #050813 100%);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        padding: 24px;
+      }
+      main {
+        width: min(640px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--panel);
+        padding: 32px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(28px, 4vw, 42px);
+      }
+      p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      a {
+        color: #08111e;
+        background: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    </style>
   </head>
   <body>
-    <div class="article-shell">
-      <nav class="insight-nav">
-        <a href="/">← 首页</a>
-        <a href="/insights/">专题列表</a>
-        <a href="https://juejin.cn/user/3817931570691031/posts" target="_blank" rel="noreferrer">掘金原文</a>
-      </nav>
-
-      <header class="article-hero" data-reveal>
-        <div class="article-meta">
-          <span>2026.03</span>
-          <span>Codex</span>
-          <span>AI Coding Agent</span>
-        </div>
-        <h1>OpenAI <span>Codex</span> 深入剖析：为什么下一代 AI 编程助手越来越像“终端里的搭档”</h1>
-        <p class="article-intro">
-          这篇文章不是把 Codex 当成一个更强的聊天窗口，而是把它放回真实工作流里去看：它为什么要靠近终端、代码仓库、命令执行、错误反馈和补丁结果，
-          以及这件事为什么会改变我们理解“AI 编程助手”的方式。
-        </p>
-        <div class="article-note">
-          主题参考我近期在掘金发布的《OpenAI Codex 深入剖析：下一代 AI 编程助手的架构与原理》，这里是更适合个人博客连续阅读的整理版。
-        </div>
-      </header>
-
-      <article class="prose" data-reveal>
-        <h2>1. 先换一个观察角度：Codex 不是聊天模型，而是工作流节点</h2>
-        <p>
-          很多人第一次接触 Codex，会先把它理解成“更擅长写代码的模型”。这个理解不能说错，但不够。真正关键的是，
-          Codex 已经不再只解决“给你一段代码建议”这类单轮任务，而是开始参与一条更完整的链路：
-          读取仓库上下文、理解文件关系、执行命令、观察报错、修改补丁、再次运行验证。
-        </p>
-        <p>
-          一旦进入这条链路，模型的价值就不只是“生成答案”，而是“在约束条件下持续推动任务往前走”。这也是为什么 Codex 的体验越来越像一个在终端里协作的搭档，
-          而不是一个只在文本框里输出代码片段的助手。
-        </p>
-
-        <h2>2. Codex 真正的三层结构</h2>
-        <p>如果用工程视角去拆，Codex 这类系统至少包含三层：</p>
-        <ul>
-          <li><strong>推理层</strong>：理解需求、读取上下文、决定下一步动作。</li>
-          <li><strong>执行层</strong>：通过终端、文件系统、补丁机制真正触达代码仓库。</li>
-          <li><strong>反馈层</strong>：把命令输出、错误日志、差异内容再喂回模型，形成闭环。</li>
-        </ul>
-        <p>
-          这三层缺一不可。只有推理层，没有执行层，模型永远停留在“建议阶段”；只有执行层，没有反馈层，系统又无法真正自校正。
-          所以 Codex 的核心价值不在某一次回答，而在这个循环本身。
-        </p>
-
-        <h2>3. 为什么终端优先会成为主流</h2>
-        <blockquote>终端不是一个老旧界面，而是最接近真实工程上下文的控制平面。</blockquote>
-        <p>
-          把 Codex 放进终端，有几个非常现实的原因。第一，终端天然靠近仓库、脚本、构建系统和测试命令；
-          第二，很多真实问题只有在运行 <code>build</code>、<code>test</code>、<code>lint</code> 之后才会暴露出来；第三，命令输出本身就是高质量的反馈源。
-        </p>
-        <p>
-          换句话说，终端不是为了“显得专业”，而是因为它能把模型直接放进最短反馈路径里。你提需求，它改代码；代码出错，日志直接回来；
-          下一轮再修，直到通过。这就是为什么终端体验会越来越重要。
-        </p>
-
-        <h2>4. 它和 Claude Code、Gemini CLI 的共性在哪里</h2>
-        <p>
-          如果把不同厂商的 CLI 代理放在一起看，会发现它们的表层交互不同，但底层方向很像：都在强化本地上下文、工具调用、命令执行和结果回灌。
-          这说明行业正在收敛到一个共识：真正有价值的编码代理，不只是“会解释代码”，而是“能在受控环境里动手做事”。
-        </p>
-        <p>
-          这也是我最近一直关注 Codex、Gemini CLI、Claude Code 和 OpenClaw 这类链路的原因。它们背后的问题并不是哪个模型更会写代码，
-          而是谁更擅长把模型能力接进真正可运行的工程环境里。
-        </p>
-
-        <h2>5. 对产品和团队意味着什么</h2>
-        <p>如果你在做自己的 AI 编码产品，或者想把模型能力接进现有团队工作流，我建议先想清楚下面几件事：</p>
-        <ul>
-          <li>模型是否能看到足够稳定且可控的本地上下文。</li>
-          <li>执行权限是否被约束在明确边界内。</li>
-          <li>错误、日志、测试结果能否快速返回到下一轮推理。</li>
-          <li>当模型失败、超时、额度耗尽时，系统是否存在回退链路。</li>
-        </ul>
-        <p>
-          真正成熟的系统不是“主模型足够强”，而是“即使主模型失误，整体任务也能继续推进”。这也是为什么我会在自己的网关和工作流里非常强调 fallback、
-          多通道认证和自动切换。
-        </p>
-
-        <h2>6. 最后的判断</h2>
-        <p>
-          Codex 的意义，不在于它又把代码补全做快了一点，而在于它把“模型参与工程执行”这件事推到了更靠前的位置。
-          下一阶段的竞争，很可能不是谁输出的代码更像人，而是谁能把模型、执行和反馈组织得更像一个真正可协作的工程角色。
-        </p>
-        <p>
-          如果你现在还把这类工具当成“高级问答框”，那你看到的只是它最表面的一层。真正值得研究的，是它如何进入你的工程系统，并且开始承担一部分推进任务的职责。
-        </p>
-      </article>
-    </div>
+    <main>
+      <h1>Article moved</h1>
+      <p>This article has been folded into the rebuilt blog structure. You are being redirected to the new archive.</p>
+      <a href="/en/archives/">Continue</a>
+    </main>
+    <script>
+      window.location.replace("/en/archives/");
+    </script>
   </body>
 </html>

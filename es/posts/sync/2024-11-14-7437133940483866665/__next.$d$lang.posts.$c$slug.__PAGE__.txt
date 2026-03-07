@@ -1,0 +1,115 @@
+1:"$Sreact.fragment"
+2:I[27917,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js","/_next/static/chunks/b70577f423f10c73.js"],""]
+5:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+3:T2609,<p><img
+src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/0186dfbeae124339b81c1d4bd372d41e~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=RrtRdsMWwLMbBtJMKNOv2bOOYMk%3D"
+alt="前端领秀-公众号.png" /></p>
+<ul>
+<li>前言：大文件上传的普遍方案基本都是分片上传，如果把文件上传看做是一个不可分割的事务，那么分片的目标就是把一个大事务划分为一个个小事务；</li>
+</ul>
+<h3 id="1-bff层backend-for-frontend">1. BFF层(Backend for Frontend)</h3>
+<ul>
+<li><p><code>BFF层</code>(Backend for
+Frontend)：后端为前端服务的层，我们通常把他叫做<code>中间层</code>，凡是上了一定规模的公司，基本上都会上中间层。因为他的业务已经足够复杂，他的数据规则出现了巨大的鸿沟。</p></li>
+<li><p>正在读文章的你，一定少不了跟后端吵架，前端想要的数据是这种格式，但是后端给你的数据是另外一种格式，你问他能不能改一下，后端说改不了，他的数据就是这种格式，你爱用不用。或者你要的数据要调好几个接口，才能请求完整，你问他能不能合在一起给你，后端继续说给不了。是因为后端懒，不愿意给你整吗？不排除这种情况，其实根本原因在于，后端的数据规格跟结构，跟前端就是不一样的。</p></li>
+<li><p>在很多中小型企业里面，后端的数据格式来自于它的存储格式，数据库里面怎么存的，数据结构就是怎么样子，反映的是<code>数据的存储</code>；而前端的数据格式，反映的是<code>UI的渲染</code>。这两种数据格式天生就不一致，如果是大型企业，反映的是业务格式，比如上了一些<code>DDD开发模型</code>。</p></li>
+<li><p>有了BFF层后，前端很清楚自己需要什么样的格式，因此就可以去后端服务器拿业务数据，比如要请求多次，在BFF层组装完成后，返回给前端最合适的数据格式。当然这只是中间层的一个左右，它还有很多作用。</p></li>
+</ul>
+<p><img
+src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/482f2af306664191977dec20685122f2~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=4P09xzLoz%2BvasQNcSOIEhgra7eg%3D"
+alt="image.png" /></p>
+<h3 id="2如何减少页面阻塞">2.如何减少页面阻塞？</h3>
+<p><code>分片上传</code>的第一个首要目标就是尽量避免<strong>相同的分片重复上传</strong>。服务器必须要能够识别来自各个客户端的上传请求。</p>
+<p><code>服务器如何识别哪些分片是相同的？</code></p>
+<ul>
+<li><p>首先需要对相同的下一个准确的定义：<code>文件内容一样即为相同</code>。</p></li>
+<li><p>对文件内容进行二进制对比是一个非常耗时的操作，于是可以选择基于内容的<code>hash</code>来进行对比。</p></li>
+<li><p>hash算法包括<code>MD5、SHA-1</code>，可以将文艺长度的数据转换为一个定长的数据，有个第三方组件库<a
+href="https://github.com/satazor/js-spark-md5">Spark-MD5</a></p></li>
+</ul>
+<p><img
+src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/73bb7c5ef53a4609a54e76a4e43e935a~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=MI3ARG5bzhGfmvLzZfkYHus3tLU%3D"
+alt="image.png" /></p>
+<p><code>客户端需要做两件事：</code></p>
+<ul>
+<li>1.对文件进行分片，并计算每个分片的hash值；</li>
+<li>2.根据所有分片的hash值，计算整个文件的hash值；
+而计算hash值是一件<code>CPU密集型</code>的操作，如果不加处理，将会导致长时间<code>阻塞主线程</code>；</li>
+</ul>
+<p><img
+src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/0ab1759a8d8642f2b9ebd9f484addc25~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=NQtI6HMjw8BmQmQzR%2BNjR0CgQu4%3D"
+alt="image.png" /></p>
+<p>为了解决这个问题，理想状态下，每次上传的大文件都是最新的，这样就无需等待整体hash的计算结果，直接上传分片就行，同时可以把分片操作使用<code>多线程+异步</code>的方式进行处理。</p>
+<p><img
+src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/f57de906cac14045960da4f56dfc4b6f~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=OzuwVfkGmHQIFpMxj7074ynuaZs%3D"
+alt="image.png" /></p>
+<p>第一次上传有了前几个分片之后，中断后继续上传，发现上一次上传的几个分片已经存在，直接快进到第4个分片，不管中断多少次，直到上传完成为止；</p>
+<p>这样做的好处是:<code>页面完全无阻塞，也无需等待整体haah即可启动上传</code></p>
+<ul>
+<li>对于新文件上传，可以缩短整体上传时间，消除页面阻塞；</li>
+<li>对于旧文件上传，可能会产生一些无效的请求，但这些请求仅传递的是hash，并不真实上传文件数据，所以对网络和服务器影响很小。</li>
+</ul>
+<h3 id="3前后端如何协调">3.前后端如何协调?</h3>
+<h5 id="31创建文件协议">3.1.创建文件协议</h5>
+<p>当客户端发送分片到服务端的时候，需要告知服务器分片属于哪一次文件上传，因此需要一个唯一标识来表示某一次文件上传。</p>
+<p><code>如何获取文件上传的标识？</code></p>
+<p><img
+src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/499d48347c1047398030638af7804174~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=w5ILFaxl032Z0veb48jP131AuZ8%3D"
+alt="image.png" /></p>
+<ul>
+<li><code>uploadToken</code>: 文件上传的唯一标识</li>
+<li><code>chunSize</code>: 分片大小(字节 )</li>
+</ul>
+<h5 id="32haah校验">3.2.haah校验</h5>
+<p>客户端需要校验单个分片或整个文件的hash，服务器需要告知客户端目前具体情况。</p>
+<p><img
+src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/5c07eddad615454a9148b4349b5d74cf~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=XHK%2FFBdtEgwpx7BqoqArnI%2FfdjQ%3D"
+alt="image.png" /></p>
+<ul>
+<li><code>Upload-Hash-Type</code>: 取值chunk或者file, 分别表示分片
+hash和文件整体hash。</li>
+<li><code>Upload-Hash</code>: 分片或文件的具体hash值。</li>
+<li><code>hahFile</code>:
+指示服务器是否已经存储了对应的分片或文件。</li>
+<li><code>res</code>:
+当校验文件hash时，指示该文件剩余那些没有上传。</li>
+</ul>
+<h5 id="33分片数据上传">3.3.分片数据上传</h5>
+<p>分片数据通过二进制上传到服务器，服务把分片保存起来； <img
+src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/7e3f621036ad4747a0fe1ed953cca609~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=3jaYmv64Aop7qUYN%2F1l%2FOefknFM%3D"
+alt="image.png" /></p>
+<h5 id="34分片合并">3.4.分片合并</h5>
+<p>所有分片全部上传后，通过该协议请求服务器完成合并。</p>
+<p><img
+src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/979a2857cbf1431e92aed676ac50e92f~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=6R8ZUQb1rzh2O4DblrM04a0AmF0%3D"
+alt="image.png" /></p>
+<ul>
+<li><code>Merge</code>：浏览器告诉服务器，已经上传完了，可以合并了。</li>
+<li><code>url</code>: 如果该文件已经完成上传，返回文件所在地址。</li>
+</ul>
+<h3 id="4如何保证分片不重复">4.如何保证分片不重复？</h3>
+<p>这里的重复指的是：不保存、不上传重复分片。这就必须要求分片
+<code>跨文件唯一</code>，并且 <code>永不删除</code></p>
+<p><img
+src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/f07062fa78cd47a99f6b8c639fdb201c~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=tguFXZoP5xivZBmNYsDNC%2FQleHQ%3D"
+alt="image.png" />
+也就是说：<strong>服务器并不保存合并之后的文件，仅记录文件中的分片顺序</strong></p>
+<h5 id="41-合并分片到底做了什么">4.1 合并分片到底做了什么？</h5>
+<p>合并会造成很多问题，最主要的是：<code>极其耗时、数据冗余</code>，所以服务器并不发生真正的合并，而是在数据库中记录文件中包含的分片。因此，合并操作时，服务器仅做简单的处理：</p>
+<ul>
+<li>1.校验文件大小</li>
+<li>2.校验文件hash</li>
+<li>3.标记文件状态</li>
+<li>4.生成文件访问地址</li>
+</ul>
+<h5 id="42-访问文件怎么办">4.2 访问文件怎么办？</h5>
+<p>由于服务器并未发生真正的文件合并，当后续请求该文件时，服务器需要动态处理，具体做法：</p>
+<ul>
+<li>1.服务器收到对文件的请求，并在数据库中找到对应的文件。</li>
+<li>2.服务器读取文件的所有分片ID，依次找到对应的分片文件。</li>
+<li>3.服务器利用TaskQueue的并发控制能力，逐步产生文件读取流，并利用管道直接输出到网络I/O</li>
+</ul>
+0:{"buildId":"PBOm4kDuGvs9RUGVV0N_6","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L2",null,{"href":"/es/archives","className":"ghost-inline","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","aria-hidden":"true","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Todos los textos"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"Sincronizado desde Juejin"}],["$","span",null,{"children":"2024-11-14"}],["$","span",null,{"children":[6," ","min"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"你可能不知道的大文件上传"}],["$","p",null,{"className":"hero-copy","children":"--- theme: condensed-night-purple highlight: androidstudio --- 前言：大文件上传的普遍方案基本都是分片上传，如果把文件上传看做是一个不可分割的事务，那么分片的目标就是把一个大事务划分为一个个小事务； 1. BFF层(Backend for Frontend) BFF层(Backend for Fr..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"Sinopsis"}],["$","span",null,{"children":"Este texto se conserva dentro de la nueva estructura del blog manteniendo el contenido original en chino."}],["$","a",null,{"href":"https://juejin.cn/post/7437133940483866665","target":"_blank","rel":"noreferrer","className":"ghost-inline","children":["Fuente original",["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-external-link h-4 w-4","aria-hidden":"true","children":[["$","path","1q9fwt",{"d":"M15 3h6v6"}],["$","path","gplh6r",{"d":"M10 14 21 3"}],["$","path","a6xqqp",{"d":"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"}],"$undefined"]}]]}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$3"}}]}]]}],null,"$L4"]}],"loading":null,"isPartial":false}
+4:["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]
+7:null

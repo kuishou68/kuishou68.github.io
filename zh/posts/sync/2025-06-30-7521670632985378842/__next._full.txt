@@ -1,0 +1,225 @@
+1:"$Sreact.fragment"
+2:I[44130,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js"],"ThemeProvider"]
+3:I[54542,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js"],"Live2DLoader"]
+4:I[22870,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+5:I[70047,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+6:I[95261,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js","/_next/static/chunks/b70577f423f10c73.js"],"HtmlLocaleSync"]
+7:I[4721,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js","/_next/static/chunks/b70577f423f10c73.js"],"BlogNavbar"]
+12:I[70681,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+:HL["/_next/static/chunks/5ff512ca50d86cc4.css","style"]
+:HL["/_next/static/chunks/d8a04d2be5c94533.css","style"]
+:HL["/_next/static/media/0c89a48fa5027cee-s.p.4564287c.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/130b5bec7367fe75-s.p.8efb6a94.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5f402bd2d8eef81a-s.p.b72f0478.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/ad9c66e761fed85a-s.p.bd81a64b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/feb57b2dc8f29018-s.p.2539f70a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"b":"PBOm4kDuGvs9RUGVV0N_6","c":["","zh","posts","sync","2025-06-30-7521670632985378842",""],"q":"","i":false,"f":[[["",{"children":[["lang","zh","d"],{"children":["posts",{"children":[["slug","sync/2025-06-30-7521670632985378842","c"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/5ff512ca50d86cc4.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/chunks/d8a04d2be5c94533.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/869f3c4760d682ac.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/5ca2d6e8edb00962.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"space_grotesk_f88813a-module__ZvLbQq__variable newsreader_caa3ccf4-module__7BqBPq__variable noto_sans_sc_820cd55a-module__sRRUGq__variable noto_sans_jp_1317c327-module__5MdXXa__variable noto_naskh_arabic_48867b81-module__7wgKba__variable antialiased","children":["$","$L2",null,{"attribute":"class","defaultTheme":"dark","enableSystem":false,"disableTransitionOnChange":true,"children":[["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","$L6",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"en","homeHref":"/","rootAliasForDefaultLocale":true,"labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/","label":"Home"},{"href":"/#latest","label":"Latest"},{"href":"/#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/#community","label":"Community"}],"legacyRoots":[{"slug":"A前端👨‍💻","title":{"en":"Frontend Atlas","zh":"前端图谱","es":"Atlas Frontend","ja":"フロントエンド地図","ar":"أطلس الواجهة الأمامية"},"description":{"en":"CSS, Vue, React, Canvas, Node, uni-app, build tools, and the earlier front-end trail.","zh":"CSS、Vue、React、Canvas、Node、uni-app、打包工具，以及更早的前端路径。","es":"CSS, Vue, React, Canvas, Node, uni-app, herramientas de build y el rastro front-end más temprano.","ja":"CSS、Vue、React、Canvas、Node、uni-app、ビルドツールなど、初期のフロントエンド蓄積。","ar":"CSS وVue وReact وCanvas وNode وuni-app وأدوات البناء والمسار الأقدم للواجهة الأمامية."}},{"slug":"B面试题📑","title":{"en":"Interview Bank","zh":"面试题仓库","es":"Banco de Entrevistas","ja":"面接バンク","ar":"بنك المقابلات"},"description":{"en":"Question banks for browser internals, networking, Vue, React, JavaScript, and engineering.","zh":"浏览器、网络、Vue、React、JavaScript 和工程化的面试题集合。","es":"Baterías de preguntas sobre navegador, red, Vue, React, JavaScript e ingeniería.","ja":"ブラウザ、ネットワーク、Vue、React、JavaScript、開発基盤に関する面接問題。","ar":"مجموعات أسئلة عن المتصفح والشبكات وVue وReact وJavaScript والهندسة."}},{"slug":"Vue实战💻","title":{"en":"Vue Practice","zh":"Vue 实战","es":"Práctica Vue","ja":"Vue 実戦","ar":"تطبيقات Vue"},"description":{"en":"Real project records around Ant Design, Echarts, mini programs, stores, and browser features.","zh":"围绕 Ant Design、Echarts、小程序、商城项目和浏览器功能的一组实战记录。","es":"Registros reales sobre Ant Design, Echarts, mini programas, tiendas y funciones del navegador.","ja":"Ant Design、Echarts、ミニプログラム、ストア、ブラウザ機能に関する実戦記録。","ar":"سجلات عملية حول Ant Design وEcharts والبرامج المصغرة والمتاجر وميزات المتصفح."}},{"slug":"走过的路🌱","title":{"en":"Growing Path","zh":"走过的路","es":"Camino Recorrido","ja":"歩いてきた道","ar":"الطريق الذي سلكته"},"description":{"en":"Yearly reviews and growth notes that carry more life signal than technical polish.","zh":"年度总结和成长记录，保留生活感和时间感。","es":"Revisiones anuales y notas de crecimiento con más vida que pulido técnico.","ja":"年次レビューと成長記録。技術の整い方より時間の感触が残っています。","ar":"مراجعات سنوية وملاحظات نمو تحمل أثر الحياة أكثر من الصقل التقني."}},{"slug":"读过的书📚️","title":{"en":"Reading Shelf","zh":"读书笔记","es":"Estante de Lectura","ja":"読書棚","ar":"رف القراءة"},"description":{"en":"Book notes across networking, JavaScript, algorithms, and systems thinking.","zh":"网络、JavaScript、算法和系统思维方向的读书笔记。","es":"Notas de lectura sobre redes, JavaScript, algoritmos y pensamiento de sistemas.","ja":"ネットワーク、JavaScript、アルゴリズム、システム思考に関する読書ノート。","ar":"ملاحظات قراءة حول الشبكات وJavaScript والخوارزميات والتفكير المنظومي."}},{"slug":"PHP🐘","title":{"en":"PHP Shelf","zh":"PHP 归档","es":"Estante PHP","ja":"PHP 棚","ar":"رف PHP"},"description":{"en":"Earlier PHP notes and experiments that still belong in the public record.","zh":"更早期的 PHP 文章和实验记录。","es":"Notas y experimentos tempranos de PHP que siguen formando parte del archivo.","ja":"初期の PHP ノートと実験記録。","ar":"ملاحظات وتجارب PHP المبكرة التي ما زالت جزءًا من السجل."}},{"slug":"Python🐍","title":{"en":"Python Shelf","zh":"Python 归档","es":"Estante Python","ja":"Python 棚","ar":"رف Python"},"description":{"en":"Small scraping experiments and data-oriented notes from the earlier Python phase.","zh":"偏数据和爬取的小实验，保留了更早一阶段的 Python 轨迹。","es":"Pequeños experimentos de scraping y notas orientadas a datos de la etapa temprana con Python.","ja":"スクレイピングやデータ寄りの小さな Python 実験。","ar":"تجارب صغيرة في الاستخراج والبيانات من المرحلة المبكرة مع Python."}}]}],"$L8","$L9","$La","$Lb","$Lc"]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]}]]}],{"children":["$Ld",{"children":["$Le",{"children":["$Lf",{"children":["$L10",{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],"$L11",false]],"m":"$undefined","G":["$12",[]],"S":true}
+13:I[27917,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js","/_next/static/chunks/b70577f423f10c73.js"],""]
+16:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"OutletBoundary"]
+17:"$Sreact.suspense"
+19:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"ViewportBoundary"]
+1b:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"MetadataBoundary"]
+8:["$","div",null,{"className":"background-orb background-orb-one"}]
+9:["$","div",null,{"className":"background-orb background-orb-two"}]
+a:["$","div",null,{"className":"background-grid"}]
+b:["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","div",null,{"className":"mx-auto max-w-3xl pb-20 pt-8","children":["$","div",null,{"className":"hero-panel space-y-5","children":[["$","span",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"className":"hero-title compact","children":"That page never made it into the archive."}],["$","p",null,{"className":"hero-copy","children":"Try the rebuilt home, the full archive, or one of the legacy shelves instead."}],["$","$L13",null,{"href":"/","className":"primary-chip","children":"Go back to the English home"}]]}]}]}]
+c:["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L13",null,{"href":"/","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L13",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L13",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L13",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]
+d:["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/b70577f423f10c73.js","async":true,"nonce":"$undefined"}]],"$L14"]}]
+e:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+f:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+10:["$","$1","c",{"children":["$L15",null,["$","$L16",null,{"children":["$","$17",null,{"name":"Next.MetadataOutlet","children":"$@18"}]}]]}]
+11:["$","$1","h",{"children":[null,["$","$L19",null,{"children":"$L1a"}],["$","div",null,{"hidden":true,"children":["$","$L1b",null,{"children":["$","$17",null,{"name":"Next.Metadata","children":"$L1c"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+14:[["$","$L6",null,{"lang":"zh","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"zh","homeHref":"/zh","rootAliasForDefaultLocale":false,"labels":{"brand":"POJIAN.BLOG","subtitle":"围绕 AI 工具链、产品交付与个人记忆的长篇博客。","menu":"目录","close":"关闭","switchLanguage":"切换语言","switchTheme":"切换主题"},"links":[{"href":"/zh","label":"首页"},{"href":"/zh#latest","label":"最新"},{"href":"/zh#collections","label":"分栏"},{"href":"/zh/archives","label":"归档"},{"href":"/zh#community","label":"社区"}],"legacyRoots":"$0:f:0:1:0:props:children:1:props:children:props:children:props:children:1:props:notFound:0:1:props:children:0:props:legacyRoots"}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"围绕 AI 工具链、产品交付与个人记忆的长篇博客。"}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L13",null,{"href":"/zh","className":"hover:text-[var(--text)]","children":"首页"}],["$","$L13",null,{"href":"/zh/archives","className":"hover:text-[var(--text)]","children":"归档"}],["$","$L13",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L13",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]
+1d:T784a,<h2 id="1-什么是组件">1. 什么是组件？</h2>
+<p>从用户的角度看，一个有状态组件的组件就是一个选项对象，但是从渲染器内部的实现看，一个组件是一个特殊类型的虚拟DOM节点。通过vnode.type
+属性来存储标签名称。实际上，组件本身是对页面内容的封装，它用来描述页面内容的一部分，render函数用来描述组件所内容的接口。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> MyComponent <span class="op">=</span> {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 组件名称</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">&quot;MyCompent&quot;</span><span class="op">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">render</span>(){</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 返回虚拟dom</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>       <span class="cf">return</span>{</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>           <span class="dt">type</span><span class="op">:</span> <span class="st">&quot;div&quot;</span><span class="op">,</span> <span class="co">// Fragment 片段、Text 文本节点、string 普通元素、object 选项对象（组件）        </span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>           <span class="dt">children</span><span class="op">:</span> <span class="vs">`hello world`</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>       }</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>如果type是选项对象(组件)，调用<code>mountComponent</code>、<code>patchCompent</code>函数完成组件的挂载和更新，真正完成渲染任务的是
+mountCompontent 函数。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">mountCompontent</span>(vnode<span class="op">,</span> container<span class="op">,</span> anchor){</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 通过vnode获取组件的选项对象</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> componentOptions <span class="op">=</span> vnode<span class="op">.</span><span class="at">type</span><span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 获取组件的渲染函数</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> { render } <span class="op">=</span> componentOptions<span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 执行渲染函数，</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> subTree <span class="op">=</span> <span class="fu">render</span>()<span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 调用patch挂载组件</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">patch</span>(<span class="kw">null</span><span class="op">,</span> subTree<span class="op">,</span> container<span class="op">,</span> anchor)<span class="op">;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h2 id="2-组件的状态与自更新是怎样的">2.
+组件的状态与自更新是怎样的？</h2>
+<h3 id="21-初始化组件状态">2.1 初始化组件状态</h3>
+<ul>
+<li>组件自身状态的初始化分两步，首先通过组件的选项对象获得data函数，调用teactive函数将data函数返回的状态包装为响应式对象；</li>
+<li>在调用render函数时，将其this的指向设置为响应式数据state，同时将state作为render函数的第一个参数传递。</li>
+</ul>
+<h3 id="22-组件状态的自动更新">2.2 组件状态的自动更新</h3>
+<p>一但自身想响应式数据发生变化时，组件根据收集的依赖，重新执行渲染函数进行派发更新，但是因为effect函数是同步的，如果多次修改响应式数据的值，会导致渲染函数多次执行。这里设计了一个调度器缓存机制，当副作用函数需要重新执行时，优先缓冲到微任务队列中，等到执行栈清空后，再将它从微任务队列中取出来执行。</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 用set结构存储缓存队列</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> queue <span class="op">=</span> <span class="kw">new</span> <span class="bu">Set</span>()<span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">// 是否正在刷新任务队列</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> isFlushing <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">// 立即执行resolve的promise实例</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> p <span class="op">=</span> <span class="bu">Promise</span><span class="op">.</span><span class="fu">resolve</span>()<span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">// 开始刷新</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">queueExecute</span>(job) {</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 加入微队列</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    queue<span class="op">.</span><span class="fu">add</span>(job)<span class="op">;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 如果还没有刷新队列，先刷新一遍</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="op">!</span>isFlushing){</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>          isFlushing <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>          p<span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>              <span class="cf">try</span>{</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>                  <span class="co">// 执行任务队列中的任务</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>                  queue<span class="op">.</span><span class="fu">forEach</span>(job <span class="kw">=&gt;</span> <span class="fu">job</span>())<span class="op">;</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>              } <span class="cf">finally</span> {</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>                  <span class="co">// 重置状态</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>                  isFlushing <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>                  queue<span class="op">.</span><span class="at">clear</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>              }</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>          })</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h2 id="3-组件的生命周期">3. 组件的生命周期</h2>
+<p>这段代码中，首先从选项对象中取的注册到组件上的生命周期函数，然后在合适时机调用不同的钩子，这就是生命周期的基本原理。</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">mountComponent</span>(vnode<span class="op">,</span> container<span class="op">,</span> anchor){</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> componentOptions <span class="op">=</span> vnode<span class="op">.</span><span class="at">type</span><span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 从组件选项对象中获取组件的生命周期函数</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> { render<span class="op">,</span> data<span class="op">,</span> beforeCreate<span class="op">,</span> created<span class="op">,</span> beforeMount<span class="op">,</span> mounted<span class="op">,</span> beforeUpdate<span class="op">,</span> updated } <span class="op">=</span> componentOptions<span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 1.调用 beforeCreate</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    beforeCreate <span class="op">&amp;&amp;</span> <span class="fu">beforeCreate</span>()<span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> state <span class="op">=</span> <span class="fu">reactive</span>(<span class="fu">data</span>())<span class="op">;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> instance <span class="op">=</span> { state<span class="op">,</span> <span class="dt">isMounted</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">subTree</span><span class="op">:</span> <span class="kw">null</span> }</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    vnode<span class="op">.</span><span class="at">component</span> <span class="op">=</span> instance<span class="op">;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 2.调用 created</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    created <span class="op">&amp;&amp;</span> created<span class="op">.</span><span class="fu">call</span>(state)<span class="op">;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">effect</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>       <span class="kw">const</span> subTree <span class="op">=</span> render<span class="op">.</span><span class="fu">call</span>(state<span class="op">,</span> state)<span class="op">;</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>       <span class="cf">if</span>(<span class="op">!</span>instance<span class="op">.</span><span class="at">isMounted</span>){</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>           <span class="co">// 3.调用 beforeMounted</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>           beforeMounted <span class="op">&amp;&amp;</span> <span class="fu">beforeMounted</span>()<span class="op">;</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>           <span class="fu">patch</span>(<span class="kw">null</span><span class="op">,</span> subTree<span class="op">,</span> container<span class="op">,</span> anchor)<span class="op">;</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>           instance<span class="op">.</span><span class="at">isMounted</span> <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>           <span class="co">// 4.调用 mounted</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>           mounted <span class="op">&amp;&amp;</span> <span class="fu">mounted</span>()<span class="op">;</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        } <span class="cf">else</span> {</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>           <span class="co">// 5.调用 brforeUpdate</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>           beforeUpdate <span class="op">&amp;&amp;</span> <span class="fu">beforeUpdate</span>()<span class="op">;</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>           <span class="fu">patch</span>(instance<span class="op">.</span><span class="at">subTree</span><span class="op">,</span> subTree<span class="op">,</span> container<span class="op">,</span> anchor)<span class="op">;</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>           <span class="co">// 6.调用 update</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>           updated <span class="op">&amp;&amp;</span> updated<span class="op">.</span><span class="fu">call</span>(state)</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>        instance<span class="op">.</span><span class="at">subTree</span> <span class="op">=</span> subTree<span class="op">;</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span> { <span class="dt">scheduler</span><span class="op">:</span> queueExecute })</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h2 id="4props与组件的被动更新">4.props与组件的被动更新</h2>
+<h3 id="41-props的传递与获取">4.1 Props的传递与获取</h3>
+<p>在虚拟dom层面，组件的props与普通HTML标签的属性差别不大，为什么这么说？来看一段代码，比如这个组件:</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">MyComponent</span><span class="ot"> title</span><span class="op">=</span><span class="st">&quot;提示&quot;</span><span class="ot"> :value</span><span class="op">=</span><span class="st">&quot;val&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span></code></pre></div>
+<p>对应的虚拟dom会解析成：</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> vnode <span class="op">=</span> {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">type</span><span class="op">:</span> Mycomponent<span class="op">,</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">props</span><span class="op">:</span> {</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>        <span class="dt">title</span><span class="op">:</span> <span class="st">&quot;提示&quot;</span><span class="op">,</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">value</span><span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">val</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>所以，对于一个组件来说，我们只需要关心两部分内容</p>
+<ul>
+<li>为组件传递props数据，即vnode.props对象；</li>
+<li>组件选项对象中定义的props选项，即 MyComponent.props对象；
+将组件选项中定义的MyComponent.props 和
+为组件传递的vnode.props相结合，最终解析出组件渲染时需要使用的props和attrs数据。
+在Vue3中，没有定义在MyComponent.props
+选项中的props数据将存储到attrs中。</li>
+</ul>
+<h3 id="42-props数据变化与更新">4.2 Props数据变化与更新</h3>
+<p>props本质是父组件的数据，当props发生变化时，会触发父组件的重新渲染。在更新过程中，渲染器发现父组件的subTree包含组件类型的虚拟节点，会调用patchComponent函数完成子组件的更新。</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">path</span>(n1<span class="op">,</span> n2<span class="op">,</span> container<span class="op">,</span> ancher){</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(n1 <span class="op">&amp;&amp;</span> n1<span class="op">.</span><span class="at">type</span> <span class="op">!==</span> n2<span class="op">.</span><span class="at">type</span>){</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        <span class="fu">unmount</span>(n1)<span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        n1 <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> { type } <span class="op">=</span> n2<span class="op">;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="kw">typeof</span> type <span class="op">===</span> <span class="st">&#39;string&#39;</span>){</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">//……</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span>(<span class="kw">typeof</span> type <span class="op">===</span> <span class="bu">Text</span>){</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>        <span class="co">//……</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span>(<span class="kw">typeof</span> type <span class="op">===</span> Fragment){</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        <span class="co">//……</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span>(typeif type <span class="op">===</span> <span class="st">&#39;object&#39;</span>){</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        <span class="co">// vnode.type 的值是选项对象，作为组件来处理</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(<span class="op">!</span>n1){</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>            <span class="fu">mountComponent</span>(n2<span class="op">,</span> container<span class="op">,</span> anchor)<span class="op">;</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        } <span class="cf">else</span> {</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 更新组件</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>            <span class="fu">patchComponent</span>(n1<span class="op">,</span> n2<span class="op">,</span> anchor)<span class="op">;</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>patchComponent函数用来完成子组件的更新，具体实现：</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 子组件的更新</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">patchComponent</span>(n1<span class="op">,</span> n2<span class="op">,</span> anchor){</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 获取组件实例</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> instance <span class="op">=</span> (n2<span class="op">.</span><span class="at">component</span> <span class="op">=</span> n1<span class="op">.</span><span class="at">component</span>)<span class="op">;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 获取当前props数据</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> { props } <span class="op">=</span> instance<span class="op">;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 调用 hasPropsCahnged 检测为子组件传递的props是否发生变化，如果没有变化，则不需要更新</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="fu">hasPropsCahnged</span>(n1<span class="op">.</span><span class="at">props</span><span class="op">,</span> n2<span class="op">.</span><span class="at">props</span>)){</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 调用 resolveProps 函数重新获取props数据</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> [ nextProps ] <span class="op">=</span> <span class="fu">resolveProps</span>(n2<span class="op">.</span><span class="at">type</span><span class="op">.</span><span class="at">props</span><span class="op">,</span> n2<span class="op">.</span><span class="at">props</span>)<span class="op">;</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 更新props</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span>(<span class="kw">const</span> k <span class="kw">in</span> nextProps){</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>            props[k] <span class="op">=</span> nextProps[k]<span class="op">;</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 删除不存在的props</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span>(<span class="kw">const</span> k <span class="kw">in</span> props){</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span>(<span class="op">!</span>(k <span class="kw">in</span> nextProps)){</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>                delte props[k]<span class="op">;</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="co">// 检测为子组件传递的props是否发生变化</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">hasPropsCahnged</span>(prevProps<span class="op">,</span> nextProps){</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> nextKeys <span class="op">=</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">keys</span>(nextProps)<span class="op">;</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 如果新旧 props 的数量变化了，则说明有变化</span></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(nextKeys<span class="op">.</span><span class="at">lengt</span> <span class="op">!==</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">keys</span>(prevProps)<span class="op">.</span><span class="at">length</span>){</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 遍历每一项看内部变化</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span>(<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> nextKeys<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span>){</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> key <span class="op">=</span> nextKeys[i]<span class="op">;</span></span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 有不相等的props，说明有变化</span></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(nextPeops[key] <span class="op">!==</span> prevProps[key]){</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>以上是组件被动更新的核心逻辑，上面的处理中，并没有处理attrs和solts的更新，attrs的更新本质上和更新props相似；</p>
+<h2 id="总结">总结</h2>
+<ul>
+<li>本文首先描述的是如何使用虚拟节点来描述组件，使用虚拟节点的vnode.type
+属性来存储组件对象，渲染器根据虚拟节点的type属性类型判断是否为组件，如果是组件，则调用mountComponent和patchComponent来完成组件的挂载和更新。</li>
+<li>接着，讲到了组件的自动更新，在组件挂载阶段，会为组件创建一个用于渲染内容的副作用函数。这个副作用函数会与组件自身的响应式数据建立联系，也就是依赖收集。当组件数据发生变化时，会触发副作用函数重新执行，也就是派发更新。</li>
+<li>然后，介绍了组件本质上是一个对象，包含了组件运行过程中的全部状态，例如组件是否挂载，响应式数据，以及所渲染的内容。有了这些实例，在副作用函数内，根据组件实例上的标识，来决定应该进行全新的挂载还是打补丁。</li>
+<li>最后，通过源码，实现了props与组件的被动更新，副作用自更新所引起的子组件的更新叫做子组件的被动更新，子组件的更新通过判断新旧数据的变化，来判断是否被更新。</li>
+</ul>
+15:["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L13",null,{"href":"/zh/archives","className":"ghost-inline","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","aria-hidden":"true","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"全部文章"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"已从掘金同步"}],["$","span",null,{"children":"2025-06-30"}],["$","span",null,{"children":[4," ","分钟阅读"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"Vue3中组件的实现原理(一)"}],["$","p",null,{"className":"hero-copy","children":"--- theme: channing-cyan --- 1. 什么是组件？ 从用户的角度看，一个有状态组件的组件就是一个选项对象，但是从渲染器内部的实现看，一个组件是一个特殊类型的虚拟DOM节点。通过vnode.type 属性来存储标签名称。实际上，组件本身是对页面内容的封装，它用来描述页面内容的一部分，render函数用来描述组件所内容的接口。 如果ty..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"文章说明"}],["$","span",null,{"children":"这篇文章被保留在新的博客壳中，同时继续保留原始中文内容。"}],["$","a",null,{"href":"https://juejin.cn/post/7521670632985378842","target":"_blank","rel":"noreferrer","className":"ghost-inline","children":["原始出处",["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-external-link h-4 w-4","aria-hidden":"true","children":[["$","path","1q9fwt",{"d":"M15 3h6v6"}],["$","path","gplh6r",{"d":"M10 14 21 3"}],["$","path","a6xqqp",{"d":"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"}],"$undefined"]}]]}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$1d"}}]}]]}]
+1a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+18:null
+1c:[["$","title","0",{"children":"POJIAN.BLOG"}],["$","meta","1",{"name":"description","content":"A multilingual personal blog around AI tooling, product delivery, memoir, and long-form archive work."}]]

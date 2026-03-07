@@ -1,0 +1,529 @@
+1:"$Sreact.fragment"
+2:I[44130,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js"],"ThemeProvider"]
+3:I[54542,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js"],"Live2DLoader"]
+4:I[22870,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+5:I[70047,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+6:I[95261,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js","/_next/static/chunks/b70577f423f10c73.js"],"HtmlLocaleSync"]
+7:I[4721,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js","/_next/static/chunks/b70577f423f10c73.js"],"BlogNavbar"]
+12:I[70681,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+:HL["/_next/static/chunks/5ff512ca50d86cc4.css","style"]
+:HL["/_next/static/chunks/d8a04d2be5c94533.css","style"]
+:HL["/_next/static/media/0c89a48fa5027cee-s.p.4564287c.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/130b5bec7367fe75-s.p.8efb6a94.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5f402bd2d8eef81a-s.p.b72f0478.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/ad9c66e761fed85a-s.p.bd81a64b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/feb57b2dc8f29018-s.p.2539f70a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"b":"PBOm4kDuGvs9RUGVV0N_6","c":["","ar","posts","sync","2021-02-25-6933146576789929992",""],"q":"","i":false,"f":[[["",{"children":[["lang","ar","d"],{"children":["posts",{"children":[["slug","sync/2021-02-25-6933146576789929992","c"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/5ff512ca50d86cc4.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/chunks/d8a04d2be5c94533.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/869f3c4760d682ac.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/5ca2d6e8edb00962.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"space_grotesk_f88813a-module__ZvLbQq__variable newsreader_caa3ccf4-module__7BqBPq__variable noto_sans_sc_820cd55a-module__sRRUGq__variable noto_sans_jp_1317c327-module__5MdXXa__variable noto_naskh_arabic_48867b81-module__7wgKba__variable antialiased","children":["$","$L2",null,{"attribute":"class","defaultTheme":"dark","enableSystem":false,"disableTransitionOnChange":true,"children":[["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","$L6",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"en","homeHref":"/","rootAliasForDefaultLocale":true,"labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/","label":"Home"},{"href":"/#latest","label":"Latest"},{"href":"/#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/#community","label":"Community"}],"legacyRoots":[{"slug":"A前端👨‍💻","title":{"en":"Frontend Atlas","zh":"前端图谱","es":"Atlas Frontend","ja":"フロントエンド地図","ar":"أطلس الواجهة الأمامية"},"description":{"en":"CSS, Vue, React, Canvas, Node, uni-app, build tools, and the earlier front-end trail.","zh":"CSS、Vue、React、Canvas、Node、uni-app、打包工具，以及更早的前端路径。","es":"CSS, Vue, React, Canvas, Node, uni-app, herramientas de build y el rastro front-end más temprano.","ja":"CSS、Vue、React、Canvas、Node、uni-app、ビルドツールなど、初期のフロントエンド蓄積。","ar":"CSS وVue وReact وCanvas وNode وuni-app وأدوات البناء والمسار الأقدم للواجهة الأمامية."}},{"slug":"B面试题📑","title":{"en":"Interview Bank","zh":"面试题仓库","es":"Banco de Entrevistas","ja":"面接バンク","ar":"بنك المقابلات"},"description":{"en":"Question banks for browser internals, networking, Vue, React, JavaScript, and engineering.","zh":"浏览器、网络、Vue、React、JavaScript 和工程化的面试题集合。","es":"Baterías de preguntas sobre navegador, red, Vue, React, JavaScript e ingeniería.","ja":"ブラウザ、ネットワーク、Vue、React、JavaScript、開発基盤に関する面接問題。","ar":"مجموعات أسئلة عن المتصفح والشبكات وVue وReact وJavaScript والهندسة."}},{"slug":"Vue实战💻","title":{"en":"Vue Practice","zh":"Vue 实战","es":"Práctica Vue","ja":"Vue 実戦","ar":"تطبيقات Vue"},"description":{"en":"Real project records around Ant Design, Echarts, mini programs, stores, and browser features.","zh":"围绕 Ant Design、Echarts、小程序、商城项目和浏览器功能的一组实战记录。","es":"Registros reales sobre Ant Design, Echarts, mini programas, tiendas y funciones del navegador.","ja":"Ant Design、Echarts、ミニプログラム、ストア、ブラウザ機能に関する実戦記録。","ar":"سجلات عملية حول Ant Design وEcharts والبرامج المصغرة والمتاجر وميزات المتصفح."}},{"slug":"走过的路🌱","title":{"en":"Growing Path","zh":"走过的路","es":"Camino Recorrido","ja":"歩いてきた道","ar":"الطريق الذي سلكته"},"description":{"en":"Yearly reviews and growth notes that carry more life signal than technical polish.","zh":"年度总结和成长记录，保留生活感和时间感。","es":"Revisiones anuales y notas de crecimiento con más vida que pulido técnico.","ja":"年次レビューと成長記録。技術の整い方より時間の感触が残っています。","ar":"مراجعات سنوية وملاحظات نمو تحمل أثر الحياة أكثر من الصقل التقني."}},{"slug":"读过的书📚️","title":{"en":"Reading Shelf","zh":"读书笔记","es":"Estante de Lectura","ja":"読書棚","ar":"رف القراءة"},"description":{"en":"Book notes across networking, JavaScript, algorithms, and systems thinking.","zh":"网络、JavaScript、算法和系统思维方向的读书笔记。","es":"Notas de lectura sobre redes, JavaScript, algoritmos y pensamiento de sistemas.","ja":"ネットワーク、JavaScript、アルゴリズム、システム思考に関する読書ノート。","ar":"ملاحظات قراءة حول الشبكات وJavaScript والخوارزميات والتفكير المنظومي."}},{"slug":"PHP🐘","title":{"en":"PHP Shelf","zh":"PHP 归档","es":"Estante PHP","ja":"PHP 棚","ar":"رف PHP"},"description":{"en":"Earlier PHP notes and experiments that still belong in the public record.","zh":"更早期的 PHP 文章和实验记录。","es":"Notas y experimentos tempranos de PHP que siguen formando parte del archivo.","ja":"初期の PHP ノートと実験記録。","ar":"ملاحظات وتجارب PHP المبكرة التي ما زالت جزءًا من السجل."}},{"slug":"Python🐍","title":{"en":"Python Shelf","zh":"Python 归档","es":"Estante Python","ja":"Python 棚","ar":"رف Python"},"description":{"en":"Small scraping experiments and data-oriented notes from the earlier Python phase.","zh":"偏数据和爬取的小实验，保留了更早一阶段的 Python 轨迹。","es":"Pequeños experimentos de scraping y notas orientadas a datos de la etapa temprana con Python.","ja":"スクレイピングやデータ寄りの小さな Python 実験。","ar":"تجارب صغيرة في الاستخراج والبيانات من المرحلة المبكرة مع Python."}}]}],"$L8","$L9","$La","$Lb","$Lc"]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]}]]}],{"children":["$Ld",{"children":["$Le",{"children":["$Lf",{"children":["$L10",{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],"$L11",false]],"m":"$undefined","G":["$12",[]],"S":true}
+13:I[27917,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/5ca2d6e8edb00962.js","/_next/static/chunks/b70577f423f10c73.js"],""]
+16:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"OutletBoundary"]
+17:"$Sreact.suspense"
+19:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"ViewportBoundary"]
+1b:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"MetadataBoundary"]
+8:["$","div",null,{"className":"background-orb background-orb-one"}]
+9:["$","div",null,{"className":"background-orb background-orb-two"}]
+a:["$","div",null,{"className":"background-grid"}]
+b:["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","div",null,{"className":"mx-auto max-w-3xl pb-20 pt-8","children":["$","div",null,{"className":"hero-panel space-y-5","children":[["$","span",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"className":"hero-title compact","children":"That page never made it into the archive."}],["$","p",null,{"className":"hero-copy","children":"Try the rebuilt home, the full archive, or one of the legacy shelves instead."}],["$","$L13",null,{"href":"/","className":"primary-chip","children":"Go back to the English home"}]]}]}]}]
+c:["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L13",null,{"href":"/","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L13",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L13",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L13",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]
+d:["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/b70577f423f10c73.js","async":true,"nonce":"$undefined"}]],"$L14"]}]
+e:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+f:["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+10:["$","$1","c",{"children":["$L15",null,["$","$L16",null,{"children":["$","$17",null,{"name":"Next.MetadataOutlet","children":"$@18"}]}]]}]
+11:["$","$1","h",{"children":[null,["$","$L19",null,{"children":"$L1a"}],["$","div",null,{"hidden":true,"children":["$","$L1b",null,{"children":["$","$17",null,{"name":"Next.Metadata","children":"$L1c"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+14:[["$","$L6",null,{"lang":"ar","dir":"rtl"}],["$","div",null,{"className":"site-frame rtl","children":[["$","$L7",null,{"locale":"ar","homeHref":"/ar","rootAliasForDefaultLocale":false,"labels":{"brand":"POJIAN.BLOG","subtitle":"أرشيف طويل حول أدوات الذكاء الاصطناعي والنشر والذاكرة الشخصية.","menu":"الدليل","close":"إغلاق","switchLanguage":"تبديل اللغة","switchTheme":"تبديل النمط"},"links":[{"href":"/ar","label":"الرئيسية"},{"href":"/ar#latest","label":"الأحدث"},{"href":"/ar#collections","label":"المجموعات"},{"href":"/ar/archives","label":"الأرشيف"},{"href":"/ar#community","label":"المجتمع"}],"legacyRoots":"$0:f:0:1:0:props:children:1:props:children:props:children:props:children:1:props:notFound:0:1:props:children:0:props:legacyRoots"}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"أرشيف طويل حول أدوات الذكاء الاصطناعي والنشر والذاكرة الشخصية."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L13",null,{"href":"/ar","className":"hover:text-[var(--text)]","children":"الرئيسية"}],["$","$L13",null,{"href":"/ar/archives","className":"hover:text-[var(--text)]","children":"الأرشيف"}],["$","$L13",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L13",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]
+1d:T14ca2,<p>使用PHP+MySql实现表单的增加、删除、修改、查询，看了很多简单案例后，写了一个简单的表单，下面请看代码，有错误的地方希望大佬们指教！</p>
+<h3 id="数据库名itcast--表名emp_info">数据库名itcast , 表名emp_info</h3>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> `emp_info` (</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  `e_id` <span class="dt">int</span>(<span class="dv">10</span>) unsigned <span class="kw">NOT</span> <span class="kw">NULL</span> AUTO_INCREMENT,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  `e_name` <span class="dt">varchar</span>(<span class="dv">20</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  `e_dept` <span class="dt">varchar</span>(<span class="dv">20</span>) <span class="kw">NOT</span> <span class="kw">NULL</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  `date_of_birth` <span class="dt">timestamp</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">DEFAULT</span> <span class="fu">CURRENT_TIMESTAMP</span> <span class="kw">ON</span> <span class="kw">UPDATE</span> <span class="fu">CURRENT_TIMESTAMP</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  `date_of_entry` <span class="dt">timestamp</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">DEFAULT</span> <span class="st">&#39;0000-00-00 00:00:00&#39;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>)CHARSET<span class="op">=</span>utf8;</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> `emp_info` <span class="kw">VALUES</span> </span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>(<span class="dv">11</span>,<span class="st">&#39;张三&#39;</span>,<span class="st">&#39;营销部&#39;</span>,<span class="st">&#39;2019-05-22 17:42:00&#39;</span>,<span class="st">&#39;2019-05-22 17:42:00&#39;</span>),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>(<span class="dv">12</span>,<span class="st">&#39;李四&#39;</span>,<span class="st">&#39;人事部&#39;</span>,<span class="st">&#39;2018-11-02 20:30:00&#39;</span>,<span class="st">&#39;2019-05-26 20:30:00&#39;</span>);</span></code></pre></div>
+<h3 id="目录结构">目录结构</h3>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eb9c5e0594594b8196d773e43add40e5~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<h4
+id="images和js没有的也没关系只是样子不好看而已">images和js没有的也没关系，只是样子不好看而已</h4>
+<h3 id="查询的前台页面list_htmlphp">查询的前台页面list_html.php</h3>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?php</span> if(!defined(&#39;APP&#39;)) die(&#39;error!&#39;);<span class="fu">?&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="er">&lt;</span>!doctype html&gt;</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">html</span>&gt;</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a> &lt;<span class="kw">head</span>&gt;</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">meta</span> <span class="ot">charset=</span><span class="st">&quot;utf-8&quot;</span>&gt;</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">title</span>&gt;员工信息列表&lt;/<span class="kw">title</span>&gt;</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">style</span>&gt;</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    .box{margin:20px;}</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    .box .title{font-size:22px;font-weight:bold;text-align:center;}</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    .box table{width:100%;margin-top:10px;border-collapse:collapse;font-size:12px;border:1px solid #B5D6E6;min-width:460px;}</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    .box table th,.box table td{height:20px;border:1px solid #B5D6E6;}</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    .box table th{background-color:#E8F6FC;font-weight:normal;}</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    .box table td{text-align:center;}</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    .box a{color:#444;text-decoration:none;}</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    .box a:hover{text-decoration:underline;}</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    .search{padding:10px 0;float:right;font-size:12px;}</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a> &lt;/<span class="kw">style</span>&gt;</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a> &lt;/<span class="kw">head</span>&gt;</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a> &lt;<span class="kw">body</span>&gt;</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">form</span> <span class="ot">action=</span><span class="st">&quot;./showList.php&quot;</span> <span class="ot">method=</span><span class="st">&quot;post&quot;</span>&gt;</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">div</span> <span class="ot">class=</span><span class="st">&quot;box&quot;</span>&gt;</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">div</span> <span class="ot">class=</span><span class="st">&quot;title&quot;</span>&gt;员工信息列表&lt;/<span class="kw">div</span>&gt;</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">table</span> <span class="ot">border=</span><span class="st">&quot;1&quot;</span>&gt;</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>            &lt;<span class="kw">tr</span>&gt;</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>                &lt;<span class="kw">th</span> <span class="ot">width=</span><span class="st">&quot;5%&quot;</span>&gt;ID&lt;/<span class="kw">th</span>&gt;</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>                &lt;<span class="kw">th</span>&gt;姓名&lt;/<span class="kw">th</span>&gt;</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>                &lt;<span class="kw">th</span>&gt;所属部门&lt;/<span class="kw">th</span>&gt;</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>                &lt;<span class="kw">th</span>&gt;出生日期&lt;/<span class="kw">th</span>&gt;&lt;<span class="kw">th</span>&gt;入职时间&lt;/<span class="kw">th</span>&gt;</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>                &lt;<span class="kw">th</span> <span class="ot">width=</span><span class="st">&quot;25%&quot;</span>&gt;相关操作&lt;/<span class="kw">th</span>&gt;</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>            &lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>            <span class="fu">&lt;?php</span> if(!empty($rows)){ <span class="fu">?&gt;</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>            <span class="fu">&lt;?php</span> foreach($rows as $row){ <span class="fu">?&gt;</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>            &lt;<span class="kw">tr</span>&gt;</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>                 &lt;<span class="kw">td</span>&gt;<span class="fu">&lt;?php</span> echo $row[&#39;e_id&#39;]; <span class="fu">?&gt;</span>&lt;/<span class="kw">td</span>&gt;</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>                 &lt;<span class="kw">td</span>&gt;<span class="fu">&lt;?php</span> echo $row[&#39;e_name&#39;]; <span class="fu">?&gt;</span>&lt;/<span class="kw">td</span>&gt;</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>                 &lt;<span class="kw">td</span>&gt;<span class="fu">&lt;?php</span> echo $row[&#39;e_dept&#39;]; <span class="fu">?&gt;</span>&lt;/<span class="kw">td</span>&gt;</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>                 &lt;<span class="kw">td</span>&gt;<span class="fu">&lt;?php</span> echo $row[&#39;date_of_birth&#39;]; <span class="fu">?&gt;</span>&lt;/<span class="kw">td</span>&gt;</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>                 &lt;<span class="kw">td</span>&gt;<span class="fu">&lt;?php</span> echo $row[&#39;date_of_entry&#39;]; <span class="fu">?&gt;</span>&lt;/<span class="kw">td</span>&gt;</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>                 &lt;<span class="kw">td</span>&gt;</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>                    &lt;<span class="kw">div</span> <span class="ot">align=</span><span class="st">&quot;center&quot;</span>&gt;</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>                        &lt;<span class="kw">span</span>&gt;</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>                            &lt;<span class="kw">img</span> <span class="ot">src=</span><span class="st">&quot;images/edt.gif&quot;</span> <span class="ot">width=</span><span class="st">&quot;16&quot;</span> <span class="ot">height=</span><span class="st">&quot;16&quot;</span> /&gt;&lt;<span class="kw">a</span> <span class="ot">href=</span><span class="st">&quot;</span><span class="er">&lt;</span><span class="st">?php echo &#39;./empUpdate.php?e_id=&#39;.$row[&#39;e_id&#39;] ?&gt;&quot;</span>&gt;编辑&lt;/<span class="kw">a</span>&gt;<span class="dv">&amp;nbsp;</span> <span class="dv">&amp;nbsp;</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>                            &lt;<span class="kw">a</span> <span class="ot">href=</span><span class="st">&quot;</span><span class="er">&lt;</span><span class="st">?php echo &#39;./empDel.php?e_id=&#39;.$row[&#39;e_id&#39;] ?&gt;&quot;</span>&gt;&lt;<span class="kw">img</span> <span class="ot">src=</span><span class="st">&quot;images/del.gif&quot;</span> <span class="ot">width=</span><span class="st">&quot;16&quot;</span> <span class="ot">height=</span><span class="st">&quot;16&quot;</span> /&gt;删除&lt;/<span class="kw">a</span>&gt;</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>                        &lt;/<span class="kw">span</span>&gt;</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>                    &lt;/<span class="kw">div</span>&gt;</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>                &lt;/<span class="kw">td</span>&gt;</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>            &lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>            <span class="fu">&lt;?php</span> } <span class="fu">?&gt;</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>            <span class="fu">&lt;?php</span> }else{ <span class="fu">?&gt;</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>            &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">td</span> <span class="ot">colspan=</span><span class="st">&quot;6&quot;</span>&gt;查询的结果不存在！&lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>            <span class="fu">&lt;?php</span> } <span class="fu">?&gt;</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>        &lt;/<span class="kw">table</span>&gt;</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">form</span>&gt;</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">div</span> <span class="ot">class=</span><span class="st">&quot;search&quot;</span>&gt;&lt;<span class="kw">a</span> <span class="ot">href=</span><span class="st">&quot;./empAdd.php&quot;</span>&gt;添加员工&lt;/<span class="kw">a</span>&gt;&lt;/<span class="kw">div</span>&gt;</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a> &lt;/<span class="kw">body</span>&gt;</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">html</span>&gt;</span></code></pre></div>
+<h3 id="查询后台页面showlistphp">查询后台页面showList.php</h3>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">//声明文件解析的编码格式</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">header</span>(<span class="st">&#39;content-type:text/html;charset=utf-8&#39;</span>)<span class="ot">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="va">$dbms</span> <span class="op">=</span> <span class="st">&#39;mysql&#39;</span><span class="ot">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">//数据库服务器主机名，端口号，选择的数据库</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="va">$host</span> <span class="op">=</span> <span class="st">&#39;localhost&#39;</span><span class="ot">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="va">$port</span> <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="ot">;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="va">$dbname</span> <span class="op">=</span> <span class="st">&#39;itcast&#39;</span><span class="ot">;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">//设置字符集</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="va">$charset</span> <span class="op">=</span> <span class="st">&#39;utf8&#39;</span><span class="ot">;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">//用户密码</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="va">$user</span> <span class="op">=</span> <span class="st">&#39;root&#39;</span><span class="ot">;</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="va">$pwd</span> <span class="op">=</span> <span class="st">&#39;root&#39;</span><span class="ot">;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="va">$dsn</span> <span class="op">=</span> <span class="st">&quot;</span><span class="va">$dbms</span><span class="st">:host=</span><span class="va">$host</span><span class="st">;port=</span><span class="va">$port</span><span class="st">;dbname=</span><span class="va">$dbname</span><span class="st">;charset=</span><span class="va">$charset</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>{</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="va">$pdo</span> <span class="op">=</span> <span class="kw">new</span> <span class="bu">PDO</span>(<span class="va">$dsn</span><span class="ot">,</span><span class="va">$user</span><span class="ot">,</span><span class="va">$pwd</span>)<span class="ot">;</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="co">//准备SQL语句</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="va">$sql</span> <span class="op">=</span> <span class="st">&#39;select * from emp_info&#39;</span><span class="ot">;</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">//执行query()函数</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="va">$result</span> <span class="op">=</span> <span class="va">$pdo</span>-&gt;query(<span class="va">$sql</span>)<span class="ot">;</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="va">$rows</span> <span class="op">=</span> <span class="dt">array</span>()<span class="ot">;</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>        <span class="co">//执行成功</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>        <span class="co">//遍历结果集</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span>( <span class="va">$row</span> <span class="op">=</span> <span class="va">$result</span>-&gt;fetch()) {</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>            <span class="va">$rows</span>[] <span class="op">=</span> <span class="va">$row</span><span class="ot">;</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>     </span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>}<span class="cf">catch</span>(<span class="bu">PDOException</span> <span class="va">$e</span>){</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    <span class="kw">echo</span> <span class="va">$e</span>-&gt;getMessage()<span class="op">.</span><span class="st">&#39;&lt;br&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>(<span class="st">&#39;APP&#39;</span><span class="ot">,</span> <span class="st">&#39;itcast&#39;</span>)<span class="ot">;</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="co">//加载视图页面，显示数据</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="kw">require</span> <span class="st">&#39;./list_html.php&#39;</span><span class="ot">;</span></span></code></pre></div>
+<h3 id="新增前台页面add_htmlphp">新增前台页面add_html.php</h3>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?php</span> if(!defined(&#39;APP&#39;)) die(&#39;error!&#39;);<span class="fu">?&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="er">&lt;</span>!doctype html&gt;</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">html</span>&gt;</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">head</span>&gt;</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">meta</span> <span class="ot">charset=</span><span class="st">&quot;utf-8&quot;</span>&gt;</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">title</span>&gt;添加员工&lt;/<span class="kw">title</span>&gt;</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">link</span> <span class="ot">rel=</span><span class="st">&quot;stylesheet&quot;</span> <span class="ot">href=</span><span class="st">&quot;./js/jquery.datetimepicker.css&quot;</span><span class="er">/</span> &gt;</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">script</span> <span class="ot">src=</span><span class="st">&quot;./js/jquery.js&quot;</span>&gt;&lt;/<span class="kw">script</span>&gt;</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">script</span> <span class="ot">src=</span><span class="st">&quot;./js/jquery.datetimepicker.js&quot;</span>&gt;&lt;/<span class="kw">script</span>&gt;</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">script</span>&gt;</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    $(function(){</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        $(&#39;#date_of_birth&#39;).datetimepicker({lang:&#39;ch&#39;});</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        $(&#39;#date_of_entry&#39;).datetimepicker({lang:&#39;ch&#39;});</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    });</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">script</span>&gt;</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">style</span>&gt;</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>body{background-color:#eee;margin:0;padding:0;}</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>.box{width:400px;margin:15px auto;padding:20px;border:1px solid #ccc;background-color:#fff;}</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>.box h1{font-size:20px;text-align:center;}</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>.profile-table{margin:0 auto;}</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>.profile-table th{font-weight:normal;text-align:right;}</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>.profile-table input[type=&quot;text&quot;]{width:180px;border:1px solid #ccc;height:22px;padding-left:4px;}</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>.profile-table .button{background-color:#0099ff;border:1px solid #0099ff;color:#fff;width:80px;height:25px;margin:0 5px;cursor:pointer;}</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>.profile-table .td-btn{text-align:center;padding-top:10px;}</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>.profile-table th,.profile-table td{padding-bottom:10px;}</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>.profile-table td{font-size:14px;}</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>.profile-table .txttop{vertical-align:top;}</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>.profile-table select{border:1px solid #ccc;min-width:80px;height:25px;}</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>.profile-table .description{font-size:13px;width:250px;height:60px;border:1px solid #ccc;}</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">style</span>&gt;</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">head</span>&gt;</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">body</span>&gt;</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">div</span> <span class="ot">class=</span><span class="st">&quot;box&quot;</span>&gt;</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">h1</span>&gt;添加员工&lt;/<span class="kw">h1</span>&gt;</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">form</span> <span class="ot">method=</span><span class="st">&quot;post&quot;</span> <span class="ot">action=</span><span class="st">&quot;./empAdd.php&quot;</span>&gt;</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">table</span> <span class="ot">class=</span><span class="st">&quot;profile-table&quot;</span>&gt;</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">th</span>&gt;姓名：&lt;/<span class="kw">th</span>&gt;&lt;<span class="kw">td</span>&gt;&lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;text&quot;</span> <span class="ot">name=</span><span class="st">&quot;e_name&quot;</span> /&gt;&lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">th</span>&gt;所属部门：&lt;/<span class="kw">th</span>&gt;&lt;<span class="kw">td</span>&gt;&lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;text&quot;</span> <span class="ot">name=</span><span class="st">&quot;e_dept&quot;</span> /&gt;&lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">th</span>&gt;出生年月：&lt;/<span class="kw">th</span>&gt;&lt;<span class="kw">td</span>&gt;&lt;<span class="kw">input</span> <span class="ot">id=</span><span class="st">&quot;date_of_birth&quot;</span> <span class="ot">name=</span><span class="st">&quot;date_of_birth&quot;</span> <span class="ot">type=</span><span class="st">&quot;text&quot;</span> &gt;&lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">th</span>&gt;入职日期：&lt;/<span class="kw">th</span>&gt;&lt;<span class="kw">td</span>&gt;&lt;<span class="kw">input</span> <span class="ot">id=</span><span class="st">&quot;date_of_entry&quot;</span> <span class="ot">name=</span><span class="st">&quot;date_of_entry&quot;</span> <span class="ot">type=</span><span class="st">&quot;text&quot;</span> &gt;&lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">td</span> <span class="ot">colspan=</span><span class="st">&quot;2&quot;</span> <span class="ot">class=</span><span class="st">&quot;td-btn&quot;</span>&gt;</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;submit&quot;</span> <span class="ot">value=</span><span class="st">&quot;保存资料&quot;</span> <span class="ot">class=</span><span class="st">&quot;button&quot;</span> /&gt;</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;reset&quot;</span> <span class="ot">value=</span><span class="st">&quot;重新填写&quot;</span> <span class="ot">class=</span><span class="st">&quot;button&quot;</span> /&gt;</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>        &lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">table</span>&gt;</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">form</span>&gt;</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">div</span>&gt;</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">body</span>&gt;</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">html</span>&gt;</span></code></pre></div>
+<h3 id="新增后台页面">新增后台页面</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">header</span> (<span class="st">&#39;content-type:text/html;chaset=utf-8&#39;</span>)<span class="ot">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="va">$dbms</span> <span class="op">=</span> <span class="st">&#39;mysql&#39;</span><span class="ot">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">//数据库服务器主机名，端口号，选择的数据库</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="va">$host</span> <span class="op">=</span> <span class="st">&#39;localhost&#39;</span><span class="ot">;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="va">$port</span> <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="ot">;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="va">$dbname</span> <span class="op">=</span> <span class="st">&#39;itcast&#39;</span><span class="ot">;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">//设置字符集</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="va">$charset</span> <span class="op">=</span> <span class="st">&#39;utf8&#39;</span><span class="ot">;</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co">//用户密码</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="va">$user</span> <span class="op">=</span> <span class="st">&#39;root&#39;</span><span class="ot">;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="va">$pwd</span> <span class="op">=</span> <span class="st">&#39;root&#39;</span><span class="ot">;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="va">$dsn</span> <span class="op">=</span> <span class="st">&quot;</span><span class="va">$dbms</span><span class="st">:host=</span><span class="va">$host</span><span class="st">;port=</span><span class="va">$port</span><span class="st">;dbname=</span><span class="va">$dbname</span><span class="st">;charset=</span><span class="va">$charset</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>{</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="va">$pdo</span> <span class="op">=</span> <span class="kw">new</span> <span class="bu">PDO</span>(<span class="va">$dsn</span><span class="ot">,</span><span class="va">$user</span><span class="ot">,</span><span class="va">$pwd</span>)<span class="ot">;</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">//判断是否有表单提交</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="op">!</span><span class="kw">empty</span>(<span class="va">$_POST</span>)){</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>        <span class="co">//声明变量$fields，用来保存字段信息</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>        <span class="va">$fields</span> <span class="op">=</span> <span class="dt">array</span>(<span class="st">&#39;e_name&#39;</span><span class="ot">,</span><span class="st">&#39;e_dept&#39;</span><span class="ot">,</span><span class="st">&#39;date_of_birth&#39;</span><span class="ot">,</span><span class="st">&#39;date_of_entry&#39;</span>)<span class="ot">;</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>        <span class="co">//声明变量$values，用来保存值信息</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>        <span class="va">$values</span> <span class="op">=</span> <span class="dt">array</span>()<span class="ot">;</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>        <span class="co">//遍历$fields，获取输入员工数据的键和值</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>        <span class="cf">foreach</span>(<span class="va">$fields</span> <span class="kw">as</span> <span class="va">$k</span> =&gt; <span class="va">$v</span>){</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>            <span class="va">$data</span> <span class="op">=</span> <span class="kw">isset</span>(<span class="va">$_POST</span>[<span class="va">$v</span>]) <span class="ot">?</span> <span class="va">$_POST</span>[<span class="va">$v</span>] <span class="ot">:</span> <span class="st">&#39;&#39;</span><span class="ot">;</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span>(<span class="va">$data</span><span class="op">==</span><span class="st">&#39;&#39;</span>) <span class="cf">die</span>(<span class="va">$v</span><span class="op">.</span><span class="st">&#39;字段不能为空&#39;</span>)<span class="ot">;</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>            <span class="co">//把字段使用反引号包裹，赋值给$fields数组</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>            <span class="va">$fields</span>[<span class="va">$k</span>] <span class="op">=</span> <span class="st">&quot;`</span><span class="va">$v</span><span class="st">`&quot;</span><span class="ot">;</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>            <span class="co">//把值使用单引号包裹，赋值给$values数组</span></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>            <span class="va">$values</span>[] <span class="op">=</span> <span class="st">&quot;&#39;</span><span class="va">$data</span><span class="st">&#39;&quot;</span><span class="ot">;</span></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>        <span class="co">//将$fields数组以逗号连接，赋值给$fields，组成insert语句中的字段部分</span></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>        <span class="co">//implode — 将一个一维数组的值转化为字符串</span></span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>        <span class="va">$fields</span> <span class="op">=</span> <span class="fu">implode</span>(<span class="st">&#39;,&#39;</span><span class="ot">,</span> <span class="va">$fields</span>)<span class="ot">;</span></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>        <span class="co">//将$values数组以逗号连接，赋值给$values，组成insert语句中的值部分</span></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>        <span class="va">$values</span> <span class="op">=</span> <span class="fu">implode</span>(<span class="st">&#39;,&#39;</span><span class="ot">,</span> <span class="va">$values</span>)<span class="ot">;</span></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>        <span class="co">//最后把$fields和$values拼接到insert语句中，注意要指定表名</span></span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>        <span class="va">$sql</span> <span class="op">=</span> <span class="st">&quot;insert into `emp_info` (</span><span class="va">$fields</span><span class="st">) values (</span><span class="va">$values</span><span class="st">)&quot;</span><span class="ot">;</span></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>        <span class="co">//执行SQL</span></span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(<span class="va">$res</span> <span class="op">=</span> <span class="va">$pdo</span>-&gt;query(<span class="va">$sql</span>)){</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>            <span class="co">//成功时返回到 showList.php</span></span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>            <span class="fu">header</span>(<span class="st">&#39;Location: ./showList.php&#39;</span>)<span class="ot">;</span></span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>            <span class="co">//停止脚本</span></span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>            <span class="cf">die</span><span class="ot">;</span></span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>        }<span class="cf">else</span>{</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>            <span class="co">//执行失败</span></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>            <span class="cf">die</span>(<span class="st">&#39;员工添加失败！&#39;</span>)<span class="ot">;</span></span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>}<span class="cf">catch</span>(<span class="bu">PDOException</span> <span class="va">$e</span>){</span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>    <span class="kw">echo</span> <span class="va">$e</span>-&gt;getMessage()<span class="op">.</span><span class="st">&#39;&lt;br&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span> (<span class="st">&#39;APP&#39;</span><span class="ot">,</span><span class="st">&#39;itcast&#39;</span>)<span class="ot">;</span></span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a><span class="kw">require</span> <span class="st">&#39;./add_html.php&#39;</span><span class="ot">;</span></span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a><span class="kw">?&gt;</span></span></code></pre></div>
+<h3 id="修改前台页面update_htmlphp">修改前台页面update_html.php</h3>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?php</span> if(!defined(&#39;APP&#39;)) die(&#39;error!&#39;);<span class="fu">?&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="er">&lt;</span>!doctype html&gt;</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">html</span>&gt;</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">head</span>&gt;</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">meta</span> <span class="ot">charset=</span><span class="st">&quot;utf-8&quot;</span>&gt;</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">title</span>&gt;员工信息编辑&lt;/<span class="kw">title</span>&gt;</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">link</span> <span class="ot">rel=</span><span class="st">&quot;stylesheet&quot;</span> <span class="ot">href=</span><span class="st">&quot;./js/jquery.datetimepicker.css&quot;</span><span class="er">/</span> &gt;</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">script</span> <span class="ot">src=</span><span class="st">&quot;./js/jquery.js&quot;</span>&gt;&lt;/<span class="kw">script</span>&gt;</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">script</span> <span class="ot">src=</span><span class="st">&quot;./js/jquery.datetimepicker.js&quot;</span>&gt;&lt;/<span class="kw">script</span>&gt;</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">script</span>&gt;</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    $(function(){</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>        $(&#39;#date_of_birth&#39;).datetimepicker({lang:&#39;ch&#39;});</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        $(&#39;#date_of_entry&#39;).datetimepicker({lang:&#39;ch&#39;});</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    });</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">script</span>&gt;</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">style</span>&gt;</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>body{background-color:#eee;margin:0;padding:0;}</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>.box{width:400px;margin:15px auto;padding:20px;border:1px solid #ccc;background-color:#fff;}</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>.box h1{font-size:20px;text-align:center;}</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>.profile-table{margin:0 auto;}</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>.profile-table th{font-weight:normal;text-align:right;}</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>.profile-table input[type=&quot;text&quot;]{width:180px;border:1px solid #ccc;height:22px;padding-left:4px;}</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>.profile-table .button{background-color:#0099ff;border:1px solid #0099ff;color:#fff;width:80px;height:25px;margin:0 5px;cursor:pointer;}</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>.profile-table .td-btn{text-align:center;padding-top:10px;}</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>.profile-table th,.profile-table td{padding-bottom:10px;}</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>.profile-table td{font-size:14px;}</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>.profile-table .txttop{vertical-align:top;}</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>.profile-table select{border:1px solid #ccc;min-width:80px;height:25px;}</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>.profile-table .description{font-size:13px;width:250px;height:60px;border:1px solid #ccc;}</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">style</span>&gt;</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">head</span>&gt;</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">body</span>&gt;</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">div</span> <span class="ot">class=</span><span class="st">&quot;box&quot;</span>&gt;</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">h1</span>&gt;修改员工信息&lt;/<span class="kw">h1</span>&gt;</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">form</span> <span class="ot">method=</span><span class="st">&quot;post&quot;</span>&gt;</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">table</span> <span class="ot">class=</span><span class="st">&quot;profile-table&quot;</span>&gt;</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">th</span>&gt;姓名：&lt;/<span class="kw">th</span>&gt;&lt;<span class="kw">td</span>&gt;&lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;text&quot;</span> <span class="ot">name=</span><span class="st">&quot;e_name&quot;</span> <span class="ot">value=</span><span class="st">&quot;</span><span class="er">&lt;</span><span class="st">?php echo $emp_info[&#39;e_name&#39;]; ?&gt;&quot;</span>/&gt;&lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">th</span>&gt;所属部门：&lt;/<span class="kw">th</span>&gt;&lt;<span class="kw">td</span>&gt;&lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;text&quot;</span> <span class="ot">name=</span><span class="st">&quot;e_dept&quot;</span> <span class="ot">value=</span><span class="st">&quot;</span><span class="er">&lt;</span><span class="st">?php echo $emp_info[&#39;e_dept&#39;]; ?&gt;&quot;</span>/&gt;&lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">th</span>&gt;出生年月：&lt;/<span class="kw">th</span>&gt;&lt;<span class="kw">td</span>&gt;&lt;<span class="kw">input</span> <span class="ot">id=</span><span class="st">&quot;date_of_birth&quot;</span> <span class="ot">name=</span><span class="st">&quot;date_of_birth&quot;</span> <span class="ot">type=</span><span class="st">&quot;text&quot;</span> <span class="ot">value=</span><span class="st">&quot;</span><span class="er">&lt;</span><span class="st">?php echo $emp_info[&#39;date_of_birth&#39;]; ?&gt;&quot;</span>&gt;&lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">th</span>&gt;入职日期：&lt;/<span class="kw">th</span>&gt;&lt;<span class="kw">td</span>&gt;&lt;<span class="kw">input</span> <span class="ot">id=</span><span class="st">&quot;date_of_entry&quot;</span> <span class="ot">name=</span><span class="st">&quot;date_of_entry&quot;</span> <span class="ot">type=</span><span class="st">&quot;text&quot;</span> <span class="ot">value=</span><span class="st">&quot;</span><span class="er">&lt;</span><span class="st">?php echo $emp_info[&#39;date_of_entry&#39;]; ?&gt;&quot;</span>&gt;&lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">tr</span>&gt;&lt;<span class="kw">td</span> <span class="ot">colspan=</span><span class="st">&quot;2&quot;</span> <span class="ot">class=</span><span class="st">&quot;td-btn&quot;</span>&gt;</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;submit&quot;</span> <span class="ot">value=</span><span class="st">&quot;保存资料&quot;</span> <span class="ot">class=</span><span class="st">&quot;button&quot;</span> /&gt;</span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>        &lt;<span class="kw">input</span> <span class="ot">type=</span><span class="st">&quot;reset&quot;</span> <span class="ot">value=</span><span class="st">&quot;重新填写&quot;</span> <span class="ot">class=</span><span class="st">&quot;button&quot;</span> /&gt;</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>        &lt;/<span class="kw">td</span>&gt;&lt;/<span class="kw">tr</span>&gt;</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">table</span>&gt;</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>    &lt;/<span class="kw">form</span>&gt;</span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">div</span>&gt;</span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">body</span>&gt;</span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">html</span>&gt;</span></code></pre></div>
+<h3 id="修改后台页面emupdatephp">修改后台页面emUpdate.php</h3>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">//声明文件解析的编码格式</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">header</span>(<span class="st">&#39;content-type:text/html;charset=utf-8&#39;</span>)<span class="ot">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="va">$dbms</span> <span class="op">=</span> <span class="st">&#39;mysql&#39;</span><span class="ot">;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">//数据库服务器主机名，端口号，选择的数据库</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="va">$host</span> <span class="op">=</span> <span class="st">&#39;localhost&#39;</span><span class="ot">;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="va">$port</span> <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="ot">;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="va">$dbname</span> <span class="op">=</span> <span class="st">&#39;itcast&#39;</span><span class="ot">;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">//设置字符集</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="va">$charset</span> <span class="op">=</span> <span class="st">&#39;UTF8&#39;</span><span class="ot">;</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co">//用户密码</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="va">$user</span> <span class="op">=</span> <span class="st">&#39;root&#39;</span><span class="ot">;</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="va">$pwd</span> <span class="op">=</span> <span class="st">&#39;root&#39;</span><span class="ot">;</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="va">$dsn</span> <span class="op">=</span> <span class="st">&quot;</span><span class="va">$dbms</span><span class="st">:host=</span><span class="va">$host</span><span class="st">;port=</span><span class="va">$port</span><span class="st">;dbname=</span><span class="va">$dbname</span><span class="st">;charset=</span><span class="va">$charset</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>{</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="va">$pdo</span> <span class="op">=</span> <span class="kw">new</span> <span class="bu">PDO</span>(<span class="va">$dsn</span><span class="ot">,</span><span class="va">$user</span><span class="ot">,</span><span class="va">$pwd</span>)<span class="ot">;</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    <span class="co">//获取要编辑的员工的id</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    <span class="va">$e_id</span> <span class="op">=</span> <span class="kw">isset</span>(<span class="va">$_GET</span>[<span class="st">&#39;e_id&#39;</span>]) <span class="ot">?</span> <span class="fu">intval</span>(<span class="va">$_GET</span>[<span class="st">&#39;e_id&#39;</span>]) <span class="ot">:</span> <span class="dv">0</span><span class="ot">;</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    <span class="co">//判断是否有POST数据提交</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="op">!</span><span class="kw">empty</span>(<span class="va">$_POST</span>)){</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>        <span class="co">//定义变量$update，用来保存处理后的员工数据</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>        <span class="va">$update</span> <span class="op">=</span> <span class="dt">array</span>()<span class="ot">;</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>        <span class="co">//定义合法字段数组</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>        <span class="va">$fields</span> <span class="op">=</span> <span class="dt">array</span>(<span class="st">&#39;e_name&#39;</span><span class="ot">,</span><span class="st">&#39;e_dept&#39;</span><span class="ot">,</span><span class="st">&#39;date_of_birth&#39;</span><span class="ot">,</span><span class="st">&#39;date_of_entry&#39;</span>)<span class="ot">;</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>        <span class="co">//遍历$_POST，获取更新员工数据的键和值</span></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">foreach</span>(<span class="va">$fields</span> <span class="kw">as</span> <span class="va">$v</span>){</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>            <span class="va">$data</span> <span class="op">=</span> <span class="kw">isset</span>(<span class="va">$_POST</span>[<span class="va">$v</span>]) <span class="ot">?</span> <span class="va">$_POST</span>[<span class="va">$v</span>] <span class="ot">:</span> <span class="st">&#39;&#39;</span><span class="ot">;</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span>(<span class="va">$data</span><span class="op">==</span><span class="st">&#39;&#39;</span>) <span class="cf">die</span>(<span class="va">$v</span><span class="op">.</span><span class="st">&#39;字段不能为空&#39;</span>)<span class="ot">;</span></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>            <span class="co">//把键和值按照sql更新语句中的语法要求连接，并存入到$update数组中</span></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>            <span class="va">$update</span>[] <span class="op">=</span> <span class="st">&quot;`</span><span class="va">$v</span><span class="st">`=&#39;</span><span class="va">$data</span><span class="st">&#39;&quot;</span><span class="ot">;</span></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>        <span class="co">//把$update数组元素使用逗号连接，赋值给$update_str</span></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>        <span class="va">$update_str</span> <span class="op">=</span> <span class="fu">implode</span>(<span class="st">&#39;,&#39;</span><span class="ot">,</span> <span class="va">$update</span>)<span class="ot">;</span></span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>        <span class="co">//组合sql语句</span></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>        <span class="va">$sql</span> <span class="op">=</span> <span class="st">&quot;update `emp_info` set </span><span class="va">$update_str</span><span class="st"> where  `e_id`=</span><span class="va">$e_id</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(<span class="va">$res</span> <span class="op">=</span> <span class="va">$pdo</span>-&gt;query(<span class="va">$sql</span>)){</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>            <span class="fu">header</span>(<span class="st">&quot;Location: ./showList.php&quot;</span>)<span class="ot">;</span></span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>            <span class="cf">die</span><span class="ot">;</span></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>        }<span class="cf">else</span>{</span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>            <span class="cf">die</span>(<span class="st">&#39;员工信息修改失败&#39;</span>)<span class="ot">;</span></span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>    }<span class="cf">else</span>{</span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>        <span class="co">//当没有表单提交时，查询当前要编辑的员工信息，展示到页面中</span></span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>        <span class="va">$pdo</span> <span class="op">=</span> <span class="kw">new</span> <span class="bu">PDO</span>(<span class="va">$dsn</span><span class="ot">,</span><span class="va">$user</span><span class="ot">,</span><span class="va">$pwd</span>)<span class="ot">;</span></span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>        <span class="co">//编写SQL语句，查询相应ID的员工数据</span></span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>        <span class="va">$sql</span> <span class="op">=</span> <span class="st">&quot;select * from `emp_info` where `e_id`=</span><span class="va">$e_id</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>        <span class="va">$result</span> <span class="op">=</span> <span class="va">$pdo</span>-&gt;query(<span class="va">$sql</span>)<span class="ot">;</span></span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>        <span class="va">$rows</span> <span class="op">=</span> <span class="dt">array</span>()<span class="ot">;</span></span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span>(<span class="va">$row</span> <span class="op">=</span> <span class="va">$result</span>-&gt;fetch()){</span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a>            <span class="va">$rows</span>[] <span class="op">=</span> <span class="va">$row</span><span class="ot">;</span></span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a>}<span class="cf">catch</span>(<span class="bu">PDOEXception</span> <span class="va">$e</span>){</span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>    <span class="kw">echo</span> <span class="va">$e</span>-&gt;getMessage()<span class="op">.</span><span class="st">&#39;&lt;br&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a>    <span class="kw">echo</span> <span class="va">$e</span>-&gt;getLine()<span class="op">.</span><span class="st">&#39;&lt;br&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>    <span class="kw">echo</span> <span class="va">$e</span>-&gt;<span class="bu">__toString</span>()<span class="op">.</span><span class="st">&#39;&lt;br&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a><span class="co">//显示员工修改页面</span></span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span>(<span class="st">&#39;APP&#39;</span><span class="ot">,</span> <span class="st">&#39;itcast&#39;</span>)<span class="ot">;</span></span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a><span class="kw">require</span> <span class="st">&#39;./update_html.php&#39;</span><span class="ot">;</span></span></code></pre></div>
+<h3 id="删除页面empaddphp">删除页面empAdd.php</h3>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">header</span> (<span class="st">&#39;Conent-type:text/html;charset=utf-8&#39;</span>)<span class="ot">;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="va">$dbms</span> <span class="op">=</span> <span class="st">&#39;mysql&#39;</span><span class="ot">;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">//数据库服务器主机名，端口号，选择的数据库</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="va">$host</span> <span class="op">=</span> <span class="st">&#39;localhost&#39;</span><span class="ot">;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="va">$port</span> <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="ot">;</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="va">$dbname</span> <span class="op">=</span> <span class="st">&#39;itcast&#39;</span><span class="ot">;</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">//设置字符集</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="va">$charset</span> <span class="op">=</span> <span class="st">&#39;utf8&#39;</span><span class="ot">;</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">//用户名和密码</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="va">$user</span> <span class="op">=</span> <span class="st">&#39;root&#39;</span><span class="ot">;</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="va">$pwd</span> <span class="op">=</span> <span class="st">&#39;root&#39;</span><span class="ot">;</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="va">$dsn</span> <span class="op">=</span> <span class="st">&quot;</span><span class="va">$dbms</span><span class="st">:host=</span><span class="va">$host</span><span class="st">;port=</span><span class="va">$port</span><span class="st">;dbname=</span><span class="va">$dbname</span><span class="st">;charset=</span><span class="va">$charset</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>{</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>   <span class="va">$pdo</span> <span class="op">=</span> <span class="kw">new</span> <span class="bu">PDO</span>(<span class="va">$dsn</span><span class="ot">,</span><span class="va">$user</span><span class="ot">,</span><span class="va">$pwd</span>)<span class="ot">;</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>   <span class="co">//获取要编辑的员工的id</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>   <span class="va">$e_id</span> <span class="op">=</span> <span class="kw">isset</span>(<span class="va">$_GET</span>[<span class="st">&#39;e_id&#39;</span>]) <span class="ot">?</span> <span class="fu">intval</span>(<span class="va">$_GET</span>[<span class="st">&#39;e_id&#39;</span>]) <span class="ot">:</span> <span class="dv">0</span><span class="ot">;</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>   <span class="co">// 准备SQL语句  DELETE FROM Employee WHERE ID=&#39;$id&#39;</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>   <span class="va">$sql</span> <span class="op">=</span> <span class="st">&quot;delete from emp_info where e_id = </span><span class="va">$e_id</span><span class="st">&quot;</span><span class="ot">;</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>    <span class="va">$result</span> <span class="op">=</span> <span class="va">$pdo</span>-&gt;query(<span class="va">$sql</span>)<span class="ot">;</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    <span class="va">$rows</span> <span class="op">=</span> <span class="dt">array</span>()<span class="ot">;</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span>(<span class="va">$row</span> <span class="op">=</span> <span class="va">$result</span>-&gt;fetch()){</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>        <span class="va">$rows</span>[] <span class="op">=</span> <span class="va">$row</span><span class="ot">;</span></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>}<span class="cf">catch</span>(<span class="bu">PDOException</span> <span class="va">$e</span>){</span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>    <span class="kw">echo</span> <span class="va">$e</span>-&gt;getMessage()<span class="op">.</span><span class="st">&#39;&lt;br&gt;&#39;</span><span class="ot">;</span></span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a><span class="fu">define</span> (<span class="st">&#39;APP&#39;</span><span class="ot">,</span><span class="st">&#39;itcast&#39;</span>)<span class="ot">;</span></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a><span class="co">//在当前页面刷新数据</span></span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a><span class="fu">header</span> (<span class="st">&quot;Location: ./showList.php&quot;</span>)<span class="ot">;</span></span></code></pre></div>
+<h3
+id="最后提供一个检查用户名密码格式的check_formlibphp">最后提供一个检查用户名密码格式的check_form.lib.php</h3>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;?php</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">//验证用户名（2~16位，只允许汉字，英文字母，数字，下划线）</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">//注意：只支持验证UTF-8编码</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> checkUsername(<span class="va">$username</span>){</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="op">!</span><span class="fu">preg_match</span>(<span class="st">&#39;/^[\w\x{4e00}-\x{9fa5}]{2,10}$/u&#39;</span><span class="ot">,</span><span class="va">$username</span>)){</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&#39;用户名格式不符合要求&#39;</span><span class="ot">;</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">true</span><span class="ot">;</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co">//验证密码（长度6~16位，只允许英文字母，数字，下划线）</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> checkPassword(<span class="va">$password</span>){</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="op">!</span><span class="fu">preg_match</span>(<span class="st">&#39;/^\w{6,16}$/&#39;</span><span class="ot">,</span><span class="va">$password</span>)){</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&#39;密码格式不符合要求&#39;</span><span class="ot">;</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">true</span><span class="ot">;</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="co">//验证邮箱（不超过40位）</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> checkEmail(<span class="va">$email</span>){</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="fu">strlen</span>(<span class="va">$email</span>) <span class="op">&gt;</span> <span class="dv">40</span>){</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&#39;邮箱长度不符合要求&#39;</span><span class="ot">;</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    }<span class="cf">elseif</span>(<span class="op">!</span><span class="fu">preg_match</span>(<span class="st">&#39;/^[a-z0-9]+@([a-z0-9]+\.)+[a-z]{2,4}$/i&#39;</span><span class="ot">,</span><span class="va">$email</span>)){</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&#39;邮箱格式不符合要求&#39;</span><span class="ot">;</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">true</span><span class="ot">;</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="co">//验证QQ号（5~20位）</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> checkQQ(<span class="va">$qq</span>){</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="op">!</span><span class="fu">preg_match</span>(<span class="st">&#39;/^[1-9][0-9]{4,20}$/&#39;</span><span class="ot">,</span><span class="va">$qq</span>)){</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&#39;QQ号码格式不符合要求&#39;</span><span class="ot">;</span></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">true</span><span class="ot">;</span></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a><span class="co">//验证手机号码（11位）</span></span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> checkPhone(<span class="va">$num</span>){</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="op">!</span><span class="fu">preg_match</span>(<span class="st">&#39;/^1[358]\d{9}$/&#39;</span><span class="ot">,</span><span class="va">$num</span>)){</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&#39;手机号码不符合要求&#39;</span><span class="ot">;</span></span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">true</span><span class="ot">;</span></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a><span class="co">//验证URL地址</span></span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> checkURL(<span class="va">$url</span>){</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(<span class="fu">strlen</span>(<span class="va">$url</span>) <span class="op">&gt;</span> <span class="dv">200</span>){</span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&#39;URL长度不符合要求&#39;</span><span class="ot">;</span></span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>    }<span class="cf">elseif</span>(<span class="op">!</span><span class="fu">preg_match</span>(<span class="st">&#39;/^http:\/\/[a-z\d-]+(\.[\w\/]+)+$/i&#39;</span><span class="ot">,</span><span class="va">$url</span>)){</span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&#39;URL格式不符合要求&#39;</span><span class="ot">;</span></span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">true</span><span class="ot">;</span></span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h5
+id="这里的修改页面做得并不是很好存在无法显示数据的情况但是修改功能可以实现不想修改了有意向的帮我修改一下并在下面评论区留言告诉我">这里的修改页面做得并不是很好，存在无法显示数据的情况，但是修改功能可以实现，不想修改了，有意向的帮我修改一下，并在下面评论区留言告诉我！</h5>
+<h3
+id="演示一下打开首页实现查询功能">演示一下，打开首页，实现查询功能</h3>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/07b6c0740a4e475f884f6652189bc32d~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<h3 id="添加员工">添加员工</h3>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/35c1a1e3c6b24110b7b739863c70a839~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<h3 id="输入员工信息">输入员工信息</h3>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/392a45fc7269424b845882c16a3ed6cb~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<h3
+id="点击保存自动回到查询页面显示刚刚新增的数据">点击保存，自动回到查询页面，显示刚刚新增的数据</h3>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0dcdf34f3380417ea4f65d21d9f3b72f~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" /></p>
+<h3 id="其他的不演示了有问题留言吧">其他的不演示了，有问题留言吧！</h3>
+15:["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L13",null,{"href":"/ar/archives","className":"ghost-inline","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","aria-hidden":"true","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"كل المقالات"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"تمت المزامنة من Juejin"}],["$","span",null,{"children":"2021-02-25"}],["$","span",null,{"children":[3," ","دقيقة"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"PHP+MySql+PDO实现简单增加、删除、修改、查询"}],["$","p",null,{"className":"hero-copy","children":"使用PHP+MySql实现表单的增加、删除、修改、查询，看了很多简单案例后，写了一个简单的表单，下面请看代码，有错误的地方希望大佬们指教！ 数据库名itcast , 表名emp info 目录结构 images和js没有的也没关系，只是样子不好看而已 查询的前台页面list html.php 查询后台页面showList.php 新增前台页面add html..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"ملخص"}],["$","span",null,{"children":"تم حفظ هذا النص داخل هيكل المدونة الجديد مع الإبقاء على المحتوى الصيني الأصلي."}],["$","a",null,{"href":"https://juejin.cn/post/6933146576789929992","target":"_blank","rel":"noreferrer","className":"ghost-inline","children":["المصدر الأصلي",["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-external-link h-4 w-4","aria-hidden":"true","children":[["$","path","1q9fwt",{"d":"M15 3h6v6"}],["$","path","gplh6r",{"d":"M10 14 21 3"}],["$","path","a6xqqp",{"d":"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"}],"$undefined"]}]]}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$1d"}}]}]]}]
+1a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+18:null
+1c:[["$","title","0",{"children":"POJIAN.BLOG"}],["$","meta","1",{"name":"description","content":"A multilingual personal blog around AI tooling, product delivery, memoir, and long-form archive work."}]]
