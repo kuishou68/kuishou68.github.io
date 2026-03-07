@@ -1,71 +1,423 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="refresh" content="0; url=/en/posts/sync/2021-10-11-7017681730605678605/" />
-    <title>Juejin article moved</title>
-    <style>
-      :root {
-        color-scheme: dark;
-        --bg: #0b1020;
-        --panel: rgba(10, 18, 38, 0.88);
-        --line: rgba(255, 255, 255, 0.12);
-        --text: #f6efe3;
-        --muted: #93a2bf;
-        --accent: #7ae7c7;
-      }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        background:
-          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
-          linear-gradient(180deg, #0b1020 0%, #050813 100%);
-        color: var(--text);
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        padding: 24px;
-      }
-      main {
-        width: min(640px, 100%);
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        background: var(--panel);
-        padding: 32px;
-        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
-      }
-      h1 {
-        margin: 0 0 12px;
-        font-size: clamp(28px, 4vw, 42px);
-      }
-      p {
-        margin: 0 0 18px;
-        color: var(--muted);
-        line-height: 1.7;
-      }
-      a {
-        color: #08111e;
-        background: var(--accent);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 12px 18px;
-        border-radius: 999px;
-        text-decoration: none;
-        font-weight: 700;
-      }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jquery +Ajax 请求Json文件，绘制Echarts 上下两个堆叠折线图 | CocoonBreak</title>
+    <meta name="description" content="魁首 🔔一个没有天赋的前端程序员👨‍💻 💡 博客 关注我🔰 🤖 Github |🔑 CSDN | 💎 掘金 | 📖 知乎 | 💡 博客 | HTML部分 &lt;!DOCTYPE html &gt; &lt; html lang = &quot;en&quot; &gt; &lt; hea...">
+    <meta property="og:title" content="Jquery +Ajax 请求Json文件，绘制Echarts 上下两个堆叠折线图 | CocoonBreak">
+    <meta property="og:description" content="魁首 🔔一个没有天赋的前端程序员👨‍💻 💡 博客 关注我🔰 🤖 Github |🔑 CSDN | 💎 掘金 | 📖 知乎 | 💡 博客 | HTML部分 &lt;!DOCTYPE html &gt; &lt; html lang = &quot;en&quot; &gt; &lt; hea...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2021-10-11-7017681730605678605/">
+    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
   </head>
   <body>
-    <main>
-      <h1>Juejin article moved</h1>
-      <p>This synced Juejin article now lives under the rebuilt post route.</p>
-      <a href="/en/posts/sync/2021-10-11-7017681730605678605/">Continue</a>
-    </main>
-    <script>
-      window.location.replace("/en/posts/sync/2021-10-11-7017681730605678605/");
-    </script>
+    <div class="article-shell">
+      <nav class="insight-nav">
+        <a href="/">← 首页</a>
+        <a href="/insights/">同步文章</a>
+        <a href="https://juejin.cn/post/7017681730605678605" target="_blank" rel="noreferrer">掘金原文</a>
+      </nav>
+
+      <header class="article-hero" data-reveal>
+        <div class="article-meta">
+          <span>2021.10.11</span><span>ECharts</span>
+        </div>
+        <h1>Jquery +Ajax 请求Json文件，绘制Echarts 上下两个堆叠折线图</h1>
+        <p class="article-intro">魁首 🔔一个没有天赋的前端程序员👨‍💻 💡 博客 关注我🔰 🤖 Github |🔑 CSDN | 💎 掘金 | 📖 知乎 | 💡 博客 | HTML部分 &lt;!DOCTYPE html &gt; &lt; html lang = &quot;en&quot; &gt; &lt; hea...</p>
+        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/7017681730605678605" target="_blank" rel="noreferrer">掘金原文</a>。</div>
+      </header>
+
+      <article class="prose" data-reveal>
+        <h2 id="魁首">魁首</h2>
+<p>🔔一个没有天赋的前端程序员👨‍💻 💡<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fblog.lijianlin.com.cn%2F" target="_blank" title="https://blog.lijianlin.com.cn/">博客</a></p>
+<h3 id="关注我beginner">关注我🔰</h3>
+<p>🤖<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fkuishou68" target="_blank" title="https://github.com/kuishou68">Github</a> |🔑<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fblog.csdn.net%2Fweixin_44019370%3Fspm%3D1010.2135.3001.5421" target="_blank" title="https://blog.csdn.net/weixin_44019370?spm=1010.2135.3001.5421">CSDN</a>
+|
+💎<a href="https://juejin.cn/user/3817931570691031/posts" target="_blank" title="https://juejin.cn/user/3817931570691031/posts">掘金</a> | 📖 <a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fwww.zhihu.com%2Fpeople%2Fkui-shou-27-41%2Fposts" target="_blank" title="https://www.zhihu.com/people/kui-shou-27-41/posts">知乎</a> |
+💡<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fblog.lijianlin.com.cn%2F" target="_blank" title="https://blog.lijianlin.com.cn/">博客</a> |</p>
+<p><img alt="Echarts上下两个堆叠折线图.gif" loading="lazy" src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51fded4233b44e5eb62ad35fdafc9afa~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p>
+<h3 id="html部分">HTML部分</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
+<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"en"</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a aria-hidden="true" href="#cb1-4" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">"UTF-8"</span><span class="dt">&gt;</span></span>
+<span id="cb1-5"><a aria-hidden="true" href="#cb1-5" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> http-equiv</span><span class="op">=</span><span class="st">"X-UA-Compatible"</span><span class="ot"> content</span><span class="op">=</span><span class="st">"IE=edge"</span><span class="dt">&gt;</span></span>
+<span id="cb1-6"><a aria-hidden="true" href="#cb1-6" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> name</span><span class="op">=</span><span class="st">"viewport"</span><span class="ot"> content</span><span class="op">=</span><span class="st">"width=device-width, initial-scale=1.0"</span><span class="dt">&gt;</span></span>
+<span id="cb1-7"><a aria-hidden="true" href="#cb1-7" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Echarts 上下两个堆叠折线图的实现<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb1-8"><a aria-hidden="true" href="#cb1-8" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb1-9"><a aria-hidden="true" href="#cb1-9" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb1-10"><a aria-hidden="true" href="#cb1-10" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"rateTable"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"height: 100%; width: 100%;min-height: 470px"</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb1-11"><a aria-hidden="true" href="#cb1-11" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb1-12"><a aria-hidden="true" href="#cb1-12" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb1-13"><a aria-hidden="true" href="#cb1-13" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js"</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb1-14"><a aria-hidden="true" href="#cb1-14" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb1-15"><a aria-hidden="true" href="#cb1-15" tabindex="-1"></a>    <span class="op">&lt;!--</span>Echarts在这里绘制<span class="op">--&gt;</span></span>
+<span id="cb1-16"><a aria-hidden="true" href="#cb1-16" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb1-17"><a aria-hidden="true" href="#cb1-17" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
+<h3 id="json数据格式">json数据格式</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="ot">[</span></span>
+<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a>  <span class="fu">{</span></span>
+<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a>    <span class="dt">"dt"</span><span class="fu">:</span> <span class="st">"2020-01-02"</span><span class="fu">,</span>        <span class="er">//x轴日期</span></span>
+<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a>    <span class="dt">"portfolio_net_value"</span><span class="fu">:</span> <span class="fl">0.0</span><span class="fu">,</span><span class="er">//数据1</span></span>
+<span id="cb2-5"><a aria-hidden="true" href="#cb2-5" tabindex="-1"></a>    <span class="dt">"SH_net_value"</span><span class="fu">:</span> <span class="fl">0.0</span><span class="fu">,</span>       <span class="er">//数据2</span></span>
+<span id="cb2-6"><a aria-hidden="true" href="#cb2-6" tabindex="-1"></a>    <span class="dt">"alpha_net_value"</span><span class="fu">:</span> <span class="fl">0.0</span><span class="fu">,</span>    <span class="er">//数据3</span></span>
+<span id="cb2-7"><a aria-hidden="true" href="#cb2-7" tabindex="-1"></a>    <span class="dt">"cur_drawdown_rate"</span><span class="fu">:</span> <span class="fl">0.0</span>   <span class="er">//数据</span><span class="dv">4</span></span>
+<span id="cb2-8"><a aria-hidden="true" href="#cb2-8" tabindex="-1"></a>  <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-9"><a aria-hidden="true" href="#cb2-9" tabindex="-1"></a>  <span class="fu">{</span></span>
+<span id="cb2-10"><a aria-hidden="true" href="#cb2-10" tabindex="-1"></a>    <span class="dt">"dt"</span><span class="fu">:</span> <span class="st">"2020-01-03"</span><span class="fu">,</span></span>
+<span id="cb2-11"><a aria-hidden="true" href="#cb2-11" tabindex="-1"></a>    <span class="dt">"portfolio_net_value"</span><span class="fu">:</span> <span class="fl">-0.0083730541368796</span><span class="fu">,</span></span>
+<span id="cb2-12"><a aria-hidden="true" href="#cb2-12" tabindex="-1"></a>    <span class="dt">"SH_net_value"</span><span class="fu">:</span> <span class="fl">0.0008564679888114</span><span class="fu">,</span></span>
+<span id="cb2-13"><a aria-hidden="true" href="#cb2-13" tabindex="-1"></a>    <span class="dt">"alpha_net_value"</span><span class="fu">:</span> <span class="fl">-0.0092295221256908</span><span class="fu">,</span></span>
+<span id="cb2-14"><a aria-hidden="true" href="#cb2-14" tabindex="-1"></a>    <span class="dt">"cur_drawdown_rate"</span><span class="fu">:</span> <span class="fl">-0.0083730541368796</span></span>
+<span id="cb2-15"><a aria-hidden="true" href="#cb2-15" tabindex="-1"></a>  <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-16"><a aria-hidden="true" href="#cb2-16" tabindex="-1"></a>  <span class="fu">{</span></span>
+<span id="cb2-17"><a aria-hidden="true" href="#cb2-17" tabindex="-1"></a>    <span class="dt">"dt"</span><span class="fu">:</span> <span class="st">"2020-01-06"</span><span class="fu">,</span></span>
+<span id="cb2-18"><a aria-hidden="true" href="#cb2-18" tabindex="-1"></a>    <span class="dt">"portfolio_net_value"</span><span class="fu">:</span> <span class="fl">-0.0040413555084052</span><span class="fu">,</span></span>
+<span id="cb2-19"><a aria-hidden="true" href="#cb2-19" tabindex="-1"></a>    <span class="dt">"SH_net_value"</span><span class="fu">:</span> <span class="fl">0.0109406884571092</span><span class="fu">,</span></span>
+<span id="cb2-20"><a aria-hidden="true" href="#cb2-20" tabindex="-1"></a>    <span class="dt">"alpha_net_value"</span><span class="fu">:</span> <span class="fl">-0.0148841629410285</span><span class="fu">,</span></span>
+<span id="cb2-21"><a aria-hidden="true" href="#cb2-21" tabindex="-1"></a>    <span class="dt">"cur_drawdown_rate"</span><span class="fu">:</span> <span class="fl">-0.0040413555084056</span></span>
+<span id="cb2-22"><a aria-hidden="true" href="#cb2-22" tabindex="-1"></a>  <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-23"><a aria-hidden="true" href="#cb2-23" tabindex="-1"></a>  <span class="fu">{</span></span>
+<span id="cb2-24"><a aria-hidden="true" href="#cb2-24" tabindex="-1"></a>    <span class="dt">"dt"</span><span class="fu">:</span> <span class="st">"2020-01-07"</span><span class="fu">,</span></span>
+<span id="cb2-25"><a aria-hidden="true" href="#cb2-25" tabindex="-1"></a>    <span class="dt">"portfolio_net_value"</span><span class="fu">:</span> <span class="fl">0.0088552022531673</span><span class="fu">,</span></span>
+<span id="cb2-26"><a aria-hidden="true" href="#cb2-26" tabindex="-1"></a>    <span class="dt">"SH_net_value"</span><span class="fu">:</span> <span class="fl">0.0230293795826546</span><span class="fu">,</span></span>
+<span id="cb2-27"><a aria-hidden="true" href="#cb2-27" tabindex="-1"></a>    <span class="dt">"alpha_net_value"</span><span class="fu">:</span> <span class="fl">-0.0139078885557082</span><span class="fu">,</span></span>
+<span id="cb2-28"><a aria-hidden="true" href="#cb2-28" tabindex="-1"></a>    <span class="dt">"cur_drawdown_rate"</span><span class="fu">:</span> <span class="fl">0.0</span></span>
+<span id="cb2-29"><a aria-hidden="true" href="#cb2-29" tabindex="-1"></a>  <span class="fu">}</span><span class="ot">,</span></span>
+<span id="cb2-30"><a aria-hidden="true" href="#cb2-30" tabindex="-1"></a>  </span>
+<span id="cb2-31"><a aria-hidden="true" href="#cb2-31" tabindex="-1"></a><span class="ot">]</span></span></code></pre></div>
+<h3 id="js部分">js部分</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="op">&lt;</span>script src<span class="op">=</span><span class="st">"https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"</span><span class="op">&gt;&lt;/</span>script<span class="op">&gt;</span></span>
+<span id="cb3-2"><a aria-hidden="true" href="#cb3-2" tabindex="-1"></a><span class="op">&lt;</span>script src<span class="op">=</span><span class="st">"https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js"</span><span class="op">&gt;&lt;/</span>script<span class="op">&gt;</span></span>
+<span id="cb3-3"><a aria-hidden="true" href="#cb3-3" tabindex="-1"></a><span class="op">&lt;</span>script<span class="op">&gt;</span></span>
+<span id="cb3-4"><a aria-hidden="true" href="#cb3-4" tabindex="-1"></a>    <span class="kw">var</span> mychartdd <span class="op">=</span> echarts<span class="op">.</span><span class="fu">init</span>(<span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">'rateTable'</span>))<span class="op">;</span></span>
+<span id="cb3-5"><a aria-hidden="true" href="#cb3-5" tabindex="-1"></a>    <span class="kw">var</span> seriesName1 <span class="op">=</span> <span class="st">'数据1'</span><span class="op">;</span></span>
+<span id="cb3-6"><a aria-hidden="true" href="#cb3-6" tabindex="-1"></a>    <span class="kw">var</span> seriesName2 <span class="op">=</span> <span class="st">'数据2'</span><span class="op">;</span></span>
+<span id="cb3-7"><a aria-hidden="true" href="#cb3-7" tabindex="-1"></a>    <span class="kw">var</span> seriesName3 <span class="op">=</span> <span class="st">'数据3'</span><span class="op">;</span></span>
+<span id="cb3-8"><a aria-hidden="true" href="#cb3-8" tabindex="-1"></a>    <span class="kw">var</span> seriesName4 <span class="op">=</span> <span class="st">'数据4'</span><span class="op">;</span></span>
+<span id="cb3-9"><a aria-hidden="true" href="#cb3-9" tabindex="-1"></a>    <span class="kw">var</span> option <span class="op">=</span> {</span>
+<span id="cb3-10"><a aria-hidden="true" href="#cb3-10" tabindex="-1"></a>        <span class="dt">legend</span><span class="op">:</span> { <span class="co">// 图例</span></span>
+<span id="cb3-11"><a aria-hidden="true" href="#cb3-11" tabindex="-1"></a>            <span class="dt">data</span><span class="op">:</span> [seriesName1<span class="op">,</span> seriesName2<span class="op">,</span> seriesName3<span class="op">,</span> seriesName4]<span class="op">,</span></span>
+<span id="cb3-12"><a aria-hidden="true" href="#cb3-12" tabindex="-1"></a>            <span class="dt">right</span><span class="op">:</span> <span class="st">'10%'</span><span class="op">,</span></span>
+<span id="cb3-13"><a aria-hidden="true" href="#cb3-13" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb3-14"><a aria-hidden="true" href="#cb3-14" tabindex="-1"></a>        <span class="dt">dataZoom</span><span class="op">:</span> [ <span class="co">// 底部红色数据框拖动条</span></span>
+<span id="cb3-15"><a aria-hidden="true" href="#cb3-15" tabindex="-1"></a>            {</span>
+<span id="cb3-16"><a aria-hidden="true" href="#cb3-16" tabindex="-1"></a>                <span class="dt">id</span><span class="op">:</span> <span class="st">'datazoomX'</span><span class="op">,</span></span>
+<span id="cb3-17"><a aria-hidden="true" href="#cb3-17" tabindex="-1"></a>                <span class="dt">type</span><span class="op">:</span> <span class="st">'slider'</span><span class="op">,</span></span>
+<span id="cb3-18"><a aria-hidden="true" href="#cb3-18" tabindex="-1"></a>                <span class="dt">xAxisIndex</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span></span>
+<span id="cb3-19"><a aria-hidden="true" href="#cb3-19" tabindex="-1"></a>                <span class="dt">height</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span></span>
+<span id="cb3-20"><a aria-hidden="true" href="#cb3-20" tabindex="-1"></a>                <span class="dt">top</span><span class="op">:</span> <span class="st">'69%'</span><span class="op">,</span></span>
+<span id="cb3-21"><a aria-hidden="true" href="#cb3-21" tabindex="-1"></a>                <span class="dt">right</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span></span>
+<span id="cb3-22"><a aria-hidden="true" href="#cb3-22" tabindex="-1"></a>                <span class="dt">left</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span></span>
+<span id="cb3-23"><a aria-hidden="true" href="#cb3-23" tabindex="-1"></a>                <span class="dt">handleIcon</span><span class="op">:</span> <span class="st">'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z'</span><span class="op">,</span></span>
+<span id="cb3-24"><a aria-hidden="true" href="#cb3-24" tabindex="-1"></a>                <span class="dt">handleSize</span><span class="op">:</span> <span class="st">'80%'</span><span class="op">,</span></span>
+<span id="cb3-25"><a aria-hidden="true" href="#cb3-25" tabindex="-1"></a>                <span class="dt">fillerColor</span><span class="op">:</span> <span class="st">"rgba(255, 76, 31,.2)"</span><span class="op">,</span></span>
+<span id="cb3-26"><a aria-hidden="true" href="#cb3-26" tabindex="-1"></a>                <span class="dt">dataBackground</span><span class="op">:</span> {</span>
+<span id="cb3-27"><a aria-hidden="true" href="#cb3-27" tabindex="-1"></a>                    <span class="dt">areaStyle</span><span class="op">:</span> {</span>
+<span id="cb3-28"><a aria-hidden="true" href="#cb3-28" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">''</span></span>
+<span id="cb3-29"><a aria-hidden="true" href="#cb3-29" tabindex="-1"></a>                    }<span class="op">,</span></span>
+<span id="cb3-30"><a aria-hidden="true" href="#cb3-30" tabindex="-1"></a>                    <span class="dt">lineStyle</span><span class="op">:</span> {</span>
+<span id="cb3-31"><a aria-hidden="true" href="#cb3-31" tabindex="-1"></a>                        <span class="dt">opacity</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb3-32"><a aria-hidden="true" href="#cb3-32" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'#FF4C1F'</span></span>
+<span id="cb3-33"><a aria-hidden="true" href="#cb3-33" tabindex="-1"></a>                    }</span>
+<span id="cb3-34"><a aria-hidden="true" href="#cb3-34" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-35"><a aria-hidden="true" href="#cb3-35" tabindex="-1"></a>                <span class="dt">handleStyle</span><span class="op">:</span> {</span>
+<span id="cb3-36"><a aria-hidden="true" href="#cb3-36" tabindex="-1"></a>                    <span class="dt">color</span><span class="op">:</span> <span class="st">'#FF4C1F'</span><span class="op">,</span></span>
+<span id="cb3-37"><a aria-hidden="true" href="#cb3-37" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-38"><a aria-hidden="true" href="#cb3-38" tabindex="-1"></a>                <span class="dt">filterMode</span><span class="op">:</span> <span class="st">'weakFilter'</span><span class="op">,</span></span>
+<span id="cb3-39"><a aria-hidden="true" href="#cb3-39" tabindex="-1"></a>                <span class="dt">zoomOnMouseWheel</span><span class="op">:</span> <span class="st">'false'</span></span>
+<span id="cb3-40"><a aria-hidden="true" href="#cb3-40" tabindex="-1"></a>            }<span class="op">,</span>{</span>
+<span id="cb3-41"><a aria-hidden="true" href="#cb3-41" tabindex="-1"></a>                <span class="dt">id</span><span class="op">:</span> <span class="st">'dataZoomY'</span><span class="op">,</span></span>
+<span id="cb3-42"><a aria-hidden="true" href="#cb3-42" tabindex="-1"></a>                <span class="dt">type</span><span class="op">:</span> <span class="st">'inside'</span><span class="op">,</span></span>
+<span id="cb3-43"><a aria-hidden="true" href="#cb3-43" tabindex="-1"></a>                <span class="dt">xAxisIndex</span><span class="op">:</span> [<span class="dv">0</span><span class="op">,</span> <span class="dv">1</span>]<span class="op">,</span></span>
+<span id="cb3-44"><a aria-hidden="true" href="#cb3-44" tabindex="-1"></a>                <span class="dt">filterMode</span><span class="op">:</span> <span class="st">'weakFilter'</span><span class="op">,</span></span>
+<span id="cb3-45"><a aria-hidden="true" href="#cb3-45" tabindex="-1"></a>                <span class="dt">zoomOnMouseWheel</span><span class="op">:</span> <span class="st">'false'</span></span>
+<span id="cb3-46"><a aria-hidden="true" href="#cb3-46" tabindex="-1"></a>            }</span>
+<span id="cb3-47"><a aria-hidden="true" href="#cb3-47" tabindex="-1"></a>        ]<span class="op">,</span></span>
+<span id="cb3-48"><a aria-hidden="true" href="#cb3-48" tabindex="-1"></a>        <span class="dt">tooltip</span><span class="op">:</span> { <span class="co">// 鼠标悬停提示框组件</span></span>
+<span id="cb3-49"><a aria-hidden="true" href="#cb3-49" tabindex="-1"></a>            <span class="dt">trigger</span><span class="op">:</span> <span class="st">'axis'</span><span class="op">,</span></span>
+<span id="cb3-50"><a aria-hidden="true" href="#cb3-50" tabindex="-1"></a>            <span class="dt">axisPointer</span><span class="op">:</span> {</span>
+<span id="cb3-51"><a aria-hidden="true" href="#cb3-51" tabindex="-1"></a>                <span class="dt">type</span><span class="op">:</span> <span class="st">'cross'</span><span class="op">,</span> <span class="co">//十字准星指示器</span></span>
+<span id="cb3-52"><a aria-hidden="true" href="#cb3-52" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb3-53"><a aria-hidden="true" href="#cb3-53" tabindex="-1"></a>            <span class="dt">formatter</span><span class="op">:</span> <span class="kw">function</span> (datas) { <span class="co">//提示框浮层内容格式 </span></span>
+<span id="cb3-54"><a aria-hidden="true" href="#cb3-54" tabindex="-1"></a>                <span class="kw">var</span> res <span class="op">=</span> datas[<span class="dv">0</span>]<span class="op">.</span><span class="at">name</span> <span class="op">+</span> <span class="st">'&lt;br/&gt;'</span><span class="op">;</span></span>
+<span id="cb3-55"><a aria-hidden="true" href="#cb3-55" tabindex="-1"></a>                <span class="kw">var</span> length <span class="op">=</span> datas<span class="op">.</span><span class="at">length</span><span class="op">;</span></span>
+<span id="cb3-56"><a aria-hidden="true" href="#cb3-56" tabindex="-1"></a>                <span class="kw">var</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-57"><a aria-hidden="true" href="#cb3-57" tabindex="-1"></a>                <span class="cf">for</span> (<span class="op">;</span> i <span class="op">&lt;</span> length<span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb3-58"><a aria-hidden="true" href="#cb3-58" tabindex="-1"></a>                    res <span class="op">+=</span> <span class="st">'&lt;span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:'</span> <span class="op">+</span> datas[i]<span class="op">.</span><span class="at">color</span> <span class="op">+</span> <span class="st">';"&gt;&lt;/span&gt;'</span> <span class="op">+</span> datas[i]<span class="op">.</span><span class="at">seriesName</span> <span class="op">+</span> <span class="st">'：'</span> <span class="op">+</span> datas[i]<span class="op">.</span><span class="at">value</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>) <span class="op">+</span> <span class="st">'%'</span> <span class="op">+</span> <span class="st">'&lt;br/&gt;'</span></span>
+<span id="cb3-59"><a aria-hidden="true" href="#cb3-59" tabindex="-1"></a>                }</span>
+<span id="cb3-60"><a aria-hidden="true" href="#cb3-60" tabindex="-1"></a>                <span class="cf">return</span> res</span>
+<span id="cb3-61"><a aria-hidden="true" href="#cb3-61" tabindex="-1"></a>            }</span>
+<span id="cb3-62"><a aria-hidden="true" href="#cb3-62" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb3-63"><a aria-hidden="true" href="#cb3-63" tabindex="-1"></a>        <span class="dt">axisPointer</span><span class="op">:</span> { <span class="co">// 坐标轴指示器</span></span>
+<span id="cb3-64"><a aria-hidden="true" href="#cb3-64" tabindex="-1"></a>            <span class="dt">link</span><span class="op">:</span> {<span class="dt">xAxisIndex</span><span class="op">:</span> <span class="st">'all'</span>}<span class="op">,</span></span>
+<span id="cb3-65"><a aria-hidden="true" href="#cb3-65" tabindex="-1"></a>            <span class="dt">label</span><span class="op">:</span> {</span>
+<span id="cb3-66"><a aria-hidden="true" href="#cb3-66" tabindex="-1"></a>                <span class="dt">backgroundColor</span><span class="op">:</span> <span class="st">'#777'</span></span>
+<span id="cb3-67"><a aria-hidden="true" href="#cb3-67" tabindex="-1"></a>            }</span>
+<span id="cb3-68"><a aria-hidden="true" href="#cb3-68" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb3-69"><a aria-hidden="true" href="#cb3-69" tabindex="-1"></a>        <span class="dt">grid</span><span class="op">:</span> [ <span class="co">//直角坐标系内绘图网格</span></span>
+<span id="cb3-70"><a aria-hidden="true" href="#cb3-70" tabindex="-1"></a>            {</span>
+<span id="cb3-71"><a aria-hidden="true" href="#cb3-71" tabindex="-1"></a>                <span class="dt">top</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span></span>
+<span id="cb3-72"><a aria-hidden="true" href="#cb3-72" tabindex="-1"></a>                <span class="dt">left</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span></span>
+<span id="cb3-73"><a aria-hidden="true" href="#cb3-73" tabindex="-1"></a>                <span class="dt">right</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb3-74"><a aria-hidden="true" href="#cb3-74" tabindex="-1"></a>                <span class="dt">bottom</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span></span>
+<span id="cb3-75"><a aria-hidden="true" href="#cb3-75" tabindex="-1"></a>                <span class="dt">height</span><span class="op">:</span> <span class="st">'60%'</span><span class="op">,</span></span>
+<span id="cb3-76"><a aria-hidden="true" href="#cb3-76" tabindex="-1"></a>            }<span class="op">,</span> {</span>
+<span id="cb3-77"><a aria-hidden="true" href="#cb3-77" tabindex="-1"></a>                <span class="dt">left</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span></span>
+<span id="cb3-78"><a aria-hidden="true" href="#cb3-78" tabindex="-1"></a>                <span class="dt">right</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb3-79"><a aria-hidden="true" href="#cb3-79" tabindex="-1"></a>                <span class="dt">bottom</span><span class="op">:</span> <span class="dv">15</span><span class="op">,</span></span>
+<span id="cb3-80"><a aria-hidden="true" href="#cb3-80" tabindex="-1"></a>                <span class="dt">height</span><span class="op">:</span> <span class="st">'20%'</span><span class="op">,</span></span>
+<span id="cb3-81"><a aria-hidden="true" href="#cb3-81" tabindex="-1"></a>            }</span>
+<span id="cb3-82"><a aria-hidden="true" href="#cb3-82" tabindex="-1"></a>        ]<span class="op">,</span></span>
+<span id="cb3-83"><a aria-hidden="true" href="#cb3-83" tabindex="-1"></a>        <span class="dt">xAxis</span><span class="op">:</span>[</span>
+<span id="cb3-84"><a aria-hidden="true" href="#cb3-84" tabindex="-1"></a>            {</span>
+<span id="cb3-85"><a aria-hidden="true" href="#cb3-85" tabindex="-1"></a>                <span class="dt">type</span><span class="op">:</span> <span class="st">'category'</span><span class="op">,</span></span>
+<span id="cb3-86"><a aria-hidden="true" href="#cb3-86" tabindex="-1"></a>                <span class="dt">data</span><span class="op">:</span> []<span class="op">,</span></span>
+<span id="cb3-87"><a aria-hidden="true" href="#cb3-87" tabindex="-1"></a>                <span class="dt">axisLine</span><span class="op">:</span> {</span>
+<span id="cb3-88"><a aria-hidden="true" href="#cb3-88" tabindex="-1"></a>                    <span class="dt">show</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb3-89"><a aria-hidden="true" href="#cb3-89" tabindex="-1"></a>                    <span class="dt">lineStyle</span><span class="op">:</span> {</span>
+<span id="cb3-90"><a aria-hidden="true" href="#cb3-90" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'#D8D8D8'</span></span>
+<span id="cb3-91"><a aria-hidden="true" href="#cb3-91" tabindex="-1"></a>                    }</span>
+<span id="cb3-92"><a aria-hidden="true" href="#cb3-92" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-93"><a aria-hidden="true" href="#cb3-93" tabindex="-1"></a>                <span class="dt">axisTick</span><span class="op">:</span> {</span>
+<span id="cb3-94"><a aria-hidden="true" href="#cb3-94" tabindex="-1"></a>                    <span class="dt">show</span><span class="op">:</span> <span class="kw">false</span></span>
+<span id="cb3-95"><a aria-hidden="true" href="#cb3-95" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-96"><a aria-hidden="true" href="#cb3-96" tabindex="-1"></a>                <span class="dt">axisLabel</span><span class="op">:</span> {</span>
+<span id="cb3-97"><a aria-hidden="true" href="#cb3-97" tabindex="-1"></a>                    <span class="dt">show</span><span class="op">:</span><span class="kw">true</span><span class="op">,</span></span>
+<span id="cb3-98"><a aria-hidden="true" href="#cb3-98" tabindex="-1"></a>                    <span class="dt">textStyle</span><span class="op">:</span> {</span>
+<span id="cb3-99"><a aria-hidden="true" href="#cb3-99" tabindex="-1"></a>                        <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span></span>
+<span id="cb3-100"><a aria-hidden="true" href="#cb3-100" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'#222831'</span></span>
+<span id="cb3-101"><a aria-hidden="true" href="#cb3-101" tabindex="-1"></a>                    }<span class="op">,</span></span>
+<span id="cb3-102"><a aria-hidden="true" href="#cb3-102" tabindex="-1"></a></span>
+<span id="cb3-103"><a aria-hidden="true" href="#cb3-103" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-104"><a aria-hidden="true" href="#cb3-104" tabindex="-1"></a>                <span class="dt">splitLine</span><span class="op">:</span> {</span>
+<span id="cb3-105"><a aria-hidden="true" href="#cb3-105" tabindex="-1"></a>                    <span class="dt">show</span><span class="op">:</span> <span class="kw">false</span></span>
+<span id="cb3-106"><a aria-hidden="true" href="#cb3-106" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-107"><a aria-hidden="true" href="#cb3-107" tabindex="-1"></a>                <span class="dt">scale</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb3-108"><a aria-hidden="true" href="#cb3-108" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb3-109"><a aria-hidden="true" href="#cb3-109" tabindex="-1"></a>            {</span>
+<span id="cb3-110"><a aria-hidden="true" href="#cb3-110" tabindex="-1"></a>                <span class="dt">type</span><span class="op">:</span> <span class="st">'category'</span><span class="op">,</span></span>
+<span id="cb3-111"><a aria-hidden="true" href="#cb3-111" tabindex="-1"></a>                <span class="dt">gridIndex</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb3-112"><a aria-hidden="true" href="#cb3-112" tabindex="-1"></a>                <span class="dt">data</span><span class="op">:</span> []<span class="op">,</span></span>
+<span id="cb3-113"><a aria-hidden="true" href="#cb3-113" tabindex="-1"></a>                <span class="dt">axisLine</span><span class="op">:</span> {</span>
+<span id="cb3-114"><a aria-hidden="true" href="#cb3-114" tabindex="-1"></a>                    <span class="dt">lineStyle</span><span class="op">:</span> {</span>
+<span id="cb3-115"><a aria-hidden="true" href="#cb3-115" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">"#D8D8D8"</span></span>
+<span id="cb3-116"><a aria-hidden="true" href="#cb3-116" tabindex="-1"></a>                    }</span>
+<span id="cb3-117"><a aria-hidden="true" href="#cb3-117" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-118"><a aria-hidden="true" href="#cb3-118" tabindex="-1"></a>                <span class="dt">scale</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb3-119"><a aria-hidden="true" href="#cb3-119" tabindex="-1"></a>                <span class="dt">axisTick</span><span class="op">:</span> {<span class="dt">show</span><span class="op">:</span> <span class="kw">false</span>}<span class="op">,</span></span>
+<span id="cb3-120"><a aria-hidden="true" href="#cb3-120" tabindex="-1"></a>                <span class="dt">splitLine</span><span class="op">:</span> {<span class="dt">show</span><span class="op">:</span> <span class="kw">false</span>}<span class="op">,</span></span>
+<span id="cb3-121"><a aria-hidden="true" href="#cb3-121" tabindex="-1"></a>                <span class="dt">axisLabel</span><span class="op">:</span> {<span class="dt">show</span><span class="op">:</span> <span class="kw">false</span>}<span class="op">,</span></span>
+<span id="cb3-122"><a aria-hidden="true" href="#cb3-122" tabindex="-1"></a></span>
+<span id="cb3-123"><a aria-hidden="true" href="#cb3-123" tabindex="-1"></a>            }</span>
+<span id="cb3-124"><a aria-hidden="true" href="#cb3-124" tabindex="-1"></a>        ]<span class="op">,</span></span>
+<span id="cb3-125"><a aria-hidden="true" href="#cb3-125" tabindex="-1"></a>        <span class="dt">yAxis</span><span class="op">:</span> [</span>
+<span id="cb3-126"><a aria-hidden="true" href="#cb3-126" tabindex="-1"></a>            {</span>
+<span id="cb3-127"><a aria-hidden="true" href="#cb3-127" tabindex="-1"></a>                <span class="dt">scale</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb3-128"><a aria-hidden="true" href="#cb3-128" tabindex="-1"></a>                <span class="dt">splitArea</span><span class="op">:</span> {</span>
+<span id="cb3-129"><a aria-hidden="true" href="#cb3-129" tabindex="-1"></a>                    <span class="dt">show</span><span class="op">:</span> <span class="kw">false</span></span>
+<span id="cb3-130"><a aria-hidden="true" href="#cb3-130" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-131"><a aria-hidden="true" href="#cb3-131" tabindex="-1"></a>                <span class="dt">splitNumber</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span></span>
+<span id="cb3-132"><a aria-hidden="true" href="#cb3-132" tabindex="-1"></a>                <span class="co">// max: 150,</span></span>
+<span id="cb3-133"><a aria-hidden="true" href="#cb3-133" tabindex="-1"></a>                <span class="co">// logBase:10,</span></span>
+<span id="cb3-134"><a aria-hidden="true" href="#cb3-134" tabindex="-1"></a>                <span class="dt">axisLabel</span><span class="op">:</span> {</span>
+<span id="cb3-135"><a aria-hidden="true" href="#cb3-135" tabindex="-1"></a>                    <span class="dt">show</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb3-136"><a aria-hidden="true" href="#cb3-136" tabindex="-1"></a>                    <span class="dt">textStyle</span><span class="op">:</span> {</span>
+<span id="cb3-137"><a aria-hidden="true" href="#cb3-137" tabindex="-1"></a>                        <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span></span>
+<span id="cb3-138"><a aria-hidden="true" href="#cb3-138" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'#808080'</span><span class="op">,</span></span>
+<span id="cb3-139"><a aria-hidden="true" href="#cb3-139" tabindex="-1"></a>                        <span class="dt">align</span><span class="op">:</span> <span class="st">'left'</span></span>
+<span id="cb3-140"><a aria-hidden="true" href="#cb3-140" tabindex="-1"></a>                    }<span class="op">,</span></span>
+<span id="cb3-141"><a aria-hidden="true" href="#cb3-141" tabindex="-1"></a>                    <span class="dt">formatter</span><span class="op">:</span> <span class="st">'{value} %'</span></span>
+<span id="cb3-142"><a aria-hidden="true" href="#cb3-142" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-143"><a aria-hidden="true" href="#cb3-143" tabindex="-1"></a>                <span class="dt">axisLine</span><span class="op">:</span> {</span>
+<span id="cb3-144"><a aria-hidden="true" href="#cb3-144" tabindex="-1"></a>                    <span class="dt">show</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb3-145"><a aria-hidden="true" href="#cb3-145" tabindex="-1"></a>                    <span class="dt">lineStyle</span><span class="op">:</span> {</span>
+<span id="cb3-146"><a aria-hidden="true" href="#cb3-146" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'#D8D8D8'</span></span>
+<span id="cb3-147"><a aria-hidden="true" href="#cb3-147" tabindex="-1"></a>                    }</span>
+<span id="cb3-148"><a aria-hidden="true" href="#cb3-148" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-149"><a aria-hidden="true" href="#cb3-149" tabindex="-1"></a>                <span class="dt">axisTick</span><span class="op">:</span> {</span>
+<span id="cb3-150"><a aria-hidden="true" href="#cb3-150" tabindex="-1"></a>                    <span class="dt">show</span><span class="op">:</span> <span class="kw">false</span></span>
+<span id="cb3-151"><a aria-hidden="true" href="#cb3-151" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-152"><a aria-hidden="true" href="#cb3-152" tabindex="-1"></a>                <span class="dt">splitLine</span><span class="op">:</span> {</span>
+<span id="cb3-153"><a aria-hidden="true" href="#cb3-153" tabindex="-1"></a>                    <span class="dt">show</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb3-154"><a aria-hidden="true" href="#cb3-154" tabindex="-1"></a>                    <span class="dt">lineStyle</span><span class="op">:</span> {</span>
+<span id="cb3-155"><a aria-hidden="true" href="#cb3-155" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'#F5F5F5'</span></span>
+<span id="cb3-156"><a aria-hidden="true" href="#cb3-156" tabindex="-1"></a>                    }</span>
+<span id="cb3-157"><a aria-hidden="true" href="#cb3-157" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-158"><a aria-hidden="true" href="#cb3-158" tabindex="-1"></a>                <span class="dt">offset</span><span class="op">:</span> <span class="op">-</span><span class="dv">10</span><span class="op">,</span></span>
+<span id="cb3-159"><a aria-hidden="true" href="#cb3-159" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb3-160"><a aria-hidden="true" href="#cb3-160" tabindex="-1"></a>            {</span>
+<span id="cb3-161"><a aria-hidden="true" href="#cb3-161" tabindex="-1"></a>                <span class="dt">type</span><span class="op">:</span> <span class="st">'value'</span><span class="op">,</span></span>
+<span id="cb3-162"><a aria-hidden="true" href="#cb3-162" tabindex="-1"></a>                <span class="dt">gridIndex</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb3-163"><a aria-hidden="true" href="#cb3-163" tabindex="-1"></a>                <span class="dt">offset</span><span class="op">:</span> <span class="op">-</span><span class="dv">10</span><span class="op">,</span></span>
+<span id="cb3-164"><a aria-hidden="true" href="#cb3-164" tabindex="-1"></a>                <span class="dt">axisLabel</span><span class="op">:</span> {</span>
+<span id="cb3-165"><a aria-hidden="true" href="#cb3-165" tabindex="-1"></a>                    <span class="dt">show</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb3-166"><a aria-hidden="true" href="#cb3-166" tabindex="-1"></a>                    <span class="dt">textStyle</span><span class="op">:</span> {<span class="dt">fontSize</span><span class="op">:</span> <span class="dv">10</span><span class="op">,</span> <span class="dt">color</span><span class="op">:</span> <span class="st">"#808080"</span><span class="op">,</span> <span class="dt">align</span><span class="op">:</span> <span class="st">'left'</span>}<span class="op">,</span></span>
+<span id="cb3-167"><a aria-hidden="true" href="#cb3-167" tabindex="-1"></a>                    <span class="dt">formatter</span><span class="op">:</span> <span class="st">'{value} %'</span><span class="op">,</span></span>
+<span id="cb3-168"><a aria-hidden="true" href="#cb3-168" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-169"><a aria-hidden="true" href="#cb3-169" tabindex="-1"></a>                <span class="dt">axisLine</span><span class="op">:</span> {<span class="dt">show</span><span class="op">:</span> <span class="kw">false</span>}<span class="op">,</span></span>
+<span id="cb3-170"><a aria-hidden="true" href="#cb3-170" tabindex="-1"></a>                <span class="dt">axisTick</span><span class="op">:</span> {<span class="dt">show</span><span class="op">:</span> <span class="kw">false</span>}<span class="op">,</span></span>
+<span id="cb3-171"><a aria-hidden="true" href="#cb3-171" tabindex="-1"></a>                <span class="dt">splitLine</span><span class="op">:</span> {<span class="dt">show</span><span class="op">:</span> <span class="kw">false</span>}</span>
+<span id="cb3-172"><a aria-hidden="true" href="#cb3-172" tabindex="-1"></a>            }</span>
+<span id="cb3-173"><a aria-hidden="true" href="#cb3-173" tabindex="-1"></a>        ]<span class="op">,</span></span>
+<span id="cb3-174"><a aria-hidden="true" href="#cb3-174" tabindex="-1"></a>        <span class="dt">series</span><span class="op">:</span> [</span>
+<span id="cb3-175"><a aria-hidden="true" href="#cb3-175" tabindex="-1"></a>            {</span>
+<span id="cb3-176"><a aria-hidden="true" href="#cb3-176" tabindex="-1"></a>                <span class="dt">name</span><span class="op">:</span> seriesName1<span class="op">,</span></span>
+<span id="cb3-177"><a aria-hidden="true" href="#cb3-177" tabindex="-1"></a>                <span class="dt">type</span><span class="op">:</span> <span class="st">'line'</span><span class="op">,</span></span>
+<span id="cb3-178"><a aria-hidden="true" href="#cb3-178" tabindex="-1"></a>                <span class="dt">data</span><span class="op">:</span> []<span class="op">,</span></span>
+<span id="cb3-179"><a aria-hidden="true" href="#cb3-179" tabindex="-1"></a>                <span class="dt">color</span><span class="op">:</span> <span class="st">"#FF7855"</span><span class="op">,</span></span>
+<span id="cb3-180"><a aria-hidden="true" href="#cb3-180" tabindex="-1"></a>                <span class="dt">xAxisIndex</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb3-181"><a aria-hidden="true" href="#cb3-181" tabindex="-1"></a>                <span class="dt">yAxisIndex</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb3-182"><a aria-hidden="true" href="#cb3-182" tabindex="-1"></a>                <span class="dt">symbol</span><span class="op">:</span> <span class="st">'none'</span><span class="op">,</span></span>
+<span id="cb3-183"><a aria-hidden="true" href="#cb3-183" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb3-184"><a aria-hidden="true" href="#cb3-184" tabindex="-1"></a>            {</span>
+<span id="cb3-185"><a aria-hidden="true" href="#cb3-185" tabindex="-1"></a>                <span class="dt">name</span><span class="op">:</span> seriesName2<span class="op">,</span></span>
+<span id="cb3-186"><a aria-hidden="true" href="#cb3-186" tabindex="-1"></a>                <span class="dt">type</span><span class="op">:</span> <span class="st">'line'</span><span class="op">,</span></span>
+<span id="cb3-187"><a aria-hidden="true" href="#cb3-187" tabindex="-1"></a>                <span class="dt">data</span><span class="op">:</span> []<span class="op">,</span></span>
+<span id="cb3-188"><a aria-hidden="true" href="#cb3-188" tabindex="-1"></a>                <span class="dt">color</span><span class="op">:</span> <span class="st">"#009DFF"</span><span class="op">,</span></span>
+<span id="cb3-189"><a aria-hidden="true" href="#cb3-189" tabindex="-1"></a>                <span class="dt">xAxisIndex</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb3-190"><a aria-hidden="true" href="#cb3-190" tabindex="-1"></a>                <span class="dt">yAxisIndex</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb3-191"><a aria-hidden="true" href="#cb3-191" tabindex="-1"></a>                <span class="dt">symbol</span><span class="op">:</span> <span class="st">'none'</span></span>
+<span id="cb3-192"><a aria-hidden="true" href="#cb3-192" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb3-193"><a aria-hidden="true" href="#cb3-193" tabindex="-1"></a>            {</span>
+<span id="cb3-194"><a aria-hidden="true" href="#cb3-194" tabindex="-1"></a>                <span class="dt">name</span><span class="op">:</span> seriesName3<span class="op">,</span></span>
+<span id="cb3-195"><a aria-hidden="true" href="#cb3-195" tabindex="-1"></a>                <span class="dt">type</span><span class="op">:</span> <span class="st">'line'</span><span class="op">,</span></span>
+<span id="cb3-196"><a aria-hidden="true" href="#cb3-196" tabindex="-1"></a>                <span class="dt">data</span><span class="op">:</span> []<span class="op">,</span></span>
+<span id="cb3-197"><a aria-hidden="true" href="#cb3-197" tabindex="-1"></a>                <span class="dt">color</span><span class="op">:</span> <span class="st">"#FFBD00"</span><span class="op">,</span></span>
+<span id="cb3-198"><a aria-hidden="true" href="#cb3-198" tabindex="-1"></a>                <span class="dt">xAxisIndex</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb3-199"><a aria-hidden="true" href="#cb3-199" tabindex="-1"></a>                <span class="dt">yAxisIndex</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb3-200"><a aria-hidden="true" href="#cb3-200" tabindex="-1"></a>                <span class="dt">symbol</span><span class="op">:</span><span class="st">'none'</span><span class="op">,</span></span>
+<span id="cb3-201"><a aria-hidden="true" href="#cb3-201" tabindex="-1"></a>                <span class="dt">areaStyle</span><span class="op">:</span> {</span>
+<span id="cb3-202"><a aria-hidden="true" href="#cb3-202" tabindex="-1"></a>                    <span class="dt">color</span><span class="op">:</span> <span class="kw">new</span> echarts<span class="op">.</span><span class="at">graphic</span><span class="op">.</span><span class="fu">LinearGradient</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> [</span>
+<span id="cb3-203"><a aria-hidden="true" href="#cb3-203" tabindex="-1"></a>                        {</span>
+<span id="cb3-204"><a aria-hidden="true" href="#cb3-204" tabindex="-1"></a>                            <span class="dt">offset</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb3-205"><a aria-hidden="true" href="#cb3-205" tabindex="-1"></a>                            <span class="dt">color</span><span class="op">:</span> <span class="st">'rgba(255, 189, 0, .5)'</span></span>
+<span id="cb3-206"><a aria-hidden="true" href="#cb3-206" tabindex="-1"></a>                        }<span class="op">,</span></span>
+<span id="cb3-207"><a aria-hidden="true" href="#cb3-207" tabindex="-1"></a>                        {</span>
+<span id="cb3-208"><a aria-hidden="true" href="#cb3-208" tabindex="-1"></a>                            <span class="dt">offset</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb3-209"><a aria-hidden="true" href="#cb3-209" tabindex="-1"></a>                            <span class="dt">color</span><span class="op">:</span> <span class="st">'rgba(255, 189, 0, 0)'</span></span>
+<span id="cb3-210"><a aria-hidden="true" href="#cb3-210" tabindex="-1"></a>                        }</span>
+<span id="cb3-211"><a aria-hidden="true" href="#cb3-211" tabindex="-1"></a>                    ])</span>
+<span id="cb3-212"><a aria-hidden="true" href="#cb3-212" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-213"><a aria-hidden="true" href="#cb3-213" tabindex="-1"></a>            }<span class="op">,</span></span>
+<span id="cb3-214"><a aria-hidden="true" href="#cb3-214" tabindex="-1"></a>            {</span>
+<span id="cb3-215"><a aria-hidden="true" href="#cb3-215" tabindex="-1"></a>                <span class="dt">name</span><span class="op">:</span> seriesName4<span class="op">,</span></span>
+<span id="cb3-216"><a aria-hidden="true" href="#cb3-216" tabindex="-1"></a>                <span class="dt">type</span><span class="op">:</span> <span class="st">'line'</span><span class="op">,</span></span>
+<span id="cb3-217"><a aria-hidden="true" href="#cb3-217" tabindex="-1"></a>                <span class="dt">data</span><span class="op">:</span> []<span class="op">,</span></span>
+<span id="cb3-218"><a aria-hidden="true" href="#cb3-218" tabindex="-1"></a>                <span class="dt">color</span><span class="op">:</span> <span class="st">'#769CFA'</span><span class="op">,</span></span>
+<span id="cb3-219"><a aria-hidden="true" href="#cb3-219" tabindex="-1"></a>                <span class="dt">gridIndex</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb3-220"><a aria-hidden="true" href="#cb3-220" tabindex="-1"></a>                <span class="dt">xAxisIndex</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="co">//使用的 x 轴的 index，在单个图表实例中存在多个 x 轴的时候有用</span></span>
+<span id="cb3-221"><a aria-hidden="true" href="#cb3-221" tabindex="-1"></a>                <span class="dt">yAxisIndex</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb3-222"><a aria-hidden="true" href="#cb3-222" tabindex="-1"></a>                <span class="dt">symbol</span><span class="op">:</span> <span class="st">'none'</span><span class="op">,</span></span>
+<span id="cb3-223"><a aria-hidden="true" href="#cb3-223" tabindex="-1"></a>                <span class="dt">areaStyle</span><span class="op">:</span> {</span>
+<span id="cb3-224"><a aria-hidden="true" href="#cb3-224" tabindex="-1"></a>                    <span class="dt">color</span><span class="op">:</span> <span class="kw">new</span> echarts<span class="op">.</span><span class="at">graphic</span><span class="op">.</span><span class="fu">LinearGradient</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> [{</span>
+<span id="cb3-225"><a aria-hidden="true" href="#cb3-225" tabindex="-1"></a>                        <span class="dt">offset</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb3-226"><a aria-hidden="true" href="#cb3-226" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'rgba(115,156,250,0.05)'</span></span>
+<span id="cb3-227"><a aria-hidden="true" href="#cb3-227" tabindex="-1"></a>                    }<span class="op">,</span> {</span>
+<span id="cb3-228"><a aria-hidden="true" href="#cb3-228" tabindex="-1"></a>                        <span class="dt">offset</span><span class="op">:</span> <span class="fl">0.76</span><span class="op">,</span></span>
+<span id="cb3-229"><a aria-hidden="true" href="#cb3-229" tabindex="-1"></a>                        <span class="dt">color</span><span class="op">:</span> <span class="st">'rgba(115,156,250,0.25)'</span></span>
+<span id="cb3-230"><a aria-hidden="true" href="#cb3-230" tabindex="-1"></a>                    }])</span>
+<span id="cb3-231"><a aria-hidden="true" href="#cb3-231" tabindex="-1"></a>                }<span class="op">,</span></span>
+<span id="cb3-232"><a aria-hidden="true" href="#cb3-232" tabindex="-1"></a>            }</span>
+<span id="cb3-233"><a aria-hidden="true" href="#cb3-233" tabindex="-1"></a>        ]</span>
+<span id="cb3-234"><a aria-hidden="true" href="#cb3-234" tabindex="-1"></a>    }<span class="op">;</span></span>
+<span id="cb3-235"><a aria-hidden="true" href="#cb3-235" tabindex="-1"></a></span>
+<span id="cb3-236"><a aria-hidden="true" href="#cb3-236" tabindex="-1"></a>    mychartdd<span class="op">.</span><span class="fu">setOption</span>(option)<span class="op">;</span></span>
+<span id="cb3-237"><a aria-hidden="true" href="#cb3-237" tabindex="-1"></a></span>
+<span id="cb3-238"><a aria-hidden="true" href="#cb3-238" tabindex="-1"></a>    <span class="co">/*请求json数据*/</span></span>
+<span id="cb3-239"><a aria-hidden="true" href="#cb3-239" tabindex="-1"></a>    <span class="fu">$</span>(<span class="kw">function</span>(){</span>
+<span id="cb3-240"><a aria-hidden="true" href="#cb3-240" tabindex="-1"></a>        <span class="kw">var</span> SoilTemp1 <span class="op">=</span> []<span class="op">,</span> SoilTemp2 <span class="op">=</span> []<span class="op">,</span> SoilTemp3 <span class="op">=</span> []<span class="op">,</span> SoilTemp4 <span class="op">=</span> []<span class="op">;</span><span class="co">// Y坐标值：各项指标数据</span></span>
+<span id="cb3-241"><a aria-hidden="true" href="#cb3-241" tabindex="-1"></a>        <span class="kw">var</span> TM <span class="op">=</span> []<span class="op">;</span><span class="co">// x坐标值:时间</span></span>
+<span id="cb3-242"><a aria-hidden="true" href="#cb3-242" tabindex="-1"></a>        mychartdd<span class="op">.</span><span class="fu">showLoading</span>({ <span class="dt">text</span><span class="op">:</span> <span class="st">"图表数据正在加载中.....如果加载不出来，建议使用WebStorm工具打开"</span> })<span class="op">;</span></span>
+<span id="cb3-243"><a aria-hidden="true" href="#cb3-243" tabindex="-1"></a>        $<span class="op">.</span><span class="fu">ajax</span>({</span>
+<span id="cb3-244"><a aria-hidden="true" href="#cb3-244" tabindex="-1"></a>            <span class="dt">type</span><span class="op">:</span> <span class="st">"GET"</span><span class="op">,</span></span>
+<span id="cb3-245"><a aria-hidden="true" href="#cb3-245" tabindex="-1"></a>            <span class="co">// 请求地址</span></span>
+<span id="cb3-246"><a aria-hidden="true" href="#cb3-246" tabindex="-1"></a>            <span class="dt">url</span><span class="op">:</span> <span class="st">"json/html1.json"</span><span class="op">,</span></span>
+<span id="cb3-247"><a aria-hidden="true" href="#cb3-247" tabindex="-1"></a>            <span class="co">// async:true,    //是否异步</span></span>
+<span id="cb3-248"><a aria-hidden="true" href="#cb3-248" tabindex="-1"></a>            <span class="co">// dataType: "jsonp",  //预期的服务器响应的数据类型。</span></span>
+<span id="cb3-249"><a aria-hidden="true" href="#cb3-249" tabindex="-1"></a>            <span class="co">// jsonp: "callback",  //在一个 jsonp 中重写回调函数的字符串。</span></span>
+<span id="cb3-250"><a aria-hidden="true" href="#cb3-250" tabindex="-1"></a>            <span class="co">// xhrFields: {withCredentials: true},</span></span>
+<span id="cb3-251"><a aria-hidden="true" href="#cb3-251" tabindex="-1"></a>            <span class="dt">success</span><span class="op">:</span> <span class="kw">function</span> (ret) {</span>
+<span id="cb3-252"><a aria-hidden="true" href="#cb3-252" tabindex="-1"></a>                <span class="kw">var</span> date <span class="op">=</span> ret<span class="op">;</span></span>
+<span id="cb3-253"><a aria-hidden="true" href="#cb3-253" tabindex="-1"></a>                <span class="cf">if</span> (date <span class="op">==</span> <span class="kw">null</span>) {</span>
+<span id="cb3-254"><a aria-hidden="true" href="#cb3-254" tabindex="-1"></a>                    mychartdd<span class="op">.</span><span class="fu">showLoading</span>({ <span class="dt">text</span><span class="op">:</span> <span class="st">"未获取到数据，请选择正确的时间..."</span> })<span class="op">;</span></span>
+<span id="cb3-255"><a aria-hidden="true" href="#cb3-255" tabindex="-1"></a>                }</span>
+<span id="cb3-256"><a aria-hidden="true" href="#cb3-256" tabindex="-1"></a>                <span class="co">// 遍历上面 '数据1','数据2','数据3'</span></span>
+<span id="cb3-257"><a aria-hidden="true" href="#cb3-257" tabindex="-1"></a>                <span class="cf">for</span> (<span class="kw">var</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> date<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb3-258"><a aria-hidden="true" href="#cb3-258" tabindex="-1"></a>                    TM<span class="op">.</span><span class="fu">push</span>(date[i]<span class="op">.</span><span class="at">dt</span>)<span class="op">;</span> <span class="co">//时间</span></span>
+<span id="cb3-259"><a aria-hidden="true" href="#cb3-259" tabindex="-1"></a>                    SoilTemp1<span class="op">.</span><span class="fu">push</span>(date[i]<span class="op">.</span><span class="at">portfolio_net_value</span>)<span class="op">;</span> <span class="co">//数据1</span></span>
+<span id="cb3-260"><a aria-hidden="true" href="#cb3-260" tabindex="-1"></a>                    SoilTemp2<span class="op">.</span><span class="fu">push</span>(date[i]<span class="op">.</span><span class="at">SH_net_value</span>)<span class="op">;</span> <span class="co">//数据2</span></span>
+<span id="cb3-261"><a aria-hidden="true" href="#cb3-261" tabindex="-1"></a>                    SoilTemp3<span class="op">.</span><span class="fu">push</span>(date[i]<span class="op">.</span><span class="at">alpha_net_value</span>)<span class="op">;</span> <span class="co">//数据3</span></span>
+<span id="cb3-262"><a aria-hidden="true" href="#cb3-262" tabindex="-1"></a>                }</span>
+<span id="cb3-263"><a aria-hidden="true" href="#cb3-263" tabindex="-1"></a>                <span class="co">// 遍历下面 ‘数据4’ 数据</span></span>
+<span id="cb3-264"><a aria-hidden="true" href="#cb3-264" tabindex="-1"></a>                <span class="cf">for</span> (<span class="kw">var</span> j <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> j <span class="op">&lt;</span> date<span class="op">.</span><span class="at">length</span><span class="op">;</span> j<span class="op">++</span>) {</span>
+<span id="cb3-265"><a aria-hidden="true" href="#cb3-265" tabindex="-1"></a>                    SoilTemp4<span class="op">.</span><span class="fu">push</span>(date[j]<span class="op">.</span><span class="at">cur_drawdown_rate</span>)<span class="op">;</span> <span class="co">//数据4</span></span>
+<span id="cb3-266"><a aria-hidden="true" href="#cb3-266" tabindex="-1"></a>                }</span>
+<span id="cb3-267"><a aria-hidden="true" href="#cb3-267" tabindex="-1"></a>                mychartdd<span class="op">.</span><span class="fu">hideLoading</span>()<span class="op">;</span>    <span class="co">//隐藏加载动画</span></span>
+<span id="cb3-268"><a aria-hidden="true" href="#cb3-268" tabindex="-1"></a>                mychartdd<span class="op">.</span><span class="fu">setOption</span>({       <span class="co">//加载数据图表</span></span>
+<span id="cb3-269"><a aria-hidden="true" href="#cb3-269" tabindex="-1"></a>                    <span class="dt">tooltip</span><span class="op">:</span> [</span>
+<span id="cb3-270"><a aria-hidden="true" href="#cb3-270" tabindex="-1"></a>                        {</span>
+<span id="cb3-271"><a aria-hidden="true" href="#cb3-271" tabindex="-1"></a>                            <span class="dt">trigger</span><span class="op">:</span> <span class="st">'axis'</span></span>
+<span id="cb3-272"><a aria-hidden="true" href="#cb3-272" tabindex="-1"></a>                        }<span class="op">,</span></span>
+<span id="cb3-273"><a aria-hidden="true" href="#cb3-273" tabindex="-1"></a>                    ]<span class="op">,</span></span>
+<span id="cb3-274"><a aria-hidden="true" href="#cb3-274" tabindex="-1"></a>                    <span class="dt">toolbox</span><span class="op">:</span> { <span class="co">// 工具栏</span></span>
+<span id="cb3-275"><a aria-hidden="true" href="#cb3-275" tabindex="-1"></a>                        <span class="dt">show</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb3-276"><a aria-hidden="true" href="#cb3-276" tabindex="-1"></a>                        <span class="dt">feature</span><span class="op">:</span> {</span>
+<span id="cb3-277"><a aria-hidden="true" href="#cb3-277" tabindex="-1"></a>                            <span class="dt">saveAsImage</span><span class="op">:</span> { <span class="dt">show</span><span class="op">:</span> <span class="kw">false</span> }<span class="op">,</span> <span class="co">// 保存为图片</span></span>
+<span id="cb3-278"><a aria-hidden="true" href="#cb3-278" tabindex="-1"></a>                            <span class="dt">restore</span><span class="op">:</span> { <span class="dt">show</span><span class="op">:</span> <span class="kw">false</span> }<span class="op">,</span></span>
+<span id="cb3-279"><a aria-hidden="true" href="#cb3-279" tabindex="-1"></a>                        }<span class="op">,</span></span>
+<span id="cb3-280"><a aria-hidden="true" href="#cb3-280" tabindex="-1"></a>                    }<span class="op">,</span></span>
+<span id="cb3-281"><a aria-hidden="true" href="#cb3-281" tabindex="-1"></a>                    <span class="dt">calculable</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb3-282"><a aria-hidden="true" href="#cb3-282" tabindex="-1"></a>                    <span class="dt">xAxis</span><span class="op">:</span> [</span>
+<span id="cb3-283"><a aria-hidden="true" href="#cb3-283" tabindex="-1"></a>                        {</span>
+<span id="cb3-284"><a aria-hidden="true" href="#cb3-284" tabindex="-1"></a>                            <span class="dt">type</span><span class="op">:</span> <span class="st">'category'</span><span class="op">,</span></span>
+<span id="cb3-285"><a aria-hidden="true" href="#cb3-285" tabindex="-1"></a>                            <span class="dt">boundaryGap</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb3-286"><a aria-hidden="true" href="#cb3-286" tabindex="-1"></a>                            <span class="dt">data</span><span class="op">:</span> TM</span>
+<span id="cb3-287"><a aria-hidden="true" href="#cb3-287" tabindex="-1"></a>                        }<span class="op">,</span></span>
+<span id="cb3-288"><a aria-hidden="true" href="#cb3-288" tabindex="-1"></a>                        {</span>
+<span id="cb3-289"><a aria-hidden="true" href="#cb3-289" tabindex="-1"></a>                            <span class="dt">type</span><span class="op">:</span> <span class="st">'category'</span><span class="op">,</span></span>
+<span id="cb3-290"><a aria-hidden="true" href="#cb3-290" tabindex="-1"></a>                            <span class="dt">boundaryGap</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb3-291"><a aria-hidden="true" href="#cb3-291" tabindex="-1"></a>                            <span class="dt">data</span><span class="op">:</span> TM</span>
+<span id="cb3-292"><a aria-hidden="true" href="#cb3-292" tabindex="-1"></a>                        }<span class="op">,</span></span>
+<span id="cb3-293"><a aria-hidden="true" href="#cb3-293" tabindex="-1"></a>                    ]<span class="op">,</span></span>
+<span id="cb3-294"><a aria-hidden="true" href="#cb3-294" tabindex="-1"></a>                    <span class="dt">yAxis</span><span class="op">:</span> [{}<span class="op">,</span>{}]<span class="op">,</span><span class="co">//注意一定不能丢了这个，不然图表Y轴不显示</span></span>
+<span id="cb3-295"><a aria-hidden="true" href="#cb3-295" tabindex="-1"></a>                    <span class="dt">series</span><span class="op">:</span> [</span>
+<span id="cb3-296"><a aria-hidden="true" href="#cb3-296" tabindex="-1"></a>                        {</span>
+<span id="cb3-297"><a aria-hidden="true" href="#cb3-297" tabindex="-1"></a>                            <span class="dt">name</span><span class="op">:</span> seriesName1<span class="op">,</span></span>
+<span id="cb3-298"><a aria-hidden="true" href="#cb3-298" tabindex="-1"></a>                            <span class="dt">type</span><span class="op">:</span> <span class="st">'line'</span><span class="op">,</span></span>
+<span id="cb3-299"><a aria-hidden="true" href="#cb3-299" tabindex="-1"></a>                            <span class="dt">data</span><span class="op">:</span> SoilTemp1</span>
+<span id="cb3-300"><a aria-hidden="true" href="#cb3-300" tabindex="-1"></a>                        }<span class="op">,</span></span>
+<span id="cb3-301"><a aria-hidden="true" href="#cb3-301" tabindex="-1"></a>                        {</span>
+<span id="cb3-302"><a aria-hidden="true" href="#cb3-302" tabindex="-1"></a>                            <span class="dt">name</span><span class="op">:</span> seriesName2<span class="op">,</span></span>
+<span id="cb3-303"><a aria-hidden="true" href="#cb3-303" tabindex="-1"></a>                            <span class="dt">type</span><span class="op">:</span> <span class="st">'line'</span><span class="op">,</span></span>
+<span id="cb3-304"><a aria-hidden="true" href="#cb3-304" tabindex="-1"></a>                            <span class="dt">data</span><span class="op">:</span> SoilTemp2</span>
+<span id="cb3-305"><a aria-hidden="true" href="#cb3-305" tabindex="-1"></a>                        }<span class="op">,</span></span>
+<span id="cb3-306"><a aria-hidden="true" href="#cb3-306" tabindex="-1"></a>                        {</span>
+<span id="cb3-307"><a aria-hidden="true" href="#cb3-307" tabindex="-1"></a>                            <span class="dt">name</span><span class="op">:</span> seriesName3<span class="op">,</span></span>
+<span id="cb3-308"><a aria-hidden="true" href="#cb3-308" tabindex="-1"></a>                            <span class="dt">type</span><span class="op">:</span> <span class="st">'line'</span><span class="op">,</span></span>
+<span id="cb3-309"><a aria-hidden="true" href="#cb3-309" tabindex="-1"></a>                            <span class="dt">data</span><span class="op">:</span> SoilTemp3</span>
+<span id="cb3-310"><a aria-hidden="true" href="#cb3-310" tabindex="-1"></a>                        }<span class="op">,</span></span>
+<span id="cb3-311"><a aria-hidden="true" href="#cb3-311" tabindex="-1"></a>                        {</span>
+<span id="cb3-312"><a aria-hidden="true" href="#cb3-312" tabindex="-1"></a>                            <span class="dt">name</span><span class="op">:</span> seriesName4<span class="op">,</span></span>
+<span id="cb3-313"><a aria-hidden="true" href="#cb3-313" tabindex="-1"></a>                            <span class="dt">type</span><span class="op">:</span> <span class="st">'line'</span><span class="op">,</span></span>
+<span id="cb3-314"><a aria-hidden="true" href="#cb3-314" tabindex="-1"></a>                            <span class="dt">data</span><span class="op">:</span> SoilTemp4</span>
+<span id="cb3-315"><a aria-hidden="true" href="#cb3-315" tabindex="-1"></a>                        }</span>
+<span id="cb3-316"><a aria-hidden="true" href="#cb3-316" tabindex="-1"></a>                    ]</span>
+<span id="cb3-317"><a aria-hidden="true" href="#cb3-317" tabindex="-1"></a>                })<span class="op">;</span></span>
+<span id="cb3-318"><a aria-hidden="true" href="#cb3-318" tabindex="-1"></a>            }</span>
+<span id="cb3-319"><a aria-hidden="true" href="#cb3-319" tabindex="-1"></a>        })<span class="op">;</span></span>
+<span id="cb3-320"><a aria-hidden="true" href="#cb3-320" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb3-321"><a aria-hidden="true" href="#cb3-321" tabindex="-1"></a><span class="op">&lt;/</span>script<span class="op">&gt;</span></span></code></pre></div>
+<p>看完感觉对你有帮助，记得关注 <a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fkuishou68" target="_blank" title="https://github.com/kuishou68">我</a> !</p>
+      </article>
+    </div>
   </body>
 </html>

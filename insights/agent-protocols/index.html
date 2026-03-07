@@ -1,71 +1,109 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="refresh" content="0; url=/en/archives/" />
-    <title>Article moved</title>
-    <style>
-      :root {
-        color-scheme: dark;
-        --bg: #0b1020;
-        --panel: rgba(10, 18, 38, 0.88);
-        --line: rgba(255, 255, 255, 0.12);
-        --text: #f6efe3;
-        --muted: #93a2bf;
-        --accent: #7ae7c7;
-      }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        background:
-          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
-          linear-gradient(180deg, #0b1020 0%, #050813 100%);
-        color: var(--text);
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        padding: 24px;
-      }
-      main {
-        width: min(640px, 100%);
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        background: var(--panel);
-        padding: 32px;
-        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
-      }
-      h1 {
-        margin: 0 0 12px;
-        font-size: clamp(28px, 4vw, 42px);
-      }
-      p {
-        margin: 0 0 18px;
-        color: var(--muted);
-        line-height: 1.7;
-      }
-      a {
-        color: #08111e;
-        background: var(--accent);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 12px 18px;
-        border-radius: 999px;
-        text-decoration: none;
-        font-weight: 700;
-      }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>从 MCP 到 ACP 再到 A2A | CocoonBreak</title>
+    <meta name="description" content="把 MCP、ACP、A2A 放到同一张图里理解，区分工具协议、客户端协议和 Agent 协作协议。">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
   </head>
   <body>
-    <main>
-      <h1>Article moved</h1>
-      <p>This article has been folded into the rebuilt blog structure. You are being redirected to the new archive.</p>
-      <a href="/en/archives/">Continue</a>
-    </main>
-    <script>
-      window.location.replace("/en/archives/");
-    </script>
+    <div class="article-shell">
+      <nav class="insight-nav">
+        <a href="/">← 首页</a>
+        <a href="/insights/">专题列表</a>
+        <a href="https://juejin.cn/user/3817931570691031/posts" target="_blank" rel="noreferrer">掘金原文</a>
+      </nav>
+
+      <header class="article-hero" data-reveal>
+        <div class="article-meta">
+          <span>2026.03</span>
+          <span>MCP / ACP / A2A</span>
+          <span>Protocol</span>
+        </div>
+        <h1>AI Agent 协议演进：从 <span>MCP</span> 到 ACP，再到 A2A</h1>
+        <p class="article-intro">
+          最近 AI Agent 相关协议越来越多，很多人会把它们混在一起讨论。真正的问题不是“哪个更先进”，而是每个协议到底在解决哪一层协作问题。
+          只有把层次拉开，选择才会清楚。
+        </p>
+        <div class="article-note">
+          这篇是把我最近在掘金写过的 MCP、ACP、A2A 几篇主题合并重构后的博客版，希望一次讲清三者的边界和关系。
+        </div>
+      </header>
+
+      <article class="prose" data-reveal>
+        <h2>1. 先给结论：这三个协议不在同一个层面上竞争</h2>
+        <p>
+          MCP、ACP、A2A 经常被放在一起比较，但它们其实分别在回答不同的问题。MCP 更像“Agent 如何标准化接工具和上下文”，
+          ACP 更像“宿主客户端如何和编码 Agent 标准化通信”，A2A 则是在讨论“多个 Agent 之间如何协作”。
+        </p>
+        <p>
+          一旦这样分层，你会发现它们并不是非此即彼，而是可能在同一个系统里同时存在。
+        </p>
+
+        <h2>2. MCP：把工具、资源和上下文变成统一接口</h2>
+        <p>
+          MCP 最核心的价值，是让模型或 Agent 可以用统一方式接入本地工具、文件、数据库、外部资源和上下文提供方。
+          它解决的是“一个 Agent 如何稳定地看见外部世界”。
+        </p>
+        <p>
+          从工程上看，MCP 最适合放在工具层和资源层。你可以把它理解成 Agent 的标准外设接口。只要这层做得好，模型就不必为每个工具写一套完全不同的接入逻辑。
+        </p>
+
+        <h2>3. ACP：关注宿主客户端和 Agent 的协同</h2>
+        <p>
+          ACP 更像是一个“宿主到 Agent”的协议视角。它关心的是编辑器、IDE、客户端壳层或者某种宿主环境，如何和后面的编码 Agent 保持清晰对话。
+          它不是在讨论工具资源本身，而是在讨论“谁发起任务、谁更新状态、谁接收结果、谁决定展示”。
+        </p>
+        <p>
+          这类协议在 AI Coding 场景里很重要，因为一个真正可用的编码助手不只是模型和终端，它还包含界面、状态同步、执行反馈、用户中断和会话管理。
+        </p>
+
+        <h2>4. A2A：当一个 Agent 已经不够用</h2>
+        <blockquote>单 Agent 解决的是“做事”，A2A 解决的是“分工做事”。</blockquote>
+        <p>
+          当系统里不再只有一个 Agent，而是开始出现 Planner、Coder、Reviewer、Researcher 这类分工角色时，
+          A2A 的价值就会显现出来。它不是去替代 MCP，也不是去覆盖 ACP，而是在更高一层解决 Agent 与 Agent 的协作协议问题。
+        </p>
+        <p>
+          这类协议最适合多 Agent 工作流、复杂任务拆分、跨角色协调和任务状态传递。它关注的是角色协同，而不是具体工具如何被接入。
+        </p>
+
+        <h2>5. 用一张“选择表”来理解</h2>
+        <ul>
+          <li><strong>你要接工具、文件、数据库</strong>：优先看 MCP。</li>
+          <li><strong>你要让 IDE / 宿主和编码 Agent 协作</strong>：更应该关注 ACP 类思路。</li>
+          <li><strong>你要让多个 Agent 分工合作</strong>：A2A 才是重点。</li>
+        </ul>
+        <p>
+          如果你的系统里三件事都会发生，那它们完全可能同时存在：宿主通过 ACP 接后端 Agent，后端 Agent 再通过 MCP 接工具，多个 Agent 再通过 A2A 协作。
+        </p>
+
+        <h2>6. 为什么我会把它们放到产品架构里看</h2>
+        <p>
+          协议讨论如果只停留在抽象层，很容易变成概念堆叠。我更关心的是，当这些协议真的进入产品时，它们分别会落在哪一层：
+          CLI、网关、IDE、工具服务、任务调度，还是多 Agent 编排。
+        </p>
+        <p>
+          这也是我最近会同时写 Codex、Gemini CLI、stdio、MCP / ACP / A2A 的原因。因为一旦你开始把这些东西接进真实站点和工作流里，
+          协议就不再是“概念”，而会直接变成你能不能稳定交付的结构问题。
+        </p>
+
+        <h2>7. 最后的建议</h2>
+        <p>
+          如果你的系统还在早期，不要急着把所有协议都接满。先确认你当前的主要矛盾到底是工具接入、宿主协同还是多 Agent 分工。
+          只有明确当前层级，协议选择才有意义。
+        </p>
+        <p>
+          大多数团队的第一步其实都应该很克制：先把本地 Agent 跑顺，先把工具接清，再谈更高层的协作协议。先把一条链路做短、做稳，再决定要不要把它扩成网络。
+        </p>
+      </article>
+    </div>
   </body>
 </html>

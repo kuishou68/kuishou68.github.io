@@ -1,71 +1,113 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="refresh" content="0; url=/en/posts/sync/2021-06-27-6978365036569821191/" />
-    <title>Juejin article moved</title>
-    <style>
-      :root {
-        color-scheme: dark;
-        --bg: #0b1020;
-        --panel: rgba(10, 18, 38, 0.88);
-        --line: rgba(255, 255, 255, 0.12);
-        --text: #f6efe3;
-        --muted: #93a2bf;
-        --accent: #7ae7c7;
-      }
-      * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        background:
-          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
-          linear-gradient(180deg, #0b1020 0%, #050813 100%);
-        color: var(--text);
-        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        padding: 24px;
-      }
-      main {
-        width: min(640px, 100%);
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        background: var(--panel);
-        padding: 32px;
-        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
-      }
-      h1 {
-        margin: 0 0 12px;
-        font-size: clamp(28px, 4vw, 42px);
-      }
-      p {
-        margin: 0 0 18px;
-        color: var(--muted);
-        line-height: 1.7;
-      }
-      a {
-        color: #08111e;
-        background: var(--accent);
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 12px 18px;
-        border-radius: 999px;
-        text-decoration: none;
-        font-weight: 700;
-      }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>搭建一款开源的微信商城小程序：海风小店 | CocoonBreak</title>
+    <meta name="description" content="搭建一款开源的微信商城小程序：海风小店 准备工作 申请小程序账号 申请小程序账号只需要按照官网文档说明操作即可，这里我就不展开说了，地址： developers.weixin.qq.com/miniprogram… 官网下载GitHub三个...">
+    <meta property="og:title" content="搭建一款开源的微信商城小程序：海风小店 | CocoonBreak">
+    <meta property="og:description" content="搭建一款开源的微信商城小程序：海风小店 准备工作 申请小程序账号 申请小程序账号只需要按照官网文档说明操作即可，这里我就不展开说了，地址： developers.weixin.qq.com/miniprogram… 官网下载GitHub三个...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2021-06-27-6978365036569821191/">
+    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
   </head>
   <body>
-    <main>
-      <h1>Juejin article moved</h1>
-      <p>This synced Juejin article now lives under the rebuilt post route.</p>
-      <a href="/en/posts/sync/2021-06-27-6978365036569821191/">Continue</a>
-    </main>
-    <script>
-      window.location.replace("/en/posts/sync/2021-06-27-6978365036569821191/");
-    </script>
+    <div class="article-shell">
+      <nav class="insight-nav">
+        <a href="/">← 首页</a>
+        <a href="/insights/">同步文章</a>
+        <a href="https://juejin.cn/post/6978365036569821191" target="_blank" rel="noreferrer">掘金原文</a>
+      </nav>
+
+      <header class="article-hero" data-reveal>
+        <div class="article-meta">
+          <span>2021.06.27</span><span>开源</span><span>前端</span>
+        </div>
+        <h1>搭建一款开源的微信商城小程序：海风小店</h1>
+        <p class="article-intro">搭建一款开源的微信商城小程序：海风小店 准备工作 申请小程序账号 申请小程序账号只需要按照官网文档说明操作即可，这里我就不展开说了，地址： developers.weixin.qq.com/miniprogram… 官网下载GitHub三个...</p>
+        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/6978365036569821191" target="_blank" rel="noreferrer">掘金原文</a>。</div>
+      </header>
+
+      <article class="prose" data-reveal>
+        <h2 id="搭建一款开源的微信商城小程序海风小店">搭建一款开源的微信商城小程序：海风小店</h2>
+<p><strong>准备工作</strong></p>
+<ul>
+<li>申请小程序账号</li>
+</ul>
+<p>申请小程序账号只需要按照官网文档说明操作即可，这里我就不展开说了，地址：<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fdevelopers.weixin.qq.com%2Fminiprogram%2Fintroduction%2F" target="_blank" title="https://developers.weixin.qq.com/miniprogram/introduction/">developers.weixin.qq.com/miniprogram…</a></p>
+<ul>
+<li><p>官网下载GitHub三个文件</p>
+<p>服务端： <a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fiamdarcy%2Fhioshop-server" target="_blank" title="https://github.com/iamdarcy/hioshop-server">github.com/iamdarcy/hi…</a><br/>
+微信小程序：<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fiamdarcy%2Fhioshop-miniprogram" target="_blank" title="https://github.com/iamdarcy/hioshop-miniprogram">github.com/iamdarcy/hi…</a></p>
+<p>管理端：GitHub: <a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fiamdarcy%2Fhioshop-admin" target="_blank" title="https://github.com/iamdarcy/hioshop-admin">github.com/iamdarcy/hi…</a>
+<img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b2e0dd7f82a2462db1871190d089bdf4~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p></li>
+<li><p>安装顺序：</p>
+<p>服务端 ==&gt; 小程序 ==&gt; 管理端</p>
+<p>server ==&gt; miniprogram ==&gt; admin</p></li>
+</ul>
+<p><strong>服务端 ：本地开发环境配置</strong></p>
+<ul>
+<li><p>创建数据库hiolabsDB（注意数据库字符编码为utf8mb4），并导入项目根目录下的hioshop.sql</p>
+<p>注意数据库版本一定要是 <strong>MySql 5.7</strong> 一定要是
+<strong>MySql 5.7</strong> 一定要是 <strong>MySql 5.7</strong></p></li>
+</ul>
+<p><img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1721ec36baf34d89a659c1a53d79a125~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
+<ul>
+<li>更改数据库配置 src/common/config/database.js</li>
+</ul>
+<p><img alt="image-20210509224232810" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cc2b5b8562f14c3ba67d7eebf89b08d2~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
+<ul>
+<li>填写微信配置和其他设置，打开
+src/common/config/config.js文件，如果微信支付、oss服务什么的你都还没申请，都可以先不填写，但是微信的appid
+和secret 是必填的。</li>
+</ul>
+<p><img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a73c6033ad2e4dcd91c8fa11ac1fee1a~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
+<ul>
+<li><p>微信的appid 和secret
+在微信小程序官网登录以后，在控制台页面的开发-&gt;开发设置-&gt;开发者ID中
+<img alt="image-20210509231238114" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/14250cc768574c449918d215c4a7dd03~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p></li>
+<li><p>填写七牛云地址 src/common/config/config.js <img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d83fe843d63c4c2693fe27cf36db176b~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p></li>
+<li><p>安装依赖<code>npm install</code></p></li>
+<li><p>启动 <code>npm start</code></p>
+<p>没报错的话，会在控制台显示200</p></li>
+</ul>
+<p><img alt="image-20210509224618728" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7a55824b2a2a4af0bbb73521267fdf45~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
+<p>​浏览器测试
+<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=http%3A%2F%2F127.0.0.1%3A8360%2F" target="_blank" title="http://127.0.0.1:8360/"><a href="http://127.0.0.1:8360/">http://127.0.0.1:8360/</a></a></p>
+<p><img alt="image-20210509224551447" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/de54b8dfc6984afca5a1e0ceabb7106e~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
+<hr/>
+<p><strong>小程序端 ：本地开发环境配置</strong></p>
+<ul>
+<li>打开微信开发者工具</li>
+</ul>
+<p><img alt="image-20210509230236475" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/64a152b410b24802af1ec164cadeb28c~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
+<ul>
+<li>默认API改成本地地址<img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2a5b9ad130cc4876960f61120c4e3e80~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></li>
+</ul>
+<p>​小程序预览显示数据表示数据库连接成功</p>
+<hr/>
+<p><strong>服务端 ：本地开发环境配置</strong></p>
+<ul>
+<li><p>安装依赖后启动后会出现一个问题，这个问题是Element-ui自带的。 <img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1bfac1397a8f4a16a2324287dce2e8dd~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p></li>
+<li><p>解决方法：在node_modules 搜索: div
+class="el-form-item__label-wrap" <img alt="image-20210505000052259" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/25a4ab9e6b9b435493689b33db487f66~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p></li>
+<li><p>​ 在语句中加上单引号就可以了 <img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cc48ebc785af4523b01a379f7d88fc93~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/> 修改之后 <img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8d689368ead443dc895b6595a719b9dc~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p></li>
+<li><p>启动 <code>npm run dev</code> <img alt="image-20210509225447399" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e10fd11e43134dd29605e5af0a7a10d2~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p></li>
+<li><p>build 打包成静态文件 <code>npm run build:web</code></p></li>
+<li><p>此时代表项目启动成功，桌面上会出现下图这个程序界面，输入默认的管理员账号密码：</p>
+<p>用户名：hiolabs，密码：hiolabs <img alt="image-20210509225845170" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eda565e04e6a482a976d43229461e9ed~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p></li>
+</ul>
+<p>参考：<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fmp.weixin.qq.com%2Fs%2F2lDVMnUJqfenO6MkiL132Q" target="_blank" title="https://mp.weixin.qq.com/s/2lDVMnUJqfenO6MkiL132Q">mp.weixin.qq.com/s/2lDVMnUJq…</a></p>
+<p>​<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fblog.csdn.net%2FGZLEO77%2Farticle%2Fdetails%2F108627277" target="_blank" title="https://blog.csdn.net/GZLEO77/article/details/108627277">blog.csdn.net/GZLEO77/art…</a></p>
+<p>​<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2Fav89567916" target="_blank" title="https://www.bilibili.com/video/av89567916"><a href="http://www.bilibili.com/video/av895…">www.bilibili.com/video/av895…</a></a></p>
+      </article>
+    </div>
   </body>
 </html>
