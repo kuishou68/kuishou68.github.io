@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>两个支付宝小程序之间带参扫码在线付款实现 | CocoonBreak</title>
+    <meta name="description" content="业务场景：小程序A有一个订单付款码，二维码中带了一个订单id，需要将这个id作为参数传递给小程序B，小程序B用支付宝扫码后获取到该参数，并且加载该订单后发起支付宝支付； 实现思路： 支付宝官网 给我们提供了跳转的不同场景，当前业务属于： 小...">
+    <meta property="og:title" content="两个支付宝小程序之间带参扫码在线付款实现 | CocoonBreak">
+    <meta property="og:description" content="业务场景：小程序A有一个订单付款码，二维码中带了一个订单id，需要将这个id作为参数传递给小程序B，小程序B用支付宝扫码后获取到该参数，并且加载该订单后发起支付宝支付； 实现思路： 支付宝官网 给我们提供了跳转的不同场景，当前业务属于： 小...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2022-10-04-7150681135129821215/">
+    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
+  </head>
+  <body>
+    <div class="article-shell">
+      <nav class="insight-nav">
+        <a href="/">← 首页</a>
+        <a href="/insights/">同步文章</a>
+        <a href="https://juejin.cn/post/7150681135129821215" target="_blank" rel="noreferrer">掘金原文</a>
+      </nav>
+
+      <header class="article-hero" data-reveal>
+        <div class="article-meta">
+          <span>2022.10.04</span><span>支付宝</span><span>前端</span>
+        </div>
+        <h1>两个支付宝小程序之间带参扫码在线付款实现</h1>
+        <p class="article-intro">业务场景：小程序A有一个订单付款码，二维码中带了一个订单id，需要将这个id作为参数传递给小程序B，小程序B用支付宝扫码后获取到该参数，并且加载该订单后发起支付宝支付； 实现思路： 支付宝官网 给我们提供了跳转的不同场景，当前业务属于： 小...</p>
+        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/7150681135129821215" target="_blank" rel="noreferrer">掘金原文</a>。</div>
+      </header>
+
+      <article class="prose" data-reveal>
+        <p>业务场景：小程序A有一个订单付款码，二维码中带了一个订单id，需要将这个id作为参数传递给小程序B，小程序B用支付宝扫码后获取到该参数，并且加载该订单后发起支付宝支付；</p>
+<p>实现思路：<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fopendocs.alipay.com%2Fmini%2F0090ty%23%25E5%25B0%258F%25E7%25A8%258B%25E5%25BA%258F%25E4%25BA%2592%25E7%259B%25B8%25E8%25B7%25B3%25E8%25BD%25AC" target="_blank" title="https://opendocs.alipay.com/mini/0090ty#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%92%E7%9B%B8%E8%B7%B3%E8%BD%AC">支付宝官网</a>
+给我们提供了跳转的不同场景，当前业务属于：<a href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%92%E7%9B%B8%E8%B7%B3%E8%BD%AC" title="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%92%E7%9B%B8%E8%B7%B3%E8%BD%AC">小程序互相跳转</a>，实现分两步：①小程序A的二维码中携带需要的参数；②支付宝扫码后进入到小程序B的指定页面，并读取该参数；</p>
+<h3 id="小程序a需要做的事">小程序A需要做的事</h3>
+<p>1、<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fopendocs.alipay.com%2Fmini%2Fapi%2Fyz6gnx" target="_blank" title="https://opendocs.alipay.com/mini/api/yz6gnx">my.navigateToMiniProgram</a>
+传参</p>
+<p><img alt="image.png" loading="lazy" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d11bfdbd1e024b8a9b390587f10fa99c~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p>
+<p>2、<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fopendocs.alipay.com%2Fmini%2Fapi%2Fmedia%2Fimage%2Fmy.generateimagefromcode" target="_blank" title="https://opendocs.alipay.com/mini/api/media/image/my.generateimagefromcode">my.generateImageFromCode</a>
+生成二维码</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="co">// page.js</span></span>
+<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a><span class="fu">Page</span>({</span>
+<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a>  <span class="dt">data</span><span class="op">:</span> {</span>
+<span id="cb1-4"><a aria-hidden="true" href="#cb1-4" tabindex="-1"></a>   <span class="dt">qrcode</span><span class="op">:</span> <span class="st">''</span><span class="op">,</span></span>
+<span id="cb1-5"><a aria-hidden="true" href="#cb1-5" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb1-6"><a aria-hidden="true" href="#cb1-6" tabindex="-1"></a>  <span class="fu">onReady</span>() {</span>
+<span id="cb1-7"><a aria-hidden="true" href="#cb1-7" tabindex="-1"></a>   <span class="cf">if</span> (my<span class="op">.</span><span class="fu">canIUse</span>(<span class="st">'generateImageFromCode'</span>)) {</span>
+<span id="cb1-8"><a aria-hidden="true" href="#cb1-8" tabindex="-1"></a>      my<span class="op">.</span><span class="fu">generateImageFromCode</span>({</span>
+<span id="cb1-9"><a aria-hidden="true" href="#cb1-9" tabindex="-1"></a>        <span class="dt">code</span><span class="op">:</span> <span class="vs">`alipays://platformapi/startapp?appId=</span><span class="sc">${</span>appId<span class="sc">}</span><span class="vs">&amp;page=pages/selfPayment/selfPayment&amp;query=billId=</span><span class="sc">${</span>billId<span class="sc">}</span><span class="vs">`</span><span class="op">,</span></span>
+<span id="cb1-10"><a aria-hidden="true" href="#cb1-10" tabindex="-1"></a>        <span class="dt">format</span><span class="op">:</span> <span class="st">'QRCODE'</span><span class="op">,</span></span>
+<span id="cb1-11"><a aria-hidden="true" href="#cb1-11" tabindex="-1"></a>        <span class="dt">width</span><span class="op">:</span> <span class="dv">400</span><span class="op">,</span></span>
+<span id="cb1-12"><a aria-hidden="true" href="#cb1-12" tabindex="-1"></a>        <span class="dt">correctLevel</span><span class="op">:</span> <span class="st">'H'</span><span class="op">,</span></span>
+<span id="cb1-13"><a aria-hidden="true" href="#cb1-13" tabindex="-1"></a>        <span class="dt">success</span><span class="op">:</span> res <span class="kw">=&gt;</span> {</span>
+<span id="cb1-14"><a aria-hidden="true" href="#cb1-14" tabindex="-1"></a>          <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(res<span class="op">.</span><span class="at">image</span>)<span class="op">;</span></span>
+<span id="cb1-15"><a aria-hidden="true" href="#cb1-15" tabindex="-1"></a>          <span class="kw">this</span><span class="op">.</span><span class="fu">setData</span>({</span>
+<span id="cb1-16"><a aria-hidden="true" href="#cb1-16" tabindex="-1"></a>            <span class="dt">qrcode</span><span class="op">:</span> res<span class="op">.</span><span class="at">image</span></span>
+<span id="cb1-17"><a aria-hidden="true" href="#cb1-17" tabindex="-1"></a>          })<span class="op">;</span></span>
+<span id="cb1-18"><a aria-hidden="true" href="#cb1-18" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb1-19"><a aria-hidden="true" href="#cb1-19" tabindex="-1"></a>        <span class="fu">fail</span>(res) {</span>
+<span id="cb1-20"><a aria-hidden="true" href="#cb1-20" tabindex="-1"></a>     <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(res<span class="op">.</span><span class="at">error</span>)<span class="op">;</span></span>
+<span id="cb1-21"><a aria-hidden="true" href="#cb1-21" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb1-22"><a aria-hidden="true" href="#cb1-22" tabindex="-1"></a>        <span class="fu">complete</span>(res) {</span>
+<span id="cb1-23"><a aria-hidden="true" href="#cb1-23" tabindex="-1"></a>         <span class="cf">if</span> (res<span class="op">.</span><span class="at">image</span>) {</span>
+<span id="cb1-24"><a aria-hidden="true" href="#cb1-24" tabindex="-1"></a>           <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'success'</span><span class="op">,</span> res<span class="op">.</span><span class="at">image</span>)<span class="op">;</span></span>
+<span id="cb1-25"><a aria-hidden="true" href="#cb1-25" tabindex="-1"></a>          } <span class="cf">else</span> {</span>
+<span id="cb1-26"><a aria-hidden="true" href="#cb1-26" tabindex="-1"></a>           <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'fail'</span><span class="op">,</span> res<span class="op">.</span><span class="at">error</span><span class="op">,</span> res<span class="op">.</span><span class="at">errorMessage</span>)<span class="op">;</span></span>
+<span id="cb1-27"><a aria-hidden="true" href="#cb1-27" tabindex="-1"></a>          }</span>
+<span id="cb1-28"><a aria-hidden="true" href="#cb1-28" tabindex="-1"></a>        }</span>
+<span id="cb1-29"><a aria-hidden="true" href="#cb1-29" tabindex="-1"></a>      })<span class="op">;</span></span>
+<span id="cb1-30"><a aria-hidden="true" href="#cb1-30" tabindex="-1"></a>    }</span>
+<span id="cb1-31"><a aria-hidden="true" href="#cb1-31" tabindex="-1"></a>  }</span>
+<span id="cb1-32"><a aria-hidden="true" href="#cb1-32" tabindex="-1"></a>})</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="dt">// page.axml</span></span>
+<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a><span class="dt">&lt;view class</span><span class="ot">=</span><span class="st">"page"&gt;</span></span>
+<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a><span class="dt">  &lt;image src</span><span class="ot">=</span><span class="st">"{{qrcode}}" mode="widthFix" style="width:200rpx;height:200rpx;margin:60rpx"/&gt;</span></span>
+<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a><span class="dt">&lt;/view&gt;</span></span></code></pre></div>
+<h3 id="小程序b需要做的事">小程序B需要做的事</h3>
+<p>1、先来了解两个概念：</p>
+<ul>
+<li><p><strong>冷启动</strong>：当用户打开未启动过，或者是已经销毁的小程序时，称为冷启动。此时小程序会执行初始化，初始化完成后，会触发
+<code>onLaunch</code> 回调函数。</p></li>
+<li><p><strong>热启动</strong>：当用户打开已经关闭但仍处于后台运行的小程序时，称为热启动。在这种情况下，小程序并不会被销毁后重启，而仅是从后台切换到前台，此时，<code>onShow</code>
+函数会触发，<code>onLaunch</code> 回调函数不会被触发。</p></li>
+<li><p><strong>从后台运行切换为前台运行</strong>：当未被系统销毁的小程序再度被打开或者激活时，会从后台运行切换为前台运行。</p></li>
+</ul>
+<p>当前场景需要在 <a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fopendocs.alipay.com%2Fmini%2Fframework%2Fapp-detail" target="_blank" title="https://opendocs.alipay.com/mini/framework/app-detail">app.js</a>
+中注册前台 / 后台切换的回调函数。当小程序从后台进入前台显示时会触发
+ <code>onShow</code>；</p>
+<p>2、解析参数</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="co">// app.js</span></span>
+<span id="cb3-2"><a aria-hidden="true" href="#cb3-2" tabindex="-1"></a>globalData<span class="op">:</span> {</span>
+<span id="cb3-3"><a aria-hidden="true" href="#cb3-3" tabindex="-1"></a>    <span class="co">// 全局数据</span></span>
+<span id="cb3-4"><a aria-hidden="true" href="#cb3-4" tabindex="-1"></a>    <span class="dt">billId</span><span class="op">:</span> <span class="st">""</span><span class="op">,</span></span>
+<span id="cb3-5"><a aria-hidden="true" href="#cb3-5" tabindex="-1"></a>}<span class="op">,</span></span>
+<span id="cb3-6"><a aria-hidden="true" href="#cb3-6" tabindex="-1"></a><span class="fu">onShow</span>(options) {</span>
+<span id="cb3-7"><a aria-hidden="true" href="#cb3-7" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"启动参数===&gt;"</span><span class="op">,</span>options)<span class="op">;</span></span>
+<span id="cb3-8"><a aria-hidden="true" href="#cb3-8" tabindex="-1"></a>    <span class="kw">let</span> { query <span class="op">=</span> {} } <span class="op">=</span> options<span class="op">;</span></span>
+<span id="cb3-9"><a aria-hidden="true" href="#cb3-9" tabindex="-1"></a>    <span class="kw">let</span> { billId } <span class="op">=</span> query<span class="op">;</span></span>
+<span id="cb3-10"><a aria-hidden="true" href="#cb3-10" tabindex="-1"></a>    <span class="cf">if</span> (billId) {</span>
+<span id="cb3-11"><a aria-hidden="true" href="#cb3-11" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">globalData</span><span class="op">.</span><span class="at">billId</span> <span class="op">=</span> billId<span class="op">;</span></span>
+<span id="cb3-12"><a aria-hidden="true" href="#cb3-12" tabindex="-1"></a>    }</span>
+<span id="cb3-13"><a aria-hidden="true" href="#cb3-13" tabindex="-1"></a>}<span class="op">,</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="co">//selfPayment.js</span></span>
+<span id="cb4-2"><a aria-hidden="true" href="#cb4-2" tabindex="-1"></a><span class="fu">onLoad</span>() {</span>
+<span id="cb4-3"><a aria-hidden="true" href="#cb4-3" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">init</span>()</span>
+<span id="cb4-4"><a aria-hidden="true" href="#cb4-4" tabindex="-1"></a>}<span class="op">,</span></span>
+<span id="cb4-5"><a aria-hidden="true" href="#cb4-5" tabindex="-1"></a><span class="fu">init</span>(){</span>
+<span id="cb4-6"><a aria-hidden="true" href="#cb4-6" tabindex="-1"></a>    <span class="kw">let</span> { billId } <span class="op">=</span> app<span class="op">.</span><span class="at">globalData</span><span class="op">;</span></span>
+<span id="cb4-7"><a aria-hidden="true" href="#cb4-7" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"全局ID"</span><span class="op">,</span> billId)<span class="op">;</span></span>
+<span id="cb4-8"><a aria-hidden="true" href="#cb4-8" tabindex="-1"></a>    <span class="co">// ...</span></span>
+<span id="cb4-9"><a aria-hidden="true" href="#cb4-9" tabindex="-1"></a>}</span></code></pre></div>
+<p>参考内容：<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fopendocs.alipay.com%2Fmini%2F0090ty%23%25E5%25B0%258F%25E7%25A8%258B%25E5%25BA%258F%25E4%25BA%2592%25E7%259B%25B8%25E8%25B7%25B3%25E8%25BD%25AC" target="_blank" title="https://opendocs.alipay.com/mini/0090ty#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%BA%92%E7%9B%B8%E8%B7%B3%E8%BD%AC">支付宝官网</a></p>
+      </article>
+    </div>
+  </body>
+</html>

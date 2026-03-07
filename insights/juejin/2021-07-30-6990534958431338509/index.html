@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vue深入学习—指令和生命周期 | CocoonBreak</title>
+    <meta name="description" content="1.Vue是怎么识别 v- 指令的？ 首先将HTML结构解析成属性列表，存入到数组中，接着遍历数组中的每一个节点，获取到不同指令对应的方法。 // 将HTML看作真正的属性列表 var ndoeAttrs = node.attributes...">
+    <meta property="og:title" content="Vue深入学习—指令和生命周期 | CocoonBreak">
+    <meta property="og:description" content="1.Vue是怎么识别 v- 指令的？ 首先将HTML结构解析成属性列表，存入到数组中，接着遍历数组中的每一个节点，获取到不同指令对应的方法。 // 将HTML看作真正的属性列表 var ndoeAttrs = node.attributes...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2021-07-30-6990534958431338509/">
+    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
+  </head>
+  <body>
+    <div class="article-shell">
+      <nav class="insight-nav">
+        <a href="/">← 首页</a>
+        <a href="/insights/">同步文章</a>
+        <a href="https://juejin.cn/post/6990534958431338509" target="_blank" rel="noreferrer">掘金原文</a>
+      </nav>
+
+      <header class="article-hero" data-reveal>
+        <div class="article-meta">
+          <span>2021.07.30</span><span>Vue.js</span><span>HTML</span>
+        </div>
+        <h1>Vue深入学习—指令和生命周期</h1>
+        <p class="article-intro">1.Vue是怎么识别 v- 指令的？ 首先将HTML结构解析成属性列表，存入到数组中，接着遍历数组中的每一个节点，获取到不同指令对应的方法。 // 将HTML看作真正的属性列表 var ndoeAttrs = node.attributes...</p>
+        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/6990534958431338509" target="_blank" rel="noreferrer">掘金原文</a>。</div>
+      </header>
+
+      <article class="prose" data-reveal>
+        <p><strong>1.Vue是怎么识别 v- 指令的？</strong></p>
+<p>首先将HTML结构解析成属性列表，存入到数组中，接着遍历数组中的每一个节点，获取到不同指令对应的方法。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="dt">// 将HTML看作真正的属性列表</span></span>
+<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a><span class="dt">var ndoeAttrs </span><span class="ot">=</span><span class="st"> node.attributes;</span></span>
+<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a><span class="dt">var self </span><span class="ot">=</span><span class="st"> this;</span></span>
+<span id="cb1-4"><a aria-hidden="true" href="#cb1-4" tabindex="-1"></a><span class="dt">// 类数组对象变为数组，一层一层的遍历节点</span></span>
+<span id="cb1-5"><a aria-hidden="true" href="#cb1-5" tabindex="-1"></a><span class="kw">[]</span><span class="dt">.slice.call(nodeAttes).forEach(attr </span><span class="ot">=</span><span class="st">&gt; {</span></span>
+<span id="cb1-6"><a aria-hidden="true" href="#cb1-6" tabindex="-1"></a><span class="dt">    // 这里开始分析指令</span></span>
+<span id="cb1-7"><a aria-hidden="true" href="#cb1-7" tabindex="-1"></a><span class="dt">    var attrName </span><span class="ot">=</span><span class="st"> attr.name;</span></span>
+<span id="cb1-8"><a aria-hidden="true" href="#cb1-8" tabindex="-1"></a><span class="dt">    var value </span><span class="ot">=</span><span class="st"> attr.value;</span></span>
+<span id="cb1-9"><a aria-hidden="true" href="#cb1-9" tabindex="-1"></a><span class="dt">    // 指令都是 v- 开头的</span></span>
+<span id="cb1-10"><a aria-hidden="true" href="#cb1-10" tabindex="-1"></a><span class="dt">    var dir </span><span class="ot">=</span><span class="st"> attrName.substring(2);</span></span>
+<span id="cb1-11"><a aria-hidden="true" href="#cb1-11" tabindex="-1"></a><span class="dt">    if(attrName.indexOf('v-') </span><span class="ot">=</span><span class="st">= 0){</span></span>
+<span id="cb1-12"><a aria-hidden="true" href="#cb1-12" tabindex="-1"></a><span class="dt">        // v-下不同的指令</span></span>
+<span id="cb1-13"><a aria-hidden="true" href="#cb1-13" tabindex="-1"></a><span class="dt">        if(dir </span><span class="ot">=</span><span class="st">= 'model'){</span></span>
+<span id="cb1-14"><a aria-hidden="true" href="#cb1-14" tabindex="-1"></a><span class="dt">            // console.log('发现了model指令',value);</span></span>
+<span id="cb1-15"><a aria-hidden="true" href="#cb1-15" tabindex="-1"></a><span class="dt">            // 添加Watcher</span></span>
+<span id="cb1-16"><a aria-hidden="true" href="#cb1-16" tabindex="-1"></a><span class="dt">            new Watcher(self.$vue, value, value </span><span class="ot">=</span><span class="st">&gt; {</span></span>
+<span id="cb1-17"><a aria-hidden="true" href="#cb1-17" tabindex="-1"></a><span class="dt">                node.value </span><span class="ot">=</span><span class="st"> value;</span></span>
+<span id="cb1-18"><a aria-hidden="true" href="#cb1-18" tabindex="-1"></a><span class="dt">            });</span></span>
+<span id="cb1-19"><a aria-hidden="true" href="#cb1-19" tabindex="-1"></a><span class="dt">            // 得到 v 的值</span></span>
+<span id="cb1-20"><a aria-hidden="true" href="#cb1-20" tabindex="-1"></a><span class="dt">            var v </span><span class="ot">=</span><span class="st"> self.getVueVal(self.$vue, value);</span></span>
+<span id="cb1-21"><a aria-hidden="true" href="#cb1-21" tabindex="-1"></a><span class="dt">            // 显示 v 的值</span></span>
+<span id="cb1-22"><a aria-hidden="true" href="#cb1-22" tabindex="-1"></a><span class="dt">            node.value </span><span class="ot">=</span><span class="st"> v;</span></span>
+<span id="cb1-23"><a aria-hidden="true" href="#cb1-23" tabindex="-1"></a><span class="dt">            // 添加监听事件，基本实现双向绑定</span></span>
+<span id="cb1-24"><a aria-hidden="true" href="#cb1-24" tabindex="-1"></a><span class="dt">            node.addEventListener('input', e </span><span class="ot">=</span><span class="st">&gt; {</span></span>
+<span id="cb1-25"><a aria-hidden="true" href="#cb1-25" tabindex="-1"></a><span class="dt">                var newVal </span><span class="ot">=</span><span class="st"> e.target.value;</span></span>
+<span id="cb1-26"><a aria-hidden="true" href="#cb1-26" tabindex="-1"></a><span class="dt">                self.setVueVal(self.$vue, value, newVal);</span></span>
+<span id="cb1-27"><a aria-hidden="true" href="#cb1-27" tabindex="-1"></a><span class="dt">                v </span><span class="ot">=</span><span class="st"> newVal;</span></span>
+<span id="cb1-28"><a aria-hidden="true" href="#cb1-28" tabindex="-1"></a><span class="dt">            });</span></span>
+<span id="cb1-29"><a aria-hidden="true" href="#cb1-29" tabindex="-1"></a><span class="dt">        }else if(dir </span><span class="ot">=</span><span class="st">= 'if'){</span></span>
+<span id="cb1-30"><a aria-hidden="true" href="#cb1-30" tabindex="-1"></a><span class="dt">            // console.log('发现了if指令',value);</span></span>
+<span id="cb1-31"><a aria-hidden="true" href="#cb1-31" tabindex="-1"></a><span class="dt">        }</span></span>
+<span id="cb1-32"><a aria-hidden="true" href="#cb1-32" tabindex="-1"></a><span class="dt">    } </span></span>
+<span id="cb1-33"><a aria-hidden="true" href="#cb1-33" tabindex="-1"></a><span class="dt">})</span></span></code></pre></div>
+<blockquote>
+<p><strong>2.v-model底层是怎么实现的？</strong></p>
+<p><code>v-model</code>
+会把关联的相应式数据(info.message)，动态的绑定到表单元素的value属性上，让后监听
+<code>input</code> 事件；</p>
+<p>当 <code>v-model</code>
+绑定的相应数据发生变化时，表单元素的value值也会随之变化。</p>
+</blockquote>
+<pre class="vue"><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;div class="message"&gt;{{ info.message }}&lt;/div&gt;
+    &lt;div&gt;&lt;input v-model="info.message" type="text"&gt;&lt;/div&gt;
+    &lt;button @click="change"&gt;click&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+  export default {
+    data () {
+      return {
+        info: {}
+      }
+    },
+    methods: {
+      change () {
+        this.info.message = 'hello world'
+      }
+    }
+  }
+&lt;/script&gt;</code></pre>
+<blockquote>
+<p>面试题：<strong>v-for 和 v-if为什么不能一起用？</strong></p>
+</blockquote>
+<p>涉及到一个优先级的问题，v-for 比
+v-if优先执行，如果一起使用，循环出来的每一项都会去判断一下v-if是否为true或者false，这样就会照成资源的浪费！</p>
+<blockquote>
+<p><strong>3.生命周期</strong></p>
+</blockquote>
+<p><img alt="lifecyc.png" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fe04ce4c40414362af00acc629f89b11~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
+<p><img alt="image-20210725222206025.png" loading="lazy" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1f940941a8844433b7d673da45ab480c~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
+<ul>
+<li><blockquote>
+<p><strong>beforeCreate &amp; created</strong></p>
+<p>属于<strong>实例化</strong>阶段，在<code>_init </code>方法内，DOM
+被挂载时执行，两个函数都不能获取到 prop、data 中定义的值，也不能调用
+<code>methods </code>中定义的函数。</p>
+</blockquote></li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a>Vue<span class="op">.</span><span class="at">prototype</span><span class="op">.</span><span class="at">_init</span> <span class="op">=</span> <span class="kw">function</span> (options<span class="op">?:</span> <span class="bu">Object</span>) {</span>
+<span id="cb3-2"><a aria-hidden="true" href="#cb3-2" tabindex="-1"></a>  <span class="co">// ...</span></span>
+<span id="cb3-3"><a aria-hidden="true" href="#cb3-3" tabindex="-1"></a>  <span class="fu">initLifecycle</span>(vm)</span>
+<span id="cb3-4"><a aria-hidden="true" href="#cb3-4" tabindex="-1"></a>  <span class="fu">initEvents</span>(vm)</span>
+<span id="cb3-5"><a aria-hidden="true" href="#cb3-5" tabindex="-1"></a>  <span class="fu">initRender</span>(vm)</span>
+<span id="cb3-6"><a aria-hidden="true" href="#cb3-6" tabindex="-1"></a>  <span class="fu">callHook</span>(vm<span class="op">,</span> <span class="st">'beforeCreate'</span>)</span>
+<span id="cb3-7"><a aria-hidden="true" href="#cb3-7" tabindex="-1"></a>  <span class="fu">initInjections</span>(vm) <span class="co">// 在prop、data 之前解决注入</span></span>
+<span id="cb3-8"><a aria-hidden="true" href="#cb3-8" tabindex="-1"></a>  <span class="fu">initState</span>(vm)</span>
+<span id="cb3-9"><a aria-hidden="true" href="#cb3-9" tabindex="-1"></a>  <span class="fu">initProvide</span>(vm) <span class="co">// 解决初始化之后的prop、data</span></span>
+<span id="cb3-10"><a aria-hidden="true" href="#cb3-10" tabindex="-1"></a>  <span class="fu">callHook</span>(vm<span class="op">,</span> <span class="st">'created'</span>)</span>
+<span id="cb3-11"><a aria-hidden="true" href="#cb3-11" tabindex="-1"></a>  <span class="co">// ...</span></span>
+<span id="cb3-12"><a aria-hidden="true" href="#cb3-12" tabindex="-1"></a>}</span></code></pre></div>
+<ul>
+<li><blockquote>
+<p><strong>beforeMount &amp;mounted</strong></p>
+<p>属于<strong>挂载</strong>阶段，在<code>mountComponent</code>方法内，响应数据被修改时执行，对于同步渲染的子组件而言，<code>mounted</code>
+钩子函数的执行顺序是<strong>先子后父</strong>。</p>
+</blockquote></li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="im">export</span> <span class="kw">function</span> <span class="fu">mountComponent</span> (</span>
+<span id="cb4-2"><a aria-hidden="true" href="#cb4-2" tabindex="-1"></a>  vm<span class="op">:</span> Component<span class="op">,</span></span>
+<span id="cb4-3"><a aria-hidden="true" href="#cb4-3" tabindex="-1"></a>  el<span class="op">:</span> <span class="op">?</span><span class="bu">Element</span><span class="op">,</span></span>
+<span id="cb4-4"><a aria-hidden="true" href="#cb4-4" tabindex="-1"></a>  hydrating<span class="op">?:</span> boolean</span>
+<span id="cb4-5"><a aria-hidden="true" href="#cb4-5" tabindex="-1"></a>)<span class="op">:</span> Component {</span>
+<span id="cb4-6"><a aria-hidden="true" href="#cb4-6" tabindex="-1"></a>  vm<span class="op">.</span><span class="at">$el</span> <span class="op">=</span> el</span>
+<span id="cb4-7"><a aria-hidden="true" href="#cb4-7" tabindex="-1"></a>  <span class="fu">callHook</span>(vm<span class="op">,</span> <span class="st">'beforeMount'</span>)</span>
+<span id="cb4-8"><a aria-hidden="true" href="#cb4-8" tabindex="-1"></a>  </span>
+<span id="cb4-9"><a aria-hidden="true" href="#cb4-9" tabindex="-1"></a>  <span class="kw">let</span> updateComponent</span>
+<span id="cb4-10"><a aria-hidden="true" href="#cb4-10" tabindex="-1"></a> </span>
+<span id="cb4-11"><a aria-hidden="true" href="#cb4-11" tabindex="-1"></a>  <span class="cf">if</span> (<span class="bu">process</span><span class="op">.</span><span class="at">env</span><span class="op">.</span><span class="at">NODE_ENV</span> <span class="op">!==</span> <span class="st">'production'</span> <span class="op">&amp;&amp;</span> config<span class="op">.</span><span class="at">performance</span> <span class="op">&amp;&amp;</span> mark) {</span>
+<span id="cb4-12"><a aria-hidden="true" href="#cb4-12" tabindex="-1"></a>    updateComponent <span class="op">=</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb4-13"><a aria-hidden="true" href="#cb4-13" tabindex="-1"></a>      <span class="kw">const</span> name <span class="op">=</span> vm<span class="op">.</span><span class="at">_name</span></span>
+<span id="cb4-14"><a aria-hidden="true" href="#cb4-14" tabindex="-1"></a>      <span class="kw">const</span> id <span class="op">=</span> vm<span class="op">.</span><span class="at">_uid</span></span>
+<span id="cb4-15"><a aria-hidden="true" href="#cb4-15" tabindex="-1"></a>      <span class="kw">const</span> startTag <span class="op">=</span> <span class="vs">`vue-perf-start:</span><span class="sc">${</span>id<span class="sc">}</span><span class="vs">`</span></span>
+<span id="cb4-16"><a aria-hidden="true" href="#cb4-16" tabindex="-1"></a>      <span class="kw">const</span> endTag <span class="op">=</span> <span class="vs">`vue-perf-end:</span><span class="sc">${</span>id<span class="sc">}</span><span class="vs">`</span></span>
+<span id="cb4-17"><a aria-hidden="true" href="#cb4-17" tabindex="-1"></a></span>
+<span id="cb4-18"><a aria-hidden="true" href="#cb4-18" tabindex="-1"></a>      <span class="fu">mark</span>(startTag)</span>
+<span id="cb4-19"><a aria-hidden="true" href="#cb4-19" tabindex="-1"></a>      <span class="kw">const</span> vnode <span class="op">=</span> vm<span class="op">.</span><span class="fu">_render</span>()</span>
+<span id="cb4-20"><a aria-hidden="true" href="#cb4-20" tabindex="-1"></a>      <span class="fu">mark</span>(endTag)</span>
+<span id="cb4-21"><a aria-hidden="true" href="#cb4-21" tabindex="-1"></a>      <span class="fu">measure</span>(<span class="vs">`vue </span><span class="sc">${</span>name<span class="sc">}</span><span class="vs"> render`</span><span class="op">,</span> startTag<span class="op">,</span> endTag)</span>
+<span id="cb4-22"><a aria-hidden="true" href="#cb4-22" tabindex="-1"></a></span>
+<span id="cb4-23"><a aria-hidden="true" href="#cb4-23" tabindex="-1"></a>      <span class="fu">mark</span>(startTag)</span>
+<span id="cb4-24"><a aria-hidden="true" href="#cb4-24" tabindex="-1"></a>      <span class="co">// 执行vm._update 把 VNode 渲染到 真实 DOM </span></span>
+<span id="cb4-25"><a aria-hidden="true" href="#cb4-25" tabindex="-1"></a>      vm<span class="op">.</span><span class="fu">_update</span>(vnode<span class="op">,</span> hydrating)</span>
+<span id="cb4-26"><a aria-hidden="true" href="#cb4-26" tabindex="-1"></a>      <span class="fu">mark</span>(endTag)</span>
+<span id="cb4-27"><a aria-hidden="true" href="#cb4-27" tabindex="-1"></a>      <span class="fu">measure</span>(<span class="vs">`vue </span><span class="sc">${</span>name<span class="sc">}</span><span class="vs"> patch`</span><span class="op">,</span> startTag<span class="op">,</span> endTag)</span>
+<span id="cb4-28"><a aria-hidden="true" href="#cb4-28" tabindex="-1"></a>    }</span>
+<span id="cb4-29"><a aria-hidden="true" href="#cb4-29" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb4-30"><a aria-hidden="true" href="#cb4-30" tabindex="-1"></a>    updateComponent <span class="op">=</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb4-31"><a aria-hidden="true" href="#cb4-31" tabindex="-1"></a>      vm<span class="op">.</span><span class="fu">_update</span>(vm<span class="op">.</span><span class="fu">_render</span>()<span class="op">,</span> hydrating)</span>
+<span id="cb4-32"><a aria-hidden="true" href="#cb4-32" tabindex="-1"></a>    }</span>
+<span id="cb4-33"><a aria-hidden="true" href="#cb4-33" tabindex="-1"></a>  }</span>
+<span id="cb4-34"><a aria-hidden="true" href="#cb4-34" tabindex="-1"></a>  <span class="co">// 把它设为vm._watcher 在watcher的构造函数中.</span></span>
+<span id="cb4-35"><a aria-hidden="true" href="#cb4-35" tabindex="-1"></a>  <span class="co">// 因为观察者的初始补丁可能会调用$forceUpdate(例如:inside child . exe)</span></span>
+<span id="cb4-36"><a aria-hidden="true" href="#cb4-36" tabindex="-1"></a>  <span class="co">// 组件的挂载钩子)，依赖于vm。_watcher已经定义.</span></span>
+<span id="cb4-37"><a aria-hidden="true" href="#cb4-37" tabindex="-1"></a>  <span class="kw">new</span> <span class="fu">Watcher</span>(vm<span class="op">,</span> updateComponent<span class="op">,</span> noop<span class="op">,</span> {</span>
+<span id="cb4-38"><a aria-hidden="true" href="#cb4-38" tabindex="-1"></a>    <span class="fu">before</span> () {</span>
+<span id="cb4-39"><a aria-hidden="true" href="#cb4-39" tabindex="-1"></a>      <span class="cf">if</span> (vm<span class="op">.</span><span class="at">_isMounted</span>) {</span>
+<span id="cb4-40"><a aria-hidden="true" href="#cb4-40" tabindex="-1"></a>        <span class="fu">callHook</span>(vm<span class="op">,</span> <span class="st">'beforeUpdate'</span>)</span>
+<span id="cb4-41"><a aria-hidden="true" href="#cb4-41" tabindex="-1"></a>      }</span>
+<span id="cb4-42"><a aria-hidden="true" href="#cb4-42" tabindex="-1"></a>    }</span>
+<span id="cb4-43"><a aria-hidden="true" href="#cb4-43" tabindex="-1"></a>  }<span class="op">,</span> <span class="kw">true</span> <span class="co">/* isRenderWatcher */</span>)</span>
+<span id="cb4-44"><a aria-hidden="true" href="#cb4-44" tabindex="-1"></a>  hydrating <span class="op">=</span> <span class="kw">false</span></span>
+<span id="cb4-45"><a aria-hidden="true" href="#cb4-45" tabindex="-1"></a>  <span class="co">// 手动挂载实例，调用挂载在self上</span></span>
+<span id="cb4-46"><a aria-hidden="true" href="#cb4-46" tabindex="-1"></a>  <span class="co">// 挂载在其插入的钩子中为渲染创建的子组件调用</span></span>
+<span id="cb4-47"><a aria-hidden="true" href="#cb4-47" tabindex="-1"></a>  <span class="cf">if</span> (vm<span class="op">.</span><span class="at">$vnode</span> <span class="op">==</span> <span class="kw">null</span>) {</span>
+<span id="cb4-48"><a aria-hidden="true" href="#cb4-48" tabindex="-1"></a>    vm<span class="op">.</span><span class="at">_isMounted</span> <span class="op">=</span> <span class="kw">true</span></span>
+<span id="cb4-49"><a aria-hidden="true" href="#cb4-49" tabindex="-1"></a>    <span class="fu">callHook</span>(vm<span class="op">,</span> <span class="st">'mounted'</span>)</span>
+<span id="cb4-50"><a aria-hidden="true" href="#cb4-50" tabindex="-1"></a>  }</span></code></pre></div>
+<ul>
+<li><blockquote>
+<p><strong>beforeUpdate &amp; updated</strong></p>
+<p>属于<strong>更新</strong>阶段，在渲染 <code>Watcher</code> 的 before
+函数内，元素被销毁之前执行，在 <code>callUpdatedHooks</code> 函数中，等
+<code>vm._watcher</code> 的回调执行完毕后，才能执行 <code>update</code>
+函数。</p>
+</blockquote></li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a aria-hidden="true" href="#cb5-1" tabindex="-1"></a><span class="im">export</span> <span class="kw">function</span> <span class="fu">mountComponent</span> (</span>
+<span id="cb5-2"><a aria-hidden="true" href="#cb5-2" tabindex="-1"></a>  vm<span class="op">:</span> Component<span class="op">,</span></span>
+<span id="cb5-3"><a aria-hidden="true" href="#cb5-3" tabindex="-1"></a>  el<span class="op">:</span> <span class="op">?</span><span class="bu">Element</span><span class="op">,</span></span>
+<span id="cb5-4"><a aria-hidden="true" href="#cb5-4" tabindex="-1"></a>  hydrating<span class="op">?:</span> boolean</span>
+<span id="cb5-5"><a aria-hidden="true" href="#cb5-5" tabindex="-1"></a>)<span class="op">:</span> Component {</span>
+<span id="cb5-6"><a aria-hidden="true" href="#cb5-6" tabindex="-1"></a>  <span class="co">// ...</span></span>
+<span id="cb5-7"><a aria-hidden="true" href="#cb5-7" tabindex="-1"></a></span>
+<span id="cb5-8"><a aria-hidden="true" href="#cb5-8" tabindex="-1"></a>  <span class="co">// 把它设为vm._watcher 在watcher的构造函数中.</span></span>
+<span id="cb5-9"><a aria-hidden="true" href="#cb5-9" tabindex="-1"></a>  <span class="co">// 因为观察者的初始补丁可能会调用$forceUpdate(例如:inside child . exe)</span></span>
+<span id="cb5-10"><a aria-hidden="true" href="#cb5-10" tabindex="-1"></a>  <span class="co">// 组件的挂载钩子)，依赖于vm。_watcher已经定义.</span></span>
+<span id="cb5-11"><a aria-hidden="true" href="#cb5-11" tabindex="-1"></a>  <span class="kw">new</span> <span class="fu">Watcher</span>(vm<span class="op">,</span> updateComponent<span class="op">,</span> noop<span class="op">,</span> {</span>
+<span id="cb5-12"><a aria-hidden="true" href="#cb5-12" tabindex="-1"></a>    <span class="fu">before</span> () {</span>
+<span id="cb5-13"><a aria-hidden="true" href="#cb5-13" tabindex="-1"></a>      <span class="cf">if</span> (vm<span class="op">.</span><span class="at">_isMounted</span>) {</span>
+<span id="cb5-14"><a aria-hidden="true" href="#cb5-14" tabindex="-1"></a>        <span class="fu">callHook</span>(vm<span class="op">,</span> <span class="st">'beforeUpdate'</span>)</span>
+<span id="cb5-15"><a aria-hidden="true" href="#cb5-15" tabindex="-1"></a>      }</span>
+<span id="cb5-16"><a aria-hidden="true" href="#cb5-16" tabindex="-1"></a>    }</span>
+<span id="cb5-17"><a aria-hidden="true" href="#cb5-17" tabindex="-1"></a>  }<span class="op">,</span> <span class="kw">true</span> <span class="co">/* isRenderWatcher */</span>)</span>
+<span id="cb5-18"><a aria-hidden="true" href="#cb5-18" tabindex="-1"></a>  <span class="co">// ...</span></span>
+<span id="cb5-19"><a aria-hidden="true" href="#cb5-19" tabindex="-1"></a>}</span></code></pre></div>
+<ul>
+<li><blockquote>
+<p><strong>beforeDestory &amp; destroyed</strong> （3.x中更名为
+<strong>beforeUnmount &amp; unmounted</strong>）</p>
+<p>属于<strong>销毁</strong>阶段，在 <code>$destroy</code>
+函数前执行，从 <code>parent</code> 的 <code>$children</code>
+中删掉自身，删除 <code>watcher</code>。</p>
+</blockquote></li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a aria-hidden="true" href="#cb6-1" tabindex="-1"></a>Vue<span class="op">.</span><span class="at">prototype</span><span class="op">.</span><span class="at">$destroy</span> <span class="op">=</span> <span class="kw">function</span> () {</span>
+<span id="cb6-2"><a aria-hidden="true" href="#cb6-2" tabindex="-1"></a>    <span class="kw">const</span> <span class="dt">vm</span><span class="op">:</span> Component <span class="op">=</span> <span class="kw">this</span></span>
+<span id="cb6-3"><a aria-hidden="true" href="#cb6-3" tabindex="-1"></a>    <span class="cf">if</span> (vm<span class="op">.</span><span class="at">_isBeingDestroyed</span>) {</span>
+<span id="cb6-4"><a aria-hidden="true" href="#cb6-4" tabindex="-1"></a>      <span class="cf">return</span></span>
+<span id="cb6-5"><a aria-hidden="true" href="#cb6-5" tabindex="-1"></a>    }</span>
+<span id="cb6-6"><a aria-hidden="true" href="#cb6-6" tabindex="-1"></a>    <span class="fu">callHook</span>(vm<span class="op">,</span> <span class="st">'beforeDestroy'</span>)</span>
+<span id="cb6-7"><a aria-hidden="true" href="#cb6-7" tabindex="-1"></a>    vm<span class="op">.</span><span class="at">_isBeingDestroyed</span> <span class="op">=</span> <span class="kw">true</span></span>
+<span id="cb6-8"><a aria-hidden="true" href="#cb6-8" tabindex="-1"></a>    <span class="co">// 将self从父节点移除</span></span>
+<span id="cb6-9"><a aria-hidden="true" href="#cb6-9" tabindex="-1"></a>    <span class="kw">const</span> parent <span class="op">=</span> vm<span class="op">.</span><span class="at">$parent</span></span>
+<span id="cb6-10"><a aria-hidden="true" href="#cb6-10" tabindex="-1"></a>    <span class="cf">if</span> (parent <span class="op">&amp;&amp;</span> <span class="op">!</span>parent<span class="op">.</span><span class="at">_isBeingDestroyed</span> <span class="op">&amp;&amp;</span> <span class="op">!</span>vm<span class="op">.</span><span class="at">$options</span><span class="op">.</span><span class="at">abstract</span>) {</span>
+<span id="cb6-11"><a aria-hidden="true" href="#cb6-11" tabindex="-1"></a>      <span class="fu">remove</span>(parent<span class="op">.</span><span class="at">$children</span><span class="op">,</span> vm)</span>
+<span id="cb6-12"><a aria-hidden="true" href="#cb6-12" tabindex="-1"></a>    }</span>
+<span id="cb6-13"><a aria-hidden="true" href="#cb6-13" tabindex="-1"></a>    <span class="co">// 卸载 watchers</span></span>
+<span id="cb6-14"><a aria-hidden="true" href="#cb6-14" tabindex="-1"></a>    <span class="cf">if</span> (vm<span class="op">.</span><span class="at">_watcher</span>) {</span>
+<span id="cb6-15"><a aria-hidden="true" href="#cb6-15" tabindex="-1"></a>      vm<span class="op">.</span><span class="at">_watcher</span><span class="op">.</span><span class="fu">teardown</span>()</span>
+<span id="cb6-16"><a aria-hidden="true" href="#cb6-16" tabindex="-1"></a>    }</span>
+<span id="cb6-17"><a aria-hidden="true" href="#cb6-17" tabindex="-1"></a>    <span class="kw">let</span> i <span class="op">=</span> vm<span class="op">.</span><span class="at">_watchers</span><span class="op">.</span><span class="at">length</span></span>
+<span id="cb6-18"><a aria-hidden="true" href="#cb6-18" tabindex="-1"></a>    <span class="cf">while</span> (i<span class="op">--</span>) {</span>
+<span id="cb6-19"><a aria-hidden="true" href="#cb6-19" tabindex="-1"></a>      vm<span class="op">.</span><span class="at">_watchers</span>[i]<span class="op">.</span><span class="fu">teardown</span>()</span>
+<span id="cb6-20"><a aria-hidden="true" href="#cb6-20" tabindex="-1"></a>    }</span>
+<span id="cb6-21"><a aria-hidden="true" href="#cb6-21" tabindex="-1"></a>    <span class="co">// 从数据ob中移除引用</span></span>
+<span id="cb6-22"><a aria-hidden="true" href="#cb6-22" tabindex="-1"></a>    <span class="co">// frozen object 没有观察者。</span></span>
+<span id="cb6-23"><a aria-hidden="true" href="#cb6-23" tabindex="-1"></a>    <span class="cf">if</span> (vm<span class="op">.</span><span class="at">_data</span><span class="op">.</span><span class="at">__ob__</span>) {</span>
+<span id="cb6-24"><a aria-hidden="true" href="#cb6-24" tabindex="-1"></a>      vm<span class="op">.</span><span class="at">_data</span><span class="op">.</span><span class="at">__ob__</span><span class="op">.</span><span class="at">vmCount</span><span class="op">--</span></span>
+<span id="cb6-25"><a aria-hidden="true" href="#cb6-25" tabindex="-1"></a>    }</span>
+<span id="cb6-26"><a aria-hidden="true" href="#cb6-26" tabindex="-1"></a>    <span class="co">// 调用最后一个钩子</span></span>
+<span id="cb6-27"><a aria-hidden="true" href="#cb6-27" tabindex="-1"></a>    vm<span class="op">.</span><span class="at">_isDestroyed</span> <span class="op">=</span> <span class="kw">true</span></span>
+<span id="cb6-28"><a aria-hidden="true" href="#cb6-28" tabindex="-1"></a>    <span class="co">// 在当前redered 树上调用销毁钩子</span></span>
+<span id="cb6-29"><a aria-hidden="true" href="#cb6-29" tabindex="-1"></a>    vm<span class="op">.</span><span class="fu">__patch__</span>(vm<span class="op">.</span><span class="at">_vnode</span><span class="op">,</span> <span class="kw">null</span>)</span>
+<span id="cb6-30"><a aria-hidden="true" href="#cb6-30" tabindex="-1"></a>    <span class="co">// 销毁钩子函数</span></span>
+<span id="cb6-31"><a aria-hidden="true" href="#cb6-31" tabindex="-1"></a>    <span class="fu">callHook</span>(vm<span class="op">,</span> <span class="st">'destroyed'</span>)</span>
+<span id="cb6-32"><a aria-hidden="true" href="#cb6-32" tabindex="-1"></a>    <span class="co">// 关闭所有实例侦听器。</span></span>
+<span id="cb6-33"><a aria-hidden="true" href="#cb6-33" tabindex="-1"></a>    vm<span class="op">.</span><span class="fu">$off</span>()</span>
+<span id="cb6-34"><a aria-hidden="true" href="#cb6-34" tabindex="-1"></a>    <span class="co">// 删除vue reference</span></span>
+<span id="cb6-35"><a aria-hidden="true" href="#cb6-35" tabindex="-1"></a>    <span class="cf">if</span> (vm<span class="op">.</span><span class="at">$el</span>) {</span>
+<span id="cb6-36"><a aria-hidden="true" href="#cb6-36" tabindex="-1"></a>      vm<span class="op">.</span><span class="at">$el</span><span class="op">.</span><span class="at">__vue__</span> <span class="op">=</span> <span class="kw">null</span></span>
+<span id="cb6-37"><a aria-hidden="true" href="#cb6-37" tabindex="-1"></a>    }</span>
+<span id="cb6-38"><a aria-hidden="true" href="#cb6-38" tabindex="-1"></a>    <span class="co">// 发布循环引用</span></span>
+<span id="cb6-39"><a aria-hidden="true" href="#cb6-39" tabindex="-1"></a>    <span class="cf">if</span> (vm<span class="op">.</span><span class="at">$vnode</span>) {</span>
+<span id="cb6-40"><a aria-hidden="true" href="#cb6-40" tabindex="-1"></a>      vm<span class="op">.</span><span class="at">$vnode</span><span class="op">.</span><span class="at">parent</span> <span class="op">=</span> <span class="kw">null</span></span>
+<span id="cb6-41"><a aria-hidden="true" href="#cb6-41" tabindex="-1"></a>    }</span>
+<span id="cb6-42"><a aria-hidden="true" href="#cb6-42" tabindex="-1"></a>  }</span></code></pre></div>
+<blockquote>
+<p><strong>renderTracked &amp; renderTriggered</strong>（3.x新增）</p>
+<p>都是跟踪虚拟DOM 重新渲染时调用，接收 <code>debugger event</code>
+参数；</p>
+<p>renderTracked() : 此事件告诉你哪个操作<strong>跟踪</strong>了
+<code>组件</code>，以及该操作的目标对象和键。</p>
+<p>renderTriggered() : 此事件告诉你哪个操作<strong>触发</strong>了
+<code>重新渲染</code>，以及该操作的目标对象和键。</p>
+</blockquote>
+<div class="sourceCode" id="cb7"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a aria-hidden="true" href="#cb7-1" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"app"</span><span class="dt">&gt;</span></span>
+<span id="cb7-2"><a aria-hidden="true" href="#cb7-2" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> v-on:click</span><span class="op">=</span><span class="st">"addToCart"</span><span class="dt">&gt;</span>Add to cart<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb7-3"><a aria-hidden="true" href="#cb7-3" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Cart({{ cart }})<span class="dt">&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb7-4"><a aria-hidden="true" href="#cb7-4" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a aria-hidden="true" href="#cb8-1" tabindex="-1"></a><span class="kw">const</span> app <span class="op">=</span> Vue<span class="op">.</span><span class="fu">vreateApp</span>({</span>
+<span id="cb8-2"><a aria-hidden="true" href="#cb8-2" tabindex="-1"></a>    <span class="fu">data</span>(){</span>
+<span id="cb8-3"><a aria-hidden="true" href="#cb8-3" tabindex="-1"></a>        <span class="cf">return</span>{</span>
+<span id="cb8-4"><a aria-hidden="true" href="#cb8-4" tabindex="-1"></a>            <span class="dt">cart</span><span class="op">:</span> <span class="dv">0</span></span>
+<span id="cb8-5"><a aria-hidden="true" href="#cb8-5" tabindex="-1"></a>        }</span>
+<span id="cb8-6"><a aria-hidden="true" href="#cb8-6" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb8-7"><a aria-hidden="true" href="#cb8-7" tabindex="-1"></a>    <span class="co">// cart 操作*跟踪*了 组件</span></span>
+<span id="cb8-8"><a aria-hidden="true" href="#cb8-8" tabindex="-1"></a>    <span class="fu">renderTracked</span>({ key<span class="op">,</span> target<span class="op">,</span> type }){</span>
+<span id="cb8-9"><a aria-hidden="true" href="#cb8-9" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>({ key<span class="op">,</span> target<span class="op">,</span> type })</span>
+<span id="cb8-10"><a aria-hidden="true" href="#cb8-10" tabindex="-1"></a>        <span class="co">/*{ key: "cart", target:{cart: 0}, type: "get" }*/</span></span>
+<span id="cb8-11"><a aria-hidden="true" href="#cb8-11" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb8-12"><a aria-hidden="true" href="#cb8-12" tabindex="-1"></a>    <span class="co">// cart 操作*触发*了 重新渲染</span></span>
+<span id="cb8-13"><a aria-hidden="true" href="#cb8-13" tabindex="-1"></a>    <span class="fu">renderTriggered</span>({ key<span class="op">,</span> target<span class="op">,</span> type }) {</span>
+<span id="cb8-14"><a aria-hidden="true" href="#cb8-14" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>({ key<span class="op">,</span> target<span class="op">,</span> type })</span>
+<span id="cb8-15"><a aria-hidden="true" href="#cb8-15" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb8-16"><a aria-hidden="true" href="#cb8-16" tabindex="-1"></a>    <span class="dt">methods</span><span class="op">:</span> {</span>
+<span id="cb8-17"><a aria-hidden="true" href="#cb8-17" tabindex="-1"></a>        <span class="fu">addToCart</span>(){</span>
+<span id="cb8-18"><a aria-hidden="true" href="#cb8-18" tabindex="-1"></a>            <span class="kw">this</span><span class="op">.</span><span class="at">cart</span> <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb8-19"><a aria-hidden="true" href="#cb8-19" tabindex="-1"></a>            <span class="co">/*{ key: "cart", target:{cart:1}, type: "set" }*/</span></span>
+<span id="cb8-20"><a aria-hidden="true" href="#cb8-20" tabindex="-1"></a>        }</span>
+<span id="cb8-21"><a aria-hidden="true" href="#cb8-21" tabindex="-1"></a>    }</span>
+<span id="cb8-22"><a aria-hidden="true" href="#cb8-22" tabindex="-1"></a>})</span>
+<span id="cb8-23"><a aria-hidden="true" href="#cb8-23" tabindex="-1"></a>app<span class="op">.</span><span class="fu">mount</span>(<span class="st">'#app'</span>)</span></code></pre></div>
+<blockquote>
+<p><strong>总结：</strong>
+Vue生命周期函数就是在初始化，及数据更新过程各个阶段执行不同的钩子函数；在created钩子函数中可以访问到数据，在mounted钩子函数中可以访问到DOM，在destroyed
+钩子函数中可以做一些定时器销毁工作！</p>
+</blockquote>
+<p>参考：<a href="https://juejin.cn/post/6844903999414485005" target="_blank" title="https://juejin.cn/post/6844903999414485005">v-model源码解析</a></p>
+<p><a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fsegmentfault.com%2Fa%2F1190000006599500" target="_blank" title="https://segmentfault.com/a/1190000006599500">剖析Vue原理&amp;实现双向绑定MVVM</a></p>
+<p><a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1db4y1r7cd" target="_blank" title="https://www.bilibili.com/video/BV1db4y1r7cd">技术胖Vue3知识地图</a></p>
+<p><a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fbbs.huaweicloud.com%2Fblogs%2F271558" target="_blank" title="https://bbs.huaweicloud.com/blogs/271558">Vue2与Vue3的生命周期</a></p>
+<p><a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fwww.jianshu.com%2Fp%2Fd3f973433274" target="_blank" title="https://www.jianshu.com/p/d3f973433274">Vue2和Vue3的区别</a></p>
+      </article>
+    </div>
+  </body>
+</html>

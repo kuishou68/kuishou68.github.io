@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>postman 怎么实现接口自动化测试的？ | CocoonBreak</title>
+    <meta name="description" content="首先问大家一个问题，你平时是怎么将浏览器 url 及参数完整复制到postman的？ 右击请求url --&gt; copy --&gt; copy as cUrl(bash)； 为了方便大家理解，我用汉化版的 postman 逐步带大家使用集合批处理...">
+    <meta property="og:title" content="postman 怎么实现接口自动化测试的？ | CocoonBreak">
+    <meta property="og:description" content="首先问大家一个问题，你平时是怎么将浏览器 url 及参数完整复制到postman的？ 右击请求url --&gt; copy --&gt; copy as cUrl(bash)； 为了方便大家理解，我用汉化版的 postman 逐步带大家使用集合批处理...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2023-04-08-7219543015550337061/">
+    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
+  </head>
+  <body>
+    <div class="article-shell">
+      <nav class="insight-nav">
+        <a href="/">← 首页</a>
+        <a href="/insights/">同步文章</a>
+        <a href="https://juejin.cn/post/7219543015550337061" target="_blank" rel="noreferrer">掘金原文</a>
+      </nav>
+
+      <header class="article-hero" data-reveal>
+        <div class="article-meta">
+          <span>2023.04.08</span><span>Postman</span><span>测试</span>
+        </div>
+        <h1>postman 怎么实现接口自动化测试的？</h1>
+        <p class="article-intro">首先问大家一个问题，你平时是怎么将浏览器 url 及参数完整复制到postman的？ 右击请求url --&gt; copy --&gt; copy as cUrl(bash)； 为了方便大家理解，我用汉化版的 postman 逐步带大家使用集合批处理...</p>
+        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/7219543015550337061" target="_blank" rel="noreferrer">掘金原文</a>。</div>
+      </header>
+
+      <article class="prose" data-reveal>
+        <ul>
+<li><p>首先问大家一个问题，你平时是怎么将浏览器 url
+及参数完整复制到postman的？</p></li>
+<li><p>右击请求url --&gt; copy --&gt; copy as cUrl(bash)；</p></li>
+<li><p>为了方便大家理解，我用汉化版的 postman
+逐步带大家使用集合批处理请求这个功能，不对的地方还望各位大佬指点； <img alt="image.png" loading="lazy" src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d4451aaacc674142af247bccf00c2cc9~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p></li>
+</ul>
+<h2 id="1将curl导入到postman中">1.将curl导入到postman中;</h2>
+<ul>
+<li>个人比较喜欢复制浏览器curl直接粘贴到postman，它会自动解析url及包含的参数;
+<img alt="image.png" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b4479ebba208406cab20e9a51642426e~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></li>
+</ul>
+<h2 id="2点击发送测试一下url及参数能否正常拿到数据">2.点击发送测试一下url及参数能否正常拿到数据;</h2>
+<p><img alt="image.png" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1a86f989a1734aecb977e5462a254bbf~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p>
+<h2 id="3新建集合">3.新建集合</h2>
+<p><img alt="image.png" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a568e8eb90c34e20bd4d39030e8391f1~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p>
+<h2 id="4将刚刚导入的curl保存到新建的集合中">4.将刚刚导入的curl保存到新建的集合中</h2>
+<p><img alt="image.png" loading="lazy" src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f831fc82b9ed4796b73cf8b1e635cf68~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p>
+<h2 id="5设置变量">5.设置变量</h2>
+<p>注意：变量可以是多个，我这里简单列举了一个，每个变量在csv文件中都要是独立的列；
+<img alt="image.png" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9355c96b1e0345ea93ad6bae2ead3332~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p>
+<h2 id="6运行集合">6.运行集合</h2>
+<p><img alt="image.png" loading="lazy" src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bb1b4abc8aa5440b974419012d6eb759~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p>
+<h2 id="7准备数据集并导入">7.准备数据集并导入</h2>
+<ul>
+<li>这里注意设置一下 延迟 ，再导入数据集 注意：支持导入 .csv 或 .text
+文件格式，但内容里面第一行一定要与设置的变量名保持一致，否则获取不到;
+<img alt="image.png" loading="lazy" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/10e3254ec7334e81a10e6f0aa195c06e~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></li>
+</ul>
+<h2 id="8预览一下数据是否乱码没问题直接远行新建集合">8.预览一下数据是否乱码，没问题直接远行新建集合</h2>
+<p><img alt="image.png" loading="lazy" src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cd8a752e2a234f56805b67c4047902fa~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p>
+<h2 id="9可以看到每次请求都成功了">9.可以看到每次请求都成功了</h2>
+<ul>
+<li>你以为这就结束了？NO NO NO,
+能不能把每次请求的相应结果记录下来并导出？ <img alt="image.png" loading="lazy" src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/39cb17df19e64928b3af5ba79fc069a7~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></li>
+</ul>
+<h2 id="10写个测试脚本记录每次请求的相应结果">10.写个测试脚本，记录每次请求的相应结果</h2>
+<h3 id="101-将下面的测试脚本粘贴到-这里">10.1 将下面的测试脚本粘贴到
+这里↓</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="kw">let</span> str <span class="op">=</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">stringify</span>(<span class="bu">JSON</span><span class="op">.</span><span class="fu">parse</span>(pm<span class="op">.</span><span class="at">response</span><span class="op">.</span><span class="fu">text</span>()))<span class="op">;</span></span>
+<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a>pm<span class="op">.</span><span class="fu">test</span>(str<span class="op">,</span> <span class="kw">function</span>(){</span>
+<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"相应结果==&gt;"</span><span class="op">,</span> str)<span class="op">;</span></span>
+<span id="cb1-4"><a aria-hidden="true" href="#cb1-4" tabindex="-1"></a>})</span></code></pre></div>
+<p><img alt="image.png" loading="lazy" src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7ccdbb5e2c954f67871ba29717842b54~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p>
+<h3 id="102-再次远行集合">10.2 再次远行集合</h3>
+<p><img alt="image.png" loading="lazy" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/695f0b4e808a4da1afdc19178c18382d~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p>
+<h3 id="103-导出结果">10.3 导出结果</h3>
+<p><img alt="image.png" loading="lazy" src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/48072c1a3b054c8fb325f27884178de2~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p>
+<h3 id="103-不会写脚本怎么办">10.3 不会写脚本怎么办？</h3>
+<ul>
+<li>当然是看 <a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fhonye.gitbooks.io%2Fpostman%2Fcontent%2Fscripts%2Ftest_scripts.html" target="_blank" title="https://honye.gitbooks.io/postman/content/scripts/test_scripts.html">文档</a>
+教你怎么写测试脚本啦; <img alt="image.png" loading="lazy" src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a85ca2902fa0422b9f960340bbdf9630~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></li>
+</ul>
+      </article>
+    </div>
+  </body>
+</html>

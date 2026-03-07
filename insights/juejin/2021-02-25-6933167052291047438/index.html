@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PHP+MySql+PDO小案例—文章管理系统 | CocoonBreak</title>
+    <meta name="description" content="先附上整体效果 目录结构 数据库名itcast , 表名cms_article DROP TABLE IF EXISTS `cms_article`; CREATE TABLE `cms_article` ( `id` int ( 10 )...">
+    <meta property="og:title" content="PHP+MySql+PDO小案例—文章管理系统 | CocoonBreak">
+    <meta property="og:description" content="先附上整体效果 目录结构 数据库名itcast , 表名cms_article DROP TABLE IF EXISTS `cms_article`; CREATE TABLE `cms_article` ( `id` int ( 10 )...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2021-02-25-6933167052291047438/">
+    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
+  </head>
+  <body>
+    <div class="article-shell">
+      <nav class="insight-nav">
+        <a href="/">← 首页</a>
+        <a href="/insights/">同步文章</a>
+        <a href="https://juejin.cn/post/6933167052291047438" target="_blank" rel="noreferrer">掘金原文</a>
+      </nav>
+
+      <header class="article-hero" data-reveal>
+        <div class="article-meta">
+          <span>2021.02.25</span><span>PHP</span>
+        </div>
+        <h1>PHP+MySql+PDO小案例—文章管理系统</h1>
+        <p class="article-intro">先附上整体效果 目录结构 数据库名itcast , 表名cms_article DROP TABLE IF EXISTS `cms_article`; CREATE TABLE `cms_article` ( `id` int ( 10 )...</p>
+        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/6933167052291047438" target="_blank" rel="noreferrer">掘金原文</a>。</div>
+      </header>
+
+      <article class="prose" data-reveal>
+        <h3 id="先附上整体效果">先附上整体效果</h3>
+<p><img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/07b1b056c0234e7399d9c00edfcfe36c~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
+<h3 id="目录结构">目录结构</h3>
+<p><img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d1042cea888f47698d0d30f8e535dfc4~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
+<h3 id="数据库名itcast--表名cms_article">数据库名itcast ,
+表名cms_article</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a></span>
+<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">TABLE</span> <span class="cf">IF</span> <span class="kw">EXISTS</span> `cms_article`;</span>
+<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> `cms_article` (</span>
+<span id="cb1-4"><a aria-hidden="true" href="#cb1-4" tabindex="-1"></a>  `id` <span class="dt">int</span>(<span class="dv">10</span>) unsigned <span class="kw">NOT</span> <span class="kw">NULL</span> AUTO_INCREMENT,</span>
+<span id="cb1-5"><a aria-hidden="true" href="#cb1-5" tabindex="-1"></a>  `title` <span class="dt">varchar</span>(<span class="dv">255</span>) <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">COMMENT</span> <span class="st">'文章标题'</span>,</span>
+<span id="cb1-6"><a aria-hidden="true" href="#cb1-6" tabindex="-1"></a>  `content` text <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">COMMENT</span> <span class="st">'文章内容'</span>,</span>
+<span id="cb1-7"><a aria-hidden="true" href="#cb1-7" tabindex="-1"></a>  `author` <span class="dt">varchar</span>(<span class="dv">255</span>) <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">COMMENT</span> <span class="st">'作者'</span>,</span>
+<span id="cb1-8"><a aria-hidden="true" href="#cb1-8" tabindex="-1"></a>  `addtime` <span class="dt">timestamp</span> <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">DEFAULT</span> <span class="fu">CURRENT_TIMESTAMP</span> <span class="kw">COMMENT</span> <span class="st">'添加时间'</span>,</span>
+<span id="cb1-9"><a aria-hidden="true" href="#cb1-9" tabindex="-1"></a>  `cid` <span class="dt">int</span>(<span class="dv">10</span>) unsigned <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">COMMENT</span> <span class="st">'文章所属分类'</span>,</span>
+<span id="cb1-10"><a aria-hidden="true" href="#cb1-10" tabindex="-1"></a>  <span class="kw">PRIMARY</span> <span class="kw">KEY</span> (`id`)</span>
+<span id="cb1-11"><a aria-hidden="true" href="#cb1-11" tabindex="-1"></a>) ENGINE<span class="op">=</span>MyISAM AUTO_INCREMENT<span class="op">=</span><span class="dv">22</span> <span class="kw">DEFAULT</span> CHARSET<span class="op">=</span>utf8;</span>
+<span id="cb1-12"><a aria-hidden="true" href="#cb1-12" tabindex="-1"></a></span>
+<span id="cb1-13"><a aria-hidden="true" href="#cb1-13" tabindex="-1"></a></span>
+<span id="cb1-14"><a aria-hidden="true" href="#cb1-14" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> `cms_article` <span class="kw">VALUES</span> (<span class="dv">16</span>,<span class="st">'PHP'</span>,<span class="st">'&lt;p&gt;</span><span class="ch">\t\t\t\t&amp;nbsp</span><span class="st">; </span><span class="ch">&amp;nbsp</span><span class="st">; </span><span class="ch">&amp;nbsp</span><span class="st">; </span><span class="ch">&amp;nbsp</span><span class="st">;&lt;/p&gt;&lt;p&gt;请在这里编写文章……&lt;/p&gt;&lt;p&gt;</span><span class="ch">\r\n\t\t\t</span><span class="st">&lt;/p&gt;'</span>,<span class="st">'魁首'</span>,<span class="st">'2019-06-05 09:19:45'</span>,<span class="dv">1</span>),(<span class="dv">17</span>,<span class="st">'Java'</span>,<span class="st">'&lt;p&gt;</span><span class="ch">\t\t\t\t&amp;nbsp</span><span class="st">; </span><span class="ch">&amp;nbsp</span><span class="st">; </span><span class="ch">&amp;nbsp</span><span class="st">; </span><span class="ch">&amp;nbsp</span><span class="st">;&lt;/p&gt;&lt;p&gt;请在这里编写文章……&lt;/p&gt;&lt;p&gt;</span><span class="ch">\r\n\t\t\t</span><span class="st">&lt;/p&gt;'</span>,<span class="st">'魁首'</span>,<span class="st">'2019-06-05 09:20:01'</span>,<span class="dv">1</span>),(<span class="dv">20</span>,<span class="st">'C#'</span>,<span class="st">'&lt;p&gt;</span><span class="ch">\t\t\t\t&amp;nbsp</span><span class="st">; </span><span class="ch">&amp;nbsp</span><span class="st">; </span><span class="ch">&amp;nbsp</span><span class="st">; </span><span class="ch">&amp;nbsp</span><span class="st">;&lt;/p&gt;&lt;p&gt;请在这里编写文章……&lt;/p&gt;&lt;p&gt;</span><span class="ch">\r\n\t\t\t</span><span class="st">&lt;/p&gt;'</span>,<span class="st">'魁首'</span>,<span class="st">'2019-06-05 09:22:07'</span>,<span class="dv">1</span>);</span></code></pre></div>
+<h3 id="表名cms_category">表名cms_category</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a></span>
+<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">TABLE</span> <span class="cf">IF</span> <span class="kw">EXISTS</span> `cms_category`;</span>
+<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> `cms_category` (</span>
+<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a>  `id` <span class="dt">int</span>(<span class="dv">10</span>) unsigned <span class="kw">NOT</span> <span class="kw">NULL</span> AUTO_INCREMENT,</span>
+<span id="cb2-5"><a aria-hidden="true" href="#cb2-5" tabindex="-1"></a>  `name` <span class="dt">varchar</span>(<span class="dv">255</span>) <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">COMMENT</span> <span class="st">'分类名称'</span>,</span>
+<span id="cb2-6"><a aria-hidden="true" href="#cb2-6" tabindex="-1"></a>  `sort` <span class="dt">int</span>(<span class="dv">10</span>) unsigned <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">DEFAULT</span> <span class="st">'0'</span> <span class="kw">COMMENT</span> <span class="st">'排序'</span>,</span>
+<span id="cb2-7"><a aria-hidden="true" href="#cb2-7" tabindex="-1"></a>  <span class="kw">PRIMARY</span> <span class="kw">KEY</span> (`id`)</span>
+<span id="cb2-8"><a aria-hidden="true" href="#cb2-8" tabindex="-1"></a>) ENGINE<span class="op">=</span>MyISAM AUTO_INCREMENT<span class="op">=</span><span class="dv">15</span> <span class="kw">DEFAULT</span> CHARSET<span class="op">=</span>utf8;</span>
+<span id="cb2-9"><a aria-hidden="true" href="#cb2-9" tabindex="-1"></a></span>
+<span id="cb2-10"><a aria-hidden="true" href="#cb2-10" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> `cms_category` <span class="kw">VALUES</span> (<span class="dv">1</span>,<span class="st">'PHP'</span>,<span class="dv">0</span>),(<span class="dv">2</span>,<span class="st">'Java'</span>,<span class="dv">0</span>),(<span class="dv">4</span>,<span class="st">'C/C++'</span>,<span class="dv">1</span>),(<span class="dv">10</span>,<span class="st">'python'</span>,<span class="dv">2</span>),(<span class="dv">13</span>,<span class="st">'JQuery'</span>,<span class="dv">0</span>);</span></code></pre></div>
+<h3 id="附源码下载链接">附源码下载链接</h3>
+<h2 id="a">&lt;a</h2>
+<p>href="<a href="https://link.juejin.cn?target=https%3A%2F%2Fdownload.csdn.net%2Fdownload%2Fweixin_44019370%2F11230437">https://link.juejin.cn?target=https%3A%2F%2Fdownload.csdn.net%2Fdownload%2Fweixin_44019370%2F11230437</a>"
+data-ref="nofollow noopener noreferrer" target="_blank" title="<a href='https://download.csdn.net/download/weixin_44019370/11230437"&gt;download.csdn.net/download/we…'>https://download.csdn.net/download/weixin_44019370/11230437"&gt;download.csdn.net/download/we…</a></p>
+      </article>
+    </div>
+  </body>
+</html>

@@ -583,9 +583,23 @@ img {
   line-height: 1.95;
 }
 
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  scroll-margin-top: 92px;
+}
+
 .prose ul,
 .prose ol {
   padding-left: 20px;
+}
+
+.prose a {
+  color: var(--brand);
+  text-decoration: underline;
+  text-decoration-color: rgba(100, 210, 255, 0.36);
+  text-underline-offset: 0.18em;
 }
 
 .prose code {
@@ -595,11 +609,55 @@ img {
   font-family: "IBM Plex Mono", "SFMono-Regular", monospace;
 }
 
+.prose pre {
+  margin: 22px 0;
+  padding: 18px;
+  overflow-x: auto;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: rgba(2, 9, 19, 0.88);
+}
+
+.prose pre code {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
 .prose blockquote {
   margin: 22px 0;
   padding: 0 0 0 18px;
   border-left: 3px solid rgba(100, 210, 255, 0.36);
   color: #cde1ff;
+}
+
+.prose img {
+  display: block;
+  max-width: 100%;
+  margin: 24px auto;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+}
+
+.prose table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 22px 0;
+}
+
+.prose th,
+.prose td {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  text-align: left;
+}
+
+.prose hr {
+  margin: 32px 0;
+  border: 0;
+  border-top: 1px solid var(--line);
 }
 
 .insight-nav {
@@ -612,6 +670,61 @@ img {
 .insight-nav a {
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.year-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.year-card {
+  padding: 24px;
+}
+
+.year-card-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.year-card-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.year-card-header span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.article-link-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.article-link-list li {
+  display: grid;
+  gap: 6px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.article-link-list a {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.article-link-meta {
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .site-footer {
@@ -650,7 +763,8 @@ img {
   .product-grid,
   .community-grid,
   .archive-grid,
-  .writing-grid {
+  .writing-grid,
+  .year-grid {
     grid-template-columns: 1fr;
   }
 

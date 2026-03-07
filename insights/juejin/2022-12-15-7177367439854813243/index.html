@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>canvas实现电子签字功能 | CocoonBreak</title>
+    <meta name="description" content="在线预览 1. 需求分析 去银行办理银行卡的时候你会发现，有的是用电子办卡机，大堂经理带着你一步步操作，其中有一个操作就是签署电子协议，那么这个功能具体怎么实现的呢？ 2. 实现思路 （1）首先你得把你协议展示出来，并且这些协议是一些后台可...">
+    <meta property="og:title" content="canvas实现电子签字功能 | CocoonBreak">
+    <meta property="og:description" content="在线预览 1. 需求分析 去银行办理银行卡的时候你会发现，有的是用电子办卡机，大堂经理带着你一步步操作，其中有一个操作就是签署电子协议，那么这个功能具体怎么实现的呢？ 2. 实现思路 （1）首先你得把你协议展示出来，并且这些协议是一些后台可...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2022-12-15-7177367439854813243/">
+    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
+  </head>
+  <body>
+    <div class="article-shell">
+      <nav class="insight-nav">
+        <a href="/">← 首页</a>
+        <a href="/insights/">同步文章</a>
+        <a href="https://juejin.cn/post/7177367439854813243" target="_blank" rel="noreferrer">掘金原文</a>
+      </nav>
+
+      <header class="article-hero" data-reveal>
+        <div class="article-meta">
+          <span>2022.12.15</span><span>前端</span>
+        </div>
+        <h1>canvas实现电子签字功能</h1>
+        <p class="article-intro">在线预览 1. 需求分析 去银行办理银行卡的时候你会发现，有的是用电子办卡机，大堂经理带着你一步步操作，其中有一个操作就是签署电子协议，那么这个功能具体怎么实现的呢？ 2. 实现思路 （1）首先你得把你协议展示出来，并且这些协议是一些后台可...</p>
+        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/7177367439854813243" target="_blank" rel="noreferrer">掘金原文</a>。</div>
+      </header>
+
+      <article class="prose" data-reveal>
+        <p><a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fybw6f5.csb.app%2F" target="_blank" title="https://ybw6f5.csb.app/">在线预览</a></p>
+<h3 id="1-需求分析">1. 需求分析</h3>
+<p>去银行办理银行卡的时候你会发现，有的是用电子办卡机，大堂经理带着你一步步操作，其中有一个操作就是签署电子协议，那么这个功能具体怎么实现的呢？</p>
+<h3 id="2-实现思路">2. 实现思路</h3>
+<p>（1）首先你得把你协议展示出来，并且这些协议是一些后台可编辑的html富文本，接口请求到富文本后，<code>document.getElementById('innerHTML').innerHTML</code>
+插入到指定的div上；</p>
+<p>（2）其次则是我们的签字区域，整块区域用原生<code>canvas</code>实现，签署完成后生成图片，上传到图库，拿到图片的url后，拼接一个
+<code>&lt;img src=\"${imgUrl}\"&gt;</code>
+字符，用正则插入到指定标签内；</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="kw">function</span> <span class="fu">saveAgreement</span>() {</span>
+<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a>    <span class="co">// 正则 /span\sclass=?."insertSign.+?&gt;.+?&lt;?.span/g   匹配 class = insertSign 的标签（class可以是任意富文本中存在的name）</span></span>
+<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a>    <span class="kw">let</span> labelRegex <span class="op">=</span> <span class="ss">/span</span><span class="sc">\s</span><span class="ss">class=</span><span class="sc">?</span><span class="ss">."insertSign.</span><span class="sc">+?</span><span class="ss">&gt;.</span><span class="sc">+?</span><span class="ss">&lt;</span><span class="sc">?</span><span class="ss">.span/g</span><span class="op">;</span></span>
+<span id="cb1-4"><a aria-hidden="true" href="#cb1-4" tabindex="-1"></a>    <span class="kw">let</span> labelStr <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb1-5"><a aria-hidden="true" href="#cb1-5" tabindex="-1"></a>    <span class="kw">let</span> imgUrl <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb1-6"><a aria-hidden="true" href="#cb1-6" tabindex="-1"></a>    <span class="kw">let</span> imgLabel <span class="op">=</span> imgUrl <span class="op">?</span> <span class="vs">`&lt;img src=</span><span class="sc">\"${</span>imgUrl<span class="sc">}\"</span><span class="vs"> style=</span><span class="sc">\"</span><span class="vs">width:100px; </span><span class="sc">${</span>orientationScreen <span class="op">?</span> <span class="st">'transform: rotate(270deg);'</span> <span class="op">:</span> <span class="st">''</span><span class="sc">}\"</span><span class="vs">&gt;`</span> <span class="op">:</span> <span class="st">"已签名"</span><span class="op">;</span> <span class="co">// 待替换图片 或 文本</span></span>
+<span id="cb1-7"><a aria-hidden="true" href="#cb1-7" tabindex="-1"></a>    <span class="cf">while</span> ((labelStr <span class="op">=</span> labelRegex<span class="op">.</span><span class="fu">exec</span>(currentSignStr)) <span class="op">!==</span> <span class="kw">null</span> <span class="op">&amp;&amp;</span> labelStr[<span class="dv">0</span>]<span class="op">.</span><span class="fu">indexOf</span>(<span class="st">"&lt;img"</span>) <span class="op">===</span> <span class="op">-</span><span class="dv">1</span>) {</span>
+<span id="cb1-8"><a aria-hidden="true" href="#cb1-8" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"匹配到的标签"</span><span class="op">,</span> labelStr[<span class="dv">0</span>])<span class="op">;</span> <span class="co">// 匹配到的标签</span></span>
+<span id="cb1-9"><a aria-hidden="true" href="#cb1-9" tabindex="-1"></a>    <span class="kw">let</span> indexEnd <span class="op">=</span> labelStr[<span class="dv">0</span>]<span class="op">.</span><span class="fu">indexOf</span>(<span class="st">"&gt;"</span>)<span class="op">;</span> <span class="co">// 结束标签</span></span>
+<span id="cb1-10"><a aria-hidden="true" href="#cb1-10" tabindex="-1"></a>    <span class="kw">let</span> nextEnd <span class="op">=</span> labelStr[<span class="dv">0</span>]<span class="op">.</span><span class="fu">indexOf</span>(<span class="st">"&lt;"</span>)<span class="op">;</span> <span class="co">// 开始标签</span></span>
+<span id="cb1-11"><a aria-hidden="true" href="#cb1-11" tabindex="-1"></a>    <span class="kw">let</span> target <span class="op">=</span> labelStr[<span class="dv">0</span>]<span class="op">.</span><span class="fu">slice</span>(indexEnd <span class="op">+</span> <span class="dv">1</span><span class="op">,</span> nextEnd)<span class="op">;</span> <span class="co">// 目标区域</span></span>
+<span id="cb1-12"><a aria-hidden="true" href="#cb1-12" tabindex="-1"></a>        currentSignStr <span class="op">=</span> currentSignStr<span class="op">.</span><span class="fu">replace</span>(target<span class="op">,</span> imgLabel)<span class="op">;</span></span>
+<span id="cb1-13"><a aria-hidden="true" href="#cb1-13" tabindex="-1"></a>        labelStr <span class="op">=</span> <span class="st">""</span><span class="op">;</span></span>
+<span id="cb1-14"><a aria-hidden="true" href="#cb1-14" tabindex="-1"></a>    }</span>
+<span id="cb1-15"><a aria-hidden="true" href="#cb1-15" tabindex="-1"></a>    <span class="fu">alert</span>(<span class="st">"提交成功！"</span>)<span class="op">;</span></span>
+<span id="cb1-16"><a aria-hidden="true" href="#cb1-16" tabindex="-1"></a>    <span class="co">// 改变签名状态</span></span>
+<span id="cb1-17"><a aria-hidden="true" href="#cb1-17" tabindex="-1"></a>    mcpSignStatus <span class="op">=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb1-18"><a aria-hidden="true" href="#cb1-18" tabindex="-1"></a>    <span class="fu">returnSign</span>()<span class="op">;</span></span>
+<span id="cb1-19"><a aria-hidden="true" href="#cb1-19" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="3-注意点">3. 注意点：</h3>
+<p>（1）如果你用的是移动端签署，那必然要动态监听设备屏幕的宽高来更新<code>canvas</code>宽高；</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="co">// 监听横屏、竖屏</span></span>
+<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a><span class="bu">window</span><span class="op">.</span><span class="fu">addEventListener</span>(evt<span class="op">,</span> resize<span class="op">,</span> <span class="kw">false</span>)<span class="op">;</span></span>
+<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a><span class="kw">function</span> <span class="fu">resize</span>(fals) {</span>
+<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a>   <span class="cf">if</span> (<span class="bu">window</span><span class="op">.</span><span class="at">orientation</span> <span class="op">==</span> <span class="dv">0</span> <span class="op">||</span> <span class="bu">window</span><span class="op">.</span><span class="at">orientation</span> <span class="op">==</span> <span class="dv">180</span>) {</span>
+<span id="cb2-5"><a aria-hidden="true" href="#cb2-5" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'||竖屏||'</span>)<span class="op">;</span></span>
+<span id="cb2-6"><a aria-hidden="true" href="#cb2-6" tabindex="-1"></a>    orientationScreen <span class="op">=</span> <span class="kw">true</span><span class="op">;</span> <span class="co">// 打开竖屏状态</span></span>
+<span id="cb2-7"><a aria-hidden="true" href="#cb2-7" tabindex="-1"></a>    horizontalScreen <span class="op">=</span> <span class="kw">false</span><span class="op">;</span> <span class="co">// 关闭横屏状态</span></span>
+<span id="cb2-8"><a aria-hidden="true" href="#cb2-8" tabindex="-1"></a>    canvasWidth <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">innerWidth</span> <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">documentElement</span><span class="op">.</span><span class="at">clientWidth</span> <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">.</span><span class="at">clientWidth</span><span class="op">;</span></span>
+<span id="cb2-9"><a aria-hidden="true" href="#cb2-9" tabindex="-1"></a>    canvasHeight <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">innerHeight</span> <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">documentElement</span><span class="op">.</span><span class="at">clientHeight</span> <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">.</span><span class="at">clientHeight</span><span class="op">;</span></span>
+<span id="cb2-10"><a aria-hidden="true" href="#cb2-10" tabindex="-1"></a>   } <span class="cf">else</span> {</span>
+<span id="cb2-11"><a aria-hidden="true" href="#cb2-11" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"==横屏=="</span>)<span class="op">;</span></span>
+<span id="cb2-12"><a aria-hidden="true" href="#cb2-12" tabindex="-1"></a>    canvasWidth <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">innerWidth</span> <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">documentElement</span><span class="op">.</span><span class="at">clientWidth</span> <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">.</span><span class="at">clientWidth</span><span class="op">;</span></span>
+<span id="cb2-13"><a aria-hidden="true" href="#cb2-13" tabindex="-1"></a>    canvasHeight <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">innerHeight</span> <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">documentElement</span><span class="op">.</span><span class="at">clientHeight</span> <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">.</span><span class="at">clientHeight</span><span class="op">;</span></span>
+<span id="cb2-14"><a aria-hidden="true" href="#cb2-14" tabindex="-1"></a>    orientationScreen <span class="op">=</span> <span class="kw">false</span><span class="op">;</span> <span class="co">// 关闭竖屏状态</span></span>
+<span id="cb2-15"><a aria-hidden="true" href="#cb2-15" tabindex="-1"></a>    horizontalScreen <span class="op">=</span> <span class="kw">true</span><span class="op">;</span> <span class="co">// 打开横屏状态</span></span>
+<span id="cb2-16"><a aria-hidden="true" href="#cb2-16" tabindex="-1"></a>   }</span>
+<span id="cb2-17"><a aria-hidden="true" href="#cb2-17" tabindex="-1"></a>}</span>
+<span id="cb2-18"><a aria-hidden="true" href="#cb2-18" tabindex="-1"></a><span class="fu">resize</span>(<span class="kw">true</span>)<span class="op">;</span></span>
+<span id="cb2-19"><a aria-hidden="true" href="#cb2-19" tabindex="-1"></a><span class="co">// 监听窗口变化，动态调整canvas宽高</span></span>
+<span id="cb2-20"><a aria-hidden="true" href="#cb2-20" tabindex="-1"></a><span class="bu">window</span><span class="op">.</span><span class="at">onresize</span> <span class="op">=</span> <span class="kw">function</span> () {</span>
+<span id="cb2-21"><a aria-hidden="true" href="#cb2-21" tabindex="-1"></a>   canvasWidth <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">innerWidth</span> <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">documentElement</span><span class="op">.</span><span class="at">clientWidth</span> <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">.</span><span class="at">clientWidth</span><span class="op">;</span></span>
+<span id="cb2-22"><a aria-hidden="true" href="#cb2-22" tabindex="-1"></a>   canvasHeight <span class="op">=</span> <span class="bu">window</span><span class="op">.</span><span class="at">innerHeight</span> <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">documentElement</span><span class="op">.</span><span class="at">clientHeight</span> <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">.</span><span class="at">clientHeight</span><span class="op">;</span></span>
+<span id="cb2-23"><a aria-hidden="true" href="#cb2-23" tabindex="-1"></a>   <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(canvasWidth<span class="op">,</span> canvasHeight)<span class="op">;</span></span>
+<span id="cb2-24"><a aria-hidden="true" href="#cb2-24" tabindex="-1"></a>   <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"canvasId"</span>)<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">"width"</span><span class="op">,</span> canvasWidth)<span class="op">;</span></span>
+<span id="cb2-25"><a aria-hidden="true" href="#cb2-25" tabindex="-1"></a>   <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"canvasId"</span>)<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">"height"</span><span class="op">,</span> canvasHeight)<span class="op">;</span></span>
+<span id="cb2-26"><a aria-hidden="true" href="#cb2-26" tabindex="-1"></a>   <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">"canvasId"</span>)<span class="op">.</span><span class="fu">getContext</span>(<span class="st">'2d'</span>)<span class="op">.</span><span class="at">lineWidth</span> <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb2-27"><a aria-hidden="true" href="#cb2-27" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<p>（2）签署完成后，图片插入方向你也可以根据屏幕状态（横/竖屏）来旋转图片；</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="er">// 待替换图片，横屏生成的图片旋转270度；</span></span>
+<span id="cb3-2"><a aria-hidden="true" href="#cb3-2" tabindex="-1"></a>let imgLabel = `&lt;img src=\"${imgUrl}\" style=\"width<span class="in">:</span>100px; ${orientationScreen ? 'transform<span class="ch">:</span> <span class="fu">rotate(</span><span class="dv">270</span><span class="dt">deg</span><span class="fu">)</span><span class="op">;</span>' <span class="ch">:</span> <span class="st">''</span>}\"<span class="op">&gt;</span>` ; </span></code></pre></div>
+<h3 id="4了解更多">4.了解更多</h3>
+<p>（1）正则匹配调试，可以用
+<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fregex101.com%2F" target="_blank" title="https://regex101.com/">regex101</a> 实时看自己正则匹配情况； <img alt="image.png" loading="lazy" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4c194f26bd564441a17680aa2dd3a668~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p>
+<p>（2）推荐一个优秀的 <a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=http%3A%2F%2Fszimek.github.io%2Fsignature_pad%2F" target="_blank" title="http://szimek.github.io/signature_pad/">signature</a>
+库，你可能会问我为什么不直接用它，因为原生的写起来刺激呀！</p>
+<p><img alt="image.png" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/16020d5882704f0d9e250f899f4275d6~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p>
+      </article>
+    </div>
+  </body>
+</html>

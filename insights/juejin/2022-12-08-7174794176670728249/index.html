@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>前端不同场景下的自动化部署方式 | CocoonBreak</title>
+    <meta name="description" content="说起前端自动化部署，简单来说就是打包完成后自动发布服务器的过程，菜鸟的我简单搜集一下不同的部署方式供大家参考： 一、scp2 适用情况：webpack、vite项目，本地打包应用 1、本地打包生成dist文件目录 npm run build...">
+    <meta property="og:title" content="前端不同场景下的自动化部署方式 | CocoonBreak">
+    <meta property="og:description" content="说起前端自动化部署，简单来说就是打包完成后自动发布服务器的过程，菜鸟的我简单搜集一下不同的部署方式供大家参考： 一、scp2 适用情况：webpack、vite项目，本地打包应用 1、本地打包生成dist文件目录 npm run build...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2022-12-08-7174794176670728249/">
+    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
+  </head>
+  <body>
+    <div class="article-shell">
+      <nav class="insight-nav">
+        <a href="/">← 首页</a>
+        <a href="/insights/">同步文章</a>
+        <a href="https://juejin.cn/post/7174794176670728249" target="_blank" rel="noreferrer">掘金原文</a>
+      </nav>
+
+      <header class="article-hero" data-reveal>
+        <div class="article-meta">
+          <span>2022.12.08</span><span>前端</span>
+        </div>
+        <h1>前端不同场景下的自动化部署方式</h1>
+        <p class="article-intro">说起前端自动化部署，简单来说就是打包完成后自动发布服务器的过程，菜鸟的我简单搜集一下不同的部署方式供大家参考： 一、scp2 适用情况：webpack、vite项目，本地打包应用 1、本地打包生成dist文件目录 npm run build...</p>
+        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/7174794176670728249" target="_blank" rel="noreferrer">掘金原文</a>。</div>
+      </header>
+
+      <article class="prose" data-reveal>
+        <p>说起前端自动化部署，简单来说就是打包完成后自动发布服务器的过程，菜鸟的我简单搜集一下不同的部署方式供大家参考：</p>
+<h2 id="一scp2">一、scp2</h2>
+<h3 id="适用情况webpackvite项目本地打包应用">适用情况：webpack、vite项目，本地打包应用</h3>
+<p>1、本地打包生成dist文件目录</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a>npm run build</span></code></pre></div>
+<p>2、执行上传脚本 <a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fblog.csdn.net%2Fzxy2017%2Farticle%2Fdetails%2F126283990" target="_blank" title="https://blog.csdn.net/zxy2017/article/details/126283990">参考</a></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="co">// deploy/index.js</span></span>
+<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a><span class="kw">const</span> scpClient <span class="op">=</span> <span class="pp">require</span>(<span class="st">'scp2'</span>)</span>
+<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a><span class="kw">const</span> chalk <span class="op">=</span> <span class="pp">require</span>(<span class="st">'chalk'</span>)</span>
+<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a><span class="kw">var</span> Client <span class="op">=</span> <span class="pp">require</span>(<span class="st">'ssh2'</span>)<span class="op">.</span><span class="at">Client</span></span>
+<span id="cb2-5"><a aria-hidden="true" href="#cb2-5" tabindex="-1"></a><span class="kw">const</span> ora <span class="op">=</span> <span class="pp">require</span>(<span class="st">'ora'</span>)</span>
+<span id="cb2-6"><a aria-hidden="true" href="#cb2-6" tabindex="-1"></a><span class="kw">const</span> path <span class="op">=</span> <span class="pp">require</span>(<span class="st">'path'</span>)</span>
+<span id="cb2-7"><a aria-hidden="true" href="#cb2-7" tabindex="-1"></a><span class="kw">const</span> server <span class="op">=</span> <span class="pp">require</span>(<span class="st">'./deploy.config.js'</span>)</span>
+<span id="cb2-8"><a aria-hidden="true" href="#cb2-8" tabindex="-1"></a><span class="kw">const</span> source_path <span class="op">=</span> path<span class="op">.</span><span class="fu">resolve</span>() <span class="op">+</span> <span class="st">'/dist'</span></span>
+<span id="cb2-9"><a aria-hidden="true" href="#cb2-9" tabindex="-1"></a><span class="kw">const</span> spinner <span class="op">=</span> <span class="fu">ora</span>(<span class="st">'正在发布到测试服务器...'</span>)</span>
+<span id="cb2-10"><a aria-hidden="true" href="#cb2-10" tabindex="-1"></a></span>
+<span id="cb2-11"><a aria-hidden="true" href="#cb2-11" tabindex="-1"></a>spinner<span class="op">.</span><span class="fu">start</span>()</span>
+<span id="cb2-12"><a aria-hidden="true" href="#cb2-12" tabindex="-1"></a></span>
+<span id="cb2-13"><a aria-hidden="true" href="#cb2-13" tabindex="-1"></a><span class="kw">const</span> conn <span class="op">=</span> <span class="kw">new</span> <span class="fu">Client</span>()</span>
+<span id="cb2-14"><a aria-hidden="true" href="#cb2-14" tabindex="-1"></a></span>
+<span id="cb2-15"><a aria-hidden="true" href="#cb2-15" tabindex="-1"></a>conn<span class="op">.</span><span class="fu">on</span>(<span class="st">'ready'</span><span class="op">,</span> <span class="kw">function</span> () {</span>
+<span id="cb2-16"><a aria-hidden="true" href="#cb2-16" tabindex="-1"></a>  conn<span class="op">.</span><span class="fu">exec</span>(<span class="st">'rm -rf /www/wwwroot/***（项目放置静态地址）'</span><span class="op">,</span> <span class="kw">function</span> (err<span class="op">,</span> stream) {</span>
+<span id="cb2-17"><a aria-hidden="true" href="#cb2-17" tabindex="-1"></a>    <span class="cf">if</span> (err) <span class="cf">throw</span> err</span>
+<span id="cb2-18"><a aria-hidden="true" href="#cb2-18" tabindex="-1"></a>    stream<span class="op">.</span><span class="fu">on</span>(<span class="st">'close'</span><span class="op">,</span> <span class="kw">function</span> () {</span>
+<span id="cb2-19"><a aria-hidden="true" href="#cb2-19" tabindex="-1"></a>      <span class="co">// 在执行shell命令后，把开始上传部署项目代码放到这里面</span></span>
+<span id="cb2-20"><a aria-hidden="true" href="#cb2-20" tabindex="-1"></a>      scpClient<span class="op">.</span><span class="fu">scp</span>(source_path<span class="op">,</span> {</span>
+<span id="cb2-21"><a aria-hidden="true" href="#cb2-21" tabindex="-1"></a>        <span class="dt">host</span><span class="op">:</span> server<span class="op">.</span><span class="at">host</span><span class="op">,</span></span>
+<span id="cb2-22"><a aria-hidden="true" href="#cb2-22" tabindex="-1"></a>        <span class="dt">port</span><span class="op">:</span> server<span class="op">.</span><span class="at">port</span><span class="op">,</span></span>
+<span id="cb2-23"><a aria-hidden="true" href="#cb2-23" tabindex="-1"></a>        <span class="dt">username</span><span class="op">:</span> server<span class="op">.</span><span class="at">username</span><span class="op">,</span></span>
+<span id="cb2-24"><a aria-hidden="true" href="#cb2-24" tabindex="-1"></a>        <span class="dt">password</span><span class="op">:</span> server<span class="op">.</span><span class="at">password</span><span class="op">,</span></span>
+<span id="cb2-25"><a aria-hidden="true" href="#cb2-25" tabindex="-1"></a>        <span class="dt">path</span><span class="op">:</span> server<span class="op">.</span><span class="at">path</span><span class="op">,</span> <span class="co">// 项目放置静态地址（服务器中地址）</span></span>
+<span id="cb2-26"><a aria-hidden="true" href="#cb2-26" tabindex="-1"></a>      }<span class="op">,</span> <span class="kw">function</span> (err) {</span>
+<span id="cb2-27"><a aria-hidden="true" href="#cb2-27" tabindex="-1"></a>        spinner<span class="op">.</span><span class="fu">stop</span>()</span>
+<span id="cb2-28"><a aria-hidden="true" href="#cb2-28" tabindex="-1"></a></span>
+<span id="cb2-29"><a aria-hidden="true" href="#cb2-29" tabindex="-1"></a>        <span class="cf">if</span> (err) {</span>
+<span id="cb2-30"><a aria-hidden="true" href="#cb2-30" tabindex="-1"></a>          <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(chalk<span class="op">.</span><span class="fu">red</span>(<span class="st">'发布失败.</span><span class="sc">\n</span><span class="st">'</span>))</span>
+<span id="cb2-31"><a aria-hidden="true" href="#cb2-31" tabindex="-1"></a>        } <span class="cf">else</span> {</span>
+<span id="cb2-32"><a aria-hidden="true" href="#cb2-32" tabindex="-1"></a>          <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(chalk<span class="op">.</span><span class="fu">green</span>(<span class="st">'Success! 成功发布到服务器! </span><span class="sc">\n</span><span class="st">'</span>))</span>
+<span id="cb2-33"><a aria-hidden="true" href="#cb2-33" tabindex="-1"></a>        }</span>
+<span id="cb2-34"><a aria-hidden="true" href="#cb2-34" tabindex="-1"></a>      })</span>
+<span id="cb2-35"><a aria-hidden="true" href="#cb2-35" tabindex="-1"></a>      conn<span class="op">.</span><span class="fu">end</span>()</span>
+<span id="cb2-36"><a aria-hidden="true" href="#cb2-36" tabindex="-1"></a>    })<span class="op">.</span><span class="fu">on</span>(<span class="st">'data'</span><span class="op">,</span> <span class="kw">function</span> (data) {</span>
+<span id="cb2-37"><a aria-hidden="true" href="#cb2-37" tabindex="-1"></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'STDOUT: '</span> <span class="op">+</span> data)</span>
+<span id="cb2-38"><a aria-hidden="true" href="#cb2-38" tabindex="-1"></a>    })<span class="op">.</span><span class="at">stderr</span><span class="op">.</span><span class="fu">on</span>(<span class="st">'data'</span><span class="op">,</span> <span class="kw">function</span> (data) {</span>
+<span id="cb2-39"><a aria-hidden="true" href="#cb2-39" tabindex="-1"></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'STDERR: '</span> <span class="op">+</span> data)</span>
+<span id="cb2-40"><a aria-hidden="true" href="#cb2-40" tabindex="-1"></a>    })</span>
+<span id="cb2-41"><a aria-hidden="true" href="#cb2-41" tabindex="-1"></a>  })</span>
+<span id="cb2-42"><a aria-hidden="true" href="#cb2-42" tabindex="-1"></a>})<span class="op">.</span><span class="fu">connect</span>({</span>
+<span id="cb2-43"><a aria-hidden="true" href="#cb2-43" tabindex="-1"></a>  <span class="dt">host</span><span class="op">:</span> server<span class="op">.</span><span class="at">host</span><span class="op">,</span></span>
+<span id="cb2-44"><a aria-hidden="true" href="#cb2-44" tabindex="-1"></a>  <span class="dt">port</span><span class="op">:</span> server<span class="op">.</span><span class="at">port</span><span class="op">,</span></span>
+<span id="cb2-45"><a aria-hidden="true" href="#cb2-45" tabindex="-1"></a>  <span class="dt">username</span><span class="op">:</span> server<span class="op">.</span><span class="at">username</span><span class="op">,</span></span>
+<span id="cb2-46"><a aria-hidden="true" href="#cb2-46" tabindex="-1"></a>  <span class="dt">password</span><span class="op">:</span> server<span class="op">.</span><span class="at">password</span><span class="op">,</span></span>
+<span id="cb2-47"><a aria-hidden="true" href="#cb2-47" tabindex="-1"></a>})</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="er">//</span> <span class="er">package.json</span> </span>
+<span id="cb3-2"><a aria-hidden="true" href="#cb3-2" tabindex="-1"></a><span class="fu">{</span> </span>
+<span id="cb3-3"><a aria-hidden="true" href="#cb3-3" tabindex="-1"></a>    <span class="dt">"scripts"</span><span class="fu">:</span> <span class="fu">{</span> </span>
+<span id="cb3-4"><a aria-hidden="true" href="#cb3-4" tabindex="-1"></a>        <span class="dt">"build:develop"</span><span class="fu">:</span> <span class="st">"vite build --mode develop &amp;&amp; node ./deploy/index.js"</span><span class="fu">,</span></span>
+<span id="cb3-5"><a aria-hidden="true" href="#cb3-5" tabindex="-1"></a>    <span class="fu">}</span> </span>
+<span id="cb3-6"><a aria-hidden="true" href="#cb3-6" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<h2 id="二vite-plugin-lvdeploy">二、vite-plugin-lvdeploy</h2>
+<h3 id="适用情况vite项目-本地打包应用">适用情况：vite项目，
+本地打包应用</h3>
+<p>1.安装依赖</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a>npm i vite-plugin-lvdeploy</span>
+<span id="cb4-2"><a aria-hidden="true" href="#cb4-2" tabindex="-1"></a>npm i archiver -D</span>
+<span id="cb4-3"><a aria-hidden="true" href="#cb4-3" tabindex="-1"></a>npm i ssh2 -D</span></code></pre></div>
+<p>2.vite.config.js中引入vitePluginLvdeploy <a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fblog.csdn.net%2Fweixin_49230250%2Farticle%2Fdetails%2F125852469" target="_blank" title="https://blog.csdn.net/weixin_49230250/article/details/125852469">参考</a></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a aria-hidden="true" href="#cb5-1" tabindex="-1"></a><span class="co">// vite.config.js</span></span>
+<span id="cb5-2"><a aria-hidden="true" href="#cb5-2" tabindex="-1"></a><span class="im">import</span> { defineConfig } <span class="im">from</span> <span class="st">'vite'</span></span>
+<span id="cb5-3"><a aria-hidden="true" href="#cb5-3" tabindex="-1"></a><span class="im">import</span> vitePluginLvdeploy <span class="im">from</span> <span class="st">'./vite-plugin-lvdeploy'</span></span>
+<span id="cb5-4"><a aria-hidden="true" href="#cb5-4" tabindex="-1"></a><span class="im">import</span> vue <span class="im">from</span> <span class="st">'@vitejs/plugin-vue'</span></span>
+<span id="cb5-5"><a aria-hidden="true" href="#cb5-5" tabindex="-1"></a></span>
+<span id="cb5-6"><a aria-hidden="true" href="#cb5-6" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> <span class="fu">defineConfig</span>({</span>
+<span id="cb5-7"><a aria-hidden="true" href="#cb5-7" tabindex="-1"></a>  <span class="dt">plugins</span><span class="op">:</span> [</span>
+<span id="cb5-8"><a aria-hidden="true" href="#cb5-8" tabindex="-1"></a>    <span class="fu">vue</span>()<span class="op">,</span></span>
+<span id="cb5-9"><a aria-hidden="true" href="#cb5-9" tabindex="-1"></a>    <span class="fu">vitePluginLvdeploy</span>({</span>
+<span id="cb5-10"><a aria-hidden="true" href="#cb5-10" tabindex="-1"></a>        <span class="st">"dev"</span><span class="op">:</span>{</span>
+<span id="cb5-11"><a aria-hidden="true" href="#cb5-11" tabindex="-1"></a>            <span class="dt">host</span><span class="op">:</span><span class="st">'xxx.xxx.xxx.xxx'</span><span class="op">,</span><span class="co">//服务器IP</span></span>
+<span id="cb5-12"><a aria-hidden="true" href="#cb5-12" tabindex="-1"></a>            <span class="dt">port</span><span class="op">:</span><span class="dv">22</span><span class="op">,</span><span class="co">//服务器端口</span></span>
+<span id="cb5-13"><a aria-hidden="true" href="#cb5-13" tabindex="-1"></a>            <span class="dt">username</span><span class="op">:</span><span class="st">'xxxxxx'</span><span class="op">,</span><span class="co">//服务器ssh登录用户名</span></span>
+<span id="cb5-14"><a aria-hidden="true" href="#cb5-14" tabindex="-1"></a>            <span class="dt">password</span><span class="op">:</span><span class="st">'xxxxxx'</span><span class="op">,</span><span class="co">//服务器ssh登录密码</span></span>
+<span id="cb5-15"><a aria-hidden="true" href="#cb5-15" tabindex="-1"></a>            <span class="dt">serverpath</span><span class="op">:</span><span class="st">'/home/www'</span><span class="op">,</span><span class="co">//服务器web目录 切记不要加/ 当前目录不存在会创建目录并且当前目录所有文件会被清空重新部署前端项目</span></span>
+<span id="cb5-16"><a aria-hidden="true" href="#cb5-16" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb5-17"><a aria-hidden="true" href="#cb5-17" tabindex="-1"></a>        <span class="st">"test"</span><span class="op">:</span>{</span>
+<span id="cb5-18"><a aria-hidden="true" href="#cb5-18" tabindex="-1"></a>          <span class="dt">host</span><span class="op">:</span><span class="st">'xxx.xxx.xxx.xxx'</span><span class="op">,</span><span class="co">//服务器IP</span></span>
+<span id="cb5-19"><a aria-hidden="true" href="#cb5-19" tabindex="-1"></a>          <span class="dt">port</span><span class="op">:</span><span class="dv">22</span><span class="op">,</span><span class="co">//服务器端口</span></span>
+<span id="cb5-20"><a aria-hidden="true" href="#cb5-20" tabindex="-1"></a>          <span class="dt">username</span><span class="op">:</span><span class="st">'xxxxxx'</span><span class="op">,</span><span class="co">//服务器ssh登录用户名</span></span>
+<span id="cb5-21"><a aria-hidden="true" href="#cb5-21" tabindex="-1"></a>          <span class="dt">password</span><span class="op">:</span><span class="st">'xxxxxx'</span><span class="op">,</span><span class="co">//服务器ssh登录密码</span></span>
+<span id="cb5-22"><a aria-hidden="true" href="#cb5-22" tabindex="-1"></a>          <span class="dt">serverpath</span><span class="op">:</span><span class="st">'/home/www'</span><span class="op">,</span><span class="co">//服务器web目录 切记不要加/ 当前目录不存在会创建目录并且当前目录所有文件会被清空重新部署前端项目</span></span>
+<span id="cb5-23"><a aria-hidden="true" href="#cb5-23" tabindex="-1"></a>        }</span>
+<span id="cb5-24"><a aria-hidden="true" href="#cb5-24" tabindex="-1"></a>        <span class="co">//...其他自定义环境</span></span>
+<span id="cb5-25"><a aria-hidden="true" href="#cb5-25" tabindex="-1"></a>      })<span class="op">,</span></span>
+<span id="cb5-26"><a aria-hidden="true" href="#cb5-26" tabindex="-1"></a>    ]</span>
+<span id="cb5-27"><a aria-hidden="true" href="#cb5-27" tabindex="-1"></a>})</span></code></pre></div>
+<p>3.执行脚本</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb6-1"><a aria-hidden="true" href="#cb6-1" tabindex="-1"></a><span class="kw">let</span> paperFileName <span class="op">=</span> <span class="kw">null</span><span class="op">;</span><span class="co">// 接收压缩文件名称参数</span></span>
+<span id="cb6-2"><a aria-hidden="true" href="#cb6-2" tabindex="-1"></a><span class="kw">let</span> DeployConfig <span class="op">=</span> <span class="kw">null</span><span class="op">;</span><span class="co">//配置项</span></span>
+<span id="cb6-3"><a aria-hidden="true" href="#cb6-3" tabindex="-1"></a></span>
+<span id="cb6-4"><a aria-hidden="true" href="#cb6-4" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> <span class="kw">function</span> <span class="fu">vitePluginLvdeploy</span>(enforce) {</span>
+<span id="cb6-5"><a aria-hidden="true" href="#cb6-5" tabindex="-1"></a>  <span class="cf">return</span> {</span>
+<span id="cb6-6"><a aria-hidden="true" href="#cb6-6" tabindex="-1"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">'vite-plugin-lvdeploy'</span><span class="op">,</span></span>
+<span id="cb6-7"><a aria-hidden="true" href="#cb6-7" tabindex="-1"></a>    <span class="dt">apply</span><span class="op">:</span> <span class="st">'build'</span><span class="op">,</span></span>
+<span id="cb6-8"><a aria-hidden="true" href="#cb6-8" tabindex="-1"></a>    <span class="fu">config</span>(userConfig<span class="op">,</span> env) {</span>
+<span id="cb6-9"><a aria-hidden="true" href="#cb6-9" tabindex="-1"></a>      <span class="co">// 当前配置 userConfig 当前环境状态 env</span></span>
+<span id="cb6-10"><a aria-hidden="true" href="#cb6-10" tabindex="-1"></a>      paperFileName <span class="op">=</span> userConfig<span class="op">.</span><span class="at">build</span><span class="op">.</span><span class="at">outDir</span><span class="op">;</span></span>
+<span id="cb6-11"><a aria-hidden="true" href="#cb6-11" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb6-12"><a aria-hidden="true" href="#cb6-12" tabindex="-1"></a>    <span class="co">//  构建结束的最终回调，类型 async, parallel</span></span>
+<span id="cb6-13"><a aria-hidden="true" href="#cb6-13" tabindex="-1"></a>    <span class="fu">closeBundle</span>() {</span>
+<span id="cb6-14"><a aria-hidden="true" href="#cb6-14" tabindex="-1"></a>      DeployConfig <span class="op">=</span> enforce<span class="op">;</span></span>
+<span id="cb6-15"><a aria-hidden="true" href="#cb6-15" tabindex="-1"></a>      <span class="fu">inquiry</span>()<span class="op">;</span></span>
+<span id="cb6-16"><a aria-hidden="true" href="#cb6-16" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb6-17"><a aria-hidden="true" href="#cb6-17" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb6-18"><a aria-hidden="true" href="#cb6-18" tabindex="-1"></a>}</span>
+<span id="cb6-19"><a aria-hidden="true" href="#cb6-19" tabindex="-1"></a></span>
+<span id="cb6-20"><a aria-hidden="true" href="#cb6-20" tabindex="-1"></a><span class="im">import</span> fs <span class="im">from</span> <span class="st">"fs"</span></span>
+<span id="cb6-21"><a aria-hidden="true" href="#cb6-21" tabindex="-1"></a><span class="im">import</span> archiver <span class="im">from</span> <span class="st">"archiver"</span><span class="op">;</span></span>
+<span id="cb6-22"><a aria-hidden="true" href="#cb6-22" tabindex="-1"></a><span class="co">// 初始化SSH连接</span></span>
+<span id="cb6-23"><a aria-hidden="true" href="#cb6-23" tabindex="-1"></a><span class="kw">const</span> ssh2 <span class="op">=</span> <span class="pp">require</span>(<span class="st">'ssh2'</span>)<span class="op">;</span></span>
+<span id="cb6-24"><a aria-hidden="true" href="#cb6-24" tabindex="-1"></a><span class="kw">let</span> conn <span class="op">=</span> <span class="kw">new</span> ssh2<span class="op">.</span><span class="fu">Client</span>()<span class="op">;</span></span>
+<span id="cb6-25"><a aria-hidden="true" href="#cb6-25" tabindex="-1"></a></span>
+<span id="cb6-26"><a aria-hidden="true" href="#cb6-26" tabindex="-1"></a></span>
+<span id="cb6-27"><a aria-hidden="true" href="#cb6-27" tabindex="-1"></a><span class="kw">function</span> <span class="fu">inquiry</span>() {</span>
+<span id="cb6-28"><a aria-hidden="true" href="#cb6-28" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`</span><span class="sc">${</span><span class="bu">__dirname</span><span class="sc">}</span><span class="vs">/</span><span class="sc">${</span>paperFileName<span class="sc">}</span><span class="vs">.zip`</span>)</span>
+<span id="cb6-29"><a aria-hidden="true" href="#cb6-29" tabindex="-1"></a>  <span class="co">// 创建文件输出流</span></span>
+<span id="cb6-30"><a aria-hidden="true" href="#cb6-30" tabindex="-1"></a>  <span class="kw">let</span> output <span class="op">=</span> fs<span class="op">.</span><span class="fu">createWriteStream</span>(<span class="vs">`</span><span class="sc">${</span><span class="bu">__dirname</span><span class="sc">}</span><span class="vs">/</span><span class="sc">${</span>paperFileName<span class="sc">}</span><span class="vs">.zip`</span>)<span class="op">;</span></span>
+<span id="cb6-31"><a aria-hidden="true" href="#cb6-31" tabindex="-1"></a>  <span class="kw">let</span> archive <span class="op">=</span> <span class="fu">archiver</span>(<span class="st">'zip'</span><span class="op">,</span> {</span>
+<span id="cb6-32"><a aria-hidden="true" href="#cb6-32" tabindex="-1"></a>    <span class="dt">zlib</span><span class="op">:</span> { <span class="dt">level</span><span class="op">:</span> <span class="dv">9</span> } <span class="co">// 设置压缩级别</span></span>
+<span id="cb6-33"><a aria-hidden="true" href="#cb6-33" tabindex="-1"></a>  })</span>
+<span id="cb6-34"><a aria-hidden="true" href="#cb6-34" tabindex="-1"></a></span>
+<span id="cb6-35"><a aria-hidden="true" href="#cb6-35" tabindex="-1"></a>  <span class="co">// 文件输出流结束</span></span>
+<span id="cb6-36"><a aria-hidden="true" href="#cb6-36" tabindex="-1"></a>  output<span class="op">.</span><span class="fu">on</span>(<span class="st">'close'</span><span class="op">,</span> <span class="kw">function</span> () {</span>
+<span id="cb6-37"><a aria-hidden="true" href="#cb6-37" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"</span><span class="sc">\x1B</span><span class="st">[32m%s</span><span class="sc">\x1b</span><span class="st">[0m"</span><span class="op">,</span> <span class="vs">`</span></span>
+<span id="cb6-38"><a aria-hidden="true" href="#cb6-38" tabindex="-1"></a><span class="vs">   ------------------------------------------------</span></span>
+<span id="cb6-39"><a aria-hidden="true" href="#cb6-39" tabindex="-1"></a><span class="vs">                  </span><span class="sc">${</span>archive<span class="op">.</span><span class="fu">pointer</span>()<span class="sc">}</span><span class="vs"> 字节,已完成压缩</span></span>
+<span id="cb6-40"><a aria-hidden="true" href="#cb6-40" tabindex="-1"></a><span class="vs">   ------------------------------------------------</span></span>
+<span id="cb6-41"><a aria-hidden="true" href="#cb6-41" tabindex="-1"></a><span class="vs">  `</span>)<span class="op">;</span></span>
+<span id="cb6-42"><a aria-hidden="true" href="#cb6-42" tabindex="-1"></a>    <span class="fu">deleteFolder</span>(<span class="bu">__dirname</span> <span class="op">+</span> <span class="st">"/"</span> <span class="op">+</span> paperFileName)<span class="op">;</span><span class="co">// 删除文件夹</span></span>
+<span id="cb6-43"><a aria-hidden="true" href="#cb6-43" tabindex="-1"></a>    <span class="fu">detectionDeploy</span>()<span class="op">;</span><span class="co">// 检测部署</span></span>
+<span id="cb6-44"><a aria-hidden="true" href="#cb6-44" tabindex="-1"></a>  })</span>
+<span id="cb6-45"><a aria-hidden="true" href="#cb6-45" tabindex="-1"></a></span>
+<span id="cb6-46"><a aria-hidden="true" href="#cb6-46" tabindex="-1"></a>  <span class="co">// 数据源是否耗尽</span></span>
+<span id="cb6-47"><a aria-hidden="true" href="#cb6-47" tabindex="-1"></a>  output<span class="op">.</span><span class="fu">on</span>(<span class="st">'end'</span><span class="op">,</span> <span class="kw">function</span> () {</span>
+<span id="cb6-48"><a aria-hidden="true" href="#cb6-48" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'数据源已耗尽'</span>)</span>
+<span id="cb6-49"><a aria-hidden="true" href="#cb6-49" tabindex="-1"></a>  })</span>
+<span id="cb6-50"><a aria-hidden="true" href="#cb6-50" tabindex="-1"></a></span>
+<span id="cb6-51"><a aria-hidden="true" href="#cb6-51" tabindex="-1"></a>  <span class="co">// 存档警告</span></span>
+<span id="cb6-52"><a aria-hidden="true" href="#cb6-52" tabindex="-1"></a>  archive<span class="op">.</span><span class="fu">on</span>(<span class="st">'warning'</span><span class="op">,</span> <span class="kw">function</span> (err) {</span>
+<span id="cb6-53"><a aria-hidden="true" href="#cb6-53" tabindex="-1"></a>    <span class="cf">if</span> (err<span class="op">.</span><span class="at">code</span> <span class="op">===</span> <span class="st">'ENOENT'</span>) {</span>
+<span id="cb6-54"><a aria-hidden="true" href="#cb6-54" tabindex="-1"></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">warn</span>(<span class="st">'stat故障和其他非阻塞错误'</span>)</span>
+<span id="cb6-55"><a aria-hidden="true" href="#cb6-55" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb6-56"><a aria-hidden="true" href="#cb6-56" tabindex="-1"></a>      <span class="cf">throw</span> err</span>
+<span id="cb6-57"><a aria-hidden="true" href="#cb6-57" tabindex="-1"></a>    }</span>
+<span id="cb6-58"><a aria-hidden="true" href="#cb6-58" tabindex="-1"></a>  })</span>
+<span id="cb6-59"><a aria-hidden="true" href="#cb6-59" tabindex="-1"></a></span>
+<span id="cb6-60"><a aria-hidden="true" href="#cb6-60" tabindex="-1"></a>  <span class="co">// 存档出错</span></span>
+<span id="cb6-61"><a aria-hidden="true" href="#cb6-61" tabindex="-1"></a>  archive<span class="op">.</span><span class="fu">on</span>(<span class="st">'error'</span><span class="op">,</span> <span class="kw">function</span> (err) {</span>
+<span id="cb6-62"><a aria-hidden="true" href="#cb6-62" tabindex="-1"></a>    <span class="cf">throw</span> err</span>
+<span id="cb6-63"><a aria-hidden="true" href="#cb6-63" tabindex="-1"></a>  })</span>
+<span id="cb6-64"><a aria-hidden="true" href="#cb6-64" tabindex="-1"></a></span>
+<span id="cb6-65"><a aria-hidden="true" href="#cb6-65" tabindex="-1"></a>  <span class="co">// 通过管道方法将输出流存档到文件</span></span>
+<span id="cb6-66"><a aria-hidden="true" href="#cb6-66" tabindex="-1"></a>  archive<span class="op">.</span><span class="fu">pipe</span>(output)<span class="op">;</span></span>
+<span id="cb6-67"><a aria-hidden="true" href="#cb6-67" tabindex="-1"></a></span>
+<span id="cb6-68"><a aria-hidden="true" href="#cb6-68" tabindex="-1"></a>  <span class="co">//打包build里面的所有文件和目录</span></span>
+<span id="cb6-69"><a aria-hidden="true" href="#cb6-69" tabindex="-1"></a>  archive<span class="op">.</span><span class="fu">directory</span>(paperFileName <span class="op">+</span> <span class="st">'/'</span><span class="op">,</span> <span class="kw">false</span>)<span class="op">;</span></span>
+<span id="cb6-70"><a aria-hidden="true" href="#cb6-70" tabindex="-1"></a></span>
+<span id="cb6-71"><a aria-hidden="true" href="#cb6-71" tabindex="-1"></a>  <span class="co">//完成归档</span></span>
+<span id="cb6-72"><a aria-hidden="true" href="#cb6-72" tabindex="-1"></a>  archive<span class="op">.</span><span class="fu">finalize</span>()<span class="op">;</span></span>
+<span id="cb6-73"><a aria-hidden="true" href="#cb6-73" tabindex="-1"></a>}</span>
+<span id="cb6-74"><a aria-hidden="true" href="#cb6-74" tabindex="-1"></a></span>
+<span id="cb6-75"><a aria-hidden="true" href="#cb6-75" tabindex="-1"></a><span class="kw">function</span> <span class="fu">detectionDeploy</span>() {</span>
+<span id="cb6-76"><a aria-hidden="true" href="#cb6-76" tabindex="-1"></a>  <span class="cf">if</span>(<span class="bu">Object</span><span class="op">.</span><span class="fu">keys</span>(DeployConfig)<span class="op">.</span><span class="at">length</span><span class="op">==</span><span class="dv">0</span>){</span>
+<span id="cb6-77"><a aria-hidden="true" href="#cb6-77" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"</span><span class="sc">\x1B</span><span class="st">[33m%s</span><span class="sc">\x1b</span><span class="st">[0m"</span><span class="op">,</span> <span class="st">'已压缩本地zip包服务器未配置无法部署'</span>)<span class="op">;</span></span>
+<span id="cb6-78"><a aria-hidden="true" href="#cb6-78" tabindex="-1"></a>    <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb6-79"><a aria-hidden="true" href="#cb6-79" tabindex="-1"></a>  }</span>
+<span id="cb6-80"><a aria-hidden="true" href="#cb6-80" tabindex="-1"></a>  <span class="kw">const</span> readline <span class="op">=</span> <span class="pp">require</span>(<span class="st">'readline'</span>)<span class="op">.</span><span class="fu">createInterface</span>({</span>
+<span id="cb6-81"><a aria-hidden="true" href="#cb6-81" tabindex="-1"></a>    <span class="dt">input</span><span class="op">:</span> <span class="bu">process</span><span class="op">.</span><span class="at">stdin</span><span class="op">,</span></span>
+<span id="cb6-82"><a aria-hidden="true" href="#cb6-82" tabindex="-1"></a>    <span class="dt">output</span><span class="op">:</span> <span class="bu">process</span><span class="op">.</span><span class="at">stdout</span><span class="op">,</span></span>
+<span id="cb6-83"><a aria-hidden="true" href="#cb6-83" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb6-84"><a aria-hidden="true" href="#cb6-84" tabindex="-1"></a>  readline<span class="op">.</span><span class="fu">question</span>(<span class="vs">`?请输入希望的部署环境  </span><span class="sc">${</span><span class="bu">Object</span><span class="op">.</span><span class="fu">keys</span>(DeployConfig)<span class="op">.</span><span class="fu">join</span>(<span class="st">' 或 '</span>)<span class="sc">}</span><span class="vs"> (0表示不希望压缩zip和部署) </span><span class="sc">\n</span><span class="vs">`</span><span class="op">,</span> environmenttxt <span class="kw">=&gt;</span> {</span>
+<span id="cb6-85"><a aria-hidden="true" href="#cb6-85" tabindex="-1"></a>    <span class="kw">let</span> environment <span class="op">=</span> environmenttxt<span class="op">.</span><span class="fu">trim</span>()<span class="op">;</span><span class="co">//处理首位空格</span></span>
+<span id="cb6-86"><a aria-hidden="true" href="#cb6-86" tabindex="-1"></a>    <span class="cf">if</span> (environment <span class="kw">in</span> DeployConfig) {</span>
+<span id="cb6-87"><a aria-hidden="true" href="#cb6-87" tabindex="-1"></a>      <span class="cf">if</span> (</span>
+<span id="cb6-88"><a aria-hidden="true" href="#cb6-88" tabindex="-1"></a>        DeployConfig[environment]<span class="op">.</span><span class="at">host</span> <span class="op">&amp;&amp;</span></span>
+<span id="cb6-89"><a aria-hidden="true" href="#cb6-89" tabindex="-1"></a>        DeployConfig[environment]<span class="op">.</span><span class="at">port</span> <span class="op">&amp;&amp;</span></span>
+<span id="cb6-90"><a aria-hidden="true" href="#cb6-90" tabindex="-1"></a>        DeployConfig[environment]<span class="op">.</span><span class="at">username</span> <span class="op">&amp;&amp;</span></span>
+<span id="cb6-91"><a aria-hidden="true" href="#cb6-91" tabindex="-1"></a>        DeployConfig[environment]<span class="op">.</span><span class="at">password</span> <span class="op">&amp;&amp;</span></span>
+<span id="cb6-92"><a aria-hidden="true" href="#cb6-92" tabindex="-1"></a>        DeployConfig[environment]<span class="op">.</span><span class="at">serverpath</span></span>
+<span id="cb6-93"><a aria-hidden="true" href="#cb6-93" tabindex="-1"></a>      ) {</span>
+<span id="cb6-94"><a aria-hidden="true" href="#cb6-94" tabindex="-1"></a>        <span class="co">// 参数有效</span></span>
+<span id="cb6-95"><a aria-hidden="true" href="#cb6-95" tabindex="-1"></a>        <span class="fu">connect</span>(DeployConfig[environment])<span class="op">;</span></span>
+<span id="cb6-96"><a aria-hidden="true" href="#cb6-96" tabindex="-1"></a>      } <span class="cf">else</span> {</span>
+<span id="cb6-97"><a aria-hidden="true" href="#cb6-97" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"</span><span class="sc">\x1B</span><span class="st">[33m%s</span><span class="sc">\x1b</span><span class="st">[0m"</span><span class="op">,</span> <span class="st">'Error:请检查传入参数是否规范'</span>)</span>
+<span id="cb6-98"><a aria-hidden="true" href="#cb6-98" tabindex="-1"></a>      }</span>
+<span id="cb6-99"><a aria-hidden="true" href="#cb6-99" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (environment <span class="op">==</span> <span class="dv">0</span>) {</span>
+<span id="cb6-100"><a aria-hidden="true" href="#cb6-100" tabindex="-1"></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"</span><span class="sc">\x1B</span><span class="st">[33m%s</span><span class="sc">\x1b</span><span class="st">[0m"</span><span class="op">,</span> <span class="st">'Error:部署中断'</span>)</span>
+<span id="cb6-101"><a aria-hidden="true" href="#cb6-101" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb6-102"><a aria-hidden="true" href="#cb6-102" tabindex="-1"></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"</span><span class="sc">\x1B</span><span class="st">[33m%s</span><span class="sc">\x1b</span><span class="st">[0m"</span><span class="op">,</span> <span class="st">'Error:意料之外的环境'</span>)</span>
+<span id="cb6-103"><a aria-hidden="true" href="#cb6-103" tabindex="-1"></a>    }</span>
+<span id="cb6-104"><a aria-hidden="true" href="#cb6-104" tabindex="-1"></a>    readline<span class="op">.</span><span class="fu">close</span>()<span class="op">;</span></span>
+<span id="cb6-105"><a aria-hidden="true" href="#cb6-105" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb6-106"><a aria-hidden="true" href="#cb6-106" tabindex="-1"></a>}</span>
+<span id="cb6-107"><a aria-hidden="true" href="#cb6-107" tabindex="-1"></a></span>
+<span id="cb6-108"><a aria-hidden="true" href="#cb6-108" tabindex="-1"></a><span class="kw">function</span> <span class="fu">connect</span>(serverConfig) {</span>
+<span id="cb6-109"><a aria-hidden="true" href="#cb6-109" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"</span><span class="sc">\x1B</span><span class="st">[36m%s</span><span class="sc">\x1b</span><span class="st">[0m"</span><span class="op">,</span> <span class="st">"-----------准备连接服务器-----------"</span>)<span class="op">;</span></span>
+<span id="cb6-110"><a aria-hidden="true" href="#cb6-110" tabindex="-1"></a>  conn<span class="op">.</span><span class="fu">on</span>(<span class="st">'ready'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb6-111"><a aria-hidden="true" href="#cb6-111" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"</span><span class="sc">\x1B</span><span class="st">[36m%s</span><span class="sc">\x1b</span><span class="st">[0m"</span><span class="op">,</span> <span class="st">"-----------连接服务器成功 准备上传文件-----------"</span>)<span class="op">;</span></span>
+<span id="cb6-112"><a aria-hidden="true" href="#cb6-112" tabindex="-1"></a>    <span class="co">// 保证服务器下当前目录存在</span></span>
+<span id="cb6-113"><a aria-hidden="true" href="#cb6-113" tabindex="-1"></a>    <span class="fu">useExec</span>(<span class="vs">`mkdir -p </span><span class="sc">${</span>serverConfig<span class="op">.</span><span class="at">serverpath</span><span class="sc">}</span><span class="vs">/ &amp;&amp; cd </span><span class="sc">${</span>serverConfig<span class="op">.</span><span class="at">serverpath</span><span class="sc">}</span><span class="vs">/ &amp;&amp; rm -rf *`</span>)<span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb6-114"><a aria-hidden="true" href="#cb6-114" tabindex="-1"></a>      conn<span class="op">.</span><span class="fu">sftp</span>((err<span class="op">,</span> sftp) <span class="kw">=&gt;</span> {</span>
+<span id="cb6-115"><a aria-hidden="true" href="#cb6-115" tabindex="-1"></a>        sftp<span class="op">.</span><span class="fu">fastPut</span>(<span class="vs">`</span><span class="sc">${</span><span class="bu">__dirname</span><span class="sc">}</span><span class="vs">/</span><span class="sc">${</span>paperFileName<span class="sc">}</span><span class="vs">.zip`</span><span class="op">,</span> <span class="vs">`</span><span class="sc">${</span>serverConfig<span class="op">.</span><span class="at">serverpath</span><span class="sc">}</span><span class="vs">/</span><span class="sc">${</span>paperFileName<span class="sc">}</span><span class="vs">.zip`</span><span class="op">,</span> {}<span class="op">,</span> (err<span class="op">,</span> result) <span class="kw">=&gt;</span> {</span>
+<span id="cb6-116"><a aria-hidden="true" href="#cb6-116" tabindex="-1"></a>          <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"</span><span class="sc">\x1B</span><span class="st">[32m%s</span><span class="sc">\x1b</span><span class="st">[0m"</span><span class="op">,</span> <span class="vs">`文件上传完成 : </span><span class="sc">${</span><span class="bu">__dirname</span><span class="sc">}</span><span class="vs">/</span><span class="sc">${</span>paperFileName<span class="sc">}</span><span class="vs">.zip 已部署服务器 </span><span class="sc">${</span>serverConfig<span class="op">.</span><span class="at">serverpath</span><span class="sc">}</span><span class="vs">/</span><span class="sc">${</span>paperFileName<span class="sc">}</span><span class="vs">.zip`</span>)<span class="op">;</span></span>
+<span id="cb6-117"><a aria-hidden="true" href="#cb6-117" tabindex="-1"></a>          <span class="co">// 解压文件停止连接数据库</span></span>
+<span id="cb6-118"><a aria-hidden="true" href="#cb6-118" tabindex="-1"></a>          <span class="fu">useExec</span>(<span class="vs">`</span></span>
+<span id="cb6-119"><a aria-hidden="true" href="#cb6-119" tabindex="-1"></a><span class="vs">              cd </span><span class="sc">${</span>serverConfig<span class="op">.</span><span class="at">serverpath</span><span class="sc">}</span><span class="vs">/ &amp;&amp; </span><span class="sc">\</span></span>
+<span id="cb6-120"><a aria-hidden="true" href="#cb6-120" tabindex="-1"></a><span class="vs">              unzip </span><span class="sc">${</span>paperFileName<span class="sc">}</span><span class="vs">.zip &amp;&amp; </span><span class="sc">\</span></span>
+<span id="cb6-121"><a aria-hidden="true" href="#cb6-121" tabindex="-1"></a><span class="vs">              rm -rf </span><span class="sc">${</span>paperFileName<span class="sc">}</span><span class="vs">.zip &amp;&amp; </span><span class="sc">\</span></span>
+<span id="cb6-122"><a aria-hidden="true" href="#cb6-122" tabindex="-1"></a><span class="vs">              exit</span></span>
+<span id="cb6-123"><a aria-hidden="true" href="#cb6-123" tabindex="-1"></a><span class="vs">            `</span>)<span class="op">.</span><span class="fu">then</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb6-124"><a aria-hidden="true" href="#cb6-124" tabindex="-1"></a>            conn<span class="op">.</span><span class="fu">end</span>()<span class="op">;</span></span>
+<span id="cb6-125"><a aria-hidden="true" href="#cb6-125" tabindex="-1"></a>            <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"</span><span class="sc">\x1B</span><span class="st">[35m%s</span><span class="sc">\x1b</span><span class="st">[0m"</span><span class="op">,</span> <span class="vs">`部署完成喽`</span>)<span class="op">;</span></span>
+<span id="cb6-126"><a aria-hidden="true" href="#cb6-126" tabindex="-1"></a>          })</span>
+<span id="cb6-127"><a aria-hidden="true" href="#cb6-127" tabindex="-1"></a></span>
+<span id="cb6-128"><a aria-hidden="true" href="#cb6-128" tabindex="-1"></a>        })</span>
+<span id="cb6-129"><a aria-hidden="true" href="#cb6-129" tabindex="-1"></a>      })</span>
+<span id="cb6-130"><a aria-hidden="true" href="#cb6-130" tabindex="-1"></a>    })<span class="op">.</span><span class="fu">catch</span>(err <span class="kw">=&gt;</span> { })</span>
+<span id="cb6-131"><a aria-hidden="true" href="#cb6-131" tabindex="-1"></a>  })<span class="op">.</span><span class="fu">on</span>(<span class="st">"error"</span><span class="op">,</span> err <span class="kw">=&gt;</span> {</span>
+<span id="cb6-132"><a aria-hidden="true" href="#cb6-132" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"</span><span class="sc">\x1B</span><span class="st">[31m%s</span><span class="sc">\x1b</span><span class="st">[0m"</span><span class="op">,</span> <span class="vs">`连接服务器失败</span><span class="sc">${</span>err<span class="op">.</span><span class="fu">toString</span>()<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
+<span id="cb6-133"><a aria-hidden="true" href="#cb6-133" tabindex="-1"></a>  })<span class="op">.</span><span class="fu">connect</span>({</span>
+<span id="cb6-134"><a aria-hidden="true" href="#cb6-134" tabindex="-1"></a>    <span class="dt">host</span><span class="op">:</span> serverConfig<span class="op">.</span><span class="at">host</span><span class="op">,</span></span>
+<span id="cb6-135"><a aria-hidden="true" href="#cb6-135" tabindex="-1"></a>    <span class="dt">port</span><span class="op">:</span> serverConfig<span class="op">.</span><span class="at">port</span><span class="op">,</span></span>
+<span id="cb6-136"><a aria-hidden="true" href="#cb6-136" tabindex="-1"></a>    <span class="dt">username</span><span class="op">:</span> serverConfig<span class="op">.</span><span class="at">username</span><span class="op">,</span></span>
+<span id="cb6-137"><a aria-hidden="true" href="#cb6-137" tabindex="-1"></a>    <span class="dt">password</span><span class="op">:</span> serverConfig<span class="op">.</span><span class="at">password</span></span>
+<span id="cb6-138"><a aria-hidden="true" href="#cb6-138" tabindex="-1"></a>  })</span>
+<span id="cb6-139"><a aria-hidden="true" href="#cb6-139" tabindex="-1"></a>}</span>
+<span id="cb6-140"><a aria-hidden="true" href="#cb6-140" tabindex="-1"></a></span>
+<span id="cb6-141"><a aria-hidden="true" href="#cb6-141" tabindex="-1"></a></span>
+<span id="cb6-142"><a aria-hidden="true" href="#cb6-142" tabindex="-1"></a><span class="kw">function</span> <span class="fu">useExec</span>(cmd) {</span>
+<span id="cb6-143"><a aria-hidden="true" href="#cb6-143" tabindex="-1"></a>  <span class="co">// 所有错误命令直接关闭服务器连接</span></span>
+<span id="cb6-144"><a aria-hidden="true" href="#cb6-144" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">new</span> <span class="bu">Promise</span>((resolve<span class="op">,</span> reject) <span class="kw">=&gt;</span> {</span>
+<span id="cb6-145"><a aria-hidden="true" href="#cb6-145" tabindex="-1"></a>    conn<span class="op">.</span><span class="fu">exec</span>(cmd<span class="op">,</span> <span class="kw">async</span> (err<span class="op">,</span> stream) <span class="kw">=&gt;</span> {</span>
+<span id="cb6-146"><a aria-hidden="true" href="#cb6-146" tabindex="-1"></a>      <span class="cf">if</span> (err) { <span class="co">// 异常抛出</span></span>
+<span id="cb6-147"><a aria-hidden="true" href="#cb6-147" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"</span><span class="sc">\x1B</span><span class="st">[35m%s</span><span class="sc">\x1b</span><span class="st">[0m"</span><span class="op">,</span> <span class="vs">`异常抛出</span><span class="sc">${</span>err<span class="op">.</span><span class="fu">toString</span>()<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
+<span id="cb6-148"><a aria-hidden="true" href="#cb6-148" tabindex="-1"></a>        conn<span class="op">.</span><span class="fu">end</span>()<span class="op">;</span></span>
+<span id="cb6-149"><a aria-hidden="true" href="#cb6-149" tabindex="-1"></a>        <span class="fu">reject</span>(err)<span class="op">;</span></span>
+<span id="cb6-150"><a aria-hidden="true" href="#cb6-150" tabindex="-1"></a>      }</span>
+<span id="cb6-151"><a aria-hidden="true" href="#cb6-151" tabindex="-1"></a>      stream<span class="op">.</span><span class="fu">on</span>(<span class="st">'close'</span><span class="op">,</span> <span class="kw">async</span> (code<span class="op">,</span> signal) <span class="kw">=&gt;</span> { <span class="co">// 结束 code: 代码 signal: 信号</span></span>
+<span id="cb6-152"><a aria-hidden="true" href="#cb6-152" tabindex="-1"></a>        <span class="cf">if</span> (code <span class="op">!==</span> <span class="dv">0</span>) {</span>
+<span id="cb6-153"><a aria-hidden="true" href="#cb6-153" tabindex="-1"></a>          <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"</span><span class="sc">\x1B</span><span class="st">[35m%s</span><span class="sc">\x1b</span><span class="st">[0m"</span><span class="op">,</span> <span class="vs">`脚本异常退出code: </span><span class="sc">${</span>code<span class="sc">}</span><span class="vs">，异常信号signal:</span><span class="sc">${</span>signal<span class="sc">}</span><span class="vs">`</span>)</span>
+<span id="cb6-154"><a aria-hidden="true" href="#cb6-154" tabindex="-1"></a>          conn<span class="op">.</span><span class="fu">end</span>()<span class="op">;</span></span>
+<span id="cb6-155"><a aria-hidden="true" href="#cb6-155" tabindex="-1"></a>          <span class="fu">reject</span>(<span class="st">"</span><span class="sc">\x1B</span><span class="st">[35m%s</span><span class="sc">\x1b</span><span class="st">[0m"</span><span class="op">,</span> <span class="vs">`脚本异常退出code: </span><span class="sc">${</span>code<span class="sc">}</span><span class="vs">，异常信号signal:</span><span class="sc">${</span>signal<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
+<span id="cb6-156"><a aria-hidden="true" href="#cb6-156" tabindex="-1"></a>        }</span>
+<span id="cb6-157"><a aria-hidden="true" href="#cb6-157" tabindex="-1"></a>        <span class="co">// 程序执行成功</span></span>
+<span id="cb6-158"><a aria-hidden="true" href="#cb6-158" tabindex="-1"></a>        <span class="co">// 自己的业务逻辑....记得conn.end();</span></span>
+<span id="cb6-159"><a aria-hidden="true" href="#cb6-159" tabindex="-1"></a>        <span class="fu">resolve</span>()<span class="op">;</span></span>
+<span id="cb6-160"><a aria-hidden="true" href="#cb6-160" tabindex="-1"></a>      })<span class="op">.</span><span class="fu">on</span>(<span class="st">'data'</span><span class="op">,</span> <span class="kw">async</span> data <span class="kw">=&gt;</span> { <span class="co">// 数据 程序执行中echo出的数据</span></span>
+<span id="cb6-161"><a aria-hidden="true" href="#cb6-161" tabindex="-1"></a>        <span class="co">// console.log("\x1B[35m%s\x1b[0m",`echo出的数据${data.toString()}`);</span></span>
+<span id="cb6-162"><a aria-hidden="true" href="#cb6-162" tabindex="-1"></a>      })<span class="op">.</span><span class="at">stderr</span><span class="op">.</span><span class="fu">on</span>(<span class="st">'data'</span><span class="op">,</span> <span class="kw">async</span> data <span class="kw">=&gt;</span> { <span class="co">// 标准错误</span></span>
+<span id="cb6-163"><a aria-hidden="true" href="#cb6-163" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"</span><span class="sc">\x1B</span><span class="st">[35m%s</span><span class="sc">\x1b</span><span class="st">[0m"</span><span class="op">,</span> <span class="vs">`标准错误</span><span class="sc">${</span>data<span class="op">.</span><span class="fu">toString</span>()<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
+<span id="cb6-164"><a aria-hidden="true" href="#cb6-164" tabindex="-1"></a>        conn<span class="op">.</span><span class="fu">end</span>()<span class="op">;</span></span>
+<span id="cb6-165"><a aria-hidden="true" href="#cb6-165" tabindex="-1"></a>        <span class="fu">reject</span>(data)<span class="op">;</span></span>
+<span id="cb6-166"><a aria-hidden="true" href="#cb6-166" tabindex="-1"></a>      })<span class="op">;</span></span>
+<span id="cb6-167"><a aria-hidden="true" href="#cb6-167" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb6-168"><a aria-hidden="true" href="#cb6-168" tabindex="-1"></a>  })</span>
+<span id="cb6-169"><a aria-hidden="true" href="#cb6-169" tabindex="-1"></a>}</span>
+<span id="cb6-170"><a aria-hidden="true" href="#cb6-170" tabindex="-1"></a></span>
+<span id="cb6-171"><a aria-hidden="true" href="#cb6-171" tabindex="-1"></a><span class="co">// 删除文件</span></span>
+<span id="cb6-172"><a aria-hidden="true" href="#cb6-172" tabindex="-1"></a><span class="kw">function</span> <span class="fu">deleteFolder</span>(path) {</span>
+<span id="cb6-173"><a aria-hidden="true" href="#cb6-173" tabindex="-1"></a>  <span class="kw">let</span> files <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb6-174"><a aria-hidden="true" href="#cb6-174" tabindex="-1"></a>  <span class="cf">if</span> (fs<span class="op">.</span><span class="fu">existsSync</span>(path)) {</span>
+<span id="cb6-175"><a aria-hidden="true" href="#cb6-175" tabindex="-1"></a>    files <span class="op">=</span> fs<span class="op">.</span><span class="fu">readdirSync</span>(path)<span class="op">;</span></span>
+<span id="cb6-176"><a aria-hidden="true" href="#cb6-176" tabindex="-1"></a>    files<span class="op">.</span><span class="fu">forEach</span>(<span class="kw">function</span> (file<span class="op">,</span> index) {</span>
+<span id="cb6-177"><a aria-hidden="true" href="#cb6-177" tabindex="-1"></a>      <span class="kw">let</span> dirPath <span class="op">=</span> path <span class="op">+</span> <span class="st">"/"</span> <span class="op">+</span> file<span class="op">;</span></span>
+<span id="cb6-178"><a aria-hidden="true" href="#cb6-178" tabindex="-1"></a>      <span class="cf">if</span> (fs<span class="op">.</span><span class="fu">statSync</span>(dirPath)<span class="op">.</span><span class="fu">isDirectory</span>()) {</span>
+<span id="cb6-179"><a aria-hidden="true" href="#cb6-179" tabindex="-1"></a>        <span class="fu">deleteFolder</span>(dirPath)<span class="op">;</span></span>
+<span id="cb6-180"><a aria-hidden="true" href="#cb6-180" tabindex="-1"></a>      } <span class="cf">else</span> {</span>
+<span id="cb6-181"><a aria-hidden="true" href="#cb6-181" tabindex="-1"></a>        fs<span class="op">.</span><span class="fu">unlinkSync</span>(dirPath)<span class="op">;</span></span>
+<span id="cb6-182"><a aria-hidden="true" href="#cb6-182" tabindex="-1"></a>      }</span>
+<span id="cb6-183"><a aria-hidden="true" href="#cb6-183" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb6-184"><a aria-hidden="true" href="#cb6-184" tabindex="-1"></a>    fs<span class="op">.</span><span class="fu">rmdirSync</span>(path)<span class="op">;</span></span>
+<span id="cb6-185"><a aria-hidden="true" href="#cb6-185" tabindex="-1"></a>  }</span>
+<span id="cb6-186"><a aria-hidden="true" href="#cb6-186" tabindex="-1"></a>}</span></code></pre></div>
+<h2 id="三github-pages">三、GitHub Pages</h2>
+<h3 id="适用情况-项目在git仓库上传代码后自动打包部署">适用情况：
+项目在git仓库，上传代码后自动打包部署</h3>
+<p>1、如果你要部署在 <code>https://&lt;USERNAME&gt;.github.io/</code> 上;
+<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fcn.vitejs.dev%2Fguide%2Fstatic-deploy.html%23github-pages" target="_blank" title="https://cn.vitejs.dev/guide/static-deploy.html#github-pages">参考</a></p>
+<p>2、在你的项目中，创建一个 <code>deploy.sh</code> 脚本，包含以下内容（注意高亮的行，按需使用），运行脚本来部署站点：</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb7-1"><a aria-hidden="true" href="#cb7-1" tabindex="-1"></a><span class="co">#!/usr/bin/env sh</span></span>
+<span id="cb7-2"><a aria-hidden="true" href="#cb7-2" tabindex="-1"></a></span>
+<span id="cb7-3"><a aria-hidden="true" href="#cb7-3" tabindex="-1"></a># 发生错误时终止</span>
+<span id="cb7-4"><a aria-hidden="true" href="#cb7-4" tabindex="-1"></a><span class="kw">set</span> <span class="op">-</span>e</span>
+<span id="cb7-5"><a aria-hidden="true" href="#cb7-5" tabindex="-1"></a></span>
+<span id="cb7-6"><a aria-hidden="true" href="#cb7-6" tabindex="-1"></a># 构建</span>
+<span id="cb7-7"><a aria-hidden="true" href="#cb7-7" tabindex="-1"></a>npm run build</span>
+<span id="cb7-8"><a aria-hidden="true" href="#cb7-8" tabindex="-1"></a></span>
+<span id="cb7-9"><a aria-hidden="true" href="#cb7-9" tabindex="-1"></a># 进入构建文件夹</span>
+<span id="cb7-10"><a aria-hidden="true" href="#cb7-10" tabindex="-1"></a>cd dist</span>
+<span id="cb7-11"><a aria-hidden="true" href="#cb7-11" tabindex="-1"></a></span>
+<span id="cb7-12"><a aria-hidden="true" href="#cb7-12" tabindex="-1"></a># 放置 <span class="op">.</span><span class="at">nojekyll</span> 以绕过 Jekyll 的处理。</span>
+<span id="cb7-13"><a aria-hidden="true" href="#cb7-13" tabindex="-1"></a>echo <span class="op">&gt;</span> <span class="op">.</span><span class="at">nojekyll</span></span>
+<span id="cb7-14"><a aria-hidden="true" href="#cb7-14" tabindex="-1"></a></span>
+<span id="cb7-15"><a aria-hidden="true" href="#cb7-15" tabindex="-1"></a># 如果你要部署到自定义域名</span>
+<span id="cb7-16"><a aria-hidden="true" href="#cb7-16" tabindex="-1"></a># echo <span class="st">'www.example.com'</span> <span class="op">&gt;</span> CNAME</span>
+<span id="cb7-17"><a aria-hidden="true" href="#cb7-17" tabindex="-1"></a></span>
+<span id="cb7-18"><a aria-hidden="true" href="#cb7-18" tabindex="-1"></a>git init</span>
+<span id="cb7-19"><a aria-hidden="true" href="#cb7-19" tabindex="-1"></a>git checkout <span class="op">-</span>B main</span>
+<span id="cb7-20"><a aria-hidden="true" href="#cb7-20" tabindex="-1"></a>git add <span class="op">-</span>A</span>
+<span id="cb7-21"><a aria-hidden="true" href="#cb7-21" tabindex="-1"></a>git commit <span class="op">-</span>m <span class="st">'deploy'</span></span>
+<span id="cb7-22"><a aria-hidden="true" href="#cb7-22" tabindex="-1"></a></span>
+<span id="cb7-23"><a aria-hidden="true" href="#cb7-23" tabindex="-1"></a># 如果你要部署在 https<span class="op">:</span><span class="co">//&lt;USERNAME&gt;.github.io</span></span>
+<span id="cb7-24"><a aria-hidden="true" href="#cb7-24" tabindex="-1"></a># git push <span class="op">-</span>f git@github<span class="op">.</span><span class="at">com</span><span class="op">:&lt;</span>USERNAME<span class="op">&gt;</span><span class="ss">/&lt;USERNAME&gt;.github.io.git main</span></span>
+<span id="cb7-25"><a aria-hidden="true" href="#cb7-25" tabindex="-1"></a></span>
+<span id="cb7-26"><a aria-hidden="true" href="#cb7-26" tabindex="-1"></a><span class="ss"># 如果你要部署在 https://&lt;USERNAME&gt;.github.io/</span><span class="op">&lt;</span>REPO<span class="op">&gt;</span></span>
+<span id="cb7-27"><a aria-hidden="true" href="#cb7-27" tabindex="-1"></a># git push <span class="op">-</span>f git@github<span class="op">.</span><span class="at">com</span><span class="op">:&lt;</span>USERNAME<span class="op">&gt;</span><span class="ss">/&lt;REPO&gt;.git main:gh-pages</span></span>
+<span id="cb7-28"><a aria-hidden="true" href="#cb7-28" tabindex="-1"></a></span>
+<span id="cb7-29"><a aria-hidden="true" href="#cb7-29" tabindex="-1"></a><span class="ss">cd -</span></span></code></pre></div>
+<h2 id="四宝塔">四、宝塔</h2>
+<h3 id="适用情况项目部署在服务器需要上传整个项目">适用情况：项目部署在服务器，需要上传整个项目</h3>
+<p>1、安装宝塔</p>
+<ul>
+<li><p>Centos安装脚本
+<code>yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh ed8484bec</code></p></li>
+<li><p>Ubuntu/Deepin安装脚本
+<code>wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh &amp;&amp; sudo bash install.sh ed8484bec</code></p></li>
+<li><p>Debian安装脚本
+<code>wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh &amp;&amp; bash install.sh ed8484bec</code></p></li>
+</ul>
+<p>2、基础环境</p>
+<p><img alt="aa9a5f4180e42a06ac4008ac9ba51ed.png" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51bfd95391b047dc9ee85a282bd9a58b~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p>
+<p>3、Node环境</p>
+<p><img alt="image.png" loading="lazy" src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9e04da8f10a44c028b8f6b4c3176f481~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p>
+<p>4、上传Node项目
+文件上传后会根据package.json中安装相关依赖，执行dev、build等命令</p>
+<p><img alt="image.png" loading="lazy" src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7f41ecafd0f24f80913c268cd43e57f3~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p>
+      </article>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vue深入学习—数据响应式原理 | CocoonBreak</title>
+    <meta name="description" content="1、数据响应式原理 1.1、MVVM是什么？ 简单来说，就是数据变了，视图也会跟着变，首先你得定义一个带有{{ }}的模板Model，当数据中的值变化了，视图View就会跟着变化；视图模型View-model是模板Model和视图View之...">
+    <meta property="og:title" content="Vue深入学习—数据响应式原理 | CocoonBreak">
+    <meta property="og:description" content="1、数据响应式原理 1.1、MVVM是什么？ 简单来说，就是数据变了，视图也会跟着变，首先你得定义一个带有{{ }}的模板Model，当数据中的值变化了，视图View就会跟着变化；视图模型View-model是模板Model和视图View之...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2021-07-23-6988131835343699998/">
+    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
+  </head>
+  <body>
+    <div class="article-shell">
+      <nav class="insight-nav">
+        <a href="/">← 首页</a>
+        <a href="/insights/">同步文章</a>
+        <a href="https://juejin.cn/post/6988131835343699998" target="_blank" rel="noreferrer">掘金原文</a>
+      </nav>
+
+      <header class="article-hero" data-reveal>
+        <div class="article-meta">
+          <span>2021.07.23</span><span>Vue.js</span>
+        </div>
+        <h1>Vue深入学习—数据响应式原理</h1>
+        <p class="article-intro">1、数据响应式原理 1.1、MVVM是什么？ 简单来说，就是数据变了，视图也会跟着变，首先你得定义一个带有{{ }}的模板Model，当数据中的值变化了，视图View就会跟着变化；视图模型View-model是模板Model和视图View之...</p>
+        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/6988131835343699998" target="_blank" rel="noreferrer">掘金原文</a>。</div>
+      </header>
+
+      <article class="prose" data-reveal>
+        <blockquote>
+<p><strong>1、数据响应式原理</strong></p>
+</blockquote>
+<blockquote>
+<p><strong>1.1、MVVM是什么？</strong><br/>
+简单来说，就是数据变了，视图也会跟着变，首先你得定义一个带有{{
+}}的模板Model，当数据中的值变化了，视图View就会跟着变化；视图模型View-model是模板Model和视图View之间的桥梁，Vue属于非侵入式，React和小程序就是侵入式（数据变化的时候需要调用提前写好的API）</p>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="co">// Vue数据变化，非侵入式</span></span>
+<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a><span class="kw">this</span><span class="op">.</span><span class="at">a</span> <span class="op">++</span></span>
+<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a><span class="co">// React、小程序数据变化，侵入式</span></span>
+<span id="cb1-4"><a aria-hidden="true" href="#cb1-4" tabindex="-1"></a><span class="kw">this</span><span class="op">.</span><span class="fu">setState</span>({</span>
+<span id="cb1-5"><a aria-hidden="true" href="#cb1-5" tabindex="-1"></a>    <span class="dt">a</span><span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">state</span><span class="op">.</span><span class="at">a</span> <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb1-6"><a aria-hidden="true" href="#cb1-6" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<blockquote>
+<p><strong>1.2、数据响应式的中心思想？</strong><br/>
+通过重写数据的get和set属性方法，让数据在被渲染时，把所有用到自己的订阅者，存放在自己的订阅者列表中；当数据发生改变时，该方法通知所有订阅了自己的订阅者，达到重新渲染的目的。</p>
+</blockquote>
+<p><img alt="官方提供深入响应式原理图" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/db3eb564229e4100b7044a177a0211f7~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
+<p>是不是有点懵了？没关系，举个简单的栗子🌰：</p>
+<blockquote>
+<p>《西游记》中的妖怪（Watcher）时刻惦记（订阅）着唐僧（Data），想吃唐僧肉，孙悟空（Component）在听到（get搜集依赖）唐僧被抓的消息后，做出反应（set触发依赖），准备救出师傅。于是来到了妖怪（Watcher）的老巢，跟它大战几个回合后，成功救出唐僧（Data），达到重新踏上（渲染）西天取经（Vittual
+DOM Tree）的目的！</p>
+</blockquote>
+<blockquote>
+<p><strong>2、尤大找到了一把”上帝的钥匙🔑“
+Object.defineProperty()方法：</strong></p>
+</blockquote>
+<p>数据劫持、数据代理，MDN这样描述的：直接在一个对象上定义一个新属性，或者修改一个对象的现有属性，并返回此对象。</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="bu">Object</span><span class="op">.</span><span class="fu">defineProperty</span>(<span class="fu">obj</span>(定义那个对象)，<span class="st">'a(定义这个对象的什么属性)'</span>，{</span>
+<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a>  <span class="co">//属性值定义为多少</span></span>
+<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a>    <span class="dt">value</span> <span class="op">:</span> <span class="dv">3</span></span>
+<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a>})</span>
+<span id="cb2-5"><a aria-hidden="true" href="#cb2-5" tabindex="-1"></a><span class="co">//-----------------------------------🌰栗子🌰-------------------------------------------</span></span>
+<span id="cb2-6"><a aria-hidden="true" href="#cb2-6" tabindex="-1"></a><span class="kw">var</span> obj <span class="op">=</span> {}<span class="op">;</span></span>
+<span id="cb2-7"><a aria-hidden="true" href="#cb2-7" tabindex="-1"></a><span class="bu">Object</span><span class="op">.</span><span class="fu">defineProperty</span>(obj<span class="op">,</span> <span class="st">'a'</span><span class="op">,</span> {</span>
+<span id="cb2-8"><a aria-hidden="true" href="#cb2-8" tabindex="-1"></a>    <span class="kw">get</span>(){</span>
+<span id="cb2-9"><a aria-hidden="true" href="#cb2-9" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'访问obj的a属性！'</span>)<span class="op">;</span></span>
+<span id="cb2-10"><a aria-hidden="true" href="#cb2-10" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">7</span><span class="op">;</span></span>
+<span id="cb2-11"><a aria-hidden="true" href="#cb2-11" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb2-12"><a aria-hidden="true" href="#cb2-12" tabindex="-1"></a>    <span class="kw">set</span>(){</span>
+<span id="cb2-13"><a aria-hidden="true" href="#cb2-13" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'改变obj的a属性'</span><span class="op">,</span> newValue)<span class="op">;</span></span>
+<span id="cb2-14"><a aria-hidden="true" href="#cb2-14" tabindex="-1"></a>        temp <span class="op">=</span> newValue<span class="op">;</span></span>
+<span id="cb2-15"><a aria-hidden="true" href="#cb2-15" tabindex="-1"></a>    }</span>
+<span id="cb2-16"><a aria-hidden="true" href="#cb2-16" tabindex="-1"></a>})</span>
+<span id="cb2-17"><a aria-hidden="true" href="#cb2-17" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(obj<span class="op">.</span><span class="at">a</span>)<span class="op">;</span>  <span class="co">// 7</span></span>
+<span id="cb2-18"><a aria-hidden="true" href="#cb2-18" tabindex="-1"></a>obj<span class="op">.</span><span class="at">a</span> <span class="op">=</span> <span class="dv">9</span><span class="op">;</span>           <span class="co">//修改a的值</span></span>
+<span id="cb2-19"><a aria-hidden="true" href="#cb2-19" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(obj<span class="op">.</span><span class="at">a</span>)<span class="op">;</span>  <span class="co">// 7</span></span></code></pre></div>
+<blockquote>
+<p><strong>3、弥补这把钥匙🔑的不足 defineReactive函数：</strong><br/>
+为了解决defineProperty()方法存在的问题，get中并不能返回set刚刚修改过的值，再次调用会显示修改前的值，怎么解决这个问题？在外面定义一个全局变量，用来周转变量值。</p>
+</blockquote>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="co">// 解决defineProperty存在到的问题</span></span>
+<span id="cb3-2"><a aria-hidden="true" href="#cb3-2" tabindex="-1"></a><span class="fu">defineProperty</span>(<span class="fu">data</span>(数据对象)<span class="fu">，key</span>(键名)<span class="op">,</span><span class="fu">val</span>(值)){</span>
+<span id="cb3-3"><a aria-hidden="true" href="#cb3-3" tabindex="-1"></a>    </span>
+<span id="cb3-4"><a aria-hidden="true" href="#cb3-4" tabindex="-1"></a>}</span>
+<span id="cb3-5"><a aria-hidden="true" href="#cb3-5" tabindex="-1"></a><span class="co">//-----------------------------------🌰栗子🌰-------------------------------------------</span></span>
+<span id="cb3-6"><a aria-hidden="true" href="#cb3-6" tabindex="-1"></a><span class="kw">var</span> obj <span class="op">=</span> {}<span class="op">;</span></span>
+<span id="cb3-7"><a aria-hidden="true" href="#cb3-7" tabindex="-1"></a><span class="kw">var</span> temp<span class="op">;</span>   <span class="co">//在外面定义一个全局变量，用来周转变量值。</span></span>
+<span id="cb3-8"><a aria-hidden="true" href="#cb3-8" tabindex="-1"></a><span class="kw">function</span> <span class="fu">defineProperty</span>(data<span class="op">,</span> key<span class="op">,</span> val) {</span>
+<span id="cb3-9"><a aria-hidden="true" href="#cb3-9" tabindex="-1"></a>    <span class="bu">Object</span><span class="op">.</span><span class="fu">defineProperty</span>(data<span class="op">,</span> key<span class="op">,</span> {</span>
+<span id="cb3-10"><a aria-hidden="true" href="#cb3-10" tabindex="-1"></a>        <span class="co">// 可枚举</span></span>
+<span id="cb3-11"><a aria-hidden="true" href="#cb3-11" tabindex="-1"></a>        <span class="dt">enumerable</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb3-12"><a aria-hidden="true" href="#cb3-12" tabindex="-1"></a>        <span class="co">// 可被配置，比如被delete</span></span>
+<span id="cb3-13"><a aria-hidden="true" href="#cb3-13" tabindex="-1"></a>        <span class="dt">configurable</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb3-14"><a aria-hidden="true" href="#cb3-14" tabindex="-1"></a>        <span class="kw">get</span>(){</span>
+<span id="cb3-15"><a aria-hidden="true" href="#cb3-15" tabindex="-1"></a>            <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'访问obj的'</span><span class="op">+</span> key <span class="op">+</span><span class="st">'属性！'</span>)<span class="op">;</span></span>
+<span id="cb3-16"><a aria-hidden="true" href="#cb3-16" tabindex="-1"></a>            <span class="cf">return</span> temp<span class="op">;</span></span>
+<span id="cb3-17"><a aria-hidden="true" href="#cb3-17" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb3-18"><a aria-hidden="true" href="#cb3-18" tabindex="-1"></a>        <span class="kw">set</span>(){</span>
+<span id="cb3-19"><a aria-hidden="true" href="#cb3-19" tabindex="-1"></a>            <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'改变obj的'</span><span class="op">+</span> key <span class="op">+</span><span class="st">'属性!'</span><span class="op">,</span> newValue)<span class="op">;</span></span>
+<span id="cb3-20"><a aria-hidden="true" href="#cb3-20" tabindex="-1"></a>            <span class="cf">if</span>(val <span class="op">==</span> newValue){</span>
+<span id="cb3-21"><a aria-hidden="true" href="#cb3-21" tabindex="-1"></a>                <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb3-22"><a aria-hidden="true" href="#cb3-22" tabindex="-1"></a>            }</span>
+<span id="cb3-23"><a aria-hidden="true" href="#cb3-23" tabindex="-1"></a>            temp <span class="op">=</span> newValue<span class="op">;</span></span>
+<span id="cb3-24"><a aria-hidden="true" href="#cb3-24" tabindex="-1"></a>        }</span>
+<span id="cb3-25"><a aria-hidden="true" href="#cb3-25" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb3-26"><a aria-hidden="true" href="#cb3-26" tabindex="-1"></a>}</span>
+<span id="cb3-27"><a aria-hidden="true" href="#cb3-27" tabindex="-1"></a><span class="fu">defineReactive</span>(obj<span class="op">,</span> <span class="st">'a'</span><span class="op">,</span><span class="dv">10</span>)</span>
+<span id="cb3-28"><a aria-hidden="true" href="#cb3-28" tabindex="-1"></a> </span>
+<span id="cb3-29"><a aria-hidden="true" href="#cb3-29" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(obj<span class="op">.</span><span class="at">a</span>)<span class="op">;</span> <span class="co">// 访问obj的a属性！ 10</span></span>
+<span id="cb3-30"><a aria-hidden="true" href="#cb3-30" tabindex="-1"></a>obj<span class="op">.</span><span class="at">a</span> <span class="op">=</span> <span class="dv">69</span><span class="op">;</span>         <span class="co">//修改a的值</span></span>
+<span id="cb3-31"><a aria-hidden="true" href="#cb3-31" tabindex="-1"></a>obj<span class="op">.</span><span class="at">a</span> <span class="op">++;</span></span>
+<span id="cb3-32"><a aria-hidden="true" href="#cb3-32" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(obj<span class="op">.</span><span class="at">a</span>)<span class="op">;</span> <span class="co">// 修改obj的a属性！70</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="co">// definReactive 实现</span></span>
+<span id="cb4-2"><a aria-hidden="true" href="#cb4-2" tabindex="-1"></a>    <span class="co">// 简化后的版本 </span></span>
+<span id="cb4-3"><a aria-hidden="true" href="#cb4-3" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">defineReactive</span>( target<span class="op">,</span> key<span class="op">,</span> value<span class="op">,</span> enumerable ) {</span>
+<span id="cb4-4"><a aria-hidden="true" href="#cb4-4" tabindex="-1"></a>      <span class="co">// 折中处理后, this 就是 Vue 实例</span></span>
+<span id="cb4-5"><a aria-hidden="true" href="#cb4-5" tabindex="-1"></a>      <span class="kw">let</span> that <span class="op">=</span> <span class="kw">this</span><span class="op">;</span></span>
+<span id="cb4-6"><a aria-hidden="true" href="#cb4-6" tabindex="-1"></a></span>
+<span id="cb4-7"><a aria-hidden="true" href="#cb4-7" tabindex="-1"></a>      <span class="co">// 函数内部就是一个局部作用域, 这个 value 就只在函数内使用的变量 ( 闭包 )</span></span>
+<span id="cb4-8"><a aria-hidden="true" href="#cb4-8" tabindex="-1"></a>      <span class="cf">if</span> ( <span class="kw">typeof</span> value <span class="op">===</span> <span class="st">'object'</span> <span class="op">&amp;&amp;</span> value <span class="op">!=</span> <span class="kw">null</span> <span class="op">&amp;&amp;</span> <span class="op">!</span><span class="bu">Array</span><span class="op">.</span><span class="fu">isArray</span>( value ) ) {</span>
+<span id="cb4-9"><a aria-hidden="true" href="#cb4-9" tabindex="-1"></a>        <span class="co">// 是非数组的引用类型</span></span>
+<span id="cb4-10"><a aria-hidden="true" href="#cb4-10" tabindex="-1"></a>        <span class="fu">reactify</span>( value )<span class="op">;</span> <span class="co">// 递归</span></span>
+<span id="cb4-11"><a aria-hidden="true" href="#cb4-11" tabindex="-1"></a>      }</span>
+<span id="cb4-12"><a aria-hidden="true" href="#cb4-12" tabindex="-1"></a></span>
+<span id="cb4-13"><a aria-hidden="true" href="#cb4-13" tabindex="-1"></a>      <span class="bu">Object</span><span class="op">.</span><span class="fu">defineProperty</span>( target<span class="op">,</span> key<span class="op">,</span> {</span>
+<span id="cb4-14"><a aria-hidden="true" href="#cb4-14" tabindex="-1"></a>        <span class="dt">configurable</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb4-15"><a aria-hidden="true" href="#cb4-15" tabindex="-1"></a>        <span class="dt">enumerable</span><span class="op">:</span> <span class="op">!!</span>enumerable<span class="op">,</span></span>
+<span id="cb4-16"><a aria-hidden="true" href="#cb4-16" tabindex="-1"></a></span>
+<span id="cb4-17"><a aria-hidden="true" href="#cb4-17" tabindex="-1"></a>        <span class="kw">get</span> () {</span>
+<span id="cb4-18"><a aria-hidden="true" href="#cb4-18" tabindex="-1"></a>          <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>( <span class="vs">`读取 </span><span class="sc">${</span>key<span class="sc">}</span><span class="vs"> 属性`</span> )<span class="op">;</span> <span class="co">// 额外</span></span>
+<span id="cb4-19"><a aria-hidden="true" href="#cb4-19" tabindex="-1"></a>          <span class="cf">return</span> value<span class="op">;</span></span>
+<span id="cb4-20"><a aria-hidden="true" href="#cb4-20" tabindex="-1"></a>        }<span class="op">,</span></span>
+<span id="cb4-21"><a aria-hidden="true" href="#cb4-21" tabindex="-1"></a>        <span class="kw">set</span> ( newVal ) {</span>
+<span id="cb4-22"><a aria-hidden="true" href="#cb4-22" tabindex="-1"></a>          <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>( <span class="vs">`设置 </span><span class="sc">${</span>key<span class="sc">}</span><span class="vs"> 属性为: </span><span class="sc">${</span>newVal<span class="sc">}</span><span class="vs">`</span> )<span class="op">;</span> <span class="co">// 额外</span></span>
+<span id="cb4-23"><a aria-hidden="true" href="#cb4-23" tabindex="-1"></a></span>
+<span id="cb4-24"><a aria-hidden="true" href="#cb4-24" tabindex="-1"></a>          value <span class="op">=</span> <span class="fu">reactify</span>( newVal )<span class="op">;</span></span>
+<span id="cb4-25"><a aria-hidden="true" href="#cb4-25" tabindex="-1"></a></span>
+<span id="cb4-26"><a aria-hidden="true" href="#cb4-26" tabindex="-1"></a>        }</span>
+<span id="cb4-27"><a aria-hidden="true" href="#cb4-27" tabindex="-1"></a>      } )<span class="op">;</span></span>
+<span id="cb4-28"><a aria-hidden="true" href="#cb4-28" tabindex="-1"></a>    }</span></code></pre></div>
+<blockquote>
+<p><strong>4、数组的响应式处理</strong><br/>
+改写了7个属性，push(<strong>数组尾部推入</strong>)、pop(<strong>数组尾部移除</strong>)、shift(<strong>数组头部插入</strong>)、unshift(<strong>数组尾部移出</strong>)、splice(<strong>切割</strong>)、sort(<strong>就地排序</strong>)、reverse(<strong>排序位置颠倒</strong>)；</p>
+</blockquote>
+<div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a aria-hidden="true" href="#cb5-1" tabindex="-1"></a><span class="co">// 得到Array.prototype</span></span>
+<span id="cb5-2"><a aria-hidden="true" href="#cb5-2" tabindex="-1"></a><span class="kw">const</span> arrayPrototype <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="at">prototype</span></span>
+<span id="cb5-3"><a aria-hidden="true" href="#cb5-3" tabindex="-1"></a><span class="co">// 以Array.prototype为原型，创建arrayMethods对象，定义__proto方法</span></span>
+<span id="cb5-4"><a aria-hidden="true" href="#cb5-4" tabindex="-1"></a><span class="kw">const</span> arrayMethods <span class="op">=</span> <span class="bu">Object</span><span class="op">.</span><span class="fu">create</span>(arrayPrototype)<span class="op">;</span></span>
+<span id="cb5-5"><a aria-hidden="true" href="#cb5-5" tabindex="-1"></a><span class="co">// 要被改写的7个数组方法</span></span>
+<span id="cb5-6"><a aria-hidden="true" href="#cb5-6" tabindex="-1"></a><span class="kw">const</span> methodsNeedChange <span class="op">=</span> [</span>
+<span id="cb5-7"><a aria-hidden="true" href="#cb5-7" tabindex="-1"></a>    <span class="st">'push'</span><span class="op">,</span><span class="st">'pop'</span><span class="op">,</span><span class="st">'shift'</span><span class="op">,</span><span class="st">'unshift'</span><span class="op">,</span><span class="st">'splice'</span><span class="op">,</span><span class="st">'sort'</span><span class="op">,</span><span class="st">'reverse'</span></span>
+<span id="cb5-8"><a aria-hidden="true" href="#cb5-8" tabindex="-1"></a>]<span class="op">;</span></span>
+<span id="cb5-9"><a aria-hidden="true" href="#cb5-9" tabindex="-1"></a><span class="co">//遍历</span></span>
+<span id="cb5-10"><a aria-hidden="true" href="#cb5-10" tabindex="-1"></a>methdsNeedChange<span class="op">.</span><span class="fu">forEach</span>(methodName <span class="kw">=&gt;</span> {</span>
+<span id="cb5-11"><a aria-hidden="true" href="#cb5-11" tabindex="-1"></a>    <span class="co">// 备份原来的方法</span></span>
+<span id="cb5-12"><a aria-hidden="true" href="#cb5-12" tabindex="-1"></a>    <span class="kw">const</span> original <span class="op">=</span> arrayPrototype[methodName]<span class="op">;</span></span>
+<span id="cb5-13"><a aria-hidden="true" href="#cb5-13" tabindex="-1"></a>    <span class="co">// 把数组身上的__obj__取出来，</span></span>
+<span id="cb5-14"><a aria-hidden="true" href="#cb5-14" tabindex="-1"></a>    <span class="kw">const</span> ob <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">__obj__</span><span class="op">;</span></span>
+<span id="cb5-15"><a aria-hidden="true" href="#cb5-15" tabindex="-1"></a>    <span class="co">// 有三种方法push/unshift/splice能够插入新项，把插入的新项变为observe</span></span>
+<span id="cb5-16"><a aria-hidden="true" href="#cb5-16" tabindex="-1"></a>    <span class="kw">let</span> inserted <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb5-17"><a aria-hidden="true" href="#cb5-17" tabindex="-1"></a>    <span class="cf">switch</span>(methodName){</span>
+<span id="cb5-18"><a aria-hidden="true" href="#cb5-18" tabindex="-1"></a>        <span class="cf">case</span> <span class="st">'push'</span><span class="op">:</span></span>
+<span id="cb5-19"><a aria-hidden="true" href="#cb5-19" tabindex="-1"></a>        <span class="cf">case</span> <span class="st">'unshift'</span><span class="op">:</span></span>
+<span id="cb5-20"><a aria-hidden="true" href="#cb5-20" tabindex="-1"></a>            inserted <span class="op">=</span> <span class="kw">arguments</span><span class="op">;</span></span>
+<span id="cb5-21"><a aria-hidden="true" href="#cb5-21" tabindex="-1"></a>            <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb5-22"><a aria-hidden="true" href="#cb5-22" tabindex="-1"></a>        <span class="cf">case</span> <span class="st">'splice'</span><span class="op">:</span></span>
+<span id="cb5-23"><a aria-hidden="true" href="#cb5-23" tabindex="-1"></a>            <span class="co">// splice格式是splice(下标，数量，插入的新项)  </span></span>
+<span id="cb5-24"><a aria-hidden="true" href="#cb5-24" tabindex="-1"></a>            inserted <span class="op">=</span> <span class="kw">arguments</span><span class="op">.</span><span class="fu">slice</span>(<span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb5-25"><a aria-hidden="true" href="#cb5-25" tabindex="-1"></a>            brack<span class="op">;</span></span>
+<span id="cb5-26"><a aria-hidden="true" href="#cb5-26" tabindex="-1"></a>    }</span>
+<span id="cb5-27"><a aria-hidden="true" href="#cb5-27" tabindex="-1"></a>    <span class="co">// 判断有没有要插入的新项，让新项也变为响应的</span></span>
+<span id="cb5-28"><a aria-hidden="true" href="#cb5-28" tabindex="-1"></a>    <span class="cf">if</span>(inserted){</span>
+<span id="cb5-29"><a aria-hidden="true" href="#cb5-29" tabindex="-1"></a>        ob<span class="op">.</span><span class="fu">obsetveArray</span>(inserted)<span class="op">;</span></span>
+<span id="cb5-30"><a aria-hidden="true" href="#cb5-30" tabindex="-1"></a>    }</span>
+<span id="cb5-31"><a aria-hidden="true" href="#cb5-31" tabindex="-1"></a>    <span class="co">// 定义新的方法</span></span>
+<span id="cb5-32"><a aria-hidden="true" href="#cb5-32" tabindex="-1"></a>    <span class="fu">def</span>(arrayMethods<span class="op">,</span> methodName<span class="op">,</span> <span class="kw">function</span>(){</span>
+<span id="cb5-33"><a aria-hidden="true" href="#cb5-33" tabindex="-1"></a>        original<span class="op">.</span><span class="fu">apply</span>(<span class="kw">this</span><span class="op">,</span> <span class="kw">arguments</span>)<span class="op">;</span></span>
+<span id="cb5-34"><a aria-hidden="true" href="#cb5-34" tabindex="-1"></a>    }<span class="op">,</span><span class="kw">false</span>)<span class="op">;</span></span>
+<span id="cb5-35"><a aria-hidden="true" href="#cb5-35" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<blockquote>
+<p>面试题：<strong>数组中的响应式是怎么实现的？</strong></p>
+</blockquote>
+<blockquote>
+<p>答：以Array.prototype为原型，创建了一个arrayMethods的对象，用一个非常强硬的手段，Object.setPrototypeOf()让数组的_
+<em>proto</em>
+_强制指向arrayMethods，这样就可以调用新的改写的7个方法。</p>
+</blockquote>
+<blockquote>
+<p><strong>5、什么是依赖？</strong><br/>
+需要用到数据的递归就是<strong>依赖</strong>，在getter中<strong>收集</strong>依赖，在setter中<strong>触发</strong>依赖；收集依赖的代码封装成Dep类，每个Observer的实例都有一个Dep的实例；Watcher是一个中介，数据发生变化时通过watcher中转，通知组件。</p>
+</blockquote>
+<p><img loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9f0ebbe27df54cc786f235a980e935f7~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
+<blockquote>
+<p>再拿《西游记》说，妖怪（Watcher）是怎么知道唐僧（Data）途径此地的呢？那自然是派出去巡山（depend方法）的小妖精（Dep-订阅器）发现（搜集）的；这个小妖精（Dep）巡山有三个目的（属性）：目标（target）、id、subs(所有巡山的信息)，当唐僧（Data）经过某个提前布置好的陷阱（生命周期的hook）时，就会被抓，压入巢穴（targetStack栈顶），交给妖怪（Watcher）。</p>
+</blockquote>
+<blockquote>
+<p><strong>6、什么时候能够把Wather放入到Dep当中？</strong></p>
+</blockquote>
+<p>Dep类：封装搜集的代码，管理依赖。<br/>
+Wather类：①将属性值更新；②执行watch中的回调函数handler(newVal,
+oldVal)</p>
+<p>先把wather设置到全局指定位置，然后读取数据；getter函数当中，会从全局唯一的地方，读取正在读取数据的wather，并把wather再搜集到Dep当中。</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a aria-hidden="true" href="#cb6-1" tabindex="-1"></a><span class="co">//wather.js</span></span>
+<span id="cb6-2"><a aria-hidden="true" href="#cb6-2" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> <span class="kw">class</span> Dep{</span>
+<span id="cb6-3"><a aria-hidden="true" href="#cb6-3" tabindex="-1"></a>    <span class="fu">constructor</span>(){</span>
+<span id="cb6-4"><a aria-hidden="true" href="#cb6-4" tabindex="-1"></a>        <span class="co">// 用数组存储自己的订阅者，subs是subscribes订阅者的意思。</span></span>
+<span id="cb6-5"><a aria-hidden="true" href="#cb6-5" tabindex="-1"></a>        <span class="co">// 数组里面存放的是wather的实例。</span></span>
+<span id="cb6-6"><a aria-hidden="true" href="#cb6-6" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">subs</span> <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb6-7"><a aria-hidden="true" href="#cb6-7" tabindex="-1"></a>    }</span>
+<span id="cb6-8"><a aria-hidden="true" href="#cb6-8" tabindex="-1"></a>    <span class="co">// 添加订阅</span></span>
+<span id="cb6-9"><a aria-hidden="true" href="#cb6-9" tabindex="-1"></a>    <span class="fu">addSub</span>(sub){</span>
+<span id="cb6-10"><a aria-hidden="true" href="#cb6-10" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">shbs</span><span class="op">.</span><span class="fu">push</span>(sub)<span class="op">;</span></span>
+<span id="cb6-11"><a aria-hidden="true" href="#cb6-11" tabindex="-1"></a>    }</span>
+<span id="cb6-12"><a aria-hidden="true" href="#cb6-12" tabindex="-1"></a>    <span class="co">// 添加依赖</span></span>
+<span id="cb6-13"><a aria-hidden="true" href="#cb6-13" tabindex="-1"></a>    <span class="fu">dpend</span>(){</span>
+<span id="cb6-14"><a aria-hidden="true" href="#cb6-14" tabindex="-1"></a>        <span class="co">// 指定全局的位置</span></span>
+<span id="cb6-15"><a aria-hidden="true" href="#cb6-15" tabindex="-1"></a>        <span class="cf">if</span>(Dep<span class="op">.</span><span class="at">target</span>){</span>
+<span id="cb6-16"><a aria-hidden="true" href="#cb6-16" tabindex="-1"></a>            <span class="co">// 如果Dep.target存下，则推入到subs里面</span></span>
+<span id="cb6-17"><a aria-hidden="true" href="#cb6-17" tabindex="-1"></a>            <span class="kw">this</span><span class="op">.</span><span class="fu">addSub</span>(Dep<span class="op">.</span><span class="at">target</span>)<span class="op">;</span></span>
+<span id="cb6-18"><a aria-hidden="true" href="#cb6-18" tabindex="-1"></a>            <span class="co">// </span></span>
+<span id="cb6-19"><a aria-hidden="true" href="#cb6-19" tabindex="-1"></a>            </span>
+<span id="cb6-20"><a aria-hidden="true" href="#cb6-20" tabindex="-1"></a>        }</span>
+<span id="cb6-21"><a aria-hidden="true" href="#cb6-21" tabindex="-1"></a>    }</span>
+<span id="cb6-22"><a aria-hidden="true" href="#cb6-22" tabindex="-1"></a>    <span class="co">// 通知更新</span></span>
+<span id="cb6-23"><a aria-hidden="true" href="#cb6-23" tabindex="-1"></a>    <span class="fu">notify</span>(){</span>
+<span id="cb6-24"><a aria-hidden="true" href="#cb6-24" tabindex="-1"></a>        <span class="co">// 浅克隆一份</span></span>
+<span id="cb6-25"><a aria-hidden="true" href="#cb6-25" tabindex="-1"></a>        </span>
+<span id="cb6-26"><a aria-hidden="true" href="#cb6-26" tabindex="-1"></a>    }</span>
+<span id="cb6-27"><a aria-hidden="true" href="#cb6-27" tabindex="-1"></a>}</span></code></pre></div>
+<blockquote>
+<p><strong>7、Vue中怎么识别 a.b.c 的？</strong><br/>
+利用高阶函数，逐层取出里面的值。</p>
+</blockquote>
+<p><img loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0aee1d2e83c84b88aa9cad007e2e114a~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
+<p>循环查找目标属性流程图</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a aria-hidden="true" href="#cb7-1" tabindex="-1"></a><span class="op">&lt;</span>script<span class="op">&gt;</span></span>
+<span id="cb7-2"><a aria-hidden="true" href="#cb7-2" tabindex="-1"></a>    <span class="co">// 深层套娃</span></span>
+<span id="cb7-3"><a aria-hidden="true" href="#cb7-3" tabindex="-1"></a>    <span class="kw">var</span> o <span class="op">=</span> {</span>
+<span id="cb7-4"><a aria-hidden="true" href="#cb7-4" tabindex="-1"></a>        <span class="dt">a</span><span class="op">:</span> {</span>
+<span id="cb7-5"><a aria-hidden="true" href="#cb7-5" tabindex="-1"></a>            <span class="dt">b</span><span class="op">:</span> {</span>
+<span id="cb7-6"><a aria-hidden="true" href="#cb7-6" tabindex="-1"></a>                <span class="dt">c</span><span class="op">:</span> {</span>
+<span id="cb7-7"><a aria-hidden="true" href="#cb7-7" tabindex="-1"></a>                    <span class="dt">d</span><span class="op">:</span> <span class="dv">68</span></span>
+<span id="cb7-8"><a aria-hidden="true" href="#cb7-8" tabindex="-1"></a>                }</span>
+<span id="cb7-9"><a aria-hidden="true" href="#cb7-9" tabindex="-1"></a>            }</span>
+<span id="cb7-10"><a aria-hidden="true" href="#cb7-10" tabindex="-1"></a>        }</span>
+<span id="cb7-11"><a aria-hidden="true" href="#cb7-11" tabindex="-1"></a>    }</span>
+<span id="cb7-12"><a aria-hidden="true" href="#cb7-12" tabindex="-1"></a>    <span class="kw">var</span> str <span class="op">=</span> <span class="st">'a.b.c.d'</span><span class="op">;</span></span>
+<span id="cb7-13"><a aria-hidden="true" href="#cb7-13" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">parsePath</span>(str){</span>
+<span id="cb7-14"><a aria-hidden="true" href="#cb7-14" tabindex="-1"></a>        <span class="co">// 根据 . 来进行拆分</span></span>
+<span id="cb7-15"><a aria-hidden="true" href="#cb7-15" tabindex="-1"></a>        <span class="kw">var</span> segments <span class="op">=</span> str<span class="op">.</span><span class="fu">split</span>(<span class="st">'.'</span>)<span class="op">;</span></span>
+<span id="cb7-16"><a aria-hidden="true" href="#cb7-16" tabindex="-1"></a>        <span class="co">// 返回接收对象的函数</span></span>
+<span id="cb7-17"><a aria-hidden="true" href="#cb7-17" tabindex="-1"></a>        <span class="cf">return</span>(obj) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-18"><a aria-hidden="true" href="#cb7-18" tabindex="-1"></a>            <span class="co">// 遍历接收的函数</span></span>
+<span id="cb7-19"><a aria-hidden="true" href="#cb7-19" tabindex="-1"></a>            <span class="cf">for</span>(<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> segments<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span>){</span>
+<span id="cb7-20"><a aria-hidden="true" href="#cb7-20" tabindex="-1"></a>                <span class="co">// 判断obj存不存在</span></span>
+<span id="cb7-21"><a aria-hidden="true" href="#cb7-21" tabindex="-1"></a>                <span class="cf">if</span>(<span class="op">!</span>obj) <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb7-22"><a aria-hidden="true" href="#cb7-22" tabindex="-1"></a>                <span class="co">// 一层一层的剥开 o 的心</span></span>
+<span id="cb7-23"><a aria-hidden="true" href="#cb7-23" tabindex="-1"></a>                obj <span class="op">=</span> obj[segments[i]]</span>
+<span id="cb7-24"><a aria-hidden="true" href="#cb7-24" tabindex="-1"></a>            }</span>
+<span id="cb7-25"><a aria-hidden="true" href="#cb7-25" tabindex="-1"></a>            <span class="co">// 高阶函数，函数内部返回一个函数</span></span>
+<span id="cb7-26"><a aria-hidden="true" href="#cb7-26" tabindex="-1"></a>            <span class="cf">return</span> obj<span class="op">;</span></span>
+<span id="cb7-27"><a aria-hidden="true" href="#cb7-27" tabindex="-1"></a>        }</span>
+<span id="cb7-28"><a aria-hidden="true" href="#cb7-28" tabindex="-1"></a>    }</span>
+<span id="cb7-29"><a aria-hidden="true" href="#cb7-29" tabindex="-1"></a>    <span class="co">// 调用一下</span></span>
+<span id="cb7-30"><a aria-hidden="true" href="#cb7-30" tabindex="-1"></a>    <span class="kw">var</span> fn <span class="op">=</span> <span class="fu">parsePath</span>(str)<span class="op">;</span></span>
+<span id="cb7-31"><a aria-hidden="true" href="#cb7-31" tabindex="-1"></a>    <span class="kw">var</span> v <span class="op">=</span> <span class="fu">fn</span>(o)<span class="op">;</span></span>
+<span id="cb7-32"><a aria-hidden="true" href="#cb7-32" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(v)<span class="op">;</span></span>
+<span id="cb7-33"><a aria-hidden="true" href="#cb7-33" tabindex="-1"></a><span class="op">&lt;/</span>script<span class="op">&gt;</span></span></code></pre></div>
+<p>参考：<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Flinks.jianshu.com%2Fgo%3Fto%3Dhttps%253A%252F%252Fwww.infoq.cn%252Farticle%252Fwe3l33h5zgyyg6gc9hri" target="_blank" title="https://links.jianshu.com/go?to=https%3A%2F%2Fwww.infoq.cn%2Farticle%2Fwe3l33h5zgyyg6gc9hri"><a href="http://www.infoq.cn/article/we3…">www.infoq.cn/article/we3…</a></a></p>
+<p><a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Flinks.jianshu.com%2Fgo%3Fto%3Dhttps%253A%252F%252Fjuejin.cn%252Fpost%252F6921911974611664903" target="_blank" title="https://links.jianshu.com/go?to=https%3A%2F%2Fjuejin.cn%2Fpost%2F6921911974611664903">juejin.cn/post/692191…</a></p>
+<p><a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Flinks.jianshu.com%2Fgo%3Fto%3Dhttps%253A%252F%252Fwww.bilibili.com%252Fvideo%252FBV1G54y1s7xV%253Fp%253D5%2526spm_id_from%253DpageDriver" target="_blank" title="https://links.jianshu.com/go?to=https%3A%2F%2Fwww.bilibili.com%2Fvideo%2FBV1G54y1s7xV%3Fp%3D5%26spm_id_from%3DpageDriver"><a href="http://www.bilibili.com/video/BV1G5…">www.bilibili.com/video/BV1G5…</a></a></p>
+      </article>
+    </div>
+  </body>
+</html>

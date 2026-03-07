@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PHP乱码怎么办？五种方法彻底解决PHP乱码问题！ | CocoonBreak</title>
+    <meta name="description" content="对于刚接触PHP的新手来说，乱码可能会让你边临崩溃，但是你要习惯，既然想学好PHP，乱码是家常便饭，不管是老鸟还是新手，都会遇到乱码的问题，下面是我总结的几个常见并且有效的解决方法： 方法一：检查HTML文件是否加入UTF-8（国际化编码）...">
+    <meta property="og:title" content="PHP乱码怎么办？五种方法彻底解决PHP乱码问题！ | CocoonBreak">
+    <meta property="og:description" content="对于刚接触PHP的新手来说，乱码可能会让你边临崩溃，但是你要习惯，既然想学好PHP，乱码是家常便饭，不管是老鸟还是新手，都会遇到乱码的问题，下面是我总结的几个常见并且有效的解决方法： 方法一：检查HTML文件是否加入UTF-8（国际化编码）...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2021-02-25-6933161907629064205/">
+    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
+  </head>
+  <body>
+    <div class="article-shell">
+      <nav class="insight-nav">
+        <a href="/">← 首页</a>
+        <a href="/insights/">同步文章</a>
+        <a href="https://juejin.cn/post/6933161907629064205" target="_blank" rel="noreferrer">掘金原文</a>
+      </nav>
+
+      <header class="article-hero" data-reveal>
+        <div class="article-meta">
+          <span>2021.02.25</span><span>PHP</span>
+        </div>
+        <h1>PHP乱码怎么办？五种方法彻底解决PHP乱码问题！</h1>
+        <p class="article-intro">对于刚接触PHP的新手来说，乱码可能会让你边临崩溃，但是你要习惯，既然想学好PHP，乱码是家常便饭，不管是老鸟还是新手，都会遇到乱码的问题，下面是我总结的几个常见并且有效的解决方法： 方法一：检查HTML文件是否加入UTF-8（国际化编码）...</p>
+        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/6933161907629064205" target="_blank" rel="noreferrer">掘金原文</a>。</div>
+      </header>
+
+      <article class="prose" data-reveal>
+        <p>对于刚接触PHP的新手来说，乱码可能会让你边临崩溃，但是你要习惯，既然想学好PHP，乱码是家常便饭，不管是老鸟还是新手，都会遇到乱码的问题，下面是我总结的几个常见并且有效的解决方法：</p>
+<p><strong>方法一：检查HTML文件是否加入UTF-8（国际化编码）：UTF-8是没有国家的编码，独立于任何一种语言，任何语言都可以用。</strong></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode ini"><code class="sourceCode ini"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="dt">&lt;meta http-equiv</span><span class="ot">=</span><span class="st">"Content-Type" content="text/html; charset=utf-8"/&gt;</span></span></code></pre></div>
+<p><img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d8cb91c0d23e416699380dc46a3cacf1~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/>
+<strong>方法二：检查HTML和PHP混合页面是否加入UTF-8</strong></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a>    <span class="op">&lt;</span><span class="ot">?</span>php </span>
+<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a>        <span class="co">//声明文件解析的编码格式</span></span>
+<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a>        <span class="fu">header</span>(<span class="st">'Content-type:text/html;charset=utf-8'</span>)<span class="ot">;</span></span>
+<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a>    <span class="kw">?&gt;</span></span></code></pre></div>
+<p><img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/72ab882756aa4d9d800b2c1b00f3c329~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
+<p><strong>方法三：检查MySql和PHP混合页面是否加入UTF8,注意，这里是UTF8,
+不是UTF-8, 中间是没有 ‘-’ 的！</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a>    <span class="op">&lt;</span><span class="ot">?</span>php </span>
+<span id="cb3-2"><a aria-hidden="true" href="#cb3-2" tabindex="-1"></a>        <span class="er">mysql_query</span>(<span class="st">'SET NAMES UTF8'</span>)<span class="ot">;</span></span>
+<span id="cb3-3"><a aria-hidden="true" href="#cb3-3" tabindex="-1"></a>    <span class="kw">?&gt;</span></span></code></pre></div>
+<p><img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51a6e61be4424c58b557d05bf4b36a24~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/>
+<strong>如果是高版本，可以像这样写</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode php"><code class="sourceCode php"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="kw">&lt;?php</span> </span>
+<span id="cb4-2"><a aria-hidden="true" href="#cb4-2" tabindex="-1"></a>    <span class="va">$link</span> <span class="op">=</span> <span class="fu">mysqli_connect</span>(<span class="st">'localhost'</span><span class="ot">,</span><span class="st">'root'</span><span class="ot">,</span><span class="st">'root'</span>)<span class="ot">;</span><span class="co">//连接数据库</span></span>
+<span id="cb4-3"><a aria-hidden="true" href="#cb4-3" tabindex="-1"></a>    <span class="fu">mysqli_set_charset</span>(<span class="va">$link</span><span class="ot">,</span><span class="st">'uf8'</span>)<span class="ot">;</span>                <span class="co">//设置字符集</span></span>
+<span id="cb4-4"><a aria-hidden="true" href="#cb4-4" tabindex="-1"></a><span class="kw">?&gt;</span></span></code></pre></div>
+<p><img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/779653a73f074892a29b7a192dd871e8~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/> <strong>方法四：Window
+→Preferences →General →Worspace →Other:UT-8</strong> <img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/86f4e38d249b4203b57d09a106971d2c~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
+<p><img loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4922f5885b8d469d93c5ddb619c8b351~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/>
+<strong>方法五：进入phpStudy目录下的MySql,用记事本打开my.ini文件</strong>
+<img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f21c63f94e7540398f109b6ca7c212f9~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/> <img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0cbf396dfc474bb690f8669aa7227edb~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/> <img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4aa3f341c07d460fbd17a214720272cb~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/> <img alt="在这里插入图片描述" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71424dbd503f40e2bc63a2305b334c86~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/>
+<strong>最后点击保存，重启zend studio就行了</strong></p>
+      </article>
+    </div>
+  </body>
+</html>

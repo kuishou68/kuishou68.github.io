@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vite 工程化 手动分包 了解一下 | CocoonBreak</title>
+    <meta name="description" content="1.正常打包 聊一下vite打包上的优化，这里我们有一个vite工程，我们对它进行打包，打包完成后我们会发现，他的结果里面是把所有的东西全部合并到一个js里面。这个工程里面用到了vue、loadsh，像这些内容也会被合并到我们的打包结果里面...">
+    <meta property="og:title" content="Vite 工程化 手动分包 了解一下 | CocoonBreak">
+    <meta property="og:description" content="1.正常打包 聊一下vite打包上的优化，这里我们有一个vite工程，我们对它进行打包，打包完成后我们会发现，他的结果里面是把所有的东西全部合并到一个js里面。这个工程里面用到了vue、loadsh，像这些内容也会被合并到我们的打包结果里面...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2023-09-27-7283367128194056227/">
+    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
+  </head>
+  <body>
+    <div class="article-shell">
+      <nav class="insight-nav">
+        <a href="/">← 首页</a>
+        <a href="/insights/">同步文章</a>
+        <a href="https://juejin.cn/post/7283367128194056227" target="_blank" rel="noreferrer">掘金原文</a>
+      </nav>
+
+      <header class="article-hero" data-reveal>
+        <div class="article-meta">
+          <span>2023.09.27</span><span>前端</span><span>Vite</span>
+        </div>
+        <h1>Vite 工程化 手动分包 了解一下</h1>
+        <p class="article-intro">1.正常打包 聊一下vite打包上的优化，这里我们有一个vite工程，我们对它进行打包，打包完成后我们会发现，他的结果里面是把所有的东西全部合并到一个js里面。这个工程里面用到了vue、loadsh，像这些内容也会被合并到我们的打包结果里面...</p>
+        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/7283367128194056227" target="_blank" rel="noreferrer">掘金原文</a>。</div>
+      </header>
+
+      <article class="prose" data-reveal>
+        <h3 id="1正常打包">1.正常打包</h3>
+<p>聊一下vite打包上的优化，这里我们有一个vite工程，我们对它进行打包，打包完成后我们会发现，他的结果里面是把所有的东西全部合并到一个js里面。这个工程里面用到了vue、loadsh，像这些内容也会被合并到我们的打包结果里面去；</p>
+<p><img alt="image.png" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3084c67f4b6f4d9aac20a1f2121fc95f~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=1024&amp;h=768&amp;s=90833&amp;e=png&amp;b=272b33"/></p>
+<p>也就是说现在我们会遇到一个问题，就是我们打包出来的结果里面包含了loadsh、vue，还有我们自己的代码。</p>
+<p><img alt="image.png" loading="lazy" src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3f5ec1e74e094fccafb9f86854968f33~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=566&amp;h=425&amp;s=28761&amp;e=png&amp;b=ffffff"/></p>
+<h3 id="2对象属性分包">2.对象属性分包</h3>
+<p>你可能会问，这跟我有什么关系嘛？你可以想象得到，将来项目越来越大，变动比较大的是我们自己的业务代码，而这些第三方库，变动比较小，是相对比较稳定的；如果你不加处理的话，就意味着将来我们哪怕只改了我们自己的代码，整个打包出来的文件，它的<strong>文件指纹</strong>（就是
+index- 后面这一块）会导致用户端每次更新必须要重新下载整个js</p>
+<p>我们一般会怎么做呢？会把相对稳定的包给它踢出去，在打包结果里面，它们会形成独立的文件，这个文件可以是多个第三方库合并到一起的，也可以是单独的，这样一来由于你们比较稳定，所以里面的文件指纹也会相对比较稳定，不太容易发生变化；而将来这种不稳定的代码更新之后，用户只需要去下载业务代码就可以了，简称
+<strong>分包</strong>。</p>
+<p>在Vite里面有一个自动分包，使用动态导入 <code>import('loadsh')</code>
+，在Vite中，开发环境用的是esBuild，打包用的是rollup，想要影响打包结果，就得去vite里面配置rollup的选项，因为rollup里面是可以进行分包的，通过配置
+<strong>manualChunks</strong> ，这个chunks
+跟webpack的含义是一样的，<strong>块</strong>
+就是一个<strong>包</strong>，理清楚概念之后，就可以非常轻松的配置了；</p>
+<p>在 vue.config.js
+文件里面，使用build表示影响打包结果的配置，rollupOptios表示针对rollup的配置，剩下的里面就是吧rollup的配置给写进去就完事，使用
+manulChunks，键表示包的名字，值表示包含那些模块；</p>
+<p><img alt="image.png" loading="lazy" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0cc937b04549408a8a5755653eab17af~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=879&amp;h=482&amp;s=131199&amp;e=png&amp;b=282a36"/></p>
+<p><code>npm run build</code>
+重新打包结果中出现了两个js文件，其中以<code>a-</code>开头的里面包含的内容就是loadsh和Vue;</p>
+<p><img alt="image.png" loading="lazy" src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/112adc67247f4ea1b069669b7962ecbb~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=639&amp;h=183&amp;s=21059&amp;e=png&amp;b=282c34"/></p>
+<p>将来我们修改了业务代码重新打包的时候，变的是自己业务代码的js文件，而以<code>a-</code>也是不会改变<code>a-</code>的，</p>
+<p><img alt="image.png" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eb507dafc2b6498da8187859ff097033~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=705&amp;h=393&amp;s=43126&amp;e=png&amp;b=282c34"/></p>
+<h3 id="3函数分包">3.函数分包</h3>
+<p>项目中用到的第三方库特别多怎么办？难道也打包成一个js文件嘛？显然不合理，如果其中一个库更新了，我能不能单独升级这个包？答案是可以的；</p>
+<p><img alt="image.png" loading="lazy" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6ad00093cab74297a82f1e660dd5b80b~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=975&amp;h=558&amp;s=169492&amp;e=png&amp;b=282a36"/></p>
+<p>那么这样就完美了嘛？细心的小伙伴会发现，第三方包特别的情况，这样写下去，人都要麻了，那有没有更好的方案，有的！不把它配置为对象了，而是配置成函数
+<strong>manualChunks(id)</strong>
+，rollup在打包的时候，它会调用这个函数，把当前依赖模块的id传过来，我们可以打印id看一下有些啥！</p>
+<p><img alt="image.png" loading="lazy" src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/33e208b408894c4aa6d7ba3b652a313b~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=1024&amp;h=768&amp;s=102622&amp;e=png&amp;b=282c34"/> 打印结果里面主要包含
+<strong>node_modules</strong> 和我们自己文件的路径，那我们能不能把
+<strong>node_modules</strong> 合并成一个chunk 单独打包？</p>
+<p><img alt="image.png" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/999f8d49def0466b9e3ef475208d42d3~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=1069&amp;h=682&amp;s=253743&amp;e=png&amp;b=282a36"/></p>
+<p>看下打包结果：</p>
+<p><img alt="image.png" loading="lazy" src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9434d6c3a168445eaf30fc4d33fc2bf9~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=773&amp;h=271&amp;s=30053&amp;e=png&amp;b=282c34"/></p>
+      </article>
+    </div>
+  </body>
+</html>

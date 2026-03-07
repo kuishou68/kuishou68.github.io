@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>从 Vite 2.9 起，manualChunks 默认情况下不再被更改怎么办？看这里↓ | CocoonBreak</title>
+    <meta name="description" content="一、事情起因 1.1 自己0-1搭建的项目是 Vue3 + Vite(4.4.11) + pinia(2.1.7) + echarts(5.4.3) , 项目打包后控制台提示了一个小警告，强迫症患者这谁受得了啊？必须盘他！ 1.2 仔细一看...">
+    <meta property="og:title" content="从 Vite 2.9 起，manualChunks 默认情况下不再被更改怎么办？看这里↓ | CocoonBreak">
+    <meta property="og:description" content="一、事情起因 1.1 自己0-1搭建的项目是 Vue3 + Vite(4.4.11) + pinia(2.1.7) + echarts(5.4.3) , 项目打包后控制台提示了一个小警告，强迫症患者这谁受得了啊？必须盘他！ 1.2 仔细一看...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2024-03-04-7342140095788351525/">
+    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/custom/site.css">
+    <script defer src="/custom/site.js"></script>
+    <script defer src="/custom/live2d-loader.js"></script>
+  </head>
+  <body>
+    <div class="article-shell">
+      <nav class="insight-nav">
+        <a href="/">← 首页</a>
+        <a href="/insights/">同步文章</a>
+        <a href="https://juejin.cn/post/7342140095788351525" target="_blank" rel="noreferrer">掘金原文</a>
+      </nav>
+
+      <header class="article-hero" data-reveal>
+        <div class="article-meta">
+          <span>2024.03.04</span><span>前端工程化</span><span>Vite</span>
+        </div>
+        <h1>从 Vite 2.9 起，manualChunks 默认情况下不再被更改怎么办？看这里↓</h1>
+        <p class="article-intro">一、事情起因 1.1 自己0-1搭建的项目是 Vue3 + Vite(4.4.11) + pinia(2.1.7) + echarts(5.4.3) , 项目打包后控制台提示了一个小警告，强迫症患者这谁受得了啊？必须盘他！ 1.2 仔细一看...</p>
+        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/7342140095788351525" target="_blank" rel="noreferrer">掘金原文</a>。</div>
+      </header>
+
+      <article class="prose" data-reveal>
+        <h3></h3>
+<p><img alt="前端领秀.png" loading="lazy" src="https://p9-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/953ef257453a40c1ac16562dfd78a2f2~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773042165&amp;x-signature=Ud6MfyOa5iCiPVpLU%2FfIAZwLZvo%3D"/></p>
+<h2 id="一事情起因">一、事情起因</h2>
+<ul>
+<li>1.1 自己0-1搭建的项目是
+<code>Vue3 + Vite(4.4.11) + pinia(2.1.7) + echarts(5.4.3)</code>,
+项目打包后控制台提示了一个小警告，强迫症患者这谁受得了啊？必须盘他！
+<img alt="1.png" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6f288d182645421ebdd793c42a20c8ea~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=1061&amp;h=205&amp;s=30904&amp;e=png&amp;b=1e1f22"/></li>
+<li>1.2 仔细一看，大概的意思是 打包之后的产物 index.js
+体积超过了默认的500kb，使用<strong>build.rollupOptions.output.manualChunks</strong>来改进分块，或者通过<strong>build.chunkSizeWarningLimit</strong>调整此警告的区块大小限制。
+也就是给 <a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fcn.vitejs.dev%2Fconfig%2Fbuild-options.html%23build-chunksizewarninglimit" target="_blank" title="https://cn.vitejs.dev/config/build-options.html#build-chunksizewarninglimit">build.chunkSizeWarningLimit</a>
+设置一个大一点的值，官方默认是500kb提示警告;</li>
+</ul>
+<p><img alt="2.png" loading="lazy" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/df24f892718f4c6eb821d58c4d138cab~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=734&amp;h=219&amp;s=13205&amp;e=png&amp;b=ffffff"/></p>
+<ul>
+<li>1.3
+但我猜机智的你一定想问，有没有别的方式，不让他提示这个警告，从源头上解决这个问题，要知道，不管什么项目，打包之后的体积越大，意味着上传到服务器后，网络传输时间越久，从而一定程度上影响了我们的性能，于是就有了【拆包】的说法。</li>
+</ul>
+<h3 id="二什么是拆包分包">二、什么是拆包/分包？</h3>
+<ul>
+<li><p>2.1
+分包（code-splitting）是一种优化技术，用于将应用程序的代码拆分成多个较小的包（或块）。这种技术的目的是减少初始加载时需要下载的代码量，以提高应用程序的性能和加载速度。我们这里用的Vite，Vite底层本身用的rollupjs，这边重点阐述Vite的拆包方式。在使用
+build.rollupOptions.output.manualChunks 时，<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fcn.rollupjs.org%2Fconfiguration-options%2F%23output-manualchunks" target="_blank" title="https://cn.rollupjs.org/configuration-options/#output-manualchunks">Rollup官方拆包方式</a></p></li>
+<li><p>2.2 该选项允许你创建自定义的公共
+chunk。当值为对象形式时，每个属性代表一个
+chunk，其中包含列出的模块及其所有依赖，除非他们已经在其他 chunk
+中，否则将会是模块图（module graph）的一部分。chunk
+的名称由对象属性的键决定。</p></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a>manualChunks<span class="op">:</span> {  </span>
+<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a>    <span class="dt">lodash</span><span class="op">:</span> [<span class="st">'lodash'</span>]  </span>
+<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a>}  </span></code></pre></div>
+<ul>
+<li><p>2.3 上述例子中，即使你只是使用 import get from 'lodash/get'
+形式引入，Rollup 也会将 lodash 的所有模块放到一个自定义 chunk
+中。</p></li>
+<li><p>2.4
+当该选项值为函数形式时，每个被解析的模块都会经过该函数处理。如果函数返回字符串，那么该模块及其所有依赖将被添加到以返回字符串命名的自定义
+chunk 中。例如，以下例子会创建一个命名为 vendor 的 chunk，它包含所有在
+node_modules 中的依赖：</p></li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="kw">function</span> <span class="fu">manualChunks</span>(id) {  </span>
+<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a>    <span class="cf">if</span> (id<span class="op">.</span><span class="fu">includes</span>(<span class="st">'node_modules'</span>)) {  </span>
+<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'vendor'</span><span class="op">;</span>  </span>
+<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a>    }  </span>
+<span id="cb2-5"><a aria-hidden="true" href="#cb2-5" tabindex="-1"></a>}  </span></code></pre></div>
+<ul>
+<li><p>安装包大小分析插件，来看下你项目中那些内容占了主要的空间；<br/>
+<code>npm install --save-dev rollup-plugin-visualizer</code><br/>
+或者<br/>
+<code>yarn add --dev rollup-plugin-visualizer</code></p></li>
+<li><p>vite.config.js 中 引入</p></li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="im">import</span> { visualizer } <span class="im">from</span> <span class="st">"rollup-plugin-visualizer"</span><span class="op">;</span>  </span>
+<span id="cb3-2"><a aria-hidden="true" href="#cb3-2" tabindex="-1"></a>module<span class="op">.</span><span class="at">exports</span> <span class="op">=</span> {  </span>
+<span id="cb3-3"><a aria-hidden="true" href="#cb3-3" tabindex="-1"></a>    <span class="dt">plugins</span><span class="op">:</span> [  </span>
+<span id="cb3-4"><a aria-hidden="true" href="#cb3-4" tabindex="-1"></a>        <span class="fu">visualizer</span>({  </span>
+<span id="cb3-5"><a aria-hidden="true" href="#cb3-5" tabindex="-1"></a>            <span class="dt">open</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="co">// 注意这里要设置为true，否则无效  </span></span>
+<span id="cb3-6"><a aria-hidden="true" href="#cb3-6" tabindex="-1"></a>            <span class="dt">gzipSize</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="co">// 分析图生成的文件名  </span></span>
+<span id="cb3-7"><a aria-hidden="true" href="#cb3-7" tabindex="-1"></a>            <span class="dt">brotliSize</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="co">// 收集 brotli 大小并将其显示  </span></span>
+<span id="cb3-8"><a aria-hidden="true" href="#cb3-8" tabindex="-1"></a>            <span class="dt">filename</span><span class="op">:</span> <span class="st">"stats.html"</span><span class="op">,</span> <span class="co">// 分析图生成的文件名  </span></span>
+<span id="cb3-9"><a aria-hidden="true" href="#cb3-9" tabindex="-1"></a>        })<span class="op">,</span>  </span>
+<span id="cb3-10"><a aria-hidden="true" href="#cb3-10" tabindex="-1"></a>    ]<span class="op">,</span>  </span>
+<span id="cb3-11"><a aria-hidden="true" href="#cb3-11" tabindex="-1"></a>}<span class="op">;</span>  </span></code></pre></div>
+<ul>
+<li>2.5 配置完执行一下 <code>npm run build</code>, 项目根目录会出现一个
+<code>stats.html</code> 的文件,
+用浏览器打开可以看到，目前暂用整个项目体积最大的是echarts和ant-design-vue,接下来就是想办法把他们单独拆成一个独立的文件，并且上传到CDN上面，通过配置baseUrl,
+打包结果中的 index.html 只需引入这些独立的文件即可； <img alt="image.png" loading="lazy" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ecd917099c934c75999e04d9e8e028e3~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=3364&amp;h=1560&amp;s=5325341&amp;e=png&amp;b=955e5c"/></li>
+</ul>
+<h3 id="三vite如何拆包分包">三、Vite如何拆包/分包？</h3>
+<ul>
+<li><p>3.1 如果是Vite
+2.9以下版本，那你恭喜你，用上面Rollup官方文档配置方式即可，但是请看<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fvitejs.cn%2Fvite3-cn%2Fguide%2Fbuild.html%23chunking-strategy" target="_blank" title="https://vitejs.cn/vite3-cn/guide/build.html#chunking-strategy">官方文档</a><br/>
+<img alt="image.png" loading="lazy" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ca7fe4556ffb470f83e061a10d599813~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=1920&amp;h=945&amp;s=140789&amp;e=jpg&amp;b=fcfcfc"/></p></li>
+<li><p>3.2 到 Vite2.8 时，默认的策略是将 chunk 分割为 index 和
+vendor。这对一些 SPA
+来说是好的策略，但是要对每一种用例目标都提供一种通用解决方案是非常困难的。从
+Vite2.9 起，manualChunks
+默认情况下不再被更改。你可以通过在配置文件中添加 splitVendorChunkPlugin
+来继续使用 “分割 Vendor Chunk” 策略：</p></li>
+<li><p>3.3 啊这？splitVendorChunkPlugin()
+是个啥？我要怎么配置？会不会比rollup官方配置更香呢？管他三七二十一，不让我用我偏用！</p></li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a>build<span class="op">:</span> {  </span>
+<span id="cb4-2"><a aria-hidden="true" href="#cb4-2" tabindex="-1"></a>    <span class="dt">assetsDir</span><span class="op">:</span> <span class="st">""</span><span class="op">,</span>  </span>
+<span id="cb4-3"><a aria-hidden="true" href="#cb4-3" tabindex="-1"></a>    <span class="dt">chunkSizeWarningLimit</span><span class="op">:</span> <span class="dv">1500</span><span class="op">,</span>  </span>
+<span id="cb4-4"><a aria-hidden="true" href="#cb4-4" tabindex="-1"></a>    <span class="dt">emptyOutDir</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span>  </span>
+<span id="cb4-5"><a aria-hidden="true" href="#cb4-5" tabindex="-1"></a>    <span class="dt">rollupOptions</span><span class="op">:</span> {  </span>
+<span id="cb4-6"><a aria-hidden="true" href="#cb4-6" tabindex="-1"></a>        <span class="dt">output</span><span class="op">:</span> {  </span>
+<span id="cb4-7"><a aria-hidden="true" href="#cb4-7" tabindex="-1"></a>        <span class="dt">dir</span><span class="op">:</span> <span class="st">"dist/"</span><span class="op">,</span>  </span>
+<span id="cb4-8"><a aria-hidden="true" href="#cb4-8" tabindex="-1"></a>        <span class="dt">format</span><span class="op">:</span> <span class="st">"es"</span><span class="op">,</span> <span class="co">// es iife  </span></span>
+<span id="cb4-9"><a aria-hidden="true" href="#cb4-9" tabindex="-1"></a>        <span class="dt">inlineDynamicImports</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span>  </span>
+<span id="cb4-10"><a aria-hidden="true" href="#cb4-10" tabindex="-1"></a>        <span class="co">// 配置方式一：  </span></span>
+<span id="cb4-11"><a aria-hidden="true" href="#cb4-11" tabindex="-1"></a>        <span class="co">// manualChunks: {  </span></span>
+<span id="cb4-12"><a aria-hidden="true" href="#cb4-12" tabindex="-1"></a>            <span class="co">// echarts: ['echarts', 'echarts-wordcloud'],  </span></span>
+<span id="cb4-13"><a aria-hidden="true" href="#cb4-13" tabindex="-1"></a>            <span class="co">// // echartsWordcloud: ['echarts-wordcloud'],  </span></span>
+<span id="cb4-14"><a aria-hidden="true" href="#cb4-14" tabindex="-1"></a>            <span class="co">// antDesignVue: ['ant-design-vue'],  </span></span>
+<span id="cb4-15"><a aria-hidden="true" href="#cb4-15" tabindex="-1"></a>            <span class="co">// vue: ['vue', 'vue-router'],  </span></span>
+<span id="cb4-16"><a aria-hidden="true" href="#cb4-16" tabindex="-1"></a>            <span class="co">// axios: ['axios'],  </span></span>
+<span id="cb4-17"><a aria-hidden="true" href="#cb4-17" tabindex="-1"></a>            <span class="co">// dayjs: ['dayjs'],  </span></span>
+<span id="cb4-18"><a aria-hidden="true" href="#cb4-18" tabindex="-1"></a>            <span class="co">// pinia: ['pinia'],  </span></span>
+<span id="cb4-19"><a aria-hidden="true" href="#cb4-19" tabindex="-1"></a>            <span class="co">// xlsx: ['xlsx', 'xlsx-js-style']  </span></span>
+<span id="cb4-20"><a aria-hidden="true" href="#cb4-20" tabindex="-1"></a>        <span class="co">// },  </span></span>
+<span id="cb4-21"><a aria-hidden="true" href="#cb4-21" tabindex="-1"></a>        <span class="co">// 配置方式二：  </span></span>
+<span id="cb4-22"><a aria-hidden="true" href="#cb4-22" tabindex="-1"></a>        <span class="fu">manualChunks</span>(id) {  </span>
+<span id="cb4-23"><a aria-hidden="true" href="#cb4-23" tabindex="-1"></a>            <span class="co">// 判断是否为第三方依赖，将其拆分到 vendor 中  </span></span>
+<span id="cb4-24"><a aria-hidden="true" href="#cb4-24" tabindex="-1"></a>            <span class="cf">if</span> (id<span class="op">.</span><span class="fu">includes</span>(<span class="st">'node_modules'</span>)) {  </span>
+<span id="cb4-25"><a aria-hidden="true" href="#cb4-25" tabindex="-1"></a>                <span class="co">// 这里代码可以优化一下，但是我懒，我相信你一定可以的！</span></span>
+<span id="cb4-26"><a aria-hidden="true" href="#cb4-26" tabindex="-1"></a>                <span class="cf">if</span> (id<span class="op">.</span><span class="fu">includes</span>(<span class="st">'ant-design-vue'</span>)){  </span>
+<span id="cb4-27"><a aria-hidden="true" href="#cb4-27" tabindex="-1"></a>                    <span class="cf">return</span> <span class="st">'ant-design-vue'</span><span class="op">;</span>  </span>
+<span id="cb4-28"><a aria-hidden="true" href="#cb4-28" tabindex="-1"></a>                } <span class="cf">else</span> <span class="cf">if</span> (id<span class="op">.</span><span class="fu">includes</span>(<span class="st">'echarts'</span>) <span class="op">||</span> id<span class="op">.</span><span class="fu">includes</span>(<span class="st">'echarts-wordcloud'</span>)){  </span>
+<span id="cb4-29"><a aria-hidden="true" href="#cb4-29" tabindex="-1"></a>                    <span class="cf">return</span> <span class="st">'echarts'</span><span class="op">;</span>  </span>
+<span id="cb4-30"><a aria-hidden="true" href="#cb4-30" tabindex="-1"></a>                } <span class="cf">else</span> <span class="cf">if</span> (id<span class="op">.</span><span class="fu">includes</span>(<span class="st">'dayjs'</span>)){  </span>
+<span id="cb4-31"><a aria-hidden="true" href="#cb4-31" tabindex="-1"></a>                    <span class="cf">return</span> <span class="st">'dayjs'</span><span class="op">;</span>  </span>
+<span id="cb4-32"><a aria-hidden="true" href="#cb4-32" tabindex="-1"></a>                } <span class="cf">else</span> <span class="cf">if</span> (id<span class="op">.</span><span class="fu">includes</span>(<span class="st">'lodash-es'</span>)){  </span>
+<span id="cb4-33"><a aria-hidden="true" href="#cb4-33" tabindex="-1"></a>                    <span class="cf">return</span> <span class="st">'lodash-es'</span><span class="op">;</span>  </span>
+<span id="cb4-34"><a aria-hidden="true" href="#cb4-34" tabindex="-1"></a>                } <span class="cf">else</span> <span class="cf">if</span> (id<span class="op">.</span><span class="fu">includes</span>(<span class="st">'zrender'</span>)){  </span>
+<span id="cb4-35"><a aria-hidden="true" href="#cb4-35" tabindex="-1"></a>                    <span class="cf">return</span> <span class="st">'zrender'</span><span class="op">;</span>  </span>
+<span id="cb4-36"><a aria-hidden="true" href="#cb4-36" tabindex="-1"></a>                } <span class="cf">else</span> <span class="cf">if</span> (id<span class="op">.</span><span class="fu">includes</span>(<span class="st">'xlsx'</span>) <span class="op">||</span> id<span class="op">.</span><span class="fu">includes</span>(<span class="st">'xlsx-js-style'</span>)){  </span>
+<span id="cb4-37"><a aria-hidden="true" href="#cb4-37" tabindex="-1"></a>                    <span class="cf">return</span> <span class="st">'xlsx'</span><span class="op">;</span>  </span>
+<span id="cb4-38"><a aria-hidden="true" href="#cb4-38" tabindex="-1"></a>                } <span class="cf">else</span> {  </span>
+<span id="cb4-39"><a aria-hidden="true" href="#cb4-39" tabindex="-1"></a>                    <span class="cf">return</span> <span class="st">'vendor'</span><span class="op">;</span>  </span>
+<span id="cb4-40"><a aria-hidden="true" href="#cb4-40" tabindex="-1"></a>                }  </span>
+<span id="cb4-41"><a aria-hidden="true" href="#cb4-41" tabindex="-1"></a>            } <span class="cf">else</span> {  </span>
+<span id="cb4-42"><a aria-hidden="true" href="#cb4-42" tabindex="-1"></a>                <span class="cf">return</span> <span class="st">'index'</span><span class="op">;</span>  </span>
+<span id="cb4-43"><a aria-hidden="true" href="#cb4-43" tabindex="-1"></a>            } </span>
+<span id="cb4-44"><a aria-hidden="true" href="#cb4-44" tabindex="-1"></a>        }<span class="op">,</span>  </span>
+<span id="cb4-45"><a aria-hidden="true" href="#cb4-45" tabindex="-1"></a>    }<span class="op">,</span>  </span>
+<span id="cb4-46"><a aria-hidden="true" href="#cb4-46" tabindex="-1"></a>    <span class="dt">plugins</span><span class="op">:</span> [  </span>
+<span id="cb4-47"><a aria-hidden="true" href="#cb4-47" tabindex="-1"></a>        <span class="fu">cleaner</span>({  </span>
+<span id="cb4-48"><a aria-hidden="true" href="#cb4-48" tabindex="-1"></a>            <span class="dt">targets</span><span class="op">:</span> [  </span>
+<span id="cb4-49"><a aria-hidden="true" href="#cb4-49" tabindex="-1"></a>                <span class="st">'dist/'</span>  </span>
+<span id="cb4-50"><a aria-hidden="true" href="#cb4-50" tabindex="-1"></a>            ]  </span>
+<span id="cb4-51"><a aria-hidden="true" href="#cb4-51" tabindex="-1"></a>        })<span class="op">,</span>  </span>
+<span id="cb4-52"><a aria-hidden="true" href="#cb4-52" tabindex="-1"></a>    ]  </span>
+<span id="cb4-53"><a aria-hidden="true" href="#cb4-53" tabindex="-1"></a>    }<span class="op">,</span>  </span>
+<span id="cb4-54"><a aria-hidden="true" href="#cb4-54" tabindex="-1"></a>    <span class="dt">cssCodeSplit</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span>  </span>
+<span id="cb4-55"><a aria-hidden="true" href="#cb4-55" tabindex="-1"></a>}  </span></code></pre></div>
+<ul>
+<li>3.4 来看下打包结果，整体来看效果还不错，之前包含在 index中的
+echarts、ant-design-vue、xlsx 等都已经打包到独立的文件夹; <img alt="image.png" loading="lazy" src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/30c34d615fdc4065bf5f9dbe99269ea8~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=549&amp;h=251&amp;s=25506&amp;e=jpg&amp;b=1f2123"/></li>
+<li>3.5
+打包结果中的index中也是以link的方式引入，如果在base中配置了前缀，打包后自动上传到CDN，每次只需要上传一个index.html
+和样式文件即可；</li>
+</ul>
+<p><img alt="image.png" loading="lazy" src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/3a4ec77925f5485885a9ac4b5b949363~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=3330&amp;h=1496&amp;s=3504730&amp;e=png&amp;b=212325"/></p>
+<ul>
+<li>3.6 分析打包结果，最大的两个第三方包 ant-desin-vue、echarts
+已经变成了一个独立的文件夹，大多数情况这类第三方包是不会变的，如果放到我们的CDN或者文件服务器上，每次打包后只需要引入即可，第二次打包过滤掉这类包，这大大提升了打包速度，同时也加快了我们的网站性能！散会！
+<img alt="image.png" loading="lazy" src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6c2ae1c3bd7c4cfa889147c68503acb1~tplv-k3u1fbpfcp-jj-mark:3024:0:0:0:q75.awebp#?w=1920&amp;h=945&amp;s=281205&amp;e=jpg&amp;b=965594"/></li>
+</ul>
+      </article>
+    </div>
+  </body>
+</html>
