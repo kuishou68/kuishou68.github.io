@@ -1,540 +1,71 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Insights | CocoonBreak</title>
-    <meta name="description" content="已从掘金同步到博客的 67 篇文章，覆盖 AI Tooling、协议、Vue、部署与工程实践。">
-    <link rel="icon" href="/img/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/custom/site.css">
-    <script defer src="/custom/site.js"></script>
-    <script defer src="/custom/live2d-loader.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content="0; url=/en/archives/" />
+    <title>Insights moved</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1020;
+        --panel: rgba(10, 18, 38, 0.88);
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #f6efe3;
+        --muted: #93a2bf;
+        --accent: #7ae7c7;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
+          linear-gradient(180deg, #0b1020 0%, #050813 100%);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        padding: 24px;
+      }
+      main {
+        width: min(640px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--panel);
+        padding: 32px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(28px, 4vw, 42px);
+      }
+      p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      a {
+        color: #08111e;
+        background: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    </style>
   </head>
   <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <a class="brand-lockup" href="/">
-          <span class="brand-mark"><img src="/img/logo.png" alt="CocoonBreak"></span>
-          <span>
-            <span class="brand-title">CocoonBreak</span>
-            <span class="brand-subtitle">Insights</span>
-          </span>
-        </a>
-        <button class="menu-button" type="button" aria-expanded="false" aria-label="切换导航" data-menu-button>☰</button>
-        <nav class="nav-links" data-nav-links>
-          <a href="/">首页</a>
-          <a href="#latest">最新同步</a>
-          <a href="#archive">全部归档</a>
-          <a href="https://juejin.cn/user/3817931570691031/posts" target="_blank" rel="noreferrer">掘金</a>
-        </nav>
-      </div>
-    </header>
-
-    <main class="page-shell">
-      <section class="hero">
-        <div class="hero-grid">
-          <article class="hero-copy" data-reveal>
-            <div class="eyebrow">Juejin Sync · Blog Archive · Long-term Asset</div>
-            <h1>掘金文章已经 <span>整批同步</span> 到博客。</h1>
-            <p class="hero-lead">
-              现在这部分不再只有 4 篇专题文章，而是完整接入了你在掘金发布过的 67 篇文章。
-              从最近的 Codex、Gemini CLI、MCP / ACP / A2A，到更早期的 Vue、部署、工程实践和小程序项目，都已经变成博客站内可访问的静态页面。
-            </p>
-            <div class="hero-actions">
-              <a class="primary-button" href="#latest">看最新同步</a>
-              <a class="secondary-button" href="#archive">看全部归档</a>
-              <a class="secondary-button" href="https://juejin.cn/user/3817931570691031/posts" target="_blank" rel="noreferrer">掘金原站</a>
-            </div>
-          </article>
-
-          <aside class="hero-panel" data-reveal>
-            <div class="hero-panel-header">
-              <div>
-                <h2 class="panel-title">同步概览</h2>
-                <p class="panel-caption">同步后的内容在博客侧长期可访问，也更方便你继续做首页入口、专题聚合和后续 SEO。</p>
-              </div>
-            </div>
-            <div class="mini-grid">
-              <div class="mini-card">
-                <strong>67</strong>
-                <span>已同步文章</span>
-              </div>
-              <div class="mini-card">
-                <strong>2021 - 2026</strong>
-                <span>覆盖年份</span>
-              </div>
-              <div class="mini-card">
-                <strong>2026.02.06</strong>
-                <span>最近发布</span>
-              </div>
-              <div class="mini-card">
-                <strong>4</strong>
-                <span>博客专题长文</span>
-              </div>
-            </div>
-            <div class="hero-stack">
-              <div class="stack-item">
-                <div><strong>最新 AI 文章</strong><span>Codex、Gemini CLI、MCP / ACP / A2A 这批近作已经全部入站。</span></div>
-                <span class="card-pill">AI</span>
-              </div>
-              <div class="stack-item">
-                <div><strong>历史工程文章</strong><span>老文章也保住了内容，可继续被检索和引用。</span></div>
-                <span class="card-pill">Archive</span>
-              </div>
-              <div class="stack-item">
-                <div><strong>同步机制可复跑</strong><span>先拉 Markdown，再生成静态页，后续更新不需要手工一篇篇搬。</span></div>
-                <span class="card-pill">Pipeline</span>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section" id="latest">
-        <div class="section-heading" data-reveal>
-          <h2>最近同步到博客的 <span>文章</span></h2>
-          <p class="section-copy">先看最近的 8 篇。如果你是第一次进入这里，建议先从这一组开始。</p>
-        </div>
-        <div class="writing-grid">
-          
-          <article class="writing-card" data-reveal>
-            <span class="icon-badge">前</span>
-            <h3>Electron 打包白屏排查实录：一个 continue_on_error 引发的三天三夜&quot;血案&quot;</h3>
-            <p class="writing-copy">本文记录了我在开源项目 AionUi（一个统一 AI Agent 图形界面）中遭遇的一次 Electron 打包白屏事故。从发现问题到最终定位根因，历时三天三夜。如果你也在用 Electron + GitHub Actions 做 CI/C...</p>
-            <div class="card-meta"><span>2026.02.06</span><span>前端</span><span>Electron</span></div>
-            <a class="ghost-link" href="/insights/juejin/2026-02-06-7603359026711035914/">阅读全文</a>
-          </article>
-          <article class="writing-card" data-reveal>
-            <span class="icon-badge">前</span>
-            <h3>OpenAI Codex 深入剖析：下一代 AI 编程助手的架构与原理</h3>
-            <p class="writing-copy">深入剖析 OpenAI Codex：下一代 AI 编程助手的架构与原理 本文将带你深入了解 OpenAI Codex 的内部架构、设计思路和实现原理。无论你是初学者还是有经验的开发者，都能从中获得对 AI 编程助手的深刻理解。 目录 什么是...</p>
-            <div class="card-meta"><span>2026.01.09</span><span>前端</span><span>OpenAI</span></div>
-            <a class="ghost-link" href="/insights/juejin/2026-01-09-7592921639464108074/">阅读全文</a>
-          </article>
-          <article class="writing-card" data-reveal>
-            <span class="icon-badge">G</span>
-            <h3>Gemini CLI 深度源码分析：从零到一理解 AI 命令行代理的设计与实现</h3>
-            <p class="writing-copy">本文基于 Gemini CLI v0.21.0 源码进行深度分析，带你从架构设计、核心原理到实现细节，全方位理解这个 Google 开源的 AI 命令行代理工具。 目录 什么是 Gemini CLI？ 整体架构设计 核心模块详解 记忆系统：...</p>
-            <div class="card-meta"><span>2025.12.10</span><span>Gemini</span><span>MCP</span></div>
-            <a class="ghost-link" href="/insights/juejin/2025-12-10-7581872532362674185/">阅读全文</a>
-          </article>
-          <article class="writing-card" data-reveal>
-            <span class="icon-badge">M</span>
-            <h3>A2A 协议深度解析：AI Agent 协作的新纪元</h3>
-            <p class="writing-copy">摘要 ：本文深入剖析 Google 于 2025 年 4 月发布的 Agent2Agent (A2A) 协议，从协议背景、设计哲学、核心架构、实现细节、应用场景到未来展望，全面解读这一 AI Agent 互操作性的开放标准。 目录 什么是...</p>
-            <div class="card-meta"><span>2025.12.04</span><span>MCP</span><span>AI编程</span></div>
-            <a class="ghost-link" href="/insights/juejin/2025-12-04-7579544918077636643/">阅读全文</a>
-          </article>
-          <article class="writing-card" data-reveal>
-            <span class="icon-badge">M</span>
-            <h3>AI Agent 协议演进：从 MCP 到 ACP 的架构对比与未来展望</h3>
-            <p class="writing-copy">Multi-Agent 协作的基石：协议标准化探索之路 基于 Google Gemini CLI 和 OpenAI Codex 源码的深度技术剖析 源码版本说明 本文基于以下版本的源码分析： Gemini CLI : v0.10.0-nig...</p>
-            <div class="card-meta"><span>2025.11.27</span><span>MCP</span><span>Gemini</span></div>
-            <a class="ghost-link" href="/insights/juejin/2025-11-27-7577031454585929755/">阅读全文</a>
-          </article>
-          <article class="writing-card" data-reveal>
-            <span class="icon-badge">A</span>
-            <h3>初识 ACP （Agent Client Protocol）</h3>
-            <p class="writing-copy">初识 ACP 协议：AI 编码助手的标准化通信协议 从 MCP 到 ACP，探索 AI Agent 生态的标准化之路 目录 一、引言：AI Agent 生态的标准化挑战 二、从 MCP 说起：理解 AI 协议的演进 三、ACP 是什么？ 四...</p>
-            <div class="card-meta"><span>2025.11.21</span><span>AI编程</span><span>MCP</span></div>
-            <a class="ghost-link" href="/insights/juejin/2025-11-21-7574992086714630159/">阅读全文</a>
-          </article>
-          <article class="writing-card" data-reveal>
-            <span class="icon-badge">C</span>
-            <h3>为什么 Claude/Gemini/Codex 都用 stdio 传输机制？</h3>
-            <p class="writing-copy">一、传输的本质 1. Stdio (Standard Input/Output) 协议本质： 基于 进程间通信（IPC） 的经典模式 利用 Unix/Linux 的管道机制（pipe） 消息格式：JSON-RPC 2.0 over newl...</p>
-            <div class="card-meta"><span>2025.10.11</span><span>Claude</span><span>Gemini</span></div>
-            <a class="ghost-link" href="/insights/juejin/2025-10-11-7559469775732424723/">阅读全文</a>
-          </article>
-          <article class="writing-card" data-reveal>
-            <span class="icon-badge">M</span>
-            <h3>初识 MCP (Model Context Protocol)</h3>
-            <p class="writing-copy">一、MCP 是什么？ Model Context Protocol (MCP) 是 Anthropic 推出的 开源标准协议 ，用于连接 AI 应用与外部系统。如果用一个形象的比喻， MCP 就像是 AI 应用的 USB-C 接口 ——提供...</p>
-            <div class="card-meta"><span>2025.10.03</span><span>MCP</span><span>Claude</span></div>
-            <a class="ghost-link" href="/insights/juejin/2025-10-03-7555815079645036598/">阅读全文</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-heading" data-reveal>
-          <h2>博客里单独整理过的 <span>专题长文</span></h2>
-          <p class="section-copy">这 4 篇不是简单搬运，而是更适合个人站点阅读的整理版。</p>
-        </div>
-        <div class="writing-grid">
-          
-          <article class="writing-card" data-reveal>
-            <span class="icon-badge">⌘</span>
-            <h3>OpenAI Codex 深入剖析</h3>
-            <p class="writing-copy">从终端工作流视角理解 Codex：模型、执行、反馈闭环与产品落地方向。</p>
-            <div class="card-meta"><span>Codex</span><span>Terminal Agent</span></div>
-            <a class="ghost-link" href="/insights/openai-codex-architecture/">阅读全文</a>
-          </article>
-          <article class="writing-card" data-reveal>
-            <span class="icon-badge">◎</span>
-            <h3>Gemini CLI 深度源码分析</h3>
-            <p class="writing-copy">从配置、工具调用到结果反馈，理解 Gemini CLI 的组织方式。</p>
-            <div class="card-meta"><span>Gemini CLI</span><span>Source Reading</span></div>
-            <a class="ghost-link" href="/insights/gemini-cli-source/">阅读全文</a>
-          </article>
-          <article class="writing-card" data-reveal>
-            <span class="icon-badge">↔</span>
-            <h3>为什么都爱用 stdio</h3>
-            <p class="writing-copy">把 stdio 看成 Agent 和本地工具之间最稳定的短链路。</p>
-            <div class="card-meta"><span>stdio</span><span>Transport</span></div>
-            <a class="ghost-link" href="/insights/stdio-transport/">阅读全文</a>
-          </article>
-          <article class="writing-card" data-reveal>
-            <span class="icon-badge">⛓</span>
-            <h3>从 MCP 到 ACP 再到 A2A</h3>
-            <p class="writing-copy">一次把三类协议的边界、角色和适用场景讲清楚。</p>
-            <div class="card-meta"><span>MCP / ACP / A2A</span><span>Architecture</span></div>
-            <a class="ghost-link" href="/insights/agent-protocols/">阅读全文</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="archive">
-        <div class="section-heading" data-reveal>
-          <h2>全部同步文章 <span>归档</span></h2>
-          <p class="section-copy">按年份分组。你后面继续从掘金增量同步时，这里会一起更新。</p>
-        </div>
-        <div class="year-grid">
-          
-        <article class="archive-card year-card" data-reveal>
-          <div class="year-card-header">
-            <h3>2026</h3>
-            <span>2 篇</span>
-          </div>
-          <ul class="article-link-list">
-            
-              <li>
-                <a href="/insights/juejin/2026-02-06-7603359026711035914/">Electron 打包白屏排查实录：一个 continue_on_error 引发的三天三夜&quot;血案&quot;</a>
-                <span class="article-link-meta">2026.02.06 · 前端 / Electron</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2026-01-09-7592921639464108074/">OpenAI Codex 深入剖析：下一代 AI 编程助手的架构与原理</a>
-                <span class="article-link-meta">2026.01.09 · 前端 / OpenAI</span>
-              </li>
-          </ul>
-        </article>
-        <article class="archive-card year-card" data-reveal>
-          <div class="year-card-header">
-            <h3>2025</h3>
-            <span>14 篇</span>
-          </div>
-          <ul class="article-link-list">
-            
-              <li>
-                <a href="/insights/juejin/2025-12-10-7581872532362674185/">Gemini CLI 深度源码分析：从零到一理解 AI 命令行代理的设计与实现</a>
-                <span class="article-link-meta">2025.12.10 · Gemini / MCP</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2025-12-04-7579544918077636643/">A2A 协议深度解析：AI Agent 协作的新纪元</a>
-                <span class="article-link-meta">2025.12.04 · MCP / AI编程</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2025-11-27-7577031454585929755/">AI Agent 协议演进：从 MCP 到 ACP 的架构对比与未来展望</a>
-                <span class="article-link-meta">2025.11.27 · MCP / Gemini</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2025-11-21-7574992086714630159/">初识 ACP （Agent Client Protocol）</a>
-                <span class="article-link-meta">2025.11.21 · AI编程 / MCP</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2025-10-11-7559469775732424723/">为什么 Claude/Gemini/Codex 都用 stdio 传输机制？</a>
-                <span class="article-link-meta">2025.10.11 · Claude / Gemini</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2025-10-03-7555815079645036598/">初识 MCP (Model Context Protocol)</a>
-                <span class="article-link-meta">2025.10.03 · MCP / Claude</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2025-06-30-7521670632985378842/">Vue3中组件的实现原理(一)</a>
-                <span class="article-link-meta">2025.06.30 · 前端 / JavaScript</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2025-06-02-7510580636622962707/">Vue3中KeepAlive、Teleport、Transition 内置组件是怎么实现的？</a>
-                <span class="article-link-meta">2025.06.02 · 前端 / Vue.js</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2025-03-09-7479284918783098916/">深入理解 Promise，看看你会几道题</a>
-                <span class="article-link-meta">2025.03.09 · 前端 / JavaScript</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2025-02-02-7466480722543509515/">我问了DeepSeek和ChatGPT关于vue中包含几种watch的问题，它们是这么回答的……</a>
-                <span class="article-link-meta">2025.02.02 · 前端 / Vue.js</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2025-01-15-7460080821157462054/">盘点那些一行js代码搞定的算法题</a>
-                <span class="article-link-meta">2025.01.15 · 前端 / 算法</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2025-01-12-7458595339798560819/">Vue3中watch的诸多疑点，看完再也不敢说我懂了！</a>
-                <span class="article-link-meta">2025.01.12 · 前端 / JavaScript</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2025-01-09-7457796323742089251/">Vue3的Proxy和DefineProperty的区别，你真的了解吗？</a>
-                <span class="article-link-meta">2025.01.09 · Vue.js / 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2025-01-01-7454585438323392538/">Vue3 读和写的深度思考</a>
-                <span class="article-link-meta">2025.01.01 · 前端 / Vue.js</span>
-              </li>
-          </ul>
-        </article>
-        <article class="archive-card year-card" data-reveal>
-          <div class="year-card-header">
-            <h3>2024</h3>
-            <span>6 篇</span>
-          </div>
-          <ul class="article-link-list">
-            
-              <li>
-                <a href="/insights/juejin/2024-11-14-7437133940483866665/">你可能不知道的大文件上传</a>
-                <span class="article-link-meta">2024.11.14 · 前端 / 面试</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2024-06-27-7385005775439888420/">【周五了，有什么事下周一再说吧】来看 浏览器渲染原理（从线程角度思考）</a>
-                <span class="article-link-meta">2024.06.27 · 浏览器 / 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2024-03-04-7342140095788351525/">从 Vite 2.9 起，manualChunks 默认情况下不再被更改怎么办？看这里↓</a>
-                <span class="article-link-meta">2024.03.04 · 前端工程化 / Vite</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2024-01-11-7322714226291097610/">JavaScript 中 0.1 + 0.2  != 0.3：浮点数运算的陷阱</a>
-                <span class="article-link-meta">2024.01.11 · JavaScript / 面试</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2024-01-08-7321539773613277194/">Vue3+Vite打包跨平台(七牛、阿里OSS)上传部署前端项目</a>
-                <span class="article-link-meta">2024.01.08 · 前端 / Vue.js</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2024-01-07-7321049360358998043/">Vue3+Pinia实现持久化动态主题切换;</a>
-                <span class="article-link-meta">2024.01.07 · Vue.js / Vite</span>
-              </li>
-          </ul>
-        </article>
-        <article class="archive-card year-card" data-reveal>
-          <div class="year-card-header">
-            <h3>2023</h3>
-            <span>4 篇</span>
-          </div>
-          <ul class="article-link-list">
-            
-              <li>
-                <a href="/insights/juejin/2023-09-27-7283367128194056227/">Vite 工程化 手动分包 了解一下</a>
-                <span class="article-link-meta">2023.09.27 · 前端 / Vite</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2023-09-24-7281849496984059919/">揭秘公钥加密算法 RSA</a>
-                <span class="article-link-meta">2023.09.24 · 网络协议 / 算法</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2023-05-03-7228954539864784951/">我通过 VSCode 插件 Bito，问chatGPT-4，js如何解析curl？最后顺利帮我实现了一个微信小程序工具！</a>
-                <span class="article-link-meta">2023.05.03 · ChatGPT / 微信小程序</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2023-04-08-7219543015550337061/">postman 怎么实现接口自动化测试的？</a>
-                <span class="article-link-meta">2023.04.08 · Postman / 测试</span>
-              </li>
-          </ul>
-        </article>
-        <article class="archive-card year-card" data-reveal>
-          <div class="year-card-header">
-            <h3>2022</h3>
-            <span>17 篇</span>
-          </div>
-          <ul class="article-link-list">
-            
-              <li>
-                <a href="/insights/juejin/2022-12-15-7177367439854813243/">canvas实现电子签字功能</a>
-                <span class="article-link-meta">2022.12.15 · 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2022-12-10-7175443098477002807/">实现一个阉割版的日历</a>
-                <span class="article-link-meta">2022.12.10 · 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2022-12-08-7174794176670728249/">前端不同场景下的自动化部署方式</a>
-                <span class="article-link-meta">2022.12.08 · 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2022-10-04-7150681135129821215/">两个支付宝小程序之间带参扫码在线付款实现</a>
-                <span class="article-link-meta">2022.10.04 · 支付宝 / 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2022-10-04-7150585427403997215/">点了这么久的外卖，你知道外卖小票是怎么打印出来的嘛？</a>
-                <span class="article-link-meta">2022.10.04 · 浏览器</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2022-10-04-7150541221722030111/">Vue+Ant design 项目怎么导入 Excel 表格数据？</a>
-                <span class="article-link-meta">2022.10.04 · 前端 / Ant Design</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2022-09-25-7147251892836368415/">弹窗中的 swiper 再次打开后，分页器不见了？干脆一不做二不休，自定义一个分页器！</a>
-                <span class="article-link-meta">2022.09.25 · 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2022-09-22-7146356889192759333/">vue 跨平台授权登录的实现</a>
-                <span class="article-link-meta">2022.09.22 · Vue.js</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2022-09-12-7142399363162046477/">lottie 动画效果实现及性能优化，将 json 文件缓存至 localStorage 中</a>
-                <span class="article-link-meta">2022.09.12 · 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2022-06-17-7110086659932160030/">echarst 折线图下载csv文件功能的实现</a>
-                <span class="article-link-meta">2022.06.17 · 前端 / ECharts</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2022-06-10-7107492794834354183/">echarts 折线图标线 markline 还可以这样玩？</a>
-                <span class="article-link-meta">2022.06.10 · 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2022-06-07-7106493111555063838/">复制粘贴 navigator.clipboard 在不同网络环境无法使用是咋回事？</a>
-                <span class="article-link-meta">2022.06.07 · 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2022-05-28-7102794787597582344/">使用cookie，让MessageBox 弹框一天内不再弹出</a>
-                <span class="article-link-meta">2022.05.28 · 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2022-05-27-7102285357928071176/">用 A-Z 表示 el-table 表格序号，一个你可能忽略的方法</a>
-                <span class="article-link-meta">2022.05.27 · 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2022-05-13-7097093757861888031/">Python + Vue 分析水果行情信息</a>
-                <span class="article-link-meta">2022.05.13 · Python / Vue.js</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2022-05-06-7094657857726971911/">Transform 穿梭框 组件重写，实现多列穿梭</a>
-                <span class="article-link-meta">2022.05.06 · 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2022-05-05-7094276058739900423/">虚拟列表实现 el-table 表格内的无限滚动</a>
-                <span class="article-link-meta">2022.05.05 · 前端</span>
-              </li>
-          </ul>
-        </article>
-        <article class="archive-card year-card" data-reveal>
-          <div class="year-card-header">
-            <h3>2021</h3>
-            <span>24 篇</span>
-          </div>
-          <ul class="article-link-list">
-            
-              <li>
-                <a href="/insights/juejin/2021-11-16-7031138597478596645/">elementUI tabs切换 echarts宽度变成100px，怎么让多个Echarts图表宽度随着窗口自动适应？</a>
-                <span class="article-link-meta">2021.11.16 · Element</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-11-12-7029653988492607518/">elementUI 两个Switch 开关能不能实现相互依赖？</a>
-                <span class="article-link-meta">2021.11.12 · Element</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-11-12-7029643302718668814/">element Switch开关开启时触发click事件，关闭时不触发</a>
-                <span class="article-link-meta">2021.11.12 · Element</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-10-11-7017681730605678605/">Jquery +Ajax 请求Json文件，绘制Echarts 上下两个堆叠折线图</a>
-                <span class="article-link-meta">2021.10.11 · ECharts</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-08-20-6998413916535521310/">Vue深入学习—Vuex原理</a>
-                <span class="article-link-meta">2021.08.20 · Vuex / 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-08-14-6996130327835967519/">Vue深入学习—keep-alive组件</a>
-                <span class="article-link-meta">2021.08.14 · Vue.js / 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-08-05-6992967547486208007/">Vue深入学习—Vue-Router路由模式</a>
-                <span class="article-link-meta">2021.08.05 · vue-router</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-07-30-6990534958431338509/">Vue深入学习—指令和生命周期</a>
-                <span class="article-link-meta">2021.07.30 · Vue.js / HTML</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-07-23-6988131835343699998/">Vue深入学习—数据响应式原理</a>
-                <span class="article-link-meta">2021.07.23 · Vue.js</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-07-19-6986622039826120717/">Vue深入学习—虚拟DOM和Diff算法</a>
-                <span class="article-link-meta">2021.07.19 · Vue.js / DOM</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-07-18-6986120377596379144/">Vue深入学习—mustache模板引擎原理</a>
-                <span class="article-link-meta">2021.07.18 · 面试 / 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-07-11-6983660964352622622/">同一个项目能上传至  多个GitHub账号或Gitee的仓库嘛？</a>
-                <span class="article-link-meta">2021.07.11 · GitHub</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-07-11-6983585241155764232/">🔥不花钱、不买服务器可以搭建个人博客吗？快进来，给你安排！</a>
-                <span class="article-link-meta">2021.07.11 · GitHub / 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-07-09-6982922015346786311/">uni-app 实现微信授权登录</a>
-                <span class="article-link-meta">2021.07.09 · uni-app</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-07-09-6982903794694651935/">手把手教你上手Git，并上传项目到GitHub官网</a>
-                <span class="article-link-meta">2021.07.09 · Git</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-06-27-6978367159810392101/">🔥uni-app 写了一个网易云微信小程序</a>
-                <span class="article-link-meta">2021.06.27 · 微信小程序 / 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-06-27-6978365322155786248/">Vue3+Vant+Vue-cli+Restful api实战—图书商城移动端</a>
-                <span class="article-link-meta">2021.06.27 · Vue.js / 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-06-27-6978365036569821191/">搭建一款开源的微信商城小程序：海风小店</a>
-                <span class="article-link-meta">2021.06.27 · 开源 / 前端</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-06-27-6978364372506640392/">《JavaScript高级程序设计》红宝书第二遍阅读（动手实践）</a>
-                <span class="article-link-meta">2021.06.27 · JavaScript</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-06-27-6978364765143826440/">《JavaScript高级程序设计》红宝书第一遍阅读（了解概念）</a>
-                <span class="article-link-meta">2021.06.27 · JavaScript</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-02-25-6933167052291047438/">PHP+MySql+PDO小案例—文章管理系统</a>
-                <span class="article-link-meta">2021.02.25 · PHP</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-02-25-6933161907629064205/">PHP乱码怎么办？五种方法彻底解决PHP乱码问题！</a>
-                <span class="article-link-meta">2021.02.25 · PHP</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-02-25-6933146576789929992/">PHP+MySql+PDO实现简单增加、删除、修改、查询</a>
-                <span class="article-link-meta">2021.02.25 · PHP</span>
-              </li>
-              <li>
-                <a href="/insights/juejin/2021-02-25-6933146268017360909/">PHP+MySql+PDO实现简单登录、注册</a>
-                <span class="article-link-meta">2021.02.25 · PHP</span>
-              </li>
-          </ul>
-        </article>
-        </div>
-      </section>
+    <main>
+      <h1>Insights moved</h1>
+      <p>The previous insights landing page now lives inside the new multilingual archive.</p>
+      <a href="/en/archives/">Continue</a>
     </main>
-
-    <footer class="page-shell site-footer">
-      <div class="footer-card">
-        <span>Insights by CocoonBreak.</span>
-        <span>67 篇掘金文章已同步到博客归档。</span>
-      </div>
-    </footer>
+    <script>
+      window.location.replace("/en/archives/");
+    </script>
   </body>
 </html>

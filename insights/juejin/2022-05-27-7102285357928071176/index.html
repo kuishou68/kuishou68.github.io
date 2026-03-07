@@ -1,108 +1,71 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>用 A-Z 表示 el-table 表格序号，一个你可能忽略的方法 | CocoonBreak</title>
-    <meta name="description" content="业务场景 ：基于element UI 15.6版本,el-table 表格的序号我想用 A-Z 该怎么表示呢？ 需求分析 ：这里可以用的方法 String.fromCharCode() , 看看 MDN 怎么解释的！ 功能实现 ： 在线远行...">
-    <meta property="og:title" content="用 A-Z 表示 el-table 表格序号，一个你可能忽略的方法 | CocoonBreak">
-    <meta property="og:description" content="业务场景 ：基于element UI 15.6版本,el-table 表格的序号我想用 A-Z 该怎么表示呢？ 需求分析 ：这里可以用的方法 String.fromCharCode() , 看看 MDN 怎么解释的！ 功能实现 ： 在线远行...">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2022-05-27-7102285357928071176/">
-    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
-    <link rel="icon" href="/img/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/custom/site.css">
-    <script defer src="/custom/site.js"></script>
-    <script defer src="/custom/live2d-loader.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content="0; url=/en/posts/sync/2022-05-27-7102285357928071176/" />
+    <title>Juejin article moved</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1020;
+        --panel: rgba(10, 18, 38, 0.88);
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #f6efe3;
+        --muted: #93a2bf;
+        --accent: #7ae7c7;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
+          linear-gradient(180deg, #0b1020 0%, #050813 100%);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        padding: 24px;
+      }
+      main {
+        width: min(640px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--panel);
+        padding: 32px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(28px, 4vw, 42px);
+      }
+      p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      a {
+        color: #08111e;
+        background: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    </style>
   </head>
   <body>
-    <div class="article-shell">
-      <nav class="insight-nav">
-        <a href="/">← 首页</a>
-        <a href="/insights/">同步文章</a>
-        <a href="https://juejin.cn/post/7102285357928071176" target="_blank" rel="noreferrer">掘金原文</a>
-      </nav>
-
-      <header class="article-hero" data-reveal>
-        <div class="article-meta">
-          <span>2022.05.27</span><span>前端</span>
-        </div>
-        <h1>用 A-Z 表示 el-table 表格序号，一个你可能忽略的方法</h1>
-        <p class="article-intro">业务场景 ：基于element UI 15.6版本,el-table 表格的序号我想用 A-Z 该怎么表示呢？ 需求分析 ：这里可以用的方法 String.fromCharCode() , 看看 MDN 怎么解释的！ 功能实现 ： 在线远行...</p>
-        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/7102285357928071176" target="_blank" rel="noreferrer">掘金原文</a>。</div>
-      </header>
-
-      <article class="prose" data-reveal>
-        <p><strong>业务场景</strong>：基于element UI 15.6版本,el-table
-表格的序号我想用 A-Z 该怎么表示呢？</p>
-<p><strong>需求分析</strong>：这里可以用的方法
-<code>String.fromCharCode()</code>, 看看<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fdeveloper.mozilla.org%2Fzh-CN%2Fdocs%2FWeb%2FJavaScript%2FReference%2FGlobal_Objects%2FString%2FfromCharCode" target="_blank" title="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode">MDN</a>怎么解释的！</p>
-<p><strong>功能实现</strong>：<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fcodesandbox.io%2Fs%2Fa-z-biao-shi-el-table-biao-ge-xu-hao-lvktkk%3Ffile%3D%2Findex.html" target="_blank" title="https://codesandbox.io/s/a-z-biao-shi-el-table-biao-ge-xu-hao-lvktkk?file=/index.html">在线远行</a></p>
-<p><img alt="image.png" loading="lazy" src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5ac6b8824efc470997b257d042547732~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"/></p>
-<p>在 UTF-16 中，绝大部分常用的字符可以用一个
-16 位的值表示（即一个代码单元）。然而，有一类字符叫 Base Multilingual
-Plane (BMP)，是所有可寻址的
-Unicode 码点的 1/17th。剩下的码点，从范围 <code>65536</code> (<code>0x010000</code>) 到 <code>1114111</code> (<code>0x10FFFF</code>) 被称之为补充字符。在
-UTF-16 中，补充字符也叫代理（surrogates），用两个
-16 位代码单元表示，它是有目的被保留下来的。两个代理（surrogates）形成一个有效组合，也叫代理对，可以用来表示一个补充字符。</p>
-<p>因为 <code>fromCharCode()</code> 只作用于 16 位的值
-(跟 <code>\u</code> 转义序列一样)，为了返回一个补充字符，一个代理对是必须的。例如，<code>String.fromCharCode(0xD83C, 0xDF03)</code> 和 <code>\uD83C\uDF03</code> 返回码点 <code>U+1F303</code> "Night
-with Stars"。</p>
-<p><strong>示例</strong>：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="bu">String</span><span class="op">.</span><span class="fu">fromCharCode</span>(<span class="dv">65</span><span class="op">,</span> <span class="dv">66</span><span class="op">,</span> <span class="dv">67</span>)<span class="op">;</span>   <span class="co">// 返回 "ABC"</span></span>
-<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a><span class="bu">String</span><span class="op">.</span><span class="fu">fromCharCode</span>(<span class="bn">0x2014</span>)<span class="op">;</span>       <span class="co">// 返回 "—"</span></span>
-<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a><span class="bu">String</span><span class="op">.</span><span class="fu">fromCharCode</span>(<span class="bn">0x12014</span>)<span class="op">;</span>      <span class="co">// 也是返回 "—"; 数字 1 被剔除并忽略</span></span>
-<span id="cb1-4"><a aria-hidden="true" href="#cb1-4" tabindex="-1"></a><span class="bu">String</span><span class="op">.</span><span class="fu">fromCharCode</span>(<span class="dv">8212</span>)<span class="op">;</span>         <span class="co">// 也是返回 "—"; 8212 是 0x2014 的十进制表示</span></span>
-<span id="cb1-5"><a aria-hidden="true" href="#cb1-5" tabindex="-1"></a></span>
-<span id="cb1-6"><a aria-hidden="true" href="#cb1-6" tabindex="-1"></a><span class="bu">String</span><span class="op">.</span><span class="fu">fromCharCode</span>(<span class="bn">0xD83C</span><span class="op">,</span> <span class="bn">0xDF03</span>)<span class="op">;</span> <span class="co">// Code Point U+1F303 "Night with</span></span>
-<span id="cb1-7"><a aria-hidden="true" href="#cb1-7" tabindex="-1"></a><span class="bu">String</span><span class="op">.</span><span class="fu">fromCharCode</span>(<span class="dv">55356</span><span class="op">,</span> <span class="dv">57091</span>)<span class="op">;</span>   <span class="co">// Stars" == "\uD83C\uDF03"</span></span>
-<span id="cb1-8"><a aria-hidden="true" href="#cb1-8" tabindex="-1"></a><span class="bu">String</span><span class="op">.</span><span class="fu">fromCharCode</span>(<span class="bn">0xD834</span><span class="op">,</span> <span class="bn">0xDF06</span><span class="op">,</span> <span class="bn">0x61</span><span class="op">,</span> <span class="bn">0xD834</span><span class="op">,</span> <span class="bn">0xDF07</span>)<span class="op">;</span> <span class="co">// "\uD834\uDF06a\uD834\uDF07"</span></span></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
-<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
-<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
-<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">"UTF-8"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
-<span id="cb2-5"><a aria-hidden="true" href="#cb2-5" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>A-Z 表示 el-table 表格序号<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
-<span id="cb2-6"><a aria-hidden="true" href="#cb2-6" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://unpkg.com/vue@2"</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
-<span id="cb2-7"><a aria-hidden="true" href="#cb2-7" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> src</span><span class="op">=</span><span class="st">"https://unpkg.com/element-ui@2.15.6/lib/index.js"</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
-<span id="cb2-8"><a aria-hidden="true" href="#cb2-8" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">"stylesheet"</span><span class="ot"> href</span><span class="op">=</span><span class="st">"https://unpkg.com/element-ui/lib/theme-chalk/index.css"</span><span class="dt">/&gt;</span></span>
-<span id="cb2-9"><a aria-hidden="true" href="#cb2-9" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
-<span id="cb2-10"><a aria-hidden="true" href="#cb2-10" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
-<span id="cb2-11"><a aria-hidden="true" href="#cb2-11" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">"app"</span><span class="dt">&gt;</span></span>
-<span id="cb2-12"><a aria-hidden="true" href="#cb2-12" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">el-table</span><span class="ot"> :data</span><span class="op">=</span><span class="st">"listArr"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width: 100%;"</span><span class="ot"> border height</span><span class="op">=</span><span class="st">"393"</span><span class="dt">&gt;</span></span>
-<span id="cb2-13"><a aria-hidden="true" href="#cb2-13" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">el-table-column</span><span class="ot"> type</span><span class="op">=</span><span class="st">"selection"</span><span class="dt">&gt;&lt;/</span><span class="kw">el-table-column</span><span class="dt">&gt;</span></span>
-<span id="cb2-14"><a aria-hidden="true" href="#cb2-14" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">el-table-column</span><span class="ot"> prop</span><span class="op">=</span><span class="st">"id"</span><span class="ot"> label</span><span class="op">=</span><span class="st">"ID"</span><span class="dt">&gt;&lt;/</span><span class="kw">el-table-column</span><span class="dt">&gt;</span></span>
-<span id="cb2-15"><a aria-hidden="true" href="#cb2-15" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">el-table-column</span><span class="ot"> prop</span><span class="op">=</span><span class="st">"name"</span><span class="ot"> label</span><span class="op">=</span><span class="st">"姓名"</span><span class="dt">&gt;&lt;/</span><span class="kw">el-table-column</span><span class="dt">&gt;</span></span>
-<span id="cb2-16"><a aria-hidden="true" href="#cb2-16" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">el-table-column</span><span class="ot"> prop</span><span class="op">=</span><span class="st">"age"</span><span class="ot"> label</span><span class="op">=</span><span class="st">"年龄"</span><span class="dt">&gt;&lt;/</span><span class="kw">el-table-column</span><span class="dt">&gt;</span></span>
-<span id="cb2-17"><a aria-hidden="true" href="#cb2-17" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">el-table</span><span class="dt">&gt;</span></span>
-<span id="cb2-18"><a aria-hidden="true" href="#cb2-18" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb2-19"><a aria-hidden="true" href="#cb2-19" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
-<span id="cb2-20"><a aria-hidden="true" href="#cb2-20" tabindex="-1"></a>      <span class="kw">new</span> <span class="fu">Vue</span>({</span>
-<span id="cb2-21"><a aria-hidden="true" href="#cb2-21" tabindex="-1"></a>        <span class="dt">el</span><span class="op">:</span> <span class="st">"#app"</span><span class="op">,</span></span>
-<span id="cb2-22"><a aria-hidden="true" href="#cb2-22" tabindex="-1"></a>        <span class="dt">data</span><span class="op">:</span> {</span>
-<span id="cb2-23"><a aria-hidden="true" href="#cb2-23" tabindex="-1"></a>          <span class="dt">listArr</span><span class="op">:</span> [</span>
-<span id="cb2-24"><a aria-hidden="true" href="#cb2-24" tabindex="-1"></a>            { <span class="dt">id</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span> <span class="dt">name</span><span class="op">:</span> <span class="st">"周一"</span><span class="op">,</span> <span class="dt">age</span><span class="op">:</span> <span class="dv">11</span> }<span class="op">,</span></span>
-<span id="cb2-25"><a aria-hidden="true" href="#cb2-25" tabindex="-1"></a>            { <span class="dt">id</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span> <span class="dt">name</span><span class="op">:</span> <span class="st">"虎二"</span><span class="op">,</span> <span class="dt">age</span><span class="op">:</span> <span class="dv">12</span> }<span class="op">,</span></span>
-<span id="cb2-26"><a aria-hidden="true" href="#cb2-26" tabindex="-1"></a>            { <span class="dt">id</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span> <span class="dt">name</span><span class="op">:</span> <span class="st">"张三"</span><span class="op">,</span> <span class="dt">age</span><span class="op">:</span> <span class="dv">13</span> }<span class="op">,</span></span>
-<span id="cb2-27"><a aria-hidden="true" href="#cb2-27" tabindex="-1"></a>            { <span class="dt">id</span><span class="op">:</span> <span class="dv">4</span><span class="op">,</span> <span class="dt">name</span><span class="op">:</span> <span class="st">"李四"</span><span class="op">,</span> <span class="dt">age</span><span class="op">:</span> <span class="dv">14</span> }<span class="op">,</span></span>
-<span id="cb2-28"><a aria-hidden="true" href="#cb2-28" tabindex="-1"></a>            { <span class="dt">id</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">name</span><span class="op">:</span> <span class="st">"王五"</span><span class="op">,</span> <span class="dt">age</span><span class="op">:</span> <span class="dv">15</span> }<span class="op">,</span></span>
-<span id="cb2-29"><a aria-hidden="true" href="#cb2-29" tabindex="-1"></a>            { <span class="dt">id</span><span class="op">:</span> <span class="dv">6</span><span class="op">,</span> <span class="dt">name</span><span class="op">:</span> <span class="st">"赵六"</span><span class="op">,</span> <span class="dt">age</span><span class="op">:</span> <span class="dv">16</span> }</span>
-<span id="cb2-30"><a aria-hidden="true" href="#cb2-30" tabindex="-1"></a>          ]</span>
-<span id="cb2-31"><a aria-hidden="true" href="#cb2-31" tabindex="-1"></a>        }<span class="op">,</span></span>
-<span id="cb2-32"><a aria-hidden="true" href="#cb2-32" tabindex="-1"></a>        <span class="fu">created</span>() {</span>
-<span id="cb2-33"><a aria-hidden="true" href="#cb2-33" tabindex="-1"></a>          <span class="kw">this</span><span class="op">.</span><span class="at">listArr</span><span class="op">.</span><span class="fu">forEach</span>((item<span class="op">,</span> index) <span class="kw">=&gt;</span> {</span>
-<span id="cb2-34"><a aria-hidden="true" href="#cb2-34" tabindex="-1"></a>            <span class="co">// 返回由指定的 UTF-16 代码单元序列创建的字符串作为 ID</span></span>
-<span id="cb2-35"><a aria-hidden="true" href="#cb2-35" tabindex="-1"></a>            item<span class="op">.</span><span class="at">id</span> <span class="op">=</span> <span class="bu">String</span><span class="op">.</span><span class="fu">fromCharCode</span>(<span class="dv">65</span> <span class="op">+</span> index)<span class="op">;</span></span>
-<span id="cb2-36"><a aria-hidden="true" href="#cb2-36" tabindex="-1"></a>          })<span class="op">;</span></span>
-<span id="cb2-37"><a aria-hidden="true" href="#cb2-37" tabindex="-1"></a>          <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="kw">this</span><span class="op">.</span><span class="at">listArr</span>)<span class="op">;</span></span>
-<span id="cb2-38"><a aria-hidden="true" href="#cb2-38" tabindex="-1"></a>        }</span>
-<span id="cb2-39"><a aria-hidden="true" href="#cb2-39" tabindex="-1"></a>      })<span class="op">;</span></span>
-<span id="cb2-40"><a aria-hidden="true" href="#cb2-40" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
-<span id="cb2-41"><a aria-hidden="true" href="#cb2-41" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
-<span id="cb2-42"><a aria-hidden="true" href="#cb2-42" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
-      </article>
-    </div>
+    <main>
+      <h1>Juejin article moved</h1>
+      <p>This synced Juejin article now lives under the rebuilt post route.</p>
+      <a href="/en/posts/sync/2022-05-27-7102285357928071176/">Continue</a>
+    </main>
+    <script>
+      window.location.replace("/en/posts/sync/2022-05-27-7102285357928071176/");
+    </script>
   </body>
 </html>

@@ -1,0 +1,135 @@
+1:"$Sreact.fragment"
+2:I[27917,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js","/_next/static/chunks/c1e006c587210adc.js"],""]
+6:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T3c66,<p><a
+href="https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fjanl%2Fmustache.js%2F"
+data-ref="nofollow noopener noreferrer" target="_blank"
+title="https://github.com/janl/mustache.js/">mustache</a> 是
+“胡子”的意思，因为它的嵌入标记 {{ }} 旋转过来很像<a
+href="https://link.juejin.cn?target=https%3A%2F%2Fmustache.github.io%2F"
+data-ref="nofollow noopener noreferrer" target="_blank"
+title="https://mustache.github.io/">胡子</a>，Vue中的 {{ }}
+语法也引用了mustache，这也是我深入学习的目的。</p>
+<blockquote>
+<p>原始js方式使 <strong>数据</strong> 变为<strong>视图</strong></p>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a> &lt;ul id=&quot;list&quot;<span class="op">&gt;</span>&lt;/ul<span class="op">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a> &lt;script<span class="op">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        var arr = <span class="ex">[</span><span class="ss">            </span>{&quot;name&quot;<span class="ch">:</span><span class="st">&quot;张三&quot;</span><span class="op">,</span> <span class="st">&quot;age&quot;</span>:<span class="dv">12</span><span class="op">,</span> <span class="st">&quot;sex&quot;</span>:<span class="st">&quot;男&quot;</span>}<span class="op">,</span>            {&quot;name&quot;<span class="ch">:</span><span class="st">&quot;李四&quot;</span><span class="op">,</span> <span class="st">&quot;age&quot;</span>:<span class="dv">13</span><span class="op">,</span> <span class="st">&quot;sex&quot;</span>:<span class="st">&quot;女&quot;</span>}<span class="op">,</span>            {&quot;name&quot;<span class="ch">:</span><span class="st">&quot;王五&quot;</span><span class="op">,</span> <span class="st">&quot;age&quot;</span>:<span class="dv">14</span><span class="op">,</span> <span class="st">&quot;sex&quot;</span>:<span class="st">&quot;女&quot;</span>}<span class="op">,</span>            {&quot;name&quot;<span class="ch">:</span><span class="st">&quot;赵六&quot;</span><span class="op">,</span> <span class="st">&quot;age&quot;</span>:<span class="dv">15</span><span class="op">,</span> <span class="st">&quot;sex&quot;</span>:<span class="st">&quot;男&quot;</span>}<span class="op">,</span>        ]</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        var list = document<span class="fu">.getElementById</span><span class="in">(</span>&#39;list&#39;<span class="in">)</span>;</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="er">// jion法——遍历arr数组，每遍历一项，就将HTML 字符串添加到list 中</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        for<span class="in">(</span>let i = 0; i&lt;arr<span class="fu">.length</span>; i<span class="op">++</span><span class="in">)</span>{</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            list<span class="fu">.innerHTML</span> <span class="op">+</span>= <span class="ex">[</span><span class="ss">                </span><span class="st">&#39;&lt;li&gt;&#39;</span><span class="op">,</span>                &#39;    &lt;div class=&quot;hd&quot;<span class="op">&gt;</span>&#39;<span class="op">+</span> arr<span class="ex">[</span><span class="ss">i</span><span class="ex">]</span><span class="fu">.name</span> <span class="op">+</span>&#39;&lt;/div<span class="op">&gt;</span>&#39;<span class="op">,</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                &#39;    &lt;div class=&quot;bd&quot;<span class="op">&gt;</span>&#39;<span class="op">,</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                &#39;        &lt;p<span class="op">&gt;</span>姓名：&#39;<span class="op">+</span> arr<span class="ex">[</span><span class="ss">i</span><span class="ex">]</span><span class="fu">.name</span> <span class="op">+</span>&#39;&lt;/p<span class="op">&gt;</span>&#39;<span class="op">,</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                &#39;        &lt;p<span class="op">&gt;</span>年龄：&#39;<span class="op">+</span> arr<span class="ex">[</span><span class="ss">i</span><span class="ex">]</span><span class="fu">.age</span> <span class="op">+</span>&#39;&lt;/p<span class="op">&gt;</span>&#39;<span class="op">,</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                &#39;        &lt;p<span class="op">&gt;</span>性别：&#39;<span class="op">+</span> arr<span class="ex">[</span><span class="ss">i</span><span class="ex">]</span><span class="fu">.sex</span> <span class="op">+</span>&#39;&lt;/p<span class="op">&gt;</span>&#39;<span class="op">,</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                &#39;    &lt;/div<span class="op">&gt;</span>&#39;<span class="op">,</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                &#39;&lt;/li<span class="op">&gt;</span>&#39;</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>            ]<span class="fu">.join</span><span class="in">(</span>&#39;&#39;<span class="in">)</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="er">// 反引号法——遍历arr数组，每遍历一项，就将HTML 字符串添加到list 中</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        for<span class="in">(</span>let i = 0; i&lt;arr<span class="fu">.length</span>; i<span class="op">++</span><span class="in">)</span>{</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>            list<span class="fu">.innerHTML</span> <span class="op">+</span>= `</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>                &lt;li<span class="op">&gt;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>                    &lt;div class=&quot;hd&quot;<span class="op">&gt;</span> ${arr<span class="ex">[</span><span class="ss">i</span><span class="ex">]</span><span class="fu">.name</span>} &lt;/div<span class="op">&gt;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>                    &lt;div class=&quot;bd&quot;<span class="op">&gt;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>                        &lt;p<span class="op">&gt;</span>姓名：${arr<span class="ex">[</span><span class="ss">i</span><span class="ex">]</span><span class="fu">.name</span>}&lt;/p<span class="op">&gt;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>                        &lt;p<span class="op">&gt;</span>年龄：${arr<span class="ex">[</span><span class="ss">i</span><span class="ex">]</span><span class="fu">.age</span> }&lt;/p<span class="op">&gt;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>                        &lt;p<span class="op">&gt;</span>性别：${arr<span class="ex">[</span><span class="ss">i</span><span class="ex">]</span><span class="fu">.sex</span> }&lt;/p<span class="op">&gt;</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>                    &lt;/div</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>                &lt;/li<span class="op">&gt;</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>            `;</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>&lt;/script<span class="op">&gt;</span></span></code></pre></div>
+<blockquote>
+<p>mustache的<strong>底层原理</strong></p>
+</blockquote>
+<p>要实现这样的：<img
+src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0f2d819e3d0e47fdb6f5f2dce44e3edd~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="image-20210718104621132.png" /></p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">script</span>&gt;</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>        // 模板</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        var templateStr =  &#39;&lt;<span class="kw">h1</span>&gt;今天我买了一辆{{thing}},{{money}}W,很{{mood}}&lt;/<span class="kw">h1</span>&gt;&#39;;</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        // 数据</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        var data = {</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>            thing: &#39;兰博基尼&#39;,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>            money: 50,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>            mood: &#39;开心&#39;</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        };</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        // 1.使用正则实现简单数据填充，正则中的 g 表示全局，把&#39;你&#39;替换成 &#39;我&#39;</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        // console.log(&#39;你很帅，你很有钱&#39;.replace(/你/g,&#39;我&#39;));</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        // 2.最简单的模板引擎实现机理，利用正则表达式中的replace()方法</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        //   replace()的第二个参数$1 可以是一个函数，这个喊啊书提供的东西的参数就是$1</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>       function render(templateStr, data){</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>           return templateStr.replace(/{{(\w+)}}/g,function(findStr, $1){</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>               return data[$1];</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>           });</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>       }</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>       var result = render(templateStr, data);</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>       console.log(result);</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">script</span>&gt;</span></code></pre></div>
+<blockquote>
+<p><strong>实现方式</strong>：Mustache.render(templateStr, data);
+templateStr模板字符串，data数据，render返回填充后dom字符串。</p>
+</blockquote>
+<blockquote>
+<p><strong>实现原理</strong>：第①步：将<strong>模板字符串</strong>编译成<strong>tokens</strong>
+形式，第②步：将<strong>tokens</strong>与<strong>数据</strong>结合，解析成<strong>dom字符串</strong>。</p>
+</blockquote>
+<p><img
+src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d77d1f9fad804eaab4bc518355796b07~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="image-20210717165612249.png" /></p>
+<blockquote>
+<p><strong>什么是tokens?</strong></p>
+</blockquote>
+<p>JS的嵌套数组，模板字符串的JS表示形式。</p>
+<p>模板字符串：<code>&lt;h1&gt;我买了一辆{{thing}},{{money}}W&lt;/h1&gt;</code></p>
+<p>编译后的tokens:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[</span><span class="ss">    [</span><span class="st">&quot;text&quot;</span><span class="op">,</span>  &quot;&lt; h1 <span class="op">&gt;</span>我买了一辆&quot;]<span class="op">,</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">[</span><span class="st">&quot;name&quot;</span><span class="op">,</span>  ”thing“]<span class="op">,</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="ex">[</span><span class="st">&quot;text&quot;</span><span class="op">,</span>  &quot;<span class="op">,</span>&quot;]<span class="op">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="ex">[</span><span class="st">&quot;name&quot;</span><span class="op">,</span>  ”money“]<span class="op">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">[</span><span class="st">&quot;text&quot;</span><span class="op">,</span>  &quot;W&lt; /h1 <span class="op">&gt;</span>&quot;]<span class="op">,</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>]</span></code></pre></div>
+<p><strong>实现思路</strong>：用到了《数据结构》中<strong>栈</strong>的原理，遇到
+<code>#</code> 号进栈，遇到 <code>/</code> 线出栈； <code>#</code>
+号标记的tokens，需要递归处理它的下标为2的小数组。遍历传入的 tokens
+的每一个 token，遇到第一项是 # 和 /
+的分别做处理，其余的做一个默认处理。大致思路是当遍历到的 token
+的第一项为 # 时，就把直至遇到配套的 / 之前，遍历到的每一个 token
+都放入一个容器（collector）中，把这个容器放入当前 token 里作为第 3
+项元素。</p>
+<pre class="arduino"><code>// nestTokens.js
+export default (tokens) =&gt; {
+  const nestTokens = []
+  const stack = []
+  let collector = nestTokens // 一开始让收集器 collector 指向最终返回的数组 nestTokens
+  tokens.forEach(token =&gt; {
+    switch (token[0]) {
+      case &#39;#&#39;:
+        stack.push(token)
+        collector.push(token)
+        collector = token[2] = [] // 连等赋值
+        break
+      case &#39;/&#39;:
+        stack.pop(token)
+        collector = stack.length &gt; 0 ? stack[stack.length-1][2] : nestTokens
+        break;
+      default:
+        collector.push(token)
+        break
+    }
+  })
+  return nestTokens
+}</code></pre>
+<p>参考：<a href="https://juejin.cn/post/6954244558938963982" target="_blank"
+title="https://juejin.cn/post/6954244558938963982">juejin.cn/post/695424…</a></p>
+0:{"buildId":"x75K1nEe0QZ34zwIRS4aa","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"space-y-8","children":[["$","nav",null,{"className":"flex flex-wrap items-center gap-3 text-sm text-[var(--muted)]","children":[["$","$L2",null,{"href":"/en","className":"nav-chip","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","aria-hidden":"true","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back home"]}],["$","$L2",null,{"href":"/en/archives","className":"nav-chip","children":"All posts"}],["$","$L2",null,{"href":"https://juejin.cn/post/6986120377596379144","target":"_blank","className":"nav-chip","children":"Original source"}]]}],["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"Synced from Juejin"}],["$","span",null,{"children":"2021-07-18"}],["$","span",null,{"children":[3," ","min read"]}],["$","span",null,{"children":"Original article · Chinese"}]]}],["$","h1",null,{"className":"hero-title compact","children":"Vue深入学习—mustache模板引擎原理"}],["$","p",null,{"className":"hero-copy","children":"mustache 是 “胡子”的意思，因为它的嵌入标记 {{ }} 旋转过来很像 胡子 ，Vue中的 {{ }} 语法也引用了mustache，这也是我深入学习的目的。 原始js方式使 数据 变为视图 mustache的底层原理 要实现这样的： 实现方式：Mustache.render(templateStr, data); templateStr模板字符串..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"Synopsis"}],["$","span",null,{"children":"This post is preserved inside the rebuilt blog shell while keeping the original Chinese content intact."}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$3"}}]}],"$L4"]}],null,"$L5"]}],"loading":null,"isPartial":false}
+4:["$","div",null,{"className":"flex justify-end","children":["$","$L2",null,{"href":"/en/archives","className":"ghost-inline","children":["All posts",["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-right h-4 w-4","aria-hidden":"true","children":[["$","path","1ays0h",{"d":"M5 12h14"}],["$","path","xquz4c",{"d":"m12 5 7 7-7 7"}],"$undefined"]}]]}]}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

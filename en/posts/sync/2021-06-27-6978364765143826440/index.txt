@@ -1,0 +1,346 @@
+1:"$Sreact.fragment"
+2:I[29323,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js"],""]
+3:I[44130,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js"],"ThemeProvider"]
+4:I[54542,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js"],"Live2DLoader"]
+5:I[22870,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+6:I[70047,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+7:I[27917,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js","/_next/static/chunks/c1e006c587210adc.js"],""]
+a:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"ViewportBoundary"]
+f:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"MetadataBoundary"]
+11:I[70681,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+:HL["/_next/static/chunks/ead81560c9a4fbf0.css","style"]
+:HL["/_next/static/chunks/413691b425972ef2.css","style"]
+:HL["/_next/static/chunks/fd925de71f201c0b.css","style"]
+:HL["/_next/static/chunks/d2b6e6f3d4b2e5b1.css","style"]
+:HL["/_next/static/media/0c89a48fa5027cee-s.p.4564287c.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/130b5bec7367fe75-s.p.8efb6a94.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5f402bd2d8eef81a-s.p.b72f0478.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/ad9c66e761fed85a-s.p.bd81a64b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/feb57b2dc8f29018-s.p.2539f70a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"b":"x75K1nEe0QZ34zwIRS4aa","c":["","en","posts","sync","2021-06-27-6978364765143826440",""],"q":"","i":false,"f":[[["",{"children":[["lang","en","d"],{"children":["posts",{"children":[["slug","sync/2021-06-27-6978364765143826440","c"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/ead81560c9a4fbf0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/chunks/413691b425972ef2.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/chunks/fd925de71f201c0b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/chunks/d2b6e6f3d4b2e5b1.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/869f3c4760d682ac.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/61fd2b7dad90b234.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"space_grotesk_a4177b3f-module__DCxVEW__variable newsreader_9b8f4ea1-module__zx2fjG__variable noto_sans_sc_a3d52348-module__3J4rVG__variable noto_sans_jp_c334996c-module__lqaEgG__variable noto_naskh_arabic_29da2e4f-module__VDzUxG__variable","children":[["$","$L2",null,{"id":"locale-bootstrap","strategy":"beforeInteractive","children":"\n(() => {\n  const segments = window.location.pathname.split(\"/\").filter(Boolean);\n  const locale = segments[0];\n  const localeMap = { en: \"ltr\", zh: \"ltr\", es: \"ltr\", ja: \"ltr\", ar: \"rtl\" };\n  const dir = localeMap[locale] || \"ltr\";\n  const lang = localeMap[locale] ? locale : \"en\";\n  document.documentElement.lang = lang;\n  document.documentElement.dir = dir;\n})();\n"}],["$","$L3",null,{"attribute":"class","defaultTheme":"system","enableSystem":true,"disableTransitionOnChange":true,"children":[["$","$L4",null,{}],["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"className":"mx-auto flex min-h-screen max-w-3xl flex-col items-start justify-center gap-6 px-6","children":[["$","span",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"className":"hero-title compact","children":"That route is outside the rebuilt shell."}],["$","p",null,{"className":"hero-copy","children":"Try the English home, the archive, or one of the legacy roots. The new site keeps the main paths stable, but unknown URLs still stop here."}],["$","$L7",null,{"href":"/en","className":"primary-chip","children":"Return to /en"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]}]]}],{"children":[["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/c1e006c587210adc.js","async":true,"nonce":"$undefined"}]],"$L8"]}],{"children":[["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$Ld",null,{"children":"$Le"}],["$","div",null,{"hidden":true,"children":["$","$Lf",null,{"children":["$","$b",null,{"name":"Next.Metadata","children":"$L10"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$11",[]],"S":true}
+12:I[95261,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js","/_next/static/chunks/c1e006c587210adc.js"],"HtmlLocaleSync"]
+13:I[4721,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js","/_next/static/chunks/c1e006c587210adc.js"],"BlogNavbar"]
+8:[["$","$L12",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L13",null,{"locale":"en","labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/en","label":"Home"},{"href":"/en#latest","label":"Latest"},{"href":"/en#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/en#community","label":"Community"}],"legacyRoots":[{"slug":"A前端👨‍💻","title":{"en":"Frontend Atlas","zh":"前端图谱","es":"Atlas Frontend","ja":"フロントエンド地図","ar":"أطلس الواجهة الأمامية"},"description":{"en":"CSS, Vue, React, Canvas, Node, uni-app, build tools, and the earlier front-end trail.","zh":"CSS、Vue、React、Canvas、Node、uni-app、打包工具，以及更早的前端路径。","es":"CSS, Vue, React, Canvas, Node, uni-app, herramientas de build y el rastro front-end más temprano.","ja":"CSS、Vue、React、Canvas、Node、uni-app、ビルドツールなど、初期のフロントエンド蓄積。","ar":"CSS وVue وReact وCanvas وNode وuni-app وأدوات البناء والمسار الأقدم للواجهة الأمامية."}},{"slug":"B面试题📑","title":{"en":"Interview Bank","zh":"面试题仓库","es":"Banco de Entrevistas","ja":"面接バンク","ar":"بنك المقابلات"},"description":{"en":"Question banks for browser internals, networking, Vue, React, JavaScript, and engineering.","zh":"浏览器、网络、Vue、React、JavaScript 和工程化的面试题集合。","es":"Baterías de preguntas sobre navegador, red, Vue, React, JavaScript e ingeniería.","ja":"ブラウザ、ネットワーク、Vue、React、JavaScript、開発基盤に関する面接問題。","ar":"مجموعات أسئلة عن المتصفح والشبكات وVue وReact وJavaScript والهندسة."}},{"slug":"Vue实战💻","title":{"en":"Vue Practice","zh":"Vue 实战","es":"Práctica Vue","ja":"Vue 実戦","ar":"تطبيقات Vue"},"description":{"en":"Real project records around Ant Design, Echarts, mini programs, stores, and browser features.","zh":"围绕 Ant Design、Echarts、小程序、商城项目和浏览器功能的一组实战记录。","es":"Registros reales sobre Ant Design, Echarts, mini programas, tiendas y funciones del navegador.","ja":"Ant Design、Echarts、ミニプログラム、ストア、ブラウザ機能に関する実戦記録。","ar":"سجلات عملية حول Ant Design وEcharts والبرامج المصغرة والمتاجر وميزات المتصفح."}},{"slug":"走过的路🌱","title":{"en":"Growing Path","zh":"走过的路","es":"Camino Recorrido","ja":"歩いてきた道","ar":"الطريق الذي سلكته"},"description":{"en":"Yearly reviews and growth notes that carry more life signal than technical polish.","zh":"年度总结和成长记录，保留生活感和时间感。","es":"Revisiones anuales y notas de crecimiento con más vida que pulido técnico.","ja":"年次レビューと成長記録。技術の整い方より時間の感触が残っています。","ar":"مراجعات سنوية وملاحظات نمو تحمل أثر الحياة أكثر من الصقل التقني."}},{"slug":"读过的书📚️","title":{"en":"Reading Shelf","zh":"读书笔记","es":"Estante de Lectura","ja":"読書棚","ar":"رف القراءة"},"description":{"en":"Book notes across networking, JavaScript, algorithms, and systems thinking.","zh":"网络、JavaScript、算法和系统思维方向的读书笔记。","es":"Notas de lectura sobre redes, JavaScript, algoritmos y pensamiento de sistemas.","ja":"ネットワーク、JavaScript、アルゴリズム、システム思考に関する読書ノート。","ar":"ملاحظات قراءة حول الشبكات وJavaScript والخوارزميات والتفكير المنظومي."}},{"slug":"PHP🐘","title":{"en":"PHP Shelf","zh":"PHP 归档","es":"Estante PHP","ja":"PHP 棚","ar":"رف PHP"},"description":{"en":"Earlier PHP notes and experiments that still belong in the public record.","zh":"更早期的 PHP 文章和实验记录。","es":"Notas y experimentos tempranos de PHP que siguen formando parte del archivo.","ja":"初期の PHP ノートと実験記録。","ar":"ملاحظات وتجارب PHP المبكرة التي ما زالت جزءًا من السجل."}},{"slug":"Python🐍","title":{"en":"Python Shelf","zh":"Python 归档","es":"Estante Python","ja":"Python 棚","ar":"رف Python"},"description":{"en":"Small scraping experiments and data-oriented notes from the earlier Python phase.","zh":"偏数据和爬取的小实验，保留了更早一阶段的 Python 轨迹。","es":"Pequeños experimentos de scraping y notas orientadas a datos de la etapa temprana con Python.","ja":"スクレイピングやデータ寄りの小さな Python 実験。","ar":"تجارب صغيرة في الاستخراج والبيانات من المرحلة المبكرة مع Python."}}]}],"$L14","$L15","$L16","$L17","$L18"]}]]
+14:["$","div",null,{"className":"background-orb background-orb-one"}]
+15:["$","div",null,{"className":"background-orb background-orb-two"}]
+16:["$","div",null,{"className":"background-grid"}]
+17:["$","main",null,{"className":"mx-auto min-h-screen max-w-7xl px-4 pb-20 pt-24 md:px-6","children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]
+18:["$","footer",null,{"className":"mx-auto flex max-w-7xl flex-col gap-4 border-t border-[var(--line)] px-4 py-10 text-sm text-[var(--muted)] md:flex-row md:items-center md:justify-between md:px-6","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L7",null,{"href":"/en","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L7",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L7",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L7",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]
+19:T50e9,<h2
+id="javascript高级程序设计红宝书第一遍阅读了解概念">《JavaScript高级程序设计》红宝书第一遍阅读（了解概念）</h2>
+<h3 id="第1章什么是javascript">第1章——什么是JavaScript</h3>
+<p>DOM将整个页面抽象为一组分层节点。</p>
+<p>BOM用于支持访问和操作浏览器的窗口。</p>
+<hr />
+<h3 id="第2章html中的javascript">第2章——HTML中的JavaScript</h3>
+<ul>
+<li><strong>2.1 &lt; script &gt;元素</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>元素</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>async</td>
+<td>立即开始下载脚本，但不能阻止其他页面动作，比如下载资源或等待其他脚本加载，只对外部脚本文件有效；</td>
+</tr>
+<tr>
+<td>charset</td>
+<td>使用src指定代码字符集，很少使用，大多数浏览器不在乎它的值；</td>
+</tr>
+<tr>
+<td>crossorigin</td>
+<td>配置相关CORS(跨源资源共享)设置。默认不使用CORS；</td>
+</tr>
+<tr>
+<td>defer</td>
+<td>表示在文档解析和显示完成后，再执行脚本，只对外部脚本文件有效；</td>
+</tr>
+<tr>
+<td>integrity</td>
+<td>运行比对接收到的资源和指定的加密签名以验证子资源的完整性(SRI，Subresource
+Intergrity)。可以用于确保内容分发网络（CDN，Content Delivery
+Network）不会提供恶意内容。</td>
+</tr>
+<tr>
+<td>src</td>
+<td>包含要执行的代码的外部文件；</td>
+</tr>
+<tr>
+<td>type</td>
+<td>表示代码中脚本语言的内容类型（也称MIMI类型），这个值始终是“text/javascript”，如果这个值是module，则代码会被当作ES6模块，而且只有这种时候，代码中才能出现import和export关键字。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2.1.3 异步加载脚本</strong></p>
+<p>async属性和defer，两者都能适用于外部脚本，告诉浏览器立即开始下载。</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>异步执行脚本<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">script</span><span class="ot"> async src</span><span class="op">=</span><span class="st">&quot;main.js&gt;</span><span class="er">&lt;</span><span class="st">/script&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="st">    </span><span class="er">&lt;</span><span class="st">script async src=&quot;</span><span class="ot">main1.js</span><span class="dt">&gt;&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span><span class="co">&lt;!--可能先于第一个脚本执行--&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
+<p><strong>2.1.4 动态加载脚本</strong></p>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> script <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">&#39;script&#39;</span>)<span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>script<span class="op">.</span><span class="at">src</span> <span class="op">=</span> <span class="st">&#39;gibberish.js&#39;</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>script<span class="op">.</span><span class="at">async</span> <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="at">head</span><span class="op">.</span><span class="fu">appendChild</span>(script)<span class="op">;</span></span></code></pre></div>
+<hr />
+<h3 id="第3章语言基础">第3章——语言基础</h3>
+<p>var声明的变量，在函数退出时被销毁。</p>
+<p>let声明的范围是<strong>块作用域</strong>，var声明的范围是<strong>函数作用域</strong>。</p>
+<p>let声明的变量不会在作用域中被提升。</p>
+<p>const声明变量是必须同时<strong>初始化变量</strong></p>
+<p>const优先，let次之。</p>
+<ul>
+<li><strong>3.4数据类型</strong></li>
+</ul>
+<p>typeof操作符：用来区分函数和其他对象</p>
+<p>undefined
+类型：声明了变量但是没有初始化（没有值），undefined是由null中派生而来的。</p>
+<p>null类型：表示一个空对象指针。</p>
+<p>boolean类型：要将一个其他类型的值转换成布尔值，可以调用Boolean()转换函数。</p>
+<p>Number类型：表示整数和浮点值，范围在Number.MIN_VALUE~Number.MAX_VALUE之间。</p>
+<p>NaN（Not a
+Number）意思'不是数值',<strong>表示</strong>本来要返回数值的操作失败了。</p>
+<p>数值转换：Number、parseInt()、parseFloat(),</p>
+<p>模板字面量：求值后得到的字符串。</p>
+<p>Symbol类型：确保<strong>对象属性</strong>使用使用唯一的标识符，不会发生冲突的危险。</p>
+<p>.asyncIteraltor表示异步迭代器API的函数。</p>
+<p>.hasInstance用来确定一个对象实例的原型链上是否有原型。</p>
+<p>.for()表示对每个字符串键都执行幂的操作。</p>
+<p>.keyfor()查询全局注册表。</p>
+<p>.isConcatSpreadable表示”一个布尔值，如果是true,则意味着对象应该用Array.prototypr.concat()打平其数组元素“。</p>
+<ul>
+<li><strong>3.5一元操作符（只操作一个值的操作符）</strong></li>
+</ul>
+<p>位操作符：有符号整数使用32位前31位表示整数值，第32位表示数值的符号，这一位称为<strong>符号位</strong>，他的值决定了数值其余部分的格式。</p>
+<p>布尔操作符：逻辑与&amp;&amp;（短路操作符）、逻辑或||、逻辑非!</p>
+<p>乘性操作符：乘法*、除法/、取模%</p>
+<p>指数操作符：Math.pow(底数，指数)</p>
+<p>加性操作符：加法+、减法-</p>
+<p>关系操作符：小于&lt;、大于&gt;~~~</p>
+<ul>
+<li><strong>3.6语句</strong></li>
+</ul>
+<p>for-in语句：for(property in windows )
+statment，每次循环都给变量property 赋予一个
+windows对象的属性作为值，直到所有属性都被枚举一遍。</p>
+<p>for-of语句：for(const el of
+[1,3,5,7])，循环会持续到所有元素都别迭代完。</p>
+<p>break语句：跳出当前循环，执行循环后的下一条语句；</p>
+<p>continue语句：退出循环后，再次回到循环顶部重新开始执行。</p>
+<ul>
+<li><strong>3.7函数</strong></li>
+</ul>
+<p>diff()函数：结算两个数值的差。sayHi()函数：合并传递的参数，并用逗号隔开。</p>
+<hr />
+<h3 id="第4章变量作用域与内存">第4章——变量、作用域与内存</h3>
+<ul>
+<li><strong>4.2执行上下文与作用域。</strong></li>
+</ul>
+<p>每个上下文都有一个关联的<strong>变量对象</strong>,这个上下文中定义的所有变量和函数都存在于这个对象上。</p>
+<ul>
+<li><strong>4.3垃圾回收</strong></li>
+</ul>
+<p>确定某个变量不会再使用，然后释放它占用的内存，周期性清理，属于’不判定的‘问题。</p>
+<p>两种标记策略：标记清理、引用计数。</p>
+<p><strong>标记清理</strong>流程：<strong>垃圾回收机制运行的时候，会标记内存中存储的所有变量，被加上标记的变量就是待删除状态，随后垃圾回收程序做一次内存清理，就会销毁带标记的所有值并回收他们的内存。</strong></p>
+<p><strong>引用计数</strong>：对每个值都记录它被引用的次数，变量被引用一次，那么引用数+1；变量被其他值覆盖，引用值-1；当引用值为0的时候，回收其内存。</p>
+<hr />
+<h3 id="第5章基本引用类型">第5章——基本引用类型</h3>
+<ul>
+<li><strong>5.3 原始值包含方法</strong></li>
+</ul>
+<p>trim()方法：创建字符串的一个副本，删除前后所有空格符，再返回起结果。</p>
+<p>repeat()方法：接收一个参数，将字符串复制参数中指定的次数，然后拼接所有副本的结果。</p>
+<ul>
+<li><strong>5.4 Math</strong></li>
+</ul>
+<p>Math.round()方法执行四舍五入。</p>
+<p>.random()生成随机数。</p>
+<hr />
+<h3 id="第6章集合应用类型">第6章——集合应用类型</h3>
+<ul>
+<li><strong>6.1 Object</strong></li>
+</ul>
+<p>object适合存储和在应用程序之间交换数据。</p>
+<p>对象字面量：对象定义的简写形式，目的是为了简化包含大量属性的对象的创建。</p>
+<ul>
+<li><strong>6.2 Array 数组</strong></li>
+</ul>
+<p>form()用于将<strong>类数组结构</strong>转换为数组实例；</p>
+<p>迭代器方法：keys()返回数组<strong>索引</strong>,values()返回数组<strong>元素</strong>，entries()返回<strong>索引/值对</strong></p>
+<p>栈方法：posh()推入，pop()弹出，遵循后进先出的原则。</p>
+<p>队列方法：shift()删除数组中第一项，并返回数组长度；posh()在数组末尾添加数据；遵循先进先出原则。</p>
+<p>排序方法：reverse()反向排序；sort()中包含一个比较函数，用于判断那个值应该排在前面。</p>
+<p>操作方法：concat()在现有数组后面创建一个新的数组;slice()创建一个包含原有数组中一个或多个元素的心数组；splice()在数组中插入新的元素，删除传递2个参数，第一个是元素的位置，第二个是删除的数量，插入传递3个参数；</p>
+<p>迭代方法：every()对数组每一项都远行传入的函数；filter()；foreach();map();som();</p>
+<p>归并方法：reduce()从数组第一项开始遍历到最后一项；reduceRight()从数组的最后一项遍历到第一项；接收<strong>四个参数</strong>：上一个归并值、当前项、当前项的索引、数组本身。</p>
+<ul>
+<li><strong>6.4 Map</strong></li>
+</ul>
+<p>Map是一种新的集合类型，使用对象属性作为键，再使用属性来引用值。</p>
+<p>Map和Object的<strong>区别</strong>：<strong>内存方面,Map比Object多存储50%的键/值对；插入/删除性能方面,插入速度不会随着键/值对的数量增加而线性增加；查找速度，Object当做数组使用的情况下，Object速度更佳；</strong></p>
+<ul>
+<li><strong>6.6 Set</strong></li>
+</ul>
+<p>Set在很多方面是在加强Map</p>
+<hr />
+<h3 id="第7章迭代器与生成器">第7章——迭代器与生成器</h3>
+<p>迭代器：是一个对象，它定义了一个序列，并在终止时返回值。两个返回值：value、done。</p>
+<p>生成器：允许定义一个包含自由迭代算法的函数，同时它可以自动维护自己的状态。</p>
+<p>可迭代对象：若一个拥有迭代行为的对象。如Array、Map拥有默认的迭代行为。</p>
+<hr />
+<h3 id="第8章对象类与面向对象编程">第8章——对象、类与面向对象编程</h3>
+<ul>
+<li><strong>8.1 理解对象</strong></li>
+</ul>
+<p>面向字面量书写方式：</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> person <span class="op">=</span> {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">&quot;kuishou&quot;</span> <span class="op">,</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">age</span><span class="op">:</span><span class="dv">21</span><span class="op">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">job</span><span class="op">:</span><span class="st">&quot;前端开发&quot;</span><span class="op">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sayName</span>(){</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="kw">this</span><span class="op">.</span><span class="at">name</span>)<span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<ul>
+<li><strong>8.4 类</strong></li>
+</ul>
+<p>定义类的两种方式：声明类和类表达式 calsss Person{} 和 const Animl =
+class{};</p>
+<p>函数声明可以提升，类的定义不能。</p>
+<p>类的构造函数 ：不定义构造函数相当于将构造函数定义为空函数。</p>
+<p>继承：不仅可以继承一个类，也可以继承普通的构造函数。</p>
+<p>抽象基类：可供其他类继承，当本身不会被实例化，使用new,target检测是不是抽象基类.</p>
+<hr />
+<h3 id="第9章代理与反射">第9章——代理与反射</h3>
+<ul>
+<li><strong>9.1 代理</strong></li>
+</ul>
+<p>拦截并向基本操作嵌入额外行为的能力；target目标对象；handler代理对象（Reflect也可以）</p>
+<hr />
+<h3 id="第10章函数">第10章——函数</h3>
+<ul>
+<li><strong>10.1 闭包</strong></li>
+</ul>
+<p>闭包：指的是引用了另一个函数作用域中变量的函数，通常是在嵌套函数中实现的。<strong>本质</strong>是包含<strong>函数的活动对象</strong>加长了其作用域链。</p>
+<p>this对象：把函数当成方法调用的上下文对象。</p>
+<p>递归：一个函数通过名称自己调用自己。</p>
+<hr />
+<h3 id="第11章期约与异步函数">第11章——期约与异步函数</h3>
+<ul>
+<li><strong>11.2 期约（promise）:是对 尚不存在结果
+的一个替身。</strong></li>
+</ul>
+<p>三种状态：待定、兑现、拒绝</p>
+<p>Promise.resole()可以实例化一个解决的期约。</p>
+<p>Promise.prototype.catch()语法糖，用于给期约添加 拒绝处理程序。</p>
+<p>Promise.prototype.finally()用于添加清理代码。</p>
+<p>Promise.all()在一组期约全部解决之后再解决。</p>
+<p>Promise.race()最先解决或拒绝的期约 。</p>
+<ul>
+<li><strong>11.3 异步函数</strong></li>
+</ul>
+<p>async关键字用于声明异步函数；</p>
+<p>await关键字用于暂停异步函数代码的执行，等待期约解决。</p>
+<hr />
+<h3 id="第12章bom">第12章——BOM</h3>
+<ul>
+<li><strong>12.1 Windwos对象</strong></li>
+</ul>
+<p>BOM
+的核心是windows对象，windows对象有两个身份，另一个是ECMAScript中的Global对象，另一个是浏览器窗口的JavaScript接口。</p>
+<hr />
+<h3 id="第13章客户端检测">第13章——客户端检测</h3>
+<ul>
+<li>能力检测：检测浏览器是否含有某种特性</li>
+<li>用户代理检测：通过用户代理字符串确定浏览器。</li>
+</ul>
+<hr />
+<h3 id="第14章dom">第14章——DOM</h3>
+<p>DOM表示由多层节点构成的文档，DOM树。</p>
+<p>Element Traversal API 五个属性：</p>
+<p>childElementCount，返回元素数量（不包含文本节点和注释）。</p>
+<p>firstElementChild，指向第一个Element类型的子元素。</p>
+<p>lastElementChild，指向最后一个Element类型的子元素。</p>
+<p>previousElementSibling,指向前一个Element类型的同胞元素。</p>
+<p>nextElementSibling,指向后一个Element类型的同胞元素。</p>
+<hr />
+<h3 id="第15章dom拓展">第15章——DOM拓展</h3>
+<ul>
+<li><p><strong>15.1 Selectors API</strong></p></li>
+<li><p>querySelector()返回匹配该模式的第一个后代元素，如果没有匹配项则返回结果null。</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode java"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>let body <span class="op">=</span> document<span class="op">.</span><span class="fu">querySelector</span><span class="op">(</span><span class="er">&#39;</span>body<span class="er">&#39;</span><span class="op">)</span></span></code></pre></div></li>
+</ul>
+<hr />
+<h3 id="第17章事件">第17章——事件</h3>
+<ul>
+<li><p><strong>17.1 事件流：页面接收事件的顺序。</strong></p></li>
+<li><p>事件传播的三个阶段：①事件捕获阶段：事件是从Document节点自上而下向目标节点传播。②目标阶段：达到事件对象的事件目标，找到目标节点后完成后停止。③事件冒泡阶段：事件再从目标节点自下而上向Document节点传播。
+<img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4483d058acf0436fa09b76488dde2405~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p></li>
+</ul>
+<hr />
+<h3 id="第20章streams-api">第20章——Streams API</h3>
+<ul>
+<li>20.9
+可读流：通过公共接口读取数据块的流，由<strong>消费者</strong>进行处理，使用getReader()方法获取流的锁</li>
+<li>可写流：通过公共接口写入数据块的流，<strong>生产者</strong>将数据写入流。</li>
+<li>转换流：包含可读流和可写流，可根据需要检查和修改流内容。</li>
+<li>20.11 Web组件</li>
+<li>一套用于增强DOM行为的工具，包括影子DOM、自定义元素和HTML模板。</li>
+<li>影子DOM通过attachShadow()方法创建并添加给有效HTML元素。</li>
+</ul>
+<hr />
+<h3 id="第23章解析与序列化">第23章——解析与序列化</h3>
+<ul>
+<li>23.2 JSON对象</li>
+<li>序列化：stringify()方法，第一个<strong>参数</strong>是过滤器，可以是数组或函数；第二个<strong>参数</strong>用于缩进结果JSON字符串的选项。</li>
+<li>解析：parse()方法又叫复活函数，包含两个参数，属性名（key）和属性值（value）。可以接收一个额外的参数，这个函数会正对每个键/值对都调用一次。</li>
+</ul>
+<hr />
+<h3 id="第24章网络请求与远程资源">第24章——网络请求与远程资源</h3>
+<ul>
+<li>GET请求：用于向服务器查询某些信息。</li>
+<li>POSE请求：哟用于向服务器发送应该保存的信息。</li>
+<li>Fetch API ：浏览器会向给定的URL发送请求，读取响应、处理状态码</li>
+<li>Web
+Socket（套接字）：通过一个<strong>长时连接</strong>实现与<strong>服务器</strong>全双工、双向的通信。在JavaScript创建Web
+Socket的时候，一个HTTP请求会发送到服务器以初始化连接，服务器响应后，连接使用的Upgrade头部从HTTP切换到Web
+Socket协议，使用该协议的专有服务器。</li>
+</ul>
+<hr />
+<h3 id="第26章模块">第26章——模块</h3>
+<ul>
+<li>本质上是键/值实体，</li>
+<li>ES6模块默认在严格模式下执行，不共享全局命名空间。</li>
+</ul>
+<hr />
+<h3 id="第27章工作者线程">第27章——工作者线程</h3>
+<ul>
+<li>JavaScript是单线程的，为了为了解决并发问题，JavaScript提出了工作者线程的三种类型</li>
+<li>专用工作者线程：让脚本单独创建一个JavaScript线程，以执行委托的任务。</li>
+<li>共享工作者线程：创建到的线程可以别多个不同的上下文使用，包括不同的页面。</li>
+<li>服务工作者线程：拦截、重定向和修改页面发出的请求，充当王阔请求仲裁者的角色。</li>
+</ul>
+9:["$","div",null,{"className":"space-y-8","children":[["$","nav",null,{"className":"flex flex-wrap items-center gap-3 text-sm text-[var(--muted)]","children":[["$","$L7",null,{"href":"/en","className":"nav-chip","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","aria-hidden":"true","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Back home"]}],["$","$L7",null,{"href":"/en/archives","className":"nav-chip","children":"All posts"}],["$","$L7",null,{"href":"https://juejin.cn/post/6978364765143826440","target":"_blank","className":"nav-chip","children":"Original source"}]]}],["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"Synced from Juejin"}],["$","span",null,{"children":"2021-06-27"}],["$","span",null,{"children":[13," ","min read"]}],["$","span",null,{"children":"Original article · Chinese"}]]}],["$","h1",null,{"className":"hero-title compact","children":"《JavaScript高级程序设计》红宝书第一遍阅读（了解概念）"}],["$","p",null,{"className":"hero-copy","children":"第1章——什么是JavaScript DOM将整个页面抽象为一组分层节点。 BOM用于支持访问和操作浏览器的窗口。 ------------------------------------------------------------------------ 第2章——HTML中的JavaScript - 2.1 \\ 元素 | 元素 | 描述 | |---..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"Synopsis"}],["$","span",null,{"children":"This post is preserved inside the rebuilt blog shell while keeping the original Chinese content intact."}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$19"}}]}],"$L1a"]}]
+1a:["$","div",null,{"className":"flex justify-end","children":["$","$L7",null,{"href":"/en/archives","className":"ghost-inline","children":["All posts",["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-right h-4 w-4","aria-hidden":"true","children":[["$","path","1ays0h",{"d":"M5 12h14"}],["$","path","xquz4c",{"d":"m12 5 7 7-7 7"}],"$undefined"]}]]}]}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+10:[["$","title","0",{"children":"POJIAN.BLOG"}],["$","meta","1",{"name":"description","content":"A multilingual personal blog around AI tooling, product delivery, memoir, and long-form archive work."}]]

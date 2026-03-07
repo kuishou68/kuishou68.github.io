@@ -1,0 +1,525 @@
+1:"$Sreact.fragment"
+2:I[29323,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js"],""]
+3:I[44130,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js"],"ThemeProvider"]
+4:I[54542,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js"],"Live2DLoader"]
+5:I[22870,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+6:I[70047,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+7:I[27917,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js","/_next/static/chunks/c1e006c587210adc.js"],""]
+a:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"ViewportBoundary"]
+f:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"MetadataBoundary"]
+11:I[70681,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+:HL["/_next/static/chunks/ead81560c9a4fbf0.css","style"]
+:HL["/_next/static/chunks/413691b425972ef2.css","style"]
+:HL["/_next/static/chunks/fd925de71f201c0b.css","style"]
+:HL["/_next/static/chunks/d2b6e6f3d4b2e5b1.css","style"]
+:HL["/_next/static/media/0c89a48fa5027cee-s.p.4564287c.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/130b5bec7367fe75-s.p.8efb6a94.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5f402bd2d8eef81a-s.p.b72f0478.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/ad9c66e761fed85a-s.p.bd81a64b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/feb57b2dc8f29018-s.p.2539f70a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"b":"x75K1nEe0QZ34zwIRS4aa","c":["","es","posts","sync","2025-02-02-7466480722543509515",""],"q":"","i":false,"f":[[["",{"children":[["lang","es","d"],{"children":["posts",{"children":[["slug","sync/2025-02-02-7466480722543509515","c"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/ead81560c9a4fbf0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/chunks/413691b425972ef2.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/chunks/fd925de71f201c0b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/chunks/d2b6e6f3d4b2e5b1.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/869f3c4760d682ac.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/61fd2b7dad90b234.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"space_grotesk_a4177b3f-module__DCxVEW__variable newsreader_9b8f4ea1-module__zx2fjG__variable noto_sans_sc_a3d52348-module__3J4rVG__variable noto_sans_jp_c334996c-module__lqaEgG__variable noto_naskh_arabic_29da2e4f-module__VDzUxG__variable","children":[["$","$L2",null,{"id":"locale-bootstrap","strategy":"beforeInteractive","children":"\n(() => {\n  const segments = window.location.pathname.split(\"/\").filter(Boolean);\n  const locale = segments[0];\n  const localeMap = { en: \"ltr\", zh: \"ltr\", es: \"ltr\", ja: \"ltr\", ar: \"rtl\" };\n  const dir = localeMap[locale] || \"ltr\";\n  const lang = localeMap[locale] ? locale : \"en\";\n  document.documentElement.lang = lang;\n  document.documentElement.dir = dir;\n})();\n"}],["$","$L3",null,{"attribute":"class","defaultTheme":"system","enableSystem":true,"disableTransitionOnChange":true,"children":[["$","$L4",null,{}],["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"className":"mx-auto flex min-h-screen max-w-3xl flex-col items-start justify-center gap-6 px-6","children":[["$","span",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"className":"hero-title compact","children":"That route is outside the rebuilt shell."}],["$","p",null,{"className":"hero-copy","children":"Try the English home, the archive, or one of the legacy roots. The new site keeps the main paths stable, but unknown URLs still stop here."}],["$","$L7",null,{"href":"/en","className":"primary-chip","children":"Return to /en"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]}]]}],{"children":[["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/c1e006c587210adc.js","async":true,"nonce":"$undefined"}]],"$L8"]}],{"children":[["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$Ld",null,{"children":"$Le"}],["$","div",null,{"hidden":true,"children":["$","$Lf",null,{"children":["$","$b",null,{"name":"Next.Metadata","children":"$L10"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$11",[]],"S":true}
+12:I[95261,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js","/_next/static/chunks/c1e006c587210adc.js"],"HtmlLocaleSync"]
+13:I[4721,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js","/_next/static/chunks/c1e006c587210adc.js"],"BlogNavbar"]
+8:[["$","$L12",null,{"lang":"es","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L13",null,{"locale":"es","labels":{"brand":"POJIAN.BLOG","subtitle":"Un archivo largo sobre tooling de IA, entrega y memoria personal.","menu":"Directorio","close":"Cerrar","switchLanguage":"Cambiar idioma","switchTheme":"Cambiar tema"},"links":[{"href":"/es","label":"Inicio"},{"href":"/es#latest","label":"Reciente"},{"href":"/es#collections","label":"Colecciones"},{"href":"/es/archives","label":"Archivo"},{"href":"/es#community","label":"Comunidad"}],"legacyRoots":[{"slug":"A前端👨‍💻","title":{"en":"Frontend Atlas","zh":"前端图谱","es":"Atlas Frontend","ja":"フロントエンド地図","ar":"أطلس الواجهة الأمامية"},"description":{"en":"CSS, Vue, React, Canvas, Node, uni-app, build tools, and the earlier front-end trail.","zh":"CSS、Vue、React、Canvas、Node、uni-app、打包工具，以及更早的前端路径。","es":"CSS, Vue, React, Canvas, Node, uni-app, herramientas de build y el rastro front-end más temprano.","ja":"CSS、Vue、React、Canvas、Node、uni-app、ビルドツールなど、初期のフロントエンド蓄積。","ar":"CSS وVue وReact وCanvas وNode وuni-app وأدوات البناء والمسار الأقدم للواجهة الأمامية."}},{"slug":"B面试题📑","title":{"en":"Interview Bank","zh":"面试题仓库","es":"Banco de Entrevistas","ja":"面接バンク","ar":"بنك المقابلات"},"description":{"en":"Question banks for browser internals, networking, Vue, React, JavaScript, and engineering.","zh":"浏览器、网络、Vue、React、JavaScript 和工程化的面试题集合。","es":"Baterías de preguntas sobre navegador, red, Vue, React, JavaScript e ingeniería.","ja":"ブラウザ、ネットワーク、Vue、React、JavaScript、開発基盤に関する面接問題。","ar":"مجموعات أسئلة عن المتصفح والشبكات وVue وReact وJavaScript والهندسة."}},{"slug":"Vue实战💻","title":{"en":"Vue Practice","zh":"Vue 实战","es":"Práctica Vue","ja":"Vue 実戦","ar":"تطبيقات Vue"},"description":{"en":"Real project records around Ant Design, Echarts, mini programs, stores, and browser features.","zh":"围绕 Ant Design、Echarts、小程序、商城项目和浏览器功能的一组实战记录。","es":"Registros reales sobre Ant Design, Echarts, mini programas, tiendas y funciones del navegador.","ja":"Ant Design、Echarts、ミニプログラム、ストア、ブラウザ機能に関する実戦記録。","ar":"سجلات عملية حول Ant Design وEcharts والبرامج المصغرة والمتاجر وميزات المتصفح."}},{"slug":"走过的路🌱","title":{"en":"Growing Path","zh":"走过的路","es":"Camino Recorrido","ja":"歩いてきた道","ar":"الطريق الذي سلكته"},"description":{"en":"Yearly reviews and growth notes that carry more life signal than technical polish.","zh":"年度总结和成长记录，保留生活感和时间感。","es":"Revisiones anuales y notas de crecimiento con más vida que pulido técnico.","ja":"年次レビューと成長記録。技術の整い方より時間の感触が残っています。","ar":"مراجعات سنوية وملاحظات نمو تحمل أثر الحياة أكثر من الصقل التقني."}},{"slug":"读过的书📚️","title":{"en":"Reading Shelf","zh":"读书笔记","es":"Estante de Lectura","ja":"読書棚","ar":"رف القراءة"},"description":{"en":"Book notes across networking, JavaScript, algorithms, and systems thinking.","zh":"网络、JavaScript、算法和系统思维方向的读书笔记。","es":"Notas de lectura sobre redes, JavaScript, algoritmos y pensamiento de sistemas.","ja":"ネットワーク、JavaScript、アルゴリズム、システム思考に関する読書ノート。","ar":"ملاحظات قراءة حول الشبكات وJavaScript والخوارزميات والتفكير المنظومي."}},{"slug":"PHP🐘","title":{"en":"PHP Shelf","zh":"PHP 归档","es":"Estante PHP","ja":"PHP 棚","ar":"رف PHP"},"description":{"en":"Earlier PHP notes and experiments that still belong in the public record.","zh":"更早期的 PHP 文章和实验记录。","es":"Notas y experimentos tempranos de PHP que siguen formando parte del archivo.","ja":"初期の PHP ノートと実験記録。","ar":"ملاحظات وتجارب PHP المبكرة التي ما زالت جزءًا من السجل."}},{"slug":"Python🐍","title":{"en":"Python Shelf","zh":"Python 归档","es":"Estante Python","ja":"Python 棚","ar":"رف Python"},"description":{"en":"Small scraping experiments and data-oriented notes from the earlier Python phase.","zh":"偏数据和爬取的小实验，保留了更早一阶段的 Python 轨迹。","es":"Pequeños experimentos de scraping y notas orientadas a datos de la etapa temprana con Python.","ja":"スクレイピングやデータ寄りの小さな Python 実験。","ar":"تجارب صغيرة في الاستخراج والبيانات من المرحلة المبكرة مع Python."}}]}],"$L14","$L15","$L16","$L17","$L18"]}]]
+14:["$","div",null,{"className":"background-orb background-orb-one"}]
+15:["$","div",null,{"className":"background-orb background-orb-two"}]
+16:["$","div",null,{"className":"background-grid"}]
+17:["$","main",null,{"className":"mx-auto min-h-screen max-w-7xl px-4 pb-20 pt-24 md:px-6","children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]
+18:["$","footer",null,{"className":"mx-auto flex max-w-7xl flex-col gap-4 border-t border-[var(--line)] px-4 py-10 text-sm text-[var(--muted)] md:flex-row md:items-center md:justify-between md:px-6","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"Un archivo largo sobre tooling de IA, entrega y memoria personal."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L7",null,{"href":"/es","className":"hover:text-[var(--text)]","children":"Inicio"}],["$","$L7",null,{"href":"/es/archives","className":"hover:text-[var(--text)]","children":"Archivo"}],["$","$L7",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L7",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]
+19:T8ad2,<p>前言：听说最近DeepSeek很火，带着好奇来问了关于Vue的一个问题，看能从什么角度思考，如果回答的不对，能不能尝试纠正，并帮我整理出一篇不错的文章。</p>
+<p><img
+src="https://p9-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/b49ea92266bf423a80f027292c4c55e0~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772969709&amp;x-signature=c3GMlBRiPIe069tXyGhOsv8dfrc%3D"
+alt="image.png" /></p>
+<p>第一次回答的原文如下：</p>
+<hr />
+<p>在 Vue 中，<code>watch</code>
+主要用于监听响应式数据的变化并执行回调函数。根据使用方式和场景的不同，<code>watch</code>
+可以分为以下几种类型：</p>
+<h3 id="1-普通-watch">1. <strong>普通 <code>watch</code></strong></h3>
+<p>通过 <code>watch</code> 选项或 <code>this.$watch</code>
+方法定义的监听器，用于监听单个响应式数据的变化。</p>
+<h4 id="用法示例">用法示例：</h4>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data</span>() {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">message</span><span class="op">:</span> <span class="st">&#39;Hello&#39;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    }<span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">watch</span><span class="op">:</span> {</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">message</span>(newVal<span class="op">,</span> oldVal) {</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;message 发生变化:&#39;</span><span class="op">,</span> newVal<span class="op">,</span> oldVal)<span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<h4 id="特点">特点：</h4>
+<ul>
+<li>监听单个数据。</li>
+<li>可以获取变化前后的值（<code>newVal</code> 和
+<code>oldVal</code>）。</li>
+</ul>
+<h3 id="2-深度监听-deep-true">2. <strong>深度监听
+(<code>deep: true</code>)</strong></h3>
+<p>当监听一个对象或数组时，默认只会监听其引用的变化。如果需要监听对象内部属性或数组元素的变化，可以使用深度监听。</p>
+<h4 id="用法示例-1">用法示例：</h4>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data</span>() {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">user</span><span class="op">:</span> {</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="dt">name</span><span class="op">:</span> <span class="st">&#39;John&#39;</span><span class="op">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="dt">age</span><span class="op">:</span> <span class="dv">30</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    }<span class="op">;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">watch</span><span class="op">:</span> {</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">user</span><span class="op">:</span> {</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">handler</span>(newVal<span class="op">,</span> oldVal) {</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;user 对象发生变化:&#39;</span><span class="op">,</span> newVal<span class="op">,</span> oldVal)<span class="op">;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>      <span class="dt">deep</span><span class="op">:</span> <span class="kw">true</span> <span class="co">// 深度监听</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<h4 id="特点-1">特点：</h4>
+<ul>
+<li>监听对象或数组内部的变化。</li>
+<li>性能开销较大，因为需要递归监听所有属性。</li>
+</ul>
+<h3 id="3-立即执行-immediate-true">3. <strong>立即执行
+(<code>immediate: true</code>)</strong></h3>
+<p>默认情况下，<code>watch</code>
+只有在监听的数据发生变化时才会触发回调。如果希望在初始化时立即执行一次回调，可以使用
+<code>immediate: true</code>。</p>
+<h4 id="用法示例-2">用法示例：</h4>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data</span>() {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">count</span><span class="op">:</span> <span class="dv">0</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    }<span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">watch</span><span class="op">:</span> {</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">count</span><span class="op">:</span> {</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">handler</span>(newVal<span class="op">,</span> oldVal) {</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;count 发生变化:&#39;</span><span class="op">,</span> newVal<span class="op">,</span> oldVal)<span class="op">;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">immediate</span><span class="op">:</span> <span class="kw">true</span> <span class="co">// 立即执行</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<h4 id="特点-2">特点：</h4>
+<ul>
+<li>初始化时会立即执行一次回调。</li>
+<li>适合需要在初始化时执行逻辑的场景。</li>
+</ul>
+<h3 id="4-监听多个数据">4. <strong>监听多个数据</strong></h3>
+<p>可以通过将监听器定义为函数，监听多个数据的变化。</p>
+<h4 id="用法示例-3">用法示例：</h4>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data</span>() {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">firstName</span><span class="op">:</span> <span class="st">&#39;John&#39;</span><span class="op">,</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>      <span class="dt">lastName</span><span class="op">:</span> <span class="st">&#39;Doe&#39;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    }<span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">watch</span><span class="op">:</span> {</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 监听多个数据</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;firstName, lastName&#39;</span>(newVal<span class="op">,</span> oldVal) {</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;firstName 或 lastName 发生变化:&#39;</span><span class="op">,</span> newVal<span class="op">,</span> oldVal)<span class="op">;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<h4 id="特点-3">特点：</h4>
+<ul>
+<li>可以同时监听多个数据的变化。</li>
+<li>适合多个数据关联的场景。</li>
+</ul>
+<h3 id="5-动态监听-thiswatch">5. <strong>动态监听
+(<code>this.$watch</code>)</strong></h3>
+<p>通过 <code>this.$watch</code>
+方法动态创建监听器，可以在组件生命周期中根据需要添加或移除监听器。</p>
+<h4 id="用法示例-4">用法示例：</h4>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data</span>() {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>      <span class="dt">message</span><span class="op">:</span> <span class="st">&#39;Hello&#39;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    }<span class="op">;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mounted</span>() {</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="fu">$watch</span>(<span class="st">&#39;message&#39;</span><span class="op">,</span> (newVal<span class="op">,</span> oldVal) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;message 发生变化:&#39;</span><span class="op">,</span> newVal<span class="op">,</span> oldVal)<span class="op">;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<h4 id="特点-4">特点：</h4>
+<ul>
+<li>动态创建监听器。</li>
+<li>可以通过返回的取消函数移除监听器。</li>
+</ul>
+<h3 id="6-监听路由变化">6. <strong>监听路由变化</strong></h3>
+<p>在 Vue Router 中，可以通过 <code>watch</code> 监听路由的变化。</p>
+<h4 id="用法示例-5">用法示例：</h4>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">watch</span><span class="op">:</span> {</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;$route&#39;</span>(to<span class="op">,</span> <span class="im">from</span>) {</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;路由发生变化:&#39;</span><span class="op">,</span> to<span class="op">,</span> <span class="im">from</span>)<span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<h4 id="特点-5">特点：</h4>
+<ul>
+<li>监听路由的变化。</li>
+<li>适合需要在路由变化时执行逻辑的场景。</li>
+</ul>
+<h3 id="7-监听-props-的变化">7. <strong>监听 <code>props</code>
+的变化</strong></h3>
+<p>可以通过 <code>watch</code> 监听 <code>props</code> 的变化。</p>
+<h4 id="用法示例-6">用法示例：</h4>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">props</span><span class="op">:</span> [<span class="st">&#39;userId&#39;</span>]<span class="op">,</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">watch</span><span class="op">:</span> {</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">userId</span>(newVal<span class="op">,</span> oldVal) {</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;userId 发生变化:&#39;</span><span class="op">,</span> newVal<span class="op">,</span> oldVal)<span class="op">;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<h4 id="特点-6">特点：</h4>
+<ul>
+<li>监听父组件传递的 <code>props</code> 变化。</li>
+<li>适合需要在 <code>props</code> 变化时执行逻辑的场景。</li>
+</ul>
+<h3 id="总结">总结</h3>
+<p>Vue 中的 <code>watch</code> 主要有以下几种类型：</p>
+<ol type="1">
+<li>普通 <code>watch</code></li>
+<li>深度监听 (<code>deep: true</code>)</li>
+<li>立即执行 (<code>immediate: true</code>)</li>
+<li>监听多个数据</li>
+<li>动态监听 (<code>this.$watch</code>)</li>
+<li>监听路由变化</li>
+<li>监听 <code>props</code> 的变化</li>
+</ol>
+<p>每种 <code>watch</code>
+都有其特定的使用场景，开发者可以根据需求选择合适的监听方式。</p>
+<hr />
+<p>同样的问题，我问了chatGPT，一起来看下：</p>
+<p><img
+src="https://p9-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/e6391a0b8ac2494abb4402f806acf3a8~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772969709&amp;x-signature=PnwF0pGW9tFlV5SpkTveQdpuCdk%3D"
+alt="image.png" />
+两者一对比，chatGPT漏了几项，但是个人觉得，他们回答的都是站在使用者的角度，并没有从源码的角度思考，继续提问</p>
+<hr />
+<p>从源码的角度来看，Vue 中的 <code>watch</code> 实现主要依赖于
+<strong>响应式系统</strong> 和 <strong>Watcher 类</strong>。Vue 的
+<code>watch</code> 机制是通过 <strong>Watcher</strong> 实例来实现的，而
+Watcher 是 Vue 响应式系统的核心之一。下面我们从源码的角度详细分析
+<code>watch</code> 的实现机制。</p>
+<h3 id="1-watcher-类">1. <strong>Watcher 类</strong></h3>
+<p>在 Vue 源码中，<code>watch</code> 的核心是 <strong>Watcher
+类</strong>。Watcher
+的作用是监听一个表达式（或函数），并在其依赖的响应式数据发生变化时执行回调。</p>
+<h4 id="源码位置">源码位置：</h4>
+<ul>
+<li><code>src/core/observer/watcher.ts</code>（Vue 2.x）</li>
+<li><code>src/core/observer/watcher.js</code>（Vue 2.x）</li>
+</ul>
+<h4 id="关键属性">关键属性：</h4>
+<ul>
+<li><code>getter</code>：用于获取监听的值（可以是一个函数或表达式）。</li>
+<li><code>cb</code>：回调函数，当监听的值发生变化时执行。</li>
+<li><code>deps</code>：依赖列表，存储当前 Watcher 依赖的所有 Dep
+实例。</li>
+<li><code>deep</code>：是否深度监听。</li>
+<li><code>immediate</code>：是否立即执行回调。</li>
+</ul>
+<h4 id="核心逻辑">核心逻辑：</h4>
+<ul>
+<li>Watcher 在初始化时会调用 <code>this.get()</code>，通过
+<code>getter</code> 获取当前值，并触发依赖收集。</li>
+<li>当依赖的响应式数据发生变化时，Watcher 会重新执行
+<code>getter</code>，并调用回调函数 <code>cb</code>。</li>
+</ul>
+<h3 id="2-dep-类">2. <strong>Dep 类</strong></h3>
+<p><code>Dep</code> 是 Vue
+响应式系统中的依赖管理器，每个响应式属性都会有一个对应的
+<code>Dep</code> 实例。Watcher 和 Dep 的关系是多对多的：</p>
+<ul>
+<li>一个 Watcher 可以依赖多个 Dep（监听多个响应式数据）。</li>
+<li>一个 Dep 可以被多个 Watcher 订阅（多个地方监听同一个数据）。</li>
+</ul>
+<h4 id="源码位置-1">源码位置：</h4>
+<ul>
+<li><code>src/core/observer/dep.ts</code>（Vue 2.x）</li>
+<li><code>src/core/observer/dep.js</code>（Vue 2.x）</li>
+</ul>
+<h4 id="核心逻辑-1">核心逻辑：</h4>
+<ul>
+<li>当 Watcher 调用 <code>getter</code> 时，会触发响应式数据的
+<code>get</code> 拦截器，将当前 Watcher 添加到 Dep 的订阅列表中。</li>
+<li>当响应式数据发生变化时，会触发 <code>set</code> 拦截器，通知 Dep
+中的所有 Watcher 更新。</li>
+</ul>
+<h3 id="3-watch-的实现">3. <strong>watch 的实现</strong></h3>
+<p>在 Vue 中，<code>watch</code> 的实现是通过创建一个 Watcher
+实例来完成的。具体步骤如下：</p>
+<h4 id="源码位置-2">源码位置：</h4>
+<ul>
+<li><code>src/core/instance/state.ts</code>（Vue 2.x）</li>
+<li><code>src/core/instance/state.js</code>（Vue 2.x）</li>
+</ul>
+<h4 id="核心逻辑-2">核心逻辑：</h4>
+<ol type="1">
+<li><p><strong>初始化 <code>watch</code></strong>：</p>
+<ul>
+<li>在组件初始化时，Vue 会遍历 <code>watch</code>
+选项，为每个监听属性创建一个 Watcher 实例。</li>
+<li>例如：
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>watch<span class="op">:</span> {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">message</span>(newVal<span class="op">,</span> oldVal) {</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;message 发生变化:&#39;</span><span class="op">,</span> newVal<span class="op">,</span> oldVal)<span class="op">;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+会创建一个 Watcher，监听 <code>this.message</code> 的变化。</li>
+</ul></li>
+<li><p><strong>创建 Watcher</strong>：</p>
+<ul>
+<li>对于每个监听属性，Vue 会调用 <code>createWatcher</code>
+方法，最终创建一个 Watcher 实例。</li>
+<li>Watcher 的 <code>getter</code> 是一个函数，用于获取监听的值。</li>
+<li>Watcher 的 <code>cb</code> 是用户定义的回调函数。</li>
+</ul></li>
+<li><p><strong>依赖收集</strong>：</p>
+<ul>
+<li>当 Watcher 首次执行时，会调用 <code>getter</code>，触发响应式数据的
+<code>get</code> 拦截器，将当前 Watcher 添加到 Dep 的订阅列表中。</li>
+</ul></li>
+<li><p><strong>触发更新</strong>：</p>
+<ul>
+<li>当响应式数据发生变化时，会触发 <code>set</code> 拦截器，通知 Dep
+中的所有 Watcher 执行更新。</li>
+<li>Watcher 会重新调用 <code>getter</code> 获取新值，并执行回调函数
+<code>cb</code>。</li>
+</ul></li>
+</ol>
+<h3 id="4-深度监听的实现">4. <strong>深度监听的实现</strong></h3>
+<p>深度监听是通过递归遍历对象或数组，为每个子属性创建 Watcher
+来实现的。</p>
+<h4 id="核心逻辑-3">核心逻辑：</h4>
+<ul>
+<li>当 <code>deep: true</code> 时，Watcher 会在 <code>getter</code>
+中递归遍历对象或数组的所有属性。</li>
+<li>每个子属性都会触发 <code>get</code> 拦截器，将当前 Watcher
+添加到对应的 Dep 中。</li>
+<li>这样，当对象或数组的任意子属性发生变化时，都会触发 Watcher
+的更新。</li>
+</ul>
+<h4 id="源码示例">源码示例：</h4>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="kw">this</span><span class="op">.</span><span class="at">deep</span>) {</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">traverse</span>(value)<span class="op">;</span> <span class="co">// 递归遍历对象或数组</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="5-immediate-的实现">5. <strong>immediate 的实现</strong></h3>
+<p><code>immediate: true</code> 的实现非常简单，就是在 Watcher
+创建时立即执行一次回调。</p>
+<h4 id="核心逻辑-4">核心逻辑：</h4>
+<ul>
+<li>如果 <code>immediate</code> 为 <code>true</code>，则在 Watcher
+初始化时直接调用 <code>cb</code>。</li>
+</ul>
+<h4 id="源码示例-1">源码示例：</h4>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (immediate) {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  cb<span class="op">.</span><span class="fu">call</span>(vm<span class="op">,</span> value<span class="op">,</span> oldValue)<span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="6-动态监听-watch-的实现">6. <strong>动态监听
+(<code>$watch</code>) 的实现</strong></h3>
+<p><code>$watch</code> 是 Vue 实例的一个方法，用于动态创建 Watcher。</p>
+<h4 id="核心逻辑-5">核心逻辑：</h4>
+<ul>
+<li><code>$watch</code> 方法会调用
+<code>createWatcher</code>，最终创建一个 Watcher 实例。</li>
+<li>返回一个取消监听的函数，用于移除 Watcher。</li>
+</ul>
+<h4 id="源码示例-2">源码示例：</h4>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Vue<span class="op">.</span><span class="at">prototype</span><span class="op">.</span><span class="at">$watch</span> <span class="op">=</span> <span class="kw">function</span> (expOrFn<span class="op">,</span> cb<span class="op">,</span> options) {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> vm <span class="op">=</span> <span class="kw">this</span><span class="op">;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> watcher <span class="op">=</span> <span class="kw">new</span> <span class="fu">Watcher</span>(vm<span class="op">,</span> expOrFn<span class="op">,</span> cb<span class="op">,</span> options)<span class="op">;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">function</span> <span class="fu">unwatchFn</span>() {</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    watcher<span class="op">.</span><span class="fu">teardown</span>()<span class="op">;</span> <span class="co">// 移除 Watcher</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  }<span class="op">;</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<h3 id="总结-1">总结</h3>
+<p>从源码的角度来看，Vue 中的 <code>watch</code> 机制是基于
+<strong>Watcher 类</strong> 和 <strong>Dep 类</strong> 实现的：</p>
+<ol type="1">
+<li><strong>Watcher</strong>：负责监听数据变化并执行回调。</li>
+<li><strong>Dep</strong>：负责管理依赖关系，通知 Watcher 更新。</li>
+<li><strong>深度监听</strong>：通过递归遍历对象或数组实现。</li>
+<li><strong>immediate</strong>：在 Watcher 初始化时立即执行回调。</li>
+<li><strong>动态监听</strong>：通过 <code>$watch</code> 方法动态创建
+Watcher。这些机制共同构成了 Vue 强大的响应式系统，使得
+<code>watch</code> 能够高效地监听数据变化并执行相应的逻辑。</li>
+</ol>
+<hr />
+<p>让它们换了一个角度后，结果开始出现偏差，DeepSeek贴心的给出了vue2和vue3的源码地址，并整理了核心逻辑，而GPT在没有说明版本的情况下，默认描述的是vue3，知识广度deepseek略胜一筹。
+<img
+src="https://p9-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/b32576ab4fcb48458e85674e30373482~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772969709&amp;x-signature=teHq2fu3LHTl9RB%2BwaRxkBcxXv0%3D"
+alt="image.png" /></p>
+<p>继续尝试纠正他们的回答，看能否整理出我想要的内容；
+你说得非常对！从源码的角度来看，Vue 中的 <code>watch</code> 可以分为
+<strong>三种类型</strong>，它们分别对应不同的使用场景和实现机制。以下是从源码角度对这三种
+<code>watch</code> 的详细分析：</p>
+<hr />
+<h3 id="1-响应式数据的依赖收集data-watcher">1.
+<strong>响应式数据的依赖收集（Data Watcher）</strong></h3>
+<p>在 Vue 中，<code>data</code> 中定义的响应式数据会通过
+<code>Object.defineProperty</code>（Vue 2.x）或 <code>Proxy</code>（Vue
+3.x）进行劫持，并为每个属性创建一个 <strong>Dep</strong>
+实例。当这些数据被访问时，Vue 会通过 <strong>Watcher</strong>
+进行依赖收集。</p>
+<h4 id="源码实现">源码实现：</h4>
+<ul>
+<li><p><strong>Vue 2.x</strong>：</p>
+<ul>
+<li>在 <code>src/core/observer/index.js</code>
+中，<code>defineReactive</code> 函数会为每个属性创建一个
+<code>Dep</code> 实例。</li>
+<li>当数据被访问时，会触发 <code>getter</code>，将当前的
+<code>Watcher</code>（如果有）添加到 <code>Dep</code>
+的订阅列表中。</li>
+<li>当数据被修改时，会触发 <code>setter</code>，通知 <code>Dep</code>
+中的所有 <code>Watcher</code> 更新。</li>
+</ul></li>
+<li><p><strong>Vue 3.x</strong>：</p>
+<ul>
+<li>使用 <code>Proxy</code> 实现响应式，依赖收集通过 <code>effect</code>
+和 <code>ReactiveEffect</code> 实现。</li>
+<li>当响应式数据被访问时，会触发 <code>track</code> 函数，将当前的
+<code>effect</code>（类似于 Watcher）添加到依赖列表中。</li>
+<li>当响应式数据被修改时，会触发 <code>trigger</code>
+函数，通知所有依赖的 <code>effect</code> 更新。</li>
+</ul></li>
+</ul>
+<h4 id="特点-7">特点：</h4>
+<ul>
+<li>这种 <code>watch</code> 是隐式的，Vue 会自动为 <code>data</code>
+中的每个属性创建依赖关系。</li>
+<li>主要用于模板渲染和计算属性的依赖收集。</li>
+</ul>
+<h3 id="2-计算属性的-watchercomputed-watcher">2. <strong>计算属性的
+Watcher（Computed Watcher）</strong></h3>
+<p>计算属性（<code>computed</code>）的实现依赖于一个特殊的
+<code>Watcher</code>，称为
+<strong>_computedWatcher</strong>。它的作用是监听计算属性所依赖的响应式数据，并根据依赖的变化重新计算值。</p>
+<h4 id="源码实现-1">源码实现：</h4>
+<ul>
+<li><p><strong>Vue 2.x</strong>：</p>
+<ul>
+<li>在 <code>src/core/instance/state.js</code>
+中，<code>initComputed</code> 函数会为每个计算属性创建一个
+<code>Watcher</code> 实例。</li>
+<li>这个 <code>Watcher</code> 的 <code>lazy</code> 属性为
+<code>true</code>，表示它是惰性的，只有在需要时才会计算值。</li>
+<li>计算属性的 <code>getter</code>
+会被包装成一个函数，用于在访问计算属性时触发依赖收集。</li>
+</ul></li>
+<li><p><strong>Vue 3.x</strong>：</p>
+<ul>
+<li>计算属性的实现依赖于 <code>effect</code> 和 <code>computed</code>
+函数。</li>
+<li>在 <code>packages/reactivity/src/computed.ts</code>
+中，<code>computed</code> 函数会创建一个 <code>ComputedRefImpl</code>
+实例，内部使用 <code>effect</code> 监听依赖变化。</li>
+</ul></li>
+</ul>
+<h4 id="特点-8">特点：</h4>
+<ul>
+<li>计算属性的 <code>Watcher</code>
+是惰性的，只有在访问计算属性时才会计算值。</li>
+<li>计算属性的值会被缓存，只有当依赖的响应式数据发生变化时才会重新计算。</li>
+</ul>
+<h3 id="3-开发者定义的-watcherwatch-api">3. <strong>开发者定义的
+Watcher（Watch API）</strong></h3>
+<p>开发者可以通过 <code>watch</code> 选项或 <code>$watch</code>
+方法显式地监听响应式数据的变化。这种 <code>watch</code>
+是通过创建一个普通的 <code>Watcher</code> 实例来实现的。</p>
+<h4 id="源码实现-2">源码实现：</h4>
+<ul>
+<li><p><strong>Vue 2.x</strong>：</p>
+<ul>
+<li>在 <code>src/core/instance/state.js</code>
+中，<code>initWatch</code> 函数会遍历 <code>watch</code>
+选项，为每个监听属性创建一个 <code>Watcher</code> 实例。</li>
+<li>这个 <code>Watcher</code> 的 <code>cb</code>
+是用户定义的回调函数，当监听的数据发生变化时会被调用。</li>
+<li>如果设置了
+<code>deep: true</code>，则会递归遍历对象或数组，为每个子属性创建依赖。</li>
+</ul></li>
+<li><p><strong>Vue 3.x</strong>：</p>
+<ul>
+<li>在 <code>packages/runtime-core/src/apiWatch.ts</code>
+中，<code>watch</code> 函数会创建一个 <code>ReactiveEffect</code>
+实例，用于监听响应式数据的变化。</li>
+<li>开发者可以通过 <code>watch</code>
+函数监听单个或多个响应式数据，并指定回调函数。</li>
+</ul></li>
+</ul>
+<h4 id="特点-9">特点：</h4>
+<ul>
+<li>这种 <code>watch</code> 是显式的，由开发者主动定义。</li>
+<li>支持深度监听（<code>deep: true</code>）和立即执行（<code>immediate: true</code>）。</li>
+</ul>
+<h3 id="总结-2">总结</h3>
+<p>从源码的角度来看，Vue 中的 <code>watch</code>
+可以分为以下三种类型：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>实现机制</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data Watcher</strong></td>
+<td>通过 <code>Object.defineProperty</code> 或 <code>Proxy</code>
+实现依赖收集</td>
+<td>模板渲染、计算属性的依赖收集</td>
+</tr>
+<tr>
+<td><strong>Computed Watcher</strong></td>
+<td>通过 <code>_computedWatcher</code> 实现惰性计算和缓存</td>
+<td>计算属性的实现</td>
+</tr>
+<tr>
+<td><strong>Watch API</strong></td>
+<td>通过显式创建 <code>Watcher</code> 或 <code>ReactiveEffect</code>
+实例实现监听</td>
+<td>开发者主动监听响应式数据的变化</td>
+</tr>
+</tbody>
+</table>
+<p>这三种 <code>watch</code> 共同构成了 Vue
+的响应式系统，分别用于不同的场景和需求。</p>
+<hr />
+<p>这下对比已经很明显了，Deepseek回答的角度包含了Vue2HeVue3，解释了源码实现以及特点；反观GPT，描述的是每个watch的作用以及核心源码，并给出了一小段示例，总体而言在同样的问题条件下，回答的思路各有差异，广度和深度DeepSeek略胜GPT一筹，为它点赞。</p>
+<p><img
+src="https://p9-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/4487c5708130494dbf4b9dae86906992~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1772969709&amp;x-signature=MCgHBNqP%2FRnJT08hCIt6esaKGOA%3D"
+alt="image.png" /></p>
+<p>参考：<a
+href="https://cloud.tencent.com/developer/article/1834520">https://cloud.tencent.com/developer/article/1834520</a></p>
+<p>内容仅供参考，开发者理性看待！</p>
+9:["$","div",null,{"className":"space-y-8","children":[["$","nav",null,{"className":"flex flex-wrap items-center gap-3 text-sm text-[var(--muted)]","children":[["$","$L7",null,{"href":"/es","className":"nav-chip","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","aria-hidden":"true","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Volver al inicio"]}],["$","$L7",null,{"href":"/es/archives","className":"nav-chip","children":"Todos los textos"}],["$","$L7",null,{"href":"https://juejin.cn/post/7466480722543509515","target":"_blank","className":"nav-chip","children":"Fuente original"}]]}],["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"Sincronizado desde Juejin"}],["$","span",null,{"children":"2025-02-02"}],["$","span",null,{"children":[11," ","min"]}],["$","span",null,{"children":"Contenido original · chino"}]]}],["$","h1",null,{"className":"hero-title compact","children":"我问了DeepSeek和ChatGPT关于vue中包含几种watch的问题，它们是这么回答的……"}],["$","p",null,{"className":"hero-copy","children":"--- theme: channing-cyan --- 前言：听说最近DeepSeek很火，带着好奇来问了关于Vue的一个问题，看能从什么角度思考，如果回答的不对，能不能尝试纠正，并帮我整理出一篇不错的文章。 第一次回答的原文如下： 在 Vue 中，watch 主要用于监听响应式数据的变化并执行回调函数。根据使用方式和场景的不同，watch 可以分为以下几..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"Sinopsis"}],["$","span",null,{"children":"Este texto se conserva dentro de la nueva estructura del blog manteniendo el contenido original en chino."}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$19"}}]}],"$L1a"]}]
+1a:["$","div",null,{"className":"flex justify-end","children":["$","$L7",null,{"href":"/es/archives","className":"ghost-inline","children":["Todos los textos",["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-right h-4 w-4","aria-hidden":"true","children":[["$","path","1ays0h",{"d":"M5 12h14"}],["$","path","xquz4c",{"d":"m12 5 7 7-7 7"}],"$undefined"]}]]}]}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+10:[["$","title","0",{"children":"POJIAN.BLOG"}],["$","meta","1",{"name":"description","content":"A multilingual personal blog around AI tooling, product delivery, memoir, and long-form archive work."}]]

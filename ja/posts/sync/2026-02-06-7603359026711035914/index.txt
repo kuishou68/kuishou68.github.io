@@ -1,0 +1,455 @@
+1:"$Sreact.fragment"
+2:I[29323,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js"],""]
+3:I[44130,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js"],"ThemeProvider"]
+4:I[54542,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js"],"Live2DLoader"]
+5:I[22870,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+6:I[70047,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+7:I[27917,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js","/_next/static/chunks/c1e006c587210adc.js"],""]
+a:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"OutletBoundary"]
+b:"$Sreact.suspense"
+d:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"ViewportBoundary"]
+f:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"MetadataBoundary"]
+11:I[70681,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"default"]
+:HL["/_next/static/chunks/ead81560c9a4fbf0.css","style"]
+:HL["/_next/static/chunks/413691b425972ef2.css","style"]
+:HL["/_next/static/chunks/fd925de71f201c0b.css","style"]
+:HL["/_next/static/chunks/d2b6e6f3d4b2e5b1.css","style"]
+:HL["/_next/static/media/0c89a48fa5027cee-s.p.4564287c.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/130b5bec7367fe75-s.p.8efb6a94.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5f402bd2d8eef81a-s.p.b72f0478.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/ad9c66e761fed85a-s.p.bd81a64b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/feb57b2dc8f29018-s.p.2539f70a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"b":"x75K1nEe0QZ34zwIRS4aa","c":["","ja","posts","sync","2026-02-06-7603359026711035914",""],"q":"","i":false,"f":[[["",{"children":[["lang","ja","d"],{"children":["posts",{"children":[["slug","sync/2026-02-06-7603359026711035914","c"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/ead81560c9a4fbf0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/chunks/413691b425972ef2.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/chunks/fd925de71f201c0b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/chunks/d2b6e6f3d4b2e5b1.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/869f3c4760d682ac.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/61fd2b7dad90b234.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"space_grotesk_a4177b3f-module__DCxVEW__variable newsreader_9b8f4ea1-module__zx2fjG__variable noto_sans_sc_a3d52348-module__3J4rVG__variable noto_sans_jp_c334996c-module__lqaEgG__variable noto_naskh_arabic_29da2e4f-module__VDzUxG__variable","children":[["$","$L2",null,{"id":"locale-bootstrap","strategy":"beforeInteractive","children":"\n(() => {\n  const segments = window.location.pathname.split(\"/\").filter(Boolean);\n  const locale = segments[0];\n  const localeMap = { en: \"ltr\", zh: \"ltr\", es: \"ltr\", ja: \"ltr\", ar: \"rtl\" };\n  const dir = localeMap[locale] || \"ltr\";\n  const lang = localeMap[locale] ? locale : \"en\";\n  document.documentElement.lang = lang;\n  document.documentElement.dir = dir;\n})();\n"}],["$","$L3",null,{"attribute":"class","defaultTheme":"system","enableSystem":true,"disableTransitionOnChange":true,"children":[["$","$L4",null,{}],["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"className":"mx-auto flex min-h-screen max-w-3xl flex-col items-start justify-center gap-6 px-6","children":[["$","span",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"className":"hero-title compact","children":"That route is outside the rebuilt shell."}],["$","p",null,{"className":"hero-copy","children":"Try the English home, the archive, or one of the legacy roots. The new site keeps the main paths stable, but unknown URLs still stop here."}],["$","$L7",null,{"href":"/en","className":"primary-chip","children":"Return to /en"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]]}]}]]}],{"children":[["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/c1e006c587210adc.js","async":true,"nonce":"$undefined"}]],"$L8"]}],{"children":[["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L9",null,["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$Ld",null,{"children":"$Le"}],["$","div",null,{"hidden":true,"children":["$","$Lf",null,{"children":["$","$b",null,{"name":"Next.Metadata","children":"$L10"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$11",[]],"S":true}
+12:I[95261,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js","/_next/static/chunks/c1e006c587210adc.js"],"HtmlLocaleSync"]
+13:I[4721,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js","/_next/static/chunks/c1e006c587210adc.js"],"BlogNavbar"]
+8:[["$","$L12",null,{"lang":"ja","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L13",null,{"locale":"ja","labels":{"brand":"POJIAN.BLOG","subtitle":"AI ツーリング、公開、個人の記録をまとめた長文ブログ。","menu":"目次","close":"閉じる","switchLanguage":"言語切替","switchTheme":"テーマ切替"},"links":[{"href":"/ja","label":"ホーム"},{"href":"/ja#latest","label":"最新"},{"href":"/ja#collections","label":"コレクション"},{"href":"/ja/archives","label":"アーカイブ"},{"href":"/ja#community","label":"コミュニティ"}],"legacyRoots":[{"slug":"A前端👨‍💻","title":{"en":"Frontend Atlas","zh":"前端图谱","es":"Atlas Frontend","ja":"フロントエンド地図","ar":"أطلس الواجهة الأمامية"},"description":{"en":"CSS, Vue, React, Canvas, Node, uni-app, build tools, and the earlier front-end trail.","zh":"CSS、Vue、React、Canvas、Node、uni-app、打包工具，以及更早的前端路径。","es":"CSS, Vue, React, Canvas, Node, uni-app, herramientas de build y el rastro front-end más temprano.","ja":"CSS、Vue、React、Canvas、Node、uni-app、ビルドツールなど、初期のフロントエンド蓄積。","ar":"CSS وVue وReact وCanvas وNode وuni-app وأدوات البناء والمسار الأقدم للواجهة الأمامية."}},{"slug":"B面试题📑","title":{"en":"Interview Bank","zh":"面试题仓库","es":"Banco de Entrevistas","ja":"面接バンク","ar":"بنك المقابلات"},"description":{"en":"Question banks for browser internals, networking, Vue, React, JavaScript, and engineering.","zh":"浏览器、网络、Vue、React、JavaScript 和工程化的面试题集合。","es":"Baterías de preguntas sobre navegador, red, Vue, React, JavaScript e ingeniería.","ja":"ブラウザ、ネットワーク、Vue、React、JavaScript、開発基盤に関する面接問題。","ar":"مجموعات أسئلة عن المتصفح والشبكات وVue وReact وJavaScript والهندسة."}},{"slug":"Vue实战💻","title":{"en":"Vue Practice","zh":"Vue 实战","es":"Práctica Vue","ja":"Vue 実戦","ar":"تطبيقات Vue"},"description":{"en":"Real project records around Ant Design, Echarts, mini programs, stores, and browser features.","zh":"围绕 Ant Design、Echarts、小程序、商城项目和浏览器功能的一组实战记录。","es":"Registros reales sobre Ant Design, Echarts, mini programas, tiendas y funciones del navegador.","ja":"Ant Design、Echarts、ミニプログラム、ストア、ブラウザ機能に関する実戦記録。","ar":"سجلات عملية حول Ant Design وEcharts والبرامج المصغرة والمتاجر وميزات المتصفح."}},{"slug":"走过的路🌱","title":{"en":"Growing Path","zh":"走过的路","es":"Camino Recorrido","ja":"歩いてきた道","ar":"الطريق الذي سلكته"},"description":{"en":"Yearly reviews and growth notes that carry more life signal than technical polish.","zh":"年度总结和成长记录，保留生活感和时间感。","es":"Revisiones anuales y notas de crecimiento con más vida que pulido técnico.","ja":"年次レビューと成長記録。技術の整い方より時間の感触が残っています。","ar":"مراجعات سنوية وملاحظات نمو تحمل أثر الحياة أكثر من الصقل التقني."}},{"slug":"读过的书📚️","title":{"en":"Reading Shelf","zh":"读书笔记","es":"Estante de Lectura","ja":"読書棚","ar":"رف القراءة"},"description":{"en":"Book notes across networking, JavaScript, algorithms, and systems thinking.","zh":"网络、JavaScript、算法和系统思维方向的读书笔记。","es":"Notas de lectura sobre redes, JavaScript, algoritmos y pensamiento de sistemas.","ja":"ネットワーク、JavaScript、アルゴリズム、システム思考に関する読書ノート。","ar":"ملاحظات قراءة حول الشبكات وJavaScript والخوارزميات والتفكير المنظومي."}},{"slug":"PHP🐘","title":{"en":"PHP Shelf","zh":"PHP 归档","es":"Estante PHP","ja":"PHP 棚","ar":"رف PHP"},"description":{"en":"Earlier PHP notes and experiments that still belong in the public record.","zh":"更早期的 PHP 文章和实验记录。","es":"Notas y experimentos tempranos de PHP que siguen formando parte del archivo.","ja":"初期の PHP ノートと実験記録。","ar":"ملاحظات وتجارب PHP المبكرة التي ما زالت جزءًا من السجل."}},{"slug":"Python🐍","title":{"en":"Python Shelf","zh":"Python 归档","es":"Estante Python","ja":"Python 棚","ar":"رف Python"},"description":{"en":"Small scraping experiments and data-oriented notes from the earlier Python phase.","zh":"偏数据和爬取的小实验，保留了更早一阶段的 Python 轨迹。","es":"Pequeños experimentos de scraping y notas orientadas a datos de la etapa temprana con Python.","ja":"スクレイピングやデータ寄りの小さな Python 実験。","ar":"تجارب صغيرة في الاستخراج والبيانات من المرحلة المبكرة مع Python."}}]}],["$","div",null,{"className":"background-orb background-orb-one"}],"$L14","$L15","$L16","$L17"]}]]
+14:["$","div",null,{"className":"background-orb background-orb-two"}]
+15:["$","div",null,{"className":"background-grid"}]
+16:["$","main",null,{"className":"mx-auto min-h-screen max-w-7xl px-4 pb-20 pt-24 md:px-6","children":["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}]
+17:["$","footer",null,{"className":"mx-auto flex max-w-7xl flex-col gap-4 border-t border-[var(--line)] px-4 py-10 text-sm text-[var(--muted)] md:flex-row md:items-center md:justify-between md:px-6","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"AI ツーリング、公開、個人の記録をまとめた長文ブログ。"}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L7",null,{"href":"/ja","className":"hover:text-[var(--text)]","children":"ホーム"}],["$","$L7",null,{"href":"/ja/archives","className":"hover:text-[var(--text)]","children":"アーカイブ"}],["$","$L7",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L7",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]
+18:T77dc,<h1
+id="electron-打包白屏排查实录一个-continue_on_error-引发的三天三夜血案">Electron
+打包白屏排查实录：一个 continue_on_error 引发的三天三夜"血案"</h1>
+<blockquote>
+<p>本文记录了我在开源项目 AionUi（一个统一 AI Agent
+图形界面）中遭遇的一次 Electron
+打包白屏事故。从发现问题到最终定位根因，历时三天三夜。如果你也在用
+Electron + GitHub Actions 做
+CI/CD，这篇文章或许能帮你避开一个隐蔽的大坑。</p>
+</blockquote>
+<h2 id="故事的开始一个完美的-ci-构建">故事的开始：一个"完美"的 CI
+构建</h2>
+<p>那是一个平静的夜晚。</p>
+<p>我像往常一样推送了一个版本到 <code>dev</code> 分支，GitHub Actions
+开始了它忠实的自动构建工作。十几分钟后，CI
+亮起了绿灯——所有平台构建成功。</p>
+<blockquote>
+<p>"不错，今天又是顺利的一天。"</p>
+</blockquote>
+<p>我下载了 macOS 的 DMG，拖进 Applications，双击启动——</p>
+<p><strong>白屏。</strong></p>
+<p>纯白的、一尘不染的、令人窒息的白屏。像是这个 App
+在用行为艺术表达它对这个世界的失望。</p>
+<p>没有报错弹窗，没有崩溃提示，就是一片白。</p>
+<h2 id="第一天本地没问题那一定是-ci-的问题">第一天：本地没问题，那一定是
+CI 的问题</h2>
+<p>作为一个经历过无数"在我机器上是好的"名场面的工程师，我的第一反应是——先在本地复现。</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> start  <span class="co"># 本地开发 ✅ 正常</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">node</span> scripts/build-with-builder.js arm64 <span class="at">--mac</span> <span class="at">--arm64</span>  <span class="co"># 本地打包 ✅ 正常</span></span></code></pre></div>
+<p>本地打包出来的 DMG 安装后运行完全正常。</p>
+<p>这就尴尬了。经典的"本地好好的，CI 就炸"。</p>
+<p>我打开 Electron 的开发者工具日志，终于看到了这个错误：</p>
+<pre><code>Not allowed to load local resource:
+file:///Applications/AionUi.app/Contents/Resources/app/.webpack/renderer/main_window/index.html</code></pre>
+<p><code>ERR_FILE_NOT_FOUND</code>——Electron
+找不到渲染进程的入口文件。这个 <code>index.html</code> 是 webpack
+打包生成的，没有它，整个界面就是一片白。</p>
+<h2 id="第一个嫌疑人tar-v7">第一个嫌疑人：tar v7</h2>
+<p>翻看最近的 <code>package.json</code> 变更，我注意到一个依赖升级：</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;overrides&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;tar&quot;</span><span class="fu">:</span> <span class="st">&quot;^7.5.7&quot;</span>  <span class="er">//</span> <span class="er">从</span> <span class="er">^</span><span class="fl">6.2</span><span class="er">.</span><span class="dv">1</span> <span class="er">升级</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p>tar v7 是一个 breaking change 版本，API 完全重写。而 electron-builder
+在打包时需要处理 tar/asar 归档。会不会是 tar v7 导致 asar
+打包出了问题？</p>
+<p>我花了大半天时间研究 tar v7 的兼容性：</p>
+<ul>
+<li>翻了 npm 的 changelog</li>
+<li>查了 electron-builder 的源码</li>
+<li>对比了 tar v6 和 v7 的 API 差异</li>
+</ul>
+<p>结论：<strong>tar v7 是无辜的</strong>。它修复的是 CVE-2026-23745
+安全漏洞，electron-builder 并不直接依赖 tar 的 API。</p>
+<p>第一天，白忙。</p>
+<h2 id="第二天深入-asar-的内心世界">第二天：深入 asar 的内心世界</h2>
+<p>既然不是 tar 的问题，那就得看看 CI 打包出来的产物到底长什么样。</p>
+<p>我从 CI artifacts 下载了 DMG，挂载后检查 asar：</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 本地打包的 asar</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> asar list /Applications/AionUi-Local.app/Contents/Resources/app.asar <span class="kw">|</span> <span class="fu">grep</span> index.html</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ✅ .webpack/renderer/main_window/index.html  存在</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># CI 打包的 asar</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> asar list /Applications/AionUi-CI.app/Contents/Resources/app.asar <span class="kw">|</span> <span class="fu">grep</span> index.html</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># ❌ 没有任何输出</span></span></code></pre></div>
+<p><strong>找到了！</strong> CI 打包出来的 asar 里压根没有
+<code>index.html</code>！</p>
+<p>这意味着 webpack 的产物在 CI 环境下根本没有生成。但 CI
+构建明明显示成功了啊？</p>
+<h2 id="转折点一条被吞掉的错误">转折点：一条被吞掉的错误</h2>
+<p>带着疑惑，我仔细翻看了 CI
+的构建日志。在数百行日志的角落里，我发现了这个：</p>
+<pre><code>FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed
+- JavaScript heap out of memory</code></pre>
+<p><strong>Node.js 内存溢出了！</strong></p>
+<p>webpack 在打包过程中吃光了内存，进程直接崩溃。但是——为什么 CI
+没有报错？</p>
+<p>答案就在 GitHub Actions 的 workflow 配置里：</p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Build with electron-builder (non-Windows)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> nick-fields/retry@v3</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">timeout_minutes</span><span class="kw">:</span><span class="at"> </span><span class="dv">80</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">max_attempts</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">continue_on_error</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="co">  # ← 就是你！</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">command</span><span class="kw">:</span><span class="at"> ${{ matrix.command }}</span></span></code></pre></div>
+<p><strong><code>continue_on_error: true</code></strong>——这个设置的本意是：macOS
+构建有时会因为 Apple
+公证服务超时而失败，为了不阻塞其他平台的构建，设置了继续执行。</p>
+<p>但它也悄悄地吞掉了 OOM 错误。webpack 崩溃了，HTML 没生成，但 CI
+一脸无事地继续往下走，把一个<strong>残缺的产物</strong>打包成了 DMG
+并上传。</p>
+<p>这就像一个建筑工人告诉你"房子盖好了"，但实际上里面连墙都没有。</p>
+<h2 id="为什么只有-macos-炸了">为什么只有 macOS 炸了？</h2>
+<p>这里有一个有趣的细节：Windows 和 Linux 的构建都正常，唯独 macOS
+白屏。</p>
+<p>原因在于 Node.js V8 引擎的内存管理机制。V8
+有一个<strong>人为设定的堆内存上限</strong>（64 位系统默认约
+4GB），这个限制独立于物理内存。</p>
+<p>GitHub Actions 各平台 Runner
+虽然标称内存相同（7GB），但实际可用内存差异很大：</p>
+<pre><code>GitHub Actions Runner (7GB RAM)
+├── macOS 系统开销 (~1.5GB)
+├── Xcode / 签名工具 (~0.5GB)
+├── npm / 其他进程 (~0.5GB)
+└── Node.js 可用 (~4.5GB)
+    └── V8 默认堆上限: ~4GB  ← webpack 需要 ~5GB，超了！</code></pre>
+<p>macOS 系统本身就比 Linux 更"臃肿"，加上 Xcode
+工具链、代码签名服务等额外负担，留给 Node.js 的空间更少。当 webpack
+打包一个包含 Monaco Editor、Arco Design、多个 AI SDK 的大型 Electron
+项目时，内存消耗刚好<strong>卡在了 macOS 的临界点上</strong>。</p>
+<p>Windows 和 Linux 刚好没超，macOS 刚好超了。差的可能就是那几百
+MB。</p>
+<p>这也解释了为什么这个问题之前没出现——随着项目不断壮大，依赖越来越多，webpack
+的内存消耗在某个版本终于突破了 macOS 上的 4GB 天花板。</p>
+<h2 id="第三天修复与反思">第三天：修复与反思</h2>
+<h3 id="修复方案">修复方案</h3>
+<p>修复本身只需要一行：</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">env</span><span class="kw">:</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">NODE_OPTIONS</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;--max-old-space-size=8192&quot;</span></span></code></pre></div>
+<p>这不是"给 Node.js 更多物理内存"——Runner 的物理内存还是
+7GB，不会凭空变多。</p>
+<p>这是<strong>解除 V8 引擎的人为限制</strong>。告诉
+V8："如果需要，你可以用到 8GB"。实际上 webpack 只会用到它需要的量（约
+5GB）。因为 5GB &lt; 8GB（新上限），所以不再触发 OOM。</p>
+<table>
+<thead>
+<tr>
+<th>情况</th>
+<th>V8 堆上限</th>
+<th>实际需要</th>
+<th>系统可用</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>修复前</td>
+<td>~4GB (默认)</td>
+<td>~5GB</td>
+<td>~4.5GB</td>
+<td><strong>OOM</strong></td>
+</tr>
+<tr>
+<td>修复后</td>
+<td>8GB (手动)</td>
+<td>~5GB</td>
+<td>~4.5GB</td>
+<td><strong>成功</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="防御性措施">防御性措施</h3>
+<p>光修 OOM 不够。真正的问题是 <code>continue_on_error: true</code>
+让构建失败变成了"沉默的杀手"。</p>
+<p>我重写了 macOS
+构建步骤，将<strong>公证失败</strong>和<strong>构建失败</strong>区分开来：</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Build with electron-builder (macOS)</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">  run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    set +e</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    ${{ matrix.command }} 2&gt;&amp;1 | tee build.log</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    BUILD_EXIT_CODE=${PIPESTATUS[0]}</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    # 检查 DMG 是否生成</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    if ls out/*.dmg 1&gt;/dev/null 2&gt;&amp;1; then</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>      DMG_EXISTS=true</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    fi</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    if [ $BUILD_EXIT_CODE -eq 0 ]; then</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>      exit 0  # 完全成功 ✅</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    fi</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    # DMG 存在但构建失败 → 可能只是公证问题</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    if [ &quot;$DMG_EXISTS&quot; = true ]; then</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>      if grep -qiE &quot;notariz|staple&quot; build.log; then</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>        echo &quot;⚠️ DMG 构建成功，但公证失败&quot;</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>        exit 0  # 允许继续</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>      fi</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    fi</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>    # DMG 都没生成 → 真正的构建失败</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>    exit 1  # ❌ 阻断 CI</span></code></pre></div>
+<p>逻辑很简单：</p>
+<ul>
+<li><strong>构建成功 + 公证成功</strong> → 全部通过 ✅</li>
+<li><strong>DMG 生成了但公证失败</strong> → 警告但不阻塞
+⚠️（用户右键打开即可）</li>
+<li><strong>DMG 都没生成</strong> → 直接失败 ❌（这才是真问题）</li>
+</ul>
+<p>不再一刀切地
+<code>continue_on_error</code>，而是<strong>精准区分错误类型</strong>。</p>
+<h2 id="番外篇aionui-的混血打包架构">番外篇：AionUi
+的"混血"打包架构</h2>
+<p>讲完了 bug 本身，我想聊聊这个 bug 之所以能藏这么深的根本原因——AionUi
+的打包流程本身就不走寻常路。</p>
+<h3 id="传统开源项目怎么打包">传统开源项目怎么打包？</h3>
+<p>大多数 Electron 开源项目的打包流程是这样的：</p>
+<pre><code>方案 A：纯 Electron Forge
+源代码 → electron-forge make → DMG/EXE/DEB
+（开发、编译、打包一条龙）
+
+方案 B：纯 electron-builder
+源代码 → webpack/vite 编译 → electron-builder → DMG/EXE/DEB
+（自己编译，builder 负责打包）</code></pre>
+<p>简单直接。一个工具从头管到尾，出了问题也好排查。</p>
+<h3 id="aionui-为什么要混血">AionUi 为什么要"混血"？</h3>
+<p>AionUi 的打包流程长这样：</p>
+<pre><code>源代码
+  ↓
+Step 1: Electron Forge (webpack 编译)
+  ├── WebpackPlugin 编译 main process
+  ├── WebpackPlugin 编译 renderer process → index.html  ← 白屏就是这里没生成
+  └── 输出到 .webpack/ 目录
+  ↓
+Step 2: 产物校验
+  └── 检查 .webpack/renderer/main_window/index.html 是否存在
+  ↓
+Step 3: electron-builder (分发打包)
+  ├── 读取 electron-builder.yml 配置
+  ├── 将 .webpack/ 打入 asar 归档
+  ├── afterPack: 重建原生模块 (better-sqlite3, node-pty...)
+  └── afterSign: 代码签名 + Apple 公证
+  ↓
+DMG / ZIP / EXE / DEB</code></pre>
+<p>为什么不直接用一个工具？因为 AionUi 的需求太"拧巴"了：</p>
+<p><strong>需要 Electron Forge 的原因：</strong></p>
+<ul>
+<li>它的 <code>WebpackPlugin</code> 对 Electron 多进程架构（main +
+renderer + preload）有开箱即用的支持</li>
+<li>开发时的 HMR 热更新、DevServer、日志端口管理都做得很好</li>
+<li><code>FusesPlugin</code> 可以在打包时控制 Electron 安全特性（禁用
+RunAsNode、启用 Cookie 加密等）</li>
+</ul>
+<p><strong>需要 electron-builder 的原因：</strong></p>
+<ul>
+<li>macOS 代码签名 + Apple 公证（Forge 的 maker 支持有限）</li>
+<li>跨架构编译（在 arm64 机器上构建 x64 包，反之亦然）</li>
+<li>精细的 asar 控制（哪些模块打包、哪些解压、哪些排除）</li>
+<li>多格式输出（DMG + ZIP 同时生成）</li>
+<li>更成熟的 CI/CD 集成</li>
+</ul>
+<p>单独用 Forge 做不了完善的公证；单独用 electron-builder 又没有 Forge
+的 webpack 集成好用。所以 AionUi
+用了一个<strong>混血方案</strong>——Forge 负责编译，electron-builder
+负责打包。</p>
+<h3
+id="混血的代价两个工具之间的信任边界">混血的代价：两个工具之间的"信任边界"</h3>
+<p>这个方案的核心脚本是
+<code>build-with-builder.js</code>，它充当了两个工具之间的"桥梁"：</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Step 1: 让 Forge 编译 webpack</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">execSync</span>(<span class="vs">`npm exec electron-forge -- package --arch=</span><span class="sc">${</span>targetArch<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Step 2: 把 .webpack/ 目录结构整理成 electron-builder 期望的样子</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ensureDir</span>(sourceDir<span class="op">,</span> webpackDir<span class="op">,</span> <span class="st">&#39;main&#39;</span>)<span class="op">;</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ensureDir</span>(sourceDir<span class="op">,</span> webpackDir<span class="op">,</span> <span class="st">&#39;renderer&#39;</span>)<span class="op">;</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co">// Step 3: 校验关键产物</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">!</span>fs<span class="op">.</span><span class="fu">existsSync</span>(rendererIndex)) {</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">&#39;Missing renderer entry&#39;</span>)<span class="op">;</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="co">// Step 4: 让 electron-builder 打包</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="fu">execSync</span>(<span class="vs">`npx electron-builder </span><span class="sc">${</span>builderArgs<span class="sc">}</span><span class="vs"> --</span><span class="sc">${</span>targetArch<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span></code></pre></div>
+<p>问题就出在这里：<strong>Forge 和 electron-builder
+之间没有原生的握手机制</strong>。Forge 编译完就完了，至于
+<code>.webpack/</code>
+目录里到底有没有该有的文件，它不管。electron-builder 拿到
+<code>.webpack/</code> 就打包，至于里面是不是空的，它也不管。</p>
+<p>当 webpack 因为 OOM 中途崩溃时，<code>.webpack/</code>
+目录可能是"半成品"——main 进程的代码可能已经编译好了（因为它先编译），但
+renderer 的 <code>index.html</code> 还没来得及生成。electron-builder
+照样把这个半成品打进了 asar，产出了一个"看起来正常但其实没有界面"的
+DMG。</p>
+<p>这就是混血架构的代价：<strong>两个工具之间的信任边界，恰好是 bug
+的藏身之处</strong>。</p>
+<h3 id="与传统方案的对比">与传统方案的对比</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>传统方案 (单工具)</th>
+<th>AionUi (混血方案)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>编译</strong></td>
+<td>工具内置</td>
+<td>Electron Forge (WebpackPlugin)</td>
+</tr>
+<tr>
+<td><strong>打包</strong></td>
+<td>同一工具</td>
+<td>electron-builder</td>
+</tr>
+<tr>
+<td><strong>签名/公证</strong></td>
+<td>工具内置或手动</td>
+<td>electron-builder + afterSign.js</td>
+</tr>
+<tr>
+<td><strong>原生模块</strong></td>
+<td>工具自动处理</td>
+<td>afterPack.js 手动重建</td>
+</tr>
+<tr>
+<td><strong>错误传播</strong></td>
+<td>直通，容易发现</td>
+<td>跨工具，可能被吞掉</td>
+</tr>
+<tr>
+<td><strong>灵活性</strong></td>
+<td>受限于单工具</td>
+<td>高（可单独定制每个环节）</td>
+</tr>
+<tr>
+<td><strong>复杂度</strong></td>
+<td>低</td>
+<td>高</td>
+</tr>
+</tbody>
+</table>
+<h3 id="原生模块另一个深坑">原生模块：另一个深坑</h3>
+<p>AionUi 不是一个纯 JS 应用。它依赖了多个原生 C++ 模块：</p>
+<ul>
+<li><strong>better-sqlite3</strong> —
+本地数据库，存储对话历史和设置</li>
+<li><strong>node-pty</strong> — 终端模拟，用于运行 CLI AI 工具</li>
+<li><strong>tree-sitter</strong> — 代码解析，用于语法高亮</li>
+</ul>
+<p>这些模块必须针对目标平台和架构编译成 <code>.node</code>
+二进制文件。在 <code>afterPack.js</code> 中，AionUi
+实现了一套完整的跨架构重建逻辑：</p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 交叉编译时，先清理错误架构的二进制</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (isCrossCompile) {</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 删除 build/ 目录（包含错误架构的编译产物）</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  fs<span class="op">.</span><span class="fu">rmSync</span>(buildDir<span class="op">,</span> { <span class="dt">recursive</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="dt">force</span><span class="op">:</span> <span class="kw">true</span> })<span class="op">;</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 删除对立架构的可选依赖包</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">// 比如目标是 arm64，就删除所有 *-x64 的包</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co">// 然后为目标架构重新编译</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="fu">rebuildSingleModule</span>({</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  moduleName<span class="op">,</span> moduleRoot<span class="op">,</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">platform</span><span class="op">:</span> electronPlatformName<span class="op">,</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">arch</span><span class="op">:</span> targetArch<span class="op">,</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  electronVersion</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<p>这意味着一次 macOS arm64 构建实际上要经历：webpack 编译 → Forge 打包
+→ electron-builder 打包 → 原生模块重建 → 代码签名 → Apple
+公证，<strong>六个步骤</strong>。任何一步失败都可能导致最终产物有问题。</p>
+<h3 id="为什么不简化">为什么不简化？</h3>
+<p>说实话，我也想简化。但现实是：</p>
+<ol type="1">
+<li><strong>Forge 的 maker 不支持 Apple notarytool</strong> —
+这是硬伤，没法绕过</li>
+<li><strong>electron-builder 的 webpack 集成不如 Forge</strong> —
+特别是多入口（main + renderer + preload + worker）场景</li>
+<li><strong>原生模块的跨架构编译</strong> —
+需要精细控制，两个工具各自的方案都不够灵活</li>
+<li><strong>安全特性</strong> — Electron Fuses 只有 Forge 的 FusesPlugin
+支持得好</li>
+</ol>
+<p>所以这个"混血"方案虽然复杂，但在当前的 Electron 生态下，它是 AionUi
+这种重量级桌面应用的<strong>实际最优解</strong>。</p>
+<p>代价就是——当 bug
+出现在两个工具的"交界处"时，排查难度会指数级上升。就像这次的白屏事故。</p>
+<h2 id="经验总结">经验总结</h2>
+<h3 id="1-continue_on_error-是一把双刃剑">1.
+<code>continue_on_error</code> 是一把双刃剑</h3>
+<p>它能防止非关键失败阻塞流水线，但也能让关键错误悄无声息地溜走。如果一定要用，请确保有额外的<strong>产物校验逻辑</strong>，而不是无条件信任构建命令的退出码。</p>
+<h3 id="2-ci-绿灯--构建成功">2. CI 绿灯 ≠ 构建成功</h3>
+<p>特别是在 Electron 这种多步骤构建（webpack → electron-forge →
+electron-builder → 签名 →
+公证）的场景下，任何一个环节的静默失败都可能产出一个"看起来没问题但其实不能用"的安装包。</p>
+<p><strong>建议</strong>：在 build 脚本最后加一个产物校验：</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> rendererIndex <span class="op">=</span> path<span class="op">.</span><span class="fu">join</span>(webpackDir<span class="op">,</span> <span class="st">&#39;renderer&#39;</span><span class="op">,</span> <span class="st">&#39;main_window&#39;</span><span class="op">,</span> <span class="st">&#39;index.html&#39;</span>)<span class="op">;</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="op">!</span>fs<span class="op">.</span><span class="fu">existsSync</span>(rendererIndex)) {</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">&#39;Missing renderer entry: .webpack/renderer/main_window/index.html&#39;</span>)<span class="op">;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="3-oom-是一个平台相关的薛定谔-bug">3. OOM 是一个平台相关的"薛定谔
+Bug"</h3>
+<p>同样的代码，同样的 webpack 配置，在 Windows 不 OOM、在 macOS 就
+OOM。它可能今天不出现，明天加了一个依赖就出现了。对于大型 Electron
+项目，<strong>主动设置 <code>--max-old-space-size</code>
+是一个好习惯</strong>，不要等到 OOM 了才想起来。</p>
+<h3 id="4-永远验证最终产物">4. 永远验证最终产物</h3>
+<p>不要相信过程，要验证结果。在 CI
+流水线里加一步检查最终产物是否存在且完整，能省去无数个排查白屏的深夜。</p>
+<h2 id="写在最后">写在最后</h2>
+<p>三天三夜，从怀疑 tar v7、到拆解 asar、到翻遍数百行 CI
+日志，最终发现是一个 <code>continue_on_error: true</code> 配合 Node.js
+OOM 造成的"完美犯罪"。</p>
+<p>修复只用了一行配置。但找到这一行的过程，让我深刻理解了一个道理：</p>
+<blockquote>
+<p><strong>最难调试的 bug，不是会报错的 bug，而是假装没有 bug 的
+bug。</strong></p>
+</blockquote>
+<hr />
+<p>如果你也在做 Electron 开源项目，或者正在被 CI 打包问题折磨，欢迎关注
+<a href="https://github.com/iOfficeAI/AionUi">AionUi</a> —— 一个将命令行
+AI Agent 变成现代聊天界面的桌面应用，支持 Gemini CLI、Claude
+Code、Codex、通义灵码等多种 AI 工具。</p>
+<ul>
+<li><strong>项目地址</strong>：<a
+href="https://github.com/iOfficeAI/AionUi">github.com/iOfficeAI/AionUi</a></li>
+<li><strong>技术栈</strong>：Electron 37 + React 19 + TypeScript +
+UnoCSS + Monaco Editor</li>
+</ul>
+<p><img
+src="https://p3-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/3b1f4fc7f8ed450288840bba6b6f7ea3~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773386316&amp;x-signature=vybiD59rSWVuqVcowXhdPmAuSLA%3D"
+alt="扫码_搜索联合传播样式-白色版.png" /></p>
+9:["$","div",null,{"className":"space-y-8","children":[["$","nav",null,{"className":"flex flex-wrap items-center gap-3 text-sm text-[var(--muted)]","children":[["$","$L7",null,{"href":"/ja","className":"nav-chip","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","aria-hidden":"true","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"ホームへ戻る"]}],["$","$L7",null,{"href":"/ja/archives","className":"nav-chip","children":"すべての記事"}],["$","$L7",null,{"href":"https://juejin.cn/post/7603359026711035914","target":"_blank","className":"nav-chip","children":"元記事"}]]}],["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"Juejin から同期"}],["$","span",null,{"children":"2026-02-06"}],["$","span",null,{"children":[13," ","分"]}],["$","span",null,{"children":"原文 · 中国語"}]]}],["$","h1",null,{"className":"hero-title compact","children":"Electron 打包白屏排查实录：一个 continue_on_error 引发的三天三夜\"血案\""}],["$","p",null,{"className":"hero-copy","children":"--- theme: channing-cyan --- Electron 打包白屏排查实录：一个 continue\\ on\\ error 引发的三天三夜\"血案\" 本文记录了我在开源项目 AionUi（一个统一 AI Agent 图形界面）中遭遇的一次 Electron 打包白屏事故。从发现问题到最终定位根因，历时三天三夜。如果你也在用 Electron +..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"要約"}],["$","span",null,{"children":"この記事は新しいブログ構造の中で保持されつつ、中国語の原文もそのまま残しています。"}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$18"}}]}],"$L19"]}]
+19:["$","div",null,{"className":"flex justify-end","children":["$","$L7",null,{"href":"/ja/archives","className":"ghost-inline","children":["すべての記事",["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-right h-4 w-4","aria-hidden":"true","children":[["$","path","1ays0h",{"d":"M5 12h14"}],["$","path","xquz4c",{"d":"m12 5 7 7-7 7"}],"$undefined"]}]]}]}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+10:[["$","title","0",{"children":"POJIAN.BLOG"}],["$","meta","1",{"name":"description","content":"A multilingual personal blog around AI tooling, product delivery, memoir, and long-form archive work."}]]

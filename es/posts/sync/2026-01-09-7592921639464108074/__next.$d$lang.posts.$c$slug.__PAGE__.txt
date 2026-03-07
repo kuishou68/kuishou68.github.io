@@ -1,0 +1,1170 @@
+1:"$Sreact.fragment"
+2:I[27917,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js","/_next/static/chunks/c1e006c587210adc.js"],""]
+6:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:Tffbd,<h1 id="深入剖析-openai-codex下一代-ai-编程助手的架构与原理">深入剖析
+OpenAI Codex：下一代 AI 编程助手的架构与原理</h1>
+<blockquote>
+<p>本文将带你深入了解 OpenAI Codex
+的内部架构、设计思路和实现原理。无论你是初学者还是有经验的开发者，都能从中获得对
+AI 编程助手的深刻理解。</p>
+</blockquote>
+<h2 id="目录">目录</h2>
+<ol type="1">
+<li><a href="#什么是-codex">什么是 Codex？</a></li>
+<li><a href="#整体架构概览">整体架构概览</a></li>
+<li><a href="#核心特性详解">核心特性详解</a></li>
+<li><a href="#底层协议与通信机制">底层协议与通信机制</a></li>
+<li><a href="#记忆系统如何记住对话">记忆系统：如何记住对话</a></li>
+<li><a
+href="#上下文工程智能管理有限的脑容量">上下文工程：智能管理有限的"脑容量"</a></li>
+<li><a href="#工具系统让-ai-能够动手">工具系统：让 AI
+能够"动手"</a></li>
+<li><a href="#安全沙箱给-ai-一个安全的游乐场">安全沙箱：给 AI
+一个安全的"游乐场"</a></li>
+<li><a href="#mcp-协议连接外部世界的桥梁">MCP
+协议：连接外部世界的桥梁</a></li>
+<li><a href="#执行策略智能的权限管理">执行策略：智能的权限管理</a></li>
+<li><a href="#如何使用-codex">如何使用 Codex</a></li>
+<li><a href="#总结">总结</a></li>
+</ol>
+<hr />
+<h2 id="什么是-codex">什么是 Codex？</h2>
+<p>想象一下，你有一个超级聪明的编程助手，它不仅能理解你的需求，还能直接帮你写代码、运行命令、修改文件。这就是
+<strong>Codex</strong> —— OpenAI 推出的本地 AI 编程代理。</p>
+<h3 id="用大白话解释">用大白话解释</h3>
+<p>如果把编程比作做菜：</p>
+<ul>
+<li><strong>普通的 AI 助手</strong>（如
+ChatGPT）就像一本菜谱，告诉你怎么做，但你需要自己动手</li>
+<li><strong>Codex</strong>
+就像一个真正的厨师，不仅告诉你怎么做，还能直接帮你把菜做出来</li>
+</ul>
+<h3 id="核心能力">核心能力</h3>
+<ul>
+<li>Codex 能做什么？
+<ul>
+<li>理解代码：阅读和分析你的项目代码</li>
+<li>编写代码：自动编写新功能或修复 bug</li>
+<li>执行命令：运行测试、构建项目、git 操作等</li>
+<li>修改文件：直接编辑、创建、删除文件</li>
+<li>搜索信息：在代码库中搜索，甚至进行网络搜索</li>
+<li>调用外部工具：通过 MCP 协议连接各种外部服务</li>
+</ul></li>
+</ul>
+<h2 id="整体架构概览">整体架构概览</h2>
+<p>Codex 采用了 <strong>Monorepo（单一代码仓库）</strong>
+的组织方式，主要由 Rust 和 TypeScript 两种语言构建。</p>
+<h3 id="为什么选择-rust">为什么选择 Rust？</h3>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>性能</strong></td>
+<td>Rust 编译成机器码，运行速度极快</td>
+</tr>
+<tr>
+<td><strong>安全</strong></td>
+<td>内存安全保证，避免常见的安全漏洞</td>
+</tr>
+<tr>
+<td><strong>并发</strong></td>
+<td>优秀的异步编程支持，可同时处理多个任务</td>
+</tr>
+<tr>
+<td><strong>跨平台</strong></td>
+<td>一套代码可编译到 macOS、Linux、Windows</td>
+</tr>
+</tbody>
+</table>
+<h3 id="项目结构图">项目结构图</h3>
+<pre><code>codex/
+├── codex-rs/           # Rust 核心代码（45+ 个模块）
+│   ├── core/           # 核心引擎 - AI 的&quot;大脑&quot;
+│   ├── tui/            # 终端界面 - 用户交互
+│   ├── cli/            # 命令行入口
+│   ├── exec/           # 非交互式执行
+│   ├── mcp-server/     # MCP 服务器
+│   └── ...             # 其他支持模块
+│
+├── sdk/typescript/     # TypeScript SDK（给开发者用的库）
+├── shell-tool-mcp/     # Shell 工具 MCP 实现
+└── docs/               # 文档</code></pre>
+<h3 id="架构分层图">架构分层图</h3>
+<pre class="mermaid"><code>
+graph TB
+    subgraph UserInterface[&quot;用户接口层&quot;]
+        CLI[&quot;CLI 命令行&quot;]
+        TUI[&quot;TUI 终端界面&quot;]
+        SDK[&quot;TypeScript SDK&quot;]
+    end
+
+    subgraph CoreEngine[&quot;核心引擎层&quot;]
+        Codex[&quot;Codex 核心引擎&quot;]
+        ModelClient[&quot;模型客户端&quot;]
+        ContextMgr[&quot;上下文管理器&quot;]
+        ToolRouter[&quot;工具路由器&quot;]
+    end
+
+    subgraph ExecutionLayer[&quot;执行层&quot;]
+        ShellExec[&quot;Shell 执行器&quot;]
+        FileOps[&quot;文件操作&quot;]
+        MCPClient[&quot;MCP 客户端&quot;]
+        WebSearch[&quot;网络搜索&quot;]
+    end
+
+    subgraph SecurityLayer[&quot;安全层&quot;]
+        Sandbox[&quot;沙箱隔离&quot;]
+        ExecPolicy[&quot;执行策略&quot;]
+        Approval[&quot;审批系统&quot;]
+    end
+
+    CLI --&gt; Codex
+    TUI --&gt; Codex
+    SDK --&gt; Codex
+
+    Codex --&gt; ModelClient
+    Codex --&gt; ContextMgr
+    Codex --&gt; ToolRouter
+
+    ToolRouter --&gt; ShellExec
+    ToolRouter --&gt; FileOps
+    ToolRouter --&gt; MCPClient
+    ToolRouter --&gt; WebSearch
+
+    ShellExec --&gt; Sandbox
+    ShellExec --&gt; ExecPolicy
+    FileOps --&gt; Sandbox
+    FileOps --&gt; Approval
+    MCPClient --&gt; Approval
+
+    style UserInterface fill:#E3F2FD,stroke:#1976D2
+    style CoreEngine fill:#E8F5E9,stroke:#388E3C
+    style ExecutionLayer fill:#FFF3E0,stroke:#F57C00
+    style SecurityLayer fill:#FCE4EC,stroke:#C2185B
+</code></pre>
+<p>Codex 的架构可以分为四层：</p>
+<ol type="1">
+<li><strong>用户接口层</strong>：你与 Codex
+交互的入口（CLI、TUI、SDK）</li>
+<li><strong>核心引擎层</strong>：处理 AI 推理、工具调用、上下文管理</li>
+<li><strong>执行层</strong>：实际执行命令、修改文件、调用外部服务</li>
+<li><strong>安全层</strong>：沙箱隔离、权限控制、执行策略</li>
+</ol>
+<hr />
+<h2 id="核心特性详解">核心特性详解</h2>
+<h3 id="1-多模式交互">1. 多模式交互</h3>
+<p>Codex 支持三种使用模式：</p>
+<table>
+<thead>
+<tr>
+<th>交互式 TUI</th>
+<th>非交互式 Exec</th>
+<th>SDK 集成</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>实时对话界面</strong></td>
+<td>自动化脚本执行</td>
+<td>嵌入到你的应用</td>
+</tr>
+<tr>
+<td><strong>适合日常开发</strong></td>
+<td>适合 CI/CD</td>
+<td>适合构建产品</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-会话管理">2. 会话管理</h3>
+<p>每次与 Codex 的对话都是一个"会话"（Session）。Codex 会：</p>
+<ul>
+<li>记住你们的对话历史</li>
+<li>保存执行过的命令和结果</li>
+<li>支持暂停和恢复对话</li>
+</ul>
+<h3 id="3-智能审批">3. 智能审批</h3>
+<p>Codex 不会盲目执行所有命令。对于危险操作，它会：</p>
+<pre><code>你: 帮我删除所有日志文件
+Codex: 我需要执行 `rm -rf ./logs/*`，这会删除所有日志。
+       [允许执行] [拒绝] [白名单此命令]</code></pre>
+<hr />
+<h2 id="底层协议与通信机制">底层协议与通信机制</h2>
+<h3 id="提交队列事件队列sqeq模式">提交队列/事件队列（SQ/EQ）模式</h3>
+<p>Codex 内部使用了一种高效的异步通信模式：</p>
+<pre class="mermaid"><code>
+sequenceDiagram
+    participant User as 用户/TUI
+    participant SQ as 提交队列 (SQ)
+    participant Engine as Codex 核心引擎
+    participant LLM as 大语言模型
+    participant Tools as 工具系统
+    participant EQ as 事件队列 (EQ)
+
+    User-&gt;&gt;SQ: 提交用户输入
+    Note over SQ: Op::UserTurn
+
+    SQ-&gt;&gt;Engine: 异步接收提交
+    Engine-&gt;&gt;LLM: 调用模型 API
+
+    LLM--&gt;&gt;Engine: 流式响应
+    Engine-&gt;&gt;EQ: 发送 AgentMessage 事件
+    EQ--&gt;&gt;User: 实时显示 AI 回复
+
+    LLM--&gt;&gt;Engine: 工具调用请求
+    Engine-&gt;&gt;Tools: 执行工具
+    Engine-&gt;&gt;EQ: 发送 ExecApprovalRequest
+    EQ--&gt;&gt;User: 请求用户批准
+
+    User-&gt;&gt;SQ: 提交批准决定
+    SQ-&gt;&gt;Engine: 接收批准
+
+    Tools--&gt;&gt;Engine: 工具执行结果
+    Engine-&gt;&gt;EQ: 发送 ExecCommandOutput
+    EQ--&gt;&gt;User: 显示执行结果
+
+    Engine-&gt;&gt;LLM: 继续推理
+    LLM--&gt;&gt;Engine: 最终响应
+    Engine-&gt;&gt;EQ: 发送 TurnCompleted
+    EQ--&gt;&gt;User: 显示完成状态
+</code></pre>
+<p><strong>用大白话解释</strong>：</p>
+<p>想象一家餐厅：</p>
+<ul>
+<li><strong>提交队列（SQ）</strong> 就像顾客下单的窗口</li>
+<li><strong>Codex 核心引擎</strong> 就像厨房</li>
+<li><strong>事件队列（EQ）</strong> 就像出餐窗口</li>
+</ul>
+<p>顾客下单后不需要等在窗口，可以去座位上等。厨房做好菜后，通过出餐窗口通知顾客取餐。</p>
+<h3 id="核心代码结构">核心代码结构</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 简化版的 Codex 核心结构</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">struct</span> Codex <span class="op">{</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 提交队列：接收用户输入</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    tx_sub<span class="op">:</span> Sender<span class="op">&lt;</span>Submission<span class="op">&gt;,</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 事件队列：发送处理结果</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    rx_event<span class="op">:</span> Receiver<span class="op">&lt;</span>Event<span class="op">&gt;,</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h3 id="事件类型">事件类型</h3>
+<p>Codex 定义了丰富的事件类型来描述各种操作：</p>
+<table>
+<thead>
+<tr>
+<th>事件类型</th>
+<th>说明</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>AgentMessage</code></td>
+<td>AI 的回复</td>
+<td>"我来帮你修复这个 bug"</td>
+</tr>
+<tr>
+<td><code>ExecCommandOutput</code></td>
+<td>命令执行结果</td>
+<td>测试运行的输出</td>
+</tr>
+<tr>
+<td><code>PatchApprovalRequest</code></td>
+<td>请求批准文件修改</td>
+<td>修改 config.js</td>
+</tr>
+<tr>
+<td><code>TokenCount</code></td>
+<td>Token 使用统计</td>
+<td>输入 1000，输出 500</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="记忆系统如何记住对话">记忆系统：如何记住对话</h2>
+<h3 id="问题ai-的健忘症">问题：AI 的"健忘症"</h3>
+<p>大语言模型本身是"无状态"的，每次调用都是全新的开始。就像一个失忆的人，每天早上醒来都不记得昨天发生了什么。</p>
+<h3 id="解决方案持久化历史">解决方案：持久化历史</h3>
+<p>Codex 通过多层记忆系统解决这个问题：</p>
+<pre class="mermaid"><code>
+graph TB
+    subgraph ShortTerm[&quot;短期记忆 - 上下文管理器&quot;]
+        CM[&quot;ContextManager&quot;]
+        Items[&quot;对话项目列表&quot;]
+        TokenInfo[&quot;Token 统计&quot;]
+        CM --&gt; Items
+        CM --&gt; TokenInfo
+    end
+
+    subgraph MediumTerm[&quot;中期记忆 - 消息历史&quot;]
+        History[&quot;history.jsonl&quot;]
+        Entry1[&quot;session_id + timestamp + text&quot;]
+        Entry2[&quot;session_id + timestamp + text&quot;]
+        Entry3[&quot;...&quot;]
+        History --&gt; Entry1
+        History --&gt; Entry2
+        History --&gt; Entry3
+    end
+
+    subgraph LongTerm[&quot;长期记忆 - 会话持久化&quot;]
+        Sessions[&quot;~/.codex/sessions/&quot;]
+        Session1[&quot;session_abc.json&quot;]
+        Session2[&quot;session_xyz.json&quot;]
+        Sessions --&gt; Session1
+        Sessions --&gt; Session2
+    end
+
+    subgraph ProjectMemory[&quot;项目记忆 - AGENTS.md&quot;]
+        AgentsMD[&quot;AGENTS.md&quot;]
+        Rules[&quot;项目规范&quot;]
+        Constraints[&quot;约束条件&quot;]
+        AgentsMD --&gt; Rules
+        AgentsMD --&gt; Constraints
+    end
+
+    User[&quot;用户&quot;] --&gt; CM
+    CM --&gt;|&quot;保存到&quot;| History
+    CM --&gt;|&quot;持久化&quot;| Sessions
+    AgentsMD --&gt;|&quot;加载到&quot;| CM
+
+    style ShortTerm fill:#E3F2FD,stroke:#1976D2
+    style MediumTerm fill:#E8F5E9,stroke:#388E3C
+    style LongTerm fill:#FFF3E0,stroke:#F57C00
+    style ProjectMemory fill:#F3E5F5,stroke:#7B1FA2
+</code></pre>
+<h3 id="三层记忆架构">三层记忆架构</h3>
+<h4 id="1-短期记忆上下文管理器contextmanager">1.
+短期记忆：上下文管理器（ContextManager）</h4>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">struct</span> ContextManager <span class="op">{</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 当前对话的所有项目（从旧到新排序）</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    items<span class="op">:</span> <span class="dt">Vec</span><span class="op">&lt;</span>ResponseItem<span class="op">&gt;,</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Token 使用信息</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    token_info<span class="op">:</span> <span class="dt">Option</span><span class="op">&lt;</span>TokenUsageInfo<span class="op">&gt;,</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p><strong>作用</strong>：管理当前对话中的所有消息、工具调用和结果。</p>
+<h4 id="2-中期记忆消息历史message-history">2.
+中期记忆：消息历史（Message History）</h4>
+<p>存储位置：<code>~/.codex/history.jsonl</code></p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;session_id&quot;</span><span class="fu">:</span> <span class="st">&quot;abc123&quot;</span><span class="fu">,</span> <span class="dt">&quot;ts&quot;</span><span class="fu">:</span> <span class="dv">1699123456</span><span class="fu">,</span> <span class="dt">&quot;text&quot;</span><span class="fu">:</span> <span class="st">&quot;帮我写一个排序函数&quot;</span><span class="fu">}</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;session_id&quot;</span><span class="fu">:</span> <span class="st">&quot;abc123&quot;</span><span class="fu">,</span> <span class="dt">&quot;ts&quot;</span><span class="fu">:</span> <span class="dv">1699123460</span><span class="fu">,</span> <span class="dt">&quot;text&quot;</span><span class="fu">:</span> <span class="st">&quot;好的，这是冒泡排序的实现...&quot;</span><span class="fu">}</span></span></code></pre></div>
+<p><strong>特点</strong>：</p>
+<ul>
+<li>使用 JSONL 格式（每行一个 JSON）</li>
+<li>原子写入（不会出现写一半的情况）</li>
+<li>自动管理大小（超过限制会清理旧记录）</li>
+</ul>
+<h4 id="3-长期记忆会话持久化">3. 长期记忆：会话持久化</h4>
+<p>存储位置：<code>~/.codex/sessions/</code></p>
+<p>每个会话保存为独立的 JSON
+文件，包含完整的对话状态，支持随时恢复。</p>
+<h3 id="项目文档记忆agentsmd">项目文档记忆：AGENTS.md</h3>
+<p>Codex 还会读取项目中的 <code>AGENTS.md</code>
+文件，了解项目的特殊规则：</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># AGENTS.md</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## 项目规范</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>使用 TypeScript 编写</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>所有函数必须有注释</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>测试覆盖率要求 80% 以上</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## 禁止操作</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>不要修改 .env 文件</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>不要删除 migrations 文件夹</span></code></pre></div>
+<hr />
+<h2
+id="上下文工程智能管理有限的脑容量">上下文工程：智能管理有限的"脑容量"</h2>
+<h3 id="问题上下文窗口的限制">问题：上下文窗口的限制</h3>
+<p>大语言模型有一个"上下文窗口"限制，就像人的工作记忆一样有限。如果对话太长，模型就会"记不住"前面的内容。</p>
+<pre><code>┌────────────────────────────────────────────────────────────┐
+│                    上下文窗口示意图                          │
+├────────────────────────────────────────────────────────────┤
+│  [系统提示] [用户1] [AI1] [用户2] [AI2] ... [用户N] [AI N]  │
+│  ←─────────────── 有限的容量 ──────────────────→           │
+│                                                            │
+│  超出容量时：旧的内容会被&quot;遗忘&quot;                              │
+└────────────────────────────────────────────────────────────┘</code></pre>
+<h3 id="解决方案智能上下文管理">解决方案：智能上下文管理</h3>
+<p>Codex 采用多种策略来最大化利用有限的上下文：</p>
+<pre class="mermaid"><code>
+flowchart TD
+    Start[&quot;开始新的对话轮次&quot;] --&gt; Check{&quot;检查上下文大小&quot;}
+
+    Check --&gt;|&quot;&lt; 80% 窗口&quot;| Normal[&quot;正常添加内容&quot;]
+    Check --&gt;|&quot;&gt;= 80% 窗口&quot;| Strategy[&quot;应用优化策略&quot;]
+
+    Strategy --&gt; S1[&quot;策略1: Token 估算&quot;]
+    Strategy --&gt; S2[&quot;策略2: 智能截断&quot;]
+    Strategy --&gt; S3[&quot;策略3: 对话压缩&quot;]
+    Strategy --&gt; S4[&quot;策略4: 环境差异&quot;]
+
+    S1 --&gt; |&quot;每4字节≈1 token&quot;| Estimate[&quot;快速估算大小&quot;]
+    S2 --&gt; |&quot;保留头尾&quot;| Truncate[&quot;删除中间内容&quot;]
+    S3 --&gt; |&quot;AI 生成摘要&quot;| Compact[&quot;压缩历史对话&quot;]
+    S4 --&gt; |&quot;只发送变化&quot;| Diff[&quot;差异化更新&quot;]
+
+    Estimate --&gt; Optimize[&quot;优化后的上下文&quot;]
+    Truncate --&gt; Optimize
+    Compact --&gt; Optimize
+    Diff --&gt; Optimize
+
+    Normal --&gt; Send[&quot;发送给模型&quot;]
+    Optimize --&gt; Send
+
+    Send --&gt; Response[&quot;获取模型响应&quot;]
+    Response --&gt; Update[&quot;更新 Token 统计&quot;]
+    Update --&gt; End[&quot;完成&quot;]
+
+    style Start fill:#4CAF50,color:#fff
+    style End fill:#4CAF50,color:#fff
+    style Strategy fill:#FF9800,color:#fff
+    style Check fill:#2196F3,color:#fff
+</code></pre>
+<h3 id="策略-1token-估算">策略 1：Token 估算</h3>
+<p>不使用精确的 tokenizer（太慢），而是用简单的启发式算法：</p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> APPROX_BYTES_PER_TOKEN<span class="op">:</span> <span class="dt">usize</span> <span class="op">=</span> <span class="dv">4</span><span class="op">;</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">// 估算 token 数量：每 4 个字节约等于 1 个 token</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> approx_token_count(text<span class="op">:</span> <span class="op">&amp;</span><span class="dt">str</span>) <span class="op">-&gt;</span> <span class="dt">usize</span> <span class="op">{</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    (text<span class="op">.</span>len() <span class="op">+</span> <span class="dv">3</span>) <span class="op">/</span> <span class="dv">4</span>  <span class="co">// 向上取整</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h3 id="策略-2智能截断">策略 2：智能截断</h3>
+<p>对于过长的输出，保留头尾，删除中间：</p>
+<pre><code>原始输出（10000 字符）：
+┌─────────────────────────────────────────────────────────────┐
+│ [头部 1000 字符] [...中间内容...] [尾部 1000 字符]          │
+└─────────────────────────────────────────────────────────────┘
+
+截断后（2500 字符）：
+┌─────────────────────────────────────────────────────────────┐
+│ [头部 1000 字符] ... [省略 7500 字符] ... [尾部 1000 字符]  │
+└─────────────────────────────────────────────────────────────┘</code></pre>
+<h3 id="策略-3对话压缩compaction">策略 3：对话压缩（Compaction）</h3>
+<p>当上下文接近满时，Codex 会请求 AI 对之前的对话进行"摘要"：</p>
+<pre><code>压缩前：
+用户: 帮我看看为什么测试失败
+AI: 好的，让我运行测试... 测试结果是... 问题在于...
+用户: 修复它
+AI: 我修改了文件... 现在测试通过了
+用户: 还有其他问题吗？
+...（很多轮对话）
+
+压缩后：
+[摘要] 用户请求修复测试失败问题，经过分析发现是类型错误，
+已修改 src/utils.ts 第 42 行，测试现已通过。</code></pre>
+<h3 id="策略-4环境上下文差异">策略 4：环境上下文差异</h3>
+<p>只发送变化的部分，而不是每次都发送完整的环境信息：</p>
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode xml"><code class="sourceCode xml"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- 首次发送完整上下文 --&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">environment_context</span>&gt;</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">cwd</span>&gt;/path/to/project&lt;/<span class="kw">cwd</span>&gt;</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">sandbox_mode</span>&gt;workspace-write&lt;/<span class="kw">sandbox_mode</span>&gt;</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">shell</span>&gt;bash&lt;/<span class="kw">shell</span>&gt;</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">environment_context</span>&gt;</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- 之后只发送变化 --&gt;</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">environment_context_diff</span>&gt;</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">cwd</span>&gt;/path/to/project/src&lt;/<span class="kw">cwd</span>&gt;  <span class="co">&lt;!-- 只有工作目录变了 --&gt;</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">environment_context_diff</span>&gt;</span></code></pre></div>
+<hr />
+<h2 id="工具系统让-ai-能够动手">工具系统：让 AI 能够"动手"</h2>
+<h3 id="为什么需要工具">为什么需要工具？</h3>
+<p>大语言模型本身只能"说"，不能"做"。工具系统就是给 AI
+装上"手"，让它能够：</p>
+<ul>
+<li>执行 shell 命令</li>
+<li>读写文件</li>
+<li>搜索代码</li>
+<li>调用外部服务</li>
+</ul>
+<h3 id="工具架构">工具架构</h3>
+<pre class="mermaid"><code>
+graph LR
+    subgraph AI[&quot;AI 模型&quot;]
+        LLM[&quot;大语言模型&quot;]
+        Decision[&quot;决策: 需要使用工具&quot;]
+    end
+
+    subgraph Router[&quot;工具路由器&quot;]
+        Registry[&quot;工具注册表&quot;]
+        Dispatch[&quot;分发器&quot;]
+    end
+
+    subgraph Tools[&quot;内置工具&quot;]
+        Shell[&quot;Shell 执行器&quot;]
+        ReadFile[&quot;文件读取&quot;]
+        ApplyPatch[&quot;补丁应用&quot;]
+        GrepFiles[&quot;文件搜索&quot;]
+        ListDir[&quot;目录列表&quot;]
+        ViewImage[&quot;图片查看&quot;]
+    end
+
+    subgraph External[&quot;外部工具&quot;]
+        MCP[&quot;MCP 工具&quot;]
+        WebSearch[&quot;网络搜索&quot;]
+    end
+
+    subgraph Security[&quot;安全检查&quot;]
+        Policy[&quot;执行策略&quot;]
+        Sandbox[&quot;沙箱隔离&quot;]
+        Approval[&quot;用户审批&quot;]
+    end
+
+    LLM --&gt; Decision
+    Decision --&gt; Registry
+    Registry --&gt; Dispatch
+
+    Dispatch --&gt; Shell
+    Dispatch --&gt; ReadFile
+    Dispatch --&gt; ApplyPatch
+    Dispatch --&gt; GrepFiles
+    Dispatch --&gt; ListDir
+    Dispatch --&gt; ViewImage
+    Dispatch --&gt; MCP
+    Dispatch --&gt; WebSearch
+
+    Shell --&gt; Policy
+    ApplyPatch --&gt; Approval
+    MCP --&gt; Approval
+
+    Policy --&gt; Sandbox
+    Approval --&gt; Sandbox
+
+    Sandbox --&gt; Result[&quot;执行结果&quot;]
+    Result --&gt; LLM
+
+    style AI fill:#E3F2FD,stroke:#1976D2
+    style Router fill:#E8F5E9,stroke:#388E3C
+    style Tools fill:#FFF3E0,stroke:#F57C00
+    style External fill:#F3E5F5,stroke:#7B1FA2
+    style Security fill:#FCE4EC,stroke:#C2185B
+</code></pre>
+<h3 id="内置工具列表">内置工具列表</h3>
+<table>
+<thead>
+<tr>
+<th>工具名称</th>
+<th>功能</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>shell</code></td>
+<td>执行命令</td>
+<td><code>npm test</code>, <code>git status</code></td>
+</tr>
+<tr>
+<td><code>read_file</code></td>
+<td>读取文件</td>
+<td>查看 <code>config.json</code></td>
+</tr>
+<tr>
+<td><code>list_dir</code></td>
+<td>列出目录</td>
+<td>浏览项目结构</td>
+</tr>
+<tr>
+<td><code>apply_patch</code></td>
+<td>修改文件</td>
+<td>修复代码 bug</td>
+</tr>
+<tr>
+<td><code>grep_files</code></td>
+<td>搜索文件</td>
+<td>查找函数定义</td>
+</tr>
+<tr>
+<td><code>view_image</code></td>
+<td>查看图片</td>
+<td>分析截图</td>
+</tr>
+<tr>
+<td><code>web_search</code></td>
+<td>网络搜索</td>
+<td>查找文档</td>
+</tr>
+<tr>
+<td><code>mcp_tool</code></td>
+<td>调用 MCP 工具</td>
+<td>使用外部服务</td>
+</tr>
+</tbody>
+</table>
+<h3 id="工具调用流程">工具调用流程</h3>
+<pre><code>1. AI 决定使用工具
+   └── &quot;我需要运行测试来验证修复&quot;
+
+2. 生成工具调用
+   └── { tool: &quot;shell&quot;, command: &quot;npm test&quot; }
+
+3. 权限检查
+   └── 检查执行策略和沙箱规则
+
+4. 执行工具
+   └── 在沙箱中运行命令
+
+5. 返回结果
+   └── 将输出返回给 AI
+
+6. AI 继续推理
+   └── &quot;测试通过了，修复成功！&quot;</code></pre>
+<h3 id="工具注册机制">工具注册机制</h3>
+<p>Codex 使用统一的工具注册表来管理所有工具：</p>
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">struct</span> ToolRegistry <span class="op">{</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    handlers<span class="op">:</span> HashMap<span class="op">&lt;</span>ToolType<span class="op">,</span> <span class="dt">Box</span><span class="op">&lt;</span><span class="kw">dyn</span> ToolHandler<span class="op">&gt;&gt;,</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">trait</span> ToolHandler<span class="op">:</span> <span class="bu">Send</span> <span class="op">+</span> <span class="bu">Sync</span> <span class="op">{</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">async</span> <span class="kw">fn</span> handle(</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>        <span class="op">&amp;</span><span class="kw">self</span><span class="op">,</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>        invocation<span class="op">:</span> ToolInvocation</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    ) <span class="op">-&gt;</span> <span class="dt">Result</span><span class="op">&lt;</span>ToolOutput<span class="op">,</span> ToolError<span class="op">&gt;;</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<hr />
+<h2 id="安全沙箱给-ai-一个安全的游乐场">安全沙箱：给 AI
+一个安全的"游乐场"</h2>
+<h3 id="为什么需要沙箱">为什么需要沙箱？</h3>
+<p>让 AI 执行命令是危险的。想象一下：</p>
+<pre><code>用户: 帮我清理项目
+AI: 好的，我来执行 rm -rf /  # 危险！会删除整个系统！</code></pre>
+<p>沙箱就是为了防止这种灾难性的操作。</p>
+<h3 id="沙箱原理">沙箱原理</h3>
+<pre class="mermaid"><code>
+graph TB
+    subgraph Request[&quot;命令请求&quot;]
+        Cmd[&quot;执行命令: npm test&quot;]
+    end
+
+    subgraph PolicyCheck[&quot;策略检查&quot;]
+        EP[&quot;执行策略引擎&quot;]
+        Decision{&quot;决策&quot;}
+    end
+
+    subgraph SandboxSelect[&quot;沙箱选择&quot;]
+        Platform{&quot;操作系统?&quot;}
+        MacOS[&quot;macOS: Seatbelt&quot;]
+        Linux[&quot;Linux: Landlock + Seccomp&quot;]
+        Windows[&quot;Windows: RestrictedToken&quot;]
+    end
+
+    subgraph Permissions[&quot;权限控制&quot;]
+        FS[&quot;文件系统访问&quot;]
+        Net[&quot;网络访问&quot;]
+        Proc[&quot;进程权限&quot;]
+    end
+
+    subgraph Execution[&quot;执行环境&quot;]
+        Isolated[&quot;隔离进程&quot;]
+        Result[&quot;执行结果&quot;]
+    end
+
+    Cmd --&gt; EP
+    EP --&gt; Decision
+
+    Decision --&gt;|&quot;allow&quot;| Platform
+    Decision --&gt;|&quot;prompt&quot;| UserApproval[&quot;用户审批&quot;]
+    Decision --&gt;|&quot;forbidden&quot;| Blocked[&quot;拒绝执行&quot;]
+
+    UserApproval --&gt;|&quot;批准&quot;| Platform
+    UserApproval --&gt;|&quot;拒绝&quot;| Blocked
+
+    Platform --&gt;|&quot;darwin&quot;| MacOS
+    Platform --&gt;|&quot;linux&quot;| Linux
+    Platform --&gt;|&quot;win32&quot;| Windows
+
+    MacOS --&gt; FS
+    Linux --&gt; FS
+    Windows --&gt; FS
+
+    FS --&gt; Net
+    Net --&gt; Proc
+    Proc --&gt; Isolated
+    Isolated --&gt; Result
+
+    style Request fill:#E3F2FD,stroke:#1976D2
+    style PolicyCheck fill:#FFF3E0,stroke:#F57C00
+    style SandboxSelect fill:#E8F5E9,stroke:#388E3C
+    style Permissions fill:#FCE4EC,stroke:#C2185B
+    style Execution fill:#F3E5F5,stroke:#7B1FA2
+    style Blocked fill:#FFCDD2,stroke:#D32F2F
+</code></pre>
+<h3 id="三种沙箱策略">三种沙箱策略</h3>
+<table>
+<thead>
+<tr>
+<th>策略</th>
+<th>文件权限</th>
+<th>网络权限</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>read-only</code></td>
+<td>只读</td>
+<td>禁止</td>
+<td>代码审查</td>
+</tr>
+<tr>
+<td><code>workspace-write</code></td>
+<td>工作区可写</td>
+<td>可配置</td>
+<td>日常开发</td>
+</tr>
+<tr>
+<td><code>danger-full-access</code></td>
+<td>完全访问</td>
+<td>允许</td>
+<td>特殊场景</td>
+</tr>
+</tbody>
+</table>
+<h3 id="跨平台沙箱实现">跨平台沙箱实现</h3>
+<p>Codex 针对不同操作系统使用不同的沙箱技术：</p>
+<h4 id="macos-seatbelt">macOS: Seatbelt</h4>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 生成 SBPL（Seatbelt Profile Language）策略</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> profile <span class="op">=</span> <span class="pp">format!</span>(<span class="st">r#&quot;</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="st">    (version 1)</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="st">    (deny default)</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="st">    (allow file-read* (subpath &quot;{writable_root}&quot;))</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="st">    (allow file-write* (subpath &quot;{writable_root}&quot;))</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="st">    (deny network*)</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;#</span>)<span class="op">;</span></span></code></pre></div>
+<h4 id="linux-landlock--seccomp">Linux: Landlock + Seccomp</h4>
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Landlock：限制文件系统访问</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> ruleset <span class="op">=</span> <span class="pp">Ruleset::</span>new()</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span>handle_access(<span class="pp">AccessFs::</span>ReadFile)<span class="op">?</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span>create()<span class="op">?;</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co">// Seccomp：阻止危险的系统调用</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>seccomp_rule_add(ctx<span class="op">,</span> SCMP_ACT_ERRNO(EPERM)<span class="op">,</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    SCMP_SYS(connect)<span class="op">,</span> <span class="dv">0</span>)<span class="op">?;</span>  <span class="co">// 禁止网络连接</span></span></code></pre></div>
+<h4 id="windows-restrictedtoken">Windows: RestrictedToken</h4>
+<p>使用 Windows 的受限令牌和 ACL（访问控制列表）来限制权限。</p>
+<h3 id="沙箱绕过机制">沙箱绕过机制</h3>
+<p>有时候确实需要执行受限的操作，Codex 提供了安全的升级路径：</p>
+<pre><code>1. AI 请求执行需要额外权限的命令
+2. 向用户显示权限提升请求
+3. 用户确认后，在沙箱外执行
+4. 记录操作日志</code></pre>
+<hr />
+<h2 id="mcp-协议连接外部世界的桥梁">MCP 协议：连接外部世界的桥梁</h2>
+<h3 id="什么是-mcp">什么是 MCP？</h3>
+<p><strong>MCP（Model Context Protocol）</strong> 是一个开放协议，让 AI
+助手能够与外部工具和服务交互。可以把它想象成 AI 世界的"USB 接口"。</p>
+<pre class="mermaid"><code>
+graph LR
+    subgraph CodexCore[&quot;Codex 核心&quot;]
+        MCPManager[&quot;MCP 连接管理器&quot;]
+        ToolRouter[&quot;工具路由器&quot;]
+    end
+
+    subgraph MCPClients[&quot;MCP 客户端连接&quot;]
+        Client1[&quot;RmcpClient #1&quot;]
+        Client2[&quot;RmcpClient #2&quot;]
+        Client3[&quot;RmcpClient #3&quot;]
+    end
+
+    subgraph Transport[&quot;传输层&quot;]
+        Stdio[&quot;Stdio 传输&quot;]
+        HTTP[&quot;HTTP 传输&quot;]
+        OAuth[&quot;OAuth 认证&quot;]
+    end
+
+    subgraph MCPServers[&quot;MCP 服务器&quot;]
+        GitHub[&quot;GitHub 服务器&quot;]
+        Slack[&quot;Slack 服务器&quot;]
+        Custom[&quot;自定义服务器&quot;]
+    end
+
+    subgraph Protocol[&quot;协议层&quot;]
+        Init[&quot;1. 初始化握手&quot;]
+        ListTools[&quot;2. 获取工具列表&quot;]
+        CallTool[&quot;3. 调用工具&quot;]
+        Result[&quot;4. 返回结果&quot;]
+    end
+
+    ToolRouter --&gt; MCPManager
+    MCPManager --&gt; Client1
+    MCPManager --&gt; Client2
+    MCPManager --&gt; Client3
+
+    Client1 --&gt; Stdio
+    Client2 --&gt; HTTP
+    Client3 --&gt; OAuth
+
+    Stdio --&gt; GitHub
+    HTTP --&gt; Custom
+    OAuth --&gt; Slack
+
+    GitHub --&gt; Init
+    Init --&gt; ListTools
+    ListTools --&gt; CallTool
+    CallTool --&gt; Result
+
+    style CodexCore fill:#E3F2FD,stroke:#1976D2
+    style MCPClients fill:#E8F5E9,stroke:#388E3C
+    style Transport fill:#FFF3E0,stroke:#F57C00
+    style MCPServers fill:#F3E5F5,stroke:#7B1FA2
+    style Protocol fill:#E0F7FA,stroke:#00838F
+
+</code></pre>
+<h3 id="mcp-的角色">MCP 的角色</h3>
+<p>Codex 可以同时作为：</p>
+<ul>
+<li><strong>MCP 客户端</strong>：调用其他 MCP 服务器提供的工具</li>
+<li><strong>MCP 服务器</strong>：让其他应用调用 Codex 的能力</li>
+</ul>
+<h3 id="连接外部服务示例">连接外部服务示例</h3>
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode toml"><code class="sourceCode toml"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ~/.codex/config.toml</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="kw">[mcp_servers.github]</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="dt">enabled</span> <span class="op">=</span> <span class="cn">true</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="kw">[mcp_servers.github.transport]</span></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="dt">type</span> <span class="op">=</span> <span class="st">&quot;stdio&quot;</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="dt">command</span> <span class="op">=</span> <span class="st">&quot;npx&quot;</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="dt">args</span> <span class="op">=</span> <span class="op">[</span><span class="st">&quot;@modelcontextprotocol/server-github&quot;</span><span class="op">]</span></span></code></pre></div>
+<p>配置后，Codex 就能使用 GitHub 的功能：</p>
+<pre><code>用户: 帮我创建一个 issue 报告这个 bug
+Codex: 好的，我来调用 GitHub MCP 服务器创建 issue...
+       [调用 mcp__github__create_issue 工具]
+       Issue 已创建：https://github.com/xxx/xxx/issues/123</code></pre>
+<h3 id="mcp-通信流程">MCP 通信流程</h3>
+<pre><code>┌─────────────┐     JSON-RPC      ┌─────────────┐
+│   Codex     │ ◄──────────────► │  MCP 服务器  │
+│  (客户端)   │    over stdio    │  (GitHub)   │
+└─────────────┘                   └─────────────┘
+
+1. 初始化握手：交换能力声明
+2. 工具列表：获取可用工具
+3. 工具调用：执行具体操作
+4. 返回结果：获取执行结果</code></pre>
+<h3 id="支持的传输方式">支持的传输方式</h3>
+<table>
+<thead>
+<tr>
+<th>传输方式</th>
+<th>适用场景</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stdio</td>
+<td>本地进程</td>
+<td>npx 启动的工具</td>
+</tr>
+<tr>
+<td>HTTP</td>
+<td>远程服务</td>
+<td>云端 API</td>
+</tr>
+<tr>
+<td>HTTP + OAuth</td>
+<td>需要认证的服务</td>
+<td>GitHub, Slack</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="执行策略智能的权限管理">执行策略：智能的权限管理</h2>
+<h3 id="问题如何判断命令是否安全">问题：如何判断命令是否安全？</h3>
+<p>不是所有命令都同样危险：</p>
+<ul>
+<li><code>ls</code> 完全安全</li>
+<li><code>npm test</code> 通常安全</li>
+<li><code>rm -rf /</code> 绝对危险</li>
+<li><code>git push</code> 需要确认</li>
+</ul>
+<h3 id="解决方案执行策略引擎">解决方案：执行策略引擎</h3>
+<p>Codex 使用基于规则的执行策略系统：</p>
+<pre class="mermaid"><code>
+flowchart TD
+    Start[&quot;命令: git push origin main&quot;] --&gt; Parse[&quot;解析命令 tokens&quot;]
+    Parse --&gt; Lookup[&quot;查找匹配规则&quot;]
+
+    subgraph Rules[&quot;规则库&quot;]
+        R1[&quot;prefix_rule([&#39;ls&#39;], &#39;allow&#39;)&quot;]
+        R2[&quot;prefix_rule([&#39;git&#39;, &#39;push&#39;], &#39;prompt&#39;)&quot;]
+        R3[&quot;prefix_rule([&#39;rm&#39;, &#39;-rf&#39;], &#39;forbidden&#39;)&quot;]
+    end
+
+    Lookup --&gt; R1
+    Lookup --&gt; R2
+    Lookup --&gt; R3
+
+    R1 --&gt; Match{&quot;匹配检查&quot;}
+    R2 --&gt; Match
+    R3 --&gt; Match
+
+    Match --&gt;|&quot;匹配 R2&quot;| Collect[&quot;收集匹配结果&quot;]
+    Match --&gt;|&quot;无匹配&quot;| Heuristics[&quot;启发式检查&quot;]
+
+    Heuristics --&gt;|&quot;安全命令&quot;| AllowH[&quot;Decision: Allow&quot;]
+    Heuristics --&gt;|&quot;危险命令&quot;| PromptH[&quot;Decision: Prompt&quot;]
+
+    Collect --&gt; MaxDecision[&quot;选择最严格决策&quot;]
+
+    MaxDecision --&gt; FinalAllow[&quot;Allow: 直接执行&quot;]
+    MaxDecision --&gt; FinalPrompt[&quot;Prompt: 请求用户批准&quot;]
+    MaxDecision --&gt; FinalForbid[&quot;Forbidden: 拒绝执行&quot;]
+
+    AllowH --&gt; FinalAllow
+    PromptH --&gt; FinalPrompt
+
+    FinalPrompt --&gt; UserChoice{&quot;用户选择&quot;}
+    UserChoice --&gt;|&quot;批准&quot;| Execute[&quot;执行命令&quot;]
+    UserChoice --&gt;|&quot;白名单&quot;| Whitelist[&quot;添加 allow 规则&quot;]
+    UserChoice --&gt;|&quot;拒绝&quot;| Reject[&quot;取消执行&quot;]
+
+    Whitelist --&gt; Execute
+
+    style Start fill:#2196F3,color:#fff
+    style FinalAllow fill:#4CAF50,color:#fff
+    style FinalPrompt fill:#FF9800,color:#fff
+    style FinalForbid fill:#F44336,color:#fff
+    style Rules fill:#E8F5E9,stroke:#388E3C
+</code></pre>
+<h3 id="策略文件格式">策略文件格式</h3>
+<p>策略文件使用类 Python 的 Starlark 语言：</p>
+<div class="sourceCode" id="cb29"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ~/.codex/policy/default.codexpolicy</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 允许常见的安全命令</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="ex">prefix_rule</span><span class="er">(</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pattern</span> = <span class="pp">[</span><span class="st">&quot;ls&quot;</span><span class="pp">]</span>,</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>    <span class="ex">decision</span> = <span class="st">&quot;allow&quot;</span>,</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="kw">)</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="ex">prefix_rule</span><span class="er">(</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pattern</span> = <span class="pp">[</span><span class="st">&quot;cat&quot;</span><span class="pp">]</span>,</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>    <span class="ex">decision</span> = <span class="st">&quot;allow&quot;</span>,</span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="kw">)</span></span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 需要确认的命令</span></span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a><span class="ex">prefix_rule</span><span class="er">(</span></span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pattern</span> = [<span class="st">&quot;git&quot;</span>, [<span class="st">&quot;push&quot;</span>, <span class="st">&quot;pull&quot;</span>, <span class="st">&quot;fetch&quot;</span>]],</span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>    <span class="ex">decision</span> = <span class="st">&quot;prompt&quot;</span>,</span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a><span class="kw">)</span></span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 禁止危险命令</span></span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a><span class="ex">prefix_rule</span><span class="er">(</span></span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a>    <span class="ex">pattern</span> = [<span class="st">&quot;rm&quot;</span>, <span class="st">&quot;-rf&quot;</span>],</span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a>    <span class="ex">decision</span> = <span class="st">&quot;forbidden&quot;</span>,</span>
+<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a><span class="kw">)</span></span></code></pre></div>
+<h3 id="决策优先级">决策优先级</h3>
+<p>当多个规则匹配时，采用最严格的决策：</p>
+<pre><code>forbidden（禁止） &gt; prompt（提示） &gt; allow（允许）</code></pre>
+<h3 id="内置安全检测">内置安全检测</h3>
+<p>除了显式规则，Codex 还有内置的启发式安全检测：</p>
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 已知的安全命令（27个）</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> SAFE_COMMANDS<span class="op">:</span> <span class="op">&amp;</span>[<span class="op">&amp;</span><span class="dt">str</span>] <span class="op">=</span> <span class="op">&amp;</span>[</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;cat&quot;</span><span class="op">,</span> <span class="st">&quot;echo&quot;</span><span class="op">,</span> <span class="st">&quot;ls&quot;</span><span class="op">,</span> <span class="st">&quot;pwd&quot;</span><span class="op">,</span> <span class="st">&quot;grep&quot;</span><span class="op">,</span> <span class="st">&quot;head&quot;</span><span class="op">,</span> <span class="st">&quot;tail&quot;</span><span class="op">,</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;wc&quot;</span><span class="op">,</span> <span class="st">&quot;sort&quot;</span><span class="op">,</span> <span class="st">&quot;uniq&quot;</span><span class="op">,</span> <span class="st">&quot;diff&quot;</span><span class="op">,</span> <span class="st">&quot;file&quot;</span><span class="op">,</span> <span class="st">&quot;which&quot;</span><span class="op">,</span> <span class="st">&quot;date&quot;</span><span class="op">,</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;env&quot;</span><span class="op">,</span> <span class="st">&quot;printenv&quot;</span><span class="op">,</span> <span class="st">&quot;hostname&quot;</span><span class="op">,</span> <span class="st">&quot;uname&quot;</span><span class="op">,</span> <span class="st">&quot;whoami&quot;</span><span class="op">,</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>]<span class="op">;</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="co">// 危险命令检测</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> is_dangerous_command(cmd<span class="op">:</span> <span class="op">&amp;</span>[<span class="dt">String</span>]) <span class="op">-&gt;</span> <span class="dt">bool</span> <span class="op">{</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>    <span class="pp">matches!</span>(cmd<span class="op">,</span></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>        [<span class="st">&quot;rm&quot;</span><span class="op">,</span> <span class="st">&quot;-rf&quot;</span><span class="op">,</span> <span class="op">..</span>] <span class="op">|</span></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>        [<span class="st">&quot;git&quot;</span><span class="op">,</span> <span class="st">&quot;reset&quot;</span><span class="op">,</span> <span class="st">&quot;--hard&quot;</span><span class="op">,</span> <span class="op">..</span>] <span class="op">|</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>        [<span class="st">&quot;sudo&quot;</span><span class="op">,</span> <span class="op">..</span>] <span class="op">|</span></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>        <span class="co">// ...</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h3 id="动态白名单">动态白名单</h3>
+<p>当你批准一个命令后，可以选择"白名单此命令"，Codex
+会自动更新策略文件：</p>
+<pre class="starlark"><code># 自动添加的规则
+prefix_rule(pattern=[&quot;npm&quot;, &quot;test&quot;], decision=&quot;allow&quot;)</code></pre>
+<hr />
+<h2 id="如何使用-codex">如何使用 Codex</h2>
+<h3 id="安装方式">安装方式</h3>
+<div class="sourceCode" id="cb33"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 方式 1：通过 npm 安装</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install <span class="at">-g</span> @openai/codex</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 方式 2：通过 Homebrew 安装（macOS）</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install <span class="at">--cask</span> codex</span></code></pre></div>
+<h3 id="登录认证">登录认证</h3>
+<div class="sourceCode" id="cb34"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 使用 ChatGPT 账户登录（推荐）</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="ex">codex</span> login</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 或者使用 API Key</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">CODEX_API_KEY</span><span class="op">=</span>sk-xxx</span></code></pre></div>
+<h3 id="基本使用">基本使用</h3>
+<div class="sourceCode" id="cb35"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 启动交互式界面</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="ex">codex</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 直接执行任务（非交互式）</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="ex">codex</span> exec <span class="st">&quot;帮我写一个快速排序函数&quot;</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 在特定目录工作</span></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="ex">codex</span> <span class="at">--cd</span> /path/to/project</span></code></pre></div>
+<h3 id="typescript-sdk-使用">TypeScript SDK 使用</h3>
+<div class="sourceCode" id="cb36"><pre
+class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { Codex } <span class="im">from</span> <span class="st">&quot;@openai/codex-sdk&quot;</span><span class="op">;</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> codex <span class="op">=</span> <span class="kw">new</span> <span class="fu">Codex</span>()<span class="op">;</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> thread <span class="op">=</span> codex<span class="op">.</span><span class="fu">startThread</span>({</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>    model<span class="op">:</span> <span class="st">&quot;gpt-4&quot;</span><span class="op">,</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>    sandboxMode<span class="op">:</span> <span class="st">&quot;workspace-write&quot;</span><span class="op">,</span></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>    workingDirectory<span class="op">:</span> <span class="st">&quot;./my-project&quot;</span></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a><span class="co">// 同步模式：等待完成</span></span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> turn <span class="op">=</span> <span class="cf">await</span> thread<span class="op">.</span><span class="fu">run</span>(<span class="st">&quot;帮我修复所有的 TypeScript 错误&quot;</span>)<span class="op">;</span></span>
+<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(turn<span class="op">.</span><span class="at">finalResponse</span>)<span class="op">;</span></span>
+<span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a><span class="co">// 流式模式：实时获取事件</span></span>
+<span id="cb36-15"><a href="#cb36-15" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> { events } <span class="op">=</span> <span class="cf">await</span> thread<span class="op">.</span><span class="fu">runStreamed</span>(<span class="st">&quot;运行测试&quot;</span>)<span class="op">;</span></span>
+<span id="cb36-16"><a href="#cb36-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="cf">await</span> (<span class="kw">const</span> <span class="bu">event</span> <span class="kw">of</span> events) {</span>
+<span id="cb36-17"><a href="#cb36-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="bu">event</span><span class="op">.</span><span class="at">type</span> <span class="op">===</span> <span class="st">&quot;item.completed&quot;</span>) {</span>
+<span id="cb36-18"><a href="#cb36-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;完成:&quot;</span><span class="op">,</span> <span class="bu">event</span><span class="op">.</span><span class="fu">item</span>)<span class="op">;</span></span>
+<span id="cb36-19"><a href="#cb36-19" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb36-20"><a href="#cb36-20" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="配置文件">配置文件</h3>
+<div class="sourceCode" id="cb37"><pre
+class="sourceCode toml"><code class="sourceCode toml"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ~/.codex/config.toml</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 默认模型</span></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="dt">model</span> <span class="op">=</span> <span class="st">&quot;gpt-4-turbo&quot;</span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 沙箱策略</span></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="dt">sandbox_policy</span> <span class="op">=</span> <span class="st">&quot;workspace-write&quot;</span></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 审批策略</span></span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a><span class="dt">approval_policy</span> <span class="op">=</span> <span class="st">&quot;on-request&quot;</span></span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a><span class="co"># MCP 服务器配置</span></span>
+<span id="cb37-13"><a href="#cb37-13" aria-hidden="true" tabindex="-1"></a><span class="kw">[mcp_servers.github]</span></span>
+<span id="cb37-14"><a href="#cb37-14" aria-hidden="true" tabindex="-1"></a><span class="dt">enabled</span> <span class="op">=</span> <span class="cn">true</span></span>
+<span id="cb37-15"><a href="#cb37-15" aria-hidden="true" tabindex="-1"></a><span class="kw">[mcp_servers.github.transport]</span></span>
+<span id="cb37-16"><a href="#cb37-16" aria-hidden="true" tabindex="-1"></a><span class="dt">type</span> <span class="op">=</span> <span class="st">&quot;stdio&quot;</span></span>
+<span id="cb37-17"><a href="#cb37-17" aria-hidden="true" tabindex="-1"></a><span class="dt">command</span> <span class="op">=</span> <span class="st">&quot;npx&quot;</span></span>
+<span id="cb37-18"><a href="#cb37-18" aria-hidden="true" tabindex="-1"></a><span class="dt">args</span> <span class="op">=</span> <span class="op">[</span><span class="st">&quot;@modelcontextprotocol/server-github&quot;</span><span class="op">]</span></span></code></pre></div>
+<h2 id="总结">总结</h2>
+<h3 id="codex-的设计哲学">Codex 的设计哲学</h3>
+<ol type="1">
+<li><strong>安全第一</strong>：多层沙箱、执行策略、用户审批</li>
+<li><strong>可扩展性</strong>：工具系统、MCP 协议、插件架构</li>
+<li><strong>智能管理</strong>：上下文压缩、记忆持久化、Token 优化</li>
+<li><strong>用户体验</strong>：交互式界面、流式输出、断点续传</li>
+</ol>
+<h3 id="技术亮点">技术亮点</h3>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>技术实现</th>
+<th>优势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>性能</td>
+<td>Rust 核心</td>
+<td>接近原生速度</td>
+</tr>
+<tr>
+<td>安全</td>
+<td>多平台沙箱</td>
+<td>系统级隔离</td>
+</tr>
+<tr>
+<td>扩展</td>
+<td>MCP 协议</td>
+<td>开放生态</td>
+</tr>
+<tr>
+<td>智能</td>
+<td>上下文工程</td>
+<td>高效利用模型能力</td>
+</tr>
+<tr>
+<td>体验</td>
+<td>SQ/EQ 异步模式</td>
+<td>流畅的交互</td>
+</tr>
+</tbody>
+</table>
+<h3 id="未来展望">未来展望</h3>
+<p>Codex 代表了 AI
+编程助手的一个重要方向：从"建议"走向"执行"，从"对话"走向"协作"。随着 AI
+能力的提升和工具生态的完善，我们可以期待更加智能、安全、高效的编程助手。</p>
+<hr />
+<h2 id="附录关键文件路径速查">附录：关键文件路径速查</h2>
+<table>
+<thead>
+<tr>
+<th>组件</th>
+<th>路径</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心引擎</td>
+<td><code>codex-rs/core/src/codex.rs</code></td>
+</tr>
+<tr>
+<td>TUI 界面</td>
+<td><code>codex-rs/tui/src/app.rs</code></td>
+</tr>
+<tr>
+<td>工具系统</td>
+<td><code>codex-rs/core/src/tools/</code></td>
+</tr>
+<tr>
+<td>沙箱实现</td>
+<td><code>codex-rs/core/src/sandboxing/</code></td>
+</tr>
+<tr>
+<td>执行策略</td>
+<td><code>codex-rs/execpolicy/src/</code></td>
+</tr>
+<tr>
+<td>MCP 客户端</td>
+<td><code>codex-rs/rmcp-client/src/</code></td>
+</tr>
+<tr>
+<td>上下文管理</td>
+<td><code>codex-rs/core/src/context_manager/</code></td>
+</tr>
+<tr>
+<td>记忆系统</td>
+<td><code>codex-rs/core/src/message_history.rs</code></td>
+</tr>
+<tr>
+<td>TypeScript SDK</td>
+<td><code>sdk/typescript/src/</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<ul>
+<li>作者【<strong>前端领秀</strong>】一个喜欢探索前端领域AI赋能的开发者，喜欢我的可以关注我，私信我邀请进入技术群，我会时刻分享最新前沿AI技术；</li>
+</ul>
+<p><img
+src="https://p9-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/1736e8fdc0aa4d24b9765b4f9749ba8b~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773376076&amp;x-signature=MU3X96kNFe7Ey7NCUkjOFLvcWNE%3D"
+alt="扫码_搜索联合传播样式-白色版.png" /></p>
+0:{"buildId":"x75K1nEe0QZ34zwIRS4aa","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"space-y-8","children":[["$","nav",null,{"className":"flex flex-wrap items-center gap-3 text-sm text-[var(--muted)]","children":[["$","$L2",null,{"href":"/es","className":"nav-chip","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","aria-hidden":"true","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Volver al inicio"]}],["$","$L2",null,{"href":"/es/archives","className":"nav-chip","children":"Todos los textos"}],["$","$L2",null,{"href":"https://juejin.cn/post/7592921639464108074","target":"_blank","className":"nav-chip","children":"Fuente original"}]]}],["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"Sincronizado desde Juejin"}],["$","span",null,{"children":"2026-01-09"}],["$","span",null,{"children":[14," ","min"]}],["$","span",null,{"children":"Contenido original · chino"}]]}],["$","h1",null,{"className":"hero-title compact","children":"OpenAI Codex 深入剖析：下一代 AI 编程助手的架构与原理"}],["$","p",null,{"className":"hero-copy","children":"深入剖析 OpenAI Codex：下一代 AI 编程助手的架构与原理 本文将带你深入了解 OpenAI Codex 的内部架构、设计思路和实现原理。无论你是初学者还是有经验的开发者，都能从中获得对 AI 编程助手的深刻理解。 目录 1. 什么是 Codex？ 2. 整体架构概览 3. 核心特性详解 4. 底层协议与通信机制 5. 记忆系统：如何记住对话 6..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"Sinopsis"}],["$","span",null,{"children":"Este texto se conserva dentro de la nueva estructura del blog manteniendo el contenido original en chino."}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$3"}}]}],"$L4"]}],null,"$L5"]}],"loading":null,"isPartial":false}
+4:["$","div",null,{"className":"flex justify-end","children":["$","$L2",null,{"href":"/es/archives","className":"ghost-inline","children":["Todos los textos",["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-right h-4 w-4","aria-hidden":"true","children":[["$","path","1ays0h",{"d":"M5 12h14"}],["$","path","xquz4c",{"d":"m12 5 7 7-7 7"}],"$undefined"]}]]}]}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

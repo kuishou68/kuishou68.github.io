@@ -1,189 +1,71 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>弹窗中的 swiper 再次打开后，分页器不见了？干脆一不做二不休，自定义一个分页器！ | CocoonBreak</title>
-    <meta name="description" content="// 我的插件版本 &quot;swiper&quot; : &quot;5.4.5&quot; , &quot;vue-awesome-swiper&quot; : &quot;^4.1.1&quot; , 问题描述: 第一次打开分页器的时候能正常看到分页器，第二次打开分页器神奇般的不见了，最开始我判断的方向有两个：...">
-    <meta property="og:title" content="弹窗中的 swiper 再次打开后，分页器不见了？干脆一不做二不休，自定义一个分页器！ | CocoonBreak">
-    <meta property="og:description" content="// 我的插件版本 &quot;swiper&quot; : &quot;5.4.5&quot; , &quot;vue-awesome-swiper&quot; : &quot;^4.1.1&quot; , 问题描述: 第一次打开分页器的时候能正常看到分页器，第二次打开分页器神奇般的不见了，最开始我判断的方向有两个：...">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2022-09-25-7147251892836368415/">
-    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
-    <link rel="icon" href="/img/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/custom/site.css">
-    <script defer src="/custom/site.js"></script>
-    <script defer src="/custom/live2d-loader.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content="0; url=/en/posts/sync/2022-09-25-7147251892836368415/" />
+    <title>Juejin article moved</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1020;
+        --panel: rgba(10, 18, 38, 0.88);
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #f6efe3;
+        --muted: #93a2bf;
+        --accent: #7ae7c7;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
+          linear-gradient(180deg, #0b1020 0%, #050813 100%);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        padding: 24px;
+      }
+      main {
+        width: min(640px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--panel);
+        padding: 32px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(28px, 4vw, 42px);
+      }
+      p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      a {
+        color: #08111e;
+        background: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    </style>
   </head>
   <body>
-    <div class="article-shell">
-      <nav class="insight-nav">
-        <a href="/">← 首页</a>
-        <a href="/insights/">同步文章</a>
-        <a href="https://juejin.cn/post/7147251892836368415" target="_blank" rel="noreferrer">掘金原文</a>
-      </nav>
-
-      <header class="article-hero" data-reveal>
-        <div class="article-meta">
-          <span>2022.09.25</span><span>前端</span>
-        </div>
-        <h1>弹窗中的 swiper 再次打开后，分页器不见了？干脆一不做二不休，自定义一个分页器！</h1>
-        <p class="article-intro">// 我的插件版本 &quot;swiper&quot; : &quot;5.4.5&quot; , &quot;vue-awesome-swiper&quot; : &quot;^4.1.1&quot; , 问题描述: 第一次打开分页器的时候能正常看到分页器，第二次打开分页器神奇般的不见了，最开始我判断的方向有两个：...</p>
-        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/7147251892836368415" target="_blank" rel="noreferrer">掘金原文</a>。</div>
-      </header>
-
-      <article class="prose" data-reveal>
-        <div class="sourceCode" id="cb1"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="er">//</span> <span class="er">我的插件版本</span></span>
-<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a><span class="st">"swiper"</span><span class="er">:</span> <span class="st">"5.4.5"</span><span class="er">,</span></span>
-<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a><span class="st">"vue-awesome-swiper"</span><span class="er">:</span> <span class="st">"^4.1.1"</span><span class="er">,</span></span></code></pre></div>
-<h4 id="问题描述">问题描述:</h4>
-<p>第一次打开分页器的时候能正常看到分页器，第二次打开分页器神奇般的不见了，最开始我判断的方向有两个：</p>
-<p>①分页器初始化的时候，swiper 在 imgList 还没获取到就提前加载了；</p>
-<p>②关闭分页器的时候，swiper
-未能完全销毁，重新切换一个tab页或者刷新网页又能出现；</p>
-<p>在查阅了很多资料之后，发现以上两个判断都咩有准确的解决方案，干脆一不做二不休，自定义一个分页器；</p>
-<h4 id="解决方案自定义分页器">解决方案：自定义分页器</h4>
-<div class="sourceCode" id="cb2"><pre class="sourceCode JavaScript"><code class="sourceCode javascript"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="op">&lt;!--</span> mySwiper 自定义弹窗 <span class="op">--&gt;</span></span>
-<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a><span class="op">&lt;</span>template<span class="op">&gt;</span></span>
-<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a>    <span class="op">&lt;</span>a<span class="op">-</span>modal <span class="kw">class</span><span class="op">=</span><span class="st">"payedOrderModal"</span> <span class="op">:</span>keyboard<span class="op">=</span><span class="st">"false"</span> <span class="op">:</span>maskClosable<span class="op">=</span><span class="st">"true"</span> <span class="op">:</span>footer<span class="op">=</span><span class="st">"null"</span> <span class="op">:</span>destroyOnClose<span class="op">=</span><span class="st">"!0"</span> centered <span class="op">:</span>body<span class="op">-</span>style<span class="op">=</span><span class="st">"{paddingTop:0,paddingBottom:0,height:'500px',minHeight:'500px'}"</span> <span class="op">:</span>width<span class="op">=</span><span class="st">"990"</span> <span class="op">:</span>visible<span class="op">=</span><span class="st">"showFlag"</span> cancelText<span class="op">=</span><span class="st">"取消"</span> @cancel<span class="op">=</span><span class="st">"cancel"</span><span class="op">&gt;</span></span>
-<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a>        <span class="op">&lt;</span>div slot<span class="op">=</span><span class="st">"title"</span><span class="op">&gt;</span>图片<span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb2-5"><a aria-hidden="true" href="#cb2-5" tabindex="-1"></a>        <span class="op">&lt;</span>swiper <span class="kw">class</span><span class="op">=</span><span class="st">"swiper mySwiper"</span> ref<span class="op">=</span><span class="st">"mySwiper"</span> <span class="op">:</span>autoplay<span class="op">=</span><span class="st">"true"</span> <span class="op">:</span>options<span class="op">=</span><span class="st">"swiperOptions"</span><span class="op">&gt;</span></span>
-<span id="cb2-6"><a aria-hidden="true" href="#cb2-6" tabindex="-1"></a>            <span class="op">&lt;</span>swiper<span class="op">-</span>slide <span class="kw">class</span><span class="op">=</span><span class="st">"swiper-slide"</span> v<span class="op">-</span><span class="cf">for</span><span class="op">=</span><span class="st">"(item,index) of imgList"</span> <span class="op">:</span>key<span class="op">=</span><span class="st">"index"</span><span class="op">&gt;</span></span>
-<span id="cb2-7"><a aria-hidden="true" href="#cb2-7" tabindex="-1"></a>                <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"img swiper-zoom-container"</span><span class="op">&gt;</span></span>
-<span id="cb2-8"><a aria-hidden="true" href="#cb2-8" tabindex="-1"></a>                    <span class="op">&lt;</span>img <span class="op">:</span>src<span class="op">=</span><span class="st">"item.url || item"</span> alt<span class="op">=</span><span class="st">""</span><span class="op">&gt;</span></span>
-<span id="cb2-9"><a aria-hidden="true" href="#cb2-9" tabindex="-1"></a>                <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb2-10"><a aria-hidden="true" href="#cb2-10" tabindex="-1"></a>            <span class="op">&lt;/</span>swiper<span class="op">-</span>slide<span class="op">&gt;</span></span>
-<span id="cb2-11"><a aria-hidden="true" href="#cb2-11" tabindex="-1"></a>            <span class="op">&lt;!--</span> <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"swiper-pagination"</span> slot<span class="op">=</span><span class="st">"pagination"</span><span class="op">&gt;&lt;/</span>div<span class="op">&gt;</span> <span class="op">--&gt;</span></span>
-<span id="cb2-12"><a aria-hidden="true" href="#cb2-12" tabindex="-1"></a>            <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"swiper-button-prev"</span> slot<span class="op">=</span><span class="st">"button-prev"</span> @click<span class="op">=</span><span class="st">"prev"</span><span class="op">&gt;&lt;/</span>div<span class="op">&gt;&lt;!--</span> 左箭头 <span class="op">--&gt;</span></span>
-<span id="cb2-13"><a aria-hidden="true" href="#cb2-13" tabindex="-1"></a>            <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"swiper-button-next"</span> slot<span class="op">=</span><span class="st">"button-next"</span> @click<span class="op">=</span><span class="st">"next"</span><span class="op">&gt;&lt;/</span>div<span class="op">&gt;&lt;!--</span> 右箭头 <span class="op">--&gt;</span></span>
-<span id="cb2-14"><a aria-hidden="true" href="#cb2-14" tabindex="-1"></a>        <span class="op">&lt;/</span>swiper<span class="op">&gt;</span></span>
-<span id="cb2-15"><a aria-hidden="true" href="#cb2-15" tabindex="-1"></a>        <span class="op">&lt;!--</span> 自定义分页器 <span class="op">--&gt;</span></span>
-<span id="cb2-16"><a aria-hidden="true" href="#cb2-16" tabindex="-1"></a>        <span class="op">&lt;</span>div <span class="kw">class</span><span class="op">=</span><span class="st">"swiper-pagination"</span><span class="op">&gt;</span></span>
-<span id="cb2-17"><a aria-hidden="true" href="#cb2-17" tabindex="-1"></a>            <span class="op">&lt;</span>template v<span class="op">-</span><span class="cf">for</span><span class="op">=</span><span class="st">"(item, index) in imgList"</span> <span class="op">&gt;</span></span>
-<span id="cb2-18"><a aria-hidden="true" href="#cb2-18" tabindex="-1"></a>                <span class="op">&lt;</span>span <span class="op">:</span><span class="kw">class</span><span class="op">=</span><span class="st">"['swiper-pagination-bullet', currentIndex === index ? bulletActive : '']"</span> <span class="op">:</span>key<span class="op">=</span><span class="st">"index"</span> tabindex<span class="op">=</span><span class="st">"0"</span> role<span class="op">=</span><span class="st">"button"</span> <span class="op">:</span>aria<span class="op">-</span>label<span class="op">=</span><span class="st">"`Go to slide ${index}`"</span> @click<span class="op">=</span><span class="st">"selectPagination(index)"</span><span class="op">&gt;&lt;/</span>span<span class="op">&gt;</span></span>
-<span id="cb2-19"><a aria-hidden="true" href="#cb2-19" tabindex="-1"></a>            <span class="op">&lt;/</span>template<span class="op">&gt;</span></span>
-<span id="cb2-20"><a aria-hidden="true" href="#cb2-20" tabindex="-1"></a>        <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb2-21"><a aria-hidden="true" href="#cb2-21" tabindex="-1"></a>    <span class="op">&lt;/</span>a<span class="op">-</span>modal<span class="op">&gt;</span></span>
-<span id="cb2-22"><a aria-hidden="true" href="#cb2-22" tabindex="-1"></a><span class="op">&lt;/</span>template<span class="op">&gt;</span></span>
-<span id="cb2-23"><a aria-hidden="true" href="#cb2-23" tabindex="-1"></a></span>
-<span id="cb2-24"><a aria-hidden="true" href="#cb2-24" tabindex="-1"></a><span class="op">&lt;</span>script<span class="op">&gt;</span></span>
-<span id="cb2-25"><a aria-hidden="true" href="#cb2-25" tabindex="-1"></a><span class="im">import</span> <span class="st">"swiper/css/swiper.css"</span><span class="op">;</span></span>
-<span id="cb2-26"><a aria-hidden="true" href="#cb2-26" tabindex="-1"></a><span class="im">import</span> { Swiper<span class="op">,</span> SwiperSlide } <span class="im">from</span> <span class="st">"vue-awesome-swiper"</span><span class="op">;</span></span>
-<span id="cb2-27"><a aria-hidden="true" href="#cb2-27" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> {</span>
-<span id="cb2-28"><a aria-hidden="true" href="#cb2-28" tabindex="-1"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">"MySwiper"</span><span class="op">,</span></span>
-<span id="cb2-29"><a aria-hidden="true" href="#cb2-29" tabindex="-1"></a>    <span class="dt">title</span><span class="op">:</span> <span class="st">"这里是页面或组件名字"</span><span class="op">,</span></span>
-<span id="cb2-30"><a aria-hidden="true" href="#cb2-30" tabindex="-1"></a>    <span class="dt">components</span><span class="op">:</span> {</span>
-<span id="cb2-31"><a aria-hidden="true" href="#cb2-31" tabindex="-1"></a>        Swiper<span class="op">,</span></span>
-<span id="cb2-32"><a aria-hidden="true" href="#cb2-32" tabindex="-1"></a>        SwiperSlide</span>
-<span id="cb2-33"><a aria-hidden="true" href="#cb2-33" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb2-34"><a aria-hidden="true" href="#cb2-34" tabindex="-1"></a>    <span class="dt">props</span><span class="op">:</span>{</span>
-<span id="cb2-35"><a aria-hidden="true" href="#cb2-35" tabindex="-1"></a>                <span class="co">// 当前图片索引</span></span>
-<span id="cb2-36"><a aria-hidden="true" href="#cb2-36" tabindex="-1"></a>        <span class="dt">activeIndex</span><span class="op">:</span>{</span>
-<span id="cb2-37"><a aria-hidden="true" href="#cb2-37" tabindex="-1"></a>            <span class="dt">type</span><span class="op">:</span><span class="bu">Number</span><span class="op">,</span></span>
-<span id="cb2-38"><a aria-hidden="true" href="#cb2-38" tabindex="-1"></a>            <span class="im">default</span>(){</span>
-<span id="cb2-39"><a aria-hidden="true" href="#cb2-39" tabindex="-1"></a>                <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb2-40"><a aria-hidden="true" href="#cb2-40" tabindex="-1"></a>            }</span>
-<span id="cb2-41"><a aria-hidden="true" href="#cb2-41" tabindex="-1"></a>        }<span class="op">,</span></span>
-<span id="cb2-42"><a aria-hidden="true" href="#cb2-42" tabindex="-1"></a>                <span class="co">// 所有图片列表</span></span>
-<span id="cb2-43"><a aria-hidden="true" href="#cb2-43" tabindex="-1"></a>        <span class="dt">imgList</span><span class="op">:</span>{</span>
-<span id="cb2-44"><a aria-hidden="true" href="#cb2-44" tabindex="-1"></a>            <span class="dt">type</span><span class="op">:</span><span class="bu">Array</span><span class="op">,</span></span>
-<span id="cb2-45"><a aria-hidden="true" href="#cb2-45" tabindex="-1"></a>            <span class="im">default</span>(){</span>
-<span id="cb2-46"><a aria-hidden="true" href="#cb2-46" tabindex="-1"></a>                <span class="cf">return</span> []<span class="op">;</span></span>
-<span id="cb2-47"><a aria-hidden="true" href="#cb2-47" tabindex="-1"></a>            }</span>
-<span id="cb2-48"><a aria-hidden="true" href="#cb2-48" tabindex="-1"></a>        }</span>
-<span id="cb2-49"><a aria-hidden="true" href="#cb2-49" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb2-50"><a aria-hidden="true" href="#cb2-50" tabindex="-1"></a>    <span class="fu">data</span>() {</span>
-<span id="cb2-51"><a aria-hidden="true" href="#cb2-51" tabindex="-1"></a>        <span class="cf">return</span> {</span>
-<span id="cb2-52"><a aria-hidden="true" href="#cb2-52" tabindex="-1"></a>            <span class="dt">showFlag</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb2-53"><a aria-hidden="true" href="#cb2-53" tabindex="-1"></a>            <span class="dt">currentIndex</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
-<span id="cb2-54"><a aria-hidden="true" href="#cb2-54" tabindex="-1"></a>            <span class="dt">bulletActive</span><span class="op">:</span> <span class="st">"swiper-pagination-bullet-active"</span><span class="op">,</span></span>
-<span id="cb2-55"><a aria-hidden="true" href="#cb2-55" tabindex="-1"></a>            <span class="dt">swiperOptions</span><span class="op">:</span> {</span>
-<span id="cb2-56"><a aria-hidden="true" href="#cb2-56" tabindex="-1"></a>                <span class="dt">initialSlide</span><span class="op">:</span><span class="dv">0</span><span class="op">,</span></span>
-<span id="cb2-57"><a aria-hidden="true" href="#cb2-57" tabindex="-1"></a>                <span class="dt">loop</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb2-58"><a aria-hidden="true" href="#cb2-58" tabindex="-1"></a>                <span class="dt">autoplay</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
-<span id="cb2-59"><a aria-hidden="true" href="#cb2-59" tabindex="-1"></a>                <span class="dt">zoom</span><span class="op">:</span> {</span>
-<span id="cb2-60"><a aria-hidden="true" href="#cb2-60" tabindex="-1"></a>                    <span class="dt">minRatio</span><span class="op">:</span><span class="fl">0.8</span><span class="op">,</span></span>
-<span id="cb2-61"><a aria-hidden="true" href="#cb2-61" tabindex="-1"></a>                    <span class="dt">maxRatio</span><span class="op">:</span><span class="dv">3</span></span>
-<span id="cb2-62"><a aria-hidden="true" href="#cb2-62" tabindex="-1"></a>                }<span class="op">,</span></span>
-<span id="cb2-63"><a aria-hidden="true" href="#cb2-63" tabindex="-1"></a>                <span class="dt">navigation</span><span class="op">:</span> {</span>
-<span id="cb2-64"><a aria-hidden="true" href="#cb2-64" tabindex="-1"></a>                    <span class="dt">nextEl</span><span class="op">:</span> <span class="st">".swiper-button-next"</span><span class="op">,</span></span>
-<span id="cb2-65"><a aria-hidden="true" href="#cb2-65" tabindex="-1"></a>                    <span class="dt">prevEl</span><span class="op">:</span> <span class="st">".swiper-button-prev"</span></span>
-<span id="cb2-66"><a aria-hidden="true" href="#cb2-66" tabindex="-1"></a>                }<span class="op">,</span></span>
-<span id="cb2-67"><a aria-hidden="true" href="#cb2-67" tabindex="-1"></a>                <span class="dt">observer</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
-<span id="cb2-68"><a aria-hidden="true" href="#cb2-68" tabindex="-1"></a>                <span class="dt">observeParents</span><span class="op">:</span> <span class="kw">true</span></span>
-<span id="cb2-69"><a aria-hidden="true" href="#cb2-69" tabindex="-1"></a>            }</span>
-<span id="cb2-70"><a aria-hidden="true" href="#cb2-70" tabindex="-1"></a>        }<span class="op">;</span></span>
-<span id="cb2-71"><a aria-hidden="true" href="#cb2-71" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb2-72"><a aria-hidden="true" href="#cb2-72" tabindex="-1"></a>    <span class="fu">created</span>() {</span>
-<span id="cb2-73"><a aria-hidden="true" href="#cb2-73" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb2-74"><a aria-hidden="true" href="#cb2-74" tabindex="-1"></a>    <span class="fu">mounted</span>() {</span>
-<span id="cb2-75"><a aria-hidden="true" href="#cb2-75" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">swiperOptions</span><span class="op">.</span><span class="at">initialSlide</span> <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">activeIndex</span><span class="op">;</span></span>
-<span id="cb2-76"><a aria-hidden="true" href="#cb2-76" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">currentIndex</span> <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">activeIndex</span><span class="op">;</span></span>
-<span id="cb2-77"><a aria-hidden="true" href="#cb2-77" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb2-78"><a aria-hidden="true" href="#cb2-78" tabindex="-1"></a>    <span class="dt">methods</span><span class="op">:</span> {</span>
-<span id="cb2-79"><a aria-hidden="true" href="#cb2-79" tabindex="-1"></a>        <span class="fu">onSwiper</span>(swiper) {</span>
-<span id="cb2-80"><a aria-hidden="true" href="#cb2-80" tabindex="-1"></a>            <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(swiper)<span class="op">;</span></span>
-<span id="cb2-81"><a aria-hidden="true" href="#cb2-81" tabindex="-1"></a>        }<span class="op">,</span></span>
-<span id="cb2-82"><a aria-hidden="true" href="#cb2-82" tabindex="-1"></a>        <span class="fu">onSlideChange</span>() {</span>
-<span id="cb2-83"><a aria-hidden="true" href="#cb2-83" tabindex="-1"></a>            <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"slide change"</span>)<span class="op">;</span></span>
-<span id="cb2-84"><a aria-hidden="true" href="#cb2-84" tabindex="-1"></a>        }<span class="op">,</span></span>
-<span id="cb2-85"><a aria-hidden="true" href="#cb2-85" tabindex="-1"></a>        <span class="fu">prev</span>(){</span>
-<span id="cb2-86"><a aria-hidden="true" href="#cb2-86" tabindex="-1"></a>            <span class="kw">let</span> { realIndex } <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">$refs</span><span class="op">.</span><span class="at">mySwiper</span><span class="op">.</span><span class="at">$swiper</span><span class="op">;</span></span>
-<span id="cb2-87"><a aria-hidden="true" href="#cb2-87" tabindex="-1"></a>            realIndex <span class="op">=</span> <span class="op">!</span>realIndex <span class="op">?</span> <span class="kw">this</span><span class="op">.</span><span class="at">imgList</span><span class="op">?.</span><span class="at">length</span> <span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">currentIndex</span><span class="op">;</span></span>
-<span id="cb2-88"><a aria-hidden="true" href="#cb2-88" tabindex="-1"></a>            <span class="kw">this</span><span class="op">.</span><span class="fu">$set</span>(<span class="kw">this</span><span class="op">,</span> <span class="st">"currentIndex"</span><span class="op">,</span> realIndex <span class="op">-</span> <span class="dv">1</span>)<span class="op">;</span></span>
-<span id="cb2-89"><a aria-hidden="true" href="#cb2-89" tabindex="-1"></a>            <span class="kw">this</span><span class="op">.</span><span class="at">$refs</span><span class="op">.</span><span class="at">mySwiper</span><span class="op">.</span><span class="at">$swiper</span><span class="op">.</span><span class="fu">slidePrev</span>()<span class="op">;</span></span>
-<span id="cb2-90"><a aria-hidden="true" href="#cb2-90" tabindex="-1"></a>        }<span class="op">,</span></span>
-<span id="cb2-91"><a aria-hidden="true" href="#cb2-91" tabindex="-1"></a>        <span class="fu">next</span>(){</span>
-<span id="cb2-92"><a aria-hidden="true" href="#cb2-92" tabindex="-1"></a>            <span class="kw">let</span> { realIndex } <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">$refs</span><span class="op">.</span><span class="at">mySwiper</span><span class="op">.</span><span class="at">$swiper</span><span class="op">;</span></span>
-<span id="cb2-93"><a aria-hidden="true" href="#cb2-93" tabindex="-1"></a>            realIndex <span class="op">=</span> realIndex <span class="op">===</span> <span class="kw">this</span><span class="op">.</span><span class="at">imgList</span><span class="op">?.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span> <span class="op">?</span> <span class="op">-</span><span class="dv">1</span> <span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">currentIndex</span><span class="op">;</span></span>
-<span id="cb2-94"><a aria-hidden="true" href="#cb2-94" tabindex="-1"></a>            <span class="kw">this</span><span class="op">.</span><span class="fu">$set</span>(<span class="kw">this</span><span class="op">,</span> <span class="st">"currentIndex"</span><span class="op">,</span> realIndex <span class="op">+</span> <span class="dv">1</span>)<span class="op">;</span></span>
-<span id="cb2-95"><a aria-hidden="true" href="#cb2-95" tabindex="-1"></a>            <span class="kw">this</span><span class="op">.</span><span class="at">$refs</span><span class="op">.</span><span class="at">mySwiper</span><span class="op">.</span><span class="at">$swiper</span><span class="op">.</span><span class="fu">slideNext</span>()<span class="op">;</span></span>
-<span id="cb2-96"><a aria-hidden="true" href="#cb2-96" tabindex="-1"></a>        }<span class="op">,</span></span>
-<span id="cb2-97"><a aria-hidden="true" href="#cb2-97" tabindex="-1"></a>        <span class="fu">selectPagination</span>(index){</span>
-<span id="cb2-98"><a aria-hidden="true" href="#cb2-98" tabindex="-1"></a>            <span class="kw">this</span><span class="op">.</span><span class="at">currentIndex</span> <span class="op">=</span> index<span class="op">;</span></span>
-<span id="cb2-99"><a aria-hidden="true" href="#cb2-99" tabindex="-1"></a>            <span class="kw">this</span><span class="op">.</span><span class="at">$refs</span><span class="op">.</span><span class="at">mySwiper</span><span class="op">.</span><span class="at">$swiper</span><span class="op">.</span><span class="fu">slideTo</span>(index <span class="op">+</span> <span class="dv">1</span>)<span class="op">;</span></span>
-<span id="cb2-100"><a aria-hidden="true" href="#cb2-100" tabindex="-1"></a>        }<span class="op">,</span></span>
-<span id="cb2-101"><a aria-hidden="true" href="#cb2-101" tabindex="-1"></a>        <span class="fu">cancel</span>(){</span>
-<span id="cb2-102"><a aria-hidden="true" href="#cb2-102" tabindex="-1"></a>            <span class="kw">this</span><span class="op">.</span><span class="at">showFlag</span> <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
-<span id="cb2-103"><a aria-hidden="true" href="#cb2-103" tabindex="-1"></a>            <span class="kw">this</span><span class="op">.</span><span class="fu">$emit</span>(<span class="st">"cancel"</span>)<span class="op">;</span></span>
-<span id="cb2-104"><a aria-hidden="true" href="#cb2-104" tabindex="-1"></a>        }</span>
-<span id="cb2-105"><a aria-hidden="true" href="#cb2-105" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb2-106"><a aria-hidden="true" href="#cb2-106" tabindex="-1"></a>    <span class="fu">beforeDestroy</span>() {</span>
-<span id="cb2-107"><a aria-hidden="true" href="#cb2-107" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="at">$refs</span><span class="op">.</span><span class="at">mySwiper</span><span class="op">.</span><span class="at">$swiper</span><span class="op">.</span><span class="fu">destroy</span>()<span class="op">;</span></span>
-<span id="cb2-108"><a aria-hidden="true" href="#cb2-108" tabindex="-1"></a>    }</span>
-<span id="cb2-109"><a aria-hidden="true" href="#cb2-109" tabindex="-1"></a>}<span class="op">;</span></span>
-<span id="cb2-110"><a aria-hidden="true" href="#cb2-110" tabindex="-1"></a><span class="op">&lt;/</span>script<span class="op">&gt;</span></span>
-<span id="cb2-111"><a aria-hidden="true" href="#cb2-111" tabindex="-1"></a></span>
-<span id="cb2-112"><a aria-hidden="true" href="#cb2-112" tabindex="-1"></a><span class="op">&lt;</span>style scoped lang<span class="op">=</span><span class="st">"less"</span><span class="op">&gt;</span></span>
-<span id="cb2-113"><a aria-hidden="true" href="#cb2-113" tabindex="-1"></a><span class="op">.</span><span class="at">swiper</span><span class="op">-</span>slide{</span>
-<span id="cb2-114"><a aria-hidden="true" href="#cb2-114" tabindex="-1"></a>    text<span class="op">-</span><span class="dt">align</span><span class="op">:</span> center<span class="op">;</span></span>
-<span id="cb2-115"><a aria-hidden="true" href="#cb2-115" tabindex="-1"></a>    <span class="dt">padding</span><span class="op">:</span> <span class="dv">10</span><span class="er">px</span><span class="op">;</span></span>
-<span id="cb2-116"><a aria-hidden="true" href="#cb2-116" tabindex="-1"></a>    img{</span>
-<span id="cb2-117"><a aria-hidden="true" href="#cb2-117" tabindex="-1"></a>        max<span class="op">-</span><span class="dt">width</span><span class="op">:</span> <span class="dv">100</span><span class="op">%;</span></span>
-<span id="cb2-118"><a aria-hidden="true" href="#cb2-118" tabindex="-1"></a>        max<span class="op">-</span><span class="dt">height</span><span class="op">:</span> <span class="dv">60</span><span class="er">vh</span><span class="op">;</span></span>
-<span id="cb2-119"><a aria-hidden="true" href="#cb2-119" tabindex="-1"></a>    }</span>
-<span id="cb2-120"><a aria-hidden="true" href="#cb2-120" tabindex="-1"></a>}</span>
-<span id="cb2-121"><a aria-hidden="true" href="#cb2-121" tabindex="-1"></a><span class="op">.</span><span class="at">mySwiper</span>{</span>
-<span id="cb2-122"><a aria-hidden="true" href="#cb2-122" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">100</span><span class="op">%;</span></span>
-<span id="cb2-123"><a aria-hidden="true" href="#cb2-123" tabindex="-1"></a>    <span class="ss">/deep/</span><span class="op">.</span><span class="at">swiper</span><span class="op">-</span>wrapper{</span>
-<span id="cb2-124"><a aria-hidden="true" href="#cb2-124" tabindex="-1"></a>        <span class="dt">height</span><span class="op">:</span> <span class="dv">100</span><span class="op">%;</span></span>
-<span id="cb2-125"><a aria-hidden="true" href="#cb2-125" tabindex="-1"></a>        <span class="dt">display</span><span class="op">:</span> flex<span class="op">;</span></span>
-<span id="cb2-126"><a aria-hidden="true" href="#cb2-126" tabindex="-1"></a>        align<span class="op">-</span><span class="dt">items</span><span class="op">:</span> center<span class="op">;</span></span>
-<span id="cb2-127"><a aria-hidden="true" href="#cb2-127" tabindex="-1"></a>    }</span>
-<span id="cb2-128"><a aria-hidden="true" href="#cb2-128" tabindex="-1"></a>}</span>
-<span id="cb2-129"><a aria-hidden="true" href="#cb2-129" tabindex="-1"></a><span class="op">.</span><span class="at">swiper</span><span class="op">-</span>pagination{</span>
-<span id="cb2-130"><a aria-hidden="true" href="#cb2-130" tabindex="-1"></a>    <span class="dt">bottom</span><span class="op">:</span> <span class="dv">10</span><span class="er">px</span><span class="op">;</span></span>
-<span id="cb2-131"><a aria-hidden="true" href="#cb2-131" tabindex="-1"></a>    <span class="dt">left</span><span class="op">:</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb2-132"><a aria-hidden="true" href="#cb2-132" tabindex="-1"></a>    <span class="dt">width</span><span class="op">:</span> <span class="dv">100</span><span class="op">%;</span></span>
-<span id="cb2-133"><a aria-hidden="true" href="#cb2-133" tabindex="-1"></a>    <span class="op">.</span><span class="at">swiper</span><span class="op">-</span>pagination<span class="op">-</span>bullet{</span>
-<span id="cb2-134"><a aria-hidden="true" href="#cb2-134" tabindex="-1"></a>        <span class="dt">margin</span><span class="op">:</span> <span class="dv">0</span> <span class="dv">4</span><span class="er">px</span><span class="op">;</span></span>
-<span id="cb2-135"><a aria-hidden="true" href="#cb2-135" tabindex="-1"></a>    }</span>
-<span id="cb2-136"><a aria-hidden="true" href="#cb2-136" tabindex="-1"></a>}</span>
-<span id="cb2-137"><a aria-hidden="true" href="#cb2-137" tabindex="-1"></a><span class="op">&lt;/</span>style<span class="op">&gt;</span></span></code></pre></div>
-      </article>
-    </div>
+    <main>
+      <h1>Juejin article moved</h1>
+      <p>This synced Juejin article now lives under the rebuilt post route.</p>
+      <a href="/en/posts/sync/2022-09-25-7147251892836368415/">Continue</a>
+    </main>
+    <script>
+      window.location.replace("/en/posts/sync/2022-09-25-7147251892836368415/");
+    </script>
   </body>
 </html>

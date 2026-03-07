@@ -1,517 +1,71 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>点了这么久的外卖，你知道外卖小票是怎么打印出来的嘛？ | CocoonBreak</title>
-    <meta name="description" content="其实我们电脑上任意一款浏览器都自带了打印功能，按住 Ctrl + P 就能调用打印功能，所以，你要做的，就只需要自定义好打印的内容就行； 话不多说，先来看下效果 在线预览 自定义打印小票 1、打印小票的html部分 &lt; div class...">
-    <meta property="og:title" content="点了这么久的外卖，你知道外卖小票是怎么打印出来的嘛？ | CocoonBreak">
-    <meta property="og:description" content="其实我们电脑上任意一款浏览器都自带了打印功能，按住 Ctrl + P 就能调用打印功能，所以，你要做的，就只需要自定义好打印的内容就行； 话不多说，先来看下效果 在线预览 自定义打印小票 1、打印小票的html部分 &lt; div class...">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2022-10-04-7150585427403997215/">
-    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
-    <link rel="icon" href="/img/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/custom/site.css">
-    <script defer src="/custom/site.js"></script>
-    <script defer src="/custom/live2d-loader.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content="0; url=/en/posts/sync/2022-10-04-7150585427403997215/" />
+    <title>Juejin article moved</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1020;
+        --panel: rgba(10, 18, 38, 0.88);
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #f6efe3;
+        --muted: #93a2bf;
+        --accent: #7ae7c7;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
+          linear-gradient(180deg, #0b1020 0%, #050813 100%);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        padding: 24px;
+      }
+      main {
+        width: min(640px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--panel);
+        padding: 32px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(28px, 4vw, 42px);
+      }
+      p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      a {
+        color: #08111e;
+        background: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    </style>
   </head>
   <body>
-    <div class="article-shell">
-      <nav class="insight-nav">
-        <a href="/">← 首页</a>
-        <a href="/insights/">同步文章</a>
-        <a href="https://juejin.cn/post/7150585427403997215" target="_blank" rel="noreferrer">掘金原文</a>
-      </nav>
-
-      <header class="article-hero" data-reveal>
-        <div class="article-meta">
-          <span>2022.10.04</span><span>浏览器</span>
-        </div>
-        <h1>点了这么久的外卖，你知道外卖小票是怎么打印出来的嘛？</h1>
-        <p class="article-intro">其实我们电脑上任意一款浏览器都自带了打印功能，按住 Ctrl + P 就能调用打印功能，所以，你要做的，就只需要自定义好打印的内容就行； 话不多说，先来看下效果 在线预览 自定义打印小票 1、打印小票的html部分 &lt; div class...</p>
-        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/7150585427403997215" target="_blank" rel="noreferrer">掘金原文</a>。</div>
-      </header>
-
-      <article class="prose" data-reveal>
-        <p>其实我们电脑上任意一款浏览器都自带了打印功能，按住 Ctrl + P
-就能调用打印功能，所以，你要做的，就只需要自定义好打印的内容就行；</p>
-<p>话不多说，先来看下效果
-<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fsy6n7r.csb.app%2F" target="_blank" title="https://sy6n7r.csb.app/">在线预览</a></p>
-<h3 id="自定义打印小票">自定义打印小票</h3>
-<p>1、打印小票的html部分</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"dynamic-component-demo"</span><span class="ot"> id</span><span class="op">=</span><span class="st">"dynamic-component-demo"</span><span class="dt">&gt;</span></span>
-<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"printView"</span><span class="dt">&gt;</span></span>
-<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"header"</span><span class="dt">&gt;</span></span>
-<span id="cb1-4"><a aria-hidden="true" href="#cb1-4" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"compName"</span><span class="dt">&gt;</span>狗蛋羊肉店<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-5"><a aria-hidden="true" href="#cb1-5" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-6"><a aria-hidden="true" href="#cb1-6" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"block base"</span><span class="dt">&gt;</span></span>
-<span id="cb1-7"><a aria-hidden="true" href="#cb1-7" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"print-item"</span><span class="dt">&gt;</span></span>
-<span id="cb1-8"><a aria-hidden="true" href="#cb1-8" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"item-label"</span><span class="dt">&gt;</span>单号：<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
-<span id="cb1-9"><a aria-hidden="true" href="#cb1-9" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"item-value"</span><span class="dt">&gt;</span>202209300301<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
-<span id="cb1-10"><a aria-hidden="true" href="#cb1-10" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-11"><a aria-hidden="true" href="#cb1-11" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"print-item"</span><span class="dt">&gt;</span></span>
-<span id="cb1-12"><a aria-hidden="true" href="#cb1-12" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"item-label"</span><span class="dt">&gt;</span>下单日期：<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
-<span id="cb1-13"><a aria-hidden="true" href="#cb1-13" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"item-value"</span><span class="dt">&gt;</span>2022-09-30<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
-<span id="cb1-14"><a aria-hidden="true" href="#cb1-14" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-15"><a aria-hidden="true" href="#cb1-15" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-16"><a aria-hidden="true" href="#cb1-16" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"memberInfo"</span><span class="dt">&gt;</span></span>
-<span id="cb1-17"><a aria-hidden="true" href="#cb1-17" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"body-section"</span><span class="dt">&gt;</span></span>
-<span id="cb1-18"><a aria-hidden="true" href="#cb1-18" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">span</span><span class="ot"> class</span><span class="op">=</span><span class="st">"print-title"</span><span class="dt">&gt;</span>用户信息<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
-<span id="cb1-19"><a aria-hidden="true" href="#cb1-19" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"line"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"padding: 2px 0px; font-size: 8px; margin-top: 8px;"</span><span class="dt">&gt;</span></span>
-<span id="cb1-20"><a aria-hidden="true" href="#cb1-20" tabindex="-1"></a>                    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"title"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"display: inline-block; vertical-align: top; width: 100%; text-align: left;"</span><span class="ot"> </span><span class="dt">&gt;</span>姓名:<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-21"><a aria-hidden="true" href="#cb1-21" tabindex="-1"></a>                    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"val"</span><span class="ot"> style</span><span class="op">=</span><span class="st">" display: inline-block; vertical-align: top; width: 100%; text-align: right;"</span><span class="ot"> </span><span class="dt">&gt;</span>王二狗<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-22"><a aria-hidden="true" href="#cb1-22" tabindex="-1"></a>                <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-23"><a aria-hidden="true" href="#cb1-23" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"line"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"padding: 2px 0px; font-size: 8px;"</span><span class="dt">&gt;</span></span>
-<span id="cb1-24"><a aria-hidden="true" href="#cb1-24" tabindex="-1"></a>                    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"title"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"display: inline-block; vertical-align: top; width: 100%; text-align: left;"</span><span class="ot"> </span><span class="dt">&gt;</span>手机号:<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-25"><a aria-hidden="true" href="#cb1-25" tabindex="-1"></a>                    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"val"</span><span class="ot"> style</span><span class="op">=</span><span class="st">" display: inline-block; vertical-align: top; width: 100%; text-align: right;"</span><span class="ot"> </span><span class="dt">&gt;</span>186****1126<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-26"><a aria-hidden="true" href="#cb1-26" tabindex="-1"></a>                <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-27"><a aria-hidden="true" href="#cb1-27" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"line"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"padding: 2px 0px; font-size: 8px;"</span><span class="dt">&gt;</span></span>
-<span id="cb1-28"><a aria-hidden="true" href="#cb1-28" tabindex="-1"></a>                    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"title"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"display: inline-block; vertical-align: top; width: 100%; text-align: left;"</span><span class="ot"> </span><span class="dt">&gt;</span>编号:<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-29"><a aria-hidden="true" href="#cb1-29" tabindex="-1"></a>                    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"val"</span><span class="ot"> style</span><span class="op">=</span><span class="st">" display: inline-block; vertical-align: top; width: 100%; text-align: right;"</span><span class="ot"> </span><span class="dt">&gt;</span>kuishou0307<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-30"><a aria-hidden="true" href="#cb1-30" tabindex="-1"></a>                <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-31"><a aria-hidden="true" href="#cb1-31" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-32"><a aria-hidden="true" href="#cb1-32" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-33"><a aria-hidden="true" href="#cb1-33" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"equity-details"</span><span class="dt">&gt;</span></span>
-<span id="cb1-34"><a aria-hidden="true" href="#cb1-34" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"print-title"</span><span class="dt">&gt;</span>下单内容<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-35"><a aria-hidden="true" href="#cb1-35" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"body-section"</span><span class="dt">&gt;</span></span>
-<span id="cb1-36"><a aria-hidden="true" href="#cb1-36" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"body-table"</span><span class="dt">&gt;</span></span>
-<span id="cb1-37"><a aria-hidden="true" href="#cb1-37" tabindex="-1"></a>                    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"table"</span><span class="dt">&gt;</span></span>
-<span id="cb1-38"><a aria-hidden="true" href="#cb1-38" tabindex="-1"></a>                        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"table-tr"</span><span class="dt">&gt;</span></span>
-<span id="cb1-39"><a aria-hidden="true" href="#cb1-39" tabindex="-1"></a>                            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width: 33%;"</span><span class="dt">&gt;</span>标准价<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-40"><a aria-hidden="true" href="#cb1-40" tabindex="-1"></a>                            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width: 33%;"</span><span class="dt">&gt;</span>数量<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-41"><a aria-hidden="true" href="#cb1-41" tabindex="-1"></a>                            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> data-v-705e91bf</span><span class="dt">&gt;</span>实付<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-42"><a aria-hidden="true" href="#cb1-42" tabindex="-1"></a>                        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-43"><a aria-hidden="true" href="#cb1-43" tabindex="-1"></a>                    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-44"><a aria-hidden="true" href="#cb1-44" tabindex="-1"></a>                    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> data-v-705e91bf</span><span class="dt">&gt;</span></span>
-<span id="cb1-45"><a aria-hidden="true" href="#cb1-45" tabindex="-1"></a>                        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"right-name"</span><span class="dt">&gt;</span>羊腰子<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-46"><a aria-hidden="true" href="#cb1-46" tabindex="-1"></a>                        <span class="dt">&lt;</span><span class="kw">table</span><span class="ot"> class</span><span class="op">=</span><span class="st">"table"</span><span class="dt">&gt;</span></span>
-<span id="cb1-47"><a aria-hidden="true" href="#cb1-47" tabindex="-1"></a>                            <span class="dt">&lt;</span><span class="kw">tr</span><span class="ot"> data-v-705e91bf</span><span class="dt">&gt;</span></span>
-<span id="cb1-48"><a aria-hidden="true" href="#cb1-48" tabindex="-1"></a>                                <span class="dt">&lt;</span><span class="kw">td</span><span class="ot"> class</span><span class="op">=</span><span class="st">"left"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width: 33%;"</span><span class="dt">&gt;</span>20.5<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb1-49"><a aria-hidden="true" href="#cb1-49" tabindex="-1"></a>                                <span class="dt">&lt;</span><span class="kw">td</span><span class="ot"> class</span><span class="op">=</span><span class="st">"center"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width: 33%;"</span><span class="dt">&gt;</span>×1<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb1-50"><a aria-hidden="true" href="#cb1-50" tabindex="-1"></a>                                <span class="dt">&lt;</span><span class="kw">td</span><span class="ot"> class</span><span class="op">=</span><span class="st">"right"</span><span class="dt">&gt;</span>16.8<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb1-51"><a aria-hidden="true" href="#cb1-51" tabindex="-1"></a>                            <span class="dt">&lt;/</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
-<span id="cb1-52"><a aria-hidden="true" href="#cb1-52" tabindex="-1"></a>                        <span class="dt">&lt;/</span><span class="kw">table</span><span class="dt">&gt;</span></span>
-<span id="cb1-53"><a aria-hidden="true" href="#cb1-53" tabindex="-1"></a>                        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"right-name"</span><span class="dt">&gt;</span>羊腿<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-54"><a aria-hidden="true" href="#cb1-54" tabindex="-1"></a>                        <span class="dt">&lt;</span><span class="kw">table</span><span class="ot"> class</span><span class="op">=</span><span class="st">"table"</span><span class="dt">&gt;</span></span>
-<span id="cb1-55"><a aria-hidden="true" href="#cb1-55" tabindex="-1"></a>                            <span class="dt">&lt;</span><span class="kw">tr</span><span class="ot"> data-v-705e91bf</span><span class="dt">&gt;</span></span>
-<span id="cb1-56"><a aria-hidden="true" href="#cb1-56" tabindex="-1"></a>                                <span class="dt">&lt;</span><span class="kw">td</span><span class="ot"> class</span><span class="op">=</span><span class="st">"left"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width: 33%;"</span><span class="dt">&gt;</span>68<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb1-57"><a aria-hidden="true" href="#cb1-57" tabindex="-1"></a>                                <span class="dt">&lt;</span><span class="kw">td</span><span class="ot"> class</span><span class="op">=</span><span class="st">"center"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width: 33%;"</span><span class="dt">&gt;</span>×1<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb1-58"><a aria-hidden="true" href="#cb1-58" tabindex="-1"></a>                                <span class="dt">&lt;</span><span class="kw">td</span><span class="ot"> class</span><span class="op">=</span><span class="st">"right"</span><span class="dt">&gt;</span>68<span class="dt">&lt;/</span><span class="kw">td</span><span class="dt">&gt;</span></span>
-<span id="cb1-59"><a aria-hidden="true" href="#cb1-59" tabindex="-1"></a>                            <span class="dt">&lt;/</span><span class="kw">tr</span><span class="dt">&gt;</span></span>
-<span id="cb1-60"><a aria-hidden="true" href="#cb1-60" tabindex="-1"></a>                        <span class="dt">&lt;/</span><span class="kw">table</span><span class="dt">&gt;</span></span>
-<span id="cb1-61"><a aria-hidden="true" href="#cb1-61" tabindex="-1"></a>                    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-62"><a aria-hidden="true" href="#cb1-62" tabindex="-1"></a>                <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-63"><a aria-hidden="true" href="#cb1-63" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-64"><a aria-hidden="true" href="#cb1-64" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-65"><a aria-hidden="true" href="#cb1-65" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"payment-details"</span><span class="dt">&gt;</span></span>
-<span id="cb1-66"><a aria-hidden="true" href="#cb1-66" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"print-title"</span><span class="dt">&gt;</span>支付明细<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-67"><a aria-hidden="true" href="#cb1-67" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"total"</span><span class="dt">&gt;</span>16.8<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-68"><a aria-hidden="true" href="#cb1-68" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"details-header"</span><span class="dt">&gt;</span></span>
-<span id="cb1-69"><a aria-hidden="true" href="#cb1-69" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> data-v-705e91bf</span><span class="dt">&gt;</span>支付方式<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-70"><a aria-hidden="true" href="#cb1-70" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> data-v-705e91bf</span><span class="dt">&gt;</span>实付<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-71"><a aria-hidden="true" href="#cb1-71" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-72"><a aria-hidden="true" href="#cb1-72" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"details-content"</span><span class="dt">&gt;</span></span>
-<span id="cb1-73"><a aria-hidden="true" href="#cb1-73" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"line"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"padding: 2px 0px; font-size: 8px;"</span><span class="dt">&gt;</span></span>
-<span id="cb1-74"><a aria-hidden="true" href="#cb1-74" tabindex="-1"></a>                    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"title"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"display: inline-block; vertical-align: top; width: 100%; text-align: left;"</span><span class="ot"> </span><span class="dt">&gt;</span>支付宝:<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-75"><a aria-hidden="true" href="#cb1-75" tabindex="-1"></a>                    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"val"</span><span class="ot"> style</span><span class="op">=</span><span class="st">" display: inline-block; vertical-align: top; width: 100%; text-align: right;"</span><span class="ot"> </span><span class="dt">&gt;</span>84.8<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-76"><a aria-hidden="true" href="#cb1-76" tabindex="-1"></a>                <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-77"><a aria-hidden="true" href="#cb1-77" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-78"><a aria-hidden="true" href="#cb1-78" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-79"><a aria-hidden="true" href="#cb1-79" tabindex="-1"></a>        <span class="co">&lt;!----&gt;</span></span>
-<span id="cb1-80"><a aria-hidden="true" href="#cb1-80" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"remarks"</span><span class="dt">&gt;</span></span>
-<span id="cb1-81"><a aria-hidden="true" href="#cb1-81" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"line"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"padding: 2px 0px; font-size: 8px;"</span><span class="dt">&gt;</span></span>
-<span id="cb1-82"><a aria-hidden="true" href="#cb1-82" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"title"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"display: inline-block; vertical-align: top; width: 100%; text-align: left;"</span><span class="ot"> </span><span class="dt">&gt;</span>备注:<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-83"><a aria-hidden="true" href="#cb1-83" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"val"</span><span class="ot"> style</span><span class="op">=</span><span class="st">" display: inline-block; vertical-align: top; width: 100%; text-align: right;"</span><span class="ot"> </span><span class="dt">&gt;</span>微辣<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-84"><a aria-hidden="true" href="#cb1-84" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-85"><a aria-hidden="true" href="#cb1-85" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"line"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"padding: 2px 0px; font-size: 8px;"</span><span class="dt">&gt;</span></span>
-<span id="cb1-86"><a aria-hidden="true" href="#cb1-86" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"title"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"display: inline-block; vertical-align: top; width: 100%; text-align: left;"</span><span class="ot"> </span><span class="dt">&gt;</span>门店电话:<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-87"><a aria-hidden="true" href="#cb1-87" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"val"</span><span class="ot"> style</span><span class="op">=</span><span class="st">" display: inline-block; vertical-align: top; width: 100%; text-align: right;"</span><span class="ot"> </span><span class="dt">&gt;</span>0748-8324-7847<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-88"><a aria-hidden="true" href="#cb1-88" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-89"><a aria-hidden="true" href="#cb1-89" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"line"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"padding: 2px 0px; font-size: 8px;"</span><span class="dt">&gt;</span></span>
-<span id="cb1-90"><a aria-hidden="true" href="#cb1-90" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"title"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"display: inline-block; vertical-align: top; width: 100%; text-align: left;"</span><span class="ot"> </span><span class="dt">&gt;</span>门店地址:<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-91"><a aria-hidden="true" href="#cb1-91" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"val"</span><span class="ot"> style</span><span class="op">=</span><span class="st">" display: inline-block; vertical-align: top; width: 100%; text-align: right;"</span><span class="ot"> </span><span class="dt">&gt;</span>北京海淀<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-92"><a aria-hidden="true" href="#cb1-92" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-93"><a aria-hidden="true" href="#cb1-93" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-94"><a aria-hidden="true" href="#cb1-94" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"welcomeMessage"</span><span class="dt">&gt;</span></span>
-<span id="cb1-95"><a aria-hidden="true" href="#cb1-95" tabindex="-1"></a>            <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"print-item"</span><span class="dt">&gt;</span></span>
-<span id="cb1-96"><a aria-hidden="true" href="#cb1-96" tabindex="-1"></a>                <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">"item-label"</span><span class="dt">&gt;</span>欢迎再次光临～<span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-97"><a aria-hidden="true" href="#cb1-97" tabindex="-1"></a>            <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-98"><a aria-hidden="true" href="#cb1-98" tabindex="-1"></a>        <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-99"><a aria-hidden="true" href="#cb1-99" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
-<span id="cb1-100"><a aria-hidden="true" href="#cb1-100" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">button</span><span class="ot"> </span><span class="er">@</span><span class="ot">click</span><span class="op">=</span><span class="st">"printTickets"</span><span class="dt">&gt;</span>打印<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
-<span id="cb1-101"><a aria-hidden="true" href="#cb1-101" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div>
-<p>2、css 部分</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="fu">.dynamic-component-demo</span> {</span>
-<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a>    <span class="kw">margin</span><span class="ch">:</span> <span class="dv">0</span> <span class="bu">auto</span><span class="op">;</span></span>
-<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a>    <span class="kw">width</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a>}</span>
-<span id="cb2-5"><a aria-hidden="true" href="#cb2-5" tabindex="-1"></a><span class="fu">.printView</span> {</span>
-<span id="cb2-6"><a aria-hidden="true" href="#cb2-6" tabindex="-1"></a>    <span class="kw">padding</span><span class="ch">:</span> <span class="dv">0</span> <span class="dv">30</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-7"><a aria-hidden="true" href="#cb2-7" tabindex="-1"></a>    <span class="kw">overflow-y</span><span class="ch">:</span> <span class="bu">auto</span><span class="op">;</span></span>
-<span id="cb2-8"><a aria-hidden="true" href="#cb2-8" tabindex="-1"></a>    <span class="kw">margin</span><span class="ch">:</span> <span class="dv">0</span> <span class="bu">auto</span><span class="op">;</span></span>
-<span id="cb2-9"><a aria-hidden="true" href="#cb2-9" tabindex="-1"></a>    <span class="kw">padding</span><span class="ch">:</span> <span class="dv">0</span> <span class="dv">16</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-10"><a aria-hidden="true" href="#cb2-10" tabindex="-1"></a>}</span>
-<span id="cb2-11"><a aria-hidden="true" href="#cb2-11" tabindex="-1"></a><span class="fu">.header</span> {</span>
-<span id="cb2-12"><a aria-hidden="true" href="#cb2-12" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">14</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-13"><a aria-hidden="true" href="#cb2-13" tabindex="-1"></a>    <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
-<span id="cb2-14"><a aria-hidden="true" href="#cb2-14" tabindex="-1"></a>    <span class="kw">padding</span><span class="ch">:</span> <span class="dv">10</span><span class="dt">px</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb2-15"><a aria-hidden="true" href="#cb2-15" tabindex="-1"></a>}</span>
-<span id="cb2-16"><a aria-hidden="true" href="#cb2-16" tabindex="-1"></a><span class="fu">.compName</span> {</span>
-<span id="cb2-17"><a aria-hidden="true" href="#cb2-17" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">16</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-18"><a aria-hidden="true" href="#cb2-18" tabindex="-1"></a>    <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">600</span><span class="op">;</span></span>
-<span id="cb2-19"><a aria-hidden="true" href="#cb2-19" tabindex="-1"></a>    <span class="kw">color</span><span class="ch">:</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.85</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-20"><a aria-hidden="true" href="#cb2-20" tabindex="-1"></a>    <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">22</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-21"><a aria-hidden="true" href="#cb2-21" tabindex="-1"></a>}</span>
-<span id="cb2-22"><a aria-hidden="true" href="#cb2-22" tabindex="-1"></a><span class="fu">.printView</span><span class="in">::-webkit-scrollbar</span> {</span>
-<span id="cb2-23"><a aria-hidden="true" href="#cb2-23" tabindex="-1"></a>    <span class="kw">width</span><span class="ch">:</span> <span class="dv">4</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-24"><a aria-hidden="true" href="#cb2-24" tabindex="-1"></a>}</span>
-<span id="cb2-25"><a aria-hidden="true" href="#cb2-25" tabindex="-1"></a><span class="fu">.base</span> {</span>
-<span id="cb2-26"><a aria-hidden="true" href="#cb2-26" tabindex="-1"></a>    <span class="kw">border-bottom</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">px</span> <span class="dv">dashed</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.8</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-27"><a aria-hidden="true" href="#cb2-27" tabindex="-1"></a>    <span class="kw">margin-bottom</span><span class="ch">:</span> <span class="dv">3</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-28"><a aria-hidden="true" href="#cb2-28" tabindex="-1"></a>    <span class="kw">padding</span><span class="ch">:</span> <span class="dv">12</span><span class="dt">px</span> <span class="dv">0</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-29"><a aria-hidden="true" href="#cb2-29" tabindex="-1"></a>}</span>
-<span id="cb2-30"><a aria-hidden="true" href="#cb2-30" tabindex="-1"></a><span class="fu">.print-item</span> {</span>
-<span id="cb2-31"><a aria-hidden="true" href="#cb2-31" tabindex="-1"></a>    <span class="kw">margin-bottom</span><span class="ch">:</span> <span class="dv">4</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-32"><a aria-hidden="true" href="#cb2-32" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">12</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-33"><a aria-hidden="true" href="#cb2-33" tabindex="-1"></a>}</span>
-<span id="cb2-34"><a aria-hidden="true" href="#cb2-34" tabindex="-1"></a><span class="fu">.remarks</span> {</span>
-<span id="cb2-35"><a aria-hidden="true" href="#cb2-35" tabindex="-1"></a>    <span class="kw">padding-top</span><span class="ch">:</span> <span class="dv">46</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-36"><a aria-hidden="true" href="#cb2-36" tabindex="-1"></a>    <span class="kw">margin-bottom</span><span class="ch">:</span> <span class="dv">3</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-37"><a aria-hidden="true" href="#cb2-37" tabindex="-1"></a>    <span class="kw">border-bottom</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">px</span> <span class="dv">dashed</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.8</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-38"><a aria-hidden="true" href="#cb2-38" tabindex="-1"></a>}</span>
-<span id="cb2-39"><a aria-hidden="true" href="#cb2-39" tabindex="-1"></a><span class="fu">.memberInfo</span> {</span>
-<span id="cb2-40"><a aria-hidden="true" href="#cb2-40" tabindex="-1"></a>    <span class="kw">border-bottom</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.8</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-41"><a aria-hidden="true" href="#cb2-41" tabindex="-1"></a>    <span class="kw">border-top</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">px</span> <span class="dv">dashed</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.5</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-42"><a aria-hidden="true" href="#cb2-42" tabindex="-1"></a>}</span>
-<span id="cb2-43"><a aria-hidden="true" href="#cb2-43" tabindex="-1"></a><span class="fu">.body-section</span> {</span>
-<span id="cb2-44"><a aria-hidden="true" href="#cb2-44" tabindex="-1"></a>    <span class="kw">padding</span><span class="ch">:</span> <span class="dv">12</span><span class="dt">px</span> <span class="dv">0</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-45"><a aria-hidden="true" href="#cb2-45" tabindex="-1"></a>}</span>
-<span id="cb2-46"><a aria-hidden="true" href="#cb2-46" tabindex="-1"></a><span class="fu">.print-title</span> {</span>
-<span id="cb2-47"><a aria-hidden="true" href="#cb2-47" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">14</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-48"><a aria-hidden="true" href="#cb2-48" tabindex="-1"></a>    <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">600</span><span class="op">;</span></span>
-<span id="cb2-49"><a aria-hidden="true" href="#cb2-49" tabindex="-1"></a>    <span class="kw">color</span><span class="ch">:</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.85</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-50"><a aria-hidden="true" href="#cb2-50" tabindex="-1"></a>    <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-51"><a aria-hidden="true" href="#cb2-51" tabindex="-1"></a>}</span>
-<span id="cb2-52"><a aria-hidden="true" href="#cb2-52" tabindex="-1"></a><span class="fu">.equity-details</span> {</span>
-<span id="cb2-53"><a aria-hidden="true" href="#cb2-53" tabindex="-1"></a>    <span class="kw">border-bottom</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.8</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-54"><a aria-hidden="true" href="#cb2-54" tabindex="-1"></a>    <span class="kw">padding</span><span class="ch">:</span> <span class="dv">12</span><span class="dt">px</span> <span class="dv">0</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-55"><a aria-hidden="true" href="#cb2-55" tabindex="-1"></a>}</span>
-<span id="cb2-56"><a aria-hidden="true" href="#cb2-56" tabindex="-1"></a><span class="fu">.print-title</span> {</span>
-<span id="cb2-57"><a aria-hidden="true" href="#cb2-57" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">14</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-58"><a aria-hidden="true" href="#cb2-58" tabindex="-1"></a>    <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">600</span><span class="op">;</span></span>
-<span id="cb2-59"><a aria-hidden="true" href="#cb2-59" tabindex="-1"></a>    <span class="kw">color</span><span class="ch">:</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.85</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-60"><a aria-hidden="true" href="#cb2-60" tabindex="-1"></a>    <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-61"><a aria-hidden="true" href="#cb2-61" tabindex="-1"></a>}</span>
-<span id="cb2-62"><a aria-hidden="true" href="#cb2-62" tabindex="-1"></a><span class="fu">.total</span> {</span>
-<span id="cb2-63"><a aria-hidden="true" href="#cb2-63" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">13</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-64"><a aria-hidden="true" href="#cb2-64" tabindex="-1"></a>    <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">400</span><span class="op">;</span></span>
-<span id="cb2-65"><a aria-hidden="true" href="#cb2-65" tabindex="-1"></a>    <span class="kw">margin-top</span><span class="ch">:</span> <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-66"><a aria-hidden="true" href="#cb2-66" tabindex="-1"></a>    <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-67"><a aria-hidden="true" href="#cb2-67" tabindex="-1"></a>}</span>
-<span id="cb2-68"><a aria-hidden="true" href="#cb2-68" tabindex="-1"></a><span class="fu">.details-header</span> {</span>
-<span id="cb2-69"><a aria-hidden="true" href="#cb2-69" tabindex="-1"></a>    <span class="kw">display</span><span class="ch">:</span> <span class="dv">flex</span><span class="op">;</span></span>
-<span id="cb2-70"><a aria-hidden="true" href="#cb2-70" tabindex="-1"></a>    <span class="kw">justify-content</span><span class="ch">:</span> <span class="dv">space-between</span><span class="op">;</span></span>
-<span id="cb2-71"><a aria-hidden="true" href="#cb2-71" tabindex="-1"></a>    <span class="kw">align-items</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
-<span id="cb2-72"><a aria-hidden="true" href="#cb2-72" tabindex="-1"></a>    <span class="kw">margin</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">px</span> <span class="dv">0</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-73"><a aria-hidden="true" href="#cb2-73" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">12</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-74"><a aria-hidden="true" href="#cb2-74" tabindex="-1"></a>    <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-75"><a aria-hidden="true" href="#cb2-75" tabindex="-1"></a>    <span class="kw">border-top</span><span class="ch">:</span> <span class="dv">dashed</span> <span class="dv">1</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.5</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-76"><a aria-hidden="true" href="#cb2-76" tabindex="-1"></a>    <span class="kw">border-bottom</span><span class="ch">:</span> <span class="dv">dashed</span> <span class="dv">1</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.5</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-77"><a aria-hidden="true" href="#cb2-77" tabindex="-1"></a>}</span>
-<span id="cb2-78"><a aria-hidden="true" href="#cb2-78" tabindex="-1"></a><span class="fu">.details-item</span> {</span>
-<span id="cb2-79"><a aria-hidden="true" href="#cb2-79" tabindex="-1"></a>    <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-80"><a aria-hidden="true" href="#cb2-80" tabindex="-1"></a>}</span>
-<span id="cb2-81"><a aria-hidden="true" href="#cb2-81" tabindex="-1"></a><span class="fu">.body-section</span> {</span>
-<span id="cb2-82"><a aria-hidden="true" href="#cb2-82" tabindex="-1"></a>    <span class="kw">padding</span><span class="ch">:</span> <span class="dv">12</span><span class="dt">px</span> <span class="dv">0</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-83"><a aria-hidden="true" href="#cb2-83" tabindex="-1"></a>}</span>
-<span id="cb2-84"><a aria-hidden="true" href="#cb2-84" tabindex="-1"></a><span class="fu">.print-title</span> {</span>
-<span id="cb2-85"><a aria-hidden="true" href="#cb2-85" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">14</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-86"><a aria-hidden="true" href="#cb2-86" tabindex="-1"></a>    <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">600</span><span class="op">;</span></span>
-<span id="cb2-87"><a aria-hidden="true" href="#cb2-87" tabindex="-1"></a>    <span class="kw">color</span><span class="ch">:</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.85</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-88"><a aria-hidden="true" href="#cb2-88" tabindex="-1"></a>    <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-89"><a aria-hidden="true" href="#cb2-89" tabindex="-1"></a>}</span>
-<span id="cb2-90"><a aria-hidden="true" href="#cb2-90" tabindex="-1"></a><span class="fu">.table</span> {</span>
-<span id="cb2-91"><a aria-hidden="true" href="#cb2-91" tabindex="-1"></a>    <span class="kw">width</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb2-92"><a aria-hidden="true" href="#cb2-92" tabindex="-1"></a>    <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">1.25</span><span class="op">;</span></span>
-<span id="cb2-93"><a aria-hidden="true" href="#cb2-93" tabindex="-1"></a>}</span>
-<span id="cb2-94"><a aria-hidden="true" href="#cb2-94" tabindex="-1"></a><span class="fu">.table-tr</span> {</span>
-<span id="cb2-95"><a aria-hidden="true" href="#cb2-95" tabindex="-1"></a>    <span class="kw">display</span><span class="ch">:</span> <span class="dv">flex</span><span class="op">;</span></span>
-<span id="cb2-96"><a aria-hidden="true" href="#cb2-96" tabindex="-1"></a>    <span class="kw">justify-content</span><span class="ch">:</span> <span class="dv">space-between</span><span class="op">;</span></span>
-<span id="cb2-97"><a aria-hidden="true" href="#cb2-97" tabindex="-1"></a>    <span class="kw">align-items</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
-<span id="cb2-98"><a aria-hidden="true" href="#cb2-98" tabindex="-1"></a>    <span class="kw">flex-direction</span><span class="ch">:</span> <span class="dv">row</span><span class="op">;</span></span>
-<span id="cb2-99"><a aria-hidden="true" href="#cb2-99" tabindex="-1"></a>    <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">2</span><span class="op">;</span></span>
-<span id="cb2-100"><a aria-hidden="true" href="#cb2-100" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">12</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-101"><a aria-hidden="true" href="#cb2-101" tabindex="-1"></a>    <span class="kw">border-top</span><span class="ch">:</span> <span class="dv">dashed</span> <span class="dv">1</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.5</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-102"><a aria-hidden="true" href="#cb2-102" tabindex="-1"></a>    <span class="kw">border-bottom</span><span class="ch">:</span> <span class="dv">dashed</span> <span class="dv">1</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.5</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-103"><a aria-hidden="true" href="#cb2-103" tabindex="-1"></a>}</span>
-<span id="cb2-104"><a aria-hidden="true" href="#cb2-104" tabindex="-1"></a><span class="fu">.right-name</span> {</span>
-<span id="cb2-105"><a aria-hidden="true" href="#cb2-105" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">13</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-106"><a aria-hidden="true" href="#cb2-106" tabindex="-1"></a>    <span class="kw">font-weight</span><span class="ch">:</span> <span class="dv">400</span><span class="op">;</span></span>
-<span id="cb2-107"><a aria-hidden="true" href="#cb2-107" tabindex="-1"></a>    <span class="kw">color</span><span class="ch">:</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.85</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-108"><a aria-hidden="true" href="#cb2-108" tabindex="-1"></a>}</span>
-<span id="cb2-109"><a aria-hidden="true" href="#cb2-109" tabindex="-1"></a><span class="fu">.refund-header</span> {</span>
-<span id="cb2-110"><a aria-hidden="true" href="#cb2-110" tabindex="-1"></a>    <span class="kw">display</span><span class="ch">:</span> <span class="dv">flex</span><span class="op">;</span></span>
-<span id="cb2-111"><a aria-hidden="true" href="#cb2-111" tabindex="-1"></a>    <span class="kw">justify-content</span><span class="ch">:</span> <span class="dv">space-between</span><span class="op">;</span></span>
-<span id="cb2-112"><a aria-hidden="true" href="#cb2-112" tabindex="-1"></a>    <span class="kw">align-items</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
-<span id="cb2-113"><a aria-hidden="true" href="#cb2-113" tabindex="-1"></a>    <span class="kw">margin</span><span class="ch">:</span> <span class="dv">10</span><span class="dt">px</span> <span class="dv">0</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-114"><a aria-hidden="true" href="#cb2-114" tabindex="-1"></a>    <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-115"><a aria-hidden="true" href="#cb2-115" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">12</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-116"><a aria-hidden="true" href="#cb2-116" tabindex="-1"></a>    <span class="kw">border-top</span><span class="ch">:</span> <span class="dv">dashed</span> <span class="dv">1</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.5</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-117"><a aria-hidden="true" href="#cb2-117" tabindex="-1"></a>    <span class="kw">border-bottom</span><span class="ch">:</span> <span class="dv">dashed</span> <span class="dv">1</span><span class="dt">px</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.5</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-118"><a aria-hidden="true" href="#cb2-118" tabindex="-1"></a>}</span>
-<span id="cb2-119"><a aria-hidden="true" href="#cb2-119" tabindex="-1"></a><span class="fu">.refund-content</span> {</span>
-<span id="cb2-120"><a aria-hidden="true" href="#cb2-120" tabindex="-1"></a>    <span class="kw">display</span><span class="ch">:</span> <span class="dv">flex</span><span class="op">;</span></span>
-<span id="cb2-121"><a aria-hidden="true" href="#cb2-121" tabindex="-1"></a>    <span class="kw">flex-direction</span><span class="ch">:</span> <span class="dv">row</span><span class="op">;</span></span>
-<span id="cb2-122"><a aria-hidden="true" href="#cb2-122" tabindex="-1"></a>    <span class="kw">justify-content</span><span class="ch">:</span> <span class="dv">space-between</span><span class="op">;</span></span>
-<span id="cb2-123"><a aria-hidden="true" href="#cb2-123" tabindex="-1"></a>    <span class="kw">align-items</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
-<span id="cb2-124"><a aria-hidden="true" href="#cb2-124" tabindex="-1"></a>    <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-125"><a aria-hidden="true" href="#cb2-125" tabindex="-1"></a>}</span>
-<span id="cb2-126"><a aria-hidden="true" href="#cb2-126" tabindex="-1"></a><span class="fu">.refund-item</span> {</span>
-<span id="cb2-127"><a aria-hidden="true" href="#cb2-127" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">12</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-128"><a aria-hidden="true" href="#cb2-128" tabindex="-1"></a>    <span class="kw">line-height</span><span class="ch">:</span> <span class="dv">24</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-129"><a aria-hidden="true" href="#cb2-129" tabindex="-1"></a>}</span>
-<span id="cb2-130"><a aria-hidden="true" href="#cb2-130" tabindex="-1"></a><span class="fu">.content-name</span> {</span>
-<span id="cb2-131"><a aria-hidden="true" href="#cb2-131" tabindex="-1"></a>    <span class="kw">width</span><span class="ch">:</span> <span class="dv">70</span><span class="dt">%</span><span class="op">;</span></span>
-<span id="cb2-132"><a aria-hidden="true" href="#cb2-132" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-133"><a aria-hidden="true" href="#cb2-133" tabindex="-1"></a>}</span>
-<span id="cb2-134"><a aria-hidden="true" href="#cb2-134" tabindex="-1"></a><span class="fu">.content-amount</span> {</span>
-<span id="cb2-135"><a aria-hidden="true" href="#cb2-135" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-136"><a aria-hidden="true" href="#cb2-136" tabindex="-1"></a>}</span>
-<span id="cb2-137"><a aria-hidden="true" href="#cb2-137" tabindex="-1"></a><span class="fu">.welcomeMessage</span> {</span>
-<span id="cb2-138"><a aria-hidden="true" href="#cb2-138" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">14</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-139"><a aria-hidden="true" href="#cb2-139" tabindex="-1"></a>    <span class="kw">padding</span><span class="ch">:</span> <span class="dv">16</span><span class="dt">px</span> <span class="dv">0</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-140"><a aria-hidden="true" href="#cb2-140" tabindex="-1"></a>    <span class="kw">border-top</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">px</span> <span class="dv">dashed</span> <span class="fu">rgba(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0.5</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb2-141"><a aria-hidden="true" href="#cb2-141" tabindex="-1"></a>}</span>
-<span id="cb2-142"><a aria-hidden="true" href="#cb2-142" tabindex="-1"></a><span class="fu">.block</span> {</span>
-<span id="cb2-143"><a aria-hidden="true" href="#cb2-143" tabindex="-1"></a>    <span class="kw">padding</span><span class="ch">:</span> <span class="dv">5</span><span class="dt">px</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb2-144"><a aria-hidden="true" href="#cb2-144" tabindex="-1"></a>    <span class="kw">border-bottom</span><span class="ch">:</span> <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#dedede</span><span class="op">;</span></span>
-<span id="cb2-145"><a aria-hidden="true" href="#cb2-145" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">12</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-146"><a aria-hidden="true" href="#cb2-146" tabindex="-1"></a>}</span>
-<span id="cb2-147"><a aria-hidden="true" href="#cb2-147" tabindex="-1"></a><span class="fu">.block</span><span class="in">:last-child</span> {</span>
-<span id="cb2-148"><a aria-hidden="true" href="#cb2-148" tabindex="-1"></a>    <span class="kw">border-bottom</span><span class="ch">:</span> <span class="dv">none</span><span class="op">;</span></span>
-<span id="cb2-149"><a aria-hidden="true" href="#cb2-149" tabindex="-1"></a>}</span>
-<span id="cb2-150"><a aria-hidden="true" href="#cb2-150" tabindex="-1"></a><span class="fu">.left</span> {</span>
-<span id="cb2-151"><a aria-hidden="true" href="#cb2-151" tabindex="-1"></a>    <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">left</span><span class="op">;</span></span>
-<span id="cb2-152"><a aria-hidden="true" href="#cb2-152" tabindex="-1"></a>}</span>
-<span id="cb2-153"><a aria-hidden="true" href="#cb2-153" tabindex="-1"></a><span class="fu">.center</span> {</span>
-<span id="cb2-154"><a aria-hidden="true" href="#cb2-154" tabindex="-1"></a>    <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">center</span><span class="op">;</span></span>
-<span id="cb2-155"><a aria-hidden="true" href="#cb2-155" tabindex="-1"></a>}</span>
-<span id="cb2-156"><a aria-hidden="true" href="#cb2-156" tabindex="-1"></a><span class="fu">.right</span> {</span>
-<span id="cb2-157"><a aria-hidden="true" href="#cb2-157" tabindex="-1"></a>    <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">right</span><span class="op">;</span></span>
-<span id="cb2-158"><a aria-hidden="true" href="#cb2-158" tabindex="-1"></a>}</span>
-<span id="cb2-159"><a aria-hidden="true" href="#cb2-159" tabindex="-1"></a>th<span class="op">,</span></span>
-<span id="cb2-160"><a aria-hidden="true" href="#cb2-160" tabindex="-1"></a>td {</span>
-<span id="cb2-161"><a aria-hidden="true" href="#cb2-161" tabindex="-1"></a>    <span class="kw">text-align</span><span class="ch">:</span> <span class="dv">left</span><span class="op">;</span></span>
-<span id="cb2-162"><a aria-hidden="true" href="#cb2-162" tabindex="-1"></a>    <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">8</span><span class="dt">px</span><span class="op">;</span></span>
-<span id="cb2-163"><a aria-hidden="true" href="#cb2-163" tabindex="-1"></a>}</span></code></pre></div>
-<p>3、开始打印</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="fu">printTickets</span>(){</span>
-<span id="cb3-2"><a aria-hidden="true" href="#cb3-2" tabindex="-1"></a>    <span class="kw">var</span> el <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementsByClassName</span>(<span class="st">"printView"</span>)<span class="op">;</span></span>
-<span id="cb3-3"><a aria-hidden="true" href="#cb3-3" tabindex="-1"></a>    <span class="kw">var</span> iframe <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"IFRAME"</span>)<span class="op">;</span></span>
-<span id="cb3-4"><a aria-hidden="true" href="#cb3-4" tabindex="-1"></a>    <span class="kw">var</span> doc <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
-<span id="cb3-5"><a aria-hidden="true" href="#cb3-5" tabindex="-1"></a>    iframe<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">"id"</span><span class="op">,</span> <span class="st">"cashBillPrintFrame"</span>)<span class="op">;</span></span>
-<span id="cb3-6"><a aria-hidden="true" href="#cb3-6" tabindex="-1"></a>    iframe<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">"style"</span><span class="op">,</span> <span class="st">"position:absolute;width:0px;height:0px;left:-500px;top:-500px;"</span>)<span class="op">;</span></span>
-<span id="cb3-7"><a aria-hidden="true" href="#cb3-7" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">.</span><span class="fu">appendChild</span>(iframe)<span class="op">;</span></span>
-<span id="cb3-8"><a aria-hidden="true" href="#cb3-8" tabindex="-1"></a>    doc <span class="op">=</span> iframe<span class="op">.</span><span class="at">contentWindow</span><span class="op">.</span><span class="at">document</span><span class="op">;</span></span>
-<span id="cb3-9"><a aria-hidden="true" href="#cb3-9" tabindex="-1"></a>    <span class="kw">var</span> printView<span class="op">=</span> iframe<span class="op">.</span><span class="at">contentWindow</span><span class="op">.</span><span class="at">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"div"</span>)<span class="op">;</span></span>
-<span id="cb3-10"><a aria-hidden="true" href="#cb3-10" tabindex="-1"></a>    printView<span class="op">.</span><span class="at">innerHTML</span><span class="op">=</span><span class="vs">`&lt;div class="detail-content content_wrap pl30"&gt;</span><span class="sc">${</span>el[<span class="dv">0</span>]<span class="op">.</span><span class="at">innerHTML</span><span class="sc">}</span><span class="vs">&lt;/div&gt;`</span><span class="op">;</span></span>
-<span id="cb3-11"><a aria-hidden="true" href="#cb3-11" tabindex="-1"></a>    iframe<span class="op">.</span><span class="at">contentWindow</span><span class="op">.</span><span class="at">document</span><span class="op">.</span><span class="at">body</span><span class="op">.</span><span class="fu">appendChild</span>(printView)<span class="op">;</span></span>
-<span id="cb3-12"><a aria-hidden="true" href="#cb3-12" tabindex="-1"></a>        <span class="co">// 这里的样式，与css中保持一致</span></span>
-<span id="cb3-13"><a aria-hidden="true" href="#cb3-13" tabindex="-1"></a>    <span class="kw">var</span> cssString <span class="op">=</span><span class="vs">`</span></span>
-<span id="cb3-14"><a aria-hidden="true" href="#cb3-14" tabindex="-1"></a><span class="vs">                .printView {</span></span>
-<span id="cb3-15"><a aria-hidden="true" href="#cb3-15" tabindex="-1"></a><span class="vs">                    padding: 0 30px;</span></span>
-<span id="cb3-16"><a aria-hidden="true" href="#cb3-16" tabindex="-1"></a><span class="vs">                    overflow-y: auto;</span></span>
-<span id="cb3-17"><a aria-hidden="true" href="#cb3-17" tabindex="-1"></a><span class="vs">                    margin: 0 auto;</span></span>
-<span id="cb3-18"><a aria-hidden="true" href="#cb3-18" tabindex="-1"></a><span class="vs">                    padding: 0 16px;</span></span>
-<span id="cb3-19"><a aria-hidden="true" href="#cb3-19" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-20"><a aria-hidden="true" href="#cb3-20" tabindex="-1"></a><span class="vs">                .header {</span></span>
-<span id="cb3-21"><a aria-hidden="true" href="#cb3-21" tabindex="-1"></a><span class="vs">                    font-size: 14px;</span></span>
-<span id="cb3-22"><a aria-hidden="true" href="#cb3-22" tabindex="-1"></a><span class="vs">                    text-align: center;</span></span>
-<span id="cb3-23"><a aria-hidden="true" href="#cb3-23" tabindex="-1"></a><span class="vs">                    padding: 10px 0;</span></span>
-<span id="cb3-24"><a aria-hidden="true" href="#cb3-24" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-25"><a aria-hidden="true" href="#cb3-25" tabindex="-1"></a><span class="vs">                .compName {</span></span>
-<span id="cb3-26"><a aria-hidden="true" href="#cb3-26" tabindex="-1"></a><span class="vs">                    font-size: 16px;</span></span>
-<span id="cb3-27"><a aria-hidden="true" href="#cb3-27" tabindex="-1"></a><span class="vs">                    font-weight: 600;</span></span>
-<span id="cb3-28"><a aria-hidden="true" href="#cb3-28" tabindex="-1"></a><span class="vs">                    color: rgba(0, 0, 0, 0.85);</span></span>
-<span id="cb3-29"><a aria-hidden="true" href="#cb3-29" tabindex="-1"></a><span class="vs">                    line-height: 22px;</span></span>
-<span id="cb3-30"><a aria-hidden="true" href="#cb3-30" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-31"><a aria-hidden="true" href="#cb3-31" tabindex="-1"></a><span class="vs">                .printView::-webkit-scrollbar {</span></span>
-<span id="cb3-32"><a aria-hidden="true" href="#cb3-32" tabindex="-1"></a><span class="vs">                    width: 4px;</span></span>
-<span id="cb3-33"><a aria-hidden="true" href="#cb3-33" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-34"><a aria-hidden="true" href="#cb3-34" tabindex="-1"></a><span class="vs">                .base {</span></span>
-<span id="cb3-35"><a aria-hidden="true" href="#cb3-35" tabindex="-1"></a><span class="vs">                    border-bottom: 1px dashed rgba(0, 0, 0, 0.8);</span></span>
-<span id="cb3-36"><a aria-hidden="true" href="#cb3-36" tabindex="-1"></a><span class="vs">                    margin-bottom: 3px;</span></span>
-<span id="cb3-37"><a aria-hidden="true" href="#cb3-37" tabindex="-1"></a><span class="vs">                    padding: 12px 0px;</span></span>
-<span id="cb3-38"><a aria-hidden="true" href="#cb3-38" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-39"><a aria-hidden="true" href="#cb3-39" tabindex="-1"></a><span class="vs">                .print-item {</span></span>
-<span id="cb3-40"><a aria-hidden="true" href="#cb3-40" tabindex="-1"></a><span class="vs">                    margin-bottom: 4px;</span></span>
-<span id="cb3-41"><a aria-hidden="true" href="#cb3-41" tabindex="-1"></a><span class="vs">                    font-size: 12px;</span></span>
-<span id="cb3-42"><a aria-hidden="true" href="#cb3-42" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-43"><a aria-hidden="true" href="#cb3-43" tabindex="-1"></a><span class="vs">                .remarks {</span></span>
-<span id="cb3-44"><a aria-hidden="true" href="#cb3-44" tabindex="-1"></a><span class="vs">                    padding-top: 46px;</span></span>
-<span id="cb3-45"><a aria-hidden="true" href="#cb3-45" tabindex="-1"></a><span class="vs">                    margin-bottom: 3px;</span></span>
-<span id="cb3-46"><a aria-hidden="true" href="#cb3-46" tabindex="-1"></a><span class="vs">                    border-bottom: 1px dashed rgba(0, 0, 0, 0.8);</span></span>
-<span id="cb3-47"><a aria-hidden="true" href="#cb3-47" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-48"><a aria-hidden="true" href="#cb3-48" tabindex="-1"></a><span class="vs">                .memberInfo {</span></span>
-<span id="cb3-49"><a aria-hidden="true" href="#cb3-49" tabindex="-1"></a><span class="vs">                    border-bottom: 1px solid rgba(0, 0, 0, 0.8);</span></span>
-<span id="cb3-50"><a aria-hidden="true" href="#cb3-50" tabindex="-1"></a><span class="vs">                    border-top: 1px dashed rgba(0, 0, 0, 0.5);</span></span>
-<span id="cb3-51"><a aria-hidden="true" href="#cb3-51" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-52"><a aria-hidden="true" href="#cb3-52" tabindex="-1"></a><span class="vs">                .body-section {</span></span>
-<span id="cb3-53"><a aria-hidden="true" href="#cb3-53" tabindex="-1"></a><span class="vs">                    padding: 12px 0px;</span></span>
-<span id="cb3-54"><a aria-hidden="true" href="#cb3-54" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-55"><a aria-hidden="true" href="#cb3-55" tabindex="-1"></a><span class="vs">                .print-title {</span></span>
-<span id="cb3-56"><a aria-hidden="true" href="#cb3-56" tabindex="-1"></a><span class="vs">                    font-size: 14px;</span></span>
-<span id="cb3-57"><a aria-hidden="true" href="#cb3-57" tabindex="-1"></a><span class="vs">                    font-weight: 600;</span></span>
-<span id="cb3-58"><a aria-hidden="true" href="#cb3-58" tabindex="-1"></a><span class="vs">                    color: rgba(0, 0, 0, 0.85);</span></span>
-<span id="cb3-59"><a aria-hidden="true" href="#cb3-59" tabindex="-1"></a><span class="vs">                    line-height: 10px;</span></span>
-<span id="cb3-60"><a aria-hidden="true" href="#cb3-60" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-61"><a aria-hidden="true" href="#cb3-61" tabindex="-1"></a><span class="vs">                .equity-details {</span></span>
-<span id="cb3-62"><a aria-hidden="true" href="#cb3-62" tabindex="-1"></a><span class="vs">                    border-bottom: 1px solid rgba(0, 0, 0, 0.8);</span></span>
-<span id="cb3-63"><a aria-hidden="true" href="#cb3-63" tabindex="-1"></a><span class="vs">                    padding: 12px 0px;</span></span>
-<span id="cb3-64"><a aria-hidden="true" href="#cb3-64" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-65"><a aria-hidden="true" href="#cb3-65" tabindex="-1"></a><span class="vs">                .print-title {</span></span>
-<span id="cb3-66"><a aria-hidden="true" href="#cb3-66" tabindex="-1"></a><span class="vs">                    font-size: 14px;</span></span>
-<span id="cb3-67"><a aria-hidden="true" href="#cb3-67" tabindex="-1"></a><span class="vs">                    font-weight: 600;</span></span>
-<span id="cb3-68"><a aria-hidden="true" href="#cb3-68" tabindex="-1"></a><span class="vs">                    color: rgba(0, 0, 0, 0.85);</span></span>
-<span id="cb3-69"><a aria-hidden="true" href="#cb3-69" tabindex="-1"></a><span class="vs">                    line-height: 20px;</span></span>
-<span id="cb3-70"><a aria-hidden="true" href="#cb3-70" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-71"><a aria-hidden="true" href="#cb3-71" tabindex="-1"></a><span class="vs">                .total {</span></span>
-<span id="cb3-72"><a aria-hidden="true" href="#cb3-72" tabindex="-1"></a><span class="vs">                    font-size: 13px;</span></span>
-<span id="cb3-73"><a aria-hidden="true" href="#cb3-73" tabindex="-1"></a><span class="vs">                    font-weight: 400;</span></span>
-<span id="cb3-74"><a aria-hidden="true" href="#cb3-74" tabindex="-1"></a><span class="vs">                    margin-top: 10px;</span></span>
-<span id="cb3-75"><a aria-hidden="true" href="#cb3-75" tabindex="-1"></a><span class="vs">                    line-height: 20px;</span></span>
-<span id="cb3-76"><a aria-hidden="true" href="#cb3-76" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-77"><a aria-hidden="true" href="#cb3-77" tabindex="-1"></a><span class="vs">                .details-header {</span></span>
-<span id="cb3-78"><a aria-hidden="true" href="#cb3-78" tabindex="-1"></a><span class="vs">                    display: flex;</span></span>
-<span id="cb3-79"><a aria-hidden="true" href="#cb3-79" tabindex="-1"></a><span class="vs">                    justify-content: space-between;</span></span>
-<span id="cb3-80"><a aria-hidden="true" href="#cb3-80" tabindex="-1"></a><span class="vs">                    align-items: center;</span></span>
-<span id="cb3-81"><a aria-hidden="true" href="#cb3-81" tabindex="-1"></a><span class="vs">                    margin: 5px 0px;</span></span>
-<span id="cb3-82"><a aria-hidden="true" href="#cb3-82" tabindex="-1"></a><span class="vs">                    font-size: 12px;</span></span>
-<span id="cb3-83"><a aria-hidden="true" href="#cb3-83" tabindex="-1"></a><span class="vs">                    line-height: 20px;</span></span>
-<span id="cb3-84"><a aria-hidden="true" href="#cb3-84" tabindex="-1"></a><span class="vs">                    border-top: dashed 1px rgba(0, 0, 0, 0.5);</span></span>
-<span id="cb3-85"><a aria-hidden="true" href="#cb3-85" tabindex="-1"></a><span class="vs">                    border-bottom: dashed 1px rgba(0, 0, 0, 0.5);</span></span>
-<span id="cb3-86"><a aria-hidden="true" href="#cb3-86" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-87"><a aria-hidden="true" href="#cb3-87" tabindex="-1"></a><span class="vs">                .details-item {</span></span>
-<span id="cb3-88"><a aria-hidden="true" href="#cb3-88" tabindex="-1"></a><span class="vs">                    line-height: 20px;</span></span>
-<span id="cb3-89"><a aria-hidden="true" href="#cb3-89" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-90"><a aria-hidden="true" href="#cb3-90" tabindex="-1"></a><span class="vs">                .body-section {</span></span>
-<span id="cb3-91"><a aria-hidden="true" href="#cb3-91" tabindex="-1"></a><span class="vs">                    padding: 12px 0px;</span></span>
-<span id="cb3-92"><a aria-hidden="true" href="#cb3-92" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-93"><a aria-hidden="true" href="#cb3-93" tabindex="-1"></a><span class="vs">                .print-title {</span></span>
-<span id="cb3-94"><a aria-hidden="true" href="#cb3-94" tabindex="-1"></a><span class="vs">                    font-size: 14px;</span></span>
-<span id="cb3-95"><a aria-hidden="true" href="#cb3-95" tabindex="-1"></a><span class="vs">                    font-weight: 600;</span></span>
-<span id="cb3-96"><a aria-hidden="true" href="#cb3-96" tabindex="-1"></a><span class="vs">                    color: rgba(0, 0, 0, 0.85);</span></span>
-<span id="cb3-97"><a aria-hidden="true" href="#cb3-97" tabindex="-1"></a><span class="vs">                    line-height: 10px;</span></span>
-<span id="cb3-98"><a aria-hidden="true" href="#cb3-98" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-99"><a aria-hidden="true" href="#cb3-99" tabindex="-1"></a><span class="vs">                .table {</span></span>
-<span id="cb3-100"><a aria-hidden="true" href="#cb3-100" tabindex="-1"></a><span class="vs">                    width: 100%;</span></span>
-<span id="cb3-101"><a aria-hidden="true" href="#cb3-101" tabindex="-1"></a><span class="vs">                    line-height: 1.25;</span></span>
-<span id="cb3-102"><a aria-hidden="true" href="#cb3-102" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-103"><a aria-hidden="true" href="#cb3-103" tabindex="-1"></a><span class="vs">                .table-tr {</span></span>
-<span id="cb3-104"><a aria-hidden="true" href="#cb3-104" tabindex="-1"></a><span class="vs">                    display: flex;</span></span>
-<span id="cb3-105"><a aria-hidden="true" href="#cb3-105" tabindex="-1"></a><span class="vs">                    justify-content: space-between;</span></span>
-<span id="cb3-106"><a aria-hidden="true" href="#cb3-106" tabindex="-1"></a><span class="vs">                    align-items: center;</span></span>
-<span id="cb3-107"><a aria-hidden="true" href="#cb3-107" tabindex="-1"></a><span class="vs">                    flex-direction: row;</span></span>
-<span id="cb3-108"><a aria-hidden="true" href="#cb3-108" tabindex="-1"></a><span class="vs">                    line-height: 2;</span></span>
-<span id="cb3-109"><a aria-hidden="true" href="#cb3-109" tabindex="-1"></a><span class="vs">                    font-size: 12px;</span></span>
-<span id="cb3-110"><a aria-hidden="true" href="#cb3-110" tabindex="-1"></a><span class="vs">                    border-top: dashed 1px rgba(0, 0, 0, 0.5);</span></span>
-<span id="cb3-111"><a aria-hidden="true" href="#cb3-111" tabindex="-1"></a><span class="vs">                    border-bottom: dashed 1px rgba(0, 0, 0, 0.5);</span></span>
-<span id="cb3-112"><a aria-hidden="true" href="#cb3-112" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-113"><a aria-hidden="true" href="#cb3-113" tabindex="-1"></a><span class="vs">                .right-name {</span></span>
-<span id="cb3-114"><a aria-hidden="true" href="#cb3-114" tabindex="-1"></a><span class="vs">                    font-size: 13px;</span></span>
-<span id="cb3-115"><a aria-hidden="true" href="#cb3-115" tabindex="-1"></a><span class="vs">                    font-weight: 400;</span></span>
-<span id="cb3-116"><a aria-hidden="true" href="#cb3-116" tabindex="-1"></a><span class="vs">                    color: rgba(0, 0, 0, 0.85);</span></span>
-<span id="cb3-117"><a aria-hidden="true" href="#cb3-117" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-118"><a aria-hidden="true" href="#cb3-118" tabindex="-1"></a><span class="vs">                .refund-header {</span></span>
-<span id="cb3-119"><a aria-hidden="true" href="#cb3-119" tabindex="-1"></a><span class="vs">                    display: flex;</span></span>
-<span id="cb3-120"><a aria-hidden="true" href="#cb3-120" tabindex="-1"></a><span class="vs">                    justify-content: space-between;</span></span>
-<span id="cb3-121"><a aria-hidden="true" href="#cb3-121" tabindex="-1"></a><span class="vs">                    align-items: center;</span></span>
-<span id="cb3-122"><a aria-hidden="true" href="#cb3-122" tabindex="-1"></a><span class="vs">                    margin: 10px 0px;</span></span>
-<span id="cb3-123"><a aria-hidden="true" href="#cb3-123" tabindex="-1"></a><span class="vs">                    line-height: 20px;</span></span>
-<span id="cb3-124"><a aria-hidden="true" href="#cb3-124" tabindex="-1"></a><span class="vs">                    font-size: 12px;</span></span>
-<span id="cb3-125"><a aria-hidden="true" href="#cb3-125" tabindex="-1"></a><span class="vs">                    border-top: dashed 1px rgba(0, 0, 0, 0.5);</span></span>
-<span id="cb3-126"><a aria-hidden="true" href="#cb3-126" tabindex="-1"></a><span class="vs">                    border-bottom: dashed 1px rgba(0, 0, 0, 0.5);</span></span>
-<span id="cb3-127"><a aria-hidden="true" href="#cb3-127" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-128"><a aria-hidden="true" href="#cb3-128" tabindex="-1"></a><span class="vs">                .refund-content {</span></span>
-<span id="cb3-129"><a aria-hidden="true" href="#cb3-129" tabindex="-1"></a><span class="vs">                    display: flex;</span></span>
-<span id="cb3-130"><a aria-hidden="true" href="#cb3-130" tabindex="-1"></a><span class="vs">                    flex-direction: row;</span></span>
-<span id="cb3-131"><a aria-hidden="true" href="#cb3-131" tabindex="-1"></a><span class="vs">                    justify-content: space-between;</span></span>
-<span id="cb3-132"><a aria-hidden="true" href="#cb3-132" tabindex="-1"></a><span class="vs">                    align-items: center;</span></span>
-<span id="cb3-133"><a aria-hidden="true" href="#cb3-133" tabindex="-1"></a><span class="vs">                    line-height: 20px;</span></span>
-<span id="cb3-134"><a aria-hidden="true" href="#cb3-134" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-135"><a aria-hidden="true" href="#cb3-135" tabindex="-1"></a><span class="vs">                .refund-item {</span></span>
-<span id="cb3-136"><a aria-hidden="true" href="#cb3-136" tabindex="-1"></a><span class="vs">                    font-size: 12px;</span></span>
-<span id="cb3-137"><a aria-hidden="true" href="#cb3-137" tabindex="-1"></a><span class="vs">                    line-height: 24px;</span></span>
-<span id="cb3-138"><a aria-hidden="true" href="#cb3-138" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-139"><a aria-hidden="true" href="#cb3-139" tabindex="-1"></a><span class="vs">                .content-name{</span></span>
-<span id="cb3-140"><a aria-hidden="true" href="#cb3-140" tabindex="-1"></a><span class="vs">                    width: 70%;</span></span>
-<span id="cb3-141"><a aria-hidden="true" href="#cb3-141" tabindex="-1"></a><span class="vs">                    font-size: 10px;</span></span>
-<span id="cb3-142"><a aria-hidden="true" href="#cb3-142" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-143"><a aria-hidden="true" href="#cb3-143" tabindex="-1"></a><span class="vs">                .content-amount{</span></span>
-<span id="cb3-144"><a aria-hidden="true" href="#cb3-144" tabindex="-1"></a><span class="vs">                    font-size: 10px;</span></span>
-<span id="cb3-145"><a aria-hidden="true" href="#cb3-145" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-146"><a aria-hidden="true" href="#cb3-146" tabindex="-1"></a><span class="vs">                .welcomeMessage {</span></span>
-<span id="cb3-147"><a aria-hidden="true" href="#cb3-147" tabindex="-1"></a><span class="vs">                    font-size: 14px;</span></span>
-<span id="cb3-148"><a aria-hidden="true" href="#cb3-148" tabindex="-1"></a><span class="vs">                    padding: 16px 0px;</span></span>
-<span id="cb3-149"><a aria-hidden="true" href="#cb3-149" tabindex="-1"></a><span class="vs">                    border-top: 1px dashed rgba(0, 0, 0, 0.5);</span></span>
-<span id="cb3-150"><a aria-hidden="true" href="#cb3-150" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-151"><a aria-hidden="true" href="#cb3-151" tabindex="-1"></a><span class="vs">                .block {</span></span>
-<span id="cb3-152"><a aria-hidden="true" href="#cb3-152" tabindex="-1"></a><span class="vs">                    padding: 5px 0;</span></span>
-<span id="cb3-153"><a aria-hidden="true" href="#cb3-153" tabindex="-1"></a><span class="vs">                    border-bottom: 1px solid #dedede;</span></span>
-<span id="cb3-154"><a aria-hidden="true" href="#cb3-154" tabindex="-1"></a><span class="vs">                    font-size: 12px;</span></span>
-<span id="cb3-155"><a aria-hidden="true" href="#cb3-155" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-156"><a aria-hidden="true" href="#cb3-156" tabindex="-1"></a><span class="vs">                .block:last-child {</span></span>
-<span id="cb3-157"><a aria-hidden="true" href="#cb3-157" tabindex="-1"></a><span class="vs">                    border-bottom: none;</span></span>
-<span id="cb3-158"><a aria-hidden="true" href="#cb3-158" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-159"><a aria-hidden="true" href="#cb3-159" tabindex="-1"></a><span class="vs">                .left {</span></span>
-<span id="cb3-160"><a aria-hidden="true" href="#cb3-160" tabindex="-1"></a><span class="vs">                    text-align: left;</span></span>
-<span id="cb3-161"><a aria-hidden="true" href="#cb3-161" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-162"><a aria-hidden="true" href="#cb3-162" tabindex="-1"></a><span class="vs">                .center {</span></span>
-<span id="cb3-163"><a aria-hidden="true" href="#cb3-163" tabindex="-1"></a><span class="vs">                    text-align: center;</span></span>
-<span id="cb3-164"><a aria-hidden="true" href="#cb3-164" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-165"><a aria-hidden="true" href="#cb3-165" tabindex="-1"></a><span class="vs">                .right {</span></span>
-<span id="cb3-166"><a aria-hidden="true" href="#cb3-166" tabindex="-1"></a><span class="vs">                    text-align: right;</span></span>
-<span id="cb3-167"><a aria-hidden="true" href="#cb3-167" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-168"><a aria-hidden="true" href="#cb3-168" tabindex="-1"></a><span class="vs">                th,td {</span></span>
-<span id="cb3-169"><a aria-hidden="true" href="#cb3-169" tabindex="-1"></a><span class="vs">                    text-align: left;</span></span>
-<span id="cb3-170"><a aria-hidden="true" href="#cb3-170" tabindex="-1"></a><span class="vs">                    font-size: 8px;</span></span>
-<span id="cb3-171"><a aria-hidden="true" href="#cb3-171" tabindex="-1"></a><span class="vs">                }</span></span>
-<span id="cb3-172"><a aria-hidden="true" href="#cb3-172" tabindex="-1"></a><span class="vs">    `</span><span class="op">;</span></span>
-<span id="cb3-173"><a aria-hidden="true" href="#cb3-173" tabindex="-1"></a>    <span class="kw">var</span> style<span class="op">=</span>iframe<span class="op">.</span><span class="at">contentWindow</span><span class="op">.</span><span class="at">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"style"</span>)<span class="op">;</span></span>
-<span id="cb3-174"><a aria-hidden="true" href="#cb3-174" tabindex="-1"></a>    style<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">"type"</span><span class="op">,</span> <span class="st">"text/css"</span>)<span class="op">;</span></span>
-<span id="cb3-175"><a aria-hidden="true" href="#cb3-175" tabindex="-1"></a>    <span class="cf">if</span>(style<span class="op">.</span><span class="at">styleSheet</span>){<span class="co">// IE</span></span>
-<span id="cb3-176"><a aria-hidden="true" href="#cb3-176" tabindex="-1"></a>        style<span class="op">.</span><span class="at">styleSheet</span><span class="op">.</span><span class="at">cssText</span> <span class="op">=</span> cssString<span class="op">;</span></span>
-<span id="cb3-177"><a aria-hidden="true" href="#cb3-177" tabindex="-1"></a>    } <span class="cf">else</span> {<span class="co">// w3c</span></span>
-<span id="cb3-178"><a aria-hidden="true" href="#cb3-178" tabindex="-1"></a>        <span class="kw">var</span> cssText <span class="op">=</span> iframe<span class="op">.</span><span class="at">contentWindow</span><span class="op">.</span><span class="at">document</span><span class="op">.</span><span class="fu">createTextNode</span>(cssString)<span class="op">;</span></span>
-<span id="cb3-179"><a aria-hidden="true" href="#cb3-179" tabindex="-1"></a>        style<span class="op">.</span><span class="fu">appendChild</span>(cssText)<span class="op">;</span></span>
-<span id="cb3-180"><a aria-hidden="true" href="#cb3-180" tabindex="-1"></a>    }</span>
-<span id="cb3-181"><a aria-hidden="true" href="#cb3-181" tabindex="-1"></a>    <span class="kw">var</span> script <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">"script"</span>)<span class="op">;</span></span>
-<span id="cb3-182"><a aria-hidden="true" href="#cb3-182" tabindex="-1"></a>    script<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="st">"function printPage(){window.print();}"</span><span class="op">;</span></span>
-<span id="cb3-183"><a aria-hidden="true" href="#cb3-183" tabindex="-1"></a>    <span class="kw">var</span> heads <span class="op">=</span> iframe<span class="op">.</span><span class="at">contentWindow</span><span class="op">.</span><span class="at">document</span><span class="op">.</span><span class="fu">getElementsByTagName</span>(<span class="st">"head"</span>)<span class="op">;</span></span>
-<span id="cb3-184"><a aria-hidden="true" href="#cb3-184" tabindex="-1"></a>    <span class="cf">if</span>(heads<span class="op">.</span><span class="at">length</span>) {</span>
-<span id="cb3-185"><a aria-hidden="true" href="#cb3-185" tabindex="-1"></a>        heads[<span class="dv">0</span>]<span class="op">.</span><span class="fu">appendChild</span>(script)<span class="op">;</span></span>
-<span id="cb3-186"><a aria-hidden="true" href="#cb3-186" tabindex="-1"></a>        heads[<span class="dv">0</span>]<span class="op">.</span><span class="fu">appendChild</span>(style)<span class="op">;</span></span>
-<span id="cb3-187"><a aria-hidden="true" href="#cb3-187" tabindex="-1"></a>    }<span class="cf">else</span>{</span>
-<span id="cb3-188"><a aria-hidden="true" href="#cb3-188" tabindex="-1"></a>        iframe<span class="op">.</span><span class="at">contentWindow</span><span class="op">.</span><span class="at">document</span><span class="op">.</span><span class="at">documentElement</span><span class="op">.</span><span class="fu">appendChild</span>(script)<span class="op">;</span></span>
-<span id="cb3-189"><a aria-hidden="true" href="#cb3-189" tabindex="-1"></a>        iframe<span class="op">.</span><span class="at">contentWindow</span><span class="op">.</span><span class="at">document</span><span class="op">.</span><span class="at">documentElement</span><span class="op">.</span><span class="fu">appendChild</span>(style)<span class="op">;</span></span>
-<span id="cb3-190"><a aria-hidden="true" href="#cb3-190" tabindex="-1"></a>    }</span>
-<span id="cb3-191"><a aria-hidden="true" href="#cb3-191" tabindex="-1"></a>    <span class="kw">let</span> that <span class="op">=</span> <span class="kw">this</span><span class="op">;</span></span>
-<span id="cb3-192"><a aria-hidden="true" href="#cb3-192" tabindex="-1"></a>    <span class="kw">function</span> <span class="fu">printIframe</span>(id) {</span>
-<span id="cb3-193"><a aria-hidden="true" href="#cb3-193" tabindex="-1"></a>        <span class="kw">let</span> iframe <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="at">frames</span> <span class="op">?</span> <span class="bu">document</span><span class="op">.</span><span class="at">frames</span>[id] <span class="op">:</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(id)<span class="op">;</span></span>
-<span id="cb3-194"><a aria-hidden="true" href="#cb3-194" tabindex="-1"></a>        <span class="kw">let</span> ifWin <span class="op">=</span> iframe<span class="op">.</span><span class="at">contentWindow</span> <span class="op">||</span> iframe<span class="op">;</span></span>
-<span id="cb3-195"><a aria-hidden="true" href="#cb3-195" tabindex="-1"></a>        iframe<span class="op">.</span><span class="fu">focus</span>()<span class="op">;</span></span>
-<span id="cb3-196"><a aria-hidden="true" href="#cb3-196" tabindex="-1"></a>        ifWin<span class="op">.</span><span class="fu">printPage</span>()<span class="op">;</span></span>
-<span id="cb3-197"><a aria-hidden="true" href="#cb3-197" tabindex="-1"></a>        that<span class="op">.</span><span class="fu">$emit</span>(<span class="st">"close"</span>)<span class="op">;</span></span>
-<span id="cb3-198"><a aria-hidden="true" href="#cb3-198" tabindex="-1"></a>        <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">.</span><span class="fu">removeChild</span>(iframe)<span class="op">;</span></span>
-<span id="cb3-199"><a aria-hidden="true" href="#cb3-199" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
-<span id="cb3-200"><a aria-hidden="true" href="#cb3-200" tabindex="-1"></a>    }</span>
-<span id="cb3-201"><a aria-hidden="true" href="#cb3-201" tabindex="-1"></a>    <span class="fu">printIframe</span>(<span class="st">"cashBillPrintFrame"</span>)<span class="op">;</span></span>
-<span id="cb3-202"><a aria-hidden="true" href="#cb3-202" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">iframe</span> <span class="op">=</span> iframe<span class="op">;</span></span>
-<span id="cb3-203"><a aria-hidden="true" href="#cb3-203" tabindex="-1"></a>}</span></code></pre></div>
-      </article>
-    </div>
+    <main>
+      <h1>Juejin article moved</h1>
+      <p>This synced Juejin article now lives under the rebuilt post route.</p>
+      <a href="/en/posts/sync/2022-10-04-7150585427403997215/">Continue</a>
+    </main>
+    <script>
+      window.location.replace("/en/posts/sync/2022-10-04-7150585427403997215/");
+    </script>
   </body>
 </html>

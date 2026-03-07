@@ -1,129 +1,71 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>你可能不知道的大文件上传 | CocoonBreak</title>
-    <meta name="description" content="前言：大文件上传的普遍方案基本都是分片上传，如果把文件上传看做是一个不可分割的事务，那么分片的目标就是把一个大事务划分为一个个小事务； 1. BFF层(Backend for Frontend) BFF层 (Backend for Fron...">
-    <meta property="og:title" content="你可能不知道的大文件上传 | CocoonBreak">
-    <meta property="og:description" content="前言：大文件上传的普遍方案基本都是分片上传，如果把文件上传看做是一个不可分割的事务，那么分片的目标就是把一个大事务划分为一个个小事务； 1. BFF层(Backend for Frontend) BFF层 (Backend for Fron...">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2024-11-14-7437133940483866665/">
-    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
-    <link rel="icon" href="/img/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/custom/site.css">
-    <script defer src="/custom/site.js"></script>
-    <script defer src="/custom/live2d-loader.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content="0; url=/en/posts/sync/2024-11-14-7437133940483866665/" />
+    <title>Juejin article moved</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1020;
+        --panel: rgba(10, 18, 38, 0.88);
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #f6efe3;
+        --muted: #93a2bf;
+        --accent: #7ae7c7;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
+          linear-gradient(180deg, #0b1020 0%, #050813 100%);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        padding: 24px;
+      }
+      main {
+        width: min(640px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--panel);
+        padding: 32px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(28px, 4vw, 42px);
+      }
+      p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      a {
+        color: #08111e;
+        background: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    </style>
   </head>
   <body>
-    <div class="article-shell">
-      <nav class="insight-nav">
-        <a href="/">← 首页</a>
-        <a href="/insights/">同步文章</a>
-        <a href="https://juejin.cn/post/7437133940483866665" target="_blank" rel="noreferrer">掘金原文</a>
-      </nav>
-
-      <header class="article-hero" data-reveal>
-        <div class="article-meta">
-          <span>2024.11.14</span><span>前端</span><span>面试</span>
-        </div>
-        <h1>你可能不知道的大文件上传</h1>
-        <p class="article-intro">前言：大文件上传的普遍方案基本都是分片上传，如果把文件上传看做是一个不可分割的事务，那么分片的目标就是把一个大事务划分为一个个小事务； 1. BFF层(Backend for Frontend) BFF层 (Backend for Fron...</p>
-        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/7437133940483866665" target="_blank" rel="noreferrer">掘金原文</a>。</div>
-      </header>
-
-      <article class="prose" data-reveal>
-        <p><img alt="前端领秀-公众号.png" src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/0186dfbeae124339b81c1d4bd372d41e~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=RrtRdsMWwLMbBtJMKNOv2bOOYMk%3D"/></p>
-<ul>
-<li>前言：大文件上传的普遍方案基本都是分片上传，如果把文件上传看做是一个不可分割的事务，那么分片的目标就是把一个大事务划分为一个个小事务；</li>
-</ul>
-<h3 id="1-bff层backend-for-frontend">1. BFF层(Backend for Frontend)</h3>
-<ul>
-<li><p><code>BFF层</code>(Backend for
-Frontend)：后端为前端服务的层，我们通常把他叫做<code>中间层</code>，凡是上了一定规模的公司，基本上都会上中间层。因为他的业务已经足够复杂，他的数据规则出现了巨大的鸿沟。</p></li>
-<li><p>正在读文章的你，一定少不了跟后端吵架，前端想要的数据是这种格式，但是后端给你的数据是另外一种格式，你问他能不能改一下，后端说改不了，他的数据就是这种格式，你爱用不用。或者你要的数据要调好几个接口，才能请求完整，你问他能不能合在一起给你，后端继续说给不了。是因为后端懒，不愿意给你整吗？不排除这种情况，其实根本原因在于，后端的数据规格跟结构，跟前端就是不一样的。</p></li>
-<li><p>在很多中小型企业里面，后端的数据格式来自于它的存储格式，数据库里面怎么存的，数据结构就是怎么样子，反映的是<code>数据的存储</code>；而前端的数据格式，反映的是<code>UI的渲染</code>。这两种数据格式天生就不一致，如果是大型企业，反映的是业务格式，比如上了一些<code>DDD开发模型</code>。</p></li>
-<li><p>有了BFF层后，前端很清楚自己需要什么样的格式，因此就可以去后端服务器拿业务数据，比如要请求多次，在BFF层组装完成后，返回给前端最合适的数据格式。当然这只是中间层的一个左右，它还有很多作用。</p></li>
-</ul>
-<p><img alt="image.png" src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/482f2af306664191977dec20685122f2~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=4P09xzLoz%2BvasQNcSOIEhgra7eg%3D"/></p>
-<h3 id="2如何减少页面阻塞">2.如何减少页面阻塞？</h3>
-<p><code>分片上传</code>的第一个首要目标就是尽量避免<strong>相同的分片重复上传</strong>。服务器必须要能够识别来自各个客户端的上传请求。</p>
-<p><code>服务器如何识别哪些分片是相同的？</code></p>
-<ul>
-<li><p>首先需要对相同的下一个准确的定义：<code>文件内容一样即为相同</code>。</p></li>
-<li><p>对文件内容进行二进制对比是一个非常耗时的操作，于是可以选择基于内容的<code>hash</code>来进行对比。</p></li>
-<li><p>hash算法包括<code>MD5、SHA-1</code>，可以将文艺长度的数据转换为一个定长的数据，有个第三方组件库<a href="https://github.com/satazor/js-spark-md5">Spark-MD5</a></p></li>
-</ul>
-<p><img alt="image.png" src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/73bb7c5ef53a4609a54e76a4e43e935a~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=MI3ARG5bzhGfmvLzZfkYHus3tLU%3D"/></p>
-<p><code>客户端需要做两件事：</code></p>
-<ul>
-<li>1.对文件进行分片，并计算每个分片的hash值；</li>
-<li>2.根据所有分片的hash值，计算整个文件的hash值；
-而计算hash值是一件<code>CPU密集型</code>的操作，如果不加处理，将会导致长时间<code>阻塞主线程</code>；</li>
-</ul>
-<p><img alt="image.png" src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/0ab1759a8d8642f2b9ebd9f484addc25~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=NQtI6HMjw8BmQmQzR%2BNjR0CgQu4%3D"/></p>
-<p>为了解决这个问题，理想状态下，每次上传的大文件都是最新的，这样就无需等待整体hash的计算结果，直接上传分片就行，同时可以把分片操作使用<code>多线程+异步</code>的方式进行处理。</p>
-<p><img alt="image.png" src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/f57de906cac14045960da4f56dfc4b6f~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=OzuwVfkGmHQIFpMxj7074ynuaZs%3D"/></p>
-<p>第一次上传有了前几个分片之后，中断后继续上传，发现上一次上传的几个分片已经存在，直接快进到第4个分片，不管中断多少次，直到上传完成为止；</p>
-<p>这样做的好处是:<code>页面完全无阻塞，也无需等待整体haah即可启动上传</code></p>
-<ul>
-<li>对于新文件上传，可以缩短整体上传时间，消除页面阻塞；</li>
-<li>对于旧文件上传，可能会产生一些无效的请求，但这些请求仅传递的是hash，并不真实上传文件数据，所以对网络和服务器影响很小。</li>
-</ul>
-<h3 id="3前后端如何协调">3.前后端如何协调?</h3>
-<h5 id="31创建文件协议">3.1.创建文件协议</h5>
-<p>当客户端发送分片到服务端的时候，需要告知服务器分片属于哪一次文件上传，因此需要一个唯一标识来表示某一次文件上传。</p>
-<p><code>如何获取文件上传的标识？</code></p>
-<p><img alt="image.png" src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/499d48347c1047398030638af7804174~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=w5ILFaxl032Z0veb48jP131AuZ8%3D"/></p>
-<ul>
-<li><code>uploadToken</code>: 文件上传的唯一标识</li>
-<li><code>chunSize</code>: 分片大小(字节 )</li>
-</ul>
-<h5 id="32haah校验">3.2.haah校验</h5>
-<p>客户端需要校验单个分片或整个文件的hash，服务器需要告知客户端目前具体情况。</p>
-<p><img alt="image.png" src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/5c07eddad615454a9148b4349b5d74cf~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=XHK%2FFBdtEgwpx7BqoqArnI%2FfdjQ%3D"/></p>
-<ul>
-<li><code>Upload-Hash-Type</code>: 取值chunk或者file, 分别表示分片
-hash和文件整体hash。</li>
-<li><code>Upload-Hash</code>: 分片或文件的具体hash值。</li>
-<li><code>hahFile</code>:
-指示服务器是否已经存储了对应的分片或文件。</li>
-<li><code>res</code>:
-当校验文件hash时，指示该文件剩余那些没有上传。</li>
-</ul>
-<h5 id="33分片数据上传">3.3.分片数据上传</h5>
-<p>分片数据通过二进制上传到服务器，服务把分片保存起来； <img alt="image.png" src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/7e3f621036ad4747a0fe1ed953cca609~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=3jaYmv64Aop7qUYN%2F1l%2FOefknFM%3D"/></p>
-<h5 id="34分片合并">3.4.分片合并</h5>
-<p>所有分片全部上传后，通过该协议请求服务器完成合并。</p>
-<p><img alt="image.png" src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/979a2857cbf1431e92aed676ac50e92f~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=6R8ZUQb1rzh2O4DblrM04a0AmF0%3D"/></p>
-<ul>
-<li><code>Merge</code>：浏览器告诉服务器，已经上传完了，可以合并了。</li>
-<li><code>url</code>: 如果该文件已经完成上传，返回文件所在地址。</li>
-</ul>
-<h3 id="4如何保证分片不重复">4.如何保证分片不重复？</h3>
-<p>这里的重复指的是：不保存、不上传重复分片。这就必须要求分片
-<code>跨文件唯一</code>，并且 <code>永不删除</code></p>
-<p><img alt="image.png" src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/f07062fa78cd47a99f6b8c639fdb201c~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773328968&amp;x-signature=tguFXZoP5xivZBmNYsDNC%2FQleHQ%3D"/>
-也就是说：<strong>服务器并不保存合并之后的文件，仅记录文件中的分片顺序</strong></p>
-<h5 id="41-合并分片到底做了什么">4.1 合并分片到底做了什么？</h5>
-<p>合并会造成很多问题，最主要的是：<code>极其耗时、数据冗余</code>，所以服务器并不发生真正的合并，而是在数据库中记录文件中包含的分片。因此，合并操作时，服务器仅做简单的处理：</p>
-<ul>
-<li>1.校验文件大小</li>
-<li>2.校验文件hash</li>
-<li>3.标记文件状态</li>
-<li>4.生成文件访问地址</li>
-</ul>
-<h5 id="42-访问文件怎么办">4.2 访问文件怎么办？</h5>
-<p>由于服务器并未发生真正的文件合并，当后续请求该文件时，服务器需要动态处理，具体做法：</p>
-<ul>
-<li>1.服务器收到对文件的请求，并在数据库中找到对应的文件。</li>
-<li>2.服务器读取文件的所有分片ID，依次找到对应的分片文件。</li>
-<li>3.服务器利用TaskQueue的并发控制能力，逐步产生文件读取流，并利用管道直接输出到网络I/O</li>
-</ul>
-      </article>
-    </div>
+    <main>
+      <h1>Juejin article moved</h1>
+      <p>This synced Juejin article now lives under the rebuilt post route.</p>
+      <a href="/en/posts/sync/2024-11-14-7437133940483866665/">Continue</a>
+    </main>
+    <script>
+      window.location.replace("/en/posts/sync/2024-11-14-7437133940483866665/");
+    </script>
   </body>
 </html>

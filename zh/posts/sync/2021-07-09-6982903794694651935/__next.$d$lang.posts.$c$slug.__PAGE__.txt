@@ -1,0 +1,129 @@
+1:"$Sreact.fragment"
+2:I[27917,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js","/_next/static/chunks/c1e006c587210adc.js"],""]
+6:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T1f24,<h2 id="1-入门篇">1. 入门篇</h2>
+<h5 id="11learning-git-branch">1.1、<strong>Learning Git
+Branch</strong>:</h5>
+<p>学习 Git 最好的游戏及教程 <a
+href="https://link.juejin.cn?target=https%3A%2F%2Flearngitbranching.js.org"
+data-ref="nofollow noopener noreferrer" target="_blank"
+title="https://learngitbranching.js.org">learngitbranching.js.org</a></p>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ddb39a29797a414181d33d1e662dd3fd~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<h5
+id="12point_up_2这是一个趣味俱佳的-git-动画闯关游戏">1.2、👆这是一个趣味俱佳的
+Git 动画闯关游戏！</h5>
+<p>无论对于新人而言，还是老手来讲，都能从中受益，更能理解 Git
+的核心，是我觉得的最好的关于学习 Git 的教程。</p>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/42b230ce8943489288af8b0f77473cbe~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<h5
+id="13做到这里是不是发现后面的越来越难有种想看标准答案的欲望">1.3、做到这里是不是发现后面的越来越难，有种想看标准答案的欲望？</h5>
+<p>好的，满足你，控制台输入：<code>show solution</code> 可查看答案！</p>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ad0d95dd41e24972b2688d874a493e66~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<h2 id="2实战篇">2.实战篇</h2>
+<h5 id="21安装环境启动"><strong>2.1、安装环境、启动</strong></h5>
+<p><strong>2.1.1</strong>、安装Git for Windows 下载地址: <a
+href="https://link.juejin.cn?target=https%3A%2F%2Fgit-for-windows.github.io%2F"
+data-ref="nofollow noopener noreferrer" target="_blank"
+title="https://git-for-windows.github.io/">git-for-windows.github.io/</a></p>
+<p><strong>2.1.2</strong>、安装步骤：一直next直到Finish。</p>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/71efa33ac8fb4350ba1b1d512778c2e7~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<h5 id="22本地仓库初始化"><strong>2.2、本地仓库初始化</strong></h5>
+<p><strong>2.2.1</strong>、初始化仓库：<code>git init</code></p>
+<p><strong>2.2.2</strong>、查看仓库状态： <code>git status</code></p>
+<p><strong>2.2.3</strong>、防止中文文件乱码：<code>git config --global core.quotepath false</code></p>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e17728bc0ce541388e5ad668870b804d~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<p><strong>2.2.4</strong>、提交所有文档：<code>git add -A</code></p>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/72499911a0a24eb9849224305dfed957~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<p><strong>2.2.5</strong>、输入GitHub官网注册的</p>
+<p><strong>2.2.6</strong>、用户名：<code>git config --global user.name "你的用户名"</code></p>
+<p><strong>2.2.7</strong>、邮箱：<code>git config --global user.email "你的邮箱"</code></p>
+<p><strong>2.2.8</strong>、生成ssh key:
+<code>ssh-keygen -t rsa -C "你的邮箱"</code></p>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f3200c60ca6340958f100efb6cff6328~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<p><strong>2.2.9</strong>、在c/Users/Administrator/.ssh/id_rsa)文件找到直接复制ssh
+key</p>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/62581bcb85c046458a3eed5bf73197c0~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<p><strong>2.2.10</strong>、连接github</p>
+<p><strong>2.2.11</strong>、打开GitHub 进入setting找到ssh key并新建</p>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7865a723a257495c9d5f58aa21471a75~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /><br />
+<img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5c204eae1df043a5a534489e16695b27~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /><br />
+<img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6d3fe4371d6348a9b7e34f689e75cef4~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4cac89dd8f154367b5d9dd321093a24c~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<p><strong>2.2.12</strong>、测试是否连接成功：<code>ssh -T git@github.com</code></p>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/69542a6febbd4a0092abbc49e981a963~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<h5
+id="23github官网创建远程仓库"><strong>2.3、Github官网创建远程仓库</strong></h5>
+<p><strong>2.3.1</strong>、新建仓库</p>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/012ef37851db4bd3869fde5458df1550~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<p><strong>2.3.2</strong>、自定义仓库名</p>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/70eaefc0f43f4fd3a85074ab6c2c74cd~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<p><strong>2.3.3</strong>、本地连接到GitHub上面的仓库</p>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/043bddaa46064b40b5746ad9d333998a~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<p><strong>2.3.4</strong>、关键的一步来了，认真看！</p>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9627ef8ae7744b98949270099a16feef~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /></p>
+<h5
+id="24再次回到本地仓库按照下面的步骤一个个来"><strong>2.4、再次回到本地仓库，按照下面的步骤一个个来！</strong></h5>
+<p><strong>2.4.1</strong>、创建一个 README.md
+用于描述项目：<code>git add README.md</code></p>
+<p><strong>2.4.2</strong>、提交一下：<code>git commit</code></p>
+<p><strong>2.4.3</strong>、创建新的分支 <code>git branch</code></p>
+<p><strong>2.4.4</strong>、远程连接 你复制的SSH keys:
+<code>git remote add origin git@github.com:kuishou68/React.git</code></p>
+<p><strong>2.4.5</strong>、push你整个项目：<code>git push -u origin main</code></p>
+<p><strong>2.4.6</strong>、等待上传完毕刷新你的GitHub就OK了！</p>
+<p><strong>如果新建多了仓库不知道怎么删除？</strong><br />
+<img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/744b267245424b48aa5b98a9e4d65899~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /><br />
+<img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8ade55351d7c456fbb99cf4f5fcced0b~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /><br />
+<img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2dd0149cebe94b7ab36d87d29d579656~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+loading="lazy" alt="在这里插入图片描述" /><br />
+结束，撒花！！🎉🎉🎉</p>
+<blockquote>
+<p>本文使用
+<a href="https://juejin.cn/post/6940875049587097631" target="_blank"
+title="https://juejin.cn/post/6940875049587097631">文章同步助手</a>
+同步</p>
+</blockquote>
+0:{"buildId":"x75K1nEe0QZ34zwIRS4aa","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"space-y-8","children":[["$","nav",null,{"className":"flex flex-wrap items-center gap-3 text-sm text-[var(--muted)]","children":[["$","$L2",null,{"href":"/zh","className":"nav-chip","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","aria-hidden":"true","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"返回首页"]}],["$","$L2",null,{"href":"/zh/archives","className":"nav-chip","children":"全部文章"}],["$","$L2",null,{"href":"https://juejin.cn/post/6982903794694651935","target":"_blank","className":"nav-chip","children":"原始出处"}]]}],["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"已从掘金同步"}],["$","span",null,{"children":"2021-07-09"}],["$","span",null,{"children":[3," ","分钟阅读"]}],["$","span",null,{"children":"原文语言 · 中文"}]]}],["$","h1",null,{"className":"hero-title compact","children":"手把手教你上手Git，并上传项目到GitHub官网"}],["$","p",null,{"className":"hero-copy","children":"1. 入门篇 1.1、Learning Git Branch: 学习 Git 最好的游戏及教程 learngitbranching.js.org 1.2、👆这是一个趣味俱佳的 Git 动画闯关游戏！ 无论对于新人而言，还是老手来讲，都能从中受益，更能理解 Git 的核心，是我觉得的最好的关于学习 Git 的教程。 1.3、做到这里是不是发现后面的越来越难，..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"文章说明"}],["$","span",null,{"children":"这篇文章被保留在新的博客壳中，同时继续保留原始中文内容。"}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$3"}}]}],"$L4"]}],null,"$L5"]}],"loading":null,"isPartial":false}
+4:["$","div",null,{"className":"flex justify-end","children":["$","$L2",null,{"href":"/zh/archives","className":"ghost-inline","children":["全部文章",["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-right h-4 w-4","aria-hidden":"true","children":[["$","path","1ays0h",{"d":"M5 12h14"}],["$","path","xquz4c",{"d":"m12 5 7 7-7 7"}],"$undefined"]}]]}]}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

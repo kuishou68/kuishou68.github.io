@@ -1,0 +1,200 @@
+1:"$Sreact.fragment"
+2:I[27917,["/_next/static/chunks/869f3c4760d682ac.js","/_next/static/chunks/61fd2b7dad90b234.js","/_next/static/chunks/c1e006c587210adc.js"],""]
+6:I[2645,["/_next/static/chunks/e114fa419c1d8757.js","/_next/static/chunks/575559804cc58a07.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T7192,<h2 id="1-keepalive">1. KeepAlive</h2>
+<p>前言：<strong>KeepAlive</strong>
+这个词相信对你并不陌生，没错，正是借鉴了HTTP协议，在HTTP中的keep-alive又称<strong>HTTP持久连接</strong>(HTTP
+persistent connection)，作用是允许多个请求或响应共用一个TCP链接。
+http中的KeepaAlive可以避免链接频繁创建/销毁，在Vue中的<a
+href="https://cn.vuejs.org/guide/built-ins/keep-alive.html#keepalive">keepalive</a>同样也是为了避免一个组件频繁创建/重建。
+比如开发中我们编写了如下代码：</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">template</span><span class="dt">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">tab</span><span class="ot"> v-if</span><span class="op">=</span><span class="st">&quot;currTab===&#39;1&#39;&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">tab</span><span class="ot"> v-if</span><span class="op">=</span><span class="st">&quot;currTab===&#39;2&#39;&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">tab</span><span class="ot"> v-if</span><span class="op">=</span><span class="st">&quot;currTab===&#39;3&#39;&quot;</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">template</span><span class="dt">&gt;</span></span></code></pre></div>
+<h3 id="11-解决了什么问题">1.1 解决了什么问题？</h3>
+<p>可以看到，如果频繁的切换 currTab
+，会导致不停地卸载并重建对应的tab组件，为了避免不必要的开销，可以使用keepalive包裹，同时还可以通过 <code>include</code> 和 <code>exclude</code> prop
+来定制缓存行为，会根据组件的 <a
+href="https://cn.vuejs.org/api/options-misc.html#name"><code>name</code></a> 选项进行匹配，另外，<code>max</code>
+最大缓存实例数，缓存的实例数量即将超过指定的那个最大数量，则最久没有被访问的缓存实例将被销毁，以便为新的实例腾出空间。</p>
+<h3 id="12-实现原理">1.2 实现原理</h3>
+<p>其实keepAlive的本质是<strong>缓存管理</strong>，再加上特殊的挂载/卸载逻辑。首先，KeepAlive
+组件的实现需要渲染层的支持，而KeepAlive的组件在卸载时，我们也不能真正的将其卸载否则无法维持组件当前的状态了。通过观察源码发现，被KeepAlive的组件从原容器搬运到了另一个隐藏的容器中，实现了“假卸载”；当隐藏容器中的组件被”挂载“的时候，再从隐藏容器中搬运到原容器。这个过程就是
+<a
+href="https://cn.vuejs.org/api/options-lifecycle.html#activated"><code>activated</code></a>
+和 <a
+href="https://cn.vuejs.org/api/options-lifecycle.html#deactivated"><code>deactivated</code></a>。</p>
+<h3 id="13-include-和-exclude">1.3 include 和 exclude</h3>
+<p>默认情况下，KeepAlive组件会对所有”内部组件“进行缓存，但有时候期望只缓存特定组件，<code>include</code>
+用来显示的配置应该被缓存的组件，<code>exclude</code>用来显示的配置不应该缓存的组件。源码中会根据”内部组件“的名称name进行匹配，判断是否进行缓存。</p>
+<h3 id="14-缓存管理">1.4 缓存管理</h3>
+<p>这也是KeepAlive的核心，其内部通过一个Map对象来实现对组件的缓存，该Map的key是组件选项对象，即
+<code>vnode.type</code>属性的值，而Map的Value是用于描述组件的vnode对象。</p>
+<ul>
+<li>缓存管理的实现</li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 使用组件选项对象 rawVNode.type 作为键，去缓存中查找</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> cacheVNode <span class="op">=</span> cachce<span class="op">.</span><span class="fu">get</span>(rawVNode<span class="op">.</span><span class="at">type</span>)<span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(cacheVNode){</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 如果缓存存在，则无须重新创建组件实例，只需要继承即可。</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    rawVNode<span class="op">.</span><span class="at">component</span> <span class="op">=</span> cacheVNode<span class="op">.</span><span class="at">component</span><span class="op">;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    rawVNode<span class="op">.</span><span class="at">keptAlive</span> <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 如果缓存不存在，则设置缓存</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    cache<span class="op">.</span><span class="fu">set</span>(rawVNode<span class="op">.</span><span class="at">type</span><span class="op">,</span> rawVNode)<span class="op">;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="15-可能出现的问题">1.5 可能出现的问题</h3>
+<p>上面代码看似没毛病，但是有个细节，如果缓存不存在的时候，总是会设置新的缓存，这会导致缓存不断地增加。为了解决这个问题，必须设置一个缓存阈值，当缓存数量超过指定阈值时将其进行修剪。那么你可能会问，进行修剪的依据是什么呢？vue中当前采用的策略是
+”最新一次访问“，结合<code>max</code>最大缓存实例数，把当前访问（或修剪）的组件作为最新一次渲染的组件，并且该组件在缓存修剪过程中是安全且不会被修剪的。</p>
+<h2 id="2-teleport">2 Teleport</h2>
+<h3 id="21-解决了什么问题">2.1 解决了什么问题？</h3>
+<p>通常情况下，在将虚拟dom渲染成真实dom时，最终渲染出来的真实dom层级结果与虚拟dom层级结构一致。</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">template</span><span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> id</span><span class="op">=</span><span class="st">&quot;main&quot;</span><span class="ot"> style</span><span class="op">=</span><span class="st">&quot;z-index:-1;&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>       <span class="dt">&lt;</span><span class="kw">Overlay</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">template</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>上面这段代码中，<code>&lt;Overlay /&gt;</code>组件的内容会被渲染到id位main的div标签下，假设<code>&lt;Overlay /&gt;</code>是一个”蒙层“组件，并要求蒙层能遮挡页面上的任何元素，也就是要求<code>&lt;Overlay /&gt;</code>的z-index层级最高来实现。但问题是，如果<code>&lt;Overlay /&gt;</code>组件的内容无法跨域dom层级渲染，就无法实现这个目标。
+于是就出现了<a
+href="https://cn.vuejs.org/guide/built-ins/teleport.html#teleport">Teleport</a>内置组件，该组件<strong>可以将指定的内容渲染到特定容器中，并且不受dom层级限制。</strong></p>
+<h3 id="22-实现原理">2.2 实现原理</h3>
+<p>跟KeepAlive组件一样，需要渲染器的支持，通过判断就得虚拟节点是否存在，源码中通过组件选项的
+_isTeleport 标识判断是否为 Teleport组件，如果是，则直接调用
+<code>process</code>
+函数，将渲染控制权完全交接出去。通过判断分离出来的dom是否存在，来决定执行挂载还是更新，如果是挂载，则根据<code>props.to</code>的属性来去的真正的挂载点。<code>to</code> 的值可以是一个
+CSS 选择器字符串，也可以是一个 DOM 元素对象。</p>
+<ul>
+<li>具体实现</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> Teleport <span class="op">=</span> {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">_isTeleport</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">process</span>(n1<span class="op">.</span> <span class="at">n2</span><span class="op">,</span> container<span class="op">,</span> anchor<span class="op">,</span> internals){</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 通过 internals 参数取的渲染器的内部方法，</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">const</span> { path } <span class="op">=</span> internale<span class="st">&#39;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 如果旧的 VNode na 不存在，则是全新的挂载，否则执行更新</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(<span class="op">!</span>n1){</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 挂载，获取容器</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>            <span class="kw">const</span> tatget <span class="op">=</span> <span class="kw">typeof</span> n2<span class="op">.</span><span class="at">props</span><span class="op">.</span><span class="at">to</span> <span class="op">===</span> <span class="st">&#39;string&#39;</span> <span class="op">?</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(n2<span class="op">.</span><span class="at">props</span><span class="op">.</span><span class="at">to</span>) <span class="op">:</span> n2<span class="op">.</span><span class="at">props</span><span class="op">.</span><span class="at">to</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 将n2.children渲染到执行挂载点</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>            n2<span class="op">.</span><span class="at">children</span><span class="op">.</span><span class="fu">forEach</span>(c <span class="kw">=&gt;</span> <span class="fu">patch</span>(<span class="kw">null</span><span class="op">,</span> c<span class="op">,</span> target<span class="op">,</span> anchor))</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        } <span class="cf">else</span> {</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 更新</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>            <span class="fu">patchChildren</span>(n1<span class="op">,</span> n2<span class="op">,</span> container)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h2 id="3-transition">3. Transition</h2>
+<h3 id="31-解决了什么问题">3.1 解决了什么问题？</h3>
+<p><code>transition</code>你是不是感觉很熟悉，没错，就是css中的那个 <a
+href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition"><code>transition</code></a>过渡，原生DOM的过渡本质是将一个DOM与元素在两种状态间的切换，浏览器会根据过渡效果自行完成DOM元素的过渡，其中包括了持续时间、远动曲线、过渡的属性等。
+通过一段代码，一起来回忆一下css中如何实现过渡的：</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;main&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 创建class为main的元素，</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> el <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">&#39;div&#39;</span>)<span class="op">;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    el<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">add</span>(<span class="st">&#39;main&#39;</span>)<span class="op">;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 在DOM元素被添加到页面时，将初始状态和远动过程定义到元素上</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    el<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">add</span>(<span class="st">&#39;enter-form&#39;</span>)<span class="op">;</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    el<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">add</span>(<span class="st">&#39;enter-active&#39;</span>)<span class="op">;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">// 将元素添加到页面</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">.</span><span class="fu">appendChild</span>(el)<span class="op">;</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">requestAnimationFrame</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>        <span class="fu">requestAnimationFrame</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 切换元素的状态</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>            el<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">remove</span>(<span class="st">&#39;enter-form&#39;</span>)<span class="op">;</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>            el<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">add</span>(<span class="st">&#39;enter-to&#39;</span>)<span class="op">;</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 监听 transitioned 事件完成收尾工作</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>            el<span class="op">.</span><span class="fu">addEventlstener</span>(<span class="st">&#39;transitioned&#39;</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>                el<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">remove</span>(<span class="st">&#39;enter-to&#39;</span>)<span class="op">;</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>                el<span class="op">.</span><span class="at">classLsit</span><span class="op">.</span><span class="fu">remove</span>(<span class="st">&#39;enter-active&#39;</span>)<span class="op">;</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>                <span class="co">// 过渡完成后，调用 performRemve 函数将dom元素移除；</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>                <span class="fu">performRemove</span>()<span class="op">;</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>            })</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a><span class="fu">.main</span>{</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    <span class="kw">width</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    <span class="kw">height</span><span class="ch">:</span> <span class="dv">100</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    <span class="kw">background-color</span><span class="ch">:</span> <span class="cn">red</span>:</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a><span class="fu">.enter-form</span>{</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>    <span class="kw">transform</span><span class="ch">:</span> <span class="fu">translateX(</span><span class="dv">200</span><span class="dt">px</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a><span class="fu">.enter-to</span>{</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>    <span class="kw">transform</span><span class="ch">:</span> transitionX<span class="fu">(</span><span class="dv">0</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a><span class="fu">.enter-active</span>{</span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>    <span class="kw">transition</span><span class="ch">:</span> <span class="dv">transform 1</span><span class="dt">s</span> <span class="dv">ease-in-out</span><span class="op">;</span></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">style</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>上面css指定了远动属性是transform，持续时间是1s，运动曲线是
+ease-in-out，离场过渡的处理和进程过渡的处理方式很相似，首先设置初始状态，然后在下一帧中切换为结束状态，从而实现过渡效果。</p>
+<h3 id="32-实现原理">3.2 实现原理</h3>
+<p>实现逻辑其实和元素DOM很相似，不过<a
+href="https://cn.vuejs.org/guide/built-ins/transition.html#transition"><code>Transition</code></a>内置组件是基于虚拟dom实现的，整个过渡过程可以抽象的分为几个阶段，beforeEnter，enter,
+leave等。</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">// 在元素被插入到 DOM 之前被调用</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">// 用这个来设置元素的 &quot;enter-from&quot; 状态</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">onBeforeEnter</span>(el) {}</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">// 在元素被插入到 DOM 之后的下一帧被调用</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">// 用这个来开始进入动画</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">onEnter</span>(el<span class="op">,</span> done) {</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a> <span class="co">// 调用回调函数 done 表示过渡结束</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a> <span class="co">// 如果与 CSS 结合使用，则这个回调是可选参数</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a> <span class="fu">done</span>()</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co">// 当进入过渡完成时调用。</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">onAfterEnter</span>(el) {}</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co">// 当进入过渡在完成之前被取消时调用</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">onEnterCancelled</span>(el) {}</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="co">// 在 leave 钩子之前调用</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co">// 大多数时候，你应该只会用到 leave 钩子</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">onBeforeLeave</span>(el) {}</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co">// 在离开过渡开始时调用</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="co">// 用这个来开始离开动画</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">onLeave</span>(el<span class="op">,</span> done) {</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a> <span class="co">// 调用回调函数 done 表示过渡结束</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a> <span class="co">// 如果与 CSS 结合使用，则这个回调是可选参数</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a> <span class="fu">done</span>()</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="co">// 在离开过渡完成、</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="co">// 且元素已从 DOM 中移除时调用</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">onAfterLeave</span>(el) {}</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="co">// 仅在 v-show 过渡中可用</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">onLeaveCancelled</span>(el) {}</span></code></pre></div>
+<p>在dom挂载之前，调用
+<code>transition.beforeEnter</code>钩子；挂载之后，调用
+<code>transition.enter</code>，并且两个钩子函数都接收需要过渡的dom元素对象作为的个参数；卸载元素则调用
+<code>transition.leave</code>；通过这些钩子，灵活的实现了Transition内置组件。与原生实现方式对比，增加了对节点过渡时机的控制，将卸载动作封装到performRemove函数中，只需要在具体的时机以回调的方式将控制权交接出去即可。</p>
+<h2 id="总结">总结</h2>
+<p>这三个内置组件的共同特点是与<strong>渲染器</strong>的结合非常紧密，<code>KeepAlive</code>通过缓存管理实现了频繁切换下带来渲染消耗问题；<code>Teleprot</code>通过对DOM层级的控制实现了将指定的内容渲染到特定容器；<code>Transition</code>通过钩子函数实现了过渡效果。下课……</p>
+0:{"buildId":"x75K1nEe0QZ34zwIRS4aa","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"space-y-8","children":[["$","nav",null,{"className":"flex flex-wrap items-center gap-3 text-sm text-[var(--muted)]","children":[["$","$L2",null,{"href":"/zh","className":"nav-chip","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","aria-hidden":"true","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"返回首页"]}],["$","$L2",null,{"href":"/zh/archives","className":"nav-chip","children":"全部文章"}],["$","$L2",null,{"href":"https://juejin.cn/post/7510580636622962707","target":"_blank","className":"nav-chip","children":"原始出处"}]]}],["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"已从掘金同步"}],["$","span",null,{"children":"2025-06-02"}],["$","span",null,{"children":[6," ","分钟阅读"]}],["$","span",null,{"children":"原文语言 · 中文"}]]}],["$","h1",null,{"className":"hero-title compact","children":"Vue3中KeepAlive、Teleport、Transition 内置组件是怎么实现的？"}],["$","p",null,{"className":"hero-copy","children":"--- theme: channing-cyan --- 1. KeepAlive 前言：KeepAlive 这个词相信对你并不陌生，没错，正是借鉴了HTTP协议，在HTTP中的keep-alive又称HTTP持久连接(HTTP persistent connection)，作用是允许多个请求或响应共用一个TCP链接。 http中的KeepaAlive可以避..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"文章说明"}],["$","span",null,{"children":"这篇文章被保留在新的博客壳中，同时继续保留原始中文内容。"}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$3"}}]}],"$L4"]}],null,"$L5"]}],"loading":null,"isPartial":false}
+4:["$","div",null,{"className":"flex justify-end","children":["$","$L2",null,{"href":"/zh/archives","className":"ghost-inline","children":["全部文章",["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-right h-4 w-4","aria-hidden":"true","children":[["$","path","1ays0h",{"d":"M5 12h14"}],["$","path","xquz4c",{"d":"m12 5 7 7-7 7"}],"$undefined"]}]]}]}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

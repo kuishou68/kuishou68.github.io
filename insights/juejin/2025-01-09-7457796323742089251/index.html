@@ -1,89 +1,71 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vue3的Proxy和DefineProperty的区别，你真的了解吗？ | CocoonBreak</title>
-    <meta name="description" content="这个问题绝大多数人都被问起过，可是怎么答感觉都不太满意，但其实你只要理解过后，一句话就可以回答出来，而且是极度的精准。 1. Proxy MDN上的解释：用于创建一个对象的代理，可以拦截和重定义一个对象的基本方法，那么什么叫做对象的基本方法...">
-    <meta property="og:title" content="Vue3的Proxy和DefineProperty的区别，你真的了解吗？ | CocoonBreak">
-    <meta property="og:description" content="这个问题绝大多数人都被问起过，可是怎么答感觉都不太满意，但其实你只要理解过后，一句话就可以回答出来，而且是极度的精准。 1. Proxy MDN上的解释：用于创建一个对象的代理，可以拦截和重定义一个对象的基本方法，那么什么叫做对象的基本方法...">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2025-01-09-7457796323742089251/">
-    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
-    <link rel="icon" href="/img/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/custom/site.css">
-    <script defer src="/custom/site.js"></script>
-    <script defer src="/custom/live2d-loader.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content="0; url=/en/posts/sync/2025-01-09-7457796323742089251/" />
+    <title>Juejin article moved</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1020;
+        --panel: rgba(10, 18, 38, 0.88);
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #f6efe3;
+        --muted: #93a2bf;
+        --accent: #7ae7c7;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
+          linear-gradient(180deg, #0b1020 0%, #050813 100%);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        padding: 24px;
+      }
+      main {
+        width: min(640px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--panel);
+        padding: 32px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(28px, 4vw, 42px);
+      }
+      p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      a {
+        color: #08111e;
+        background: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    </style>
   </head>
   <body>
-    <div class="article-shell">
-      <nav class="insight-nav">
-        <a href="/">← 首页</a>
-        <a href="/insights/">同步文章</a>
-        <a href="https://juejin.cn/post/7457796323742089251" target="_blank" rel="noreferrer">掘金原文</a>
-      </nav>
-
-      <header class="article-hero" data-reveal>
-        <div class="article-meta">
-          <span>2025.01.09</span><span>Vue.js</span><span>前端</span>
-        </div>
-        <h1>Vue3的Proxy和DefineProperty的区别，你真的了解吗？</h1>
-        <p class="article-intro">这个问题绝大多数人都被问起过，可是怎么答感觉都不太满意，但其实你只要理解过后，一句话就可以回答出来，而且是极度的精准。 1. Proxy MDN上的解释：用于创建一个对象的代理，可以拦截和重定义一个对象的基本方法，那么什么叫做对象的基本方法...</p>
-        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/7457796323742089251" target="_blank" rel="noreferrer">掘金原文</a>。</div>
-      </header>
-
-      <article class="prose" data-reveal>
-        <p>这个问题绝大多数人都被问起过，可是怎么答感觉都不太满意，但其实你只要理解过后，一句话就可以回答出来，而且是极度的精准。</p>
-<h3 id="1proxy">1.<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy</a></h3>
-<p>MDN上的解释：用于创建一个对象的代理，可以拦截和重定义一个对象的基本方法，那么什么叫做对象的基本方法呢？先看下面对象的基本操作。</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="kw">let</span> obj <span class="op">=</span> {}<span class="op">;</span></span>
-<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a></span>
-<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a><span class="co">// 添加一个属性</span></span>
-<span id="cb1-4"><a aria-hidden="true" href="#cb1-4" tabindex="-1"></a>obj<span class="op">.</span><span class="at">a</span> <span class="op">=</span> <span class="dv">3</span><span class="op">;</span> <span class="co">// 相当于调用了[[Set]]</span></span>
-<span id="cb1-5"><a aria-hidden="true" href="#cb1-5" tabindex="-1"></a></span>
-<span id="cb1-6"><a aria-hidden="true" href="#cb1-6" tabindex="-1"></a><span class="co">// 读取一个属性</span></span>
-<span id="cb1-7"><a aria-hidden="true" href="#cb1-7" tabindex="-1"></a>obj<span class="op">.</span><span class="at">a</span><span class="op">;</span> <span class="co">// 相当于调用了[[Get]]</span></span>
-<span id="cb1-8"><a aria-hidden="true" href="#cb1-8" tabindex="-1"></a></span>
-<span id="cb1-9"><a aria-hidden="true" href="#cb1-9" tabindex="-1"></a><span class="co">// 设置对象的原型</span></span>
-<span id="cb1-10"><a aria-hidden="true" href="#cb1-10" tabindex="-1"></a><span class="bu">Object</span><span class="op">.</span><span class="fu">setPrototypeOf</span>(obj<span class="op">,</span> {<span class="dt">a</span><span class="op">:</span><span class="dv">3</span>})<span class="op">;</span> <span class="co">// 相当于调用了 [[SetPrototypeOf]]</span></span>
-<span id="cb1-11"><a aria-hidden="true" href="#cb1-11" tabindex="-1"></a></span>
-<span id="cb1-12"><a aria-hidden="true" href="#cb1-12" tabindex="-1"></a><span class="co">// 读取对象的原型</span></span>
-<span id="cb1-13"><a aria-hidden="true" href="#cb1-13" tabindex="-1"></a><span class="bu">Object</span><span class="op">.</span><span class="fu">getPrototypeOf</span>(obj)<span class="op">;</span> <span class="co">// 相当于调用了 [[GetPrototypeOf]]</span></span>
-<span id="cb1-14"><a aria-hidden="true" href="#cb1-14" tabindex="-1"></a></span>
-<span id="cb1-15"><a aria-hidden="true" href="#cb1-15" tabindex="-1"></a><span class="co">// 遍历对象的属性，相当于调用了对象的 [[getOwnPropertyKeys]]</span></span>
-<span id="cb1-16"><a aria-hidden="true" href="#cb1-16" tabindex="-1"></a><span class="cf">for</span>(<span class="kw">const</span> key <span class="kw">in</span> obj){</span>
-<span id="cb1-17"><a aria-hidden="true" href="#cb1-17" tabindex="-1"></a>    </span>
-<span id="cb1-18"><a aria-hidden="true" href="#cb1-18" tabindex="-1"></a>}</span></code></pre></div>
-<p>上面的基本操作其实本质上会转换成调用对象的内部方法，比如<code>obj.a=3</code>
-会调用对象的内部方法
-[[Set]]，这方法在外面是访问不到的，只有在内部才能访问到。也就是说，平时我们js语法层面，或者是API层面，去对对象进行基本操作，最终在底层都是在调用对象的内部方法。换句话说，你对对象的基本操作，是逃不过这个基本方法的。在<a href="https://ecma-international.org/wp-content/uploads/ECMA-262_15th_edition_june_2024.pdf">ES262</a>文档里面可以看到所有的<a href="https://ecma-international.org/wp-content/uploads/ECMA-262_15th_edition_june_2024.pdf">内部方法</a>：</p>
-<p><img alt="image.png" src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/28d93146bf6645b0bb6857618d7a06e9~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773325746&amp;x-signature=ljnAfhB4gPUXBjii5XuYUvJPHu0%3D"/></p>
-<p>这里的内部方法，就是Proxy解释中说的基本方法。数组本质上也是一个对象，区别于<code>常规对象</code>，普遍把数组叫做<code>异质对象</code>，常规对象和异质对象的不同体现在[[DefineOwnProperty]]这个内部方法上。Proxy重定义对象基本方法的同时也可以对这些基本方法进行拦截，换句话说，Proxy可以拦截对象的一些操作。你可能会问，函数也能拦截吗？答案是可以的函数在内部也是一个对象，只不过多了两个内部方法<code>[[Call]]</code>和<code>[[Construct]]</code>，你通过new调用而已。</p>
-<h3 id="2defineproperty">2.<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty">DefineProperty</a></h3>
-<p>MDN解释：会直接在一个对象上定义一个新属性，或修改其现有属性，并返回此对象。</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="kw">const</span> arr <span class="op">=</span> [<span class="dv">1</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">3</span>]<span class="op">;</span></span>
-<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a></span>
-<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a><span class="co">// 往数组里面加一项，会导致数组的长度也变化</span></span>
-<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a>arr<span class="op">.</span><span class="fu">push</span>(<span class="dv">1</span>)<span class="op">;</span> </span>
-<span id="cb2-5"><a aria-hidden="true" href="#cb2-5" tabindex="-1"></a></span>
-<span id="cb2-6"><a aria-hidden="true" href="#cb2-6" tabindex="-1"></a><span class="co">// 尝试使用DefineProperty拦截一个数组的length变化</span></span>
-<span id="cb2-7"><a aria-hidden="true" href="#cb2-7" tabindex="-1"></a><span class="bu">Object</span><span class="op">.</span><span class="fu">defineProperty</span>(arr<span class="op">,</span> <span class="st">'length'</span><span class="op">,</span> {</span>
-<span id="cb2-8"><a aria-hidden="true" href="#cb2-8" tabindex="-1"></a>    <span class="kw">get</span>(){</span>
-<span id="cb2-9"><a aria-hidden="true" href="#cb2-9" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'get'</span><span class="op">,</span> <span class="st">'length'</span>)<span class="op">;</span></span>
-<span id="cb2-10"><a aria-hidden="true" href="#cb2-10" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">2</span><span class="op">;</span></span>
-<span id="cb2-11"><a aria-hidden="true" href="#cb2-11" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb2-12"><a aria-hidden="true" href="#cb2-12" tabindex="-1"></a>    <span class="kw">set</span>(value){</span>
-<span id="cb2-13"><a aria-hidden="true" href="#cb2-13" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">'set'</span><span class="op">,</span> <span class="st">'length'</span><span class="op">,</span> value)<span class="op">;</span></span>
-<span id="cb2-14"><a aria-hidden="true" href="#cb2-14" tabindex="-1"></a>    }</span>
-<span id="cb2-15"><a aria-hidden="true" href="#cb2-15" tabindex="-1"></a>})</span></code></pre></div>
-<p>这个时候你会发现，vue2没办法直接拦截数组原型，只能在数组本身查找数组原型的过程中重写push、shift、unshift这些方法。更改数组的原型链，你在vue2中调用的push方法，其实调用的是重写过后的push方法，这样就可以进行拦截。</p>
-<p><img alt="image.png" src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/0d7f06a2c0dd45898d2ff3a505022ca2~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAgQ29jb29uQnJlYWs=:q75.awebp?rk3s=f64ab15b&amp;x-expires=1773325746&amp;x-signature=q7CQ%2BPKOObcJ4ZZ%2FNEuT9LdNfXA%3D"/></p>
-<p><strong>总结：</strong>
-Proxy拦截的是针对对象的所有基本方法，他的拦截是全面的，没有任何遗漏；而defineProperty只是众多基本方法其中之一，作用是对现有对象的拦截，拦截面是不全面的。</p>
-      </article>
-    </div>
+    <main>
+      <h1>Juejin article moved</h1>
+      <p>This synced Juejin article now lives under the rebuilt post route.</p>
+      <a href="/en/posts/sync/2025-01-09-7457796323742089251/">Continue</a>
+    </main>
+    <script>
+      window.location.replace("/en/posts/sync/2025-01-09-7457796323742089251/");
+    </script>
   </body>
 </html>
