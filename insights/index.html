@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Insights | CocoonBreak</title>
+    <title>文章归档 | CocoonBreak</title>
     <meta name="description" content="已从掘金同步到博客的 67 篇文章，覆盖 AI Tooling、协议、Vue、部署与工程实践。">
     <link rel="icon" href="/img/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,23 +13,26 @@
     <script defer src="/custom/site.js"></script>
     <script defer src="/custom/live2d-loader.js"></script>
   </head>
-  <body>
+  <body data-page="insights">
     <header class="site-header">
       <div class="site-header-inner">
         <a class="brand-lockup" href="/">
           <span class="brand-mark"><img src="/img/logo.png" alt="CocoonBreak"></span>
           <span>
             <span class="brand-title">CocoonBreak</span>
-            <span class="brand-subtitle">Insights</span>
+            <span class="brand-subtitle">文章归档</span>
           </span>
         </a>
+        <div class="site-header-actions">
+          <nav class="nav-links" data-nav-links>
+            <a href="/">首页</a>
+            <a href="#latest">最新同步</a>
+            <a href="#archive">全部归档</a>
+            <a href="https://juejin.cn/user/3817931570691031/posts" target="_blank" rel="noreferrer">掘金</a>
+          </nav>
+          <div class="site-controls" data-site-controls></div>
+        </div>
         <button class="menu-button" type="button" aria-expanded="false" aria-label="切换导航" data-menu-button>☰</button>
-        <nav class="nav-links" data-nav-links>
-          <a href="/">首页</a>
-          <a href="#latest">最新同步</a>
-          <a href="#archive">全部归档</a>
-          <a href="https://juejin.cn/user/3817931570691031/posts" target="_blank" rel="noreferrer">掘金</a>
-        </nav>
       </div>
     </header>
 
