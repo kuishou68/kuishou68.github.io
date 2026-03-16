@@ -1,0 +1,634 @@
+1:"$Sreact.fragment"
+2:I[6825,["177","static/chunks/app/layout-9fe08982949093af.js"],"ThemeProvider"]
+3:I[1454,["177","static/chunks/app/layout-9fe08982949093af.js"],"Live2DLoader"]
+4:I[5244,[],""]
+5:I[3866,[],""]
+6:I[7367,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"HtmlLocaleSync"]
+7:I[4750,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"BlogNavbar"]
+8:I[8173,["173","static/chunks/173-ef41fafde65cda27.js","97","static/chunks/app/%5Blang%5D/posts/%5B...slug%5D/page-6ee700c5ad1e0b29.js"],""]
+b:I[6213,[],"OutletBoundary"]
+d:I[6213,[],"MetadataBoundary"]
+f:I[6213,[],"ViewportBoundary"]
+11:I[4835,[],""]
+:HL["/_next/static/media/24f6ebe2756575bd-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/36966cca54120369-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5611c55482296524-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/edef1a271f97a8ec-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/fb12bdfc6f99d938-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/473fb34e1570d6f1.css","style"]
+:HL["/_next/static/css/1c5aef1c0dd20138.css","style"]
+:HL["/_next/static/css/45bbd2f0fdf5da27.css","style"]
+:HL["/_next/static/css/03999bf3b1a627a0.css","style"]
+0:{"P":null,"b":"ZNjizd8Y7He_YS_OA6hmp","p":"","c":["","zh","posts","sync","2022-06-17-7110086659932160030",""],"i":false,"f":[[["",{"children":[["lang","zh","d"],{"children":["posts",{"children":[["slug","sync/2022-06-17-7110086659932160030","c"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/473fb34e1570d6f1.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1c5aef1c0dd20138.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/45bbd2f0fdf5da27.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/03999bf3b1a627a0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__variable_dd5b2f __variable_64b714 __variable_51740a __variable_7afcbf __variable_6634df antialiased","children":["$","$L2",null,{"attribute":"class","defaultTheme":"dark","enableSystem":false,"disableTransitionOnChange":true,"children":[["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","$L6",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"en","homeHref":"/","rootAliasForDefaultLocale":true,"labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/","label":"Home"},{"href":"/#latest","label":"Latest"},{"href":"/#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/#community","label":"Community"}],"legacyRoots":[{"slug":"A前端👨‍💻","title":{"en":"Frontend Atlas","zh":"前端图谱","es":"Atlas Frontend","ja":"フロントエンド地図","ar":"أطلس الواجهة الأمامية"},"description":{"en":"CSS, Vue, React, Canvas, Node, uni-app, build tools, and the earlier front-end trail.","zh":"CSS、Vue、React、Canvas、Node、uni-app、打包工具，以及更早的前端路径。","es":"CSS, Vue, React, Canvas, Node, uni-app, herramientas de build y el rastro front-end más temprano.","ja":"CSS、Vue、React、Canvas、Node、uni-app、ビルドツールなど、初期のフロントエンド蓄積。","ar":"CSS وVue وReact وCanvas وNode وuni-app وأدوات البناء والمسار الأقدم للواجهة الأمامية."}},{"slug":"B面试题📑","title":{"en":"Interview Bank","zh":"面试题仓库","es":"Banco de Entrevistas","ja":"面接バンク","ar":"بنك المقابلات"},"description":{"en":"Question banks for browser internals, networking, Vue, React, JavaScript, and engineering.","zh":"浏览器、网络、Vue、React、JavaScript 和工程化的面试题集合。","es":"Baterías de preguntas sobre navegador, red, Vue, React, JavaScript e ingeniería.","ja":"ブラウザ、ネットワーク、Vue、React、JavaScript、開発基盤に関する面接問題。","ar":"مجموعات أسئلة عن المتصفح والشبكات وVue وReact وJavaScript والهندسة."}},{"slug":"Vue实战💻","title":{"en":"Vue Practice","zh":"Vue 实战","es":"Práctica Vue","ja":"Vue 実戦","ar":"تطبيقات Vue"},"description":{"en":"Real project records around Ant Design, Echarts, mini programs, stores, and browser features.","zh":"围绕 Ant Design、Echarts、小程序、商城项目和浏览器功能的一组实战记录。","es":"Registros reales sobre Ant Design, Echarts, mini programas, tiendas y funciones del navegador.","ja":"Ant Design、Echarts、ミニプログラム、ストア、ブラウザ機能に関する実戦記録。","ar":"سجلات عملية حول Ant Design وEcharts والبرامج المصغرة والمتاجر وميزات المتصفح."}},{"slug":"走过的路🌱","title":{"en":"Growing Path","zh":"走过的路","es":"Camino Recorrido","ja":"歩いてきた道","ar":"الطريق الذي سلكته"},"description":{"en":"Yearly reviews and growth notes that carry more life signal than technical polish.","zh":"年度总结和成长记录，保留生活感和时间感。","es":"Revisiones anuales y notas de crecimiento con más vida que pulido técnico.","ja":"年次レビューと成長記録。技術の整い方より時間の感触が残っています。","ar":"مراجعات سنوية وملاحظات نمو تحمل أثر الحياة أكثر من الصقل التقني."}},{"slug":"读过的书📚️","title":{"en":"Reading Shelf","zh":"读书笔记","es":"Estante de Lectura","ja":"読書棚","ar":"رف القراءة"},"description":{"en":"Book notes across networking, JavaScript, algorithms, and systems thinking.","zh":"网络、JavaScript、算法和系统思维方向的读书笔记。","es":"Notas de lectura sobre redes, JavaScript, algoritmos y pensamiento de sistemas.","ja":"ネットワーク、JavaScript、アルゴリズム、システム思考に関する読書ノート。","ar":"ملاحظات قراءة حول الشبكات وJavaScript والخوارزميات والتفكير المنظومي."}},{"slug":"PHP🐘","title":{"en":"PHP Shelf","zh":"PHP 归档","es":"Estante PHP","ja":"PHP 棚","ar":"رف PHP"},"description":{"en":"Earlier PHP notes and experiments that still belong in the public record.","zh":"更早期的 PHP 文章和实验记录。","es":"Notas y experimentos tempranos de PHP que siguen formando parte del archivo.","ja":"初期の PHP ノートと実験記録。","ar":"ملاحظات وتجارب PHP المبكرة التي ما زالت جزءًا من السجل."}},{"slug":"Python🐍","title":{"en":"Python Shelf","zh":"Python 归档","es":"Estante Python","ja":"Python 棚","ar":"رف Python"},"description":{"en":"Small scraping experiments and data-oriented notes from the earlier Python phase.","zh":"偏数据和爬取的小实验，保留了更早一阶段的 Python 轨迹。","es":"Pequeños experimentos de scraping y notas orientadas a datos de la etapa temprana con Python.","ja":"スクレイピングやデータ寄りの小さな Python 実験。","ar":"تجارب صغيرة في الاستخراج والبيانات من المرحلة المبكرة مع Python."}}]}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","div",null,{"className":"mx-auto max-w-3xl pb-20 pt-8","children":["$","div",null,{"className":"hero-panel space-y-5","children":[["$","span",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"className":"hero-title compact","children":"That page never made it into the archive."}],["$","p",null,{"className":"hero-copy","children":"Try the rebuilt home, the full archive, or one of the legacy shelves instead."}],["$","$L8",null,{"href":"/","className":"primary-chip","children":"Go back to the English home"}]]}]}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L8",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]}]]}],{"children":[["lang","zh","d"],["$","$1","c",{"children":[null,"$L9"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","sync/2022-06-17-7110086659932160030","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children","$0:f:0:1:2:children:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":"$Lc"}]]}],{},null,false]},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","-z_f1WnSkbfhYaz8oHsS5",{"children":[["$","$Ld",null,{"children":"$Le"}],["$","$Lf",null,{"children":"$L10"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+9:[["$","$L6",null,{"lang":"zh","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"zh","homeHref":"/zh","rootAliasForDefaultLocale":false,"labels":{"brand":"POJIAN.BLOG","subtitle":"围绕 AI 工具链、产品交付与个人记忆的长篇博客。","menu":"目录","close":"关闭","switchLanguage":"切换语言","switchTheme":"切换主题"},"links":[{"href":"/zh","label":"首页"},{"href":"/zh#latest","label":"最新"},{"href":"/zh#collections","label":"分栏"},{"href":"/zh/archives","label":"归档"},{"href":"/zh#community","label":"社区"}],"legacyRoots":"$0:f:0:1:1:props:children:1:props:children:props:children:props:children:1:props:notFound:1:1:props:children:0:props:legacyRoots"}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"围绕 AI 工具链、产品交付与个人记忆的长篇博客。"}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/zh","className":"hover:text-[var(--text)]","children":"首页"}],["$","$L8",null,{"href":"/zh/archives","className":"hover:text-[var(--text)]","children":"归档"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]
+12:T5494,<p><strong>业务场景</strong>：在echarts折线图中，右上角有个下载功能，但下载的内容是一张图片，能不能适当修改这个功能，让它下载的整条折线图的数据并导出csv格式的文件呢？安排！</p>
+<p><strong>需求分析</strong>：首先不能再使用Echarts官方提供的标签，用i标签的click事件触发json格式整理，最终导出为csv文件!</p>
+<p><strong>官方示例</strong>：</p>
+<p><img
+src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9d37d1ce6cc5460799c6a9f2317ff748~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"
+alt="image.png" /></p>
+<p><strong>下载的CSV文件</strong>：</p>
+<p><img
+src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/496b2fac21014f7a97721b7a5020e3f7~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"
+alt="image.png" /></p>
+<p><strong>功能实现</strong>：</p>
+<p>html部分：</p>
+<pre><code>&lt;div id=&quot;demo&quot;&gt;
+      &lt;!-- 下载 --&gt;
+      &lt;div style=&quot;float: right;&quot;&gt;
+        &lt;i style=&quot;cursor: pointer;&quot; class=&quot;el-icon-download&quot; @click=&quot;handleDownload&quot; /&gt;
+      &lt;/div&gt;
+      &lt;!-- 折线图 --&gt;
+      &lt;div style=&quot;height: 496px; border: 1px solid #ebeef5;&quot;&gt;
+        &lt;v-chart id=&quot;performanceChart&quot; :options=&quot;performanceOption&quot; style=&quot;width: 100%; height: 100%;&quot; /&gt;
+      &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>js部分</p>
+<pre><code>import ECharts from &quot;vue-echarts&quot;;
+export default {
+    components: {
+        &quot;v-chart&quot;: ECharts
+    },
+    data: {
+          performanceOption: null, // 净值曲线的option
+          fundPerformanceData: [
+            {
+              name: &quot;日期&quot;,
+              type: &quot;date&quot;,
+              id: null,
+              data: [
+                2022-02-28,
+                2022-03-01,
+                2022-03-02,
+                2022-03-03,
+                2022-03-04,
+                2022-03-07,
+                2022-03-08,
+                2022-03-09,
+                2022-03-10,
+                2022-03-11,
+                2022-03-14,
+                2022-03-15,
+                2022-03-16,
+                2022-03-17,
+                2022-03-18,
+                2022-03-21,
+                2022-03-22,
+                2022-03-23,
+                2022-03-24,
+                2022-03-25,
+                2022-03-28,
+                2022-03-29,
+                2022-03-30,
+                2022-03-31,
+                2022-04-01,
+                2022-04-06
+              ]
+            },
+            {
+              name: &quot;数据1&quot;,
+              type: &quot;fund&quot;,
+              id: &quot;SSP312&quot;,
+              data: [
+                1,
+                1.0072107,
+                1.006510235,
+                1.000730169,
+                0.990743452,
+                0.97094713,
+                0.940424825,
+                0.926913562,
+                0.948911381,
+                0.956444466,
+                0.929787421,
+                0.886528866,
+                0.919513112,
+                0.941216068,
+                0.950418761,
+                0.965495909,
+                0.964183414,
+                0.969470427,
+                0.964321415,
+                0.954335972,
+                0.951709649,
+                0.942736322,
+                0.959222206,
+                0.950557456,
+                0.948558405,
+                0.948476298
+              ]
+            },
+            {
+              name: &quot;数据2&quot;,
+              type: &quot;fund_account&quot;,
+              id: &quot;28100006868&quot;,
+              data: [
+                1,
+                1.0072107,
+                1.006510235,
+                1.000730169,
+                0.990743452,
+                0.97094713,
+                0.940424825,
+                0.926913562,
+                0.948911381,
+                0.956444466,
+                0.929787421,
+                0.886528866,
+                0.919513112,
+                0.941216068,
+                0.950418761,
+                0.965495909,
+                0.964183414,
+                0.969470427,
+                0.964321415,
+                0.954335972,
+                0.951709649,
+                0.942736322,
+                0.959222206,
+                0.950557456,
+                0.948558405,
+                0.948476298
+              ]
+            },
+            {
+              name: &quot;数据3&quot;,
+              type: &quot;fund_account|simulation&quot;,
+              id: &quot;28100006868&quot;,
+              data: [
+                1,
+                1.00712249,
+                1.007306985,
+                1.00313626,
+                0.993969641,
+                0.975005943,
+                0.941590608,
+                0.925349535,
+                0.948433073,
+                0.956514871,
+                0.928983025,
+                0.880746789,
+                0.912900696,
+                0.937216573,
+                0.947011817,
+                0.96118454,
+                0.960357662,
+                0.968720774,
+                0.96031809,
+                0.952355055,
+                0.950769517,
+                0.936477151,
+                0.95625449,
+                0.951077739,
+                0.947358103,
+                0.954694728,
+              ]
+            },
+            {
+              name: &quot;数据4&quot;,
+              type: &quot;fund|draw_down&quot;,
+              id: &quot;SSP312&quot;,
+              data: [
+                0,
+                0,
+                -0.00069545,
+                -0.006434136,
+                -0.016349357,
+                -0.036003956,
+                -0.06630775,
+                -0.079722284,
+                -0.05788195,
+                -0.050402795,
+                -0.076869,
+                -0.119817863,
+                -0.087069754,
+                -0.065522172,
+                -0.056385361,
+                -0.041416151,
+                -0.04271925,
+                -0.037470087,
+                -0.042582238,
+                -0.052496193,
+                -0.055103714,
+                -0.064012801,
+                -0.04764494,
+                -0.056247659,
+                -0.058232398,
+                -0.058313918,
+              ]
+            }
+          ]
+        },
+        methods: {
+          formatPerformanceOption() {
+            let fundData = []; // 数据1
+            const fund_account = []; // 数据2
+            const simulation = []; // 数据3
+            let retracementData = []; // 数据4
+            const legends = []; // 图例
+            const dts = []; // X轴 时间
+            const colors = [
+              &quot;#73DEB3&quot;,
+              &quot;#01BCFF&quot;,
+              &quot;#FFB701&quot;,
+              &quot;#A0A7E6&quot;,
+              &quot;#EEDD78&quot;,
+              &quot;#22C3AA&quot;,
+              &quot;#FAA9E1&quot;,
+              &quot;#95F0FE&quot;,
+              &quot;#FFC18E&quot;,
+              &quot;#92B7E2&quot;,
+              &quot;#6EA7A7&quot;,
+              &quot;#516B91&quot;,
+              &quot;#9AAA9C&quot;
+            ];
+            //下面是数据分类展示过程，可忽略
+            if (this.fundPerformanceData.length &gt; 0) {
+              this.fundPerformanceData.forEach((item) =&gt; {
+                if (item.type !== &quot;date&quot; &amp;&amp; item.type !== &quot;fund|draw_down&quot; &amp;&amp; item.type !== &quot;fund|max_draw_down&quot;) {
+                  legends.push({ name: item.name });
+                  if (!this.showExcess) {
+                    for (let i = 0; i &lt; item.data.length; i++) {
+                      if (item.data[i] !== null)
+                        item.data[i] = item.data[i] + 1;
+                    }
+                  }
+                }
+                if (item.type === &quot;date&quot;) {
+                  item.data.forEach((item) =&gt; {
+                    dts.push(item.replaceAll(&quot;-&quot;, &quot;/&quot;));
+                  });
+                } else if (item.type === &quot;fund_account&quot;) {
+                  // 数据2 添加双向绑定key
+                  this.$set(
+                    this.selectedLegend,
+                    item.name,
+                    typeof this.selectedLegend[item.name] === &quot;boolean&quot;
+                      ? this.selectedLegend[item.name]
+                      : true
+                  );
+                  fund_account.push({
+                    id: item.id,
+                    name: item.name,
+                    type: &quot;line&quot;,
+                    color: colors[fund_account.length % 3],
+                    data: item.data,
+                    date: dts,
+                    xAxisIndex: 0,
+                    symbol: false,
+                    symbolSize: 0 // 拐点圆的大小
+                  });
+                } else if (item.type === &quot;fund_account|simulation&quot;) {
+                  // 数据3 添加双向绑定key
+                  this.$set(
+                    this.selectedLegend,
+                    item.name,
+                    typeof this.selectedLegend[item.name] === &quot;boolean&quot;
+                      ? this.selectedLegend[item.name]
+                      : false
+                  );
+                  simulation.push({
+                    name: item.name,
+                    type: &quot;line&quot;,
+                    color: colors[simulation.length % 3],
+                    data: item.data,
+                    symbolSize: 0, // 拐点圆的大小
+                    itemStyle: {
+                      // 折线图虚线样式
+                      normal: {
+                        lineStyle: {
+                          width: 2, // 线宽
+                          type: &quot;dotted&quot; // &#39;dotted&#39;虚线 &#39;solid&#39;实线
+                        }
+                      }
+                    }
+                  });
+                } else if (item.type === &quot;fund&quot;) {
+                  //数据1 添加双向绑定key
+                  this.$set(
+                    this.selectedLegend,
+                    item.name,
+                    typeof this.selectedLegend[item.name] === &quot;boolean&quot;
+                      ? this.selectedLegend[item.name]
+                      : true
+                  );
+                  fundData = item;
+                } else if (item.type === &quot;fund|draw_down&quot;) {
+                  // 数据4
+                  retracementData = item;
+                }
+              });
+            }
+            // 开始绘图
+            this.performanceOption = {
+              title: {
+                show: this.isShowChart,
+                text: &quot;数据准备中&quot;,
+                left: &quot;center&quot;,
+                top: &quot;center&quot;,
+                textStyle: {
+                  fontSize: 16,
+                  fontWeight: 400
+                }
+              },
+              legend: [
+                {
+                  data: legends,
+                  top: &quot;2%&quot;,
+                  left: &quot;25%&quot;,
+                  right: &quot;10%&quot;,
+                  selected: this.selectedLegend
+                },
+                {
+                  data: [&quot;数据4&quot;],
+                  top: &quot;73%&quot;,
+                  right: &quot;0%&quot;
+                }
+              ],
+              dataZoom: [
+                {
+                  id: &quot;dataZoomX&quot;,
+                  type: &quot;slider&quot;,
+                  xAxisIndex: [0, 1],
+                  height: 20,
+                  top: &quot;65%&quot;,
+                  right: 10,
+                  left: 10,
+                  handleIcon:
+                    &quot;M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z&quot;,
+                  handleSize: &quot;80%&quot;,
+                  fillerColor: &quot;rgba(255, 76, 31,.2)&quot;,
+                  dataBackground: {
+                    areaStyle: {
+                      color: &quot;&quot;
+                    },
+                    lineStyle: {
+                      opacity: 1,
+                      color: &quot;#FF4C1F&quot;
+                    }
+                  },
+                  handleStyle: {
+                    color: &quot;#FF4C1F&quot;
+                  },
+                  filterMode: &quot;weakFilter&quot;,
+                  zoomOnMouseWheel: &quot;false&quot;
+                }
+              ],
+              tooltip: {
+                trigger: &quot;axis&quot;,
+                axisPointer: { type: &quot;cross&quot; },
+                formatter: function (datas) {
+                  let res = datas[0].name + &quot;&lt;br/&gt;&quot;;
+                  let length = datas.length;
+                  let i = 0;
+                  for (; i &lt; length; i++) {
+                    res += `
+                    &lt;span style=&quot;display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:${
+                      datas[i].color
+                    };&quot;&gt;&lt;/span&gt;
+                    ${datas[i].seriesName}: ${
+                      datas[i].value != null
+                        ? datas[i].value.toFixed(4)
+                        : &quot;无数据&quot;
+                    }
+                    &lt;br/&gt;
+                    `;
+                  }
+                  return res;
+                }
+              },
+              axisPointer: {
+                // 坐标轴指示器
+                link: { xAxisIndex: &quot;all&quot; },
+                label: { backgroundColor: &quot;#777&quot; }
+              },
+              grid: [
+                {
+                  top: 40,
+                  left: 10,
+                  right: 0,
+                  bottom: 20,
+                  height: &quot;60%&quot;
+                },
+                {
+                  left: 10,
+                  right: 0,
+                  bottom: 15,
+                  height: &quot;20%&quot;
+                }
+              ],
+              xAxis: [
+                {
+                  type: &quot;category&quot;,
+                  data: dts,
+                  axisLine: {
+                    show: true,
+                    lineStyle: {
+                      color: &quot;#D8D8D8&quot;
+                    }
+                  },
+                  axisTick: {
+                    show: false
+                  },
+                  axisLabel: {
+                    show: true,
+                    textStyle: {
+                      fontSize: 10,
+                      color: &quot;#222831&quot;
+                    }
+                  },
+                  splitLine: {
+                    show: false
+                  },
+                  scale: true
+                },
+                {
+                  type: &quot;category&quot;,
+                  gridIndex: 1,
+                  data: dts,
+                  axisLine: {
+                    lineStyle: {
+                      color: &quot;#D8D8D8&quot;
+                    }
+                  },
+                  scale: true,
+                  axisTick: { show: false },
+                  splitLine: { show: false },
+                  axisLabel: { show: false }
+                }
+              ],
+              yAxis: [
+                {
+                  scale: true,
+                  splitArea: {
+                    show: false
+                  },
+                  splitNumber: 4,
+                  axisLabel: {
+                    show: true,
+                    textStyle: {
+                      fontSize: 10,
+                      color: &quot;#808080&quot;,
+                      align: &quot;left&quot;
+                    }
+                  },
+                  axisLine: {
+                    show: false,
+                    lineStyle: {
+                      color: &quot;#D8D8D8&quot;
+                    }
+                  },
+                  axisTick: {
+                    show: false
+                  },
+                  splitLine: {
+                    show: true,
+                    lineStyle: {
+                      color: &quot;#F5F5F5&quot;
+                    }
+                  }
+                },
+                {
+                  type: &quot;value&quot;,
+                  gridIndex: 1,
+                  offset: -10,
+                  axisLabel: {
+                    show: true,
+                    textStyle: { fontSize: 10, color: &quot;#808080&quot;, align: &quot;left&quot; }
+                  },
+                  axisLine: { show: false },
+                  axisTick: { show: false },
+                  splitLine: { show: false }
+                }
+              ],
+              series: [
+                ...simulation, // 数据3
+                ...fund_account, // 数据2
+                {
+                  name: fundData.name,
+                  type: &quot;line&quot;,
+                  data: fundData.data,
+                  color: &quot;#FF7979&quot;,
+                  symbol: false,
+                  symbolSize: 0, // 拐点圆的大小
+                  areaStyle: {
+                    // 折线渐变阴影
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                      {
+                        offset: 0,
+                        color: &quot;#FEE1E1&quot;
+                      },
+                      {
+                        offset: 0.76,
+                        color: &quot;#FFF8F8&quot;
+                      }
+                    ])
+                  },
+                  markLine: {
+                    lineStyle: { width: 2 }, // 标线大小
+                    data: [
+                      {
+                        name: &quot;标线1&quot;,
+                        yAxis: this.fundInfo.warning_line,
+                        lineStyle: {
+                          color: &quot;#FFAE00&quot;
+                        },
+                        0: {
+                          // type: &quot;average&quot;,
+                          symbol: &quot;image://@/assets/task_status/success.png&quot;
+                        },
+                        1: {
+                          symbol: &quot;none&quot;
+                        }
+                      },
+                      {
+                        name: &quot;标线2&quot;,
+                        yAxis: this.fundInfo.liquidation_line,
+                        lineStyle: {
+                          color: &quot;#FF4A00&quot;
+                        },
+                        0: {
+                          symbol: &quot;none&quot;
+                        },
+                        1: {
+                          symbol: &quot;none&quot;
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  name: &quot;数据4&quot;,
+                  type: &quot;line&quot;,
+                  data: retracementData.data,
+                  color: &quot;#6C9EF8&quot;,
+                  gridIndex: 1,
+                  xAxisIndex: 1,
+                  yAxisIndex: 1,
+                  symbolSize: 0, // 拐点圆的大小
+                  areaStyle: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                      {
+                        offset: 0,
+                        color: &quot;rgba(115,156,250,0.05)&quot;
+                      },
+                      {
+                        offset: 0.76,
+                        color: &quot;rgba(115,156,250,0.25)&quot;
+                      }
+                    ])
+                  }
+                }
+              ]
+            };
+          },
+          // 重点看这里，下载曲线数据
+          handleDownload() {
+            const fundPerformance_dt = this.fundPerformanceData;
+            const rows = []; // 整理后的数据
+            const fields = [];
+            fundPerformance_dt.forEach((item) =&gt; {
+              fields.push(item.name);
+            });
+            let firstFieldData = fundPerformance_dt.find(
+              (item) =&gt; item.name === fields[0]
+            ).data;
+            for (let i = 0; i &lt; firstFieldData.length; i++) {
+              let tempData = {};
+              for (const field of fields) {
+                tempData[field] = fundPerformance_dt.find(
+                  (item) =&gt; item.name === field
+                ).data[i];
+              }
+              rows.push(tempData);
+            }
+
+            // 在这里导出文件
+            const fileName = &quot;data&quot;;
+            const result = json2csv.parse(rows, {
+              fields: fields,
+              excelStrings: true
+            });
+            if (this.MyBrowserIsIE()) {
+              // IE10以及Edge浏览器
+              const BOM = &quot;\uFEFF&quot;;
+              // 文件转Blob格式
+              const csvData = new Blob([BOM + result], { type: &quot;text/csv&quot; });
+              navigator.msSaveBlob(csvData, `${fileName}.csv`);
+            } else {
+              const csvContent = &quot;data:text/csv;charset=utf-8,\uFEFF&quot; + result;
+              // 非ie 浏览器
+              const link = document.createElement(&quot;a&quot;);
+              link.href = encodeURI(csvContent);
+              link.download = fileName;
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }
+          }
+        }
+}</code></pre>
+a:["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L8",null,{"href":"/zh/archives","className":"ghost-inline","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"全部文章"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"已从掘金同步"}],["$","span",null,{"children":"2022-06-17"}],["$","span",null,{"children":[3," ","分钟阅读"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"echarst 折线图下载csv文件功能的实现"}],["$","p",null,{"className":"hero-copy","children":"业务场景：在echarts折线图中，右上角有个下载功能，但下载的内容是一张图片，能不能适当修改这个功能，让它下载的整条折线图的数据并导出csv格式的文件呢？安排！ 需求分析：首先不能再使用Echarts官方提供的标签，用i标签的click事件触发json格式整理，最终导出为csv文件! 官方示例： 下载的CSV文件： 功能实现： html部分： js部分"}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"文章说明"}],["$","span",null,{"children":"这篇文章被保留在新的博客壳中，同时继续保留原始中文内容。"}],["$","a",null,{"href":"https://juejin.cn/post/7110086659932160030","target":"_blank","rel":"noreferrer","className":"ghost-inline","children":["原始出处",["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-external-link h-4 w-4","children":[["$","path","1q9fwt",{"d":"M15 3h6v6"}],["$","path","gplh6r",{"d":"M10 14 21 3"}],["$","path","a6xqqp",{"d":"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"}],"$undefined"]}]]}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$12"}}]}]]}]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"POJIAN.BLOG"}],["$","meta","2",{"name":"description","content":"A multilingual personal blog around AI tooling, product delivery, memoir, and long-form archive work."}]]
+c:null

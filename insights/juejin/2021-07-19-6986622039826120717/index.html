@@ -1,163 +1,71 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vue深入学习—虚拟DOM和Diff算法 | CocoonBreak</title>
-    <meta name="description" content="1、snabbdom 是什么？ snabbdom是“速度&quot;的意思，源码只有200行，使用TS写的，让东西变得模块化 2、snabbdom 的 h 函数如何工作？ h函数用于产生虚拟节点，同时也可以嵌套使用，得到虚拟DOM树， 3、什么是虚拟...">
-    <meta property="og:title" content="Vue深入学习—虚拟DOM和Diff算法 | CocoonBreak">
-    <meta property="og:description" content="1、snabbdom 是什么？ snabbdom是“速度&quot;的意思，源码只有200行，使用TS写的，让东西变得模块化 2、snabbdom 的 h 函数如何工作？ h函数用于产生虚拟节点，同时也可以嵌套使用，得到虚拟DOM树， 3、什么是虚拟...">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2021-07-19-6986622039826120717/">
-    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
-    <link rel="icon" href="/img/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/custom/site.css">
-    <script defer src="/custom/site.js"></script>
-    <script defer src="/custom/live2d-loader.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content="0; url=/en/posts/sync/2021-07-19-6986622039826120717/" />
+    <title>Juejin article moved</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1020;
+        --panel: rgba(10, 18, 38, 0.88);
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #f6efe3;
+        --muted: #93a2bf;
+        --accent: #7ae7c7;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
+          linear-gradient(180deg, #0b1020 0%, #050813 100%);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        padding: 24px;
+      }
+      main {
+        width: min(640px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--panel);
+        padding: 32px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(28px, 4vw, 42px);
+      }
+      p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      a {
+        color: #08111e;
+        background: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    </style>
   </head>
   <body>
-    <div class="article-shell">
-      <nav class="insight-nav">
-        <a href="/">← 首页</a>
-        <a href="/insights/">同步文章</a>
-        <a href="https://juejin.cn/post/6986622039826120717" target="_blank" rel="noreferrer">掘金原文</a>
-      </nav>
-
-      <header class="article-hero" data-reveal>
-        <div class="article-meta">
-          <span>2021.07.19</span><span>Vue.js</span><span>DOM</span>
-        </div>
-        <h1>Vue深入学习—虚拟DOM和Diff算法</h1>
-        <p class="article-intro">1、snabbdom 是什么？ snabbdom是“速度&quot;的意思，源码只有200行，使用TS写的，让东西变得模块化 2、snabbdom 的 h 函数如何工作？ h函数用于产生虚拟节点，同时也可以嵌套使用，得到虚拟DOM树， 3、什么是虚拟...</p>
-        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/6986622039826120717" target="_blank" rel="noreferrer">掘金原文</a>。</div>
-      </header>
-
-      <article class="prose" data-reveal>
-        <blockquote>
-<p><strong>1、snabbdom 是什么？</strong></p>
-</blockquote>
-<p>snabbdom是“速度"的意思，源码只有200行，使用TS写的，让东西变得模块化</p>
-<blockquote>
-<p><strong>2、snabbdom 的 h 函数如何工作？</strong></p>
-</blockquote>
-<p>h函数用于产生虚拟节点，同时也可以嵌套使用，得到虚拟DOM树，</p>
-<blockquote>
-<p><strong>3、什么是虚拟DOM?</strong></p>
-</blockquote>
-<p>用js对象描述DOM
-的层次结构，DOM中的一切属性都在虚拟DOM中有对应到的属性。</p>
-<blockquote>
-<p>3.1、创建一个虚拟DOM</p>
-</blockquote>
-<pre class="//"><code>const patch = init([classModule, propsModule, styleModule, eventListenersModule]);
-
-// 创建虚拟节点
-const myVirtual1 = h('a', {
-    props: {
-        href:'https://blog.lijianlin.com.cn/',
-        target: '_blank'
-    }
-},'魁首');
-console.log(myVirtual);
-
-//让虚拟节点上树
-const container = document.getElementById('container');
-patch(container, myVirtual1);</code></pre>
-<blockquote>
-<p>3.2、patch函数源码流程图</p>
-</blockquote>
-<p><img alt="image-20210719192255676.png" loading="lazy" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fbdccb5505d2413fb154444d5e835181~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
-<pre class="//"><code>export default function(oldVnode, newVnode){
-    // 1、判断传入的第一个参数，是DOM节点还是虚拟节点？
-    if(oldValue.sel == '' || oldValue.sel == undefined){
-        // 2、传入的第一个参数是DOM 节点，包装成虚拟节点
-        oldValue = vnode(oldValue.tagName.toLowerCase(), {}, [], undefined, oldValue);
-    }
-    // 3、判断oldValue和newValue是否为同一节点？
-    if(oldValue.key == newValue.kee &amp;&amp; oldValue.sel == newValue.sel){
-        console.log('是同一个节点');
-        // 3.1、判断新旧vnode是否为同一个对象
-        if(oldValue == newValue) return;
-        // 3.2、判断新旧vnode有没有text属性
-        if(newValue.text != undefined &amp;&amp; (newValue.children == undefined || newValue.children.length == 0)){
-            console.log('新vnode有text属性');
-            // 3.2.1、如果新虚拟节点中的text和老的虚拟节点的text不同，那么直接让新的text写入老的elm中。如果老的elm中的chilren,那么也会立即消失掉。
-            if(newValue.text != oldValue.text){
-                oldValue.elm.innerHTML = newValue.text;
-            }
-        }else {
-            // 新vnode没有text属性，有chidren
-            console.log('新的vnode没有text属性');
-            // 3.2.2、判断老的有咩有children
-            if(oldValue.children != undefined &amp;&amp; oldVlaue.children &gt; 0){
-                // 3.2.2.1、老节点有children
-                let ch = newVnode.children[i];
-                // 3.2.2.2、再次遍历，看看oldValue 中有没有节点和他是same的
-                let isExist = false;
-                for(let j = 0; j &lt; oldValue.children.length; j++){
-                    if(oldValue.children[j].sel == ch.sel &amp;&amp; oldValue.children[j].key == ch.key){
-                        isExist = true; 
-                    }
-                }
-                if(!isExist){
-                    console.log(ch, i);
-                    let dom = createElement(ch);
-                    ch.elm = dom;
-                }
-            }else{
-                // 3.2.2.3、老节点没有chidlren
-                // 3.2.2.4、清空老节点内容
-                oldValue.elm.innerHTML = '';
-                // 3.2.2.5、遍历新的vnode子节点，创建DOM，上树
-                for(let i = 0; i &lt; newVnode.children.length; i++){
-                    let dom = createElement(newVnode.children[i]);
-                    oldVnode.elm.appendChild(dom);
-                }
-            }
-        }
-    }else{  
-        console.log('不是同一个节点')
-        let newVnoElm = createElement(newVnode);
-        // 4、插入到老节点之前
-        oldValue.elm.parentNode.insertBefore(newVnodeElm, oldVnode.elm);
-    }
-}</code></pre>
-<blockquote>
-<p><strong>4、diff 算法原理</strong></p>
-</blockquote>
-<p>4.1、diff是发生在虚拟DOM上的，用来计算两个虚拟DOM的差异，并重新熏染。</p>
-<pre class="//"><code>const patch = init([classModule, propsModule, styleModule, eventListenersModule]);
-
-// 创建虚拟节点
-const myVirtual2 = h('ul',{},[
-    h('li',{key:'A'},'A'),
-    h('li',{key:'B'},'B'),
-    h('li',{key:'C'},'C'),
-    h('li',{key:'D'},'D'),
-]);
-// 上树
-patch(container, myVirtual2);
-
-// 创建替换节点
-const myVirtual3 = h('ul',{},[
-    h('li',{key:'D'},'D'),
-    h('li',{key:'A'},'A'),
-    h('li',{key:'B'},'B),
-    h('li',{key:'C'},'C'),
-    h('li',{key:'D'},'D'),
-]);</code></pre>
-<blockquote>
-<p><strong>4.2、Diff值得注意的地方</strong>：</p>
-</blockquote>
-<ul>
-<li>Diff算法更改前后是同一个DOM节点</li>
-<li>选择器、key相同则判断为同一个节点。</li>
-<li>只进行同层半价，不会跨层比较。</li>
-</ul>
-      </article>
-    </div>
+    <main>
+      <h1>Juejin article moved</h1>
+      <p>This synced Juejin article now lives under the rebuilt post route.</p>
+      <a href="/en/posts/sync/2021-07-19-6986622039826120717/">Continue</a>
+    </main>
+    <script>
+      window.location.replace("/en/posts/sync/2021-07-19-6986622039826120717/");
+    </script>
   </body>
 </html>

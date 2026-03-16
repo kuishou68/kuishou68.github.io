@@ -1,0 +1,177 @@
+1:"$Sreact.fragment"
+2:I[6825,["177","static/chunks/app/layout-9fe08982949093af.js"],"ThemeProvider"]
+3:I[1454,["177","static/chunks/app/layout-9fe08982949093af.js"],"Live2DLoader"]
+4:I[5244,[],""]
+5:I[3866,[],""]
+6:I[7367,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"HtmlLocaleSync"]
+7:I[4750,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"BlogNavbar"]
+8:I[8173,["173","static/chunks/173-ef41fafde65cda27.js","97","static/chunks/app/%5Blang%5D/posts/%5B...slug%5D/page-6ee700c5ad1e0b29.js"],""]
+b:I[6213,[],"OutletBoundary"]
+d:I[6213,[],"MetadataBoundary"]
+f:I[6213,[],"ViewportBoundary"]
+11:I[4835,[],""]
+:HL["/_next/static/media/24f6ebe2756575bd-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/36966cca54120369-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5611c55482296524-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/edef1a271f97a8ec-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/fb12bdfc6f99d938-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/473fb34e1570d6f1.css","style"]
+:HL["/_next/static/css/1c5aef1c0dd20138.css","style"]
+:HL["/_next/static/css/45bbd2f0fdf5da27.css","style"]
+:HL["/_next/static/css/03999bf3b1a627a0.css","style"]
+0:{"P":null,"b":"ZNjizd8Y7He_YS_OA6hmp","p":"","c":["","es","posts","sync","2023-05-03-7228954539864784951",""],"i":false,"f":[[["",{"children":[["lang","es","d"],{"children":["posts",{"children":[["slug","sync/2023-05-03-7228954539864784951","c"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/473fb34e1570d6f1.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1c5aef1c0dd20138.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/45bbd2f0fdf5da27.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/03999bf3b1a627a0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__variable_dd5b2f __variable_64b714 __variable_51740a __variable_7afcbf __variable_6634df antialiased","children":["$","$L2",null,{"attribute":"class","defaultTheme":"dark","enableSystem":false,"disableTransitionOnChange":true,"children":[["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","$L6",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"en","homeHref":"/","rootAliasForDefaultLocale":true,"labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/","label":"Home"},{"href":"/#latest","label":"Latest"},{"href":"/#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/#community","label":"Community"}],"legacyRoots":[{"slug":"A前端👨‍💻","title":{"en":"Frontend Atlas","zh":"前端图谱","es":"Atlas Frontend","ja":"フロントエンド地図","ar":"أطلس الواجهة الأمامية"},"description":{"en":"CSS, Vue, React, Canvas, Node, uni-app, build tools, and the earlier front-end trail.","zh":"CSS、Vue、React、Canvas、Node、uni-app、打包工具，以及更早的前端路径。","es":"CSS, Vue, React, Canvas, Node, uni-app, herramientas de build y el rastro front-end más temprano.","ja":"CSS、Vue、React、Canvas、Node、uni-app、ビルドツールなど、初期のフロントエンド蓄積。","ar":"CSS وVue وReact وCanvas وNode وuni-app وأدوات البناء والمسار الأقدم للواجهة الأمامية."}},{"slug":"B面试题📑","title":{"en":"Interview Bank","zh":"面试题仓库","es":"Banco de Entrevistas","ja":"面接バンク","ar":"بنك المقابلات"},"description":{"en":"Question banks for browser internals, networking, Vue, React, JavaScript, and engineering.","zh":"浏览器、网络、Vue、React、JavaScript 和工程化的面试题集合。","es":"Baterías de preguntas sobre navegador, red, Vue, React, JavaScript e ingeniería.","ja":"ブラウザ、ネットワーク、Vue、React、JavaScript、開発基盤に関する面接問題。","ar":"مجموعات أسئلة عن المتصفح والشبكات وVue وReact وJavaScript والهندسة."}},{"slug":"Vue实战💻","title":{"en":"Vue Practice","zh":"Vue 实战","es":"Práctica Vue","ja":"Vue 実戦","ar":"تطبيقات Vue"},"description":{"en":"Real project records around Ant Design, Echarts, mini programs, stores, and browser features.","zh":"围绕 Ant Design、Echarts、小程序、商城项目和浏览器功能的一组实战记录。","es":"Registros reales sobre Ant Design, Echarts, mini programas, tiendas y funciones del navegador.","ja":"Ant Design、Echarts、ミニプログラム、ストア、ブラウザ機能に関する実戦記録。","ar":"سجلات عملية حول Ant Design وEcharts والبرامج المصغرة والمتاجر وميزات المتصفح."}},{"slug":"走过的路🌱","title":{"en":"Growing Path","zh":"走过的路","es":"Camino Recorrido","ja":"歩いてきた道","ar":"الطريق الذي سلكته"},"description":{"en":"Yearly reviews and growth notes that carry more life signal than technical polish.","zh":"年度总结和成长记录，保留生活感和时间感。","es":"Revisiones anuales y notas de crecimiento con más vida que pulido técnico.","ja":"年次レビューと成長記録。技術の整い方より時間の感触が残っています。","ar":"مراجعات سنوية وملاحظات نمو تحمل أثر الحياة أكثر من الصقل التقني."}},{"slug":"读过的书📚️","title":{"en":"Reading Shelf","zh":"读书笔记","es":"Estante de Lectura","ja":"読書棚","ar":"رف القراءة"},"description":{"en":"Book notes across networking, JavaScript, algorithms, and systems thinking.","zh":"网络、JavaScript、算法和系统思维方向的读书笔记。","es":"Notas de lectura sobre redes, JavaScript, algoritmos y pensamiento de sistemas.","ja":"ネットワーク、JavaScript、アルゴリズム、システム思考に関する読書ノート。","ar":"ملاحظات قراءة حول الشبكات وJavaScript والخوارزميات والتفكير المنظومي."}},{"slug":"PHP🐘","title":{"en":"PHP Shelf","zh":"PHP 归档","es":"Estante PHP","ja":"PHP 棚","ar":"رف PHP"},"description":{"en":"Earlier PHP notes and experiments that still belong in the public record.","zh":"更早期的 PHP 文章和实验记录。","es":"Notas y experimentos tempranos de PHP que siguen formando parte del archivo.","ja":"初期の PHP ノートと実験記録。","ar":"ملاحظات وتجارب PHP المبكرة التي ما زالت جزءًا من السجل."}},{"slug":"Python🐍","title":{"en":"Python Shelf","zh":"Python 归档","es":"Estante Python","ja":"Python 棚","ar":"رف Python"},"description":{"en":"Small scraping experiments and data-oriented notes from the earlier Python phase.","zh":"偏数据和爬取的小实验，保留了更早一阶段的 Python 轨迹。","es":"Pequeños experimentos de scraping y notas orientadas a datos de la etapa temprana con Python.","ja":"スクレイピングやデータ寄りの小さな Python 実験。","ar":"تجارب صغيرة في الاستخراج والبيانات من المرحلة المبكرة مع Python."}}]}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","div",null,{"className":"mx-auto max-w-3xl pb-20 pt-8","children":["$","div",null,{"className":"hero-panel space-y-5","children":[["$","span",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"className":"hero-title compact","children":"That page never made it into the archive."}],["$","p",null,{"className":"hero-copy","children":"Try the rebuilt home, the full archive, or one of the legacy shelves instead."}],["$","$L8",null,{"href":"/","className":"primary-chip","children":"Go back to the English home"}]]}]}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L8",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]}]]}],{"children":[["lang","es","d"],["$","$1","c",{"children":[null,"$L9"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","sync/2023-05-03-7228954539864784951","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children","$0:f:0:1:2:children:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":"$Lc"}]]}],{},null,false]},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","JNIiml-wFB6x02u_YeUyJ",{"children":[["$","$Ld",null,{"children":"$Le"}],["$","$Lf",null,{"children":"$L10"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+9:[["$","$L6",null,{"lang":"es","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"es","homeHref":"/es","rootAliasForDefaultLocale":false,"labels":{"brand":"POJIAN.BLOG","subtitle":"Un archivo largo sobre tooling de IA, entrega y memoria personal.","menu":"Directorio","close":"Cerrar","switchLanguage":"Cambiar idioma","switchTheme":"Cambiar tema"},"links":[{"href":"/es","label":"Inicio"},{"href":"/es#latest","label":"Reciente"},{"href":"/es#collections","label":"Colecciones"},{"href":"/es/archives","label":"Archivo"},{"href":"/es#community","label":"Comunidad"}],"legacyRoots":"$0:f:0:1:1:props:children:1:props:children:props:children:props:children:1:props:notFound:1:1:props:children:0:props:legacyRoots"}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"Un archivo largo sobre tooling de IA, entrega y memoria personal."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/es","className":"hover:text-[var(--text)]","children":"Inicio"}],["$","$L8",null,{"href":"/es/archives","className":"hover:text-[var(--text)]","children":"Archivo"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]
+12:T27a4,<h3
+id="一插件bito一个号称不需要openai-key-就能玩chatgpt-4-的男人">一、插件Bito，一个号称不需要openAI
+key 就能玩chatGPT-4 的男人;</h3>
+<p><img
+src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bd4def0e6a57425ba7bad8289b1272ed~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"
+alt="bito介绍.png" /></p>
+<h4 id="11-以下是我对它的提问">1.1 以下是我对它的提问:</h4>
+<p><img
+src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/369db9604bcc4a14a705714719bd81a5~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"
+alt="20230503214333.png" /></p>
+<ul>
+<li>通过跟它的聊天，我猜它内部一定实现了这个功能，具体怎么实现的，一顿追问下，代码里面的正则引起了我的注意，并且说出了它的思路：“使用了正则表达式
+<code>/\r?\n/</code>
+将Curl命令分成了多行，并使用数组的reduce方法将每一行连接起来，形成一个参数数组。然后使用for循环遍历数组，将其中的参数取出并赋值到对应的变量中”，跟着这个思路，我自己实现一个其实也不难，说干就干；</li>
+</ul>
+<h3 id="二什么是-curl-干嘛用的">二、什么是 <a
+href="https://link.juejin.cn?target=https%3A%2F%2Feverything.curl.dev%2F"
+title="https://everything.curl.dev/">curl</a> ？干嘛用的？</h3>
+<p>-2.1 来看 <a
+href="https://link.juejin.cn?target=https%3A%2F%2Fwww.ruanyifeng.com%2F"
+title="https://www.ruanyifeng.com/">阮一峰</a> 大佬怎么说的 <a
+href="https://link.juejin.cn?target=https%3A%2F%2Fwww.ruanyifeng.com%2Fblog%2F2019%2F09%2Fcurl-reference.html"
+title="https://www.ruanyifeng.com/blog/2019/09/curl-reference.html">curl
+的用法指南</a> ：curl 是常用的命令行工具，用来请求 Web
+服务器。它的名字就是客户端（client）的 URL
+工具的意思。如果熟练的话，完全可以取代 Postman 这一类的图形界面工具。<a
+href="https://link.juejin.cn?target=https%3A%2F%2Feverything.curl.dev%2F"
+title="https://everything.curl.dev/">curl文档</a></p>
+<h3
+id="三好像在哪里见到过有种似曾相识的感觉">三、好像在哪里见到过？有种似曾相识的感觉？</h3>
+<ul>
+<li>3.1
+浏览器复制完整<code>url</code>到<code>postMan</code>的时候，最好的方式就是通过<code>curl</code>；
+<img
+src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/45dc50ab7c6844ca8da1c7a136dc9ab2~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"
+alt="image.png" /></li>
+<li>3.2 复制出来的内容</li>
+</ul>
+<pre><code>curl &#39;https://mcs.snssdk.com/list&#39; \
+  -H &#39;authority: mcs.snssdk.com&#39; \
+  -H &#39;accept: */*&#39; \
+  -H &#39;accept-language: zh-CN,zh;q=0.9&#39; \
+  -H &#39;content-type: application/json; charset=UTF-8&#39; \
+  -H &#39;origin: https://juejin.cn&#39; \
+  -H &#39;referer: https://juejin.cn/&#39; \
+  -H &#39;sec-ch-ua: &quot;Chromium&quot;;v=&quot;112&quot;, &quot;Google Chrome&quot;;v=&quot;112&quot;, &quot;Not:A-Brand&quot;;v=&quot;99&quot;&#39; \
+  -H &#39;sec-ch-ua-mobile: ?0&#39; \
+  -H &#39;sec-ch-ua-platform: &quot;Windows&quot;&#39; \
+  -H &#39;sec-fetch-dest: empty&#39; \
+  -H &#39;sec-fetch-mode: cors&#39; \
+  -H &#39;sec-fetch-site: cross-site&#39; \
+  -H &#39;user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36&#39; \
+  --data-raw &#39;[{&quot;events&quot;:[{&quot;event&quot;:&quot;ad_web_block_show&quot;,&quot;params&quot;:&quot;{\&quot;_staging_flag\&quot;:0,\&quot;ad_position\&quot;:\&quot;creatorhome\&quot;,\&quot;ad_url\&quot;:\&quot;https://juejin.cn/book/6918979822425210891?utm_source=creator&amp;utm_medium=banner&amp;utm_campaign=xiaoce_LowCode_202304\&quot;,\&quot;event_index\&quot;:1683096484192}&quot;,&quot;local_time_ms&quot;:1683119960008,&quot;is_bav&quot;:1,&quot;ab_sdk_version&quot;:&quot;90083871,90081172,90081874&quot;,&quot;session_id&quot;:&quot;5eda070e-4ea9-49f0-be97-303adb6c0134&quot;}],&quot;user&quot;:{&quot;user_unique_id&quot;:&quot;7078621510457574945&quot;,&quot;user_id&quot;:&quot;3817931570691031&quot;,&quot;user_is_login&quot;:true,&quot;web_id&quot;:&quot;7078621510457574945&quot;},&quot;header&quot;:{&quot;app_id&quot;:2608,&quot;os_name&quot;:&quot;windows&quot;,&quot;os_version&quot;:&quot;10&quot;,&quot;device_model&quot;:&quot;Windows NT 10.0&quot;,&quot;ab_sdk_version&quot;:&quot;90083871,90081172,90081874&quot;,&quot;language&quot;:&quot;zh-CN&quot;,&quot;platform&quot;:&quot;Web&quot;,&quot;sdk_version&quot;:&quot;4.2.9&quot;,&quot;sdk_lib&quot;:&quot;js&quot;,&quot;timezone&quot;:8,&quot;tz_offset&quot;:-28800,&quot;resolution&quot;:&quot;1920x1080&quot;,&quot;browser&quot;:&quot;Chrome&quot;,&quot;browser_version&quot;:&quot;112.0.0.0&quot;,&quot;referrer&quot;:&quot;https://juejin.cn/notification/digg&quot;,&quot;referrer_host&quot;:&quot;juejin.cn&quot;,&quot;width&quot;:1920,&quot;height&quot;:1080,&quot;screen_width&quot;:1920,&quot;screen_height&quot;:1080,&quot;utm_source&quot;:&quot;juejingwdhl&quot;,&quot;custom&quot;:&quot;{\&quot;student_verify_status\&quot;:\&quot;not_student\&quot;,\&quot;user_level\&quot;:3,\&quot;profile_id\&quot;:\&quot;3817931570691031\&quot;}&quot;},&quot;local_time&quot;:1683119960}]&#39; \
+  --compressed</code></pre>
+<ul>
+<li>3.3 这啥呀？认都不认识，怎么解析？
+别慌，既然有这个东西，一定有他的规律，仔细看，第一行的
+<code>curl 'https://mcs.snssdk.com/list' \</code>
+是不是我们的目标地址，后面以 <code>-H</code>
+开头的参数直接指定标头，那<code>-data-raw</code>又是个啥？通过查阅 <a
+href="https://link.juejin.cn?target=https%3A%2F%2Feverything.curl.dev%2F"
+title="https://everything.curl.dev/">curl文档</a>
+了解到：“要发送一个以@符号开头的POST正文，为了避免curl试图将其作为文件名加载，请改用--data
+raw。”</li>
+</ul>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/723c4ea2aac4424f8ff420120eee7755~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"
+alt="image.png" /></p>
+<ul>
+<li>3.4
+来看postman解析出来的结果，从中得到几个重要信息，url、header和请求方式post，这些信息不久已经展示在curl中了嘛，我们只需要用正则匹配出来就行！
+<img
+src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8cbe8819efb548a9a5491253dc246b45~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"
+alt="postman使用curl.png" /></li>
+</ul>
+<p><img
+src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/cc1fd505375d404380decf492517b39e~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"
+alt="image.png" /></p>
+<h3 id="四js解析过程">四、js解析过程</h3>
+<ul>
+<li>4.1
+这里的写法并不是很完善，但基本可以提取大部分curl，有问题的地方还请各位大佬指点;</li>
+</ul>
+<pre><code>let { detail: { value } } = e;
+    let curlCmd = value;
+    let { urlForm } = this.data;
+    // 1.以换行空格，切割成一个数组
+    let lines = curlCmd.split(/\r?\n/);
+    // 2.匹配单引号中间关键信息
+    let regex = /&#39;~?.+&#39;/g;
+    // let method = &quot;&quot;;
+    let headers = [];
+    // let data = &quot;&quot;;
+    let url = &quot;&quot;;
+    // 3.数组的每一项内容都是独立的
+    lines.map((line) =&gt; {
+      if (regex.test(line)) {
+        // 4.去除将单引号，避免干扰后续的提取
+        let line_str = line.match(regex)[0].replace(/\&#39;/g, &quot;&quot;);
+        let headerStr = line_str.split(&quot;:&quot;, 2);
+        // 5.带curl的为http 内容;
+        if (line.indexOf(&quot;curl&quot;) !== -1) {
+          url = line_str;
+        } else if (line.indexOf(&quot;data-raw&quot;) !== -1) {
+          // 6.带data-raw 暂且设置为post请求方式，其他请求方式一样的提取方式
+          urlForm.body = line_str;
+          this.setData({
+            requestValue: &quot;POST&quot;,
+            urlForm: urlForm,
+          });
+        } else if (headerStr) {
+          // 7.将文本以 ： 分隔成2部分作为键值，同时去除多余 &#39; :
+          let headerKey = line_str.match(/~?.+: /g)[0].replace(/\: /g, &quot;&quot;);
+          let headerValue = line_str.match(/: ?.+/g)[0].replace(/\: /g, &quot;&quot;);
+          headers.push({
+            key: headerKey,
+            value: headerValue,
+          });
+        }
+      }
+    });
+    urlForm.header = headers;
+    this.setData({
+      requestUrl: url,
+      urlForm: urlForm,
+    });</code></pre>
+<ul>
+<li>4.2 为了可以修改解析结果，我写了个单页面小程序;
+同时支持将解析的结果发送请求，并且将请求后的结果内容导出excel;</li>
+</ul>
+<p><img
+src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a9a8121c93b34d6dbea6c7a644c392a4~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"
+alt="cuel解析小帮手.gif" /></p>
+<h3
+id="五为什么要解析它用postman解析不行嘛">五、为什么要解析它？用postMan解析不行嘛？</h3>
+<ul>
+<li>5.1 借<a
+href="https://link.juejin.cn?target=https%3A%2F%2Fwww.ruanyifeng.com%2F"
+title="https://www.ruanyifeng.com/">阮一峰</a>
+老师说的一句话：“如果熟练的话，完全可以取代 Postman
+这一类的图形界面工具”，在强大的图形化工具面前，用的是挺爽，但你有没有想过人家是怎么实现的，chatGPT是怎么实现的，正是chatGPT提出的思路，让我有了自己写一遍的冲动！代码比较简单，有兴趣的小伙伴可以直接扫码体验一下，<a
+href="https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fkuishou68%2Fstrategy-helpy%255B"
+title="https://github.com/kuishou68/strategy-helpy%5B">代码仓库地址</a>：<a
+href="https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fkuishou68%2Fstrategy-helpy"
+title="https://github.com/kuishou68/strategy-helpy">github.com/kuishou68/s…</a>
+最后谢谢你的观看，别忘了关注、点赞(^_^)。</li>
+</ul>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b95cda8d32e64162ac3163512428a97a~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"
+alt="fc8085160e757c438fced96f07307c1.jpg" /></p>
+a:["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L8",null,{"href":"/es/archives","className":"ghost-inline","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Todos los textos"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"Sincronizado desde Juejin"}],["$","span",null,{"children":"2023-05-03"}],["$","span",null,{"children":[3," ","min"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"我通过 VSCode 插件 Bito，问chatGPT-4，js如何解析curl？最后顺利帮我实现了一个微信小程序工具！"}],["$","p",null,{"className":"hero-copy","children":"一、插件Bito，一个号称不需要openAI key 就能玩chatGPT-4 的男人; 1.1 以下是我对它的提问: 通过跟它的聊天，我猜它内部一定实现了这个功能，具体怎么实现的，一顿追问下，代码里面的正则引起了我的注意，并且说出了它的思路：“使用了正则表达式 /\\r?\\n/ 将Curl命令分成了多行，并使用数组的reduce方法将每一行连接起来，形成一个..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"Sinopsis"}],["$","span",null,{"children":"Este texto se conserva dentro de la nueva estructura del blog manteniendo el contenido original en chino."}],["$","a",null,{"href":"https://juejin.cn/post/7228954539864784951","target":"_blank","rel":"noreferrer","className":"ghost-inline","children":["Fuente original",["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-external-link h-4 w-4","children":[["$","path","1q9fwt",{"d":"M15 3h6v6"}],["$","path","gplh6r",{"d":"M10 14 21 3"}],["$","path","a6xqqp",{"d":"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"}],"$undefined"]}]]}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$12"}}]}]]}]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"POJIAN.BLOG"}],["$","meta","2",{"name":"description","content":"A multilingual personal blog around AI tooling, product delivery, memoir, and long-form archive work."}]]
+c:null

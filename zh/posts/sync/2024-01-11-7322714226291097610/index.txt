@@ -1,0 +1,105 @@
+1:"$Sreact.fragment"
+2:I[6825,["177","static/chunks/app/layout-9fe08982949093af.js"],"ThemeProvider"]
+3:I[1454,["177","static/chunks/app/layout-9fe08982949093af.js"],"Live2DLoader"]
+4:I[5244,[],""]
+5:I[3866,[],""]
+6:I[7367,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"HtmlLocaleSync"]
+7:I[4750,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"BlogNavbar"]
+8:I[8173,["173","static/chunks/173-ef41fafde65cda27.js","97","static/chunks/app/%5Blang%5D/posts/%5B...slug%5D/page-6ee700c5ad1e0b29.js"],""]
+b:I[6213,[],"OutletBoundary"]
+d:I[6213,[],"MetadataBoundary"]
+f:I[6213,[],"ViewportBoundary"]
+11:I[4835,[],""]
+:HL["/_next/static/media/24f6ebe2756575bd-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/36966cca54120369-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5611c55482296524-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/edef1a271f97a8ec-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/fb12bdfc6f99d938-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/473fb34e1570d6f1.css","style"]
+:HL["/_next/static/css/1c5aef1c0dd20138.css","style"]
+:HL["/_next/static/css/45bbd2f0fdf5da27.css","style"]
+:HL["/_next/static/css/03999bf3b1a627a0.css","style"]
+0:{"P":null,"b":"ZNjizd8Y7He_YS_OA6hmp","p":"","c":["","zh","posts","sync","2024-01-11-7322714226291097610",""],"i":false,"f":[[["",{"children":[["lang","zh","d"],{"children":["posts",{"children":[["slug","sync/2024-01-11-7322714226291097610","c"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/473fb34e1570d6f1.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1c5aef1c0dd20138.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/45bbd2f0fdf5da27.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/03999bf3b1a627a0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__variable_dd5b2f __variable_64b714 __variable_51740a __variable_7afcbf __variable_6634df antialiased","children":["$","$L2",null,{"attribute":"class","defaultTheme":"dark","enableSystem":false,"disableTransitionOnChange":true,"children":[["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","$L6",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"en","homeHref":"/","rootAliasForDefaultLocale":true,"labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/","label":"Home"},{"href":"/#latest","label":"Latest"},{"href":"/#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/#community","label":"Community"}],"legacyRoots":[{"slug":"A前端👨‍💻","title":{"en":"Frontend Atlas","zh":"前端图谱","es":"Atlas Frontend","ja":"フロントエンド地図","ar":"أطلس الواجهة الأمامية"},"description":{"en":"CSS, Vue, React, Canvas, Node, uni-app, build tools, and the earlier front-end trail.","zh":"CSS、Vue、React、Canvas、Node、uni-app、打包工具，以及更早的前端路径。","es":"CSS, Vue, React, Canvas, Node, uni-app, herramientas de build y el rastro front-end más temprano.","ja":"CSS、Vue、React、Canvas、Node、uni-app、ビルドツールなど、初期のフロントエンド蓄積。","ar":"CSS وVue وReact وCanvas وNode وuni-app وأدوات البناء والمسار الأقدم للواجهة الأمامية."}},{"slug":"B面试题📑","title":{"en":"Interview Bank","zh":"面试题仓库","es":"Banco de Entrevistas","ja":"面接バンク","ar":"بنك المقابلات"},"description":{"en":"Question banks for browser internals, networking, Vue, React, JavaScript, and engineering.","zh":"浏览器、网络、Vue、React、JavaScript 和工程化的面试题集合。","es":"Baterías de preguntas sobre navegador, red, Vue, React, JavaScript e ingeniería.","ja":"ブラウザ、ネットワーク、Vue、React、JavaScript、開発基盤に関する面接問題。","ar":"مجموعات أسئلة عن المتصفح والشبكات وVue وReact وJavaScript والهندسة."}},{"slug":"Vue实战💻","title":{"en":"Vue Practice","zh":"Vue 实战","es":"Práctica Vue","ja":"Vue 実戦","ar":"تطبيقات Vue"},"description":{"en":"Real project records around Ant Design, Echarts, mini programs, stores, and browser features.","zh":"围绕 Ant Design、Echarts、小程序、商城项目和浏览器功能的一组实战记录。","es":"Registros reales sobre Ant Design, Echarts, mini programas, tiendas y funciones del navegador.","ja":"Ant Design、Echarts、ミニプログラム、ストア、ブラウザ機能に関する実戦記録。","ar":"سجلات عملية حول Ant Design وEcharts والبرامج المصغرة والمتاجر وميزات المتصفح."}},{"slug":"走过的路🌱","title":{"en":"Growing Path","zh":"走过的路","es":"Camino Recorrido","ja":"歩いてきた道","ar":"الطريق الذي سلكته"},"description":{"en":"Yearly reviews and growth notes that carry more life signal than technical polish.","zh":"年度总结和成长记录，保留生活感和时间感。","es":"Revisiones anuales y notas de crecimiento con más vida que pulido técnico.","ja":"年次レビューと成長記録。技術の整い方より時間の感触が残っています。","ar":"مراجعات سنوية وملاحظات نمو تحمل أثر الحياة أكثر من الصقل التقني."}},{"slug":"读过的书📚️","title":{"en":"Reading Shelf","zh":"读书笔记","es":"Estante de Lectura","ja":"読書棚","ar":"رف القراءة"},"description":{"en":"Book notes across networking, JavaScript, algorithms, and systems thinking.","zh":"网络、JavaScript、算法和系统思维方向的读书笔记。","es":"Notas de lectura sobre redes, JavaScript, algoritmos y pensamiento de sistemas.","ja":"ネットワーク、JavaScript、アルゴリズム、システム思考に関する読書ノート。","ar":"ملاحظات قراءة حول الشبكات وJavaScript والخوارزميات والتفكير المنظومي."}},{"slug":"PHP🐘","title":{"en":"PHP Shelf","zh":"PHP 归档","es":"Estante PHP","ja":"PHP 棚","ar":"رف PHP"},"description":{"en":"Earlier PHP notes and experiments that still belong in the public record.","zh":"更早期的 PHP 文章和实验记录。","es":"Notas y experimentos tempranos de PHP que siguen formando parte del archivo.","ja":"初期の PHP ノートと実験記録。","ar":"ملاحظات وتجارب PHP المبكرة التي ما زالت جزءًا من السجل."}},{"slug":"Python🐍","title":{"en":"Python Shelf","zh":"Python 归档","es":"Estante Python","ja":"Python 棚","ar":"رف Python"},"description":{"en":"Small scraping experiments and data-oriented notes from the earlier Python phase.","zh":"偏数据和爬取的小实验，保留了更早一阶段的 Python 轨迹。","es":"Pequeños experimentos de scraping y notas orientadas a datos de la etapa temprana con Python.","ja":"スクレイピングやデータ寄りの小さな Python 実験。","ar":"تجارب صغيرة في الاستخراج والبيانات من المرحلة المبكرة مع Python."}}]}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","div",null,{"className":"mx-auto max-w-3xl pb-20 pt-8","children":["$","div",null,{"className":"hero-panel space-y-5","children":[["$","span",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"className":"hero-title compact","children":"That page never made it into the archive."}],["$","p",null,{"className":"hero-copy","children":"Try the rebuilt home, the full archive, or one of the legacy shelves instead."}],["$","$L8",null,{"href":"/","className":"primary-chip","children":"Go back to the English home"}]]}]}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L8",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]}]]}],{"children":[["lang","zh","d"],["$","$1","c",{"children":[null,"$L9"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","sync/2024-01-11-7322714226291097610","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children","$0:f:0:1:2:children:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":"$Lc"}]]}],{},null,false]},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","LpcV_ODVxKSO0m01ncUwI",{"children":[["$","$Ld",null,{"children":"$Le"}],["$","$Lf",null,{"children":"$L10"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+9:[["$","$L6",null,{"lang":"zh","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"zh","homeHref":"/zh","rootAliasForDefaultLocale":false,"labels":{"brand":"POJIAN.BLOG","subtitle":"围绕 AI 工具链、产品交付与个人记忆的长篇博客。","menu":"目录","close":"关闭","switchLanguage":"切换语言","switchTheme":"切换主题"},"links":[{"href":"/zh","label":"首页"},{"href":"/zh#latest","label":"最新"},{"href":"/zh#collections","label":"分栏"},{"href":"/zh/archives","label":"归档"},{"href":"/zh#community","label":"社区"}],"legacyRoots":"$0:f:0:1:1:props:children:1:props:children:props:children:props:children:1:props:notFound:1:1:props:children:0:props:legacyRoots"}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"围绕 AI 工具链、产品交付与个人记忆的长篇博客。"}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/zh","className":"hover:text-[var(--text)]","children":"首页"}],["$","$L8",null,{"href":"/zh/archives","className":"hover:text-[var(--text)]","children":"归档"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"POJIAN.BLOG"}],["$","meta","2",{"name":"description","content":"A multilingual personal blog around AI tooling, product delivery, memoir, and long-form archive work."}]]
+c:null
+12:T163b,<h2 id="引言">引言</h2>
+<p>在日常的 JavaScript
+开发中，我们经常会面对一些看似简单的数学运算。然而，当我们执行
+<code>0.1 + 0.2</code>
+这样的操作时，很多人可能会感到困惑，因为预期的结果应该是
+<code>0.3</code>，但实际上却是一个略微不同的值。这个现象是由于
+JavaScript
+中浮点数运算的特性导致的，本文将深入探讨这个问题的背后原因以及如何在开发中避免相关的陷阱。</p>
+<h2 id="为什么会发生这种情况">为什么会发生这种情况？</h2>
+<p>在计算机中，浮点数是用二进制表示的，而不是十进制。由于这一事实，一些十进制小数可能无法精确地用二进制表示，从而导致在浮点数运算中产生舍入误差。JavaScript
+使用的是 IEEE 754
+标准来表示浮点数，这一标准采用二进制表示法，因此在某些情况下，十进制小数无法完全精确映射到二进制表示。</p>
+<p>在具体到 <code>0.1 + 0.2</code>
+的例子中，这两个数字在二进制中的表示并不是精确的。虽然它们在十进制下是简单的小数，但在二进制中，它们的精确表示是一个无限循环小数。由于计算机的存储和运算能力的限制，这样的无限循环小数无法被精确表示，因此就会引发舍入误差。</p>
+<pre><code>console.log(0.1 + 0.2); // 输出 0.30000000000000004</code></pre>
+<h2 id="浮点数运算的挑战">浮点数运算的挑战</h2>
+<h3 id="1-精度丢失">1. <strong>精度丢失</strong></h3>
+<p>在 JavaScript
+中，由于浮点数运算的不可避免的舍入误差，可能会导致精度丢失。这意味着在比较两个浮点数是否相等时，应该使用一些技巧，而不是直接使用相等运算符。</p>
+<pre><code>console.log(0.1 + 0.2 === 0.3); // 输出 false
+console.log(Math.abs(0.1 + 0.2 - 0.3) &lt; Number.EPSILON); // 输出 true</code></pre>
+<h3 id="2-运算顺序的影响">2. <strong>运算顺序的影响</strong></h3>
+<p>JavaScript
+的浮点数运算还受到运算顺序的影响。由于浮点数的表示范围和精度有限，当进行多个浮点数的运算时，不同的运算顺序可能导致不同的结果。</p>
+<pre><code>console.log(0.1 + 0.2 + 0.3); // 输出 0.6000000000000001
+console.log(0.3 + 0.2 + 0.1); // 输出 0.6</code></pre>
+<h3 id="3-解决方案使用整数进行运算">3.
+<strong>解决方案：使用整数进行运算</strong></h3>
+<p>为了避免浮点数运算的陷阱，一种常见的做法是将浮点数转换为整数进行运算，然后再将结果转换回浮点数。这可以通过乘以一个足够大的倍数来实现。</p>
+<pre><code>let result = (0.1 * 10 + 0.2 * 10) / 10;
+console.log(result); // 输出 0.3</code></pre>
+<h2 id="如何在开发中避免问题">如何在开发中避免问题？</h2>
+<p>在实际的开发中，我们可以采取一些策略来最小化浮点数运算带来的问题。</p>
+<h3 id="1-使用整数进行运算">1. <strong>使用整数进行运算</strong></h3>
+<p>如前所述，将浮点数转换为整数进行运算是一种可行的解决方案。通过乘以一个足够大的倍数，我们可以避免舍入误差。</p>
+<h3 id="2-使用专门的库">2. <strong>使用专门的库</strong></h3>
+<p>一些专门处理精确数学运算的库，如 Decimal.js 和
+big.js，提供了更精确的十进制运算，可以在避免浮点数问题的同时保持较高的性能。</p>
+<h3 id="3-使用-numberepsilon-进行比较">3. <strong>使用
+<code>Number.EPSILON</code> 进行比较</strong></h3>
+<p>在比较浮点数是否相等时，应该使用一个很小的常量，例如
+<code>Number.EPSILON</code>，而不是直接使用相等运算符。</p>
+<pre><code>console.log(Math.abs(0.1 + 0.2 - 0.3) &lt; Number.EPSILON); // 输出 true</code></pre>
+<h3 id="4-注意运算顺序">4. <strong>注意运算顺序</strong></h3>
+<p>在进行多个浮点数的运算时，应该注意运算顺序可能带来的不同结果。在关键的业务逻辑中，可以考虑重新排列运算的顺序，以最小化舍入误差的影响。</p>
+<h3 id="5自定义向上向下取整">5.<strong>自定义向上向下取整</strong></h3>
+<p>只要跟钱有关，那这个问题就必须得重视了，js中并没有针对精度保留向上向下的方法，当时我们可以利用原生的
+<code>Math.pow</code> 和 <code>Math.floor</code>
+二次封装，根据实际场景决定向上保留精度还是向下保留精度；</p>
+<pre><code>/**
+ * 向下取整 例如：3.33333333 取3位，返回 3.333
+ * num 原始值
+ * precision 保留精度
+ */
+Math.floorPow = function(num, precision){
+  // 根据保留精度放大 小数位
+  let magnify =  Math.pow(10, precision);
+  // 返回小于等于给定数字的 最大整数
+  return Math.floor(num * magnify)/magnify;
+}
+
+/**
+ * 向上取整 例如：3.33333333 取3位，返回 3.334
+ * num 原始值
+ * precision 保留精度
+ */
+Math.ceilPow = function(num, precision){
+  // 根据保留精度放大 小数位
+  let magnify =  Math.pow(10, precision);
+  // 返回小于等于给定数字的 最大整数
+  return Math.ceil(num * magnify)/magnify;
+}</code></pre>
+<h2 id="结语">结语</h2>
+<p>JavaScript 中 <code>0.1 + 0.2</code> 不等于 <code>0.3</code>
+的现象并非
+bug，而是由于浮点数运算的本质导致的。了解浮点数运算的特性，采用适当的解决方案，可以帮助我们避免在开发中因为这类问题而浪费时间。通过合理的数学运算和注意运算顺序，我们可以更好地利用
+JavaScript
+的数值计算功能，确保我们的应用在处理数学运算时保持准确性和可靠性。</p>
+a:["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L8",null,{"href":"/zh/archives","className":"ghost-inline","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"全部文章"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"已从掘金同步"}],["$","span",null,{"children":"2024-01-11"}],["$","span",null,{"children":[4," ","分钟阅读"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"JavaScript 中 0.1 + 0.2  != 0.3：浮点数运算的陷阱"}],["$","p",null,{"className":"hero-copy","children":"引言 在日常的 JavaScript 开发中，我们经常会面对一些看似简单的数学运算。然而，当我们执行 0.1 + 0.2 这样的操作时，很多人可能会感到困惑，因为预期的结果应该是 0.3，但实际上却是一个略微不同的值。这个现象是由于 JavaScript 中浮点数运算的特性导致的，本文将深入探讨这个问题的背后原因以及如何在开发中避免相关的陷阱。 为什么会发生..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"文章说明"}],["$","span",null,{"children":"这篇文章被保留在新的博客壳中，同时继续保留原始中文内容。"}],["$","a",null,{"href":"https://juejin.cn/post/7322714226291097610","target":"_blank","rel":"noreferrer","className":"ghost-inline","children":["原始出处",["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-external-link h-4 w-4","children":[["$","path","1q9fwt",{"d":"M15 3h6v6"}],["$","path","gplh6r",{"d":"M10 14 21 3"}],["$","path","a6xqqp",{"d":"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"}],"$undefined"]}]]}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$12"}}]}]]}]

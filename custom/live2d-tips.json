@@ -2,129 +2,59 @@
   "models": [],
   "mouseover": [
     {
-      "selector": ".primary-button",
+      "selector": ".primary-chip",
       "text": [
-        "这类按钮一般都很重要，点一下看看。",
-        "准备跳到更深入的页面了吗？"
+        "这条一般是最快进入正文的路径。",
+        "如果你要先看重点，这个按钮最合适。"
       ]
     },
     {
-      "selector": ".project-card, .product-card",
+      "selector": ".legacy-card",
       "text": [
-        "这里是 CocoonBreak 现在重点维护的项目。",
-        "这是当前最能代表他技术重心的一组项目。"
+        "这些是旧博客的根目录入口。",
+        "现在点进去不会再被直接丢到 404。"
       ]
     },
     {
-      "selector": ".writing-card",
+      "selector": ".post-card, .year-item",
       "text": [
-        "这几篇是结合掘金最近输出整理过的博客版文章。",
-        "如果你对 AI Agent、CLI、协议很感兴趣，可以从这里开始读。"
+        "这里是已经整理进新博客壳里的文章。",
+        "新旧内容现在走的是一套路由。"
       ]
     },
     {
-      "selector": ".community-card",
+      "selector": "header a, .nav-chip",
       "text": [
-        "这里能直接找到他的社区和内容阵地。",
-        "Telegram、Discord、GitHub 和内容平台入口都整理好了。"
-      ]
-    },
-    {
-      "selector": ".archive-card",
-      "text": [
-        "旧博客内容也还在，可以从归档继续翻。",
-        "这里保留了之前 VuePress 的知识库和成长记录。"
-      ]
-    },
-    {
-      "selector": ".nav-links a",
-      "text": [
-        "导航可以快速跳到项目、文章和社区。",
-        "先从首页看概览，再挑你感兴趣的部分深入。"
-      ]
-    },
-    {
-      "selector": "a[href^='http'], a[href^='/']",
-      "text": [
-        "准备去 <span>{text}</span> 看看吗？",
-        "这个入口应该对你有帮助。"
+        "导航已经做成左上角目录和顶部主导航了。",
+        "先看首页，再慢慢翻归档会更顺。"
       ]
     }
   ],
   "click": [
     {
-      "selector": ".primary-button, .secondary-button",
+      "selector": ".primary-chip, .secondary-chip, .ghost-inline",
       "text": [
-        "好，开始跳转。",
-        "这条路径一般会带你到更关键的信息。"
+        "开始跳转。",
+        "这条线会带你去更完整的内容。"
       ]
-    },
-    {
-      "selector": ".writing-card a",
-      "text": [
-        "这篇文章是博客版整理，不是简单搬运。",
-        "读完这篇，再回到首页看其它专题会更顺。"
-      ]
-    }
-  ],
-  "seasons": [
-    {
-      "date": "01/01",
-      "text": "新的一年开始了，博客也该继续升级。"
-    },
-    {
-      "date": "05/01",
-      "text": "劳动节也别忘了给自己的技术栈做一点整理。"
-    },
-    {
-      "date": "10/01",
-      "text": "节日快乐，顺手来看看最近又折腾了哪些项目。"
-    }
-  ],
-  "time": [
-    {
-      "hour": "6-11",
-      "text": "早上适合看架构文章，脑子最清醒。"
-    },
-    {
-      "hour": "12-17",
-      "text": "下午适合刷项目、看代码、补知识框架。"
-    },
-    {
-      "hour": "18-21",
-      "text": "晚上好，现在很适合慢慢读几篇 AI Agent 相关文章。"
-    },
-    {
-      "hour": "22-23",
-      "text": "这么晚了还在看博客，记得保护眼睛。"
-    },
-    {
-      "hour": "0-5",
-      "text": "深夜模式启动了，但别把作息也一起调试坏了。"
     }
   ],
   "message": {
     "default": [
-      "欢迎来到 CocoonBreak 的个人博客。",
-      "这里不仅有文章，也有项目、社区和正在做的产品。"
+      "欢迎来到 Pojian 的新博客。",
+      "我已经移到右下角，不挡正文。"
     ],
     "hoverBody": [
-      "你好，我在右下角待命。",
-      "需要的时候再点我，不打扰你看内容。"
+      "我在右下角待命。",
+      "需要的时候再点我。"
     ],
     "tapBody": [
-      "被你发现了。",
-      "文章、项目、社区入口都在这页里。"
+      "这次博客做了多语言、主题切换和归档兼容。",
+      "你可以直接试试旧路径。"
     ],
-    "console": "欢迎，控制台里就别找彩蛋了，重点在页面内容。",
+    "welcome": "欢迎来到 <span>{text}</span>。",
     "copy": "复制的时候记得保留出处。",
-    "visibilitychange": "你又回来了，继续往下看吧。",
-    "welcome": "欢迎来到 <span>{text}</span>，这是一页重新整理过的个人博客首页。",
-    "referrer": "你刚刚是从 <span>{text}</span> 过来的。",
-    "hitokoto": "这句话来自 <span>$1</span>，作者是 <span>$2</span>。",
-    "changeSuccess": "换一套模型看看。",
-    "changeFail": "这个模型没有更多外观可以切换了。",
-    "photo": "拍好了，记得保存。",
-    "goodbye": "那我先退到一边，随时可以再叫我出来。"
+    "visibilitychange": "又回来了，继续看吧。",
+    "goodbye": "那我先退到一边。"
   }
 }

@@ -1,0 +1,325 @@
+1:"$Sreact.fragment"
+2:I[6825,["177","static/chunks/app/layout-9fe08982949093af.js"],"ThemeProvider"]
+3:I[1454,["177","static/chunks/app/layout-9fe08982949093af.js"],"Live2DLoader"]
+4:I[5244,[],""]
+5:I[3866,[],""]
+6:I[7367,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"HtmlLocaleSync"]
+7:I[4750,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"BlogNavbar"]
+8:I[8173,["173","static/chunks/173-ef41fafde65cda27.js","97","static/chunks/app/%5Blang%5D/posts/%5B...slug%5D/page-6ee700c5ad1e0b29.js"],""]
+b:I[6213,[],"OutletBoundary"]
+d:I[6213,[],"MetadataBoundary"]
+f:I[6213,[],"ViewportBoundary"]
+11:I[4835,[],""]
+:HL["/_next/static/media/24f6ebe2756575bd-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/36966cca54120369-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5611c55482296524-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/edef1a271f97a8ec-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/fb12bdfc6f99d938-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/473fb34e1570d6f1.css","style"]
+:HL["/_next/static/css/1c5aef1c0dd20138.css","style"]
+:HL["/_next/static/css/45bbd2f0fdf5da27.css","style"]
+:HL["/_next/static/css/03999bf3b1a627a0.css","style"]
+0:{"P":null,"b":"ZNjizd8Y7He_YS_OA6hmp","p":"","c":["","ja","posts","sync","2021-08-05-6992967547486208007",""],"i":false,"f":[[["",{"children":[["lang","ja","d"],{"children":["posts",{"children":[["slug","sync/2021-08-05-6992967547486208007","c"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/473fb34e1570d6f1.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1c5aef1c0dd20138.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/45bbd2f0fdf5da27.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/03999bf3b1a627a0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__variable_dd5b2f __variable_64b714 __variable_51740a __variable_7afcbf __variable_6634df antialiased","children":["$","$L2",null,{"attribute":"class","defaultTheme":"dark","enableSystem":false,"disableTransitionOnChange":true,"children":[["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","$L6",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"en","homeHref":"/","rootAliasForDefaultLocale":true,"labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/","label":"Home"},{"href":"/#latest","label":"Latest"},{"href":"/#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/#community","label":"Community"}],"legacyRoots":[{"slug":"A前端👨‍💻","title":{"en":"Frontend Atlas","zh":"前端图谱","es":"Atlas Frontend","ja":"フロントエンド地図","ar":"أطلس الواجهة الأمامية"},"description":{"en":"CSS, Vue, React, Canvas, Node, uni-app, build tools, and the earlier front-end trail.","zh":"CSS、Vue、React、Canvas、Node、uni-app、打包工具，以及更早的前端路径。","es":"CSS, Vue, React, Canvas, Node, uni-app, herramientas de build y el rastro front-end más temprano.","ja":"CSS、Vue、React、Canvas、Node、uni-app、ビルドツールなど、初期のフロントエンド蓄積。","ar":"CSS وVue وReact وCanvas وNode وuni-app وأدوات البناء والمسار الأقدم للواجهة الأمامية."}},{"slug":"B面试题📑","title":{"en":"Interview Bank","zh":"面试题仓库","es":"Banco de Entrevistas","ja":"面接バンク","ar":"بنك المقابلات"},"description":{"en":"Question banks for browser internals, networking, Vue, React, JavaScript, and engineering.","zh":"浏览器、网络、Vue、React、JavaScript 和工程化的面试题集合。","es":"Baterías de preguntas sobre navegador, red, Vue, React, JavaScript e ingeniería.","ja":"ブラウザ、ネットワーク、Vue、React、JavaScript、開発基盤に関する面接問題。","ar":"مجموعات أسئلة عن المتصفح والشبكات وVue وReact وJavaScript والهندسة."}},{"slug":"Vue实战💻","title":{"en":"Vue Practice","zh":"Vue 实战","es":"Práctica Vue","ja":"Vue 実戦","ar":"تطبيقات Vue"},"description":{"en":"Real project records around Ant Design, Echarts, mini programs, stores, and browser features.","zh":"围绕 Ant Design、Echarts、小程序、商城项目和浏览器功能的一组实战记录。","es":"Registros reales sobre Ant Design, Echarts, mini programas, tiendas y funciones del navegador.","ja":"Ant Design、Echarts、ミニプログラム、ストア、ブラウザ機能に関する実戦記録。","ar":"سجلات عملية حول Ant Design وEcharts والبرامج المصغرة والمتاجر وميزات المتصفح."}},{"slug":"走过的路🌱","title":{"en":"Growing Path","zh":"走过的路","es":"Camino Recorrido","ja":"歩いてきた道","ar":"الطريق الذي سلكته"},"description":{"en":"Yearly reviews and growth notes that carry more life signal than technical polish.","zh":"年度总结和成长记录，保留生活感和时间感。","es":"Revisiones anuales y notas de crecimiento con más vida que pulido técnico.","ja":"年次レビューと成長記録。技術の整い方より時間の感触が残っています。","ar":"مراجعات سنوية وملاحظات نمو تحمل أثر الحياة أكثر من الصقل التقني."}},{"slug":"读过的书📚️","title":{"en":"Reading Shelf","zh":"读书笔记","es":"Estante de Lectura","ja":"読書棚","ar":"رف القراءة"},"description":{"en":"Book notes across networking, JavaScript, algorithms, and systems thinking.","zh":"网络、JavaScript、算法和系统思维方向的读书笔记。","es":"Notas de lectura sobre redes, JavaScript, algoritmos y pensamiento de sistemas.","ja":"ネットワーク、JavaScript、アルゴリズム、システム思考に関する読書ノート。","ar":"ملاحظات قراءة حول الشبكات وJavaScript والخوارزميات والتفكير المنظومي."}},{"slug":"PHP🐘","title":{"en":"PHP Shelf","zh":"PHP 归档","es":"Estante PHP","ja":"PHP 棚","ar":"رف PHP"},"description":{"en":"Earlier PHP notes and experiments that still belong in the public record.","zh":"更早期的 PHP 文章和实验记录。","es":"Notas y experimentos tempranos de PHP que siguen formando parte del archivo.","ja":"初期の PHP ノートと実験記録。","ar":"ملاحظات وتجارب PHP المبكرة التي ما زالت جزءًا من السجل."}},{"slug":"Python🐍","title":{"en":"Python Shelf","zh":"Python 归档","es":"Estante Python","ja":"Python 棚","ar":"رف Python"},"description":{"en":"Small scraping experiments and data-oriented notes from the earlier Python phase.","zh":"偏数据和爬取的小实验，保留了更早一阶段的 Python 轨迹。","es":"Pequeños experimentos de scraping y notas orientadas a datos de la etapa temprana con Python.","ja":"スクレイピングやデータ寄りの小さな Python 実験。","ar":"تجارب صغيرة في الاستخراج والبيانات من المرحلة المبكرة مع Python."}}]}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","div",null,{"className":"mx-auto max-w-3xl pb-20 pt-8","children":["$","div",null,{"className":"hero-panel space-y-5","children":[["$","span",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"className":"hero-title compact","children":"That page never made it into the archive."}],["$","p",null,{"className":"hero-copy","children":"Try the rebuilt home, the full archive, or one of the legacy shelves instead."}],["$","$L8",null,{"href":"/","className":"primary-chip","children":"Go back to the English home"}]]}]}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L8",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]}]]}],{"children":[["lang","ja","d"],["$","$1","c",{"children":[null,"$L9"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","sync/2021-08-05-6992967547486208007","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children","$0:f:0:1:2:children:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":"$Lc"}]]}],{},null,false]},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","u7JvOGaaF6R0oFInd_uDx",{"children":[["$","$Ld",null,{"children":"$Le"}],["$","$Lf",null,{"children":"$L10"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+9:[["$","$L6",null,{"lang":"ja","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"ja","homeHref":"/ja","rootAliasForDefaultLocale":false,"labels":{"brand":"POJIAN.BLOG","subtitle":"AI ツーリング、公開、個人の記録をまとめた長文ブログ。","menu":"目次","close":"閉じる","switchLanguage":"言語切替","switchTheme":"テーマ切替"},"links":[{"href":"/ja","label":"ホーム"},{"href":"/ja#latest","label":"最新"},{"href":"/ja#collections","label":"コレクション"},{"href":"/ja/archives","label":"アーカイブ"},{"href":"/ja#community","label":"コミュニティ"}],"legacyRoots":"$0:f:0:1:1:props:children:1:props:children:props:children:props:children:1:props:notFound:1:1:props:children:0:props:legacyRoots"}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"AI ツーリング、公開、個人の記録をまとめた長文ブログ。"}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/ja","className":"hover:text-[var(--text)]","children":"ホーム"}],["$","$L8",null,{"href":"/ja/archives","className":"hover:text-[var(--text)]","children":"アーカイブ"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]
+12:T32a9,<p><img
+src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fdd34290f4a84685810f2370e34ffe2d~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+alt="image-20210723191207467.png" /></p>
+<blockquote>
+<h5
+id="1vue-router三种路由模式"><strong>1、Vue-Router三种路由模式：</strong></h5>
+</blockquote>
+<ul>
+<li><code>hash</code>：使用URL hash
+值来做路由，<code>支持所有路由器</code>；</li>
+<li><code>history</code>:
+依赖<code>HTML5 History API</code>和服务器配置；</li>
+<li><code>abstract</code>: 支持所有JS运行环境，Node.js服务端；</li>
+</ul>
+<blockquote>
+<p><strong>1.1、路由作用</strong>：根据不同的路径，来映射到不同的视图；</p>
+</blockquote>
+<blockquote>
+<p><strong>1.2、路由基本使用</strong>：</p>
+</blockquote>
+<pre><code>&lt;div id=&quot;app&quot;&gt;
+    &lt;h1&gt;Hello  kuishou!&lt;/h1&gt;
+    &lt;p&gt;
+        &lt;!--&lt;router-link&gt;默认会被渲染成一个`&lt;a&gt;`标签--&gt;
+        &lt;router-link to=&quot;/foo&quot;&gt; 睡觉 Foo&lt;/router-link&gt;
+        &lt;router-link to=&quot;/bar&quot;&gt; 敲代码 bar&lt;/router-link&gt;
+    &lt;/p&gt;
+    &lt;!--路由匹配到的组件将渲染在这里--&gt;
+    &lt;router-view&gt;&lt;/router-view&gt;
+&lt;/div&gt;</code></pre>
+<pre><code>import Vue from &#39;vue&#39;
+import VueRouter from  &#39;vue-router&#39;
+// 注册路由
+Vue.use(VuerRouter)
+// 1.定义组件
+const Foo = { template: &#39;&lt;div&gt;foo&lt;/div&gt;&#39; }
+const Bar = { template: &#39;&lt;div&gt;bar&lt;/div&gt;&#39; }
+// 2.定义路由
+const routes = [
+    { path: &#39;/foo&#39;, components: Foo },
+    { path: &#39;/bar&#39;, components: Bar },
+]</code></pre>
+<blockquote>
+<h5 id="2路由注册"><strong>2</strong>、<strong>路由注册：</strong></h5>
+<p><strong>2.1、Vue插件的注册原理：</strong>
+每个插件都需要实现一个静态的 <code>install</code> 方法，当我们执行
+<code>Vue.use</code> 的时候，就会执行这个 <code>install</code>
+方法，并且在这个 <code>install</code> 方法中第一个参数拿到
+<code>Vue</code> 对象。</p>
+</blockquote>
+<blockquote>
+<h5 id="3路由安装"><strong>3、路由安装：</strong></h5>
+<p>Vue-Router 安装最重要的一步就是利用 <code>Vue.mixin</code> 去把
+<code>beforeCreate</code> 和 <code>destroyed</code>
+两个钩子函数注入到每一个组件中，在beforeCreateed 中定义 私有属性和初始化
+路由。</p>
+</blockquote>
+<pre><code>// install.js
+// 把  _Vue  export 出去，在源码的任何地方都可以访问 Vue
+export let _Vue
+
+export function install (Vue) {
+    // 判断是否有注册指令，如果多次执行install方法，则会return
+  if (install.installed &amp;&amp; _Vue === Vue) return
+  install.installed = true
+    // 使用下划线 _Vue 保留 传过来的Vue
+  _Vue = Vue
+  const isDef = v =&gt; v !== undefined
+  const registerInstance = (vm, callVal) =&gt; {
+    let i = vm.$options._parentVnode
+    if (isDef(i) &amp;&amp; isDef(i = i.data) &amp;&amp; isDef(i = i.registerRouteInstance)) {
+      i(vm, callVal)
+    }
+  }
+  // mixin 作用：把mergeOptions 扩展到全局的 options 
+  Vue.mixin({
+      // 这样的话，每一个组件都有beforeCreate、destroyed这两个钩子函数
+    beforeCreate () {
+      if (isDef(this.$options.router)) {
+        this._routerRoot = this
+        this._router = this.$options.router
+        this._router.init(this)
+        Vue.util.defineReactive(this, &#39;_route&#39;, this._router.history.current)
+      } else {
+        this._routerRoot = (this.$parent &amp;&amp; this.$parent._routerRoot) || this
+      }
+      registerInstance(this, this)
+    },
+    destroyed () {
+      registerInstance(this)
+    }
+  })</code></pre>
+<blockquote>
+<h5 id="3vuerouter对象"><strong>3、VueRouter对象：</strong></h5>
+<p>当我们执行 <code>new VueRouter</code> 时，<code>beforeCreated</code>
+钩子函数会执行 <code>router.init</code> 方法，</p>
+</blockquote>
+<pre><code> constructor (options: RouterOptions = {}) {
+    this.app = null  // 根 Vue 实例
+    this.apps = []   // 保存所有子组件的 Vue 实例
+    this.options = options // 保存传入的路由配置
+    this.beforeHooks = []  // 钩子函数
+    this.resolveHooks = [] // 钩子函数
+    this.afterHooks = []   // 钩子函数
+    // 路由匹配器
+    this.matcher = createMatcher(options.routes || [], this)
+    // 路由创建的三种模式: hash、history、abstract
+    let mode = options.mode || &#39;hash&#39;
+    // 路由创建失败的回调函数,检测浏览器中有没有历史记录（history）
+    this.fallback =
+      mode === &#39;history&#39; &amp;&amp; !supportsPushState &amp;&amp; options.fallback !== false
+    // 路由历史的具体的实现实例, 如果没有则会使用hsah访问
+    if (this.fallback) {
+      mode = &#39;hash&#39;
+    }
+    if (!inBrowser) {
+      mode = &#39;abstract&#39;
+    }
+    this.mode = mode
+
+    switch (mode) {
+      case &#39;history&#39;:
+        this.history = new HTML5History(this, options.base)
+        break
+      case &#39;hash&#39;:
+        this.history = new HashHistory(this, options.base, this.fallback)
+        break
+      case &#39;abstract&#39;:
+        this.history = new AbstractHistory(this, options.base)
+        break
+      default:
+        if (process.env.NODE_ENV !== &#39;production&#39;) {
+          assert(false, `invalid mode: ${mode}`)
+        }
+    }
+  }</code></pre>
+<blockquote>
+<h5 id="4matcher"><strong>4、Matcher</strong></h5>
+<p>路由匹配器，主要通过 <code>matcher</code> 和 <code>match</code>方法
+，匹配路径 <code>Router</code> 的.</p>
+</blockquote>
+<ul>
+<li>4.1、<code>createRouteMap</code> 函数是把用户的
+<strong>路由配置</strong> 转换成一张 <strong>路由映射表</strong>，</li>
+</ul>
+<pre><code>export function createRouteMap (
+  routes: Array&lt;RouteConfig&gt;,
+  oldPathList?: Array&lt;string&gt;, // 可选参数
+  oldPathMap?: Dictionary&lt;RouteRecord&gt;, // 可选参数
+  oldNameMap?: Dictionary&lt;RouteRecord&gt;, // 可选参数
+  parentRoute?: RouteRecord
+): {
+  pathList: Array&lt;string&gt;,
+  pathMap: Dictionary&lt;RouteRecord&gt;,
+  nameMap: Dictionary&lt;RouteRecord&gt;
+} {
+  // 路径列表用于控制路径匹配优先级
+  const pathList: Array&lt;string&gt; = oldPathList || []
+  // $flow-disable-line
+  const pathMap: Dictionary&lt;RouteRecord&gt; = oldPathMap || Object.create(null)
+  // $flow-disable-line
+  const nameMap: Dictionary&lt;RouteRecord&gt; = oldNameMap || Object.create(null)
+  // 对路由数组进行遍历
+  routes.forEach(route =&gt; {
+    // 遍历成功·拿到每个路由对象
+    addRouteRecord(pathList, pathMap, nameMap, route, parentRoute)
+  })</code></pre>
+<ul>
+<li><strong>4.1、createMatcher的初始化逻辑</strong></li>
+</ul>
+<blockquote>
+<p><code>createMatcher</code> 首先执行的逻辑是 ````const { pathList,
+pathMap, nameMap } = createRouteMap(routes) ```
+用来创建一个<strong>映射表</strong>。</p>
+</blockquote>
+<pre><code>  // 对路由数组进行遍历
+  routes.forEach(route =&gt; {
+    // 遍历成功·拿到每个路由对象
+    addRouteRecord(pathList, pathMap, nameMap, route, parentRoute)
+  })</code></pre>
+<ul>
+<li><strong>4.3、match 的匹配过程</strong></li>
+</ul>
+<blockquote>
+<p>**<code>match</code> 方法作用：**根据传入的 <code>raw</code>
+和当前的路径 <code>currentRoute</code> 计算一个新的路径并返回。</p>
+<p><code>match</code> 方法接收3个参数：raw（<em>Location
+对象</em>）、currentRoute（<em>当前的路径</em>）、redirectedFrom（<em>与重定向相关</em>）</p>
+</blockquote>
+<pre><code>function match (
+    raw: RawLocation, // url 字符串,也可以是⼀个 Location 对象
+    currentRoute?: Route, // Router 类型，表示当前的路径
+    redirectedFrom?: Location // 与重定向相关
+  ): Route {
+    // 根据 raw ， current 计算出新的 location 
+    const location = normalizeLocation(raw, currentRoute, false, router)
+    const { name } = location
+    // 如果current传入属性有name
+    if (name) {
+        // 根据nameMap 匹配到 record 
+      const record = nameMap[name]
+      if (process.env.NODE_ENV !== &#39;production&#39;) {
+        warn(record, `Route with name &#39;${name}&#39; does not exist`)
+      }
+      // 如果 record 不存在，则匹配失败！
+      if (!record) return _createRoute(null, location)
+      const paramNames = record.regex.keys
+        .filter(key =&gt; !key.optional)
+        .map(key =&gt; key.name)
+
+      if (typeof location.params !== &#39;object&#39;) {
+        location.params = {}
+      }
+
+      if (currentRoute &amp;&amp; typeof currentRoute.params === &#39;object&#39;) {
+        for (const key in currentRoute.params) {
+          if (!(key in location.params) &amp;&amp; paramNames.indexOf(key) &gt; -1) {
+            location.params[key] = currentRoute.params[key]
+          }
+        }
+      }
+
+      location.path = fillParams(record.path, location.params, `named route &quot;${name}&quot;`)
+      return _createRoute(record, location, redirectedFrom)
+    } else if (location.path) {
+      location.params = {}
+      for (let i = 0; i &lt; pathList.length; i++) {
+        const path = pathList[i]
+        const record = pathMap[path]
+        if (matchRoute(record.regex, location.path, location.params)) {
+          return _createRoute(record, location, redirectedFrom)
+        }
+      }
+    }
+    // no match
+    return _createRoute(null, location)
+  }</code></pre>
+<blockquote>
+<p><strong>5、路径切换</strong></p>
+<p>发生路径切换的时候，执行的一系列钩子函数。</p>
+</blockquote>
+<p><img
+src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/aa27052682154498943bd0953832604e~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+alt="image-20210723205053608.png" /></p>
+<ul>
+<li><p><strong>5.1、导航守卫的执行流程：</strong></p>
+<p>Vue项目中，导航被触发后，<strong>失活的组件</strong>(叛变的人)开始调用<code>beforeRouteLeave</code>
+，全局守卫（大哥） <code>beforeEach</code>
+、组件内的守卫（三弟）重用组件 <code>beforeRouterUpdate</code>
+被逐步触发；路由守卫（二哥）在路由配置里调用 <code>beforeEnter</code>
+后开始解析异步路由组件；在被激活的<strong>目标组件</strong>（敌人）里调用<code>beforeRouteEnter</code>
+;全局守卫（大哥）<code>beforeResolve</code>检测到目标组件（敌人）被激活（打败），在router.js中查找到需要跳转的导航并被确认，<code>afterEach</code>钩子被调用，最终触发DOM更新；路由守卫（二哥）调用
+<code>beforeRouteEnter</code> 传给next的回调函数。</p></li>
+</ul>
+<pre><code>// 全局守卫
+router.beforeEach((to, from, next)=&gt;{
+    // 进入路由前首先检查是否登录，如果没有则跳转到登录的视图组件
+    if(to.name != &#39;Login&#39; &amp;&amp; !isAuthenticated) next({ 
+        name: &#39;Login&#39;
+    // 否则继续下一个脚本
+    }) else  {
+        next()
+    }
+})</code></pre>
+<p><img
+src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6d7964d5c8a1489d96ec01bdc09b0fd9~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+alt="image-20210723204800587.png" /></p>
+<p>参考：<a
+href="https://link.juejin.cn?target=https%3A%2F%2Fwww.jianshu.com%2Fp%2F60da87d4ec92"
+title="https://www.jianshu.com/p/60da87d4ec92"><span>www.jianshu.com/p/60da87d4e…</span></a></p>
+<p>官方文档：<a
+href="https://link.juejin.cn?target=https%3A%2F%2Frouter.vuejs.org%2Fzh%2Fguide%2Fadvanced%2Fnavigation-guards.html%23%25E7%25BB%2584%25E4%25BB%25B6%25E5%2586%2585%25E7%259A%2584%25E5%25AE%2588%25E5%258D%25AB"
+title="https://router.vuejs.org/zh/guide/advanced/navigation-guards.html#%E7%BB%84%E4%BB%B6%E5%86%85%E7%9A%84%E5%AE%88%E5%8D%AB">Vue-Router</a></p>
+<blockquote>
+<p><strong>守卫识别路由的三把钥匙：</strong></p>
+<p>to : 即将进入的路由</p>
+<p>from ： 即将离开的路由</p>
+<p>next : 进行管道中的下一个钩子</p>
+</blockquote>
+<p>面试题：给路由组件<strong>传递数据</strong>有哪几种方式？</p>
+<blockquote>
+<p>1、通过 <code>params</code> 传递</p>
+</blockquote>
+<pre><code>// params 不能与 path 一起使用
+router.push({ path: &#39;./details&#39;, parmas: { id: &#39;001&#39;} }) // -&gt;跳转到details</code></pre>
+<blockquote>
+<p>2、通过 <code>query</code> 传递</p>
+</blockquote>
+<pre><code>this.$router.push({ path: &#39;/details/001&#39;, query: { kind: &quot;car&quot; }})</code></pre>
+<blockquote>
+<p>3、通过 <code>hash</code>传递</p>
+</blockquote>
+<pre><code>this.$touter.push({ path: &#39;./details001&#39;, hash: &#39;#car&#39;})</code></pre>
+<p>...</p>
+<p>参考： <a
+href="https://link.juejin.cn?target=https%3A%2F%2Fsegmentfault.com%2Fa%2F1190000039398462"
+title="https://segmentfault.com/a/1190000039398462">Vue 路由组件传参的 8
+种方式</a></p>
+a:["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L8",null,{"href":"/ja/archives","className":"ghost-inline","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"すべての記事"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"Juejin から同期"}],["$","span",null,{"children":"2021-08-05"}],["$","span",null,{"children":[3," ","分"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"Vue深入学习—Vue-Router路由模式"}],["$","p",null,{"className":"hero-copy","children":"##### 1、Vue-Router三种路由模式： hash：使用URL hash 值来做路由，支持所有路由器； history: 依赖HTML5 History API和服务器配置； abstract: 支持所有JS运行环境，Node.js服务端； 1.1、路由作用：根据不同的路径，来映射到不同的视图； 1.2、路由基本使用： ##### 2、路由注册：..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"要約"}],["$","span",null,{"children":"この記事は新しいブログ構造の中で保持されつつ、中国語の原文もそのまま残しています。"}],["$","a",null,{"href":"https://juejin.cn/post/6992967547486208007","target":"_blank","rel":"noreferrer","className":"ghost-inline","children":["元記事",["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-external-link h-4 w-4","children":[["$","path","1q9fwt",{"d":"M15 3h6v6"}],["$","path","gplh6r",{"d":"M10 14 21 3"}],["$","path","a6xqqp",{"d":"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"}],"$undefined"]}]]}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$12"}}]}]]}]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"POJIAN.BLOG"}],["$","meta","2",{"name":"description","content":"A multilingual personal blog around AI tooling, product delivery, memoir, and long-form archive work."}]]
+c:null

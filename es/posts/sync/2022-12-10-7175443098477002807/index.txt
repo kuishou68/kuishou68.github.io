@@ -1,0 +1,457 @@
+1:"$Sreact.fragment"
+2:I[6825,["177","static/chunks/app/layout-9fe08982949093af.js"],"ThemeProvider"]
+3:I[1454,["177","static/chunks/app/layout-9fe08982949093af.js"],"Live2DLoader"]
+4:I[5244,[],""]
+5:I[3866,[],""]
+6:I[7367,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"HtmlLocaleSync"]
+7:I[4750,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"BlogNavbar"]
+8:I[8173,["173","static/chunks/173-ef41fafde65cda27.js","97","static/chunks/app/%5Blang%5D/posts/%5B...slug%5D/page-6ee700c5ad1e0b29.js"],""]
+b:I[6213,[],"OutletBoundary"]
+d:I[6213,[],"MetadataBoundary"]
+f:I[6213,[],"ViewportBoundary"]
+11:I[4835,[],""]
+:HL["/_next/static/media/24f6ebe2756575bd-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/36966cca54120369-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5611c55482296524-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/edef1a271f97a8ec-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/fb12bdfc6f99d938-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/473fb34e1570d6f1.css","style"]
+:HL["/_next/static/css/1c5aef1c0dd20138.css","style"]
+:HL["/_next/static/css/45bbd2f0fdf5da27.css","style"]
+:HL["/_next/static/css/03999bf3b1a627a0.css","style"]
+0:{"P":null,"b":"ZNjizd8Y7He_YS_OA6hmp","p":"","c":["","es","posts","sync","2022-12-10-7175443098477002807",""],"i":false,"f":[[["",{"children":[["lang","es","d"],{"children":["posts",{"children":[["slug","sync/2022-12-10-7175443098477002807","c"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/473fb34e1570d6f1.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1c5aef1c0dd20138.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/45bbd2f0fdf5da27.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/03999bf3b1a627a0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__variable_dd5b2f __variable_64b714 __variable_51740a __variable_7afcbf __variable_6634df antialiased","children":["$","$L2",null,{"attribute":"class","defaultTheme":"dark","enableSystem":false,"disableTransitionOnChange":true,"children":[["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","$L6",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"en","homeHref":"/","rootAliasForDefaultLocale":true,"labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/","label":"Home"},{"href":"/#latest","label":"Latest"},{"href":"/#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/#community","label":"Community"}],"legacyRoots":[{"slug":"A前端👨‍💻","title":{"en":"Frontend Atlas","zh":"前端图谱","es":"Atlas Frontend","ja":"フロントエンド地図","ar":"أطلس الواجهة الأمامية"},"description":{"en":"CSS, Vue, React, Canvas, Node, uni-app, build tools, and the earlier front-end trail.","zh":"CSS、Vue、React、Canvas、Node、uni-app、打包工具，以及更早的前端路径。","es":"CSS, Vue, React, Canvas, Node, uni-app, herramientas de build y el rastro front-end más temprano.","ja":"CSS、Vue、React、Canvas、Node、uni-app、ビルドツールなど、初期のフロントエンド蓄積。","ar":"CSS وVue وReact وCanvas وNode وuni-app وأدوات البناء والمسار الأقدم للواجهة الأمامية."}},{"slug":"B面试题📑","title":{"en":"Interview Bank","zh":"面试题仓库","es":"Banco de Entrevistas","ja":"面接バンク","ar":"بنك المقابلات"},"description":{"en":"Question banks for browser internals, networking, Vue, React, JavaScript, and engineering.","zh":"浏览器、网络、Vue、React、JavaScript 和工程化的面试题集合。","es":"Baterías de preguntas sobre navegador, red, Vue, React, JavaScript e ingeniería.","ja":"ブラウザ、ネットワーク、Vue、React、JavaScript、開発基盤に関する面接問題。","ar":"مجموعات أسئلة عن المتصفح والشبكات وVue وReact وJavaScript والهندسة."}},{"slug":"Vue实战💻","title":{"en":"Vue Practice","zh":"Vue 实战","es":"Práctica Vue","ja":"Vue 実戦","ar":"تطبيقات Vue"},"description":{"en":"Real project records around Ant Design, Echarts, mini programs, stores, and browser features.","zh":"围绕 Ant Design、Echarts、小程序、商城项目和浏览器功能的一组实战记录。","es":"Registros reales sobre Ant Design, Echarts, mini programas, tiendas y funciones del navegador.","ja":"Ant Design、Echarts、ミニプログラム、ストア、ブラウザ機能に関する実戦記録。","ar":"سجلات عملية حول Ant Design وEcharts والبرامج المصغرة والمتاجر وميزات المتصفح."}},{"slug":"走过的路🌱","title":{"en":"Growing Path","zh":"走过的路","es":"Camino Recorrido","ja":"歩いてきた道","ar":"الطريق الذي سلكته"},"description":{"en":"Yearly reviews and growth notes that carry more life signal than technical polish.","zh":"年度总结和成长记录，保留生活感和时间感。","es":"Revisiones anuales y notas de crecimiento con más vida que pulido técnico.","ja":"年次レビューと成長記録。技術の整い方より時間の感触が残っています。","ar":"مراجعات سنوية وملاحظات نمو تحمل أثر الحياة أكثر من الصقل التقني."}},{"slug":"读过的书📚️","title":{"en":"Reading Shelf","zh":"读书笔记","es":"Estante de Lectura","ja":"読書棚","ar":"رف القراءة"},"description":{"en":"Book notes across networking, JavaScript, algorithms, and systems thinking.","zh":"网络、JavaScript、算法和系统思维方向的读书笔记。","es":"Notas de lectura sobre redes, JavaScript, algoritmos y pensamiento de sistemas.","ja":"ネットワーク、JavaScript、アルゴリズム、システム思考に関する読書ノート。","ar":"ملاحظات قراءة حول الشبكات وJavaScript والخوارزميات والتفكير المنظومي."}},{"slug":"PHP🐘","title":{"en":"PHP Shelf","zh":"PHP 归档","es":"Estante PHP","ja":"PHP 棚","ar":"رف PHP"},"description":{"en":"Earlier PHP notes and experiments that still belong in the public record.","zh":"更早期的 PHP 文章和实验记录。","es":"Notas y experimentos tempranos de PHP que siguen formando parte del archivo.","ja":"初期の PHP ノートと実験記録。","ar":"ملاحظات وتجارب PHP المبكرة التي ما زالت جزءًا من السجل."}},{"slug":"Python🐍","title":{"en":"Python Shelf","zh":"Python 归档","es":"Estante Python","ja":"Python 棚","ar":"رف Python"},"description":{"en":"Small scraping experiments and data-oriented notes from the earlier Python phase.","zh":"偏数据和爬取的小实验，保留了更早一阶段的 Python 轨迹。","es":"Pequeños experimentos de scraping y notas orientadas a datos de la etapa temprana con Python.","ja":"スクレイピングやデータ寄りの小さな Python 実験。","ar":"تجارب صغيرة في الاستخراج والبيانات من المرحلة المبكرة مع Python."}}]}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","div",null,{"className":"mx-auto max-w-3xl pb-20 pt-8","children":["$","div",null,{"className":"hero-panel space-y-5","children":[["$","span",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"className":"hero-title compact","children":"That page never made it into the archive."}],["$","p",null,{"className":"hero-copy","children":"Try the rebuilt home, the full archive, or one of the legacy shelves instead."}],["$","$L8",null,{"href":"/","className":"primary-chip","children":"Go back to the English home"}]]}]}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L8",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]}]]}],{"children":[["lang","es","d"],["$","$1","c",{"children":[null,"$L9"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","sync/2022-12-10-7175443098477002807","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children","$0:f:0:1:2:children:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":"$Lc"}]]}],{},null,false]},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","8kfEWbsEUS0rVIw9Prpq5",{"children":[["$","$Ld",null,{"children":"$Le"}],["$","$Lf",null,{"children":"$L10"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+9:[["$","$L6",null,{"lang":"es","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"es","homeHref":"/es","rootAliasForDefaultLocale":false,"labels":{"brand":"POJIAN.BLOG","subtitle":"Un archivo largo sobre tooling de IA, entrega y memoria personal.","menu":"Directorio","close":"Cerrar","switchLanguage":"Cambiar idioma","switchTheme":"Cambiar tema"},"links":[{"href":"/es","label":"Inicio"},{"href":"/es#latest","label":"Reciente"},{"href":"/es#collections","label":"Colecciones"},{"href":"/es/archives","label":"Archivo"},{"href":"/es#community","label":"Comunidad"}],"legacyRoots":"$0:f:0:1:1:props:children:1:props:children:props:children:props:children:1:props:notFound:1:1:props:children:0:props:legacyRoots"}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"Un archivo largo sobre tooling de IA, entrega y memoria personal."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/es","className":"hover:text-[var(--text)]","children":"Inicio"}],["$","$L8",null,{"href":"/es/archives","className":"hover:text-[var(--text)]","children":"Archivo"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]
+12:T3b2d,<p>话不多说，先上<a
+href="https://link.juejin.cn?target=https%3A%2F%2F4do4hs.csb.app%2F"
+title="https://4do4hs.csb.app/">在线Demo</a></p>
+<h3 id="1需求分析">1.需求分析</h3>
+<p>电脑右下角的日历各位观众老爷再熟悉不过了（特别是看还有几天发工资的时候），今天来实现一个阉割版的日历！</p>
+<h3 id="2核心代码">2.核心代码</h3>
+<pre><code>&lt;template&gt;
+  &lt;div class=&quot;bk-date-picker&quot;&gt;
+    &lt;div class=&quot;date-picker&quot;&gt;
+      &lt;div class=&quot;prev-date&quot; @click=&quot;pickPreDay(currentYear, currentMonth, selectDay)&quot;&gt;
+        &lt;span style=&quot;color: #d9d9d9&quot;&gt;&lt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;a-input class=&quot;today&quot; v-model=&quot;searchDate&quot; size=&quot;samll&quot; style=&quot;height: 24px; border:none&quot; @change=&quot;handlePickerDialog(searchDate)&quot; /&gt;
+      &lt;div class=&quot;next-date&quot; @click=&quot;pickNextDay(currentYear, currentMonth, selectDay)&quot;&gt;
+        &lt;span style=&quot;color: #d9d9d9&quot;&gt;&gt;&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;a-modal
+      class=&quot;picker-dialog&quot;
+      :destroyOnClose=&quot;!0&quot;
+      centered
+      :width=&quot;720&quot;
+      :height=&quot;500&quot;
+      :visible=&quot;visible&quot;
+      @cancel=&quot;cancel&quot;
+      footer
+      :closable=&quot;false&quot;
+    &gt;
+      &lt;div class=&quot;picker-header&quot;&gt;
+        &lt;div&gt;&lt;/div&gt;
+        &lt;div class=&quot;picker-year-month&quot;&gt;
+          &lt;div class=&quot;picker-left&quot;&gt;
+            &lt;span @click=&quot;pickPre(currentYear - 1, currentMonth + 1)&quot; :style=&quot;{ color: &#39;#d9d9d9&#39; }&quot; &gt;&lt;&lt;&lt;/span&gt;
+            &lt;span @click=&quot;pickPre(currentYear, currentMonth)&quot; :style=&quot;{ color: &#39;#d9d9d9&#39; }&quot; style=&quot;margin-left: 20px&quot; &gt;&lt;&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;current-month&quot;&gt;{{ currentYear }}年 {{ currentMonth }}月&lt;/div&gt;
+          &lt;div class=&quot;picker-right&quot;&gt;
+            &lt;span @click=&quot;pickNext(currentYear, currentMonth)&quot; :style=&quot;{ color: &#39;#d9d9d9&#39; }&quot; style=&quot;margin-right: 20px&quot; &gt;&gt;&lt;/span&gt;
+            &lt;span @click=&quot;pickNext(currentYear + 1, currentMonth - 1)&quot; :style=&quot;{ color: &#39;#d9d9d9&#39; }&quot; &gt;&gt;&gt;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;picker-content&quot;&gt;
+        &lt;div class=&quot;picker-week&quot;&gt;
+          &lt;div class=&quot;week&quot; v-for=&quot;week in weeks&quot; :key=&quot;week&quot;&gt;
+            &lt;span&gt;{{ week }}&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;template v-for=&quot;(dayObject, i) in days&quot;&gt;
+            &lt;div :class=&quot;[ &#39;day&#39;, newDate == dayObject.day || isSelectDate(dayObject.day) ? &#39;selected&#39; : &#39;&#39;, isActive(dayObject.day) ? &#39;active&#39; : &#39;&#39;, ]&quot;
+              @click=&quot;getDayTime(dayObject.day, i)&quot; :key=&quot;i&quot; &gt;
+              &lt;!-- 非本月 文字加灰色 --&gt;
+              &lt;span v-if=&quot;dayObject.day.getMonth() + 1 != currentMonth&quot;  class=&quot;other-month&quot; @click=&quot;getDayTime(dayObject.day)&quot; &gt;{{ dayObject.day.getDate() }}&lt;/span&gt;
+              &lt;!-- 本月 还需要判断是不是这一天 --&gt;
+              &lt;template v-else&gt;
+                &lt;div @click=&quot;getDayTime(dayObject.day, i)&quot;&gt;
+                  &lt;div&gt;{{ dayObject.day.getDate() }}&lt;/div&gt;
+                  &lt;div class=&quot;appointment-num&quot; v-if=&quot;dayObject.num&quot;&gt;({{ dayObject.num }})&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/template&gt;
+            &lt;/div&gt;
+          &lt;/template&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/a-modal&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import moment from &quot;moment&quot;;
+export default {
+  name: &quot;DatePicker&quot;,
+  model: {
+    prop: &quot;searchDate&quot;,
+    event: &quot;selectDate&quot;
+  },
+  props: {
+    searchDate: {
+      type: String,
+      required: true
+    }
+  },
+  data() {
+    return {
+      visible: true,
+      weeks: [&quot;一&quot;, &quot;二&quot;, &quot;三&quot;, &quot;四&quot;, &quot;五&quot;, &quot;六&quot;, &quot;日&quot;],
+      days: [],
+      currentDay: 1,
+      currentMonth: 1,
+      currentYear: 2022,
+      currentWeek: 1,
+      currYearMonthDay: undefined,
+      selectDay: undefined,
+      newDate: moment(new Date()).format(&quot;YYYY-MM-DD&quot;)
+    };
+  },
+  created() {},
+  mounted() {
+    this.currYearMonthDay = this.searchDate; // 当前年月日
+    let dateArr = this.searchDate.split(&quot;-&quot;);
+    this.selectDay = dateArr[dateArr.length - 1]; // 当月的几号
+    this.initData(null);
+  },
+  methods: {
+    // 初始化日历（按月加载，月初1号前置灰部分根据当天是周几开始往前补，月末从下月第一天补）
+    initData(cur) {
+      let date;
+      if (cur) {
+        date = new Date(cur.replace(/-/g, &quot;/&quot;));
+      } else {
+        let now = new Date();
+        let d = new Date(
+          this.formatDate(now.getFullYear(), now.getMonth(), 1).replace(
+            /-/g,
+            &quot;/&quot;
+          )
+        );
+        d.setDate(41); // 每次加载6周，每周7天
+        date = new Date(
+          this.formatDate(d.getFullYear(), d.getMonth() + 1, 1).replace(
+            /-/g,
+            &quot;/&quot;
+          )
+        );
+      }
+      this.currentYear = date.getFullYear();
+      this.currentMonth = date.getMonth() + 1;
+      this.currentDay = date.getDate();
+      this.currentWeek = date.getDay() - 1;
+      // 如果本月1号为周日，往前补6天
+      if (this.currentWeek === -1) {
+        this.currentWeek = 6;
+      }
+      let str = this.formatDate(
+        this.currentYear,
+        this.currentMonth,
+        this.currentDay
+      );
+      this.days.length = 0;
+      let daysArr = [];
+      // 先获取本月1号为周几，再往前补满本周
+      for (let i = this.currentWeek; i &gt;= 0; i--) {
+        let d2 = new Date(str.replace(/-/g, &quot;/&quot;));
+        d2.setDate(d2.getDate() - i);
+        let dayObjectSelf = {}; // 用一个对象包装Date对象，便为以后预定功能添加属性
+        dayObjectSelf.day = d2;
+        daysArr.push(dayObjectSelf); // 将日期放入data 中的days数组 供页面渲染使用
+      }
+      // 其他周
+      for (let j = 1; j &lt;= 41 - this.currentWeek; j++) {
+        let d3 = new Date(str.replace(/-/g, &quot;/&quot;));
+        d3.setDate(d3.getDate() + j);
+        let dayObjectOther = {};
+        dayObjectOther.day = d3;
+        daysArr.push(dayObjectOther);
+      }
+      this.days = daysArr;
+    },
+    // 返回 类似 2022-10-15 格式的字符串
+    formatDate(year, month, day) {
+      let y = year;
+      let m = month;
+      if (m &lt; 10) {
+        m = &quot;0&quot; + m;
+      }
+      let d = day;
+      if (d &lt; 10) {
+        d = &quot;0&quot; + d;
+      }
+      return y + &quot;-&quot; + m + &quot;-&quot; + d;
+    },
+    getDayTime(el, index) {
+      let value = moment(el).format(&quot;YYYY-MM-DD&quot;);
+      this.$emit(&quot;selectDate&quot;, value);
+      this.cancel();
+      this.newDate = el;
+      this.currYearMonthDay = value;
+      this.selectDay = moment(el).format(&quot;DD&quot;);
+    },
+    // 上一天
+    pickPreDay(year, month, day) {
+      if (year &amp;&amp; month &amp;&amp; day) {
+        let value = &quot;&quot;;
+        let daysArr = this.days; // 日历数组（仅展示当月）
+        let currDay = this.formatDate(year, month, Number(day)); // 当前日期
+        // 日历中加载到第一天时，初始化日历更新 days
+        if (moment(daysArr[0].day).format(&quot;YYYY-MM-DD&quot;) === currDay) {
+          // 日历第一天是周一并且为当月1号，则更新上月日历
+          if (daysArr[0].day.getDay() === 1 &amp;&amp; daysArr[0].day.getDate() === 1) {
+            month--;
+          }
+          daysArr = this.initData(this.formatDate(year, month, 1));
+        }
+        // console.log(daysArr);
+        if (daysArr?.length &gt; 0) {
+          for (let i = 1; i &lt; daysArr.length; i++) {
+            if (moment(daysArr[i].day).format(&quot;YYYY-MM-DD&quot;) === currDay) {
+              this.currentYear = daysArr[i - 1].day.getFullYear();
+              this.currentMonth = daysArr[i - 1].day.getMonth() + 1;
+              this.selectDay = daysArr[i - 1].day.getDate();
+              value = this.formatDate(
+                this.currentYear,
+                this.currentMonth,
+                this.selectDay
+              );
+              // console.log(value);
+              this.$emit(&quot;selectDate&quot;, value);
+            }
+          }
+        }
+      }
+    },
+    // 下一天
+    pickNextDay(year, month, day) {
+      if (year &amp;&amp; month &amp;&amp; day) {
+        let value = &quot;&quot;;
+        let daysArr = this.days; // 日历数组（仅展示当月）
+        let currDay = this.formatDate(year, month, Number(day)); // 当前日期
+        // 日历中加载到倒数第二天时，初始化日历更新 days
+        if (
+          moment(daysArr[daysArr.length - 2].day).format(&quot;YYYY-MM-DD&quot;) ===
+          currDay
+        ) {
+          daysArr = this.initData(this.formatDate(year, month, 1));
+        }
+        // console.log(daysArr);
+        if (daysArr?.length &gt; 0) {
+          for (let i = 1; i &lt; daysArr.length; i++) {
+            if (moment(daysArr[i].day).format(&quot;YYYY-MM-DD&quot;) === currDay) {
+              this.currentYear = daysArr[i + 1].day.getFullYear();
+              this.currentMonth = daysArr[i + 1].day.getMonth() + 1;
+              this.selectDay = daysArr[i + 1].day.getDate();
+              value = this.formatDate(
+                this.currentYear,
+                this.currentMonth,
+                this.selectDay
+              );
+              // console.log(value);
+              this.$emit(&quot;selectDate&quot;, value);
+            }
+          }
+        }
+      }
+    },
+    // 上个月、去年
+    pickPre(year, month) {
+      // setDate(0); 上月最后一天 setDate(-1); 上月倒数第二天 setDate(dx) 参数dx为 上月最后一天的前后dx天
+      if (year &amp;&amp; month) {
+        let d = new Date(this.formatDate(year, month, 1).replace(/-/g, &quot;/&quot;));
+        d.setDate(0);
+        this.currYearMonthDay = this.formatDate(
+          d.getFullYear(),
+          d.getMonth() + 1,
+          1
+        );
+        this.initData(this.formatDate(d.getFullYear(), d.getMonth() + 1, 1));
+      }
+    },
+    // 下个月、明年
+    pickNext(year, month) {
+      if (year &amp;&amp; month) {
+        let d = new Date(this.formatDate(year, month, 1).replace(/-/g, &quot;/&quot;));
+        d.setDate(41);
+        this.currYearMonthDay = this.formatDate(
+          d.getFullYear(),
+          d.getMonth() + 1,
+          1
+        );
+        this.initData(this.formatDate(d.getFullYear(), d.getMonth() + 1, 1));
+      }
+    },
+    // 是否为查询日期
+    isSelectDate(day) {
+      let { searchDate } = this;
+      let ergodicDate = this.formatDate(
+        day.getFullYear(),
+        day.getMonth() + 1,
+        day.getDate()
+      );
+      return searchDate == ergodicDate;
+    },
+    // 是否为当天
+    isActive(day) {
+      return (
+        day.getFullYear() == new Date().getFullYear() &amp;&amp;
+        day.getMonth() == new Date().getMonth() &amp;&amp;
+        day.getDate() == new Date().getDate()
+      );
+    },
+    handlePickerDialog(searchDate) {
+      let strArr = searchDate.split(&quot;-&quot;);
+      this.visible = true;
+      this.currYearMonthDay = searchDate;
+      this.initData(this.formatDate(strArr[0], strArr[1], 1));
+    },
+    cancel() {
+      // this.visible = false;
+    }
+  }
+};
+&lt;/script&gt;
+
+&lt;style lang=&quot;less&quot;&gt;
+.bk-date-picker {
+  .date-picker {
+    // width: 200px;
+    height: 32px;
+    width: 720px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    .prev-date,
+    .next-date {
+      width: 30px;
+      height: 100%;
+      .icon {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .prev-date {
+      border-right: 1px solid #d9d9d9;
+    }
+    .next-date {
+      border-left: 1px solid #d9d9d9;
+    }
+    .today {
+      line-height: 30px;
+    }
+  }
+  .date-picker:hover {
+    border: 1px solid #0074ff;
+  }
+}
+.picker-dialog {
+  .ant-modal-content {
+    .ant-modal-body {
+      padding: 0px;
+      .picker-header {
+        padding: 0 17px;
+        height: 64px;
+        border-bottom: 1px solid #eeeeee;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        .picker-year-month {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .current-month {
+            margin: 0 40px;
+            font-size: 16px;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.85);
+            line-height: 22px;
+          }
+        }
+      }
+      .picker-content {
+        border: 1px solid #d9d9d9;
+        .picker-week {
+          display: grid;
+          margin: auto;
+          row-gap: 10px;
+          justify-content: space-evenly;
+          align-items: center;
+          text-align: center;
+          grid-template-columns: repeat(7, 50px);
+          grid-template-rows: repeat(7, 50px);
+          .week {
+            width: 50px;
+          }
+          .day {
+            width: 50px;
+            height: 50px;
+            font-size: 16px;
+            .other-month {
+              color: gainsboro;
+            }
+            .appointment-num {
+              font-size: 14px;
+              color: #0074ff;
+            }
+            .active {
+              width: 50px;
+              height: 50px;
+              background: rgba(0, 116, 255, 0.1);
+              border-radius: 4px;
+              border: 1px solid #0074ff;
+              color: #0074ff;
+            }
+          }
+          .lineFlex {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+          .active {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 116, 255, 0.1);
+            border-radius: 4px;
+            border: 1px solid #0074ff;
+            color: #0074ff;
+          }
+          .selected {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            border: 1px solid #0074ff;
+            color: #0074ff;
+          }
+          .day:hover {
+            border-radius: 4px;
+            border: 1px solid #0074ff;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+&lt;/style&gt;</code></pre>
+a:["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L8",null,{"href":"/es/archives","className":"ghost-inline","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Todos los textos"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"Sincronizado desde Juejin"}],["$","span",null,{"children":"2022-12-10"}],["$","span",null,{"children":[3," ","min"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"实现一个阉割版的日历"}],["$","p",null,{"className":"hero-copy","children":"话不多说，先上在线Demo 1.需求分析 电脑右下角的日历各位观众老爷再熟悉不过了（特别是看还有几天发工资的时候），今天来！ 2.核心代码"}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"Sinopsis"}],["$","span",null,{"children":"Este texto se conserva dentro de la nueva estructura del blog manteniendo el contenido original en chino."}],["$","a",null,{"href":"https://juejin.cn/post/7175443098477002807","target":"_blank","rel":"noreferrer","className":"ghost-inline","children":["Fuente original",["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-external-link h-4 w-4","children":[["$","path","1q9fwt",{"d":"M15 3h6v6"}],["$","path","gplh6r",{"d":"M10 14 21 3"}],["$","path","a6xqqp",{"d":"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"}],"$undefined"]}]]}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$12"}}]}]]}]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"POJIAN.BLOG"}],["$","meta","2",{"name":"description","content":"A multilingual personal blog around AI tooling, product delivery, memoir, and long-form archive work."}]]
+c:null

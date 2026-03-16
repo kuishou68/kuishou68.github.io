@@ -1,0 +1,1925 @@
+1:"$Sreact.fragment"
+2:I[6825,["177","static/chunks/app/layout-9fe08982949093af.js"],"ThemeProvider"]
+3:I[1454,["177","static/chunks/app/layout-9fe08982949093af.js"],"Live2DLoader"]
+4:I[5244,[],""]
+5:I[3866,[],""]
+6:I[7367,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"HtmlLocaleSync"]
+7:I[4750,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"BlogNavbar"]
+8:I[8173,["173","static/chunks/173-ef41fafde65cda27.js","97","static/chunks/app/%5Blang%5D/posts/%5B...slug%5D/page-6ee700c5ad1e0b29.js"],""]
+b:I[6213,[],"OutletBoundary"]
+d:I[6213,[],"MetadataBoundary"]
+f:I[6213,[],"ViewportBoundary"]
+11:I[4835,[],""]
+:HL["/_next/static/media/24f6ebe2756575bd-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/36966cca54120369-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5611c55482296524-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/edef1a271f97a8ec-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/fb12bdfc6f99d938-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/473fb34e1570d6f1.css","style"]
+:HL["/_next/static/css/1c5aef1c0dd20138.css","style"]
+:HL["/_next/static/css/45bbd2f0fdf5da27.css","style"]
+:HL["/_next/static/css/03999bf3b1a627a0.css","style"]
+0:{"P":null,"b":"ZNjizd8Y7He_YS_OA6hmp","p":"","c":["","ar","posts","sync","2021-06-27-6978364372506640392",""],"i":false,"f":[[["",{"children":[["lang","ar","d"],{"children":["posts",{"children":[["slug","sync/2021-06-27-6978364372506640392","c"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/473fb34e1570d6f1.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1c5aef1c0dd20138.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/45bbd2f0fdf5da27.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/03999bf3b1a627a0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__variable_dd5b2f __variable_64b714 __variable_51740a __variable_7afcbf __variable_6634df antialiased","children":["$","$L2",null,{"attribute":"class","defaultTheme":"dark","enableSystem":false,"disableTransitionOnChange":true,"children":[["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","$L6",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"en","homeHref":"/","rootAliasForDefaultLocale":true,"labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/","label":"Home"},{"href":"/#latest","label":"Latest"},{"href":"/#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/#community","label":"Community"}],"legacyRoots":[{"slug":"A前端👨‍💻","title":{"en":"Frontend Atlas","zh":"前端图谱","es":"Atlas Frontend","ja":"フロントエンド地図","ar":"أطلس الواجهة الأمامية"},"description":{"en":"CSS, Vue, React, Canvas, Node, uni-app, build tools, and the earlier front-end trail.","zh":"CSS、Vue、React、Canvas、Node、uni-app、打包工具，以及更早的前端路径。","es":"CSS, Vue, React, Canvas, Node, uni-app, herramientas de build y el rastro front-end más temprano.","ja":"CSS、Vue、React、Canvas、Node、uni-app、ビルドツールなど、初期のフロントエンド蓄積。","ar":"CSS وVue وReact وCanvas وNode وuni-app وأدوات البناء والمسار الأقدم للواجهة الأمامية."}},{"slug":"B面试题📑","title":{"en":"Interview Bank","zh":"面试题仓库","es":"Banco de Entrevistas","ja":"面接バンク","ar":"بنك المقابلات"},"description":{"en":"Question banks for browser internals, networking, Vue, React, JavaScript, and engineering.","zh":"浏览器、网络、Vue、React、JavaScript 和工程化的面试题集合。","es":"Baterías de preguntas sobre navegador, red, Vue, React, JavaScript e ingeniería.","ja":"ブラウザ、ネットワーク、Vue、React、JavaScript、開発基盤に関する面接問題。","ar":"مجموعات أسئلة عن المتصفح والشبكات وVue وReact وJavaScript والهندسة."}},{"slug":"Vue实战💻","title":{"en":"Vue Practice","zh":"Vue 实战","es":"Práctica Vue","ja":"Vue 実戦","ar":"تطبيقات Vue"},"description":{"en":"Real project records around Ant Design, Echarts, mini programs, stores, and browser features.","zh":"围绕 Ant Design、Echarts、小程序、商城项目和浏览器功能的一组实战记录。","es":"Registros reales sobre Ant Design, Echarts, mini programas, tiendas y funciones del navegador.","ja":"Ant Design、Echarts、ミニプログラム、ストア、ブラウザ機能に関する実戦記録。","ar":"سجلات عملية حول Ant Design وEcharts والبرامج المصغرة والمتاجر وميزات المتصفح."}},{"slug":"走过的路🌱","title":{"en":"Growing Path","zh":"走过的路","es":"Camino Recorrido","ja":"歩いてきた道","ar":"الطريق الذي سلكته"},"description":{"en":"Yearly reviews and growth notes that carry more life signal than technical polish.","zh":"年度总结和成长记录，保留生活感和时间感。","es":"Revisiones anuales y notas de crecimiento con más vida que pulido técnico.","ja":"年次レビューと成長記録。技術の整い方より時間の感触が残っています。","ar":"مراجعات سنوية وملاحظات نمو تحمل أثر الحياة أكثر من الصقل التقني."}},{"slug":"读过的书📚️","title":{"en":"Reading Shelf","zh":"读书笔记","es":"Estante de Lectura","ja":"読書棚","ar":"رف القراءة"},"description":{"en":"Book notes across networking, JavaScript, algorithms, and systems thinking.","zh":"网络、JavaScript、算法和系统思维方向的读书笔记。","es":"Notas de lectura sobre redes, JavaScript, algoritmos y pensamiento de sistemas.","ja":"ネットワーク、JavaScript、アルゴリズム、システム思考に関する読書ノート。","ar":"ملاحظات قراءة حول الشبكات وJavaScript والخوارزميات والتفكير المنظومي."}},{"slug":"PHP🐘","title":{"en":"PHP Shelf","zh":"PHP 归档","es":"Estante PHP","ja":"PHP 棚","ar":"رف PHP"},"description":{"en":"Earlier PHP notes and experiments that still belong in the public record.","zh":"更早期的 PHP 文章和实验记录。","es":"Notas y experimentos tempranos de PHP que siguen formando parte del archivo.","ja":"初期の PHP ノートと実験記録。","ar":"ملاحظات وتجارب PHP المبكرة التي ما زالت جزءًا من السجل."}},{"slug":"Python🐍","title":{"en":"Python Shelf","zh":"Python 归档","es":"Estante Python","ja":"Python 棚","ar":"رف Python"},"description":{"en":"Small scraping experiments and data-oriented notes from the earlier Python phase.","zh":"偏数据和爬取的小实验，保留了更早一阶段的 Python 轨迹。","es":"Pequeños experimentos de scraping y notas orientadas a datos de la etapa temprana con Python.","ja":"スクレイピングやデータ寄りの小さな Python 実験。","ar":"تجارب صغيرة في الاستخراج والبيانات من المرحلة المبكرة مع Python."}}]}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","div",null,{"className":"mx-auto max-w-3xl pb-20 pt-8","children":["$","div",null,{"className":"hero-panel space-y-5","children":[["$","span",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"className":"hero-title compact","children":"That page never made it into the archive."}],["$","p",null,{"className":"hero-copy","children":"Try the rebuilt home, the full archive, or one of the legacy shelves instead."}],["$","$L8",null,{"href":"/","className":"primary-chip","children":"Go back to the English home"}]]}]}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L8",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]}]]}],{"children":[["lang","ar","d"],["$","$1","c",{"children":[null,"$L9"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","sync/2021-06-27-6978364372506640392","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children","$0:f:0:1:2:children:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":"$Lc"}]]}],{},null,false]},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","ci7QsXhHeDOKOfDX6x9uQ",{"children":[["$","$Ld",null,{"children":"$Le"}],["$","$Lf",null,{"children":"$L10"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+9:[["$","$L6",null,{"lang":"ar","dir":"rtl"}],["$","div",null,{"className":"site-frame rtl","children":[["$","$L7",null,{"locale":"ar","homeHref":"/ar","rootAliasForDefaultLocale":false,"labels":{"brand":"POJIAN.BLOG","subtitle":"أرشيف طويل حول أدوات الذكاء الاصطناعي والنشر والذاكرة الشخصية.","menu":"الدليل","close":"إغلاق","switchLanguage":"تبديل اللغة","switchTheme":"تبديل النمط"},"links":[{"href":"/ar","label":"الرئيسية"},{"href":"/ar#latest","label":"الأحدث"},{"href":"/ar#collections","label":"المجموعات"},{"href":"/ar/archives","label":"الأرشيف"},{"href":"/ar#community","label":"المجتمع"}],"legacyRoots":"$0:f:0:1:1:props:children:1:props:children:props:children:props:children:1:props:notFound:1:1:props:children:0:props:legacyRoots"}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"أرشيف طويل حول أدوات الذكاء الاصطناعي والنشر والذاكرة الشخصية."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/ar","className":"hover:text-[var(--text)]","children":"الرئيسية"}],["$","$L8",null,{"href":"/ar/archives","className":"hover:text-[var(--text)]","children":"الأرشيف"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]
+12:T11c4a,<h2
+id="javascript高级程序设计红宝书第二遍阅读动手实践">《JavaScript高级程序设计》红宝书第二遍阅读（动手实践）</h2>
+<h3 id="第1章什么是javascript">第1章——什么是JavaScript</h3>
+<p>DOM将整个页面抽象为一组分层节点。</p>
+<p>BOM用于支持访问和操作浏览器的窗口。</p>
+<hr />
+<h3 id="第2章html中的javascript">第2章——HTML中的JavaScript</h3>
+<ul>
+<li><strong>2.1 &lt; script &gt;元素</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>元素</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>async</td>
+<td>立即开始下载脚本，但不能阻止其他页面动作，比如下载资源或等待其他脚本加载，只对外部脚本文件有效；</td>
+</tr>
+<tr>
+<td>charset</td>
+<td>使用src指定代码字符集，很少使用，大多数浏览器不在乎它的值；</td>
+</tr>
+<tr>
+<td>crossorigin</td>
+<td>配置相关CORS(跨源资源共享)设置。默认不使用CORS；</td>
+</tr>
+<tr>
+<td>defer</td>
+<td>表示在文档解析和显示完成后，再执行脚本，只对外部脚本文件有效；</td>
+</tr>
+<tr>
+<td>integrity</td>
+<td>运行比对接收到的资源和指定的加密签名以验证子资源的完整性(SRI，Subresource
+Intergrity)。可以用于确保内容分发网络（CDN，Content Delivery
+Network）不会提供恶意内容。</td>
+</tr>
+<tr>
+<td>src</td>
+<td>包含要执行的代码的外部文件；</td>
+</tr>
+<tr>
+<td>type</td>
+<td>表示代码中脚本语言的内容类型（也称MIMI类型），这个值始终是“text/javascript”，如果这个值是module，则代码会被当作ES6模块，而且只有这种时候，代码中才能出现import和export关键字。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2.1.3 异步加载脚本</strong></p>
+<p>async属性和defer，两者都能适用于外部脚本，告诉浏览器立即开始下载。</p>
+<pre><code>&lt;html&gt;
+    &lt;head&gt;
+    &lt;title&gt;异步执行脚本&lt;/title&gt;
+    &lt;script async src=&quot;main.js&gt;&lt;/script&gt;
+    &lt;script async src=&quot;main1.js&gt;&lt;/script&gt;&lt;!--可能先于第一个脚本执行--&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p><strong>2.1.4 动态加载脚本</strong></p>
+<pre><code>let script = document.createElement(&#39;script&#39;);
+script.src = &#39;gibberish.js&#39;;
+script.async = false;
+document.head.appendChild(script);</code></pre>
+<hr />
+<h3 id="第3章语言基础">第3章——语言基础</h3>
+<p>var声明的变量会被提升（hoist），把所有变量声明都拿到函数作用域顶部，在函数退出时被销毁。</p>
+<pre><code>//var 提升（hoist）
+function foo(){
+    console.log(age);
+    var age = 21;
+}
+foo();
+// ↑上面的相当于提升后的下面↓
+function foo(){
+    var age;//把所有变量声明都拿到函数作用域顶部
+    console.log(age);
+    age = 21;
+}
+foo();</code></pre>
+<p>let声明的范围是<strong>块作用域</strong>，var声明的范围是<strong>函数作用域</strong>。</p>
+<pre><code>//let声明
+function f1(){
+  let n = 5;
+  if(true){
+    let n = 10;
+  }
+  console.log(n); // 5 使用let声明的变量 外层代码块 不受 内层代码块 的影响。
+//var声明
+function f1(){
+  var n = 5;
+  if(true){
+    var n = 10;
+  }
+  console.log(n); // 10 使用var定义变量n，块作用域下最后输出的值是 内层代码块 的结果。</code></pre>
+<p>const声明范围也是<strong>块作用域</strong>，是必须同时<strong>初始化变量</strong>。</p>
+<pre><code>const age = &#39;kuishou&#39;;
+if(true){
+    const name = &#39;zhangsan&#39;;
+}
+console.log(age);//kuisou 
+console.log(name);//undefined 块作用域只能拿到当前层代码块的结果。</code></pre>
+<p><strong>注意</strong>：平时使用中，const优先，let次之。</p>
+<ul>
+<li><strong>3.4数据类型</strong></li>
+</ul>
+<p>typeof操作符：用来区分函数和其他对象</p>
+<p><strong>undefined 和 null 的****区别</strong>：</p>
+<p><strong>undefined
+类型</strong>：表示声明了变量但是未初始化（没有值），undefined是由null中派生而来的。</p>
+<p><strong>null类型</strong>：表示一个空对象指针。</p>
+<p><strong>boolean类型</strong>：要将一个其他类型的值转换成布尔值，可以调用Boolean()转换函数。</p>
+<pre><code>let message = &quot;Hello kuishou&quot;;
+if(message){
+    console.log(&quot;message 已经转换成布尔类型&quot;);
+}//if等流控制语句会自动执行其他类型转换为布尔类型语句</code></pre>
+<p><strong>Number类型</strong>：表示整数和浮点值，范围在Number.MIN_VALUE~Number.MAX_VALUE之间。</p>
+<pre><code>let Number = 68;    //整数
+
+let octalNum1 = 070;//八进制56
+let octalNum3 = 08;//无效的八进制数，当成8处理
+
+let folatNum1 = 0xA;//十六进制10
+let folatNum2 = 0x1f;//十六进制31
+
+let floatNum1 = 1.1;
+let floatNum2 = 0.1;
+let floatNum3 = .1;//有效，但不推荐
+
+let floatNum4 = 1. //小数点后面没有数字，当做1处理
+let floatNum5 = 10.0 //小数点后面是0，当成整数处理
+
+let floatNum6 = 3.153e7;//以3.153为系数，乘以10的7次幂；</code></pre>
+<p><strong>NaN</strong>（Not a
+Number）：意思'不是数值',<strong>表示</strong>本来要返回数值的操作失败了。</p>
+<p><strong>isNaN()
+函数</strong>：接收一个任意类型的参数，判断这个参数是否‘不是数值’</p>
+<pre><code>console.log(isNaN(NaN));//true
+console.log(isNaN(10));//false,10是数值
+console.log(isNaN(&quot;10&quot;));//false,可以转换为数组
+console.log(isNaN(&quot;blue&quot;));//true,不可以转换为数值
+console.log(isNaN(true));//false,可以转换成数值1
+
+let num1 = Number(&quot;Hello kuishou&quot;);//NaN  字符串&quot;Hello kushou&quot;找不到对应的值的时候会提示NaN
+let num2 = Number(&quot;&quot;);             //0
+let num3 = Number(&quot;000011&quot;);       //11
+let num4 = Number(true);           //1</code></pre>
+<p><strong>数值转换</strong>：Number、parseInt()、parseFloat()</p>
+<p><strong>paresInt()
+函数</strong>：能识别不同的整数格式（十进制、八进制、十六进制）</p>
+<pre><code>let num1 = parseInt(&quot;1234blue&quot;);//1234
+let num2 = parseInt(&quot;&quot;);        //NaN
+let num3 = parseInt(&quot;0xA&quot;);     //10,解释为十六进制
+let num4 = parseInt(22.5);      //22
+let num5 = parseInt(&quot;70&quot;);      //70,解释为十进制
+
+let num1 = parseInt(&quot;10&quot;,2);    //2,按二进制解析
+let num2 = parseInt(&quot;10&quot;,8);    //8,按十进制解析
+let num3 = parseInt(&quot;10&quot;,10);   //10,按十进制解析
+let num4 = parseInt(&quot;10&quot;,16);   //16，按十六进制解析</code></pre>
+<p><strong>String
+类型</strong>：可以用双引号（"）、单引号（'）、反引号（`）标示。</p>
+<pre><code>let Name = &quot;kuishou&quot;;
+let Name = &#39;lingxiu&#39;;
+let Name = `jianlin`;</code></pre>
+<p><strong>toSting()</strong>： 转换为字符串。</p>
+<pre><code>let num = 10;
+console.log(num.toString(2));//1010,转换成二进制数
+
+let num = &quot;kuishou&quot;;
+console.log(String(num));   //kuishou</code></pre>
+<p><strong>模板字面量</strong>：求值后得到的字符串，保留换行字符，可以跨行定义字符串。</p>
+<pre><code>let myMultLineString = `first line\nsecond line`;
+let myMultLineTemplatLiteral = `first line second line`;
+console.log(myMultLineString);                              //first line
+                                                            // second line
+console.log(myMultLineTemplatLiteral);                      //first line second line
+console,log(myMultLineString == myMultLineTemplatLiteral);  //true
+//模板字面量在定义模板时特别有用，比如下面这个 HTML 模板:
+let `
+&lt;div&gt;
+    &lt;a href=&quot;#&quot;&gt;
+        &lt;span&gt;kuishou&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/div&gt;
+`</code></pre>
+<p><strong>字符串插值</strong>：可以在一个连续定义中插入一个或多个值。</p>
+<pre><code>let value = 5;
+let exponent = &#39;second&#39;;
+// 以前的写法
+let interpolatedString =
+ value + &#39; to the &#39; + exponent + &#39; power is &#39; + (value * value);
+// 现在的写法
+let interpolatedTemplateLiteral =
+ `${ value } to the ${ exponent } power is ${ value * value }`;
+console.log(interpolatedString); // 5 to the second power is 25
+console.log(interpolatedTemplateLiteral); // 5 to the second power is 25 
+//模板也可以插入自己之前的值：
+let value = &#39;&#39;;
+function append(){
+    value = `${value}abc`
+    console.log(value);
+}
+append();   //abc,第一遍显示abc
+append();   //abcabc,第二遍在abc前面加了abc
+append();   //abcabcabc,第三遍在abcabc前面加个abc</code></pre>
+<p><strong>模板字面量标签函数</strong>：通过标签函数自定义插值行为.</p>
+<pre><code>let a = 8;
+let b = 9;
+function simpleTag(strings,aValExpression,bValExpression,sumExpression){
+    console.log(strings);// [&quot;&quot;, &quot; + &quot;, &quot; = &quot;, &quot;&quot;]
+    console.log(aValExpression);// 6
+    console.log(bValExpression);// 9
+    console.log(sumExpression);// 15
+    return &#39;foobar&#39;;
+}
+let untaggedRealut = `${a} + ${b} = ${a+b}`;
+let taggedRedult = simpleTag`${a} + ${b} = ${a+b}`;
+console.log(untaggedResult); // &quot;6 + 9 = 15&quot;
+console.log(taggedResult); // &quot;foobar&quot;</code></pre>
+<p><strong>Symbol类型</strong>：确保<strong>对象属性</strong>使用使用唯一的标识符，不会发生冲突的危险。是用来创建唯一记号，进而用作非
+字符串形式的对象属性。</p>
+<pre><code>let o = {
+    [Symbol(&#39;fool&#39;)]:&#39;foo val&#39;, 
+    [Symbol(&#39;bar&#39;)]:&#39;bar val&#39;
+}
+console.log(o);             //{Symbol(fool): &quot;foo val&quot;, Symbol(bar): &quot;bar val&quot;}
+
+let barSymbol = Object.getOwnPropertySymbols(o)
+                .find((symbol) =&gt; symbol.toString().match(/bar/));
+console.log(barSymbol);     //Symbol(bar)</code></pre>
+<table>
+<thead>
+<tr>
+<th>Symbol符号</th>
+<th>属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Symbol.asyncItertor</td>
+<td>一个方法，该方法返回的对象默认到的AsyncItertor,由for-await-of语句使用。</td>
+</tr>
+<tr>
+<td>Symbol.hasInstance</td>
+<td>一个方法，该方法决定一个构造器对象是否认可的一个对象是它的实例。</td>
+</tr>
+<tr>
+<td>Symbol.isConcatSpreadable</td>
+<td>一个布尔值，如果是true,则意味着对象应该用Array.protype.concat()打平其数组元素。</td>
+</tr>
+<tr>
+<td>Symbol.iterator</td>
+<td>一个方法，该方法返回<strong>对象默认的迭代器</strong>，由for-of语句使用</td>
+</tr>
+<tr>
+<td>Symbol.match</td>
+<td>一个正则表达式，该方法用<strong>正则表达式</strong>去匹配字符串。</td>
+</tr>
+<tr>
+<td>Symbol.replace</td>
+<td>一个正则表达式方法，该方法<strong>替换</strong>一个字符串中匹配的字符</td>
+</tr>
+<tr>
+<td>Symbol.search</td>
+<td>一个正则表达式方法，该方法返回字符串中匹配<strong>正则表达式的索引</strong></td>
+</tr>
+<tr>
+<td>Symbol.species</td>
+<td>一个函数值，该函数作为创建<strong>派生对象</strong>的构造函数</td>
+</tr>
+<tr>
+<td>Symbol.spilt</td>
+<td>一个正则表达式方法，该方法在匹配正则表达式的索引位置拆分字符串。</td>
+</tr>
+<tr>
+<td>Symbol.toPrimitve</td>
+<td>一个方法，该方法将对象转换为相应的原始值。</td>
+</tr>
+<tr>
+<td>Symbol.toStringTag</td>
+<td>一个字符串，该字符串用于创建对象的默认字符串描述。</td>
+</tr>
+<tr>
+<td>Symbol.unscopables</td>
+<td>一个对象，该对象所有的以及继承的属性，都会从关联对象的With环境绑定中排除。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Object 类型</strong>：通过创建 Object
+类型的实例来创建自己的对象，然后再给对象添加属性和方法。</p>
+<table>
+<thead>
+<tr>
+<th>Object实例</th>
+<th>属性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>constructor</td>
+<td>用于创建当前对象的函数。</td>
+</tr>
+<tr>
+<td>hasOwnProperty(propertyName)</td>
+<td>用于判断当前对象实例（不是原型）上是否存在给定的属性。</td>
+</tr>
+<tr>
+<td>isPrototypeOf(object)</td>
+<td>用于判断当前对象是否为另一个对象的原型。</td>
+</tr>
+<tr>
+<td>propertyIsEnumerable(propertyName)</td>
+<td>用于判断给定的属性是否可以使用。</td>
+</tr>
+<tr>
+<td>toLocaleString()</td>
+<td>返回对象的字符串表示，该字符串反映对象所在的本地化执行环境。</td>
+</tr>
+<tr>
+<td>toString()</td>
+<td>返回对象的字符串表示。</td>
+</tr>
+<tr>
+<td>valueOf()</td>
+<td>返回对象对应的字符串、数值或布尔值表示。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>3.5一元操作符（只操作一个值的操作符）</strong></li>
+</ul>
+<p>位操作符：有符号整数使用32位前31位表示整数值，第32位表示数值的符号，这一位称为<strong>符号位</strong>，他的值决定了数值其余部分的格式。</p>
+<p>布尔操作符：逻辑与&amp;&amp;（短路操作符）、逻辑或||、逻辑非!</p>
+<p>乘性操作符：乘法*、除法/、取模%</p>
+<p>指数操作符：Math.pow(底数，指数)</p>
+<p>加性操作符：加法+、减法-</p>
+<p>关系操作符：小于&lt;、大于&gt;~~~</p>
+<ul>
+<li><strong>3.6语句</strong></li>
+</ul>
+<p><strong>if语句</strong>：</p>
+<pre><code>if(i&gt;18){
+    console.log(&quot;成年了！&quot;);
+}else if(i&gt;22){
+    soncole.log(&quot;大学毕业了！&quot;);
+}else{
+    console.log(&quot;找工作了！&quot;);
+}</code></pre>
+<p><strong>do-while语句</strong>:后测试语句</p>
+<pre><code>let i = 0;
+  do{
+    i += 2;
+    console.log(i);
+}while(i&lt;10);</code></pre>
+<p><strong>whilel语句</strong>: 先测试语句</p>
+<pre><code>let i = 0;
+while(i&lt;10){
+    i += 2;
+    console.log(i);
+}</code></pre>
+<p><strong>for语句</strong>:</p>
+<pre><code>for(let i = 0;i&lt;10;i++){
+    console.log(i);
+}</code></pre>
+<p><strong>for-in语句</strong>：for(property in windows )
+statment，用于枚举对象中的非符号键属性，每次循环都给变量property
+赋予一个 windows对象的属性作为值，直到所有属性都被枚举一遍。</p>
+<pre><code>for(const propName in windows){
+    console.log(propName);
+}//表示每次执行循环，都会给变量propName赋予一个windows对象的属性作为值，直到windows的所有属性都被枚举一遍。</code></pre>
+<p><strong>for-of语句</strong>：for(const el of
+[1,3,5,7])，用于遍历可迭代对象的元素，循环会持续到所有元素都别迭代完。</p>
+<pre><code>for(const el of [1,3,5,7,9]){
+    console.log(el);//以此输出1,3,5，7,9
+}</code></pre>
+<p><strong>for in 和 for of 的区别:</strong></p>
+<pre><code>var a = [&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;];
+for (var idx in a) {//建议 循环对象属性 的时候使用。
+ console.log( idx );
+}
+// 0 1 2 3 4   for..in 在数组 a 的键 / 索引上循环。
+for (var val of a) {//建议 遍历数组 的时候使用
+ console.log( val );
+}
+// &quot;a&quot; &quot;b&quot; &quot;c&quot; &quot;d&quot; &quot;e&quot;   而 for..of 在 a 的 值 上循环。</code></pre>
+<p>①在底层，for..of 循环向 iterable
+请求一个迭代器，然后反复调用这个迭代器把它产生的值赋给循环迭代变量。---《你不知道的JavaScript-下卷》</p>
+<p>②for..of可以通过break、continue、return
+提前终止，并抛出异常。---《你不知道的JavaScript-下卷》</p>
+<p><strong>break 和 continue的区别</strong>：</p>
+<p><strong>break语句</strong>：跳出当前循环，执行循环后的下一条语句；</p>
+<pre><code>let num = 0;
+for(let i = 1;i&lt;10;i++){
+    if(i%5==0){
+        break;
+    }
+    num++;
+}
+console.log(num);//结果是4,为什么？
+                 //因为循环体递增到i能够被5取模的时候，循环体已经跳出了，num没有继续+1</code></pre>
+<p><strong>continue语句</strong>：退出循环后，再次回到循环顶部重新开始执行。</p>
+<pre><code>let num = 0; 
+for(let i = 1;i&lt;10;i++){
+    if(i%5==0){
+        console.log(num);
+        continue;
+    }
+    num++;
+    console.log(num);
+}
+console.log(num);//结果是8，为什么？
+                 //因为循环体递增到i能够被5取模的时候，遇到continue跳出，再次回到循环顶部重新执行了一遍，
+                 //又因为0%5和1%5都等于1，所以最终结果为8。</code></pre>
+<p><strong>switch语句</strong>：</p>
+<pre><code>switch(i){
+    case 25:
+        console.log(&quot;25&quot;);
+        borek;
+    case 35:
+        console.log(&quot;35&quot;);
+        borek;
+    case 45:
+        console.log(&quot;45&quot;);
+        borek;
+    case 55:
+         console.log(&quot;55&quot;);
+         borek;
+    default:
+        console.log(&quot;Outher&quot;);
+}</code></pre>
+<p><strong>With语句</strong>：用于设置代码在特定对象中的作用域</p>
+<pre><code>var sMessage =&quot;hello kuishou&quot;;
+with(sMessage){
+    alert(toUpperCase());//
+}</code></pre>
+<ul>
+<li><strong>3.7函数</strong></li>
+</ul>
+<p>diff()函数：结算两个数值的差。</p>
+<pre><code>function diff(num1,num2){//diff()函数用于计算两个数值的差
+    if(num1&lt;num2){
+        return num2 - num1;
+    }else{
+        return num1-num2;
+    }
+}</code></pre>
+<p>sayHi()函数：合并传递的参数，并用逗号隔开。</p>
+<hr />
+<h3 id="第4章变量作用域与内存">第4章——变量、作用域与内存</h3>
+<ul>
+<li><strong>4.1传递参数</strong></li>
+</ul>
+<pre><code>function addTen(num){
+    num +=10;
+    return num;
+}
+let count = 20;
+let result = addTen(count);
+console.log(count);//20
+console.log(result);//30
+
+function setName(obj) {
+    obj.name = &quot;kuishou&quot;;
+    obj = new Object();
+    obj.name = &quot;jianlin&quot;;
+}
+let person = new Object();
+setName(person);
+console.log(person.name);//kuishou</code></pre>
+<ul>
+<li><strong>4.2执行上下文与作用域。</strong></li>
+</ul>
+<p>每个上下文都有一个关联的<strong>变量对象</strong>,这个上下文中定义的所有变量和函数都存在于这个对象上。</p>
+<pre><code>var color = &quot;blue&quot;;
+function changeColor(){
+    if(color === &quot;blue&quot;){
+        color = &#39;red&#39;;
+    }
+}
+changeColor();     //这个函数的作用域包含两个对象：所以能把red显示在全局变量中
+console.log(color);//red</code></pre>
+<ul>
+<li><p><strong>4.3垃圾回收</strong></p>
+<p>确定某个变量不会再使用，然后释放它占用的内存，周期性清理，属于’不判定的‘问题。</p>
+<p>两种标记策略：标记清理、引用计数。</p></li>
+</ul>
+<p>​ <strong>标记清理</strong>流程：声明一个变量时，这个变量就会被加上
+**存在于上下文
+**的标记，垃圾回收程序运行的时候，被加上标记的变量就是待删除变量，随后垃圾回收程序做一次内存清理，销毁带标记的所有值并回收他们的内存。</p>
+<pre><code>functiontest(){
+ vara = 10 ; //被标记
+ ，进入环境
+ varb = 20 ; //被标记
+ ，进入环境
+}
+test();//执行完毕
+ 之后 a、b又被标离开环境，被回收。</code></pre>
+<p>​
+<strong>引用计数</strong>：对每个值都记录它被引用的次数，变量被引用一次，那么引用数+1；变量被其他值覆盖，引用值-1；当引用值为0的时候，回收其内存。</p>
+<pre><code>functiontest(){
+ vara = {} ; //a的引用次数为0
+ varb = a ; //a的引用次数加1，为1
+ varc =a; //a的引用次数再加1，为2
+ varb ={}; //a的引用次数减1，为1
+}</code></pre>
+<hr />
+<h3 id="第5章基本引用类型">第5章——基本引用类型</h3>
+<ul>
+<li><strong>5.1 Date 类型</strong></li>
+</ul>
+<pre><code>let now = new Date();
+console.log(now);//Tue Mar 23 2021 18:03:19 GMT+0800 (中国标准时间)</code></pre>
+<ul>
+<li><strong>5.2 RegExp 正则表达式</strong></li>
+</ul>
+<pre><code>// g：全局模式，表示查找字符串的全部内容，而不是找到第一个匹配的内容就结束。
+// i：不区分大小写，表示在查找匹配时忽略 pattern 和字符串的大小写。
+// m：多行模式，表示查找到一行文本末尾时会继续查找。
+// y：粘附模式，表示只查找从 lastIndex 开始及之后的字符串。
+// u：Unicode 模式，启用 Unicode 匹配。
+// s：dotAll 模式，表示元字符.匹配任何字符（包括\n 或\r）。
+// 匹配字符串中的所有&quot;at&quot;
+let pattern1 = /at/g;
+// 匹配第一个&quot;bat&quot;或&quot;cat&quot;，忽略大小写
+let pattern2 = /[bc]at/i;
+// 匹配所有以&quot;at&quot;结尾的三字符组合，忽略大小写
+let pattern3 = /.at/gi;
+// 匹配第一个&quot;bat&quot;或&quot;cat&quot;，忽略大小写
+let pattern1 = /[bc]at/i;
+// 匹配第一个&quot;[bc]at&quot;，忽略大小写
+let pattern2 = /\[bc\]at/i;
+// 匹配所有以&quot;at&quot;结尾的三字符组合，忽略大小写
+let pattern3 = /.at/gi;
+// 匹配所有&quot;.at&quot;，忽略大小写</code></pre>
+<ul>
+<li><strong>5.3 原始值包装类型</strong></li>
+</ul>
+<p><strong>Boolean 类型</strong></p>
+<pre><code>let falseObject = new Boolean(false);
+let result = falseObject &amp;&amp; true;
+console.log(result);//true</code></pre>
+<p><strong>Number 类型</strong></p>
+<pre><code>let num = 10;
+console.log(num.toString(2));//1010，转换成二进制
+console.log(num.toFixed(2));//10.00,返回2位小数点位数的数值字符串
+console.log(num.toExopnential(1));//1.0e+1，带0-20个小数位的数值
+console.log(num.toString(1));//1.0e+2,带1-21个小数位的数值</code></pre>
+<p><strong>String 类型</strong></p>
+<pre><code>let stringValue = new String(&quot;Hello kuishou&quot;);
+console.log(stringValue.length);//13,字符串的字符数量为13，一个空格占两个字节
+
+let stringValue = &quot;Hello kuishou&quot;;
+console.log(stringValue.slice(3));//llo kuishou，从左边0位开始，返回3后面所有的字符串
+console.log(stringValue.slice(3,7));//llo，从左边0位开始，返回3-7这个区间内所有的字符串
+console.log(stringValue.slice(-3));//hou,从右边开始，返回-3前面面所有的字符串
+console.log(stringValue.slice(3,-4));//llo kui，从右边开始，返回3-7这个区间内所有的字符串
+
+console.log(stringValue.indexOf(&quot;o&quot;))//4,从左边开始，找出字母o所在的位置
+console.log(stringValue.lastIndexOf(&quot;o&quot;))//11,从左边开始，找出字母o所在的位置
+console.log(stringValue.indexOf(&quot;o&quot;,6));//11,从位置6（字符k）开始向后开始搜索，在位置11找到了o
+console.log(stringValue.lastIndexOf(&quot;o&quot;,6));//4,从位置6（字符k）开始反向开始搜索，在位置4找到了o</code></pre>
+<p><strong>trim()方法</strong>：创建字符串的一个副本，删除前后所有空格符，再返回起结果。</p>
+<pre><code>let stringValue = &quot; hello world &quot;;
+let trimmedStringValue = stringValue.trim();
+console.log(stringValue); // &quot; hello world &quot;
+console.log(trimmedStringValue); // &quot;hello world&quot;</code></pre>
+<p><strong>repeat()方法</strong>：接收一个参数，将字符串复制参数中指定的次数，然后拼接所有副本的结果。</p>
+<pre><code>let stringValue = &quot;na &quot;;
+console.log(stringValue.repeat(16) + &quot;batman&quot;);
+// na na na na na na na na na na na na na na na na batman</code></pre>
+<ul>
+<li><strong>5.4 Math</strong></li>
+</ul>
+<pre><code>let max = new Math.max(1,2,3,4,5);
+console.log(max);//
+
+let min = new Math.min(1,2,3,4,5);
+console.log(min);</code></pre>
+<p>**Math.round()**方法执行四舍五入</p>
+<p><strong>Math.ceil()方法</strong>：始终向上舍入最接近的整数。</p>
+<p><strong>Math.floor()方法</strong>：始终向下舍入最接近的整数。</p>
+<p><strong>Math.round()方法</strong>：执行四舍五入。</p>
+<p><strong>Math.fround()方法</strong>：返回数值最接近的单精度（32位）浮点值表示。</p>
+<pre><code>console.log(Math.ceil(25.9));//26,向上取整
+console.log(Math.ceil(25.5));//26
+console.log(Math.ceil(25.4));//26
+console.log(Math.ceil(25.1));//26
+
+console.log(Math.floor(25.9));//25，向下取整
+console.log(Math.floor(25.5));//25
+console.log(Math.floor(25.4));//25
+console.log(Math.floor(25.1));//25
+
+console.log(Math.round(25.9));//26，四舍五入
+console.log(Math.round(25.5));//26
+console.log(Math.round(25.4));//25
+console.log(Math.round(25.1));//25
+
+console.log(Math.fround(25.9));//25.899999618530273，返回数值最接近的单精度浮点值
+console.log(Math.fround(25.5));//25.5
+console.log(Math.fround(25.4));//25.399999618530273
+console.log(Math.fround(25.1));//25.100000381469727</code></pre>
+<p>**Math.random()**生成随机数。</p>
+<pre><code>let num = Math.floor(Math.random()*10+1);
+console.log(num);//1~10范围内的随机数
+
+/*-------------------------- */
+function selectFrom(lowerValue,upperValue){
+    let choices = upperValue - lowerValue + 1;
+    return Math.floor(Math.random() * choices + lowerValue);
+}
+let num = selectFrom(2,10);
+console.log(num);   //2~10范围内的随机数
+
+/*-------------------------- */
+let colors = [&quot;red&quot;,&quot;green&quot;,&quot;blue&quot;,&quot;black&quot;,&quot;brown&quot;];
+let color = [selectFrom(0,colors.length-1)];
+console.log(color);</code></pre>
+<hr />
+<h3 id="第6章集合应用类型">第6章——集合应用类型</h3>
+<ul>
+<li><strong>6.1 Object</strong></li>
+</ul>
+<p>object适合存储和在应用程序之间交换数据。</p>
+<p><strong>对象字面量</strong>：对象定义的简写形式，目的是为了简化包含大量属性的对象的创建。</p>
+<pre><code>let person ={//对象字面量 表示法
+    name : &quot;kuishou&quot;,
+    age : 21,
+    sex : &quot;男&quot;
+};
+
+function displayInfo(args){
+    let output = &quot;&quot;;
+    if(typeof args.name == &quot;string&quot;){
+        output += &quot;Name:&quot; + args.name + &quot;\n&quot;;
+    }
+    if(typeof args.age  == &quot;number&quot;){
+        output += &quot;Age: &quot; + args.age + &quot;\n&quot;;
+    }
+    alert(output);//Name:kuishou Age:21
+}
+
+displayInfo({
+    name: &quot;kuishou&quot;,
+    age: 21
+});
+
+displayInfo({
+    name: &quot;lingxiu&quot;
+});</code></pre>
+<ul>
+<li><p><strong>6.2 Array 数组</strong></p>
+<p>创建数组</p></li>
+</ul>
+<pre><code>let colors = new Array();
+let colors = new Array(&quot;red&quot;,&quot;blue&quot;,&quot;black&quot;);
+let colors = [&quot;red&quot;,&quot;green&quot;,&quot;black&quot;];</code></pre>
+<pre><code>//Array.from()拆分、合并数组
+console.log(Array.from(&quot;kuishou&quot;));//[&quot;k&quot;, &quot;u&quot;, &quot;i&quot;, &quot;s&quot;, &quot;h&quot;, &quot;o&quot;, &quot;u&quot;],拆分数组
+
+const s = new Set().add(1).add(2).add(3).add(5).add(4);
+console.log(Array.from(s));//[1, 2, 3, 5, 4]，合并数组
+
+const m = new Map().set(1,2).set(3,4);
+console.log(Array.from(m));//[[1,2],[3,4]]，合并二维数组
+
+//Array.of()把一组参数转换为数组
+console.log(Array.of(1,2,3,4,5));//[1, 2, 3, 4, 5]
+console.log(Array.of(red,black,green));//[&quot;red&quot;, &quot;black&quot;,&quot;green&quot;]
+
+//数组索引
+ let colors = [&quot;red&quot;,&quot;yellow&quot;,&quot;blue&quot;];
+ console.log(colors[0]);    //red，显示第一项
+ colors[2] = &quot;yellow&quot;;//修改第三项中blue
+ colors[3] = &quot;green&quot;; //添加第四项，数组长度+1
+ console.log(colors.length);//4,显示数组长度</code></pre>
+<p><strong>迭代器方法</strong>：keys()返回数组<strong>索引</strong>,values()返回数组<strong>元素</strong>，entries()返回<strong>索引/值对</strong>。</p>
+<pre><code>const b = [&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;,&quot;black&quot;];//注意const在控制台声明时候会被初始化变量，也就是这个变量用过一次之后不能再重复使用了。
+const bKeys = Array.from(b.keys());
+console.log(bKeys);     //[0, 1, 2, 3]
+const bValues = Array.from(b.values());
+console.log(bValues);   // [&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;black&quot;]
+const bEntries = Array.from(b.entries());
+console.log(bEntries);  // [[0, &quot;red&quot;],[1, &quot;blue&quot;],[2, &quot;green&quot;],[3, &quot;black&quot;]]</code></pre>
+<p><strong>栈方法</strong>：posh()推入，pop()弹出，遵循后进先出的原则。</p>
+<pre><code>let colors = [&quot;red&quot;,&quot;green&quot;];
+let count = colors.push(&quot;blue&quot;,&quot;black&quot;);//推入两项
+console.log(count);                     //4,push接收参数后，返回数组最新长度
+
+let item = colors.pop();                //弹出最后一项
+console.log(item);                      //black</code></pre>
+<p><strong>队列方法</strong>：shift()删除数组中第一项，并返回数组长度；posh()在数组末尾添加数据；遵循先进先出原则。</p>
+<pre><code>let colors = [&quot;red&quot;,&quot;green&quot;];
+let count = colors.push(&quot;blue&quot;,&quot;black&quot;);//推入两项
+console.log(count);                     //4,push接收参数后，返回数组最新长度
+
+let item = colors.shift();              //取得第一项
+console.log(item);                      //red</code></pre>
+<p><strong>排序方法</strong>：reverse()反向排序；sort()中包含一个比较函数，用于判断那个值应该排在前面。</p>
+<pre><code>let values = [1,2,3,4,5]
+let count = values.reverse();
+console.log(count);         //[5, 4, 3, 2, 1]，降序
+console.log(count.sort());  //[1, 2, 3, 4, 5]，升序
+
+function compare(value1,value2){//降序
+    if(value1 &lt; value2){
+        return 1;
+    }else if(value1 &gt; value2){
+        return -1;
+    }else{
+        return 0;
+    }
+}
+let values = [0,1,5,10,15,20];
+console.log(values.sort(compare));//[20, 15, 10, 5, 1, 0]
+
+function compare(value1,value2){//升序
+    if(value1 &lt; value2){
+        return -1;
+    }else if(value1 &gt; value2){
+        return 1;
+    }else{
+        return 0;
+    }
+}
+let values = [20, 15, 10, 5, 1, 0];
+console.log(values.sort(compare));//[0, 1, 5, 10, 15, 20]</code></pre>
+<p><strong>操作方法</strong>：concat()在现有数组后面创建一个新的数组;slice()创建一个包含原有数组中一个或多个元素的心数组；splice()在数组中插入新的元素，删除传递2个参数，第一个是元素的位置，第二个是删除的数量，插入传递3个参数；</p>
+<pre><code>//concat()可以在现有数组的基础上创建一个新数组
+let colors = [&quot;red&quot;,&quot;green&quot;,&quot;blue&quot;];
+let colors2 = colors.concat(&quot;yellow&quot;,[&quot;black&quot;,&quot;brown&quot;]);//传入yellow和数组[&quot;black&quot;,&quot;brown&quot;]，默认不打平
+console.log(colors);        // [&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;]
+console.log(colors2);       //[&quot;red&quot;, &quot;green&quot;, &quot;blue&quot;, &quot;yellow&quot;, &quot;black&quot;, &quot;brown&quot;]，形成一个新数组
+
+let colors = [&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;];
+let newColors = [&quot;black&quot;,&quot;brown&quot;];
+let moreNewColors = {
+    [Symbol.isConcatSpreadable] : true,
+    length : 2,
+    0 : &quot;pink&quot;,
+    1 : &quot;cyan&quot;
+};
+newColors[Symbol.isConcatSpreadable] = false;
+//强制不打平数组
+let colors2 = colors.concat(&quot;yellow&quot;,newColors);
+//强制打平数组
+let colors3 = colors.concat(moreNewColors);
+console.log(colors);    //[&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;]
+console.log(colors2);   //[&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;yellow&quot;, [&quot;black&quot;,&quot;brown&quot;]],不打平数组输出二维数组
+console.log(colors3);   //[&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;pink&quot;, &quot;cyan&quot;]，打平数组强制输出一维数组
+
+//slicie()用于创建一个包含原有数组中一个或多个元素的新数组
+let colors = [&quot;red&quot;,&quot;green&quot;,&quot;blue&quot;,&quot;black&quot;,&quot;pink&quot;];
+let colors2 = colors.slice(1);      //从索引1(green)开始，读取1后面所有值
+console.log(colors2);               //[&quot;green&quot;, &quot;blue&quot;, &quot;black&quot;, &quot;pink&quot;]
+let colors3 = colors.slice(1,4);    //从索引1(green)开始，3(black)结束，读取区间内的值
+console.log(colors3);               //[&quot;green&quot;, &quot;blue&quot;, &quot;black&quot;]
+
+let colors = [&quot;red&quot;,&quot;green&quot;,&quot;blue&quot;];
+let removed = colors.splice(0,1);   //删除第一行
+console.log(colors);                //[&quot;green&quot;, &quot;blue&quot;]
+
+removed = colors.splice(1,0,&quot;yellow&quot;,&quot;orange&quot;); //在位置1插入两个元素
+console.log(colors);                //[&quot;green&quot;, &quot;yellow&quot;, &quot;orange&quot;, &quot;blue&quot;]
+ 
+removed = colors.splice(1,1,&quot;red&quot;,&quot;peuple&quot;);    //插入两个值，删除一个元素
+console.log(colors)                 //[&quot;green&quot;, &quot;red&quot;, &quot;peuple&quot;, &quot;orange&quot;, &quot;blue&quot;]</code></pre>
+<p><strong>迭代方法</strong>：三个参数（数组元素、元素索引、数组本身）,</p>
+<p>*
+every()从数组中搜索符合某个条件的元素，传入的函数对每一项都返回true，这个方法才会返回true.</p>
+<p>*
+some()从数组中搜索符合某个条件的元素，传入的函数只要有一项返回true，这个方法就返回true.</p>
+<p>* filter()满足条件的项，组成新的数组返回。</p>
+<p>* map()返回的结果组成新的数组。</p>
+<p>* forEach()会运行每一项传入的函数，没有返回值，实现遍历。</p>
+<pre><code>let numbers = [1,2,3,4,5,4,3,2,1];
+let everyResult = numbers.every((item,index,array) =&gt; item &gt; 2);
+console.log(everyResult);//false
+
+let someResult = numbers.some((item,index,array) =&gt; item &gt; 2);
+console.log(someResult);//true
+
+let filterResult = numbers.filter((item,index,array) =&gt; item &gt; 2);
+console.log(filterResult);//[3, 4, 5, 4, 3]
+
+let mapResult = numbers.map((item,index,array) =&gt; item * 2);
+console.log(mapResult);//[2, 4, 6, 8, 10, 8, 6, 4, 2]</code></pre>
+<p>归并方法：接收<strong>四个参数</strong>：上一个归并值、当前项、当前项的索引、数组本身。</p>
+<p>* reduce()从第一项开始遍历到最后一项</p>
+<p>* reduceRight()从最后一项遍历到第一项</p>
+<pre><code>let values = [1,2,3,4,5];
+let sum = values.reduce((prev,cur,index,array) =&gt; prev + cur);
+console.log(sum);//15,从左至右归并，第一次执行，prev是1，cur是2；第二次执行prev是3，cur是3；第三次执行prev是6，cur是4；依次归并，最后sum为15
+
+let sum = values.reduceRight(function(prev,cur,index,array){
+    return prev + cur;
+});
+console.log(sum);//15，从右边向左边归并。</code></pre>
+<ul>
+<li><strong>6.4 Map</strong></li>
+</ul>
+<p>Map是一种新的集合类型，使用<strong>对象属性</strong>作为键，再使用属性来引用值。</p>
+<p>* get()、set()查询</p>
+<p>* size()获取映射中的数量</p>
+<p>* delete()、clear()删除</p>
+<pre><code>const m1 = new Map([//使用嵌套数组初始化映射
+    [&quot;key1&quot;,&quot;val1&quot;],
+    [&quot;key2&quot;,&quot;val2&quot;],
+    [&quot;key3&quot;,&quot;val3&quot;],
+]);
+console.log(m1.size);
+
+const m = new Map();
+
+m.set(&quot;firstName&quot;,&quot;Matt&quot;)
+ .set(&quot;lastName&quot;,&quot;Frisbie&quot;);
+console.log(m.has(&quot;firstName&quot;));//true
+console.log(m.get(&quot;firstName&quot;));//Math
+console.log(m.size);//2
+
+m.delete(&quot;firstName&quot;);//只删除这一个键/值对
+console.log(m.has(&quot;firstName&quot;));//false
+console.log(m.get(&quot;lastName&quot;));//Frisbie,get获取的lastName键，返回得到是Frisbie值
+console.log(m.size);//1,删除之后，长度-1
+
+m.clear(&quot;firstName&quot;);//清除这个映射实例中的所有键/值对
+console.log(m.has(&quot;firstName&quot;));//false
+console.log(m.get(&quot;lastName&quot;));//undefined
+console.log(m.size);</code></pre>
+<p><strong>Map和Object的区别</strong>：</p>
+<p><strong>内存方面</strong>：Map比Object多存储50%的键/值对；</p>
+<p><strong>插入性能</strong>：插入速度不会随着键/值对的数量增加而线性增加；</p>
+<p><strong>查找速度</strong>：Object当做数组使用的情况下，Object速度更佳；</p>
+<p><strong>删除性能</strong>：Map 的
+delete()操作都比插入和查找更快。</p>
+<hr />
+<h3 id="第7章迭代器与生成器">第7章——迭代器与生成器</h3>
+<p><strong>迭代器</strong>：是一个对象，它定义了一个序列，并在终止时返回值。两个返回值：value、done。可以由任意对象实现的接口，支持连续获取对象产出的每一个值。</p>
+<pre><code>for (let i = 1;i &lt;= 10;i++){
+    console.log(i);
+}//1 2 3 4 5 6 7 8 9 10
+
+let collection = [&#39;foo&#39;,&#39;bar&#39;,&#39;baz&#39;];
+for(let index = 0;index &lt; collection.length;++index){
+    console.log(collection[index]);
+}//foo bar baz
+
+collection.forEach((item) =&gt; console.log(item));//foo bar baz</code></pre>
+<p><strong>可迭代协议</strong>：支持自我识别能力和创建实现Iterator接口对象的能力。</p>
+<pre><code>//for-of 循环
+let arr = [&#39;foo&#39;,&#39;bar&#39;,&#39;baz&#39;];
+for(let el of arr){
+    console.log(el);//foo bar baz
+}
+
+//数组解构
+let arr = [&#39;foo&#39;,&#39;bar&#39;,&#39;baz&#39;];
+let [a,b,c] = arr;
+console.log(a,b,c);//foo bar baz
+
+//扩展操作符
+let arr = [&#39;foo&#39;,&#39;bar&#39;,&#39;baz&#39;];
+let arr2 = [...arr];
+console.log(arr2);//[&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;]
+
+//Array.from()
+let arr = [&#39;foo&#39;,&#39;bar&#39;,&#39;baz&#39;];
+let arr3 = Array.from(arr);
+console.log(arr3);//[&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;]
+
+//Set构造函数
+let arr = [&#39;foo&#39;,&#39;bar&#39;,&#39;baz&#39;];
+let set = new Set(arr);
+console.log(arr3);//[&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;]
+
+//Map构造函数
+let arr = [&#39;foo&#39;,&#39;bar&#39;,&#39;baz&#39;];
+let pairs = arr.map((x,i) =&gt; [x,i]);
+console.log(pairs);//[[&quot;foo&quot;, 0], [&quot;bar&quot;, 1], [&quot;baz&quot;, 2]]
+
+let map = new Map(pairs);
+console.log(map);// {&quot;foo&quot; =&gt; 0, &quot;bar&quot; =&gt; 1, &quot;baz&quot; =&gt; 2}</code></pre>
+<p><strong>迭代对象</strong>：一种一次性使用的对象，用于迭代与其关联的可迭代对象。</p>
+<pre><code>//可迭代对象
+let arr = [&#39;foo&#39;,&#39;bar&#39;];
+//迭代器工厂函数
+console.log(arr[Symbol.iterator]);//values() { [native code] }
+//迭代器
+let iter = arr[Symbol.iterator]();
+console.log(iter);//Array Iterator {}
+//执行迭代
+console.log(iter.next());//{value: &quot;foo&quot;, done: false}
+console.log(iter.next());//{value: &quot;bar&quot;, done: false}
+console.log(iter.next());//{value: undefined, done: true}</code></pre>
+<p><strong>生成器</strong>：允许定义一个包含自由迭代算法的函数，同时它可以自动维护自己的状态，拥有一个函数块内暂停和恢复代码执行的能力，生成器的形式是一个函数，函数名称前面加一个星号（*）表示它是一个生成器。</p>
+<pre><code>//生成器函数声明
+function* generationFn(){}
+//生成器函数表达式
+let generationFn = function* (){}
+//作为对象字面量方法的生成器函数
+let foo = {
+    * generationFn(){}
+}
+//作为类实例方法的生成器函数
+class Foo{
+    * generationFn(){}
+}
+//作为类静态方法的生成器函数
+class Bar{
+    static* generationFn(){}
+}
+//生成器放回指定的值
+function* generationFn(){
+    return &#39;foo&#39;;
+}
+let generatorObject = generationFn();
+console.log(generatorObject);//generationFn {&lt;suspended&gt;}
+console.log(generatorObject.next());//{value: &quot;foo&quot;, done: true}
+
+/**
+ * yield中断执行
+ */
+function* generationFn(){
+    yield &#39;foo&#39;;
+    yield &#39;bar&#39;;
+    return &#39;baz&#39;;
+}
+let generatorObject = generationFn();
+console.log(generatorObject.next());//{value: &quot;foo&quot;, done: false}
+console.log(generatorObject.next());//{value: &quot;bar&quot;, done: false}
+console.log(generatorObject.next());//{value: &quot;baz&quot;, done: true}</code></pre>
+<hr />
+<h3 id="第8章对象类与面向对象编程">第8章——对象、类与面向对象编程</h3>
+<ul>
+<li><strong>8.1 理解对象</strong></li>
+</ul>
+<p>面向字面量书写方式：</p>
+<pre><code>let person = {
+    name: &quot;kuishou&quot; ,
+    age:21,
+    job:&quot;前端开发&quot;,
+    sayName(){
+        console.log(this.name);
+    }
+};</code></pre>
+<ul>
+<li>8.1.1 定义多个属性</li>
+</ul>
+<p>Object.defineProperties()通过多个描述符一次性定义多个属性。</p>
+<pre><code>let book = {};
+Object.defineProperty(book,{
+    year_:{
+        value:2021
+    },
+    edition:{
+        value:1
+    },
+    year:{
+        get(){
+            return this.year_;
+        },
+        set(newValue){
+            if(newValue &gt; 2020){
+                this.year_ = newValue;
+                this.edition += newValue - 2020;
+            }
+        }
+    }
+});</code></pre>
+<ul>
+<li>8.1.2 读取属性的特征</li>
+</ul>
+<p>Object.getOwnProprttyDescriptor()可以指定属性的特征描述符</p>
+<pre><code>let book = {};
+Object.defineProperties(book,{
+    year_:{
+        value:2021
+    },
+    edition:{
+        value:1
+    },
+    year:{
+        get:function(){
+            return this.year_;
+        },
+        set:function(newValue){
+            if(newValue &gt; 2020){
+                this.year_ = newValue;
+                this.edition += newValue - 2020;
+            }
+        }
+    }
+})
+let descriptor = Object.getOwnPropertyDescriptor(book,&quot;year_&quot;);
+console.log(descriptor.value);        //2021
+console.log(descriptor.configurable); //false
+console.log(descriptor.enumerable);   //undefined
+console.log(typeof descriptor.get);   //undefined</code></pre>
+<ul>
+<li>8.1.3 合并对象：把源对象所有的本地属性一起复制到目标对象上。</li>
+</ul>
+<p>Object.assign()对每个源对象执行的是浅复制。</p>
+<pre><code>let dest , src , result;
+//覆盖属性
+dest = {id: &#39;dest&#39;};
+result = Object.assign(dest,{id:&#39;src1&#39;,a:&#39;foo&#39;},{id:&#39;src2&#39;,b:&#39;bar&#39;});
+console.log(result);//{id: &quot;src2&quot;, a: &quot;foo&quot;, b: &quot;bar&quot;}
+
+/**
+ * 属性值简写
+ */
+let name = &#39;Matt&#39;;
+let person = {
+    name
+};
+console.log(person);//{name: &quot;Matt&quot;}
+
+/**
+ * 对象解构
+ */
+let person ={
+    name:&#39;Matt&#39;,
+    age:&#39;21&#39;
+};
+let {name:personName,age:personAge} = person;
+console.log(personName);//Matt
+console.log(personAge);//21</code></pre>
+<ul>
+<li><strong>8.2 创建对象</strong></li>
+<li>8.2.1 工厂模式：用于抽象特定对象的过程。</li>
+</ul>
+<pre><code>function createPerson(name,age,job){
+    let o = new Object();
+    o.name = name;
+    o.age = age;
+    o.job = job;
+    o.sayName = function(){
+        console.log(this.name);
+    };
+    return o;
+}
+let person1 = createPerson(&quot;kuishou&quot;,21,&quot;前端开发&quot;);
+let person2 = createPerson(&quot;lingxiu&quot;,20,&quot;后端开发&quot;);</code></pre>
+<ul>
+<li>8.2.1 构造函数模式：用于创建特定类型对象。</li>
+</ul>
+<pre><code>function Person(name,age,job){
+    this.name = name;
+    this.age = age;
+    this.job = job;
+    this.sayName = function(){
+        console.log(this.name);
+    };
+}
+let person1 = createPerson(&quot;kuishou&quot;,21,&quot;前端开发&quot;);
+let person2 = createPerson(&quot;lingxiu&quot;,20,&quot;后端开发&quot;);
+person1.sayName();//kuishou
+person2.sayName();//lingxiu</code></pre>
+<ul>
+<li><strong>8.3 继承</strong></li>
+</ul>
+<pre><code>function SuperType(){
+    this.property = true;
+}
+SuperType.prototype.getSuperValue = function(){
+    return this.property;
+}
+function SubType(){
+    this.subproperty = false;
+}
+//继承SuperType
+SubType.prototype = new SuperType();
+SubType.prototype.getSuperValue = function(){
+    return this.subproperty;
+};
+let instance = new SubType();
+console.log(instance.getSuperValue());</code></pre>
+<ul>
+<li><strong>8.4 类</strong></li>
+</ul>
+<p>定义类的两种方式：</p>
+<pre><code>// 类声明
+class Person {}
+// 类表达式
+const Animal = class {};</code></pre>
+<p>函数声明可以提升，类的定义不能。</p>
+<p>类的构造函数 ：不定义构造函数相当于将构造函数定义为空函数。</p>
+<p>继承：不仅可以继承一个类，也可以继承普通的构造函数。</p>
+<p>抽象基类：可供其他类继承，当本身不会被实例化，使用new,target检测是不是抽象基类.</p>
+<hr />
+<h3 id="第9章代理与反射">第9章——代理与反射</h3>
+<ul>
+<li><strong>9.1 代理</strong></li>
+</ul>
+<p>拦截并向基本操作嵌入额外行为的能力；target目标对象；handler代理对象（Reflect也可以）</p>
+<pre><code>const target = {
+ id: &#39;target&#39;
+};
+const handler = {};
+const proxy = new Proxy(target, handler);
+// id 属性会访问同一个值
+console.log(target.id); // target
+console.log(proxy.id); // target
+// 给目标属性赋值会反映在两个对象上
+// 因为两个对象访问的是同一个值
+target.id = &#39;foo&#39;;
+console.log(target.id); // foo
+console.log(proxy.id); // foo
+// 给代理属性赋值会反映在两个对象上
+// 因为这个赋值会转移到目标对象
+proxy.id = &#39;bar&#39;;
+console.log(target.id); // bar
+console.log(proxy.id); // bar
+// hasOwnProperty()方法在两个地方
+// 都会应用到目标对象
+console.log(target.hasOwnProperty(&#39;id&#39;)); // true
+console.log(proxy.hasOwnProperty(&#39;id&#39;)); // true
+// Proxy.prototype 是 undefined
+// 因此不能使用 instanceof 操作符
+console.log(target instanceof Proxy); // TypeError: Function has non-object prototype
+&#39;undefined&#39; in instanceof check
+console.log(proxy instanceof Proxy); // TypeError: Function has non-object prototype
+&#39;undefined&#39; in instanceof check
+// 严格相等可以用来区分代理和目标
+console.log(target === proxy); // false</code></pre>
+<hr />
+<h3 id="第10章函数">第10章——函数</h3>
+<ul>
+<li><strong>10.1 箭头函数</strong></li>
+</ul>
+<pre><code>let arrowSum = (a,b) =&gt; {//箭头函数
+    return a+b;
+};
+let functionExpressionSum = function (a,b) {//普通函数
+    return a+b;
+}
+console.log(arrowSum(6,8));//14
+console.log(functionExpressionSum(6,8));//14</code></pre>
+<ul>
+<li><strong>10.2 函数内部</strong></li>
+</ul>
+<p>arguments对象：是一个类数组对象（第一个参数是arguments[0],第二个参数是arguments[1])。</p>
+<pre><code>function doAdd(){
+    if(arguments.length==1){
+        console.log(arguments[0]+10);
+    }else if(arguments.length==2){
+        console.log(arguments[0]+arguments[1]);
+    }
+}
+doAdd(10);//20
+doAdd(20,30);//50
+
+let trueFactorial = factorial;
+factorial = function(){
+    return 0;
+};
+console.log(trueFactorial(5));//120
+console.log(factorial(5));//0</code></pre>
+<p>this
+对象：在标准函数中，this引用的是把函数当成方法调用的上下文对象。</p>
+<pre><code>window.coloe = &#39;red&#39;;
+let o ={
+    color:&#39;bule&#39;
+};
+function sayColor(){
+    console.log(this.coolor);
+}
+sayColor();//&#39;red&#39;
+
+o.sayColor = sayColor;
+o.sayColor();//&#39;blue&#39;
+
+//this 在箭头函数中，this引用的是定义箭头函数的上下文。
+windows.color = &#39;red&#39;;
+let o ={
+    color:&#39;blue&#39;
+};
+let sayColor = () =&gt; console.log(this.color);
+sayColor();//&#39;red&#39;
+o.sayColor = sayColor;
+o.sayColor();//&#39;red&#39;</code></pre>
+<ul>
+<li><strong>10.3 递归</strong> ：一个函数通过名称自己调用自己。</li>
+</ul>
+<p>arguments.callee 指向一个正在执行的函数的指针。</p>
+<pre><code>function factorial(num){
+    if(num&lt;=1){
+        return 1;
+    } else {
+        return num*arguments.callee(num-1);
+    }
+}
+
+const factorial = (function f(num){
+    if (num&lt;=1){
+        return 1;
+    } else {
+        return num*f(num-1);
+    }
+});</code></pre>
+<ul>
+<li><strong>10.4
+闭包</strong>：引用了另一个函数作用域中变量的函数，通常是在嵌套函数中实现的。<strong>本质</strong>是包含<strong>函数的活动对象</strong>加长了其作用域链。</li>
+</ul>
+<pre><code>function createComparisonFunction(propertyName){
+    return function(object1,object2){
+        let value1 = object1[propertyName];
+        let value2 = object2[propertyName];
+
+        if(value1 &lt; value2){
+            return -1;
+        } else if(value1 &gt; value2){
+            return 1;
+        }else{
+            return 0;
+        }
+    };
+}</code></pre>
+<ul>
+<li><strong>10.5
+模块模式</strong>：通过自定义类型创建了私有变量和特权方法。</li>
+</ul>
+<pre><code>let singleton ={
+    name:value,
+    method(){
+        //方法的代码
+    }
+};
+
+let singleton = function(){
+    //私有变量和私有函数
+    let privateVariable = 10;
+    function privateFunction(){
+        return false;
+    }
+    //特权、公有方法和属性
+    return {
+        publicProperty: true,
+        publicMethod(){
+            privateVariable ++;
+            return privateFunction
+        }
+    }
+}</code></pre>
+<hr />
+<h3 id="第11章期约与异步函数">第11章——期约与异步函数</h3>
+<ul>
+<li>11.2 <strong>期约（promise）</strong>:是对 尚不存在结果
+的一个替身。</li>
+</ul>
+<pre><code>/**
+ * 期约与异步函数
+ * 什么是Promise?
+ * （1）从语法上来说：Promise是一个构造函数
+ * （2）从功能上来说：Promise对象用来封装一个异步操作并获取其结果。
+ * Promise基本远行流程
+ * （1）创建一个新的Promise 对象
+ * （2) 执行异步操作任务
+ * （3）异步任务成功则返回resolve(),失败则返回reject()
+ * （4）resolved状态通过then()回调onResolved();rejected状态通过then()/catch()回调onReject()
+ * （5）最后形成一个新的Promise对象
+ */
+//失败处理
+function double(value,success,failure){
+    setTimeout(() =&gt; {
+        try{
+            if(typeof value !== &#39;number&#39;){
+                throw &#39;Must provide number as firdt argument&#39;;
+            }
+            success(2 * value);
+        }catch(e){
+            failure(e);
+        }
+    },1000);
+}
+
+const successCallback = (x) =&gt; console.log(&#39;Success：${x}&#39;);
+const failureCallback = (e) =&gt; console.log(&#39;Failure：${e}&#39;);
+
+double(3,successCallback,factorialCallack);
+double(&#39;b&#39;,successCallback,factorialCallack);
+
+//嵌套异步回调
+function double(value,success,failure){
+    setTimeout(() =&gt; {
+        try{
+            if(typeof value !== &#39;number&#39;){
+                throw &#39;Must provide number as firdt argument&#39;;
+            }
+            success(2 * value);
+        }catch(e){
+            failure(e);
+        }
+    },1000)
+}
+
+const successCallback = (x) =&gt; {
+    double(x,(y) =&gt; console.log(&#39;Success：${y}&#39;));
+};
+const failureCallback = (e) =&gt; console.log(&#39;Failure:${e}&#39;);
+double(3,successCallback,failureCallback);</code></pre>
+<p>Promise 对象状态改变的方式：</p>
+<pre><code>//1.声明一个Promise对象的状态
+let p = new Promise((resolve,reject) =&gt; {
+    //resolve 函数
+    resolve(&#39;OK&#39;);//pending =&gt;fulfilled(resolve)
+    //reject  函数
+    reject(&#39;Error&#39;);//pending =&gt; rejected
+    //抛出错误
+    throw &#39;出问题了&#39;;
+});
+console.log();
+
+//Promise指定多个成功/失败回调函数，都会调用嘛？
+//当Promise改变为对应状态时，都会被调用
+let p = new Promise((resolve,reject) =&gt; {
+    resolve(&#39;OK&#39;);
+});
+//指定回调
+p.then(value =&gt; {
+    console.log(value);
+});
+//指定回调
+p.then(value =&gt; {
+    alert(value);
+});</code></pre>
+<p>三种状态：待定（pending）、兑现(resovle)、拒绝(reject)</p>
+<pre><code>/**
+ * promise 期约是对尚不存在结果的一个替身
+ * 三种状态：待定（pending）、兑现（fulfilled,可以叫解决（resolve））、拒绝（rejected），三种状态不可逆
+ * 待定（pending）:期约的最初始状态。
+ * 兑现（fulfilled）:期约落定（settled）为代表成功状态
+ * 拒绝（rejected）:期约落定（settled）为代表失败状态
+ * 用途：抽象的表示一个异步操作；状态代表期约是否完成。
+ */
+let p = new Promise(() =&gt; {});
+setTimeout(console.log,0,p);
+
+let p1 = new Promise((resolve,reject) =&gt; resolve());
+setTimeout(console.log, 0 ,p1)//Promise {&lt;fulfilled&gt;: undefined}
+
+let p2 = new Promise((resolve,reject) =&gt; reject());
+setTimeout(console.log, 0 ,p2)//Promise {&lt;rejected&gt;: undefined}</code></pre>
+<p>Promise.prototype.then()为Promise实例添加状态改变时的回调函数。</p>
+<pre><code>//then方法返回的是一个新的Promise实例。
+getJSON(&quot;/post/1.json&quot;).then(
+    post =&gt; getJSON(post.commentURL)
+).then(
+    comments =&gt; console.log(&quot;resolved:&quot;,comments),
+    err =&gt; console.log(&quot;rejected:&quot;,err)
+);</code></pre>
+<p>Promise.prototype.catch() 发生错误时的回调函数。</p>
+<pre><code>const somrAsyncThing = function(){
+    return new Promise(function(resolve,reject){
+        resolve(x + 2);//会报错，因为x没有声明
+    });
+};
+somrAsyncThing().catch(function(error){
+    console.log(&#39;error&#39;,error);
+}).then(function(){
+    console.log(&#39;error&#39;);
+});</code></pre>
+<p>Promise.prototype.finally()
+不管Promise对象最后状态如何，都会执行的操作。</p>
+<pre><code>let p1 = Promise.resolve();
+let p2 = Promise.reject();
+let onFinally = function(){
+    setTimeout(console.log, 0, &#39;Finally!&#39;)
+}
+p1.finally(onFinally);//Finally
+p2.finally(onFinally);//Finally</code></pre>
+<p>Promise.all()
+接收一个可迭代对象，返回一个新期约，在一组期约全部解决之后再解决。</p>
+<pre><code>const p1 = new Promise((resolve,reject) =&gt; {
+    resolve(&quot;hello&quot;);
+}).then(result =&gt; result);
+
+const p2 = new Promise((resolve,reject) =&gt; {
+    throw new Error(&#39;error&#39;);
+}).then(result =&gt; result);
+
+Promise.all([p1,p2])
+.then(result =&gt; console.log(result))
+.catch(e =&gt; console.log(e));</code></pre>
+<p>Promise.race() 将多个Promise实例，包装成一个新的Promise实例。</p>
+<pre><code>const p = Promise.race([p1,p2,p3]);//只要有一个实例率先改变状态，P的转态就会发生改变
+const p = Promise.race([
+    fetch(&#39;/resource-that-may-take-a-while&#39;),
+    new Promise(function(resolve,reject){
+        setTimeout(() =&gt; reject(new Error(&#39;request timeout&#39;)),5000)
+    })
+]);
+p.then(console.log).catch(console.error);</code></pre>
+<ul>
+<li><strong>11.3 异步函数</strong>：旨在解决利用异步结构
+组织代码的问题</li>
+</ul>
+<p><strong>async关键字</strong>用于声明异步函数，它是Generator
+函数的语法糖。</p>
+<pre><code>async function foo(){}
+let bar = async function(){};
+let baz = async () =&gt; {};
+class Qux{
+    async qux(){}
+}
+
+let p = new Promise((result,reject) =&gt; setTimeout(result,1000,3));
+p.then((x) =&gt; console.log(x));//3</code></pre>
+<p><strong>await关键字</strong>用于暂停步函数代码的执行，等待期约解决。</p>
+<pre><code>async function foo(){
+    let p = new Promise((resolve,reject) =&gt; setTimeout(resolve,1000,3));
+    console.log(await p);
+}
+foo();//3
+
+//停止和恢复执行
+async function foo(){
+    console.log(2);
+    await null;
+    console.log(4);
+}
+console.log(1);
+foo();
+console.log(3);
+//1
+//2,打印完2后，由于遇到arait关键字，null向消息队列添加一个任务，退出foo()
+//3.打印完3，再次回到foo()中恢复执行。
+//4
+
+async function foo(){
+    console.log(2);
+    console.log(await Promise.resolve(8));
+    console.log(9);
+}
+async  function bar(){
+    console.log(4);
+    console.log(await 6);
+    console.log(7);
+}
+console.log(1);
+foo();
+console.log(3);
+bar();
+console.log(5);</code></pre>
+<p><strong>手写Promise</strong> :</p>
+<pre><code>// 参见的内置错误
+// 1).ReferenceError:引用的变量不存在
+console.log(a); //Uncaught ReferenceError: a is not defined
+
+// 2).TypeError:数据类型不正确
+b = {}
+b.xxx()//VM274:2 Uncaught TypeError: b.xxx is not a function
+
+//3).RangeError:数据值不在其所允许的范围内
+function fn(){
+    fn()
+}
+fn()//ncaught RangeError: Maximum call stack size exceeded
+
+//4).SyntaxError：语法错误
+const c = &quot;&#39;&#39;&quot;
+
+//创建一个Promise对象
+const p = new Promise((resolve, reject) =&gt; {
+    setTimeout(() =&gt; {
+        const time = Date.now();
+        if(time % 2 == 0){
+            resolve(&#39;成功的数据，time=&#39;+time);
+        }else{
+            reject(&#39;失败的数据，time=&#39;+time);
+        }
+    }, 1000);
+})
+p.then(
+    value =&gt; {
+        console.log(&#39;成功的回调&#39;+value);
+    },
+    reason =&gt; {
+        console.log(&#39;失败的回调，time=&#39;+reason);
+    }
+)
+
+//Promise对象用来封装一个异步操作并返回其结果
+new Promise((resolve, reject) =&gt; {
+    setTimeout(() =&gt; {
+        resolve(&#39;成功的数据&#39;)
+        reject(&#39;失败的数据&#39;)//这一部分将不起作用，promise每次调用只返回一种结果
+    },1000)
+})
+
+//Promise.then()
+new Promise((resolve, reject) =&gt; {
+    setTimeout(() =&gt; {
+        resolve(&#39;成功的数据&#39;)
+    },1000)
+}).then(
+    value =&gt; {
+        console.log(&#39;onResolved()1&#39;,value)//onResolved()1 成功的数据
+    }
+).catch(
+    reason =&gt; {
+        console.log(&#39;onReject()1&#39;,reason)
+    }
+)
+
+/**
+ * 语法糖：用起来很甜，方便的传值方式
+ */
+//Promise.resolve()
+//产生一个成功值为1的promise的值
+const p1 = new Promise((resolve, reject) =&gt; {
+    resolve(1)
+})
+const p2 = Promise.resolve(2);//语法糖
+const p3 = Promise.reject(3);//语法糖
+p1.then(value =&gt; {console.log(value)});
+p2.then(value =&gt; {console.log(value)});
+p3.catch(reason =&gt; {console.log(reason)});
+
+//Promsie.all()都为resolve才算成功,否则返回reject
+const p1 = new Promise((resolve, reject) =&gt; {
+    resolve(1)
+})
+const p2 = Promise.resolve(2);//语法糖
+const p3 = Promise.reject(3);//语法糖
+
+const pAll = Promise.all([p1,p2,p3])//其中3是一个失败的结果
+pAll.then(
+    values =&gt; {
+        console.log(&#39;all onReasoned()&#39;,values);
+    },
+    reason =&gt; {
+        console.log(&#39;all onRejected()&#39;,reason);//all onRejected() 3
+    }
+)
+
+//Promise.race()只要有一个resolve/reject就返回其结果
+//如果在异步情况下，p1,p2,p3谁先到就去谁的结果
+const p1 = new Promise((resolve, reject) =&gt; {
+    resolve(1)
+})
+const p2 = Promise.resolve(2);
+const p3 = Promise.reject(3);
+
+const pRace = Promise.race([p1,p2,p3])
+pRace.then(
+    value =&gt; {
+        console.log(&#39;race onResolve()&#39;,value)
+    },
+    reason =&gt; {
+        console.log(&#39;race onRejected()&#39;,reason)
+    }
+)
+
+/**
+ * Promise.then()返回的promise的结果由什么所决定？
+ * （1）简单表达：由then() 指定的回调函数 执行的结果 决定
+ * （2）详细表达：
+ *      ①如果抛出异常，新promise变为reject,reason为抛出的异常。
+ *      ②如果返回的是非promise的值，新promise变为resolved,value为返回的值
+ *      ③如果返回的是另一个新的promise,次promise的结果就会编程新promise的结果
+ */
+new Promise((resolve, reject) =&gt; {
+     resolve(1);//onResolved1() 1 onResolved2() undefined
+    //  reject(1);//onRejected1() 1 onResolved2() undefined
+}).then(
+    value =&gt; {
+        console.log(&#39;onResolved1()&#39;,value);
+        return 2
+        // return Promise.resolve(3)
+        // return Promise.reject(4)
+        // throw 5
+    },
+    reason =&gt; {
+        console.log(&#39;onRejected1()&#39;,reason);
+    }
+).then(
+    value =&gt; {
+        console.log(&#39;onResolved2()&#39;,value);
+    },
+    reason =&gt; {
+        console.log(&#39;onRejected2()&#39;,reason);
+    }
+)
+
+/**
+ * Promise如何串联多个操作任务？
+ * （1）promise的then()返回的一个新的promise,可以开成then()的链式调用。
+ * （2）通过then的链式调用串连多个同步/异步任务
+ */
+new Promise ((resolve, reject) =&gt; {
+    setTimeout(() =&gt; {
+        console.log(&quot;执行任务1（异步）&quot;);
+        resolve(1)
+    },1000);
+}).then(
+    value =&gt;{
+        console.log(&quot;执行任务2的结果：&quot;,value);
+        console.log(&quot;执行任务2（同步）&quot;);
+        return 2;
+    }
+).then(
+    value =&gt; {
+        console.log(&quot;执行任务3的结果：&quot;,value)
+    }
+)
+
+/**
+ * promise异常穿透？
+ * (1)当使用promise的then链式调用时，可以在最后 指定失败的回调。
+ * (2)前面任何操作做出了异常，都会传到最后失败的回调处理。
+ * 中断promise链？
+ * (1)当使用promise的then链式调用时，在中间中断，不再调用后面的回调函数
+ * (2)办法：在回调函数中返回一个pending状态的promise对象
+ */
+ new Promise ((resolve, reject) =&gt; {
+    resolve(1)
+}).then(
+    value =&gt;{
+        console.log(&quot;onRsolved1()&quot;,value);
+    }
+).then(
+    value =&gt; {
+        console.log(&quot;onRsolved2()&quot;,value)
+    }
+).then(
+    value =&gt; {
+        console.log(&quot;onRsolved3()&quot;,value)
+    }
+).catch(
+    reason =&gt; {
+        console.log(&#39;onReasoned4()&#39;,reason)
+    }
+)</code></pre>
+<p><strong>宏任务跟微任务</strong>：</p>
+<pre><code>        /**
+         * 1.JS中用来存储执行回调函数的队列包含2个不同特定的队列
+         * 2.宏队列：用来保存待执行的宏任务（回调），比如：dom事件回调、Ajax回调、定时器setTime回调
+         * 3.微嘟列：用来保存待执行的微任务（回调），比如：promise回调、MutaionOberver回调
+         * 4.JS执行时会区别这2个队列、
+         *   (1).JS引擎首先必须先执行所有的初始化同步任务代码。
+         *   (2).每次准备取出第一个宏任务执行前，都要讲所有的微任务一个个取出来执行。
+         */
+        setTimeout(() =&gt; {//宏任务 3
+            console.log(&quot;callback1()&quot;)
+            Promise.resolve(3).then(//微任务 4
+            value =&gt; {
+                console.log(&quot;onResolve3()&quot;,value)
+            }
+        )
+        },0)
+        setTimeout(() =&gt; {//宏任务 5
+            console.log(&quot;callback2()&quot;)
+        },0)
+        Promise.resolve(1).then(//微任务 1
+            value =&gt; {
+                console.log(&quot;onResolve1()&quot;,value)
+            }
+        )
+        Promise.resolve(2).then(//微任务 2
+            value =&gt; {
+                console.log(&quot;onResolve2()&quot;,value)
+            }
+        )
+        //onResolve1() 1
+        //onResolve2() 2
+        //callback()
+        //onResolve3() 3
+        //callback()
+
+        setTimeout(() =&gt; {
+            console.log(1)
+        },0)
+        new Promise((resolve) =&gt; {
+            console.log(2)
+            resolve()
+        }).then(() =&gt; {
+            console.log(3)
+        }).then(() =&gt; {
+            console.log(4)
+        })
+        console.log(5)
+        //2 5 3 4 1</code></pre>
+<p><strong>async 函数和await 函数</strong></p>
+<pre><code>        /**
+         * 1.async 函数
+         *   函数的返回值为promise对象。
+         *   promise对象的结果由async函数执行的返回值决定。
+         * 2.await 表达式
+         *   await 右侧的表达式一般为promise对象，但也可以是其他的值，
+         *   如果表达式是promsie对象，await返回的是promise成功的值，
+         *   如果表达式是其他值，直接将此值作为await的返回值。
+         *   
+         */
+        async function fn1(){
+            return 1
+            // throw 2
+            // return Promise.reject(3)
+        }
+        const result = fn1()
+        result.then(
+            value =&gt; {
+                console.log(&#39;onResolved&#39;,value);//onResolved 1
+            },reason =&gt; {
+                console.log(&#39;onRejected&#39;,reason)
+            }
+        )
+        function fn2(){
+            return new Promise((resolve, reject) =&gt; {
+                setTimeout(() =&gt; {
+                    reject(6)
+                },1000)
+            })
+        }
+        function fn4(){
+            return 6;
+        }
+        async function fn3(){
+            const vlaue = await fn2();
+            console.log(&#39;value&#39;,value)
+        }
+        fn3()</code></pre>
+<hr />
+<h3 id="第12章bom">第12章——BOM</h3>
+<ul>
+<li><strong>12.1 Windwos对象</strong></li>
+</ul>
+<p>BOM
+的核心是windows对象，windows对象有两个身份，另一个是ECMAScript中的Global对象，另一个是浏览器窗口的JavaScript接口。</p>
+<p><strong>BOM和DOM的区别:</strong></p>
+<p>①
+DOM：文档对象模型，描述了处理网页内容的方法和接口(windows.document)。</p>
+<p>②
+BOM：浏览器对象模型，描述了与浏览器进行交互的方法和接口(navigater、history、screen、location、windows)。</p>
+<hr />
+<h3 id="第13章客户端检测">第13章——客户端检测</h3>
+<ul>
+<li>能力检测：检测浏览器是否含有某种特性</li>
+<li>用户代理检测：通过用户代理字符串确定浏览器。</li>
+</ul>
+<hr />
+<h3 id="第14章dom">第14章——DOM</h3>
+<p>DOM表示由多层节点构成的文档，DOM树。</p>
+<p>Element Traversal API 五个属性：</p>
+<p>childElementCount，返回元素数量（不包含文本节点和注释）。</p>
+<p>firstElementChild，指向第一个Element类型的子元素。</p>
+<p>lastElementChild，指向最后一个Element类型的子元素。</p>
+<p>previousElementSibling,指向前一个Element类型的同胞元素。</p>
+<p>nextElementSibling,指向后一个Element类型的同胞元素。</p>
+<hr />
+<h3 id="第15章dom拓展">第15章——DOM拓展</h3>
+<ul>
+<li><p><strong>15.1 Selectors API</strong></p></li>
+<li><p>querySelector()返回匹配该模式的第一个后代元素，如果没有匹配项则返回结果null。</p>
+<pre><code>/**
+ * DOM编程
+ */
+var script = document.createElement(&quot;script&quot;);
+var code = &quot;function sayHi(){alert(&#39;h1&#39;);}&quot;;
+try{
+    script.appendChild(document.createTextNode(&quot;code&quot;));
+}catch(ex){
+    script.text = &quot;code&quot;;
+}
+document.body.appendChild(script);//&lt;script&gt;dode&lt;/script&gt;
+
+//querySelector()接收CSS选择符参数，返回匹配该模式的第一个后代元素。
+let myDiv = document.querySelector(&quot;#myDiv&quot;);
+
+//querySelect()接收CSS选择符参数，返回所有匹配的节点。
+let ems = document.querySelectorAll(&quot;p strong&quot;);//取得所有是&lt;p&gt;元素子元素的&lt;strong&gt;元素
+
+//DOM对象转Jquery对象
+var box = document.getElementsByClassName(&#39;.box&#39;);
+var jq = $(box);
+
+//获取所有div的第0个位置的div
+var domeObject = $(&#39;div&#39;)[0];
+
+//Jquery对象转换成DOM对象
+myvideo.play();//直接调用</code></pre></li>
+</ul>
+<hr />
+<h3 id="第17章事件">第17章——事件</h3>
+<ul>
+<li><strong>17.1 事件流：页面接收事件的顺序。</strong></li>
+<li>事件传播的三个阶段：</li>
+<li>①事件捕获阶段：事件是从Document节点自上而下向目标节点传播。</li>
+<li>②目标阶段：达到事件对象的事件目标，找到目标节点后完成后停止。</li>
+<li>③事件冒泡阶段：事件再从目标节点自下而上向Document节点传播。 <img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/842e8c29f9d0410a9a1690f530938cb9~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"
+alt="在这里插入图片描述" /></li>
+</ul>
+<hr />
+<h3 id="第20章streams-api">第20章——Streams API</h3>
+<ul>
+<li><p>20.2
+跨上下文消息：一种执行在不同上下文间传递消息的能力。核心是postMessage()方法。</p></li>
+<li><p>postMessage()方法接收三个参数：消息（data）、文档源（origin）、文档中的windows对象代理（souce）。</p></li>
+<li><pre><code>let iframeWindow = document.getElementById(&quot;myframe&quot;).contentWindow;
+iframeWindow.postMessage(&quot;A secret&quot;,&quot;http://www.xxxx.com&quot;);//指定源www.xxx.com,x`向内嵌窗格发送一条消息</code></pre></li>
+<li><p>Streams API</p></li>
+<li><p>可读流：通过公共接口读取数据块的流，由<strong>消费者</strong>进行处理，使用getReader()方法获取流的锁</p>
+<pre><code>async function* ints(){
+  //每1000毫秒生产一个递增的整数
+    for(let i = 0;i&lt;5;++i){
+        yieled await new Promise((resovle) =&gt; setTimeout(resovle,1000,i));
+    }
+}
+const resdableStream = new ReadableStream({
+  async start(controller){
+        for await (let chuck of ints()){
+          controller.enqueue(chunk);
+        }
+        controller.close
+    }
+})</code></pre></li>
+<li><p>可写流：通过公共接口写入数据块的流，<strong>生产者</strong>将数据写入流。</p></li>
+<li><p>转换流：包含可读流和可写流，可根据需要检查和修改流内容。</p></li>
+<li><p>20.11 Web组件</p></li>
+<li><p>一套用于增强DOM行为的工具，包括影子DOM、自定义元素和HTML模板。</p></li>
+<li><p>影子DOM通过attachShadow()方法创建并添加给有效HTML元素。</p></li>
+</ul>
+<pre><code>/**
+ * 读取拖放元素
+ */
+let droptarget =document.getElementById(&quot;droptarget&quot;);
+function handleEvent(event){
+    let info = &quot;&quot;,
+        output = document.getElementById(&quot;output&quot;);
+        Files, i,len;
+    event.preventDefault();
+    
+    if(event.type == &#39;drop&#39;){
+        file = event.dataTransfer.failes;
+        i = 0;
+        len = failes.length;
+        
+        while(i&lt;len){
+            info += `${files[i].name} (${files[i].type},${files[i].size} bytes)&lt;br&gt;`;
+            i++;
+        }
+        output.innerHTML = info;
+    }
+}
+droptarget.addEventListener(&quot;dragenter&quot;,handleEvent);
+droptarget.addEventListener(&quot;dragover&quot;,handleEvent);
+droptarget.addEventListener(&quot;drop&quot;,handleEvent);
+
+//链式调用
+function person(){
+}
+
+person.prototype.getName=function(name){
+    this.name = name;
+    return this;
+}
+person.prototype.getAge=function(age){
+    this.age = age;
+    return this;
+}
+const a = new person().getName(&#39;kuishou&#39;).getAge(&#39;21&#39;)
+console.log(a);</code></pre>
+<hr />
+<h3 id="第23章解析与序列化">第23章——解析与序列化</h3>
+<ul>
+<li>23.2 JSON对象</li>
+<li>序列化：stringify()方法，第一个<strong>参数</strong>是过滤器，可以是数组或函数；第二个<strong>参数</strong>用于缩进结果JSON字符串的选项。</li>
+<li>解析：parse()方法又叫复活函数，包含两个参数，属性名（key）和属性值（value）。可以接收一个额外的参数，这个函数会正对每个键/值对都调用一次。</li>
+</ul>
+<hr />
+<h3 id="第24章网络请求与远程资源">第24章——网络请求与远程资源</h3>
+<ul>
+<li>GET请求：用于向服务器查询某些信息。</li>
+<li>POSE请求：哟用于向服务器发送应该保存的信息。</li>
+<li>Fetch API ：浏览器会向给定的URL发送请求，读取响应、处理状态码</li>
+<li>Web
+Socket（套接字）：通过一个<strong>长时连接</strong>实现与<strong>服务器</strong>全双工、双向的通信。在JavaScript创建Web
+Socket的时候，一个HTTP请求会发送到服务器以初始化连接，服务器响应后，连接使用的Upgrade头部从HTTP切换到Web
+Socket协议，使用该协议的专有服务器。</li>
+</ul>
+<hr />
+<h3 id="第26章模块">第26章——模块</h3>
+<ul>
+<li>本质上是键/值实体，</li>
+<li>ES6模块默认在严格模式下执行，不共享全局命名空间。</li>
+</ul>
+<hr />
+<h3 id="第27章工作者线程">第27章——工作者线程</h3>
+<ul>
+<li>JavaScript是单线程的，为了为了解决并发问题，JavaScript提出了工作者线程的三种类型</li>
+<li>专用工作者线程：让脚本单独创建一个JavaScript线程，以执行委托的任务。</li>
+<li>共享工作者线程：创建到的线程可以别多个不同的上下文使用，包括不同的页面。</li>
+<li>服务工作者线程：拦截、重定向和修改页面发出的请求，充当王阔请求仲裁者的角色。</li>
+</ul>
+a:["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L8",null,{"href":"/ar/archives","className":"ghost-inline","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"كل المقالات"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"تمت المزامنة من Juejin"}],["$","span",null,{"children":"2021-06-27"}],["$","span",null,{"children":[19," ","دقيقة"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"《JavaScript高级程序设计》红宝书第二遍阅读（动手实践）"}],["$","p",null,{"className":"hero-copy","children":"第1章——什么是JavaScript DOM将整个页面抽象为一组分层节点。 BOM用于支持访问和操作浏览器的窗口。 --- 第2章——HTML中的JavaScript 2.1 元素 | 元素 | 描述 | | --- | --- | | async | 立即开始下载脚本，但不能阻止其他页面动作，比如下载资源或等待其他脚本加载，只对外部脚本文件有效； | |..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"ملخص"}],["$","span",null,{"children":"تم حفظ هذا النص داخل هيكل المدونة الجديد مع الإبقاء على المحتوى الصيني الأصلي."}],["$","a",null,{"href":"https://juejin.cn/post/6978364372506640392","target":"_blank","rel":"noreferrer","className":"ghost-inline","children":["المصدر الأصلي",["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-external-link h-4 w-4","children":[["$","path","1q9fwt",{"d":"M15 3h6v6"}],["$","path","gplh6r",{"d":"M10 14 21 3"}],["$","path","a6xqqp",{"d":"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"}],"$undefined"]}]]}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$12"}}]}]]}]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"POJIAN.BLOG"}],["$","meta","2",{"name":"description","content":"A multilingual personal blog around AI tooling, product delivery, memoir, and long-form archive work."}]]
+c:null

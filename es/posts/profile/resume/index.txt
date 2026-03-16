@@ -1,0 +1,127 @@
+1:"$Sreact.fragment"
+2:I[6825,["177","static/chunks/app/layout-9fe08982949093af.js"],"ThemeProvider"]
+3:I[1454,["177","static/chunks/app/layout-9fe08982949093af.js"],"Live2DLoader"]
+4:I[5244,[],""]
+5:I[3866,[],""]
+6:I[7367,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"HtmlLocaleSync"]
+7:I[4750,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"BlogNavbar"]
+8:I[8173,["173","static/chunks/173-ef41fafde65cda27.js","97","static/chunks/app/%5Blang%5D/posts/%5B...slug%5D/page-6ee700c5ad1e0b29.js"],""]
+b:I[6213,[],"OutletBoundary"]
+d:I[6213,[],"MetadataBoundary"]
+f:I[6213,[],"ViewportBoundary"]
+11:I[4835,[],""]
+:HL["/_next/static/media/24f6ebe2756575bd-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/36966cca54120369-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5611c55482296524-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/edef1a271f97a8ec-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/fb12bdfc6f99d938-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/473fb34e1570d6f1.css","style"]
+:HL["/_next/static/css/1c5aef1c0dd20138.css","style"]
+:HL["/_next/static/css/45bbd2f0fdf5da27.css","style"]
+:HL["/_next/static/css/03999bf3b1a627a0.css","style"]
+0:{"P":null,"b":"ZNjizd8Y7He_YS_OA6hmp","p":"","c":["","es","posts","profile","resume",""],"i":false,"f":[[["",{"children":[["lang","es","d"],{"children":["posts",{"children":[["slug","profile/resume","c"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/473fb34e1570d6f1.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1c5aef1c0dd20138.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/45bbd2f0fdf5da27.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/03999bf3b1a627a0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__variable_dd5b2f __variable_64b714 __variable_51740a __variable_7afcbf __variable_6634df antialiased","children":["$","$L2",null,{"attribute":"class","defaultTheme":"dark","enableSystem":false,"disableTransitionOnChange":true,"children":[["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","$L6",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"en","homeHref":"/","rootAliasForDefaultLocale":true,"labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/","label":"Home"},{"href":"/#latest","label":"Latest"},{"href":"/#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/#community","label":"Community"}],"legacyRoots":[{"slug":"A前端👨‍💻","title":{"en":"Frontend Atlas","zh":"前端图谱","es":"Atlas Frontend","ja":"フロントエンド地図","ar":"أطلس الواجهة الأمامية"},"description":{"en":"CSS, Vue, React, Canvas, Node, uni-app, build tools, and the earlier front-end trail.","zh":"CSS、Vue、React、Canvas、Node、uni-app、打包工具，以及更早的前端路径。","es":"CSS, Vue, React, Canvas, Node, uni-app, herramientas de build y el rastro front-end más temprano.","ja":"CSS、Vue、React、Canvas、Node、uni-app、ビルドツールなど、初期のフロントエンド蓄積。","ar":"CSS وVue وReact وCanvas وNode وuni-app وأدوات البناء والمسار الأقدم للواجهة الأمامية."}},{"slug":"B面试题📑","title":{"en":"Interview Bank","zh":"面试题仓库","es":"Banco de Entrevistas","ja":"面接バンク","ar":"بنك المقابلات"},"description":{"en":"Question banks for browser internals, networking, Vue, React, JavaScript, and engineering.","zh":"浏览器、网络、Vue、React、JavaScript 和工程化的面试题集合。","es":"Baterías de preguntas sobre navegador, red, Vue, React, JavaScript e ingeniería.","ja":"ブラウザ、ネットワーク、Vue、React、JavaScript、開発基盤に関する面接問題。","ar":"مجموعات أسئلة عن المتصفح والشبكات وVue وReact وJavaScript والهندسة."}},{"slug":"Vue实战💻","title":{"en":"Vue Practice","zh":"Vue 实战","es":"Práctica Vue","ja":"Vue 実戦","ar":"تطبيقات Vue"},"description":{"en":"Real project records around Ant Design, Echarts, mini programs, stores, and browser features.","zh":"围绕 Ant Design、Echarts、小程序、商城项目和浏览器功能的一组实战记录。","es":"Registros reales sobre Ant Design, Echarts, mini programas, tiendas y funciones del navegador.","ja":"Ant Design、Echarts、ミニプログラム、ストア、ブラウザ機能に関する実戦記録。","ar":"سجلات عملية حول Ant Design وEcharts والبرامج المصغرة والمتاجر وميزات المتصفح."}},{"slug":"走过的路🌱","title":{"en":"Growing Path","zh":"走过的路","es":"Camino Recorrido","ja":"歩いてきた道","ar":"الطريق الذي سلكته"},"description":{"en":"Yearly reviews and growth notes that carry more life signal than technical polish.","zh":"年度总结和成长记录，保留生活感和时间感。","es":"Revisiones anuales y notas de crecimiento con más vida que pulido técnico.","ja":"年次レビューと成長記録。技術の整い方より時間の感触が残っています。","ar":"مراجعات سنوية وملاحظات نمو تحمل أثر الحياة أكثر من الصقل التقني."}},{"slug":"读过的书📚️","title":{"en":"Reading Shelf","zh":"读书笔记","es":"Estante de Lectura","ja":"読書棚","ar":"رف القراءة"},"description":{"en":"Book notes across networking, JavaScript, algorithms, and systems thinking.","zh":"网络、JavaScript、算法和系统思维方向的读书笔记。","es":"Notas de lectura sobre redes, JavaScript, algoritmos y pensamiento de sistemas.","ja":"ネットワーク、JavaScript、アルゴリズム、システム思考に関する読書ノート。","ar":"ملاحظات قراءة حول الشبكات وJavaScript والخوارزميات والتفكير المنظومي."}},{"slug":"PHP🐘","title":{"en":"PHP Shelf","zh":"PHP 归档","es":"Estante PHP","ja":"PHP 棚","ar":"رف PHP"},"description":{"en":"Earlier PHP notes and experiments that still belong in the public record.","zh":"更早期的 PHP 文章和实验记录。","es":"Notas y experimentos tempranos de PHP que siguen formando parte del archivo.","ja":"初期の PHP ノートと実験記録。","ar":"ملاحظات وتجارب PHP المبكرة التي ما زالت جزءًا من السجل."}},{"slug":"Python🐍","title":{"en":"Python Shelf","zh":"Python 归档","es":"Estante Python","ja":"Python 棚","ar":"رف Python"},"description":{"en":"Small scraping experiments and data-oriented notes from the earlier Python phase.","zh":"偏数据和爬取的小实验，保留了更早一阶段的 Python 轨迹。","es":"Pequeños experimentos de scraping y notas orientadas a datos de la etapa temprana con Python.","ja":"スクレイピングやデータ寄りの小さな Python 実験。","ar":"تجارب صغيرة في الاستخراج والبيانات من المرحلة المبكرة مع Python."}}]}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","div",null,{"className":"mx-auto max-w-3xl pb-20 pt-8","children":["$","div",null,{"className":"hero-panel space-y-5","children":[["$","span",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"className":"hero-title compact","children":"That page never made it into the archive."}],["$","p",null,{"className":"hero-copy","children":"Try the rebuilt home, the full archive, or one of the legacy shelves instead."}],["$","$L8",null,{"href":"/","className":"primary-chip","children":"Go back to the English home"}]]}]}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L8",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]}]]}],{"children":[["lang","es","d"],["$","$1","c",{"children":[null,"$L9"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","profile/resume","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children","$0:f:0:1:2:children:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":"$Lc"}]]}],{},null,false]},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","Oe3n3kafUSuuj_XzhI2i_",{"children":[["$","$Ld",null,{"children":"$Le"}],["$","$Lf",null,{"children":"$L10"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+9:[["$","$L6",null,{"lang":"es","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"es","homeHref":"/es","rootAliasForDefaultLocale":false,"labels":{"brand":"POJIAN.BLOG","subtitle":"Un archivo largo sobre tooling de IA, entrega y memoria personal.","menu":"Directorio","close":"Cerrar","switchLanguage":"Cambiar idioma","switchTheme":"Cambiar tema"},"links":[{"href":"/es","label":"Inicio"},{"href":"/es#latest","label":"Reciente"},{"href":"/es#collections","label":"Colecciones"},{"href":"/es/archives","label":"Archivo"},{"href":"/es#community","label":"Comunidad"}],"legacyRoots":"$0:f:0:1:1:props:children:1:props:children:props:children:props:children:1:props:notFound:1:1:props:children:0:props:legacyRoots"}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"Un archivo largo sobre tooling de IA, entrega y memoria personal."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/es","className":"hover:text-[var(--text)]","children":"Inicio"}],["$","$L8",null,{"href":"/es/archives","className":"hover:text-[var(--text)]","children":"Archivo"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"POJIAN.BLOG"}],["$","meta","2",{"name":"description","content":"A multilingual personal blog around AI tooling, product delivery, memoir, and long-form archive work."}]]
+c:null
+12:T1391,<h2 id="李建霖">李建霖</h2>
+<p><a href="mailto:1569339843@qq.com">1569339843@qq.com</a></p>
+<h2 id="教育经历">教育经历</h2>
+<ul>
+<li>2018 - 2022 吉首大学 软件工程</li>
+</ul>
+<h2 id="基本信息">基本信息</h2>
+<ul>
+<li>姓名：李建霖</li>
+<li>年龄：22岁</li>
+<li>政治面貌：中共党员</li>
+</ul>
+<hr />
+<h2 id="其他能力">其他能力</h2>
+<ul>
+<li>软考-初级信息处理技术员</li>
+</ul>
+<hr />
+<h2 id="其他培训">其他培训</h2>
+<ul>
+<li>入党积极分子培训</li>
+<li>湖南绿航公司‘内训师培训’</li>
+</ul>
+<h2 id="专业技能">专业技能</h2>
+<ul>
+<li>1、熟悉Vue技术栈，Vue性能优化。</li>
+<li>2、熟悉uni-app、Taro、Vant、ViewUI、Layui。</li>
+<li>3、熟悉微信小程序的开发和WeUI框架的使用，3+项目。</li>
+<li>4、熟悉HTTP 1/2/3协议， 熟悉基本设计模式。</li>
+<li>5、了解浏览器渲染流程，浏览器缓存、策略。</li>
+<li>6、了解浏览器优化策略，优化Webpack打包速度。</li>
+<li>7、了解css预编译期less、webpack项目构建工具的使用。</li>
+</ul>
+<h2 id="项目经历">项目经历</h2>
+<p><strong>网易云音乐微信小程序</strong>’</p>
+<p><strong>项目描述</strong>：uni-app、Vue、ViewUI仿网易云微信小程序。包括：微信小程序登录、云音乐首页分类、音乐列表页展示、音乐详情页、音乐播放器、推荐音乐、用户留言、歌词滚动、加载骨架屏等功能实现。</p>
+<p><strong>项目难点</strong>：歌词滚动、底部全局播放栏实现。</p>
+<p><strong>项目成果</strong>：<a
+href="https://github.com/kuishou68/neteaseMusic">https://github.com/kuishou68/neteaseMusic</a></p>
+<hr />
+<p><strong>图书商城移动端</strong></p>
+<p>​ <strong>采用技术：</strong> Vue3+Vant+Vue-cli+Restful api</p>
+<p>​ <strong>项目介绍：</strong>
+通过Vant组件库实现首页、商品详情、添加购物车、订单详情、个人中心模块。</p>
+<p>​ <strong>负责内容：</strong>
+主要负责选项卡组件的开发，商品列表的请求与显示、封装</p>
+<hr />
+<p><strong>B2C医药商城系统</strong></p>
+<p>​ <strong>采用技术：</strong> layUI + Bootstrap + JQuery</p>
+<p>​ **项目介绍： <strong>通过使用</strong>layUI
+**框架开发系统公告列表模块、品牌列表模块、订单列表模块、会员列表模块</p>
+<p>​ <strong>负责内容：</strong>
+项目各模块界面编写，后端API数据交互功能实现</p>
+<hr />
+<p><strong>公司网站开发</strong></p>
+<p>​ <strong>采用技术：</strong> Bootstrap + JQuery</p>
+<p>​ **项目介绍：
+**公司网站静态页面编写，产品图的设计、商城网站首页banner临摹，子页面开发。</p>
+<p>​ <strong>负责内容：</strong>
+还负责公司24节气宣传图设计，商城网站轮播图设计，B2B商城系统原型图绘制</p>
+<hr />
+<h2 id="实习经历">实习经历</h2>
+<p>2020.6-2020.8 <strong>湖南绿航恰果果农产品有限公司</strong>
+前端开发</p>
+<ul>
+<li>完成三季度销售订单总额61.4万，并获得优秀团队奖。</li>
+<li>开发‘水果熟了’小程序微商城、恰果果批发商城、万翼果联小程序。</li>
+<li>主要负责每日秒杀活动，‘首页’和‘我的’页面弹窗设计。</li>
+<li>医药产品图的设计、商城网站首页banner临摹。</li>
+</ul>
+<hr />
+<p>2019.7-2019.9 <strong>长沙永玲麟电子商务有限公司</strong>
+前端实习生</p>
+<ul>
+<li>公司网站静态页面编写，子页面开发。</li>
+<li>使用PPT 绘制 B2B商城后台系统原型图。</li>
+<li>还负责公司24节气宣传图设计，商城网站轮播图设计。</li>
+<li>医药产品图的设计、商城网站首页banner临摹。</li>
+</ul>
+<h2 id="获奖经历">获奖经历</h2>
+<ul>
+<li>2019年10月，获国家励志奖学金、一等奖学金、三好学生。</li>
+<li>2019年4月，在学校第一届“书香商务，浸润心灵”读书活动中被评为“阅读之星”。</li>
+<li>2019年5月，在“我为美丽中国、美丽新湖南建设添光彩”主题征文比赛中荣获三等奖。</li>
+<li>2021年5月，在吉首大学软件学院“聆听红色故事-见证百年党史”第一期活动中获“讲述达人”</li>
+</ul>
+<h2 id="校园经历">校园经历</h2>
+<ul>
+<li>2019.10 国家励志奖学金、一等奖学金、三好学生</li>
+<li>2019.12~2020.6 担任健身协会宣传部干事</li>
+<li>2020.9~2021.6 担任班长职务</li>
+<li>2020.11 担任预备党员转正领誓人、计票人</li>
+</ul>
+<h2 id="自我评价">自我评价</h2>
+<ul>
+<li><p>始终热忱地拥抱互联网和前端技术</p></li>
+<li><p>爱好运动健身，喜欢参加户外运动。</p></li>
+<li><p>逻辑思维、自学能力比较强，有良好的代码编写习惯，良好的团队协作能力。</p></li>
+<li><p>对项目认真负责，做事有执着的耐心，为人积极向上、能够很快的适应新环境。</p></li>
+</ul>
+a:["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L8",null,{"href":"/es/archives","className":"ghost-inline","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Todos los textos"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"Contenido original · chino"}],["$","span",null,{"children":"2024-03-01"}],["$","span",null,{"children":[4," ","min"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"简历"}],["$","p",null,{"className":"hero-copy","children":"李建霖 1569339843@qq.com 教育经历 - 2018 - 2022 吉首大学 软件工程 基本信息 - 姓名：李建霖 - 年龄：22岁 - 政治面貌：中共党员 ------ 其他能力 - 软考-初级信息处理技术员 ------ 其他培训 - 入党积极分子培训 - 湖南绿航公司‘内训师培训’ 专业技能 - 1、熟悉Vue技术栈，Vue性能优化。 -..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"Sinopsis"}],["$","span",null,{"children":"Este texto se conserva dentro de la nueva estructura del blog manteniendo el contenido original en chino."}],null]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$12"}}]}]]}]

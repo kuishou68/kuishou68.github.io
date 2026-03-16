@@ -1,155 +1,71 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Vue深入学习—mustache模板引擎原理 | CocoonBreak</title>
-    <meta name="description" content="mustache 是 “胡子”的意思，因为它的嵌入标记 {{ }} 旋转过来很像 胡子 ，Vue中的 {{ }} 语法也引用了mustache，这也是我深入学习的目的。 原始js方式使 数据 变为 视图 &lt;ul id=&quot;list&quot; &gt; &lt;/...">
-    <meta property="og:title" content="Vue深入学习—mustache模板引擎原理 | CocoonBreak">
-    <meta property="og:description" content="mustache 是 “胡子”的意思，因为它的嵌入标记 {{ }} 旋转过来很像 胡子 ，Vue中的 {{ }} 语法也引用了mustache，这也是我深入学习的目的。 原始js方式使 数据 变为 视图 &lt;ul id=&quot;list&quot; &gt; &lt;/...">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2021-07-18-6986120377596379144/">
-    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
-    <link rel="icon" href="/img/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/custom/site.css">
-    <script defer src="/custom/site.js"></script>
-    <script defer src="/custom/live2d-loader.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content="0; url=/en/posts/sync/2021-07-18-6986120377596379144/" />
+    <title>Juejin article moved</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1020;
+        --panel: rgba(10, 18, 38, 0.88);
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #f6efe3;
+        --muted: #93a2bf;
+        --accent: #7ae7c7;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
+          linear-gradient(180deg, #0b1020 0%, #050813 100%);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        padding: 24px;
+      }
+      main {
+        width: min(640px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--panel);
+        padding: 32px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(28px, 4vw, 42px);
+      }
+      p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      a {
+        color: #08111e;
+        background: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    </style>
   </head>
   <body>
-    <div class="article-shell">
-      <nav class="insight-nav">
-        <a href="/">← 首页</a>
-        <a href="/insights/">同步文章</a>
-        <a href="https://juejin.cn/post/6986120377596379144" target="_blank" rel="noreferrer">掘金原文</a>
-      </nav>
-
-      <header class="article-hero" data-reveal>
-        <div class="article-meta">
-          <span>2021.07.18</span><span>面试</span><span>前端</span>
-        </div>
-        <h1>Vue深入学习—mustache模板引擎原理</h1>
-        <p class="article-intro">mustache 是 “胡子”的意思，因为它的嵌入标记 {{ }} 旋转过来很像 胡子 ，Vue中的 {{ }} 语法也引用了mustache，这也是我深入学习的目的。 原始js方式使 数据 变为 视图 &lt;ul id=&quot;list&quot; &gt; &lt;/...</p>
-        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/6986120377596379144" target="_blank" rel="noreferrer">掘金原文</a>。</div>
-      </header>
-
-      <article class="prose" data-reveal>
-        <p><a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fjanl%2Fmustache.js%2F" target="_blank" title="https://github.com/janl/mustache.js/">mustache</a> 是
-“胡子”的意思，因为它的嵌入标记 {{ }} 旋转过来很像<a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Fmustache.github.io%2F" target="_blank" title="https://mustache.github.io/">胡子</a>，Vue中的 {{ }}
-语法也引用了mustache，这也是我深入学习的目的。</p>
-<blockquote>
-<p>原始js方式使 <strong>数据</strong> 变为<strong>视图</strong></p>
-</blockquote>
-<div class="sourceCode" id="cb1"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a> &lt;ul id="list"<span class="op">&gt;</span>&lt;/ul<span class="op">&gt;</span></span>
-<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a> &lt;script<span class="op">&gt;</span></span>
-<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a>        var arr = <span class="ex">[</span><span class="ss">            </span>{"name"<span class="ch">:</span><span class="st">"张三"</span><span class="op">,</span> <span class="st">"age"</span>:<span class="dv">12</span><span class="op">,</span> <span class="st">"sex"</span>:<span class="st">"男"</span>}<span class="op">,</span>            {"name"<span class="ch">:</span><span class="st">"李四"</span><span class="op">,</span> <span class="st">"age"</span>:<span class="dv">13</span><span class="op">,</span> <span class="st">"sex"</span>:<span class="st">"女"</span>}<span class="op">,</span>            {"name"<span class="ch">:</span><span class="st">"王五"</span><span class="op">,</span> <span class="st">"age"</span>:<span class="dv">14</span><span class="op">,</span> <span class="st">"sex"</span>:<span class="st">"女"</span>}<span class="op">,</span>            {"name"<span class="ch">:</span><span class="st">"赵六"</span><span class="op">,</span> <span class="st">"age"</span>:<span class="dv">15</span><span class="op">,</span> <span class="st">"sex"</span>:<span class="st">"男"</span>}<span class="op">,</span>        ]</span>
-<span id="cb1-4"><a aria-hidden="true" href="#cb1-4" tabindex="-1"></a>        var list = document<span class="fu">.getElementById</span><span class="in">(</span>'list'<span class="in">)</span>;</span>
-<span id="cb1-5"><a aria-hidden="true" href="#cb1-5" tabindex="-1"></a>        <span class="er">// jion法——遍历arr数组，每遍历一项，就将HTML 字符串添加到list 中</span></span>
-<span id="cb1-6"><a aria-hidden="true" href="#cb1-6" tabindex="-1"></a>        for<span class="in">(</span>let i = 0; i&lt;arr<span class="fu">.length</span>; i<span class="op">++</span><span class="in">)</span>{</span>
-<span id="cb1-7"><a aria-hidden="true" href="#cb1-7" tabindex="-1"></a>            list<span class="fu">.innerHTML</span> <span class="op">+</span>= <span class="ex">[</span><span class="ss">                </span><span class="st">'&lt;li&gt;'</span><span class="op">,</span>                '    &lt;div class="hd"<span class="op">&gt;</span>'<span class="op">+</span> arr<span class="ex">[</span><span class="ss">i</span><span class="ex">]</span><span class="fu">.name</span> <span class="op">+</span>'&lt;/div<span class="op">&gt;</span>'<span class="op">,</span></span>
-<span id="cb1-8"><a aria-hidden="true" href="#cb1-8" tabindex="-1"></a>                '    &lt;div class="bd"<span class="op">&gt;</span>'<span class="op">,</span></span>
-<span id="cb1-9"><a aria-hidden="true" href="#cb1-9" tabindex="-1"></a>                '        &lt;p<span class="op">&gt;</span>姓名：'<span class="op">+</span> arr<span class="ex">[</span><span class="ss">i</span><span class="ex">]</span><span class="fu">.name</span> <span class="op">+</span>'&lt;/p<span class="op">&gt;</span>'<span class="op">,</span></span>
-<span id="cb1-10"><a aria-hidden="true" href="#cb1-10" tabindex="-1"></a>                '        &lt;p<span class="op">&gt;</span>年龄：'<span class="op">+</span> arr<span class="ex">[</span><span class="ss">i</span><span class="ex">]</span><span class="fu">.age</span> <span class="op">+</span>'&lt;/p<span class="op">&gt;</span>'<span class="op">,</span></span>
-<span id="cb1-11"><a aria-hidden="true" href="#cb1-11" tabindex="-1"></a>                '        &lt;p<span class="op">&gt;</span>性别：'<span class="op">+</span> arr<span class="ex">[</span><span class="ss">i</span><span class="ex">]</span><span class="fu">.sex</span> <span class="op">+</span>'&lt;/p<span class="op">&gt;</span>'<span class="op">,</span></span>
-<span id="cb1-12"><a aria-hidden="true" href="#cb1-12" tabindex="-1"></a>                '    &lt;/div<span class="op">&gt;</span>'<span class="op">,</span></span>
-<span id="cb1-13"><a aria-hidden="true" href="#cb1-13" tabindex="-1"></a>                '&lt;/li<span class="op">&gt;</span>'</span>
-<span id="cb1-14"><a aria-hidden="true" href="#cb1-14" tabindex="-1"></a>            ]<span class="fu">.join</span><span class="in">(</span>''<span class="in">)</span></span>
-<span id="cb1-15"><a aria-hidden="true" href="#cb1-15" tabindex="-1"></a>        }</span>
-<span id="cb1-16"><a aria-hidden="true" href="#cb1-16" tabindex="-1"></a>        <span class="er">// 反引号法——遍历arr数组，每遍历一项，就将HTML 字符串添加到list 中</span></span>
-<span id="cb1-17"><a aria-hidden="true" href="#cb1-17" tabindex="-1"></a>        for<span class="in">(</span>let i = 0; i&lt;arr<span class="fu">.length</span>; i<span class="op">++</span><span class="in">)</span>{</span>
-<span id="cb1-18"><a aria-hidden="true" href="#cb1-18" tabindex="-1"></a>            list<span class="fu">.innerHTML</span> <span class="op">+</span>= `</span>
-<span id="cb1-19"><a aria-hidden="true" href="#cb1-19" tabindex="-1"></a>                &lt;li<span class="op">&gt;</span></span>
-<span id="cb1-20"><a aria-hidden="true" href="#cb1-20" tabindex="-1"></a>                    &lt;div class="hd"<span class="op">&gt;</span> ${arr<span class="ex">[</span><span class="ss">i</span><span class="ex">]</span><span class="fu">.name</span>} &lt;/div<span class="op">&gt;</span></span>
-<span id="cb1-21"><a aria-hidden="true" href="#cb1-21" tabindex="-1"></a>                    &lt;div class="bd"<span class="op">&gt;</span></span>
-<span id="cb1-22"><a aria-hidden="true" href="#cb1-22" tabindex="-1"></a>                        &lt;p<span class="op">&gt;</span>姓名：${arr<span class="ex">[</span><span class="ss">i</span><span class="ex">]</span><span class="fu">.name</span>}&lt;/p<span class="op">&gt;</span></span>
-<span id="cb1-23"><a aria-hidden="true" href="#cb1-23" tabindex="-1"></a>                        &lt;p<span class="op">&gt;</span>年龄：${arr<span class="ex">[</span><span class="ss">i</span><span class="ex">]</span><span class="fu">.age</span> }&lt;/p<span class="op">&gt;</span></span>
-<span id="cb1-24"><a aria-hidden="true" href="#cb1-24" tabindex="-1"></a>                        &lt;p<span class="op">&gt;</span>性别：${arr<span class="ex">[</span><span class="ss">i</span><span class="ex">]</span><span class="fu">.sex</span> }&lt;/p<span class="op">&gt;</span></span>
-<span id="cb1-25"><a aria-hidden="true" href="#cb1-25" tabindex="-1"></a>                    &lt;/div</span>
-<span id="cb1-26"><a aria-hidden="true" href="#cb1-26" tabindex="-1"></a>                &lt;/li<span class="op">&gt;</span></span>
-<span id="cb1-27"><a aria-hidden="true" href="#cb1-27" tabindex="-1"></a>            `;</span>
-<span id="cb1-28"><a aria-hidden="true" href="#cb1-28" tabindex="-1"></a>        }</span>
-<span id="cb1-29"><a aria-hidden="true" href="#cb1-29" tabindex="-1"></a>&lt;/script<span class="op">&gt;</span></span></code></pre></div>
-<blockquote>
-<p>mustache的<strong>底层原理</strong></p>
-</blockquote>
-<p>要实现这样的：<img alt="image-20210718104621132.png" loading="lazy" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0f2d819e3d0e47fdb6f5f2dce44e3edd~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a>&lt;<span class="kw">script</span>&gt;</span>
-<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a>        // 模板</span>
-<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a>        var templateStr =  '&lt;<span class="kw">h1</span>&gt;今天我买了一辆{{thing}},{{money}}W,很{{mood}}&lt;/<span class="kw">h1</span>&gt;';</span>
-<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a>        // 数据</span>
-<span id="cb2-5"><a aria-hidden="true" href="#cb2-5" tabindex="-1"></a>        var data = {</span>
-<span id="cb2-6"><a aria-hidden="true" href="#cb2-6" tabindex="-1"></a>            thing: '兰博基尼',</span>
-<span id="cb2-7"><a aria-hidden="true" href="#cb2-7" tabindex="-1"></a>            money: 50,</span>
-<span id="cb2-8"><a aria-hidden="true" href="#cb2-8" tabindex="-1"></a>            mood: '开心'</span>
-<span id="cb2-9"><a aria-hidden="true" href="#cb2-9" tabindex="-1"></a>        };</span>
-<span id="cb2-10"><a aria-hidden="true" href="#cb2-10" tabindex="-1"></a>        // 1.使用正则实现简单数据填充，正则中的 g 表示全局，把'你'替换成 '我'</span>
-<span id="cb2-11"><a aria-hidden="true" href="#cb2-11" tabindex="-1"></a>        // console.log('你很帅，你很有钱'.replace(/你/g,'我'));</span>
-<span id="cb2-12"><a aria-hidden="true" href="#cb2-12" tabindex="-1"></a>        // 2.最简单的模板引擎实现机理，利用正则表达式中的replace()方法</span>
-<span id="cb2-13"><a aria-hidden="true" href="#cb2-13" tabindex="-1"></a>        //   replace()的第二个参数$1 可以是一个函数，这个喊啊书提供的东西的参数就是$1</span>
-<span id="cb2-14"><a aria-hidden="true" href="#cb2-14" tabindex="-1"></a>       function render(templateStr, data){</span>
-<span id="cb2-15"><a aria-hidden="true" href="#cb2-15" tabindex="-1"></a>           return templateStr.replace(/{{(\w+)}}/g,function(findStr, $1){</span>
-<span id="cb2-16"><a aria-hidden="true" href="#cb2-16" tabindex="-1"></a>               return data[$1];</span>
-<span id="cb2-17"><a aria-hidden="true" href="#cb2-17" tabindex="-1"></a>           });</span>
-<span id="cb2-18"><a aria-hidden="true" href="#cb2-18" tabindex="-1"></a>       }</span>
-<span id="cb2-19"><a aria-hidden="true" href="#cb2-19" tabindex="-1"></a>       var result = render(templateStr, data);</span>
-<span id="cb2-20"><a aria-hidden="true" href="#cb2-20" tabindex="-1"></a>       console.log(result);</span>
-<span id="cb2-21"><a aria-hidden="true" href="#cb2-21" tabindex="-1"></a>&lt;/<span class="kw">script</span>&gt;</span></code></pre></div>
-<blockquote>
-<p><strong>实现方式</strong>：Mustache.render(templateStr, data);
-templateStr模板字符串，data数据，render返回填充后dom字符串。</p>
-</blockquote>
-<blockquote>
-<p><strong>实现原理</strong>：第①步：将<strong>模板字符串</strong>编译成<strong>tokens</strong>
-形式，第②步：将<strong>tokens</strong>与<strong>数据</strong>结合，解析成<strong>dom字符串</strong>。</p>
-</blockquote>
-<p><img alt="image-20210717165612249.png" loading="lazy" src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d77d1f9fad804eaab4bc518355796b07~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp"/></p>
-<blockquote>
-<p><strong>什么是tokens?</strong></p>
-</blockquote>
-<p>JS的嵌套数组，模板字符串的JS表示形式。</p>
-<p>模板字符串：<code>&lt;h1&gt;我买了一辆{{thing}},{{money}}W&lt;/h1&gt;</code></p>
-<p>编译后的tokens:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="ex">[</span><span class="ss">    [</span><span class="st">"text"</span><span class="op">,</span>  "&lt; h1 <span class="op">&gt;</span>我买了一辆"]<span class="op">,</span></span>
-<span id="cb3-2"><a aria-hidden="true" href="#cb3-2" tabindex="-1"></a>    <span class="ex">[</span><span class="st">"name"</span><span class="op">,</span>  ”thing“]<span class="op">,</span></span>
-<span id="cb3-3"><a aria-hidden="true" href="#cb3-3" tabindex="-1"></a>    <span class="ex">[</span><span class="st">"text"</span><span class="op">,</span>  "<span class="op">,</span>"]<span class="op">,</span></span>
-<span id="cb3-4"><a aria-hidden="true" href="#cb3-4" tabindex="-1"></a>    <span class="ex">[</span><span class="st">"name"</span><span class="op">,</span>  ”money“]<span class="op">,</span></span>
-<span id="cb3-5"><a aria-hidden="true" href="#cb3-5" tabindex="-1"></a>    <span class="ex">[</span><span class="st">"text"</span><span class="op">,</span>  "W&lt; /h1 <span class="op">&gt;</span>"]<span class="op">,</span></span>
-<span id="cb3-6"><a aria-hidden="true" href="#cb3-6" tabindex="-1"></a>]</span></code></pre></div>
-<p><strong>实现思路</strong>：用到了《数据结构》中<strong>栈</strong>的原理，遇到
-<code>#</code> 号进栈，遇到 <code>/</code> 线出栈； <code>#</code>
-号标记的tokens，需要递归处理它的下标为2的小数组。遍历传入的 tokens
-的每一个 token，遇到第一项是 # 和 /
-的分别做处理，其余的做一个默认处理。大致思路是当遍历到的 token
-的第一项为 # 时，就把直至遇到配套的 / 之前，遍历到的每一个 token
-都放入一个容器（collector）中，把这个容器放入当前 token 里作为第 3
-项元素。</p>
-<pre class="arduino"><code>// nestTokens.js
-export default (tokens) =&gt; {
-  const nestTokens = []
-  const stack = []
-  let collector = nestTokens // 一开始让收集器 collector 指向最终返回的数组 nestTokens
-  tokens.forEach(token =&gt; {
-    switch (token[0]) {
-      case '#':
-        stack.push(token)
-        collector.push(token)
-        collector = token[2] = [] // 连等赋值
-        break
-      case '/':
-        stack.pop(token)
-        collector = stack.length &gt; 0 ? stack[stack.length-1][2] : nestTokens
-        break;
-      default:
-        collector.push(token)
-        break
-    }
-  })
-  return nestTokens
-}</code></pre>
-<p>参考：<a href="https://juejin.cn/post/6954244558938963982" target="_blank" title="https://juejin.cn/post/6954244558938963982">juejin.cn/post/695424…</a></p>
-      </article>
-    </div>
+    <main>
+      <h1>Juejin article moved</h1>
+      <p>This synced Juejin article now lives under the rebuilt post route.</p>
+      <a href="/en/posts/sync/2021-07-18-6986120377596379144/">Continue</a>
+    </main>
+    <script>
+      window.location.replace("/en/posts/sync/2021-07-18-6986120377596379144/");
+    </script>
   </body>
 </html>

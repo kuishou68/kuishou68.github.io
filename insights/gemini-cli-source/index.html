@@ -1,101 +1,71 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gemini CLI 深度源码分析 | CocoonBreak</title>
-    <meta name="description" content="从配置、工具调用、命令执行和反馈循环拆解 Gemini CLI 的设计与实现。">
-    <link rel="icon" href="/img/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/custom/site.css">
-    <script defer src="/custom/site.js"></script>
-    <script defer src="/custom/live2d-loader.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content="0; url=/en/archives/" />
+    <title>Article moved</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1020;
+        --panel: rgba(10, 18, 38, 0.88);
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #f6efe3;
+        --muted: #93a2bf;
+        --accent: #7ae7c7;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
+          linear-gradient(180deg, #0b1020 0%, #050813 100%);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        padding: 24px;
+      }
+      main {
+        width: min(640px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--panel);
+        padding: 32px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(28px, 4vw, 42px);
+      }
+      p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      a {
+        color: #08111e;
+        background: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    </style>
   </head>
   <body>
-    <div class="article-shell">
-      <nav class="insight-nav">
-        <a href="/">← 首页</a>
-        <a href="/insights/">专题列表</a>
-        <a href="https://juejin.cn/user/3817931570691031/posts" target="_blank" rel="noreferrer">掘金原文</a>
-      </nav>
-
-      <header class="article-hero" data-reveal>
-        <div class="article-meta">
-          <span>2026.03</span>
-          <span>Gemini CLI</span>
-          <span>Source Reading</span>
-        </div>
-        <h1><span>Gemini CLI</span> 深度源码分析：它到底是命令行工具，还是一个本地 Agent 框架</h1>
-        <p class="article-intro">
-          很多时候我们说“Gemini CLI 很好用”，其实是在描述一种结果。但如果把它拆开看，会发现它背后组织的是一个标准的 Agent 循环：
-          配置加载、上下文拼接、工具调度、命令执行、反馈回灌，再由模型决定下一步动作。
-        </p>
-        <div class="article-note">
-          主题参考我近期在掘金发布的《Gemini CLI 深度源码分析：从零到一理解 AI 命令行代理的设计与实现》，这里用更偏工程视角的方式重写。
-        </div>
-      </header>
-
-      <article class="prose" data-reveal>
-        <h2>1. 为什么值得读 CLI 源码</h2>
-        <p>
-          读这类项目源码的意义，不只是为了“知道它用了哪些库”，而是为了理解一件事：一个命令行代理到底是怎么被组织起来的。
-          一旦你把这件事看懂，很多模型产品的表象都会被拆开，你会更快判断一个工具到底是包装层，还是一个真正有执行能力的系统。
-        </p>
-
-        <h2>2. Gemini CLI 其实有一个很清晰的主循环</h2>
-        <p>从实现上看，Gemini CLI 的核心并不神秘，它本质上围绕一个循环展开：</p>
-        <ul>
-          <li>读取配置、身份和当前工作目录。</li>
-          <li>把用户输入、上下文和可用工具整理成模型可消费的请求。</li>
-          <li>根据模型返回的意图去调用工具或执行命令。</li>
-          <li>把工具结果、命令输出、错误信息继续回灌给模型。</li>
-          <li>循环直到任务结束或被用户中断。</li>
-        </ul>
-        <p>
-          这一点很关键，因为它说明 CLI 不只是“把 prompt 发给模型”的壳，而是把模型放进一个不断接收反馈的执行系统里。
-        </p>
-
-        <h2>3. 配置层往往决定体验上限</h2>
-        <p>
-          很多人关注模型调用本身，但我更在意配置层。因为实际使用时，账号模式、provider 路由、命令权限、工作目录、历史上下文和默认模型，
-          才是决定一个 CLI 是否能长期稳定使用的关键因素。
-        </p>
-        <p>
-          这也是为什么我自己在做 OpenClaw 或多 CLI 统一接入时，会把配置和认证链路放在非常重要的位置。模型再强，如果配置层混乱、回退链断裂、
-          provider 不统一，整体体验一样会很差。
-        </p>
-
-        <h2>4. 工具调用不是附属能力，而是主舞台</h2>
-        <blockquote>模型负责判断，工具负责落地，反馈负责闭环。</blockquote>
-        <p>
-          Gemini CLI 这类系统最重要的能力之一是“让模型决定什么时候用工具”。当模型不只是输出一段建议，而是开始决定要不要列目录、
-          要不要读文件、要不要运行命令时，CLI 就从问答工具变成了执行代理。
-        </p>
-        <p>
-          这也是为什么 source reading 时要重点看工具层接口，而不是只看 prompt 模板。真正决定上限的，是工具边界是否清晰、错误处理是否可靠、
-          调用结果是否可以被继续消费。
-        </p>
-
-        <h2>5. 从 Gemini CLI 可以学到什么</h2>
-        <p>如果你也在做自己的代理系统，我觉得 Gemini CLI 至少提供了几个明确启发：</p>
-        <ul>
-          <li>不要把模型调用和工具调用写成两套互不相干的流程。</li>
-          <li>命令执行一定要和反馈收集绑定，不能只跑命令不回看结果。</li>
-          <li>配置、认证、默认值和可恢复能力，和模型能力本身同样重要。</li>
-          <li>一个好的 CLI 不追求“炫”，而追求操作路径短、可控、可复现。</li>
-        </ul>
-
-        <h2>6. 对我自己的启发</h2>
-        <p>
-          读 Gemini CLI 最大的收获，是更确定了一件事：未来很多 AI 编程产品的竞争，不会只发生在模型层，而会发生在“模型 + 工具 + 环境 + 路由”这一整套系统设计里。
-        </p>
-        <p>
-          所以我最近写 Gemini CLI、Codex、stdio、协议这几篇文章，本质上都在围绕一个问题打转：
-          如果我们已经接受模型可以参与工程流程，那么应该用什么样的结构把它接得更稳、更好用、更不容易断。
-        </p>
-      </article>
-    </div>
+    <main>
+      <h1>Article moved</h1>
+      <p>This article has been folded into the rebuilt blog structure. You are being redirected to the new archive.</p>
+      <a href="/en/archives/">Continue</a>
+    </main>
+    <script>
+      window.location.replace("/en/archives/");
+    </script>
   </body>
 </html>

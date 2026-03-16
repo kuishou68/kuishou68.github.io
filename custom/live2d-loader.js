@@ -4,11 +4,11 @@
   }
 
   function boot() {
-    if (window.__cocoonLive2dReady || typeof window.initWidget !== "function") {
+    if (window.__pojianLive2dReady || typeof window.initWidget !== "function") {
       return;
     }
 
-    window.__cocoonLive2dReady = true;
+    window.__pojianLive2dReady = true;
     window.initWidget({
       waifuPath: "/custom/live2d-tips.json",
       cdnPath: "https://fastly.jsdelivr.net/gh/fghrsh/live2d_api/",
@@ -20,24 +20,13 @@
     });
   }
 
-  if (!document.querySelector("link[data-cocoon-live2d-style]")) {
+  if (!document.querySelector("link[data-pojian-live2d-style]")) {
     var css = document.createElement("link");
     css.rel = "stylesheet";
     css.href = "https://fastly.jsdelivr.net/npm/live2d-widgets@1.0.0/dist/waifu.css";
-    css.setAttribute("data-cocoon-live2d-style", "true");
+    css.setAttribute("data-pojian-live2d-style", "true");
     document.head.appendChild(css);
   }
-
-  if (window.__cocoonLive2dLoaderMounted) {
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", boot, { once: true });
-    } else {
-      boot();
-    }
-    return;
-  }
-
-  window.__cocoonLive2dLoaderMounted = true;
 
   var script = document.createElement("script");
   script.type = "module";

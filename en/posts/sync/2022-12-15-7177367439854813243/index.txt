@@ -1,0 +1,102 @@
+1:"$Sreact.fragment"
+2:I[6825,["177","static/chunks/app/layout-9fe08982949093af.js"],"ThemeProvider"]
+3:I[1454,["177","static/chunks/app/layout-9fe08982949093af.js"],"Live2DLoader"]
+4:I[5244,[],""]
+5:I[3866,[],""]
+6:I[7367,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"HtmlLocaleSync"]
+7:I[4750,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"BlogNavbar"]
+8:I[8173,["173","static/chunks/173-ef41fafde65cda27.js","97","static/chunks/app/%5Blang%5D/posts/%5B...slug%5D/page-6ee700c5ad1e0b29.js"],""]
+b:I[6213,[],"OutletBoundary"]
+d:I[6213,[],"MetadataBoundary"]
+f:I[6213,[],"ViewportBoundary"]
+11:I[4835,[],""]
+:HL["/_next/static/media/24f6ebe2756575bd-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/36966cca54120369-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5611c55482296524-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/edef1a271f97a8ec-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/fb12bdfc6f99d938-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/473fb34e1570d6f1.css","style"]
+:HL["/_next/static/css/1c5aef1c0dd20138.css","style"]
+:HL["/_next/static/css/45bbd2f0fdf5da27.css","style"]
+:HL["/_next/static/css/03999bf3b1a627a0.css","style"]
+0:{"P":null,"b":"ZNjizd8Y7He_YS_OA6hmp","p":"","c":["","en","posts","sync","2022-12-15-7177367439854813243",""],"i":false,"f":[[["",{"children":[["lang","en","d"],{"children":["posts",{"children":[["slug","sync/2022-12-15-7177367439854813243","c"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/473fb34e1570d6f1.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1c5aef1c0dd20138.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/45bbd2f0fdf5da27.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/03999bf3b1a627a0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__variable_dd5b2f __variable_64b714 __variable_51740a __variable_7afcbf __variable_6634df antialiased","children":["$","$L2",null,{"attribute":"class","defaultTheme":"dark","enableSystem":false,"disableTransitionOnChange":true,"children":[["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","$L6",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"en","homeHref":"/","rootAliasForDefaultLocale":true,"labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/","label":"Home"},{"href":"/#latest","label":"Latest"},{"href":"/#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/#community","label":"Community"}],"legacyRoots":[{"slug":"A前端👨‍💻","title":{"en":"Frontend Atlas","zh":"前端图谱","es":"Atlas Frontend","ja":"フロントエンド地図","ar":"أطلس الواجهة الأمامية"},"description":{"en":"CSS, Vue, React, Canvas, Node, uni-app, build tools, and the earlier front-end trail.","zh":"CSS、Vue、React、Canvas、Node、uni-app、打包工具，以及更早的前端路径。","es":"CSS, Vue, React, Canvas, Node, uni-app, herramientas de build y el rastro front-end más temprano.","ja":"CSS、Vue、React、Canvas、Node、uni-app、ビルドツールなど、初期のフロントエンド蓄積。","ar":"CSS وVue وReact وCanvas وNode وuni-app وأدوات البناء والمسار الأقدم للواجهة الأمامية."}},{"slug":"B面试题📑","title":{"en":"Interview Bank","zh":"面试题仓库","es":"Banco de Entrevistas","ja":"面接バンク","ar":"بنك المقابلات"},"description":{"en":"Question banks for browser internals, networking, Vue, React, JavaScript, and engineering.","zh":"浏览器、网络、Vue、React、JavaScript 和工程化的面试题集合。","es":"Baterías de preguntas sobre navegador, red, Vue, React, JavaScript e ingeniería.","ja":"ブラウザ、ネットワーク、Vue、React、JavaScript、開発基盤に関する面接問題。","ar":"مجموعات أسئلة عن المتصفح والشبكات وVue وReact وJavaScript والهندسة."}},{"slug":"Vue实战💻","title":{"en":"Vue Practice","zh":"Vue 实战","es":"Práctica Vue","ja":"Vue 実戦","ar":"تطبيقات Vue"},"description":{"en":"Real project records around Ant Design, Echarts, mini programs, stores, and browser features.","zh":"围绕 Ant Design、Echarts、小程序、商城项目和浏览器功能的一组实战记录。","es":"Registros reales sobre Ant Design, Echarts, mini programas, tiendas y funciones del navegador.","ja":"Ant Design、Echarts、ミニプログラム、ストア、ブラウザ機能に関する実戦記録。","ar":"سجلات عملية حول Ant Design وEcharts والبرامج المصغرة والمتاجر وميزات المتصفح."}},{"slug":"走过的路🌱","title":{"en":"Growing Path","zh":"走过的路","es":"Camino Recorrido","ja":"歩いてきた道","ar":"الطريق الذي سلكته"},"description":{"en":"Yearly reviews and growth notes that carry more life signal than technical polish.","zh":"年度总结和成长记录，保留生活感和时间感。","es":"Revisiones anuales y notas de crecimiento con más vida que pulido técnico.","ja":"年次レビューと成長記録。技術の整い方より時間の感触が残っています。","ar":"مراجعات سنوية وملاحظات نمو تحمل أثر الحياة أكثر من الصقل التقني."}},{"slug":"读过的书📚️","title":{"en":"Reading Shelf","zh":"读书笔记","es":"Estante de Lectura","ja":"読書棚","ar":"رف القراءة"},"description":{"en":"Book notes across networking, JavaScript, algorithms, and systems thinking.","zh":"网络、JavaScript、算法和系统思维方向的读书笔记。","es":"Notas de lectura sobre redes, JavaScript, algoritmos y pensamiento de sistemas.","ja":"ネットワーク、JavaScript、アルゴリズム、システム思考に関する読書ノート。","ar":"ملاحظات قراءة حول الشبكات وJavaScript والخوارزميات والتفكير المنظومي."}},{"slug":"PHP🐘","title":{"en":"PHP Shelf","zh":"PHP 归档","es":"Estante PHP","ja":"PHP 棚","ar":"رف PHP"},"description":{"en":"Earlier PHP notes and experiments that still belong in the public record.","zh":"更早期的 PHP 文章和实验记录。","es":"Notas y experimentos tempranos de PHP que siguen formando parte del archivo.","ja":"初期の PHP ノートと実験記録。","ar":"ملاحظات وتجارب PHP المبكرة التي ما زالت جزءًا من السجل."}},{"slug":"Python🐍","title":{"en":"Python Shelf","zh":"Python 归档","es":"Estante Python","ja":"Python 棚","ar":"رف Python"},"description":{"en":"Small scraping experiments and data-oriented notes from the earlier Python phase.","zh":"偏数据和爬取的小实验，保留了更早一阶段的 Python 轨迹。","es":"Pequeños experimentos de scraping y notas orientadas a datos de la etapa temprana con Python.","ja":"スクレイピングやデータ寄りの小さな Python 実験。","ar":"تجارب صغيرة في الاستخراج والبيانات من المرحلة المبكرة مع Python."}}]}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","div",null,{"className":"mx-auto max-w-3xl pb-20 pt-8","children":["$","div",null,{"className":"hero-panel space-y-5","children":[["$","span",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"className":"hero-title compact","children":"That page never made it into the archive."}],["$","p",null,{"className":"hero-copy","children":"Try the rebuilt home, the full archive, or one of the legacy shelves instead."}],["$","$L8",null,{"href":"/","className":"primary-chip","children":"Go back to the English home"}]]}]}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L8",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]}]]}],{"children":[["lang","en","d"],["$","$1","c",{"children":[null,"$L9"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","sync/2022-12-15-7177367439854813243","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children","$0:f:0:1:2:children:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":"$Lc"}]]}],{},null,false]},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","6Y5G1SP6c_82ED5lTpLcO",{"children":[["$","$Ld",null,{"children":"$Le"}],["$","$Lf",null,{"children":"$L10"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+9:[["$","$L6",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"en","homeHref":"/en","rootAliasForDefaultLocale":false,"labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/en","label":"Home"},{"href":"/en#latest","label":"Latest"},{"href":"/en#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/en#community","label":"Community"}],"legacyRoots":"$0:f:0:1:1:props:children:1:props:children:props:children:props:children:1:props:notFound:1:1:props:children:0:props:legacyRoots"}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/en","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L8",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]
+12:T13f7,<p><a
+href="https://link.juejin.cn?target=https%3A%2F%2Fybw6f5.csb.app%2F"
+title="https://ybw6f5.csb.app/">在线预览</a></p>
+<h3 id="1-需求分析">1. 需求分析</h3>
+<p>去银行办理银行卡的时候你会发现，有的是用电子办卡机，大堂经理带着你一步步操作，其中有一个操作就是签署电子协议，那么这个功能具体怎么实现的呢？</p>
+<h3 id="2-实现思路">2. 实现思路</h3>
+<p>（1）首先你得把你协议展示出来，并且这些协议是一些后台可编辑的html富文本，接口请求到富文本后，<code>document.getElementById('innerHTML').innerHTML</code>
+插入到指定的div上；</p>
+<p>（2）其次则是我们的签字区域，整块区域用原生<code>canvas</code>实现，签署完成后生成图片，上传到图库，拿到图片的url后，拼接一个
+<code>&lt;img src=\"${imgUrl}\"&gt;</code>
+字符，用正则插入到指定标签内；</p>
+<pre><code>function saveAgreement() {
+    // 正则 /span\sclass=?.&quot;insertSign.+?&gt;.+?&lt;?.span/g    匹配 class = insertSign 的标签（class可以是任意富文本中存在的name）
+    let labelRegex = /span\sclass=?.&quot;insertSign.+?&gt;.+?&lt;?.span/g;
+    let labelStr = &quot;&quot;;
+    let imgUrl = &quot;&quot;;
+    let imgLabel = imgUrl ? `&lt;img src=\&quot;${imgUrl}\&quot; style=\&quot;width:100px; ${orientationScreen ? &#39;transform: rotate(270deg);&#39; : &#39;&#39;}\&quot;&gt;` : &quot;已签名&quot;; // 待替换图片 或 文本
+    while ((labelStr = labelRegex.exec(currentSignStr)) !== null &amp;&amp; labelStr[0].indexOf(&quot;&lt;img&quot;) === -1) {
+    console.log(&quot;匹配到的标签&quot;, labelStr[0]); // 匹配到的标签
+    let indexEnd = labelStr[0].indexOf(&quot;&gt;&quot;); // 结束标签
+    let nextEnd = labelStr[0].indexOf(&quot;&lt;&quot;); // 开始标签
+    let target = labelStr[0].slice(indexEnd + 1, nextEnd); // 目标区域
+        currentSignStr = currentSignStr.replace(target, imgLabel);
+        labelStr = &quot;&quot;;
+    }
+    alert(&quot;提交成功！&quot;);
+    // 改变签名状态
+    mcpSignStatus = 1;
+    returnSign();
+}</code></pre>
+<h3 id="3-注意点">3. 注意点：</h3>
+<p>（1）如果你用的是移动端签署，那必然要动态监听设备屏幕的宽高来更新<code>canvas</code>宽高；</p>
+<pre><code>// 监听横屏、竖屏
+window.addEventListener(evt, resize, false);
+function resize(fals) {
+   if (window.orientation == 0 || window.orientation == 180) {
+    console.log(&#39;||竖屏||&#39;);
+    orientationScreen = true; // 打开竖屏状态
+    horizontalScreen = false; // 关闭横屏状态
+    canvasWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    canvasHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+   } else {
+    console.log(&quot;==横屏==&quot;);
+    canvasWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    canvasHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    orientationScreen = false; // 关闭竖屏状态
+    horizontalScreen = true; // 打开横屏状态
+   }
+}
+resize(true);
+// 监听窗口变化，动态调整canvas宽高
+window.onresize = function () {
+   canvasWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+   canvasHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+   console.log(canvasWidth, canvasHeight);
+   document.getElementById(&quot;canvasId&quot;).setAttribute(&quot;width&quot;, canvasWidth);
+   document.getElementById(&quot;canvasId&quot;).setAttribute(&quot;height&quot;, canvasHeight);
+   document.getElementById(&quot;canvasId&quot;).getContext(&#39;2d&#39;).lineWidth = 4;
+};</code></pre>
+<p>（2）签署完成后，图片插入方向你也可以根据屏幕状态（横/竖屏）来旋转图片；</p>
+<pre><code>// 待替换图片，横屏生成的图片旋转270度；
+let imgLabel = `&lt;img src=\&quot;${imgUrl}\&quot; style=\&quot;width:100px; ${orientationScreen ? &#39;transform: rotate(270deg);&#39; : &#39;&#39;}\&quot;&gt;` ;</code></pre>
+<h3 id="4了解更多">4.了解更多</h3>
+<p>（1）正则匹配调试，可以用 <a
+href="https://link.juejin.cn?target=https%3A%2F%2Fregex101.com%2F"
+title="https://regex101.com/">regex101</a> 实时看自己正则匹配情况； <img
+src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4c194f26bd564441a17680aa2dd3a668~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"
+alt="image.png" /></p>
+<p>（2）推荐一个优秀的 <a
+href="https://link.juejin.cn?target=http%3A%2F%2Fszimek.github.io%2Fsignature_pad%2F"
+title="http://szimek.github.io/signature_pad/">signature</a>
+库，你可能会问我为什么不直接用它，因为原生的写起来刺激呀！</p>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/16020d5882704f0d9e250f899f4275d6~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"
+alt="image.png" /></p>
+a:["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L8",null,{"href":"/en/archives","className":"ghost-inline","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"All posts"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"Synced from Juejin"}],["$","span",null,{"children":"2022-12-15"}],["$","span",null,{"children":[3," ","min read"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"canvas实现电子签字功能"}],["$","p",null,{"className":"hero-copy","children":"在线预览 1. 需求分析 去银行办理银行卡的时候你会发现，有的是用电子办卡机，大堂经理带着你一步步操作，其中有一个操作就是签署电子协议，那么这个功能具体怎么实现的呢？ 2. 实现思路 （1）首先你得把你协议展示出来，并且这些协议是一些后台可编辑的html富文本，接口请求到富文本后，document.getElementById('innerHTML').in..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"Synopsis"}],["$","span",null,{"children":"This post is preserved inside the rebuilt blog shell while keeping the original Chinese content intact."}],["$","a",null,{"href":"https://juejin.cn/post/7177367439854813243","target":"_blank","rel":"noreferrer","className":"ghost-inline","children":["Original source",["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-external-link h-4 w-4","children":[["$","path","1q9fwt",{"d":"M15 3h6v6"}],["$","path","gplh6r",{"d":"M10 14 21 3"}],["$","path","a6xqqp",{"d":"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"}],"$undefined"]}]]}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$12"}}]}]]}]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"POJIAN.BLOG"}],["$","meta","2",{"name":"description","content":"A multilingual personal blog around AI tooling, product delivery, memoir, and long-form archive work."}]]
+c:null

@@ -1,0 +1,422 @@
+1:"$Sreact.fragment"
+2:I[6825,["177","static/chunks/app/layout-9fe08982949093af.js"],"ThemeProvider"]
+3:I[1454,["177","static/chunks/app/layout-9fe08982949093af.js"],"Live2DLoader"]
+4:I[5244,[],""]
+5:I[3866,[],""]
+6:I[7367,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"HtmlLocaleSync"]
+7:I[4750,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"BlogNavbar"]
+8:I[8173,["173","static/chunks/173-ef41fafde65cda27.js","97","static/chunks/app/%5Blang%5D/posts/%5B...slug%5D/page-6ee700c5ad1e0b29.js"],""]
+b:I[6213,[],"OutletBoundary"]
+d:I[6213,[],"MetadataBoundary"]
+f:I[6213,[],"ViewportBoundary"]
+11:I[4835,[],""]
+:HL["/_next/static/media/24f6ebe2756575bd-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/36966cca54120369-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5611c55482296524-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/edef1a271f97a8ec-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/fb12bdfc6f99d938-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/473fb34e1570d6f1.css","style"]
+:HL["/_next/static/css/1c5aef1c0dd20138.css","style"]
+:HL["/_next/static/css/45bbd2f0fdf5da27.css","style"]
+:HL["/_next/static/css/03999bf3b1a627a0.css","style"]
+0:{"P":null,"b":"ZNjizd8Y7He_YS_OA6hmp","p":"","c":["","es","posts","sync","2021-10-11-7017681730605678605",""],"i":false,"f":[[["",{"children":[["lang","es","d"],{"children":["posts",{"children":[["slug","sync/2021-10-11-7017681730605678605","c"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/473fb34e1570d6f1.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1c5aef1c0dd20138.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/45bbd2f0fdf5da27.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/03999bf3b1a627a0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__variable_dd5b2f __variable_64b714 __variable_51740a __variable_7afcbf __variable_6634df antialiased","children":["$","$L2",null,{"attribute":"class","defaultTheme":"dark","enableSystem":false,"disableTransitionOnChange":true,"children":[["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","$L6",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"en","homeHref":"/","rootAliasForDefaultLocale":true,"labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/","label":"Home"},{"href":"/#latest","label":"Latest"},{"href":"/#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/#community","label":"Community"}],"legacyRoots":[{"slug":"A前端👨‍💻","title":{"en":"Frontend Atlas","zh":"前端图谱","es":"Atlas Frontend","ja":"フロントエンド地図","ar":"أطلس الواجهة الأمامية"},"description":{"en":"CSS, Vue, React, Canvas, Node, uni-app, build tools, and the earlier front-end trail.","zh":"CSS、Vue、React、Canvas、Node、uni-app、打包工具，以及更早的前端路径。","es":"CSS, Vue, React, Canvas, Node, uni-app, herramientas de build y el rastro front-end más temprano.","ja":"CSS、Vue、React、Canvas、Node、uni-app、ビルドツールなど、初期のフロントエンド蓄積。","ar":"CSS وVue وReact وCanvas وNode وuni-app وأدوات البناء والمسار الأقدم للواجهة الأمامية."}},{"slug":"B面试题📑","title":{"en":"Interview Bank","zh":"面试题仓库","es":"Banco de Entrevistas","ja":"面接バンク","ar":"بنك المقابلات"},"description":{"en":"Question banks for browser internals, networking, Vue, React, JavaScript, and engineering.","zh":"浏览器、网络、Vue、React、JavaScript 和工程化的面试题集合。","es":"Baterías de preguntas sobre navegador, red, Vue, React, JavaScript e ingeniería.","ja":"ブラウザ、ネットワーク、Vue、React、JavaScript、開発基盤に関する面接問題。","ar":"مجموعات أسئلة عن المتصفح والشبكات وVue وReact وJavaScript والهندسة."}},{"slug":"Vue实战💻","title":{"en":"Vue Practice","zh":"Vue 实战","es":"Práctica Vue","ja":"Vue 実戦","ar":"تطبيقات Vue"},"description":{"en":"Real project records around Ant Design, Echarts, mini programs, stores, and browser features.","zh":"围绕 Ant Design、Echarts、小程序、商城项目和浏览器功能的一组实战记录。","es":"Registros reales sobre Ant Design, Echarts, mini programas, tiendas y funciones del navegador.","ja":"Ant Design、Echarts、ミニプログラム、ストア、ブラウザ機能に関する実戦記録。","ar":"سجلات عملية حول Ant Design وEcharts والبرامج المصغرة والمتاجر وميزات المتصفح."}},{"slug":"走过的路🌱","title":{"en":"Growing Path","zh":"走过的路","es":"Camino Recorrido","ja":"歩いてきた道","ar":"الطريق الذي سلكته"},"description":{"en":"Yearly reviews and growth notes that carry more life signal than technical polish.","zh":"年度总结和成长记录，保留生活感和时间感。","es":"Revisiones anuales y notas de crecimiento con más vida que pulido técnico.","ja":"年次レビューと成長記録。技術の整い方より時間の感触が残っています。","ar":"مراجعات سنوية وملاحظات نمو تحمل أثر الحياة أكثر من الصقل التقني."}},{"slug":"读过的书📚️","title":{"en":"Reading Shelf","zh":"读书笔记","es":"Estante de Lectura","ja":"読書棚","ar":"رف القراءة"},"description":{"en":"Book notes across networking, JavaScript, algorithms, and systems thinking.","zh":"网络、JavaScript、算法和系统思维方向的读书笔记。","es":"Notas de lectura sobre redes, JavaScript, algoritmos y pensamiento de sistemas.","ja":"ネットワーク、JavaScript、アルゴリズム、システム思考に関する読書ノート。","ar":"ملاحظات قراءة حول الشبكات وJavaScript والخوارزميات والتفكير المنظومي."}},{"slug":"PHP🐘","title":{"en":"PHP Shelf","zh":"PHP 归档","es":"Estante PHP","ja":"PHP 棚","ar":"رف PHP"},"description":{"en":"Earlier PHP notes and experiments that still belong in the public record.","zh":"更早期的 PHP 文章和实验记录。","es":"Notas y experimentos tempranos de PHP que siguen formando parte del archivo.","ja":"初期の PHP ノートと実験記録。","ar":"ملاحظات وتجارب PHP المبكرة التي ما زالت جزءًا من السجل."}},{"slug":"Python🐍","title":{"en":"Python Shelf","zh":"Python 归档","es":"Estante Python","ja":"Python 棚","ar":"رف Python"},"description":{"en":"Small scraping experiments and data-oriented notes from the earlier Python phase.","zh":"偏数据和爬取的小实验，保留了更早一阶段的 Python 轨迹。","es":"Pequeños experimentos de scraping y notas orientadas a datos de la etapa temprana con Python.","ja":"スクレイピングやデータ寄りの小さな Python 実験。","ar":"تجارب صغيرة في الاستخراج والبيانات من المرحلة المبكرة مع Python."}}]}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","div",null,{"className":"mx-auto max-w-3xl pb-20 pt-8","children":["$","div",null,{"className":"hero-panel space-y-5","children":[["$","span",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"className":"hero-title compact","children":"That page never made it into the archive."}],["$","p",null,{"className":"hero-copy","children":"Try the rebuilt home, the full archive, or one of the legacy shelves instead."}],["$","$L8",null,{"href":"/","className":"primary-chip","children":"Go back to the English home"}]]}]}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L8",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]}]]}],{"children":[["lang","es","d"],["$","$1","c",{"children":[null,"$L9"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","sync/2021-10-11-7017681730605678605","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children","$0:f:0:1:2:children:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":"$Lc"}]]}],{},null,false]},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","xmmKcCVLjQi0eA7U8-DTN",{"children":[["$","$Ld",null,{"children":"$Le"}],["$","$Lf",null,{"children":"$L10"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+9:[["$","$L6",null,{"lang":"es","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"es","homeHref":"/es","rootAliasForDefaultLocale":false,"labels":{"brand":"POJIAN.BLOG","subtitle":"Un archivo largo sobre tooling de IA, entrega y memoria personal.","menu":"Directorio","close":"Cerrar","switchLanguage":"Cambiar idioma","switchTheme":"Cambiar tema"},"links":[{"href":"/es","label":"Inicio"},{"href":"/es#latest","label":"Reciente"},{"href":"/es#collections","label":"Colecciones"},{"href":"/es/archives","label":"Archivo"},{"href":"/es#community","label":"Comunidad"}],"legacyRoots":"$0:f:0:1:1:props:children:1:props:children:props:children:props:children:1:props:notFound:1:1:props:children:0:props:legacyRoots"}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"Un archivo largo sobre tooling de IA, entrega y memoria personal."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/es","className":"hover:text-[var(--text)]","children":"Inicio"}],["$","$L8",null,{"href":"/es/archives","className":"hover:text-[var(--text)]","children":"Archivo"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"POJIAN.BLOG"}],["$","meta","2",{"name":"description","content":"A multilingual personal blog around AI tooling, product delivery, memoir, and long-form archive work."}]]
+c:null
+12:T3c21,<h2 id="魁首">魁首</h2>
+<p>🔔一个没有天赋的前端程序员👨‍💻 💡<a
+href="https://link.juejin.cn?target=https%3A%2F%2Fblog.lijianlin.com.cn%2F"
+title="https://blog.lijianlin.com.cn/">博客</a></p>
+<h3 id="关注我beginner">关注我🔰</h3>
+<p>🤖<a
+href="https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fkuishou68"
+title="https://github.com/kuishou68">Github</a> |🔑<a
+href="https://link.juejin.cn?target=https%3A%2F%2Fblog.csdn.net%2Fweixin_44019370%3Fspm%3D1010.2135.3001.5421"
+title="https://blog.csdn.net/weixin_44019370?spm=1010.2135.3001.5421">CSDN</a>
+| 💎<a href="https://juejin.cn/user/3817931570691031/posts"
+title="https://juejin.cn/user/3817931570691031/posts">掘金</a> | 📖 <a
+href="https://link.juejin.cn?target=https%3A%2F%2Fwww.zhihu.com%2Fpeople%2Fkui-shou-27-41%2Fposts"
+title="https://www.zhihu.com/people/kui-shou-27-41/posts">知乎</a> |
+💡<a
+href="https://link.juejin.cn?target=https%3A%2F%2Fblog.lijianlin.com.cn%2F"
+title="https://blog.lijianlin.com.cn/">博客</a> |</p>
+<p><img
+src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51fded4233b44e5eb62ad35fdafc9afa~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"
+alt="Echarts上下两个堆叠折线图.gif" /></p>
+<h3 id="html部分">HTML部分</h3>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Echarts 上下两个堆叠折线图的实现&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id=&quot;rateTable&quot; style=&quot;height: 100%; width: 100%;min-height: 470px&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    &lt;!--Echarts在这里绘制--&gt;
+&lt;/script&gt;
+&lt;/html&gt;</code></pre>
+<h3 id="json数据格式">json数据格式</h3>
+<pre><code>[
+  {
+    &quot;dt&quot;: &quot;2020-01-02&quot;,        //x轴日期
+    &quot;portfolio_net_value&quot;: 0.0,//数据1
+    &quot;SH_net_value&quot;: 0.0,       //数据2
+    &quot;alpha_net_value&quot;: 0.0,    //数据3
+    &quot;cur_drawdown_rate&quot;: 0.0   //数据4
+  },
+  {
+    &quot;dt&quot;: &quot;2020-01-03&quot;,
+    &quot;portfolio_net_value&quot;: -0.0083730541368796,
+    &quot;SH_net_value&quot;: 0.0008564679888114,
+    &quot;alpha_net_value&quot;: -0.0092295221256908,
+    &quot;cur_drawdown_rate&quot;: -0.0083730541368796
+  },
+  {
+    &quot;dt&quot;: &quot;2020-01-06&quot;,
+    &quot;portfolio_net_value&quot;: -0.0040413555084052,
+    &quot;SH_net_value&quot;: 0.0109406884571092,
+    &quot;alpha_net_value&quot;: -0.0148841629410285,
+    &quot;cur_drawdown_rate&quot;: -0.0040413555084056
+  },
+  {
+    &quot;dt&quot;: &quot;2020-01-07&quot;,
+    &quot;portfolio_net_value&quot;: 0.0088552022531673,
+    &quot;SH_net_value&quot;: 0.0230293795826546,
+    &quot;alpha_net_value&quot;: -0.0139078885557082,
+    &quot;cur_drawdown_rate&quot;: 0.0
+  },
+  
+]</code></pre>
+<h3 id="js部分">js部分</h3>
+<pre><code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    var mychartdd = echarts.init(document.getElementById(&#39;rateTable&#39;));
+    var seriesName1 = &#39;数据1&#39;;
+    var seriesName2 = &#39;数据2&#39;;
+    var seriesName3 = &#39;数据3&#39;;
+    var seriesName4 = &#39;数据4&#39;;
+    var option = {
+        legend: { // 图例
+            data: [seriesName1, seriesName2, seriesName3, seriesName4],
+            right: &#39;10%&#39;,
+        },
+        dataZoom: [ // 底部红色数据框拖动条
+            {
+                id: &#39;datazoomX&#39;,
+                type: &#39;slider&#39;,
+                xAxisIndex: [0, 1],
+                height: 20,
+                top: &#39;69%&#39;,
+                right: 10,
+                left: 10,
+                handleIcon: &#39;M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z&#39;,
+                handleSize: &#39;80%&#39;,
+                fillerColor: &quot;rgba(255, 76, 31,.2)&quot;,
+                dataBackground: {
+                    areaStyle: {
+                        color: &#39;&#39;
+                    },
+                    lineStyle: {
+                        opacity: 1,
+                        color: &#39;#FF4C1F&#39;
+                    }
+                },
+                handleStyle: {
+                    color: &#39;#FF4C1F&#39;,
+                },
+                filterMode: &#39;weakFilter&#39;,
+                zoomOnMouseWheel: &#39;false&#39;
+            },{
+                id: &#39;dataZoomY&#39;,
+                type: &#39;inside&#39;,
+                xAxisIndex: [0, 1],
+                filterMode: &#39;weakFilter&#39;,
+                zoomOnMouseWheel: &#39;false&#39;
+            }
+        ],
+        tooltip: { // 鼠标悬停提示框组件
+            trigger: &#39;axis&#39;,
+            axisPointer: {
+                type: &#39;cross&#39;, //十字准星指示器
+            },
+            formatter: function (datas) { //提示框浮层内容格式 
+                var res = datas[0].name + &#39;&lt;br/&gt;&#39;;
+                var length = datas.length;
+                var i = 0;
+                for (; i &lt; length; i++) {
+                    res += &#39;&lt;span style=&quot;display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:&#39; + datas[i].color + &#39;;&quot;&gt;&lt;/span&gt;&#39; + datas[i].seriesName + &#39;：&#39; + datas[i].value.toFixed(2) + &#39;%&#39; + &#39;&lt;br/&gt;&#39;
+                }
+                return res
+            }
+        },
+        axisPointer: { // 坐标轴指示器
+            link: {xAxisIndex: &#39;all&#39;},
+            label: {
+                backgroundColor: &#39;#777&#39;
+            }
+        },
+        grid: [ //直角坐标系内绘图网格
+            {
+                top: 20,
+                left: 10,
+                right: 0,
+                bottom: 20,
+                height: &#39;60%&#39;,
+            }, {
+                left: 10,
+                right: 0,
+                bottom: 15,
+                height: &#39;20%&#39;,
+            }
+        ],
+        xAxis:[
+            {
+                type: &#39;category&#39;,
+                data: [],
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: &#39;#D8D8D8&#39;
+                    }
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLabel: {
+                    show:true,
+                    textStyle: {
+                        fontSize: 10,
+                        color: &#39;#222831&#39;
+                    },
+
+                },
+                splitLine: {
+                    show: false
+                },
+                scale: true,
+            },
+            {
+                type: &#39;category&#39;,
+                gridIndex: 1,
+                data: [],
+                axisLine: {
+                    lineStyle: {
+                        color: &quot;#D8D8D8&quot;
+                    }
+                },
+                scale: true,
+                axisTick: {show: false},
+                splitLine: {show: false},
+                axisLabel: {show: false},
+
+            }
+        ],
+        yAxis: [
+            {
+                scale: true,
+                splitArea: {
+                    show: false
+                },
+                splitNumber: 4,
+                // max: 150,
+                // logBase:10,
+                axisLabel: {
+                    show: true,
+                    textStyle: {
+                        fontSize: 10,
+                        color: &#39;#808080&#39;,
+                        align: &#39;left&#39;
+                    },
+                    formatter: &#39;{value} %&#39;
+                },
+                axisLine: {
+                    show: false,
+                    lineStyle: {
+                        color: &#39;#D8D8D8&#39;
+                    }
+                },
+                axisTick: {
+                    show: false
+                },
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: &#39;#F5F5F5&#39;
+                    }
+                },
+                offset: -10,
+            },
+            {
+                type: &#39;value&#39;,
+                gridIndex: 1,
+                offset: -10,
+                axisLabel: {
+                    show: true,
+                    textStyle: {fontSize: 10, color: &quot;#808080&quot;, align: &#39;left&#39;},
+                    formatter: &#39;{value} %&#39;,
+                },
+                axisLine: {show: false},
+                axisTick: {show: false},
+                splitLine: {show: false}
+            }
+        ],
+        series: [
+            {
+                name: seriesName1,
+                type: &#39;line&#39;,
+                data: [],
+                color: &quot;#FF7855&quot;,
+                xAxisIndex: 0,
+                yAxisIndex: 0,
+                symbol: &#39;none&#39;,
+            },
+            {
+                name: seriesName2,
+                type: &#39;line&#39;,
+                data: [],
+                color: &quot;#009DFF&quot;,
+                xAxisIndex: 0,
+                yAxisIndex: 0,
+                symbol: &#39;none&#39;
+            },
+            {
+                name: seriesName3,
+                type: &#39;line&#39;,
+                data: [],
+                color: &quot;#FFBD00&quot;,
+                xAxisIndex: 0,
+                yAxisIndex: 0,
+                symbol:&#39;none&#39;,
+                areaStyle: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                        {
+                            offset: 0,
+                            color: &#39;rgba(255, 189, 0, .5)&#39;
+                        },
+                        {
+                            offset: 1,
+                            color: &#39;rgba(255, 189, 0, 0)&#39;
+                        }
+                    ])
+                },
+            },
+            {
+                name: seriesName4,
+                type: &#39;line&#39;,
+                data: [],
+                color: &#39;#769CFA&#39;,
+                gridIndex: 1,
+                xAxisIndex: 1, //使用的 x 轴的 index，在单个图表实例中存在多个 x 轴的时候有用
+                yAxisIndex: 1,
+                symbol: &#39;none&#39;,
+                areaStyle: {
+                    color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                        offset: 0,
+                        color: &#39;rgba(115,156,250,0.05)&#39;
+                    }, {
+                        offset: 0.76,
+                        color: &#39;rgba(115,156,250,0.25)&#39;
+                    }])
+                },
+            }
+        ]
+    };
+
+    mychartdd.setOption(option);
+
+    /*请求json数据*/
+    $(function(){
+        var SoilTemp1 = [], SoilTemp2 = [], SoilTemp3 = [], SoilTemp4 = [];// Y坐标值：各项指标数据
+        var TM = [];// x坐标值:时间
+        mychartdd.showLoading({ text: &quot;图表数据正在加载中.....如果加载不出来，建议使用WebStorm工具打开&quot; });
+        $.ajax({
+            type: &quot;GET&quot;,
+            // 请求地址
+            url: &quot;json/html1.json&quot;,
+            // async:true,    //是否异步
+            // dataType: &quot;jsonp&quot;,  //预期的服务器响应的数据类型。
+            // jsonp: &quot;callback&quot;,  //在一个 jsonp 中重写回调函数的字符串。
+            // xhrFields: {withCredentials: true},
+            success: function (ret) {
+                var date = ret;
+                if (date == null) {
+                    mychartdd.showLoading({ text: &quot;未获取到数据，请选择正确的时间...&quot; });
+                }
+                // 遍历上面 &#39;数据1&#39;,&#39;数据2&#39;,&#39;数据3&#39;
+                for (var i = 0; i &lt; date.length; i++) {
+                    TM.push(date[i].dt); //时间
+                    SoilTemp1.push(date[i].portfolio_net_value); //数据1
+                    SoilTemp2.push(date[i].SH_net_value); //数据2
+                    SoilTemp3.push(date[i].alpha_net_value); //数据3
+                }
+                // 遍历下面 ‘数据4’ 数据
+                for (var j = 0; j &lt; date.length; j++) {
+                    SoilTemp4.push(date[j].cur_drawdown_rate); //数据4
+                }
+                mychartdd.hideLoading();    //隐藏加载动画
+                mychartdd.setOption({       //加载数据图表
+                    tooltip: [
+                        {
+                            trigger: &#39;axis&#39;
+                        },
+                    ],
+                    toolbox: { // 工具栏
+                        show: false,
+                        feature: {
+                            saveAsImage: { show: false }, // 保存为图片
+                            restore: { show: false },
+                        },
+                    },
+                    calculable: true,
+                    xAxis: [
+                        {
+                            type: &#39;category&#39;,
+                            boundaryGap: false,
+                            data: TM
+                        },
+                        {
+                            type: &#39;category&#39;,
+                            boundaryGap: false,
+                            data: TM
+                        },
+                    ],
+                    yAxis: [{},{}],//注意一定不能丢了这个，不然图表Y轴不显示
+                    series: [
+                        {
+                            name: seriesName1,
+                            type: &#39;line&#39;,
+                            data: SoilTemp1
+                        },
+                        {
+                            name: seriesName2,
+                            type: &#39;line&#39;,
+                            data: SoilTemp2
+                        },
+                        {
+                            name: seriesName3,
+                            type: &#39;line&#39;,
+                            data: SoilTemp3
+                        },
+                        {
+                            name: seriesName4,
+                            type: &#39;line&#39;,
+                            data: SoilTemp4
+                        }
+                    ]
+                });
+            }
+        });
+    });
+&lt;/script&gt;</code></pre>
+<p>看完感觉对你有帮助，记得关注 <a
+href="https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fkuishou68"
+title="https://github.com/kuishou68">我</a> !</p>
+a:["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L8",null,{"href":"/es/archives","className":"ghost-inline","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"Todos los textos"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"Sincronizado desde Juejin"}],["$","span",null,{"children":"2021-10-11"}],["$","span",null,{"children":[3," ","min"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"Jquery +Ajax 请求Json文件，绘制Echarts 上下两个堆叠折线图"}],["$","p",null,{"className":"hero-copy","children":"魁首 🔔一个没有天赋的前端程序员👨‍💻 💡博客 关注我🔰 🤖Github |🔑CSDN | 💎掘金 | 📖 知乎 | 💡博客 | HTML部分 json数据格式 js部分 看完感觉对你有帮助，记得关注 我 !"}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"Sinopsis"}],["$","span",null,{"children":"Este texto se conserva dentro de la nueva estructura del blog manteniendo el contenido original en chino."}],["$","a",null,{"href":"https://juejin.cn/post/7017681730605678605","target":"_blank","rel":"noreferrer","className":"ghost-inline","children":["Fuente original",["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-external-link h-4 w-4","children":[["$","path","1q9fwt",{"d":"M15 3h6v6"}],["$","path","gplh6r",{"d":"M10 14 21 3"}],["$","path","a6xqqp",{"d":"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"}],"$undefined"]}]]}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$12"}}]}]]}]

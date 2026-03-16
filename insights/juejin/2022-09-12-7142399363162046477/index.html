@@ -1,209 +1,71 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>lottie 动画效果实现及性能优化，将 json 文件缓存至 localStorage 中 | CocoonBreak</title>
-    <meta name="description" content="lottie 动画效果实现及性能优化 前言 官网入口 一、动画效果实现 1、MyLottie 封装成一个公共组件 &lt; template &gt; &lt; div : id = &quot;id&quot; style = &quot;display: inline-block;v...">
-    <meta property="og:title" content="lottie 动画效果实现及性能优化，将 json 文件缓存至 localStorage 中 | CocoonBreak">
-    <meta property="og:description" content="lottie 动画效果实现及性能优化 前言 官网入口 一、动画效果实现 1、MyLottie 封装成一个公共组件 &lt; template &gt; &lt; div : id = &quot;id&quot; style = &quot;display: inline-block;v...">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://blog.lijianlin.com.cn/insights/juejin/2022-09-12-7142399363162046477/">
-    <meta property="og:image" content="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-assets/icon/icon-128.png~tplv-t2oaga2asx-image.image">
-    <link rel="icon" href="/img/logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/custom/site.css">
-    <script defer src="/custom/site.js"></script>
-    <script defer src="/custom/live2d-loader.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content="0; url=/en/posts/sync/2022-09-12-7142399363162046477/" />
+    <title>Juejin article moved</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1020;
+        --panel: rgba(10, 18, 38, 0.88);
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #f6efe3;
+        --muted: #93a2bf;
+        --accent: #7ae7c7;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at top, rgba(122, 231, 199, 0.16), transparent 36%),
+          linear-gradient(180deg, #0b1020 0%, #050813 100%);
+        color: var(--text);
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        padding: 24px;
+      }
+      main {
+        width: min(640px, 100%);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--panel);
+        padding: 32px;
+        box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(28px, 4vw, 42px);
+      }
+      p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      a {
+        color: #08111e;
+        background: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+    </style>
   </head>
   <body>
-    <div class="article-shell">
-      <nav class="insight-nav">
-        <a href="/">← 首页</a>
-        <a href="/insights/">同步文章</a>
-        <a href="https://juejin.cn/post/7142399363162046477" target="_blank" rel="noreferrer">掘金原文</a>
-      </nav>
-
-      <header class="article-hero" data-reveal>
-        <div class="article-meta">
-          <span>2022.09.12</span><span>前端</span>
-        </div>
-        <h1>lottie 动画效果实现及性能优化，将 json 文件缓存至 localStorage 中</h1>
-        <p class="article-intro">lottie 动画效果实现及性能优化 前言 官网入口 一、动画效果实现 1、MyLottie 封装成一个公共组件 &lt; template &gt; &lt; div : id = &quot;id&quot; style = &quot;display: inline-block;v...</p>
-        <div class="article-note">这篇文章已从掘金同步到个人博客，原始发布地址为 <a href="https://juejin.cn/post/7142399363162046477" target="_blank" rel="noreferrer">掘金原文</a>。</div>
-      </header>
-
-      <article class="prose" data-reveal>
-        <h2 id="lottie-动画效果实现及性能优化">lottie
-动画效果实现及性能优化</h2>
-<h3 id="前言">前言</h3>
-<p><a data-ref="nofollow noopener noreferrer" href="https://link.juejin.cn?target=https%3A%2F%2Flottiefiles.com%2Fpopular" target="_blank" title="https://lottiefiles.com/popular">官网入口</a></p>
-<h3 id="一动画效果实现">一、动画效果实现</h3>
-<h4 id="1mylottie-封装成一个公共组件">1、MyLottie
-封装成一个公共组件</h4>
-<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a aria-hidden="true" href="#cb1-1" tabindex="-1"></a><span class="op">&lt;</span>template<span class="op">&gt;</span></span>
-<span id="cb1-2"><a aria-hidden="true" href="#cb1-2" tabindex="-1"></a>    <span class="op">&lt;</span>div <span class="op">:</span>id<span class="op">=</span><span class="st">"id"</span> style<span class="op">=</span><span class="st">"display: inline-block;vertical-align: middle;"</span><span class="op">&gt;&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb1-3"><a aria-hidden="true" href="#cb1-3" tabindex="-1"></a><span class="op">&lt;/</span>template<span class="op">&gt;</span></span>
-<span id="cb1-4"><a aria-hidden="true" href="#cb1-4" tabindex="-1"></a></span>
-<span id="cb1-5"><a aria-hidden="true" href="#cb1-5" tabindex="-1"></a><span class="op">&lt;</span>script<span class="op">&gt;</span></span>
-<span id="cb1-6"><a aria-hidden="true" href="#cb1-6" tabindex="-1"></a><span class="im">import</span> lottie <span class="im">from</span> <span class="st">"lottie-web"</span><span class="op">;</span></span>
-<span id="cb1-7"><a aria-hidden="true" href="#cb1-7" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> {</span>
-<span id="cb1-8"><a aria-hidden="true" href="#cb1-8" tabindex="-1"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">"MyLottie"</span><span class="op">,</span></span>
-<span id="cb1-9"><a aria-hidden="true" href="#cb1-9" tabindex="-1"></a>    <span class="fu">data</span>() {</span>
-<span id="cb1-10"><a aria-hidden="true" href="#cb1-10" tabindex="-1"></a>        <span class="cf">return</span> {</span>
-<span id="cb1-11"><a aria-hidden="true" href="#cb1-11" tabindex="-1"></a>            <span class="dt">id</span><span class="op">:</span><span class="vs">`lottie_</span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">uuidFast</span>(<span class="st">""</span>)<span class="sc">}</span><span class="vs">`</span></span>
-<span id="cb1-12"><a aria-hidden="true" href="#cb1-12" tabindex="-1"></a>        }<span class="op">;</span></span>
-<span id="cb1-13"><a aria-hidden="true" href="#cb1-13" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb1-14"><a aria-hidden="true" href="#cb1-14" tabindex="-1"></a>    <span class="dt">props</span><span class="op">:</span>{</span>
-<span id="cb1-15"><a aria-hidden="true" href="#cb1-15" tabindex="-1"></a>        <span class="dt">path</span><span class="op">:</span>{</span>
-<span id="cb1-16"><a aria-hidden="true" href="#cb1-16" tabindex="-1"></a>            <span class="dt">type</span><span class="op">:</span> <span class="bu">String</span><span class="op">,</span></span>
-<span id="cb1-17"><a aria-hidden="true" href="#cb1-17" tabindex="-1"></a>            <span class="cf">default</span><span class="op">:</span> <span class="st">""</span></span>
-<span id="cb1-18"><a aria-hidden="true" href="#cb1-18" tabindex="-1"></a>        }<span class="op">,</span></span>
-<span id="cb1-19"><a aria-hidden="true" href="#cb1-19" tabindex="-1"></a>        <span class="dt">loop</span><span class="op">:</span> {</span>
-<span id="cb1-20"><a aria-hidden="true" href="#cb1-20" tabindex="-1"></a>            <span class="dt">type</span><span class="op">:</span> <span class="bu">Boolean</span><span class="op">,</span></span>
-<span id="cb1-21"><a aria-hidden="true" href="#cb1-21" tabindex="-1"></a>            <span class="cf">default</span><span class="op">:</span> <span class="kw">false</span></span>
-<span id="cb1-22"><a aria-hidden="true" href="#cb1-22" tabindex="-1"></a>        }</span>
-<span id="cb1-23"><a aria-hidden="true" href="#cb1-23" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb1-24"><a aria-hidden="true" href="#cb1-24" tabindex="-1"></a>    <span class="fu">mounted</span>() {</span>
-<span id="cb1-25"><a aria-hidden="true" href="#cb1-25" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(lottie)<span class="op">;</span></span>
-<span id="cb1-26"><a aria-hidden="true" href="#cb1-26" tabindex="-1"></a>        lottie<span class="op">.</span><span class="fu">loadAnimation</span>({</span>
-<span id="cb1-27"><a aria-hidden="true" href="#cb1-27" tabindex="-1"></a>            <span class="dt">container</span><span class="op">:</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="kw">this</span><span class="op">.</span><span class="at">id</span>)<span class="op">,</span></span>
-<span id="cb1-28"><a aria-hidden="true" href="#cb1-28" tabindex="-1"></a>            <span class="dt">renderer</span><span class="op">:</span> <span class="st">"svg"</span><span class="op">,</span> <span class="co">// 渲染方式svg</span></span>
-<span id="cb1-29"><a aria-hidden="true" href="#cb1-29" tabindex="-1"></a>            <span class="op">...</span><span class="bu">Object</span><span class="op">.</span><span class="fu">assign</span>({</span>
-<span id="cb1-30"><a aria-hidden="true" href="#cb1-30" tabindex="-1"></a>                <span class="dt">loop</span><span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">loop</span><span class="op">,</span> <span class="co">// 是否循环</span></span>
-<span id="cb1-31"><a aria-hidden="true" href="#cb1-31" tabindex="-1"></a>                <span class="dt">autoplay</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span> <span class="co">// 是否自动播放</span></span>
-<span id="cb1-32"><a aria-hidden="true" href="#cb1-32" tabindex="-1"></a>                <span class="dt">path</span><span class="op">:</span> <span class="kw">this</span><span class="op">.</span><span class="at">path</span></span>
-<span id="cb1-33"><a aria-hidden="true" href="#cb1-33" tabindex="-1"></a>            }<span class="op">,</span> <span class="kw">this</span><span class="op">.</span><span class="at">$attrs</span>)</span>
-<span id="cb1-34"><a aria-hidden="true" href="#cb1-34" tabindex="-1"></a>        })<span class="op">;</span></span>
-<span id="cb1-35"><a aria-hidden="true" href="#cb1-35" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb1-36"><a aria-hidden="true" href="#cb1-36" tabindex="-1"></a>    <span class="fu">created</span>() {</span>
-<span id="cb1-37"><a aria-hidden="true" href="#cb1-37" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb1-38"><a aria-hidden="true" href="#cb1-38" tabindex="-1"></a>    <span class="dt">methods</span><span class="op">:</span> {</span>
-<span id="cb1-39"><a aria-hidden="true" href="#cb1-39" tabindex="-1"></a>    }</span>
-<span id="cb1-40"><a aria-hidden="true" href="#cb1-40" tabindex="-1"></a>}<span class="op">;</span></span>
-<span id="cb1-41"><a aria-hidden="true" href="#cb1-41" tabindex="-1"></a><span class="op">&lt;/</span>script<span class="op">&gt;</span></span>
-<span id="cb1-42"><a aria-hidden="true" href="#cb1-42" tabindex="-1"></a></span>
-<span id="cb1-43"><a aria-hidden="true" href="#cb1-43" tabindex="-1"></a><span class="op">&lt;</span>style scoped lang<span class="op">=</span><span class="st">"less"</span><span class="op">&gt;</span></span>
-<span id="cb1-44"><a aria-hidden="true" href="#cb1-44" tabindex="-1"></a></span>
-<span id="cb1-45"><a aria-hidden="true" href="#cb1-45" tabindex="-1"></a><span class="op">&lt;/</span>style<span class="op">&gt;</span></span></code></pre></div>
-<h4 id="2使用这个公共组件">2、使用这个公共组件</h4>
-<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a aria-hidden="true" href="#cb2-1" tabindex="-1"></a><span class="op">&lt;</span>template<span class="op">&gt;</span></span>
-<span id="cb2-2"><a aria-hidden="true" href="#cb2-2" tabindex="-1"></a>    <span class="op">&lt;</span>div<span class="op">&gt;</span></span>
-<span id="cb2-3"><a aria-hidden="true" href="#cb2-3" tabindex="-1"></a>        <span class="op">&lt;</span>my<span class="op">-</span>lottie autoplay<span class="op">=</span><span class="st">"false"</span> <span class="op">:</span>path<span class="op">=</span><span class="st">"path"</span> <span class="op">:</span>loop<span class="op">=</span><span class="st">"true"</span> style<span class="op">=</span><span class="st">"cursor: pointer;font-size: 0"</span><span class="op">&gt;&lt;/</span>my<span class="op">-</span>lottie<span class="op">&gt;</span></span>
-<span id="cb2-4"><a aria-hidden="true" href="#cb2-4" tabindex="-1"></a>    <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb2-5"><a aria-hidden="true" href="#cb2-5" tabindex="-1"></a><span class="op">&lt;/</span>template<span class="op">&gt;</span></span>
-<span id="cb2-6"><a aria-hidden="true" href="#cb2-6" tabindex="-1"></a></span>
-<span id="cb2-7"><a aria-hidden="true" href="#cb2-7" tabindex="-1"></a><span class="im">import</span> MyLottie <span class="im">from</span> <span class="st">"_c/MyLottie"</span><span class="op">;</span></span>
-<span id="cb2-8"><a aria-hidden="true" href="#cb2-8" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> {</span>
-<span id="cb2-9"><a aria-hidden="true" href="#cb2-9" tabindex="-1"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">"Home"</span><span class="op">,</span></span>
-<span id="cb2-10"><a aria-hidden="true" href="#cb2-10" tabindex="-1"></a>    <span class="dt">components</span><span class="op">:</span>{ MyLottie }<span class="op">,</span></span>
-<span id="cb2-11"><a aria-hidden="true" href="#cb2-11" tabindex="-1"></a>    <span class="fu">data</span>() {</span>
-<span id="cb2-12"><a aria-hidden="true" href="#cb2-12" tabindex="-1"></a>        <span class="cf">return</span> {</span>
-<span id="cb2-13"><a aria-hidden="true" href="#cb2-13" tabindex="-1"></a>            <span class="dt">path</span><span class="op">:</span> <span class="st">"https://gitee.com/lingxiu5858/assets/blob/master/json/lottie_deleteMember.json"</span></span>
-<span id="cb2-14"><a aria-hidden="true" href="#cb2-14" tabindex="-1"></a>        }<span class="op">;</span></span>
-<span id="cb2-15"><a aria-hidden="true" href="#cb2-15" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb2-16"><a aria-hidden="true" href="#cb2-16" tabindex="-1"></a>}</span></code></pre></div>
-<h3 id="二性能优化">二、性能优化</h3>
-<h4 id="1公共组件性能优化">1、公共组件性能优化</h4>
-<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a aria-hidden="true" href="#cb3-1" tabindex="-1"></a><span class="op">&lt;</span>template<span class="op">&gt;</span></span>
-<span id="cb3-2"><a aria-hidden="true" href="#cb3-2" tabindex="-1"></a>    <span class="op">&lt;</span>div <span class="op">:</span>id<span class="op">=</span><span class="st">"id"</span> style<span class="op">=</span><span class="st">"display: inline-block;vertical-align: middle;"</span><span class="op">&gt;&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb3-3"><a aria-hidden="true" href="#cb3-3" tabindex="-1"></a><span class="op">&lt;/</span>template<span class="op">&gt;</span></span>
-<span id="cb3-4"><a aria-hidden="true" href="#cb3-4" tabindex="-1"></a></span>
-<span id="cb3-5"><a aria-hidden="true" href="#cb3-5" tabindex="-1"></a><span class="op">&lt;</span>script<span class="op">&gt;</span></span>
-<span id="cb3-6"><a aria-hidden="true" href="#cb3-6" tabindex="-1"></a><span class="im">import</span> lottie <span class="im">from</span> <span class="st">"lottie-web"</span><span class="op">;</span></span>
-<span id="cb3-7"><a aria-hidden="true" href="#cb3-7" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> {</span>
-<span id="cb3-8"><a aria-hidden="true" href="#cb3-8" tabindex="-1"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">"MyLottie"</span><span class="op">,</span></span>
-<span id="cb3-9"><a aria-hidden="true" href="#cb3-9" tabindex="-1"></a>    <span class="dt">title</span><span class="op">:</span> <span class="st">"这里是页面或组件名字"</span><span class="op">,</span></span>
-<span id="cb3-10"><a aria-hidden="true" href="#cb3-10" tabindex="-1"></a>    <span class="fu">data</span>() {</span>
-<span id="cb3-11"><a aria-hidden="true" href="#cb3-11" tabindex="-1"></a>        <span class="cf">return</span> {</span>
-<span id="cb3-12"><a aria-hidden="true" href="#cb3-12" tabindex="-1"></a>            <span class="dt">id</span><span class="op">:</span><span class="vs">`lottie_</span><span class="sc">${</span><span class="bu">Math</span><span class="op">.</span><span class="fu">uuidFast</span>(<span class="st">""</span>)<span class="sc">}</span><span class="vs">`</span></span>
-<span id="cb3-13"><a aria-hidden="true" href="#cb3-13" tabindex="-1"></a>        }<span class="op">;</span></span>
-<span id="cb3-14"><a aria-hidden="true" href="#cb3-14" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb3-15"><a aria-hidden="true" href="#cb3-15" tabindex="-1"></a>    <span class="dt">props</span><span class="op">:</span>{</span>
-<span id="cb3-16"><a aria-hidden="true" href="#cb3-16" tabindex="-1"></a>        <span class="dt">animationJSON</span><span class="op">:</span>[<span class="bu">String</span><span class="op">,</span> <span class="bu">Object</span>]</span>
-<span id="cb3-17"><a aria-hidden="true" href="#cb3-17" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb3-18"><a aria-hidden="true" href="#cb3-18" tabindex="-1"></a>    <span class="fu">mounted</span>() {</span>
-<span id="cb3-19"><a aria-hidden="true" href="#cb3-19" tabindex="-1"></a>        <span class="kw">this</span><span class="op">.</span><span class="fu">loadAnimation</span>()<span class="op">;</span></span>
-<span id="cb3-20"><a aria-hidden="true" href="#cb3-20" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb3-21"><a aria-hidden="true" href="#cb3-21" tabindex="-1"></a>    <span class="fu">created</span>() {</span>
-<span id="cb3-22"><a aria-hidden="true" href="#cb3-22" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb3-23"><a aria-hidden="true" href="#cb3-23" tabindex="-1"></a>    <span class="dt">methods</span><span class="op">:</span> {</span>
-<span id="cb3-24"><a aria-hidden="true" href="#cb3-24" tabindex="-1"></a>        <span class="fu">loadAnimation</span>(){</span>
-<span id="cb3-25"><a aria-hidden="true" href="#cb3-25" tabindex="-1"></a>            <span class="kw">let</span> { animationJSON } <span class="op">=</span> <span class="kw">this</span><span class="op">;</span></span>
-<span id="cb3-26"><a aria-hidden="true" href="#cb3-26" tabindex="-1"></a>            <span class="kw">let</span> lottieBox <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
-<span id="cb3-27"><a aria-hidden="true" href="#cb3-27" tabindex="-1"></a></span>
-<span id="cb3-28"><a aria-hidden="true" href="#cb3-28" tabindex="-1"></a>            <span class="co">// loop: 是否循环 autoplay: 是否自动播放</span></span>
-<span id="cb3-29"><a aria-hidden="true" href="#cb3-29" tabindex="-1"></a>            <span class="kw">let</span> animationParams <span class="op">=</span> { <span class="dt">loop</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span> <span class="dt">autoplay</span><span class="op">:</span> <span class="kw">true</span> }<span class="op">;</span></span>
-<span id="cb3-30"><a aria-hidden="true" href="#cb3-30" tabindex="-1"></a></span>
-<span id="cb3-31"><a aria-hidden="true" href="#cb3-31" tabindex="-1"></a>            <span class="co">/**</span></span>
-<span id="cb3-32"><a aria-hidden="true" href="#cb3-32" tabindex="-1"></a><span class="co">             * 根据传进来的类型，设置不同的属性，</span></span>
-<span id="cb3-33"><a aria-hidden="true" href="#cb3-33" tabindex="-1"></a><span class="co">             * path 传 JSON文件路径，animationData 传JSON数据，与path互斥</span></span>
-<span id="cb3-34"><a aria-hidden="true" href="#cb3-34" tabindex="-1"></a><span class="co">             */</span></span>
-<span id="cb3-35"><a aria-hidden="true" href="#cb3-35" tabindex="-1"></a>            <span class="cf">if</span>(<span class="bu">Object</span><span class="op">.</span><span class="at">prototype</span><span class="op">.</span><span class="at">toString</span><span class="op">.</span><span class="fu">call</span>(animationJSON) <span class="op">===</span> <span class="st">"[object String]"</span>){</span>
-<span id="cb3-36"><a aria-hidden="true" href="#cb3-36" tabindex="-1"></a>                animationParams<span class="op">.</span><span class="at">path</span> <span class="op">=</span> animationJSON<span class="op">;</span></span>
-<span id="cb3-37"><a aria-hidden="true" href="#cb3-37" tabindex="-1"></a>            }<span class="cf">else</span>{</span>
-<span id="cb3-38"><a aria-hidden="true" href="#cb3-38" tabindex="-1"></a>                animationParams<span class="op">.</span><span class="at">animationData</span> <span class="op">=</span> animationJSON<span class="op">;</span></span>
-<span id="cb3-39"><a aria-hidden="true" href="#cb3-39" tabindex="-1"></a>            }</span>
-<span id="cb3-40"><a aria-hidden="true" href="#cb3-40" tabindex="-1"></a></span>
-<span id="cb3-41"><a aria-hidden="true" href="#cb3-41" tabindex="-1"></a>            <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">"加载动画需要的参数"</span><span class="op">,</span> animationParams)<span class="op">;</span></span>
-<span id="cb3-42"><a aria-hidden="true" href="#cb3-42" tabindex="-1"></a>            lottieBox <span class="op">=</span> lottie<span class="op">.</span><span class="fu">loadAnimation</span>({</span>
-<span id="cb3-43"><a aria-hidden="true" href="#cb3-43" tabindex="-1"></a>                <span class="dt">container</span><span class="op">:</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="kw">this</span><span class="op">.</span><span class="at">id</span>)<span class="op">,</span> </span>
-<span id="cb3-44"><a aria-hidden="true" href="#cb3-44" tabindex="-1"></a>                <span class="dt">renderer</span><span class="op">:</span> <span class="st">"svg"</span><span class="op">,</span> <span class="co">// 渲染方式svg</span></span>
-<span id="cb3-45"><a aria-hidden="true" href="#cb3-45" tabindex="-1"></a>                <span class="op">...</span><span class="bu">Object</span><span class="op">.</span><span class="fu">assign</span>(animationParams<span class="op">,</span> <span class="kw">this</span><span class="op">.</span><span class="at">$attrs</span>)</span>
-<span id="cb3-46"><a aria-hidden="true" href="#cb3-46" tabindex="-1"></a>            })<span class="op">;</span></span>
-<span id="cb3-47"><a aria-hidden="true" href="#cb3-47" tabindex="-1"></a></span>
-<span id="cb3-48"><a aria-hidden="true" href="#cb3-48" tabindex="-1"></a>            <span class="co">// DOMLoaded DOM元素加载完成时触发</span></span>
-<span id="cb3-49"><a aria-hidden="true" href="#cb3-49" tabindex="-1"></a>            lottieBox[<span class="st">"addEventListener"</span>](<span class="st">"DOMLoaded"</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
-<span id="cb3-50"><a aria-hidden="true" href="#cb3-50" tabindex="-1"></a>                <span class="kw">let</span> animationData <span class="op">=</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">stringify</span>(lottieBox<span class="op">.</span><span class="at">animationData</span>)<span class="op">;</span> <span class="co">// json动画资源</span></span>
-<span id="cb3-51"><a aria-hidden="true" href="#cb3-51" tabindex="-1"></a>                <span class="cf">if</span>(<span class="bu">Object</span><span class="op">.</span><span class="at">prototype</span><span class="op">.</span><span class="at">toString</span><span class="op">.</span><span class="fu">call</span>(animationJSON) <span class="op">===</span> <span class="st">"[object String]"</span>){</span>
-<span id="cb3-52"><a aria-hidden="true" href="#cb3-52" tabindex="-1"></a>                    localStorage<span class="op">.</span><span class="fu">setItem</span>(lottieBox<span class="op">.</span><span class="at">fileName</span><span class="op">,</span> animationData)<span class="op">;</span></span>
-<span id="cb3-53"><a aria-hidden="true" href="#cb3-53" tabindex="-1"></a>                }</span>
-<span id="cb3-54"><a aria-hidden="true" href="#cb3-54" tabindex="-1"></a>            })<span class="op">;</span></span>
-<span id="cb3-55"><a aria-hidden="true" href="#cb3-55" tabindex="-1"></a>        }</span>
-<span id="cb3-56"><a aria-hidden="true" href="#cb3-56" tabindex="-1"></a>    }</span>
-<span id="cb3-57"><a aria-hidden="true" href="#cb3-57" tabindex="-1"></a>}<span class="op">;</span></span>
-<span id="cb3-58"><a aria-hidden="true" href="#cb3-58" tabindex="-1"></a><span class="op">&lt;/</span>script<span class="op">&gt;</span></span>
-<span id="cb3-59"><a aria-hidden="true" href="#cb3-59" tabindex="-1"></a></span>
-<span id="cb3-60"><a aria-hidden="true" href="#cb3-60" tabindex="-1"></a><span class="op">&lt;</span>style scoped lang<span class="op">=</span><span class="st">"less"</span><span class="op">&gt;</span></span>
-<span id="cb3-61"><a aria-hidden="true" href="#cb3-61" tabindex="-1"></a></span>
-<span id="cb3-62"><a aria-hidden="true" href="#cb3-62" tabindex="-1"></a><span class="op">&lt;/</span>style<span class="op">&gt;</span></span></code></pre></div>
-<h4 id="2外部使用优化后的公共组件">2、外部使用优化后的公共组件</h4>
-<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a aria-hidden="true" href="#cb4-1" tabindex="-1"></a><span class="op">&lt;</span>template<span class="op">&gt;</span></span>
-<span id="cb4-2"><a aria-hidden="true" href="#cb4-2" tabindex="-1"></a>    <span class="op">&lt;</span>div<span class="op">&gt;</span></span>
-<span id="cb4-3"><a aria-hidden="true" href="#cb4-3" tabindex="-1"></a>        <span class="op">&lt;</span>button @click<span class="op">=</span><span class="st">"openAnimation"</span> <span class="op">/&gt;</span></span>
-<span id="cb4-4"><a aria-hidden="true" href="#cb4-4" tabindex="-1"></a>        <span class="op">&lt;</span>my<span class="op">-</span>lottie autoplay<span class="op">=</span><span class="st">"false"</span> <span class="op">:</span>path<span class="op">=</span><span class="st">"path"</span> <span class="op">:</span>loop<span class="op">=</span><span class="st">"true"</span> <span class="op">:</span>animationJSON<span class="op">=</span><span class="st">"animationJSON"</span> style<span class="op">=</span><span class="st">"cursor: pointer;font-size: 0"</span><span class="op">&gt;&lt;/</span>my<span class="op">-</span>lottie<span class="op">&gt;</span></span>
-<span id="cb4-5"><a aria-hidden="true" href="#cb4-5" tabindex="-1"></a>    <span class="op">&lt;/</span>div<span class="op">&gt;</span></span>
-<span id="cb4-6"><a aria-hidden="true" href="#cb4-6" tabindex="-1"></a><span class="op">&lt;/</span>template<span class="op">&gt;</span></span>
-<span id="cb4-7"><a aria-hidden="true" href="#cb4-7" tabindex="-1"></a></span>
-<span id="cb4-8"><a aria-hidden="true" href="#cb4-8" tabindex="-1"></a><span class="im">import</span> MyLottie <span class="im">from</span> <span class="st">"_c/MyLottie"</span><span class="op">;</span></span>
-<span id="cb4-9"><a aria-hidden="true" href="#cb4-9" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> {</span>
-<span id="cb4-10"><a aria-hidden="true" href="#cb4-10" tabindex="-1"></a>    <span class="dt">name</span><span class="op">:</span> <span class="st">"Home"</span><span class="op">,</span></span>
-<span id="cb4-11"><a aria-hidden="true" href="#cb4-11" tabindex="-1"></a>    <span class="dt">components</span><span class="op">:</span>{ MyLottie }<span class="op">,</span></span>
-<span id="cb4-12"><a aria-hidden="true" href="#cb4-12" tabindex="-1"></a>        <span class="fu">data</span>() {</span>
-<span id="cb4-13"><a aria-hidden="true" href="#cb4-13" tabindex="-1"></a>            <span class="cf">return</span> {</span>
-<span id="cb4-14"><a aria-hidden="true" href="#cb4-14" tabindex="-1"></a>        <span class="dt">path</span><span class="op">:</span> <span class="st">"https://gitee.com/lingxiu5858/assets/blob/master/json/lottie_deleteMember.json"</span></span>
-<span id="cb4-15"><a aria-hidden="true" href="#cb4-15" tabindex="-1"></a>            }<span class="op">;</span></span>
-<span id="cb4-16"><a aria-hidden="true" href="#cb4-16" tabindex="-1"></a>    }<span class="op">,</span></span>
-<span id="cb4-17"><a aria-hidden="true" href="#cb4-17" tabindex="-1"></a>        <span class="dt">methods</span><span class="op">:</span> {</span>
-<span id="cb4-18"><a aria-hidden="true" href="#cb4-18" tabindex="-1"></a>            <span class="fu">openAnimation</span>(){</span>
-<span id="cb4-19"><a aria-hidden="true" href="#cb4-19" tabindex="-1"></a>                    <span class="kw">this</span><span class="op">.</span><span class="at">animationJSON</span> <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="fu">getStorage</span>(<span class="kw">this</span><span class="op">.</span><span class="at">path</span>)<span class="op">;</span></span>
-<span id="cb4-20"><a aria-hidden="true" href="#cb4-20" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb4-21"><a aria-hidden="true" href="#cb4-21" tabindex="-1"></a>            <span class="co">/**</span></span>
-<span id="cb4-22"><a aria-hidden="true" href="#cb4-22" tabindex="-1"></a><span class="co">             * 检查 Storage 中是否缓存动画</span></span>
-<span id="cb4-23"><a aria-hidden="true" href="#cb4-23" tabindex="-1"></a><span class="co">             */</span></span>
-<span id="cb4-24"><a aria-hidden="true" href="#cb4-24" tabindex="-1"></a>            <span class="fu">getStorage</span>(path){</span>
-<span id="cb4-25"><a aria-hidden="true" href="#cb4-25" tabindex="-1"></a>                    <span class="co">// 获取 url 文件名, 并根据文件名检查 Storage 中是否存在</span></span>
-<span id="cb4-26"><a aria-hidden="true" href="#cb4-26" tabindex="-1"></a>                    <span class="kw">let</span> arr <span class="op">=</span> path<span class="op">.</span><span class="fu">split</span>(<span class="st">"/"</span>)<span class="op">;</span></span>
-<span id="cb4-27"><a aria-hidden="true" href="#cb4-27" tabindex="-1"></a>                    <span class="kw">let</span> fileName <span class="op">=</span> arr[arr<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span>]<span class="op">.</span><span class="fu">split</span>(<span class="st">"."</span>)[<span class="dv">0</span>]<span class="op">;</span></span>
-<span id="cb4-28"><a aria-hidden="true" href="#cb4-28" tabindex="-1"></a>                    <span class="kw">let</span> localStorageAnimation <span class="op">=</span> localStorage<span class="op">.</span><span class="fu">getItem</span>(fileName)<span class="op">;</span></span>
-<span id="cb4-29"><a aria-hidden="true" href="#cb4-29" tabindex="-1"></a>                    <span class="co">// localStorage 存在当前动画资源，直接使用; 否则返回 path 地址加载资源</span></span>
-<span id="cb4-30"><a aria-hidden="true" href="#cb4-30" tabindex="-1"></a>                    <span class="cf">return</span> localStorageAnimation <span class="op">?</span> <span class="bu">JSON</span><span class="op">.</span><span class="fu">parse</span>(localStorageAnimation) <span class="op">:</span> path<span class="op">;</span></span>
-<span id="cb4-31"><a aria-hidden="true" href="#cb4-31" tabindex="-1"></a>            }<span class="op">,</span></span>
-<span id="cb4-32"><a aria-hidden="true" href="#cb4-32" tabindex="-1"></a>        }</span>
-<span id="cb4-33"><a aria-hidden="true" href="#cb4-33" tabindex="-1"></a>    }</span></code></pre></div>
-      </article>
-    </div>
+    <main>
+      <h1>Juejin article moved</h1>
+      <p>This synced Juejin article now lives under the rebuilt post route.</p>
+      <a href="/en/posts/sync/2022-09-12-7142399363162046477/">Continue</a>
+    </main>
+    <script>
+      window.location.replace("/en/posts/sync/2022-09-12-7142399363162046477/");
+    </script>
   </body>
 </html>

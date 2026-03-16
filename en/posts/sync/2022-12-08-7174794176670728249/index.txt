@@ -1,0 +1,375 @@
+1:"$Sreact.fragment"
+2:I[6825,["177","static/chunks/app/layout-9fe08982949093af.js"],"ThemeProvider"]
+3:I[1454,["177","static/chunks/app/layout-9fe08982949093af.js"],"Live2DLoader"]
+4:I[5244,[],""]
+5:I[3866,[],""]
+6:I[7367,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"HtmlLocaleSync"]
+7:I[4750,["173","static/chunks/173-ef41fafde65cda27.js","838","static/chunks/838-73441c7955c77b66.js","160","static/chunks/app/%5Blang%5D/layout-894f9c60ad2cb1ae.js"],"BlogNavbar"]
+8:I[8173,["173","static/chunks/173-ef41fafde65cda27.js","97","static/chunks/app/%5Blang%5D/posts/%5B...slug%5D/page-6ee700c5ad1e0b29.js"],""]
+b:I[6213,[],"OutletBoundary"]
+d:I[6213,[],"MetadataBoundary"]
+f:I[6213,[],"ViewportBoundary"]
+11:I[4835,[],""]
+:HL["/_next/static/media/24f6ebe2756575bd-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/36966cca54120369-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5611c55482296524-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/edef1a271f97a8ec-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/fb12bdfc6f99d938-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/473fb34e1570d6f1.css","style"]
+:HL["/_next/static/css/1c5aef1c0dd20138.css","style"]
+:HL["/_next/static/css/45bbd2f0fdf5da27.css","style"]
+:HL["/_next/static/css/03999bf3b1a627a0.css","style"]
+0:{"P":null,"b":"ZNjizd8Y7He_YS_OA6hmp","p":"","c":["","en","posts","sync","2022-12-08-7174794176670728249",""],"i":false,"f":[[["",{"children":[["lang","en","d"],{"children":["posts",{"children":[["slug","sync/2022-12-08-7174794176670728249","c"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/473fb34e1570d6f1.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/1c5aef1c0dd20138.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","2",{"rel":"stylesheet","href":"/_next/static/css/45bbd2f0fdf5da27.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","3",{"rel":"stylesheet","href":"/_next/static/css/03999bf3b1a627a0.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"__variable_dd5b2f __variable_64b714 __variable_51740a __variable_7afcbf __variable_6634df antialiased","children":["$","$L2",null,{"attribute":"class","defaultTheme":"dark","enableSystem":false,"disableTransitionOnChange":true,"children":[["$","$L3",null,{}],["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],[["$","$L6",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"en","homeHref":"/","rootAliasForDefaultLocale":true,"labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/","label":"Home"},{"href":"/#latest","label":"Latest"},{"href":"/#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/#community","label":"Community"}],"legacyRoots":[{"slug":"A前端👨‍💻","title":{"en":"Frontend Atlas","zh":"前端图谱","es":"Atlas Frontend","ja":"フロントエンド地図","ar":"أطلس الواجهة الأمامية"},"description":{"en":"CSS, Vue, React, Canvas, Node, uni-app, build tools, and the earlier front-end trail.","zh":"CSS、Vue、React、Canvas、Node、uni-app、打包工具，以及更早的前端路径。","es":"CSS, Vue, React, Canvas, Node, uni-app, herramientas de build y el rastro front-end más temprano.","ja":"CSS、Vue、React、Canvas、Node、uni-app、ビルドツールなど、初期のフロントエンド蓄積。","ar":"CSS وVue وReact وCanvas وNode وuni-app وأدوات البناء والمسار الأقدم للواجهة الأمامية."}},{"slug":"B面试题📑","title":{"en":"Interview Bank","zh":"面试题仓库","es":"Banco de Entrevistas","ja":"面接バンク","ar":"بنك المقابلات"},"description":{"en":"Question banks for browser internals, networking, Vue, React, JavaScript, and engineering.","zh":"浏览器、网络、Vue、React、JavaScript 和工程化的面试题集合。","es":"Baterías de preguntas sobre navegador, red, Vue, React, JavaScript e ingeniería.","ja":"ブラウザ、ネットワーク、Vue、React、JavaScript、開発基盤に関する面接問題。","ar":"مجموعات أسئلة عن المتصفح والشبكات وVue وReact وJavaScript والهندسة."}},{"slug":"Vue实战💻","title":{"en":"Vue Practice","zh":"Vue 实战","es":"Práctica Vue","ja":"Vue 実戦","ar":"تطبيقات Vue"},"description":{"en":"Real project records around Ant Design, Echarts, mini programs, stores, and browser features.","zh":"围绕 Ant Design、Echarts、小程序、商城项目和浏览器功能的一组实战记录。","es":"Registros reales sobre Ant Design, Echarts, mini programas, tiendas y funciones del navegador.","ja":"Ant Design、Echarts、ミニプログラム、ストア、ブラウザ機能に関する実戦記録。","ar":"سجلات عملية حول Ant Design وEcharts والبرامج المصغرة والمتاجر وميزات المتصفح."}},{"slug":"走过的路🌱","title":{"en":"Growing Path","zh":"走过的路","es":"Camino Recorrido","ja":"歩いてきた道","ar":"الطريق الذي سلكته"},"description":{"en":"Yearly reviews and growth notes that carry more life signal than technical polish.","zh":"年度总结和成长记录，保留生活感和时间感。","es":"Revisiones anuales y notas de crecimiento con más vida que pulido técnico.","ja":"年次レビューと成長記録。技術の整い方より時間の感触が残っています。","ar":"مراجعات سنوية وملاحظات نمو تحمل أثر الحياة أكثر من الصقل التقني."}},{"slug":"读过的书📚️","title":{"en":"Reading Shelf","zh":"读书笔记","es":"Estante de Lectura","ja":"読書棚","ar":"رف القراءة"},"description":{"en":"Book notes across networking, JavaScript, algorithms, and systems thinking.","zh":"网络、JavaScript、算法和系统思维方向的读书笔记。","es":"Notas de lectura sobre redes, JavaScript, algoritmos y pensamiento de sistemas.","ja":"ネットワーク、JavaScript、アルゴリズム、システム思考に関する読書ノート。","ar":"ملاحظات قراءة حول الشبكات وJavaScript والخوارزميات والتفكير المنظومي."}},{"slug":"PHP🐘","title":{"en":"PHP Shelf","zh":"PHP 归档","es":"Estante PHP","ja":"PHP 棚","ar":"رف PHP"},"description":{"en":"Earlier PHP notes and experiments that still belong in the public record.","zh":"更早期的 PHP 文章和实验记录。","es":"Notas y experimentos tempranos de PHP que siguen formando parte del archivo.","ja":"初期の PHP ノートと実験記録。","ar":"ملاحظات وتجارب PHP المبكرة التي ما زالت جزءًا من السجل."}},{"slug":"Python🐍","title":{"en":"Python Shelf","zh":"Python 归档","es":"Estante Python","ja":"Python 棚","ar":"رف Python"},"description":{"en":"Small scraping experiments and data-oriented notes from the earlier Python phase.","zh":"偏数据和爬取的小实验，保留了更早一阶段的 Python 轨迹。","es":"Pequeños experimentos de scraping y notas orientadas a datos de la etapa temprana con Python.","ja":"スクレイピングやデータ寄りの小さな Python 実験。","ar":"تجارب صغيرة في الاستخراج والبيانات من المرحلة المبكرة مع Python."}}]}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","div",null,{"className":"mx-auto max-w-3xl pb-20 pt-8","children":["$","div",null,{"className":"hero-panel space-y-5","children":[["$","span",null,{"className":"eyebrow","children":"404"}],["$","h1",null,{"className":"hero-title compact","children":"That page never made it into the archive."}],["$","p",null,{"className":"hero-copy","children":"Try the rebuilt home, the full archive, or one of the legacy shelves instead."}],["$","$L8",null,{"href":"/","className":"primary-chip","children":"Go back to the English home"}]]}]}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L8",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}]}]}]]}],{"children":[["lang","en","d"],["$","$1","c",{"children":[null,"$L9"]}],{"children":["posts",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","sync/2022-12-08-7174794176670728249","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children","posts","children","$0:f:0:1:2:children:2:children:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":"$Lc"}]]}],{},null,false]},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","2K5gFam4KnxvlKbCEXfdF",{"children":[["$","$Ld",null,{"children":"$Le"}],["$","$Lf",null,{"children":"$L10"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+9:[["$","$L6",null,{"lang":"en","dir":"ltr"}],["$","div",null,{"className":"site-frame ","children":[["$","$L7",null,{"locale":"en","homeHref":"/en","rootAliasForDefaultLocale":false,"labels":{"brand":"POJIAN.BLOG","subtitle":"A long-form archive for AI tooling, shipping, and memory.","menu":"Directory","close":"Close","switchLanguage":"Switch language","switchTheme":"Switch theme"},"links":[{"href":"/en","label":"Home"},{"href":"/en#latest","label":"Latest"},{"href":"/en#collections","label":"Collections"},{"href":"/en/archives","label":"Archives"},{"href":"/en#community","label":"Community"}],"legacyRoots":"$0:f:0:1:1:props:children:1:props:children:props:children:props:children:1:props:notFound:1:1:props:children:0:props:legacyRoots"}],["$","div",null,{"className":"background-orb background-orb-one"}],["$","div",null,{"className":"background-orb background-orb-two"}],["$","div",null,{"className":"background-grid"}],["$","main",null,{"className":"mx-auto min-h-screen max-w-[1180px] px-4 pb-20 pt-24 md:px-6 md:pt-28 lg:px-8","children":["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children","$0:f:0:1:2:children:0","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"mx-auto max-w-[1180px] px-4 pb-10 md:px-6 lg:px-8","children":["$","div",null,{"className":"footer-panel","children":[["$","div",null,{"children":[["$","div",null,{"className":"font-[var(--font-display)] text-base text-[var(--text)]","children":"POJIAN.BLOG"}],["$","div",null,{"children":"A long-form archive for AI tooling, shipping, and memory."}]]}],["$","div",null,{"className":"flex flex-wrap gap-4","children":[["$","$L8",null,{"href":"/en","className":"hover:text-[var(--text)]","children":"Home"}],["$","$L8",null,{"href":"/en/archives","className":"hover:text-[var(--text)]","children":"Archives"}],["$","$L8",null,{"href":"https://github.com/kuishou68","target":"_blank","className":"hover:text-[var(--text)]","children":"GitHub"}],["$","$L8",null,{"href":"https://juejin.cn/user/3817931570691031/posts","target":"_blank","className":"hover:text-[var(--text)]","children":"Juejin"}]]}]]}]}]]}]]
+12:T3436,<p>说起前端自动化部署，简单来说就是打包完成后自动发布服务器的过程，菜鸟的我简单搜集一下不同的部署方式供大家参考：</p>
+<h2 id="一scp2">一、scp2</h2>
+<h3
+id="适用情况webpackvite项目本地打包应用">适用情况：webpack、vite项目，本地打包应用</h3>
+<p>1、本地打包生成dist文件目录</p>
+<pre><code>npm run build</code></pre>
+<p>2、执行上传脚本 <a
+href="https://link.juejin.cn?target=https%3A%2F%2Fblog.csdn.net%2Fzxy2017%2Farticle%2Fdetails%2F126283990"
+title="https://blog.csdn.net/zxy2017/article/details/126283990">参考</a></p>
+<pre><code>// deploy/index.js
+const scpClient = require(&#39;scp2&#39;)
+const chalk = require(&#39;chalk&#39;)
+var Client = require(&#39;ssh2&#39;).Client
+const ora = require(&#39;ora&#39;)
+const path = require(&#39;path&#39;)
+const server = require(&#39;./deploy.config.js&#39;)
+const source_path = path.resolve() + &#39;/dist&#39;
+const spinner = ora(&#39;正在发布到测试服务器...&#39;)
+
+spinner.start()
+
+const conn = new Client()
+
+conn.on(&#39;ready&#39;, function () {
+  conn.exec(&#39;rm -rf /www/wwwroot/***（项目放置静态地址）&#39;, function (err, stream) {
+    if (err) throw err
+    stream.on(&#39;close&#39;, function () {
+      // 在执行shell命令后，把开始上传部署项目代码放到这里面
+      scpClient.scp(source_path, {
+        host: server.host,
+        port: server.port,
+        username: server.username,
+        password: server.password,
+        path: server.path, // 项目放置静态地址（服务器中地址）
+      }, function (err) {
+        spinner.stop()
+
+        if (err) {
+          console.log(chalk.red(&#39;发布失败.\n&#39;))
+        } else {
+          console.log(chalk.green(&#39;Success! 成功发布到服务器! \n&#39;))
+        }
+      })
+      conn.end()
+    }).on(&#39;data&#39;, function (data) {
+      console.log(&#39;STDOUT: &#39; + data)
+    }).stderr.on(&#39;data&#39;, function (data) {
+      console.log(&#39;STDERR: &#39; + data)
+    })
+  })
+}).connect({
+  host: server.host,
+  port: server.port,
+  username: server.username,
+  password: server.password,
+})</code></pre>
+<pre><code>// package.json 
+{ 
+    &quot;scripts&quot;: { 
+        &quot;build:develop&quot;: &quot;vite build --mode develop &amp;&amp; node ./deploy/index.js&quot;,
+    } 
+}</code></pre>
+<h2 id="二vite-plugin-lvdeploy">二、vite-plugin-lvdeploy</h2>
+<h3 id="适用情况vite项目-本地打包应用">适用情况：vite项目，
+本地打包应用</h3>
+<p>1.安装依赖</p>
+<pre><code>npm i vite-plugin-lvdeploy
+npm i archiver -D
+npm i ssh2 -D</code></pre>
+<p>2.vite.config.js中引入vitePluginLvdeploy <a
+href="https://link.juejin.cn?target=https%3A%2F%2Fblog.csdn.net%2Fweixin_49230250%2Farticle%2Fdetails%2F125852469"
+title="https://blog.csdn.net/weixin_49230250/article/details/125852469">参考</a></p>
+<pre><code>// vite.config.js
+import { defineConfig } from &#39;vite&#39;
+import vitePluginLvdeploy from &#39;./vite-plugin-lvdeploy&#39;
+import vue from &#39;@vitejs/plugin-vue&#39;
+
+export default defineConfig({
+  plugins: [
+    vue(),
+    vitePluginLvdeploy({
+        &quot;dev&quot;:{
+            host:&#39;xxx.xxx.xxx.xxx&#39;,//服务器IP
+            port:22,//服务器端口
+            username:&#39;xxxxxx&#39;,//服务器ssh登录用户名
+            password:&#39;xxxxxx&#39;,//服务器ssh登录密码
+            serverpath:&#39;/home/www&#39;,//服务器web目录 切记不要加/ 当前目录不存在会创建目录并且当前目录所有文件会被清空重新部署前端项目
+        },
+        &quot;test&quot;:{
+          host:&#39;xxx.xxx.xxx.xxx&#39;,//服务器IP
+          port:22,//服务器端口
+          username:&#39;xxxxxx&#39;,//服务器ssh登录用户名
+          password:&#39;xxxxxx&#39;,//服务器ssh登录密码
+          serverpath:&#39;/home/www&#39;,//服务器web目录 切记不要加/ 当前目录不存在会创建目录并且当前目录所有文件会被清空重新部署前端项目
+        }
+        //...其他自定义环境
+      }),
+    ]
+})</code></pre>
+<p>3.执行脚本</p>
+<pre><code>let paperFileName = null;// 接收压缩文件名称参数
+let DeployConfig = null;//配置项
+
+export default function vitePluginLvdeploy(enforce) {
+  return {
+    name: &#39;vite-plugin-lvdeploy&#39;,
+    apply: &#39;build&#39;,
+    config(userConfig, env) {
+      // 当前配置 userConfig 当前环境状态 env
+      paperFileName = userConfig.build.outDir;
+    },
+    //  构建结束的最终回调，类型 async, parallel
+    closeBundle() {
+      DeployConfig = enforce;
+      inquiry();
+    },
+  };
+}
+
+import fs from &quot;fs&quot;
+import archiver from &quot;archiver&quot;;
+// 初始化SSH连接
+const ssh2 = require(&#39;ssh2&#39;);
+let conn = new ssh2.Client();
+
+
+function inquiry() {
+  console.log(`${__dirname}/${paperFileName}.zip`)
+  // 创建文件输出流
+  let output = fs.createWriteStream(`${__dirname}/${paperFileName}.zip`);
+  let archive = archiver(&#39;zip&#39;, {
+    zlib: { level: 9 } // 设置压缩级别
+  })
+
+  // 文件输出流结束
+  output.on(&#39;close&#39;, function () {
+    console.log(&quot;\x1B[32m%s\x1b[0m&quot;, `
+   ------------------------------------------------
+                  ${archive.pointer()} 字节,已完成压缩
+   ------------------------------------------------
+  `);
+    deleteFolder(__dirname + &quot;/&quot; + paperFileName);// 删除文件夹
+    detectionDeploy();// 检测部署
+  })
+
+  // 数据源是否耗尽
+  output.on(&#39;end&#39;, function () {
+    console.log(&#39;数据源已耗尽&#39;)
+  })
+
+  // 存档警告
+  archive.on(&#39;warning&#39;, function (err) {
+    if (err.code === &#39;ENOENT&#39;) {
+      console.warn(&#39;stat故障和其他非阻塞错误&#39;)
+    } else {
+      throw err
+    }
+  })
+
+  // 存档出错
+  archive.on(&#39;error&#39;, function (err) {
+    throw err
+  })
+
+  // 通过管道方法将输出流存档到文件
+  archive.pipe(output);
+
+  //打包build里面的所有文件和目录
+  archive.directory(paperFileName + &#39;/&#39;, false);
+
+  //完成归档
+  archive.finalize();
+}
+
+function detectionDeploy() {
+  if(Object.keys(DeployConfig).length==0){
+    console.log(&quot;\x1B[33m%s\x1b[0m&quot;, &#39;已压缩本地zip包服务器未配置无法部署&#39;);
+    return;
+  }
+  const readline = require(&#39;readline&#39;).createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+  readline.question(`?请输入希望的部署环境  ${Object.keys(DeployConfig).join(&#39; 或 &#39;)} (0表示不希望压缩zip和部署) \n`, environmenttxt =&gt; {
+    let environment = environmenttxt.trim();//处理首位空格
+    if (environment in DeployConfig) {
+      if (
+        DeployConfig[environment].host &amp;&amp;
+        DeployConfig[environment].port &amp;&amp;
+        DeployConfig[environment].username &amp;&amp;
+        DeployConfig[environment].password &amp;&amp;
+        DeployConfig[environment].serverpath
+      ) {
+        // 参数有效
+        connect(DeployConfig[environment]);
+      } else {
+        console.log(&quot;\x1B[33m%s\x1b[0m&quot;, &#39;Error:请检查传入参数是否规范&#39;)
+      }
+    } else if (environment == 0) {
+      console.log(&quot;\x1B[33m%s\x1b[0m&quot;, &#39;Error:部署中断&#39;)
+    } else {
+      console.log(&quot;\x1B[33m%s\x1b[0m&quot;, &#39;Error:意料之外的环境&#39;)
+    }
+    readline.close();
+  });
+}
+
+function connect(serverConfig) {
+  console.log(&quot;\x1B[36m%s\x1b[0m&quot;, &quot;-----------准备连接服务器-----------&quot;);
+  conn.on(&#39;ready&#39;, () =&gt; {
+    console.log(&quot;\x1B[36m%s\x1b[0m&quot;, &quot;-----------连接服务器成功 准备上传文件-----------&quot;);
+    // 保证服务器下当前目录存在
+    useExec(`mkdir -p ${serverConfig.serverpath}/ &amp;&amp; cd ${serverConfig.serverpath}/ &amp;&amp; rm -rf *`).then(() =&gt; {
+      conn.sftp((err, sftp) =&gt; {
+        sftp.fastPut(`${__dirname}/${paperFileName}.zip`, `${serverConfig.serverpath}/${paperFileName}.zip`, {}, (err, result) =&gt; {
+          console.log(&quot;\x1B[32m%s\x1b[0m&quot;, `文件上传完成 : ${__dirname}/${paperFileName}.zip 已部署服务器 ${serverConfig.serverpath}/${paperFileName}.zip`);
+          // 解压文件停止连接数据库
+          useExec(`
+              cd ${serverConfig.serverpath}/ &amp;&amp; \
+              unzip ${paperFileName}.zip &amp;&amp; \
+              rm -rf ${paperFileName}.zip &amp;&amp; \
+              exit
+            `).then(() =&gt; {
+            conn.end();
+            console.log(&quot;\x1B[35m%s\x1b[0m&quot;, `部署完成喽`);
+          })
+
+        })
+      })
+    }).catch(err =&gt; { })
+  }).on(&quot;error&quot;, err =&gt; {
+    console.log(&quot;\x1B[31m%s\x1b[0m&quot;, `连接服务器失败${err.toString()}`);
+  }).connect({
+    host: serverConfig.host,
+    port: serverConfig.port,
+    username: serverConfig.username,
+    password: serverConfig.password
+  })
+}
+
+
+function useExec(cmd) {
+  // 所有错误命令直接关闭服务器连接
+  return new Promise((resolve, reject) =&gt; {
+    conn.exec(cmd, async (err, stream) =&gt; {
+      if (err) { // 异常抛出
+        console.log(&quot;\x1B[35m%s\x1b[0m&quot;, `异常抛出${err.toString()}`);
+        conn.end();
+        reject(err);
+      }
+      stream.on(&#39;close&#39;, async (code, signal) =&gt; { // 结束 code: 代码 signal: 信号
+        if (code !== 0) {
+          console.log(&quot;\x1B[35m%s\x1b[0m&quot;, `脚本异常退出code: ${code}，异常信号signal:${signal}`)
+          conn.end();
+          reject(&quot;\x1B[35m%s\x1b[0m&quot;, `脚本异常退出code: ${code}，异常信号signal:${signal}`);
+        }
+        // 程序执行成功
+        // 自己的业务逻辑....记得conn.end();
+        resolve();
+      }).on(&#39;data&#39;, async data =&gt; { // 数据 程序执行中echo出的数据
+        // console.log(&quot;\x1B[35m%s\x1b[0m&quot;,`echo出的数据${data.toString()}`);
+      }).stderr.on(&#39;data&#39;, async data =&gt; { // 标准错误
+        console.log(&quot;\x1B[35m%s\x1b[0m&quot;, `标准错误${data.toString()}`);
+        conn.end();
+        reject(data);
+      });
+    });
+  })
+}
+
+// 删除文件
+function deleteFolder(path) {
+  let files = [];
+  if (fs.existsSync(path)) {
+    files = fs.readdirSync(path);
+    files.forEach(function (file, index) {
+      let dirPath = path + &quot;/&quot; + file;
+      if (fs.statSync(dirPath).isDirectory()) {
+        deleteFolder(dirPath);
+      } else {
+        fs.unlinkSync(dirPath);
+      }
+    });
+    fs.rmdirSync(path);
+  }
+}</code></pre>
+<h2 id="三github-pages">三、GitHub Pages</h2>
+<h3 id="适用情况-项目在git仓库上传代码后自动打包部署">适用情况：
+项目在git仓库，上传代码后自动打包部署</h3>
+<p>1、如果你要部署在 <code>https://&lt;USERNAME&gt;.github.io/</code> 上;
+<a
+href="https://link.juejin.cn?target=https%3A%2F%2Fcn.vitejs.dev%2Fguide%2Fstatic-deploy.html%23github-pages"
+title="https://cn.vitejs.dev/guide/static-deploy.html#github-pages">参考</a></p>
+<p>2、在你的项目中，创建一个 <code>deploy.sh</code> 脚本，包含以下内容（注意高亮的行，按需使用），运行脚本来部署站点：</p>
+<pre><code>#!/usr/bin/env sh
+
+# 发生错误时终止
+set -e
+
+# 构建
+npm run build
+
+# 进入构建文件夹
+cd dist
+
+# 放置 .nojekyll 以绕过 Jekyll 的处理。
+echo &gt; .nojekyll
+
+# 如果你要部署到自定义域名
+# echo &#39;www.example.com&#39; &gt; CNAME
+
+git init
+git checkout -B main
+git add -A
+git commit -m &#39;deploy&#39;
+
+# 如果你要部署在 https://&lt;USERNAME&gt;.github.io
+# git push -f git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git main
+
+# 如果你要部署在 https://&lt;USERNAME&gt;.github.io/&lt;REPO&gt;
+# git push -f git@github.com:&lt;USERNAME&gt;/&lt;REPO&gt;.git main:gh-pages
+
+cd -</code></pre>
+<h2 id="四宝塔">四、宝塔</h2>
+<h3
+id="适用情况项目部署在服务器需要上传整个项目">适用情况：项目部署在服务器，需要上传整个项目</h3>
+<p>1、安装宝塔</p>
+<ul>
+<li>Centos安装脚本
+<code>yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install_6.0.sh &amp;&amp; sh install.sh ed8484bec</code></li>
+<li>Ubuntu/Deepin安装脚本
+<code>wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh &amp;&amp; sudo bash install.sh ed8484bec</code></li>
+<li>Debian安装脚本
+<code>wget -O install.sh http://download.bt.cn/install/install-ubuntu_6.0.sh &amp;&amp; bash install.sh ed8484bec</code></li>
+</ul>
+<p>2、基础环境</p>
+<p><img
+src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/51bfd95391b047dc9ee85a282bd9a58b~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"
+alt="aa9a5f4180e42a06ac4008ac9ba51ed.png" /></p>
+<p>3、Node环境</p>
+<p><img
+src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9e04da8f10a44c028b8f6b4c3176f481~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"
+alt="image.png" /></p>
+<p>4、上传Node项目
+文件上传后会根据package.json中安装相关依赖，执行dev、build等命令</p>
+<p><img
+src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7f41ecafd0f24f80913c268cd43e57f3~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp?"
+alt="image.png" /></p>
+a:["$","div",null,{"className":"space-y-6 pb-8","children":[["$","section",null,{"className":"hero-panel","children":["$","div",null,{"className":"space-y-5","children":[["$","$L8",null,{"href":"/en/archives","className":"ghost-inline","children":[["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-arrow-left h-4 w-4","children":[["$","path","1l729n",{"d":"m12 19-7-7 7-7"}],["$","path","x3x0zl",{"d":"M19 12H5"}],"$undefined"]}],"All posts"]}],["$","div",null,{"className":"flex flex-wrap gap-2 text-sm text-[var(--muted)]","children":[["$","span",null,{"className":"tag-pill","children":"Synced from Juejin"}],["$","span",null,{"children":"2022-12-08"}],["$","span",null,{"children":[3," ","min read"]}]]}],["$","h1",null,{"className":"hero-title compact","children":"前端不同场景下的自动化部署方式"}],["$","p",null,{"className":"hero-copy","children":"说起前端自动化部署，简单来说就是打包完成后自动发布服务器的过程，菜鸟的我简单搜集一下不同的部署方式供大家参考： 一、scp2 适用情况：webpack、vite项目，本地打包应用 1、本地打包生成dist文件目录 2、执行上传脚本 参考 二、vite-plugin-lvdeploy 适用情况：vite项目， 本地打包应用 1.安装依赖 2.vite.conf..."}],["$","div",null,{"className":"article-note","children":[["$","strong",null,{"children":"Synopsis"}],["$","span",null,{"children":"This post is preserved inside the rebuilt blog shell while keeping the original Chinese content intact."}],["$","a",null,{"href":"https://juejin.cn/post/7174794176670728249","target":"_blank","rel":"noreferrer","className":"ghost-inline","children":["Original source",["$","svg",null,{"ref":"$undefined","xmlns":"http://www.w3.org/2000/svg","width":24,"height":24,"viewBox":"0 0 24 24","fill":"none","stroke":"currentColor","strokeWidth":2,"strokeLinecap":"round","strokeLinejoin":"round","className":"lucide lucide-external-link h-4 w-4","children":[["$","path","1q9fwt",{"d":"M15 3h6v6"}],["$","path","gplh6r",{"d":"M10 14 21 3"}],["$","path","a6xqqp",{"d":"M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"}],"$undefined"]}]]}]]}]]}]}],["$","article",null,{"className":"article-shell-card","children":["$","div",null,{"className":"article-content prose-shell","dangerouslySetInnerHTML":{"__html":"$12"}}]}]]}]
+10:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"POJIAN.BLOG"}],["$","meta","2",{"name":"description","content":"A multilingual personal blog around AI tooling, product delivery, memoir, and long-form archive work."}]]
+c:null
